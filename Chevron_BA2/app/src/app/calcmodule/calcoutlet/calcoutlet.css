@@ -1,0 +1,65 @@
+:host {
+  font-size: 0.875rem;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  :host {
+    font-size: 0.75rem;
+  }
+}
+.metric-balloon {
+  position: absolute;
+  bottom: -100%;
+  padding: 3px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.35s ease;
+}
+.metric-balloon.fade-in {
+  opacity: 1;
+}
+.metric-balloon.increement {
+  background-color: #008000;
+}
+.metric-balloon.decreement {
+  background-color: #f00;
+}
+.metric-balloon.no-change-balloon-value {
+  background-color: transparent;
+  color: transparent;
+}
+span.isPositive {
+  color: #008000;
+}
+span.isNegative {
+  color: #c00;
+}
+span.isZero {
+  color: #666;
+}
+:host-context(.scenario-wrapper) span.isPositive {
+  font-weight: 600;
+}
+:host-context(.scenario-wrapper) span.isNegative {
+  font-weight: 600;
+}
+:host-context(.intro-page-wrapper) {
+  color: #000;
+}
+:host-context(.switch-to-heading) {
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  :host-context(.switch-to-heading) {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  :host-context(.switch-to-heading) {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>Chevron-BA2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="login/login.css">
+    <script>
+        // redirect to https 
+        (function () {
+            var loc = window.location.href + '';
+            if (loc.indexOf('http://') == 0) {
+                window.location.href = loc.replace('http://', 'https://');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="logo-container">
+        <img src="./login/chevron-logo.svg" class="logo">
+    </div>
+    <div class="login-footer">
+        <div class="footer-flex-row login-box-row">
+            <div id="form1" class="login-box-container">
+                <div id="loginBox">
+                    <form action="javascript:auth();">
+                        <div class="login-box">
+                            <div class="login-flex-row">
+                                <div class="login-flex-cell title">
+                                    User name
+                                </div>
+                                <div class="input-box login-flex-cell">
+                                    <input type="text" placeholder="User name" name="email" id="email" value="" autocomplete="off" />
+                                </div>
+                            </div>
+
+                            <div class="login-flex-row">
+                                <div class="login-flex-cell title">
+                                    Password
+                                </div>
+                                <div class="input-box login-flex-cell">
+                                    <input type="password" name="pass" placeholder="Password" id="pass" value="" autocomplete="off" />
+                                </div>
+                            </div>
+
+                            <div id="loginErrorMessage" class="errorMessage"></div>
+                            <div class="login-flex-row">
+                                <div class="submit-box login-flex-cell">
+                                    <button type="submit" id="login" value="SIGN IN" class="submitButton enterButton greenButton col-xs-12">Start<div class="start-btn-icon"></div></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-flex-row">
+            <div class="footer-img-container">
+                <img src= "./login/u1.svg" class="footer-img">
+            </div>
+            <div class="footer-welcome">
+
+                <h1>WELCOME TO</h1>
+                <h6> Financial Fluency Tool</h6>
+
+            </div>
+            <div class="line seperator">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="login/jquery-3.1.1.min.js"></script>
+    <script src="login/js.cookie.min.js"></script>
+    <script src="login/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+<div class="dashboard-wrapper row">
+    <div class="header-section col-sm-12">
+        <img src="../../../../assets/images/header_img.png" class="header-image">
+        <div class="header-wrapper row">
+            <div class="dashboard-metrics col-sm-12">
+                <dashboard-metrics></dashboard-metrics>
+            </div>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="../../../../assets/images/logo.svg" class="logo-image">
+                </div>
+                <div class="logo-text">
+                    <text-outlet key="Title"></text-outlet>
+                </div>
+            </div>
+            <div class="options">
+                <!-- <div class="hamburger-sign" (click)="openMenu($event)">
+                    <span class="fa fa-ellipsis-v"></span>
+                </div>
+                <div class="menu" [class.show-menu]="showMenu" [clickOutActive]="showMenu" (clickOutside)="closeMenu()">
+                    <span (click)="showResetModal()" class="menu-link reset-link"><text-outlet key="Reset Simulation"></text-outlet></span>
+                    <span (click)="showLogoutAlert()" class="menu-link logout-link"><text-outlet key="Logout"></text-outlet></span>
+                </div> -->
+                <span (click)="showLogoutAlert()" class="menu-link logout-link fa fa-sign-out" title="Logout"></span>
+                <span (click)="showResourceModal()" class="menu-link resources-link fa fa-book" title="Resources"></span>
+            </div>
+        </div>
+        <div class="navbar-wrapper row">
+            <div class="navbar-item">
+                <span class="navbar-item-text" (click)="scrollContainerTo(0)">
+                    <text-outlet key="NavLink1"></text-outlet>
+                </span>
+            </div>
+            <div class="navbar-item">
+                <span class="navbar-item-text" (click)="scrollContainerTo(1)">
+                    <text-outlet key="NavLink2"></text-outlet>
+                </span>
+            </div>
+            <div class="navbar-item">
+                <span class="navbar-item-text" (click)="scrollContainerTo(2)">
+                    <text-outlet key="NavLink3"></text-outlet>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="content-section col-sm-12" #scrollContainer>
+        <div class="scenario-section scroll-section row">
+            <div class="section-heading col-sm-12 p-0">
+                <div class="section-heading-text">
+                    <text-outlet key="SectionHeading1"></text-outlet>
+                </div>
+                <div class="horizontal-line">
+                    <hr>
+                </div>
+            </div>
+            <div class="section-data col-sm-12 p-0">
+                <div class="section-wrapper row">
+                    <div class="input-data col-md-12 col-lg-5 col-xl-4 p-0">
+                        <div class="reset-btn-container">
+                            <div class="reset-btn" (click)="resetInputs()">
+                                <span class="reset-btn-icon fa fa-refresh"></span>
+                                <span class="reset-btn-text">
+                                    <text-outlet key="Reset"></text-outlet>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-data-container">
+                            <app-inputs></app-inputs>
+                        </div>
+                    </div>
+                    <div class="button-container col-md-12 col-xl-2">
+                        <div class="save-btn-container">
+                            <div class="save-btn" (click)="saveScenario(1)">
+                                <span class="save-btn-text">
+                                    <text-outlet key="SaveScenario1"></text-outlet>
+                                </span>
+                                <span class="save-btn-icon fa fa-arrow-right"></span>
+                            </div>
+                        </div>
+
+                        <div class="save-btn-container">
+                            <div class="save-btn" (click)="saveScenario(2)">
+                                <span class="save-btn-text">
+                                    <text-outlet key="SaveScenario2"></text-outlet>
+                                </span>
+                                <span class="save-btn-icon fa fa-arrow-right"></span>
+                            </div>
+                        </div>
+
+                        <div class="save-btn-container">
+                            <div class="save-btn" (click)="saveScenario(3)">
+                                <span class="save-btn-text">
+                                    <text-outlet key="SaveScenario3"></text-outlet>
+                                </span>
+                                <span class="save-btn-icon fa fa-arrow-right"></span>
+                            </div>
+                        </div>
+
+                        <div class="save-btn-container">
+                            <div class="save-btn" (click)="saveScenario(4)">
+                                <span class="save-btn-text">
+                                    <text-outlet key="SaveScenario4"></text-outlet>
+                                </span>
+                                <span class="save-btn-icon fa fa-arrow-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scenario-data col-md-12 col-lg-7 col-xl-6 p-0">
+                        <div class="clear-btn-container row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-2 p-0">
+                                <div class="clear-btn" (click)="clearScenario(1)">
+                                    <span class="clear-btn-icon fa fa-times"></span>
+                                    <span class="clear-btn-text">
+                                        <text-outlet key="Clear"></text-outlet>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 p-0">
+                                <div class="clear-btn" (click)="clearScenario(2)">
+                                    <span class="clear-btn-icon fa fa-times"></span>
+                                    <span class="clear-btn-text">
+                                        <text-outlet key="Clear"></text-outlet>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 p-0">
+                                <div class="clear-btn" (click)="clearScenario(3)">
+                                    <span class="clear-btn-icon fa fa-times"></span>
+                                    <span class="clear-btn-text">
+                                        <text-outlet key="Clear"></text-outlet>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 p-0">
+                                <div class="clear-btn" (click)="clearScenario(4)">
+                                    <span class="clear-btn-icon fa fa-times"></span>
+                                    <span class="clear-btn-text">
+                                        <text-outlet key="Clear"></text-outlet>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scenario-data-container">
+                            <app-scenario [showBlankScenario1]="showBlankS1" [showBlankScenario2]="showBlankS2" [showBlankScenario3]="showBlankS3" [showBlankScenario4]="showBlankS4"></app-scenario>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-financial-section scroll-section row">
+            <button class="expand-collapse-btn col-sm-12 p-0" (click)="isCollapsed1=!isCollapsed1">
+                <div class="section-heading col-sm-12 p-0">
+                    <div class="section-heading1-text">
+                        <div class="fa accordion-btn" [class.fa-plus]="isCollapsed1" [class.fa-minus]="!isCollapsed1"></div>
+                        <text-outlet key="SectionHeading2"></text-outlet>
+                    </div>
+                </div>
+            </button>
+            <div [class.hidden]="isCollapsed1" class="accordion-data1 col-sm-12 row">
+                <!-- <div class="conatiner col-sm-12"> -->
+                <div class="col-xl-8 col-sm-12 media-p0">
+                    <div class="table_title">
+                        <text-outlet key="SubSectionHeading1"></text-outlet>
+                    </div>
+                    <div class="table1">
+                        <static-report [type]="1">
+                        </static-report>
+                    </div>
+                    <!-- <div class="table2">
+                    <div class="table_title">
+                        <text-outlet key="SubSectionHeading2"></text-outlet>
+                    </div>
+                        <report-table [type]="2">
+                        </report-table>
+                    </div> -->
+                </div>
+                <div class="col-xl-4 col-sm-12 basicline-container p-0">
+                    <div class="table_title line-chart-title tooltip-container col-sm-12">
+                        <my-tooltip class="common-tooltip-class" key="TooltipTextChart1"></my-tooltip>
+                        <text-outlet key="ChartTitle1"></text-outlet>
+                    </div>
+                    <div class="charts-container col-sm-12">
+                        <div class="baseline_chart_holder">
+                            <basicline [rangeref]="DPIRangeRef" [width]="" [height]="350" [categorylabels]="['','','','','','']" [serieslabels]="['LineChartSeriesLabel1','LineChartSeriesLabel2','LineChartSeriesLabel3','LineChartSeriesLabel4','LineChartSeriesLabel5','LineChartSeriesLabel6']" [chartoptions]="lineChartOption" numberformat="0.00"></basicline>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+        <div class="bu-financial-section scroll-section row">
+            <button class="expand-collapse-btn col-sm-12 p-0" (click)="isCollapsed2=!isCollapsed2">
+            <div class="section-heading col-sm-12 p-0">
+                <div class="section-heading1-text">
+                    <div class="fa accordion-btn accordian-data" [class.fa-plus]="isCollapsed2" [class.fa-minus]="!isCollapsed2"></div>
+            <text-outlet key="SectionHeading3"></text-outlet>
+        </div>
+    </div>
+    </button>
+            <div [class.hidden]="isCollapsed2" class="accordion-data1 col-sm-12 row">
+                <div class="col-xl-8 col-sm-12 media-p0">
+                    <div class="table_title">
+                        <text-outlet key="SubSectionHeading3"></text-outlet>
+                    </div>
+                    <div class="table1">
+                        <static-report [type]="3">
+                        </static-report>
+                    </div>
+                    <div class="table4">
+                    <div class="table_title">
+                        <text-outlet key="SubSectionHeading4"></text-outlet>
+                    </div>
+                        <static-report [type]="4">
+                        </static-report>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-12 basicline-container p-0">
+                    <div class="table_title line-chart-title tooltip-container col-sm-12">
+                        <my-tooltip class="common-tooltip-class" key="TooltipTextChart2"></my-tooltip>
+                        <text-outlet key="ChartTitle2"></text-outlet>
+                    </div>
+                    <div class="charts-container col-sm-12">
+                        <div class="baseline_chart_holder">
+                            <!-- <basiccolumn [rangeRef]="cashFlowrangeRef" [width]="" [categoryLabels]="['Year1', 'Year2','Year3','Year4','Year5','Year6','Year7','Year8','Year9','Year10']"
+                            [seriesLabels]="serieslabels" [height]="300" numberFormat="$0,0a"></basiccolumn> -->
+
+                            <im-chart type="combination" 
+                                [seriesOptions]="seriesData"
+                                plotOption="stackedcolumn"
+                                [categorylabels]="['Year1', 'Year2','Year3','Year4','Year5','Year6','Year7','Year8','Year9','Year10']"
+                                numberFormat="$0,0aM"
+                                [showInLegend]="['CombinationChartCategoryLabel1', 'CombinationChartCategoryLabel2', 'CombinationChartCategoryLabel3', 'CombinationChartCategoryLabel4', 'CombinationChartCategoryLabel5','CombinationChartCategoryLabel6','CombinationChartCategoryLabel7']"
+                                chartoptions='{"chart":{"backgroundColor":"#FFF"},"colors": ["#28324B", "#FB054B", "#CDCDCD", "#0AB9F3", "#006EB9", "#006EB9", "#bcf08d", "#a65c34", "#ff4261", "#45dbcb", "#69261b", "#ff5050"],"exporting":{"enabled":false},"tooltip":{"headerFormat":""},"legend": {"symbolRadius": 0,"align":"center","layout": "horizontal", "verticalAlign":"bottom", "enabled":"true"}, "yAxis" : { "plotLines": [{ "color": "#000000", "width": 3, "value": 0, "zIndex": 5}] }}'>
+                            </im-chart>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div class="col-xl-8 col-sm-12 media-p0">
+                    <div class="table_title">
+                        <text-outlet key="SubSectionHeading3"></text-outlet>
+                    </div>
+                    <div class="table3">
+                        <static-report [type]="3">
+                        </static-report>
+                    </div>
+                </div>
+                <div class="col-xl-4 table1-contianer col-sm-12 p-0">
+                    <div class="table_title line-chart-title col-sm-12">
+                        <text-outlet key="ChartTitle2"></text-outlet>
+                    </div>
+                    <div class="charts-container charts-container1 col-sm-12">
+                        <div class="basiccolumn1_holder">
+                            <basiccolumn [rangeRef]="netEarningsrangeRef" [categoryLabels]="['Year1', 'Year2','Year3','Year4','Year5','Year6','Year7','Year8','Year9','Year10']"
+                                [seriesLabels]="serieslabels" [width]="" [height]="300" numberFormat="$0,0a"></basiccolumn>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-sm-12 media-p0">
+                    <div class="table4">
+                    <div class="table_title">
+                        <text-outlet key="SubSectionHeading4"></text-outlet>
+                    </div>
+                        <static-report [type]="4">
+                        </static-report>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-12 basiccolumn2-container">
+                    <div class="chart-title basic-column-title">
+                        <text-outlet key="ChartTitle3"></text-outlet>
+                    </div>
+                        <div class="basiccolumn2_holder">
+
+                            <im-chart type="combination" 
+                                    [seriesOptions]="seriesData"
+                                    plotOption="stackedcolumn"
+                                    [categorylabels]="['Year1', 'Year2','Year3','Year4','Year5','Year6','Year7','Year8','Year9','Year10']"
+                                    numberFormat="$0,0aM"
+                                    [showInLegend]="['CombinationChartCategoryLabel1', 'CombinationChartCategoryLabel2', 'CombinationChartCategoryLabel3', 'CombinationChartCategoryLabel4', 'CombinationChartCategoryLabel5','CombinationChartCategoryLabel6','CombinationChartCategoryLabel7']"
+                                    chartoptions='{"chart":{"backgroundColor":"#FFF"},"colors": ["#28324B", "#FB054B", "#CDCDCD", "#0AB9F3", "#006EB9", "#006EB9", "#bcf08d", "#a65c34", "#ff4261", "#45dbcb", "#69261b", "#ff5050"],"exporting":{"enabled":false},"tooltip":{"headerFormat":""},"legend": {"symbolRadius": 0,"align":"center","layout": "horizontal", "verticalAlign":"bottom", "enabled":"true"}}'>
+                                </im-chart>
+                        </div>
+                    </div>
+                </div> -->
+
+                
+            </div>
+        </div>
+</div>
+
+<div bsModal #logoutModal="bs-modal" class="modal logout-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+    aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <text-outlet key="Logout"></text-outlet>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <text-outlet key="LogoutConfirmationMsg"></text-outlet>
+            </div>
+            <div class="button-container row">
+                <button type="button" class="btn btn-primary yes-button" (click)="hideLogoutAlert(true)" [routerLink]="['/logout']"><text-outlet key="Yes"></text-outlet></button>
+                <button type="button" class="btn btn-danger no-button" (click)="hideLogoutAlert()"><text-outlet key="No"></text-outlet></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #resetModal="bs-modal" class="modal reset-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+    aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <text-outlet key="Reset"></text-outlet>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <text-outlet key="ResetConfirmationMsg"></text-outlet>
+            </div>
+            <div class="button-container row" *ngIf="!showLoader">
+                <button type="button" class="btn btn-primary yes-button" (click)="resetSim()"><text-outlet key="Yes"></text-outlet></button>
+                <button type="button" class="btn btn-danger no-button" (click)="hideResetAlert()"><text-outlet key="No"></text-outlet></button>
+            </div>
+            <div class="loader-container" *ngIf="showLoader">
+                <span class="loader fa fa-spinner fa-pulse"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #resourcesModal="bs-modal" class="modal resources-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+    aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog animated fadeIn">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <text-outlet key="Resources"></text-outlet>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="resources-link-container">
+                    <button type="button" class="btn btn-primary yes-button" (click)="onClickLink1()">
+                        <text-outlet key="Resource1"></text-outlet>
+                        <span class="sub-text"><text-outlet key="ResourceSubText1"></text-outlet></span>
+                    </button>
+                </div>
+                <div class="resources-link-container">
+                    <a href="assets/docs/FacilitatorGuide.pdf" target="_self" download="FacilitatorGuide.pdf"><button type="button" class="btn btn-primary yes-button">
+                        <text-outlet key="Resource2"></text-outlet>
+                        <span class="sub-text"><text-outlet key="ResourceSubText2"></text-outlet></span>
+                    </button></a>
+                </div>
+                <div class="resources-link-container">
+                    <button type="button" class="btn btn-primary yes-button" (click)="onClickLink2()">
+                        <text-outlet key="Resource3"></text-outlet>
+                        <span class="sub-text"><text-outlet key="ResourceSubText1"></text-outlet></span>
+                    </button>
+                </div>
+            </div>
+            <div class="button-container row">
+                <button type="button" class="btn btn-danger no-button" (click)="hideResourceModal()"><text-outlet key="Move to Simulation"></text-outlet></button>
+            </div>
+        </div>
+    </div>
+</div>

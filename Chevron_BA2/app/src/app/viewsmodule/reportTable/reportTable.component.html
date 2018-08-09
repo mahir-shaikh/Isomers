@@ -1,0 +1,202 @@
+<div class="table_container">
+    <div class="table">
+        <div class="row report-row main-row">
+            <div class="col-sm-3 column-title">
+                <span></span>
+            </div>
+            <div class="col-sm-1 col-md value-text"><span class="column-titles"><b><text-outlet key="Year0"></text-outlet></b></span></div>
+            <div class="col-sm-1 col-md value-text"><span class="column-titles"><b><text-outlet key="Year1"></text-outlet></b></span></div>
+            <div class="col-sm-1 col-md value-text"><span class="column-titles"><b><text-outlet key="Year2"></text-outlet></b></span></div>
+            <div class="col-sm-1 col-md value-text"><span class="column-titles"><b><text-outlet key="Year3"></text-outlet></b></span></div>
+            <div class="col-sm-1 col-md value-text"><span class="column-titles"><b><text-outlet key="Year5"></text-outlet></b></span></div>
+            <div class="col-sm-1 col-md value-text"><span class="column-titles"><b><text-outlet key="Year10"></text-outlet></b></span></div>
+        </div>
+        <div class="row report-row">
+            <div class="col-sm-3 column-title">
+                <span>{{tableColumsTitle[0]}}</span>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[0]}}" format="{{numberFormat[0]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[0] == 0 ? '' : formerValueRangeRef[0]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[1]}}" format="{{numberFormat[1]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[1] == 0 ? '' : formerValueRangeRef[1]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[2]}}" format="{{numberFormat[2]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[2] == 0 ? '' : formerValueRangeRef[2]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[3]}}" format="{{numberFormat[3]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[3] == 0 ? '' : formerValueRangeRef[3]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[4]}}" format="{{numberFormat[4]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[4] == 0 ? '' : formerValueRangeRef[4]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[5]}}" format="{{numberFormat[5]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[5] == 0 ? '' : formerValueRangeRef[5]}}"></calc-outlet>
+            </div>
+        </div>
+
+        <div class="row report-row" [class.bold]="type==1||type==3">
+            <div class="col-sm-3 column-title">
+                <span>{{tableColumsTitle[1]}}</span>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[6]}}" format="{{numberFormat[6]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[6] == 0 ? '' : formerValueRangeRef[6]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[7]}}" format="{{numberFormat[7]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[7] == 0 ? '' : formerValueRangeRef[7]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[8]}}" format="{{numberFormat[8]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[8] == 0 ? '' : formerValueRangeRef[8]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[9]}}" format="{{numberFormat[9]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[9] == 0 ? '' : formerValueRangeRef[9]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[10]}}" format="{{numberFormat[10]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[10] == 0 ? '' : formerValueRangeRef[10]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[11]}}" format="{{numberFormat[11]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[11] == 0 ? '' : formerValueRangeRef[11]}}"></calc-outlet>
+            </div>
+        </div>
+        <div class="row report-row">
+            <div class="col-sm-3 column-title">
+                <span>{{tableColumsTitle[2]}}</span>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[12]}}" format="{{numberFormat[12]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[12] == 0 ? '' : formerValueRangeRef[12]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[13]}}" format="{{numberFormat[13]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[13] == 0 ? '' : formerValueRangeRef[13]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[14]}}" format="{{numberFormat[14]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[14] == 0 ? '' : formerValueRangeRef[14]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[15]}}" format="{{numberFormat[15]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[15] == 0 ? '' : formerValueRangeRef[15]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[16]}}" format="{{numberFormat[16]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[16] == 0 ? '' : formerValueRangeRef[16]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[17]}}" format="{{numberFormat[17]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[17] == 0 ? '' : formerValueRangeRef[17]}}"></calc-outlet>
+            </div>
+        </div>
+        <div class="row report-row">
+            <div class="col-sm-3 column-title">
+                <span>{{tableColumsTitle[3]}}</span>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[18]}}" format="{{numberFormat[18]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[18] == 0 ? '' : formerValueRangeRef[18]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[19]}}" format="{{numberFormat[19]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[19] == 0 ? '' : formerValueRangeRef[19]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[20]}}" format="{{numberFormat[20]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[20] == 0 ? '' : formerValueRangeRef[20]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[21]}}" format="{{numberFormat[21]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[21] == 0 ? '' : formerValueRangeRef[21]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[22]}}" format="{{numberFormat[22]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[22] == 0 ? '' : formerValueRangeRef[22]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[23]}}" format="{{numberFormat[23]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[23] == 0 ? '' : formerValueRangeRef[23]}}"></calc-outlet>
+            </div>
+        </div>
+        <div class="row report-row" [class.bold]="type==2">
+            <div class="col-sm-3 column-title">
+                <span>{{tableColumsTitle[4]}}</span>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[24]}}" format="{{numberFormat[24]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[24] == 0 ? '' : formerValueRangeRef[24]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[25]}}" format="{{numberFormat[25]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[25] == 0 ? '' : formerValueRangeRef[25]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[26]}}" format="{{numberFormat[26]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[26] == 0 ? '' : formerValueRangeRef[26]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[27]}}" format="{{numberFormat[27]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[27] == 0 ? '' : formerValueRangeRef[27]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[28]}}" format="{{numberFormat[28]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[28] == 0 ? '' : formerValueRangeRef[28]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[29]}}" format="{{numberFormat[29]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[29] == 0 ? '' : formerValueRangeRef[29]}}"></calc-outlet>
+            </div>
+        </div>
+        <div *ngIf="type==2" class="row report-row">
+        </div>
+        <div *ngIf="type==1||type==3||type==4" class="row report-row" [class.bold]="type==1||type==3">
+            <div class="col-sm-3 column-title">
+                <span>{{tableColumsTitle[5]}}</span>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[30]}}" format="{{numberFormat[30]}}" suffix="{{type== 4?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[30] == 0 ? '' : formerValueRangeRef[30]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[31]}}" format="{{numberFormat[31]}}" suffix="{{type== 4?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[31] == 0 ? '' : formerValueRangeRef[31]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[32]}}" format="{{numberFormat[32]}}" suffix="{{type== 4?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[32] == 0 ? '' : formerValueRangeRef[32]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[33]}}" format="{{numberFormat[33]}}" suffix="{{type== 4?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[33] == 0 ? '' : formerValueRangeRef[33]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[34]}}" format="{{numberFormat[34]}}" suffix="{{type== 4?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[34] == 0 ? '' : formerValueRangeRef[34]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[35]}}" format="{{numberFormat[35]}}" suffix="{{type== 4?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[35] == 0 ? '' : formerValueRangeRef[35]}}"></calc-outlet>
+            </div>
+        </div>
+        <div *ngIf="type==1||type==3||type==4" class="row report-row" [class.bold]="type==1||type==3">
+            <div class="col-sm-3 column-title">
+                <span>{{tableColumsTitle[6]}}</span>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[36]}}" format="{{numberFormat[36]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[36] == 0 ? '' : formerValueRangeRef[36]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[37]}}" format="{{numberFormat[37]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[37] == 0 ? '' : formerValueRangeRef[37]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[38]}}" format="{{numberFormat[38]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[38] == 0 ? '' : formerValueRangeRef[38]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[39]}}" format="{{numberFormat[39]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[39] == 0 ? '' : formerValueRangeRef[39]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[40]}}" format="{{numberFormat[40]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[40] == 0 ? '' : formerValueRangeRef[40]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[41]}}" format="{{numberFormat[41]}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[41] == 0 ? '' : formerValueRangeRef[41]}}"></calc-outlet>
+            </div>
+        </div>
+        <div *ngIf="type==1||type==3||type==4" class="row report-row" [class.bold]="type==4">
+            <div class="col-sm-3 column-title">
+                <span>{{tableColumsTitle[7]}}</span>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[42]}}" format="{{numberFormat[42]}}" suffix="{{type== 1||type== 3?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[42] == 0 ? '' : formerValueRangeRef[42]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[43]}}" format="{{numberFormat[43]}}" suffix="{{type== 1||type== 3?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[43] == 0 ? '' : formerValueRangeRef[43]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[44]}}" format="{{numberFormat[44]}}" suffix="{{type== 1||type== 3?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[44] == 0 ? '' : formerValueRangeRef[44]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[45]}}" format="{{numberFormat[45]}}" suffix="{{type== 1||type== 3?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[45] == 0 ? '' : formerValueRangeRef[45]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[46]}}" format="{{numberFormat[46]}}" suffix="{{type== 1||type== 3?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[46] == 0 ? '' : formerValueRangeRef[46]}}"></calc-outlet>
+            </div>
+            <div class="col-sm-1 col-md value-text">
+                <calc-outlet ref="{{tableRanges[47]}}" format="{{numberFormat[47]}}" suffix="{{type== 1||type== 3?suffix:''}}" highlightValue="true" showBlank="true" formerValueRef="{{formerValueRangeRef[47] == 0 ? '' : formerValueRangeRef[47]}}"></calc-outlet>
+            </div>
+        </div>
+    </div>
+</div>

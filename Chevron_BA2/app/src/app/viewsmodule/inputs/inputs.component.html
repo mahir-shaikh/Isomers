@@ -1,0 +1,75 @@
+<div class="inputs-page-wrapper">
+    <div class="data-row row">
+        <div class="data-label tooltip-container col-sm">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDecision1"></my-tooltip>
+            <text-outlet key="InputLabel1"></text-outlet>
+        </div>
+        <div class="data-value col-sm">
+            <calc-stepper ref="tlInputSched" min="0" max="10" step="0.25" prefix="" format="0.00" suffix="Years"></calc-stepper>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="data-label tooltip-container col-sm">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDecision2"></my-tooltip>
+            <text-outlet key="InputLabel2"></text-outlet>
+        </div>
+        <div class="data-value col-sm">
+            <calc-stepper ref="tlInputCapEx" min="0" max="1000" step="5" format="0" prefix="$" suffix="MM"></calc-stepper>
+        </div>
+    </div>
+    <div class="data-row row mt-25">
+        <div class="data-label tooltip-container col-sm">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDecision3"></my-tooltip>
+            <text-outlet key="InputLabel3"></text-outlet>
+        </div>
+        <div class="data-value col-sm">
+            <calc-stepper ref="tlInputProd" min="0" max="100" step="0.5" format="0.0" prefix="" suffix="MBD"></calc-stepper>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="data-label tooltip-container col-sm">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDecision4"></my-tooltip>
+            <text-outlet key="InputLabel4"></text-outlet>
+        </div>
+        <div class="data-value col-sm">
+            <calc-stepper ref="tlInputRes" min="0" max="1000" step="1" format="0" prefix="" suffix="MMBBL"></calc-stepper>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="data-label tooltip-container col-sm">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDecision5"></my-tooltip>
+            <text-outlet key="InputLabel5"></text-outlet>
+        </div>
+        <div class="data-value col-sm">
+            <calc-stepper ref="tlInputRel" outputMax="99" outputMin="50" step="1" scaler="100" format="0%" prefix="" suffix=""></calc-stepper>
+        </div>
+    </div>
+    <div class="data-row row mt-25">
+        <div class="data-label tooltip-container col-sm">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDecision6"></my-tooltip>
+            <text-outlet key="InputLabel6"></text-outlet>
+        </div>
+        <div class="data-value col-sm">
+            <calc-stepper ref="tlInputOpEx" min="0.1" max="150" step="0.1" prefix="$" format="0.0" suffix="/ BBL"></calc-stepper>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="data-label tooltip-container col-sm">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDecision7"></my-tooltip>
+            <text-outlet key="InputLabel7"></text-outlet>
+        </div>
+        <div class="data-value col-sm">
+            <calc-stepper ref="tlInputNetback" min="5" max="150" step="1" format="0" prefix="$" suffix="/ BBL"></calc-stepper>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="data-label tooltip-container col-sm">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDecision8"></my-tooltip>
+            <text-outlet key="InputLabel8"></text-outlet>
+        </div>
+        <div class="data-value col-sm">
+            <calc-stepper ref="tlInputWorkingCap" min="1" max="365" step="1" format="0" prefix="" suffix="Days"></calc-stepper>
+        </div>
+    </div>
+</div>
+

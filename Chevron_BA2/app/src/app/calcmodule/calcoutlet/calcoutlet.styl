@@ -1,0 +1,61 @@
+:host
+    font-size 0.875rem
+    text-align center
+    position relative
+    @media screen and (max-width 768px)
+        font-size 0.75rem
+    
+.metric-balloon
+    position absolute
+    // display inline-block
+    // top 25%
+    bottom -100%
+    // left 48%
+    // margin 0 5px
+    padding 3px
+    color #fff
+    border-radius 5px
+    font-size 12px
+    opacity 0
+    z-index 1
+    transition opacity 0.35s ease
+    &.fade-in
+        opacity 1
+    &.increement
+        background-color green
+    &.decreement
+        background-color red
+    &.no-change-balloon-value
+        background-color transparent
+        color transparent
+        
+span
+    &.isPositive
+        color green
+    &.isNegative
+        color #CC0000
+    &.isZero
+        color #666
+        
+:host-context(.scenario-wrapper)
+    span
+        &.isPositive
+            font-weight 600
+        &.isNegative
+            font-weight 600
+        
+:host-context(.intro-page-wrapper){
+    color #000
+}
+:host-context(.switch-to-heading){
+    font-weight 500
+    @media screen and (max-width 768px){
+        font-size 0.875rem
+    }
+    @media screen and (max-width 576px){
+        font-size 0.75rem
+    }
+}
+
+
+

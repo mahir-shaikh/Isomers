@@ -1,0 +1,27 @@
+.table_container
+    background white !important
+    padding 0px !important
+.table
+    text-align center
+    .report-row
+        &:nth-child(even) 
+            background #FFF
+            padding 8px
+        &:nth-child(odd) 
+            background rgba(239, 239, 239, 1)
+            padding 8px
+        &.main-row
+            padding 16px
+        .value-text
+            text-align right
+            .column-titles
+                color #21A8DB
+                @media screen and (max-width 1024px)
+                    font-size 14px
+        .column-title
+            text-align left
+            @media screen and (max-width 1024px)
+                font-size 14px
+.bold
+    font-weight 600
+    padding-bottom 16px !important

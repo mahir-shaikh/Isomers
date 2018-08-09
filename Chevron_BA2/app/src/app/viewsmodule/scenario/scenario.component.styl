@@ -1,0 +1,31 @@
+:host
+    height 100%
+
+.scenario-wrapper
+    height 100%
+    // display -webkit-box
+    // display -webkit-flex
+    // display -ms-flexbox
+    // display flex
+    // flex-direction column
+    // justify-content space-evenly
+    .data-row
+        background-color #fff
+        padding 10px 0px
+        &:nth-child(odd)
+            background-color #efefef
+        .data-label
+            // display block
+            @media screen and (max-width 1024px)
+                font-size 14px
+        .data-value
+            text-align right
+    .data-heading
+        .data-label
+            color #21A8DB
+            text-align right
+            @media screen and (max-width 1024px)
+                font-size 12px
+            
+.mt-25
+    margin-top 25px !important

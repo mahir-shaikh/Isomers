@@ -1,0 +1,81 @@
+:host
+    display inline-block
+    width 100%
+    max-width 200px
+    height 35px
+    // background-color #ECECEA
+    // color #111
+    overflow hidden
+    position relative
+    border 1px solid #BABABA
+    .stepper
+        height 100%
+    input
+        margin-left 35px
+        height 100%
+        width calc(100% - 70px)
+        text-align center
+        // color #21A8DB
+        border 1px solid #F0F0F0
+        padding-right 5px
+        &:active,
+        &:focus
+            color #fff
+            background-color #21A8DB
+            border 1px solid #21A8DB
+    @media screen and (max-width 350px)
+        height 30px
+        line-height 30px
+
+:host(.disabled)
+    background-color #6D6E70
+    .stepper-button
+        pointer-events none
+        color #000369
+    
+.stepper
+    font-size 0.875rem
+    & > *
+      float left
+      display inline-block
+      
+    .field-value
+        width calc(100% - 70px)
+        left 35px
+        // position relative
+        text-align center
+        overflow hidden
+        height 35px
+        line-height 35px
+        color #000
+        position absolute
+        z-index 1
+        background #fff
+        &.negative
+            color red
+    &-button
+        cursor pointer
+        display inline-block
+        font-size 0.75rem
+        width 35px
+        height 35px
+        line-height 35px
+        position absolute
+        text-align center
+        color #999
+        &:hover, &:active
+            background-color #21A8DB
+            color #fff
+            // transition color 1s
+        &.disabled
+            background-color #000
+            color #FFF !important
+            pointer-events none
+    .add
+        right 0
+        border-left 1px solid #BABABA
+    .subtract
+        left -1px // Edge Hover Issue
+        border-right 1px solid #BABABA
+    .hidden
+        display none

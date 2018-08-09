@@ -1,0 +1,151 @@
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+.loader
+    display block
+    position relative
+    color #000
+    left 50%
+    top 50%
+    width 150px
+    height 150px
+    margin -75px 0 0 -75px
+    border 3px solid transparent
+    border-top-color #000
+    border-radius 50%
+    z-index 10
+    -webkit-animation spin 2s linear infinite
+    animation spin 2s linear infinite
+    &-wrapper
+        position fixed
+        top 0
+        left 0
+        width 100vw
+        height 100vh
+        z-index 5
+        background-size cover
+        .autodesk-logo-container
+            position absolute
+            top calc(50% - 120px)
+            left 50%
+            transform translate(-50%,-50%)
+            .autodesk-logo
+                width 250px
+    &:before, &:after
+        content ""
+        position absolute
+        border 3px solid transparent
+        border-top-color #000
+        border-radius 50%
+    &:before
+        top 5px
+        left 5px
+        right 5px
+        bottom 5px
+        -webkit-animation spin 3s linear infinite
+        animation spin 3s linear infinite
+    &:after
+        top 15px
+        left 15px
+        right 15px
+        bottom 15px
+        border-top-color #000
+        -webkit-animation spin 1.5s linear infinite
+        animation spin 1.5s linear infinite
+
+.progress-value
+    display block
+    position relative
+    left 50%
+    top 70%
+    width 50px
+    height 50px
+    margin -100px 0 0 -25px
+    z-index 15
+    background transparent
+    border none
+    text-align center
+    line-height 50px
+    color #000
+    font-weight 600
+
+.loader_container
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    margin auto
+    animation rotate-move 2s ease-in-out
+    overflow hidden
+    .dot
+        width 70px
+        height 70px
+        border-radius 50%
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        margin auto
+        &.dot-3
+            background -webkit-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background -o-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background -moz-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background -ms-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            animation dot-3-move 3s ease
+        &.dot-2
+            background -webkit-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background -o-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background -moz-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background -ms-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            animation dot-2-move 3s ease
+        &.dot-1
+            background -webkit-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background -o-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background -moz-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background -ms-radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            background radial-gradient(circle, white 20%, #ED0E62 22%, #ED0E62 100%)
+            animation dot-1-move 3s ease
+
+@keyframes dot-3-move {
+  20% {transform: scale(1)}
+  45% {transform: translateY(-12px) scale(.45)}
+  60% {transform: translateY(-60px) scale(.45)}
+  80% {transform: translateY(-60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)} 
+}
+
+@keyframes dot-2-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(-12px, 12px) scale(.45)}
+  60% {transform: translate(-60px, 60px) scale(.45)}
+  80% {transform: translate(-60px, 60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)} 
+}
+
+@keyframes dot-1-move {
+  20% {transform: scale(1); -moz-transform: scale(1);}
+  45% {transform: translate(12px, 12px) scale(.45); -moz-transform: translate(16px, 12px) scale(.45)}
+  60% {transform: translate(60px, 60px) scale(.45); -moz-transform: translate(80px, 60px) scale(.45)}
+  80% {transform: translate(60px, 60px) scale(.45); -moz-transform: translate(80px, 60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1); -moz-transform: translateY(0px) scale(1)}
+} 
+
+@keyframes rotate-move {
+  55% {transform: rotate(0deg)}
+  80% {transform: rotate(360deg)}
+  100% {transform: rotate(360deg)}
+}

@@ -1,0 +1,29 @@
+.dashboard-metrics-container
+    // color #FFF
+    align-items center
+    height 100%
+    @media screen and (max-width 1350px)
+        align-items flex-start
+        padding-top 20px
+    .metric-container
+        padding 0
+        padding-right 50px
+        &:last-child
+            padding-right 0
+        @media screen and (max-width 1350px)
+            padding-right 20px
+            max-width 130px
+    .metric-title
+        font-size 16px
+        margin 10px 0
+        // font-weight bold
+        @media screen and (max-width 1350px)
+            font-size 12px
+    .metric-data
+        calc-outlet
+            font-size 22px
+            color #21A8DB
+            font-weight bold
+            @media screen and (max-width 1350px)
+                font-size 18px
+            

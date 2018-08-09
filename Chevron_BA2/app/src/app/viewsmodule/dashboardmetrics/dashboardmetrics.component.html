@@ -1,0 +1,47 @@
+<div class="dashboard-metrics-container row">
+    <div class="metric-container">
+        <div class="metric-data">
+            <calc-outlet ref="tlOutputDash1" format="$0.aM"></calc-outlet>
+        </div>
+        <div class="metric-title tooltip-container">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDashboard1"></my-tooltip>
+            <text-outlet key="DashboardGraphTitle1"></text-outlet>
+        </div>
+    </div>
+    <div class="metric-container">
+        <div class="metric-data">
+            <calc-outlet ref="tlOutputDash2" format="$0.aM"></calc-outlet>
+        </div>
+        <div class="metric-title tooltip-container">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDashboard2"></my-tooltip>
+            <text-outlet key="DashboardGraphTitle2"></text-outlet>
+        </div>
+    </div>
+    <div class="metric-container">
+        <div class="metric-data">
+            <calc-outlet ref="tlOutputDash3" format="0.00"></calc-outlet>
+        </div>
+        <div class="metric-title tooltip-container">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDashboard3"></my-tooltip>
+            <text-outlet key="DashboardGraphTitle3"></text-outlet>
+        </div>
+    </div>
+    <div class="metric-container">
+        <div class="metric-data">
+            <calc-outlet ref="tlOutputDash4" format="0.0%"></calc-outlet>
+        </div>
+        <div class="metric-title tooltip-container">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDashboard4"></my-tooltip>
+            <text-outlet key="DashboardGraphTitle4"></text-outlet>
+        </div>
+    </div>
+    <div class="metric-container">
+        <div class="metric-data">
+            <calc-outlet ref="tlOutputDash5" format="0" suffix="Years"></calc-outlet>
+        </div>
+        <div class="metric-title tooltip-container">
+            <my-tooltip class="common-tooltip-class" key="TooltipTextDashboard5"></my-tooltip>
+            <text-outlet key="Project Payback"></text-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,452 @@
+.dashboard-wrapper
+    height 100%
+    .header-section
+        height 160px
+        @media screen and (max-width 1350px)
+            height 120px
+        @media screen and (max-width 768px)
+            height 120px
+        .header-image
+            position absolute
+            right 50px
+            top 10px
+            height 150px
+            @media screen and (max-width 1350px)
+                height 110px
+            @media screen and (max-width 768px)
+                display none
+        .header-wrapper
+            border-bottom 3px solid #999999
+            padding-right 400px
+            @media screen and (max-width 768px)
+                padding-right 100px
+            .dashboard-metrics
+                height  125px
+                min-width 405px
+                @media screen and (max-width 1350px)
+                    height 105px
+                    padding 0
+            .logo-container
+                display -webkit-box
+                display -webkit-flex
+                display -ms-flexbox
+                display flex
+                flex-direction column
+                justify-content flex-end
+                align-items center
+                position absolute
+                right 400px
+                top 15px
+                .logo
+                    .logo-image
+                        height 100px
+                        padding 10px
+                .logo-text
+                    background-color #FFF
+                    margin-bottom -10px
+                    padding 0 20px
+                    font-size 20px
+                    font-weight 600
+                @media screen and (max-width 1350px)
+                    right 265px
+                    top 25px
+                    .logo
+                        .logo-image
+                            height 70px
+                    .logo-text
+                        font-size 14px
+                @media screen and (max-width 768px)
+                    right 40px
+            .options
+                text-align center
+                position absolute
+                display inline-block
+                right 5px
+                top 30px
+                .hamburger-sign
+                    color #6D747E
+                    font-size 2.5rem
+                    display inline-block
+                    padding 0 10px
+                    cursor pointer
+                .menu
+                    position absolute
+                    background-color #FFF
+                    font-size 0.875rem
+                    z-index 3
+                    right calc(100% + 20px)
+                    top 0
+                    text-align left
+                    border 1px solid #3e3e3e
+                    -webkit-transform scaleX(0)
+                    transform scaleX(0)
+                    -webkit-transform-origin 0 0
+                    transform-origin 100% 0
+                    transition all 0.5s cubic-bezier(.5,0,.3,1)
+                    &:after
+                        content ''
+                        width 0px
+                        height 0px
+                        border-top 15px solid transparent
+                        border-bottom 15px solid transparent
+                        border-left 15px solid #3e3e3e
+                        border-right 0 solid #3e3e3e
+                        position absolute
+                        top 0px
+                        right -15px
+                        z-index 1
+                    &.show-menu
+                        -webkit-transform scaleX(1)
+                        transform scaleX(1)
+                    & > .menu-link
+                        display block
+                        padding 5px 10px
+                        cursor pointer
+                        color #6D747E
+                        line-height 20px
+                        // &:nth-child(even)
+                        //     background-color #ECF0F1
+                        &:hover
+                            background-color #7B8C9D
+                            color #FFF
+                .menu-link
+                    color #6D747E
+                    font-size 22px
+                    display block
+                    padding 10px
+                    cursor pointer
+        .navbar-wrapper
+            margin 30px 0
+            display none
+            .navbar-item
+                padding 15px 30px
+                cursor pointer
+                &:hover
+                    background-color #E2E2E2
+                &-text
+                    padding 5px 10px
+                    border-bottom 2px solid #ccc
+                    &:active
+                        border-bottom 2px solid #21A8DB
+    .content-section
+        height calc(100% - 160px)
+        overflow auto
+        @media screen and (max-width 1350px)
+            height calc(100% - 120px)
+        @media screen and (max-width 768px)
+            height calc(100% - 120px)
+        .section-heading
+            display -webkit-box
+            display -webkit-flex
+            display -ms-flexbox
+            display flex
+            align-items center
+            &-text
+                display inline-block
+                background #21A8DB
+                padding 15px
+                padding-right 25px
+                color #fff
+                font-size 20px
+                min-width 300px
+                text-align left
+            .horizontal-line
+                display inline-block
+                width 100%
+                hr
+                    border-top 3px solid #21A8DB
+        .reset-btn-container
+            text-align right
+            height 30px
+            .reset-btn
+                background-color #CC0000
+                display inline-block
+                font-size 14px
+                color #FFF
+                padding 3px 15px
+                border-radius 20px
+                cursor pointer
+                margin-right 15px
+                &-icon
+                    // padding-right 3px
+                    
+                &-text
+                    // padding 0 5px
+                &:hover
+                    background-color #ff0b0b
+                    .reset-btn-icon
+                        -webkit-transition 1s ease-out
+                        -moz-transition  1s ease-out
+                        -ms-transition  1s ease-out
+                        transition  1s ease-out
+                        -ms-transform rotate(-360deg)
+                        -moz-transform rotate(-360deg)
+                        -webkit-transform rotate(-360deg)
+                        transform rotate(-360deg)
+        .clear-btn-container
+            text-align right
+            height 30px
+            .clear-btn
+                background-color #CC0000
+                display inline-block
+                font-size 14px
+                color #FFF
+                padding 3px 15px
+                border-radius 20px
+                cursor pointer
+                &-icon
+                    //padding-right 3px
+                &-text
+                    // padding 0 5px
+                &:hover
+                    background-color #ff0b0b
+                    .clear-btn-icon
+                        -webkit-transition -webkit-transform 1s
+                        -moz-transition -moz-transform 1s
+                        -ms-transition -ms-transform 1s
+                        transition  transform 1s
+                        -webkit-transform  rotate(360deg)
+                        -moz-transform  rotate(360deg)
+                        -ms-transform  rotate(360deg)
+                        transform  rotate(360deg)
+        .button-container
+            display -webkit-box
+            display -webkit-flex
+            display -ms-flexbox
+            display flex
+            flex-direction column
+            justify-content center
+            @media screen and (max-width 1024px)
+                flex-direction row
+            .save-btn-container
+                text-align center
+                margin 0 5px
+                .save-btn
+                    background-color #21A8DB
+                    display inline-block
+                    font-size 18px
+                    color #FFF
+                    padding 10px 15px
+                    margin 10px 0
+                    cursor pointer
+                    border-radius 20px
+                    @media screen and (max-width 1350px)
+                        padding 5px 10px
+                        font-size 14px
+                    &-icon
+                        padding-left 10px
+                    &-text
+                        // padding 0 5px
+                    &:hover
+                        background-color #0383b4
+                        .save-btn-icon
+                            transform translate3d(4px, 0, 0)
+                            -ms-transform translate3d(4px, 0, 0)
+                            -webkit-transform translate3d(4px, 0, 0)
+                            -moz-transform translate3d(4px, 0, 0)
+        .scenario-data-container
+            height calc(100% - 30px)
+
+        .scroll-section
+            margin-bottom 16px
+        .scenario-section
+            @media screen and (max-width 1024px)
+                .input-data
+                    order 2
+                .scenario-data
+                    order 3
+                .button-container
+                    order 1
+            @media screen and (max-width 768px)
+                .input-data
+                    order 1
+                .scenario-data
+                    order 3
+                .button-container
+                    order 2
+
+.logout-modal,.reset-modal,.resources-modal
+    .button-container
+        padding 0 15px 10px
+        text-align center
+        justify-content center
+        .btn
+            cursor pointer
+            margin-left 15px
+            calc-outlet
+                color #fff
+    .resources-link-container
+        padding 10px
+        text-align center
+        .btn
+            cursor pointer
+        .sub-text
+            font-size 11px
+            display block
+            
+.resources-modal
+    background rgba(255,255,255,0.8)
+    &.modal 
+        .modal-dialog
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%,-50%)
+            -webkit-transform translate(-50%,-50%)
+            -o-transform translate(-50%,-50%)
+            min-width 500px
+            box-shadow 0px 0px 5px 5px rgba(0, 0, 0,0.3)
+            .button-container
+                .btn
+                    margin 0
+
+.accordion_title
+    font-size 20px
+
+.heading_container
+    width 172px
+    background rgb(5,170,217)
+    padding 14px
+    color white
+    display inline-block
+
+.line
+    height 3px
+    background rgb(5,170,217)
+    position absolute
+    display inline-block
+    width calc(100% - 172px)
+    margin-top 24px
+
+.charts_container
+    position relative
+    top 39px
+
+.basicline_chart_container
+    height 44%
+    margin-bottom 48px
+
+.baseline_chart_holder,.basiccolumn1_holder,.basiccolumn2_holder
+    position relative
+    top 50%
+    margin 0 auto
+    transform translateY(-50%)
+    -webkit-transform translateY(-50%)
+    -ms-transform translateY(-50%)
+    -moz-transform translateY(-50%)
+    // @media screen and (max-width 992px)
+    //     transform auto
+    //     -webkit-transform auto
+    //     -ms-transform auto
+    //     -moz-transform auto
+
+.baseline_chart_holder
+    @media screen and (max-width 992px)
+        top:49%
+
+.basiccolumn2_holder
+    top:44%
+    @media screen and (max-width 992px)
+        top:43%
+
+.table_title
+    font-weight 500
+    font-style normal
+    font-size 20px
+    color #E5601F
+    margin-top 24px
+    padding-bottom 4px
+
+.basiccolumn1-container,.basiccolumn2-container
+    background rgba(239, 239, 239, 1)
+
+.chart-title
+    text-align center
+    font-weight 500
+    font-style normal
+    font-size 20px
+    color #E5601F
+    bottom 22px
+    position relative
+    
+
+.basiccolumn1-container,.basiccolumn2-container,.basicline-container
+    margin-bottom 16px
+    @media screen and (max-width 992px)
+        margin-bottom 8px
+        margin-top 16px
+
+.basiccolumn2-container
+    margin-top 47px
+    @media screen and (max-width 992px)
+        margin-top 16px
+
+.accordion-btn
+    color white
+    border none
+    font-size 0.85rem
+    background transparent
+    display inline-block
+    float right
+    margin-top 4px
+
+.section-heading1
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        align-items center
+        &-text
+            display inline-block
+            background #21A8DB
+            padding 15px
+            padding-right 25px
+            color #fff
+            font-size 20px
+            min-width 100%
+            margin-top 8px
+            text-align left
+
+button:focus {outline:0;}
+
+.expand-collapse-btn
+    background transparent
+    border none
+    cursor pointer
+
+.accordion-data1
+        padding-top 0
+        border 1px solid #21A8DB
+        max-height 3608px // anything above original height
+        overflow hidden
+        transition all 0.5s cubic-bezier(.5,0,.3,1)
+        &.hidden
+            max-height 0 
+
+.line-chart-title
+    min-width 360px
+    text-align center
+    @media screen and (max-width 992px)
+        margin-top auto
+
+.charts-container,.charts-container1
+    height calc(100% - 47px)
+    background rgba(239, 239, 239, 1)
+    @media screen and (max-width 992px)
+        height 100%
+
+.charts-container1
+     height calc(100% - 63px)
+     @media screen and (max-width 992px)
+        height calc(100% - 16px)
+
+.basicline-container
+    margin-bottom 16px
+
+.table1-contianer
+    @media screen and (max-width 992px)
+        margin-bottom 16px
+        
+.media-p0
+    @media screen and (max-width 1024px)
+        padding 0 !important
