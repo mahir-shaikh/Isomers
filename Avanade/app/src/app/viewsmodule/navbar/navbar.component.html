@@ -1,0 +1,46 @@
+<div class="navigation-bar-container row">
+    <div class="navigation-bar-link navigation-bar-hover-link event-link col-sm" [class.disabled]="isEventListEmpty" routerLinkActive="active" (click)="openMenu(3, $event)" [class.isOpen]="isLink4Open">
+        <span class="navigation-bar-link-icon fa fa-calendar-check-o"></span>
+        <div class="navigation-bar-dropdown-link" [clickOutActive]="isLink4Open" (clickOutside)="closeMenu(3)">
+            <span class="navigation-bar-link-text" routerLinkActive="active" *ngFor="let event of eventList; let i = index" (click)="displayWobbler(i)">
+                {{event.name}}
+            </span>
+        </div>
+    </div>
+    <div class="navigation-bar-link col-sm" [routerLink]="['/overview']" routerLinkActive="active">
+        <span class="navigation-bar-link-icon fa fa-home"></span>
+        <span class="navigation-bar-link-text"><text-outlet key="NavigationMainLink1"></text-outlet></span>
+    </div>
+    <div class="bar"></div>
+    <div class="navigation-bar-link navigation-bar-hover-link col-sm" routerLinkActive="active" (click)="openMenu(0, $event)" [class.isOpen]="isLink1Open">
+        <span class="navigation-bar-link-icon fa fa-compass"></span>
+        <span class="navigation-bar-link-text"><text-outlet key="NavigationMainLink2"></text-outlet></span>
+        <span class="state fa" [class.fa-caret-down]="!isLink1Open" [class.fa-caret-up]="isLink1Open"></span>
+        <div class="navigation-bar-dropdown-link" [clickOutActive]="isLink1Open" (clickOutside)="closeMenu(0)">
+            <span class="navigation-bar-link-text" [routerLink]="['/salesMarketing']" routerLinkActive="active"><text-outlet key="NavigationMainLink2SubLink1"></text-outlet></span>
+            <span class="navigation-bar-link-text" [routerLink]="['/corporate']" routerLinkActive="active"><text-outlet key="NavigationMainLink2SubLink2"></text-outlet></span>
+            <span class="navigation-bar-link-text" [routerLink]="['/stratergicInitiatives']" routerLinkActive="active"><text-outlet key="NavigationMainLink2SubLink3"></text-outlet></span>
+        </div>
+    </div>
+    <div class="bar"></div>
+    <div class="navigation-bar-link navigation-bar-hover-link col-sm" routerLinkActive="active" (click)="openMenu(1, $event)" [class.isOpen]="isLink2Open">
+        <span class="navigation-bar-link-icon fa fa-cube"></span>
+        <span class="navigation-bar-link-text"><text-outlet key="NavigationMainLink3"></text-outlet></span>
+        <span class="state fa" [class.fa-caret-down]="!isLink2Open" [class.fa-caret-up]="isLink2Open"></span>
+        <div class="navigation-bar-dropdown-link" [clickOutActive]="isLink2Open" (clickOutside)="closeMenu(1)">
+            <span class="navigation-bar-link-text" [routerLink]="['/practice','CRM']" routerLinkActive="active"><text-outlet key="NavigationMainLink3SubLink1"></text-outlet></span>
+            <span class="navigation-bar-link-text" [routerLink]="['/practice','HCM']" routerLinkActive="active"><text-outlet key="NavigationMainLink3SubLink2"></text-outlet></span>
+            <span class="navigation-bar-link-text" [routerLink]="['/practice','Futuria']" routerLinkActive="active"><text-outlet key="NavigationMainLink3SubLink3"></text-outlet></span>
+        </div>
+    </div>
+    <div class="bar"></div>
+    <div class="navigation-bar-link navigation-bar-hover-link col-sm" routerLinkActive="active" (click)="openMenu(2, $event)" [class.isOpen]="isLink3Open">
+        <span class="navigation-bar-link-icon fa fa-file-text"></span>
+        <span class="navigation-bar-link-text"><text-outlet key="NavigationMainLink4"></text-outlet></span>
+        <span class="state fa" [class.fa-caret-down]="!isLink3Open" [class.fa-caret-up]="isLink3Open"></span>
+        <div class="navigation-bar-dropdown-link" [clickOutActive]="isLink3Open" (clickOutside)="closeMenu(2)">
+            <span class="navigation-bar-link-text" [routerLink]="['/pnl']" routerLinkActive="active"><text-outlet key="NavigationMainLink4SubLink1"></text-outlet></span>
+            <span class="navigation-bar-link-text" [routerLink]="['/decSummary']" routerLinkActive="active"><text-outlet key="NavigationMainLink4SubLink2"></text-outlet></span>
+        </div>
+    </div>    
+</div>

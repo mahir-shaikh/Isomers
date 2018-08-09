@@ -1,0 +1,86 @@
+@import "mixins"
+@import "core"
+@import "nouislider"
+@import "colors"
+
+html, body
+    min-height 100%
+body
+    // background url("../images/AutodeskBg.jpg") no-repeat
+    overflow auto
+    background-size cover
+    font-size 16px
+    font-family "OpenSans"
+    line-height 20px
+    color #7B8C9D
+    -webkit-perspective 1000px
+    @media screen and (max-width 768px)
+        font-size 14px
+    @media screen and (max-width 576px)
+        font-size 12px
+.im-app
+    height 100vh
+    padding 0
+    overflow hidden
+    .main
+        height 100%
+        .row
+            margin 0
+        .container
+            width calc(100% - 30px)
+            max-width 1200px
+            margin-left 15px
+            margin-right 15px
+            @media screen and (min-width 992px)
+                margin auto
+                padding 0
+
+bs-tooltip-container
+    &.tooltip.tooltip-right
+        -webkit-animation-duration 0.35s
+        animation-duration 0.35s
+        -webkit-animation-fill-mode both
+        animation-fill-mode both
+        -webkit-animation-name customSlideRight
+        animation-name customSlideRight
+        -webkit-transform-origin 0 0
+        transform-origin 0 0
+        .tooltip-inner
+            text-align left
+            max-width 500px
+
+.digitalICO
+    font-family 'wib-icomoon'
+
+@keyframes customSlideRight {
+    0%   {
+        -webkit-transform scaleX(0)
+        transform scaleX(0)
+    }
+    100% {
+        -webkit-transform scaleX(1)
+        transform scaleX(1)
+    }
+}
+
+dashboardgraph
+    .highcharts-container
+        margin auto
+    .highcharts-data-labels
+        top -5px !important
+        
+
+.carousel-table
+    .carousel-inner
+        .carousel-item
+            .item
+                width 100%
+    .carousel-indicators
+        display none
+    .carousel-control
+        width 20px
+        cursor pointer
+        .carousel-control-next-icon
+            background-image url('../images/icons/1next.svg')
+        .carousel-control-prev-icon
+            background-image url('../images/icons/1pre.svg')

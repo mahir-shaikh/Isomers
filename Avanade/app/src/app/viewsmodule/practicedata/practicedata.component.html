@@ -1,0 +1,152 @@
+<div class="practice-data-container container">
+    <div class="header-container">
+        <span class="header-icon fa fa-cube"></span>
+        <span class="header-text">
+            <text-outlet key="NavigationMainLink3"></text-outlet>
+        </span>
+        <span class="header-sub-text">
+            <text-outlet key="-"></text-outlet>
+            <text-outlet key="NavigationMainLink3SubLink1" *ngIf="practiceNumber == 1"></text-outlet>
+            <text-outlet key="NavigationMainLink3SubLink2" *ngIf="practiceNumber == 2"></text-outlet>
+            <text-outlet key="NavigationMainLink3SubLink3" *ngIf="practiceNumber == 3"></text-outlet>
+        </span>
+    </div>
+    <div class="data-wrapper row">
+        <div class="data-container col-sm-12 col-lg-8">
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="ProjectStaffing"></text-outlet>
+                    </div>
+                    <div class="data-info col-sm">
+                        <text-outlet key="PercProjectStaff"></text-outlet>
+                        <calc-outlet [ref]="'tlOutput_tlBusAPrac'+practiceNumber+'_L10'" format="0.0%"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-3">
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="DirectorSlashEm"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="PmSlashAnalyst"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="Technical"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label tooltip-container col-sm-3">
+                    	<!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipOnsite" useAsInnerHtml="true"></my-tooltip> -->
+                        <text-outlet key="Onsite"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper [ref]="'tlInputBusAEmp4HrsCurrProj'+arrRangeSuffix[practiceNumber-1]" format="0,0" outputMin="0" outputMax="1000000" step="100"></calc-stepper>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper [ref]="'tlInputBusAEmp3HrsCurrProj'+arrRangeSuffix[practiceNumber-1]" format="0,0" outputMin="0" outputMax="1000000" step="100"></calc-stepper>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper [ref]="'tlInputBusAEmp2HrsCurrProj'+arrRangeSuffix[practiceNumber-1]" format="0,0" outputMin="0" outputMax="1000000" step="100"></calc-stepper>
+                    </div>
+                </div>
+                <div class="data-row secondary-row row">
+                    <div class="data-label col-sm-3">
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet [ref]="'tlOutput_tlBusAPrac'+practiceNumber+'_H17'" format="0.0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet [ref]="'tlOutput_tlBusAPrac'+practiceNumber+'_J17'" format="0.0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet [ref]="'tlOutput_tlBusAPrac'+practiceNumber+'_L17'" format="0.0%"></calc-outlet>
+                    </div>
+                </div>
+
+                <div class="data-row row">
+                    <div class="data-label tooltip-container col-sm-3">
+                    	<!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipGlobalDeliveryCenters" useAsInnerHtml="true"></my-tooltip> -->
+                        <text-outlet key="GlobalDeliveryCenters"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                    </div>
+                    <div class="data-value col-sm-3">
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper [ref]="'tlInputBusAEmp9HrsCurrProj'+arrRangeSuffix[practiceNumber-1]" format="0,0" outputMin="0" outputMax="1000000" step="100"></calc-stepper>
+                    </div>
+                </div>
+
+                <div class="data-row secondary-row row">
+                    <div class="data-label col-sm-3">
+                    </div>
+                    <div class="data-value col-sm-3">
+                    </div>
+                    <div class="data-value col-sm-3">
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet [ref]="'tlOutput_tlBusAPrac'+practiceNumber+'_L21'" format="0.0%"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="Offshore"></text-outlet>
+                    </div>
+                    <div class="data-info col-sm">
+                        <calc-outlet [ref]="'tlOutput_tlBusAPrac'+practiceNumber+'_L25'" format="0.0%"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label tooltip-container col-sm-3">
+                    	<!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipOffshore" useAsInnerHtml="true"></my-tooltip> -->
+                        <text-outlet key="Offshore"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm">
+                        <calc-slider [ref]="'tlInputBusAEmp1HrsCurrProj'+arrRangeSuffix[practiceNumber-1]" min="1" max="30" step="1"></calc-slider>
+                    </div>
+                </div>
+                <div class="data-row secondary-row row">
+                    <div class="data-label col-sm-3">
+                        <text-outlet key="Utilization"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm">
+                        <calc-outlet [ref]="'tlOutput_tlBusAPrac'+practiceNumber+'_F32'" format="0.0%"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chart-container col-sm-12 col-lg-4">
+            <div class="graph-box">
+                <div class="graph-title">
+                    <text-outlet key="CrmChartTitle" *ngIf="practiceNumber == 1"></text-outlet>
+                    <text-outlet key="HcmChartTitle" *ngIf="practiceNumber == 2"></text-outlet>
+                    <text-outlet key="FuturiaChartTitle" *ngIf="practiceNumber == 3"></text-outlet>
+                </div>
+                <div class="graph-data">
+                    <piechart *ngIf="practiceNumber == 1"
+                    rangeRef="tlOutput_tlGraphs_C250,tlOutput_tlGraphs_D250,tlOutput_tlGraphs_E250,tlOutput_tlGraphs_F250,tlOutput_tlGraphs_G250,tlOutput_tlGraphs_H250" 
+                    seriesLabels="tlOutput_tlGraphs_C249,tlOutput_tlGraphs_D249,tlOutput_tlGraphs_E249,tlOutput_tlGraphs_F249,tlOutput_tlGraphs_G249,tlOutput_tlGraphs_H249"
+                    categoryLabels="CRM Workload Distribution" chartOptions=""
+                    ></piechart>
+
+                    <piechart *ngIf="practiceNumber == 2"
+                    rangeRef="tlOutput_tlGraphs_C283,tlOutput_tlGraphs_D283,tlOutput_tlGraphs_E283,tlOutput_tlGraphs_F283,tlOutput_tlGraphs_G283,tlOutput_tlGraphs_H283" 
+                    seriesLabels="tlOutput_tlGraphs_C282,tlOutput_tlGraphs_D282,tlOutput_tlGraphs_E282,tlOutput_tlGraphs_F282,tlOutput_tlGraphs_G282,tlOutput_tlGraphs_H282"
+                    categoryLabels="HCM Workload Distribution" chartOptions=""
+                    ></piechart>
+
+                    <piechart *ngIf="practiceNumber == 3"
+                    rangeRef="tlOutput_tlGraphs_C312,tlOutput_tlGraphs_D312,tlOutput_tlGraphs_E312,tlOutput_tlGraphsFE312,tlOutput_tlGraphs_G312,tlOutput_tlGraphs_H312" 
+                    seriesLabels="tlOutput_tlGraphs_C311,tlOutput_tlGraphs_D311,tlOutput_tlGraphs_E311,tlOutput_tlGraphs_F311,tlOutput_tlGraphs_G311,tlOutput_tlGraphs_H311" 
+                    categoryLabels="Futuria Workload Distribution" chartOptions=""
+                    ></piechart>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

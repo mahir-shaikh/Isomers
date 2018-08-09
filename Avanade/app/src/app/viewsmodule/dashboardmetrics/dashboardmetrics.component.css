@@ -1,0 +1,71 @@
+.metrics-wrapper {
+  float: left;
+}
+.metrics-wrapper .data-row .metrics-data {
+  float: left;
+}
+.metrics-wrapper .data-row .metrics-data .metric-wrapper {
+  margin-right: 10px;
+  width: 185px;
+  float: left;
+}
+@media screen and (max-width: 1220px) {
+  .metrics-wrapper .data-row .metrics-data .metric-wrapper {
+    width: 155px;
+  }
+}
+.metrics-wrapper .data-row .data-label {
+  float: left;
+}
+.metrics-wrapper .data-row .data-label text-outlet {
+  margin-right: 5px;
+  white-space: pre;
+}
+@media screen and (max-width: 1220px) {
+  .metrics-wrapper .data-row .data-label text-outlet {
+    font-family: 'Open Sans Condensed';
+  }
+}
+.metrics-wrapper .data-row .data-label,
+.metrics-wrapper .data-row .data-value {
+  padding: 0;
+}
+.metrics-wrapper .data-row .data-label calc-outlet,
+.metrics-wrapper .data-row .data-value calc-outlet,
+.metrics-wrapper .data-row .data-label text-outlet,
+.metrics-wrapper .data-row .data-value text-outlet {
+  font-size: 13px;
+}
+.metrics-wrapper .data-row .data-value {
+  float: right;
+}
+.metrics-wrapper .data-row .data-value calc-outlet,
+.metrics-wrapper .data-row .data-value text-outlet {
+  font-weight: 600;
+}
+@media screen and (max-width: 1024px) {
+  .metrics-wrapper .data-row .metrics-data {
+    padding: 0;
+  }
+  .metrics-wrapper .data-row .metrics-data .data-label {
+    white-space: nowrap;
+    padding-right: 5px;
+  }
+  .metrics-wrapper .data-row .metrics-data .data-value {
+    text-align: left;
+    padding-left: 5px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .metrics-wrapper .hide-on-small-screen {
+    display: none;
+  }
+}
+.metrics-wrapper .show-on-small-screen {
+  display: none;
+}
+@media screen and (max-width: 1399px) {
+  .metrics-wrapper .show-on-small-screen {
+    display: block;
+  }
+}

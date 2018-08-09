@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<workbook>
+<r n="exportParamOptimize" s="global" ts="Control" ta="$C$3"></r>
+<r n="nmSeg1" s="global" ts="&apos;C:\Users\Lenovo\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\NPSP9L1I\[MACHSkillUpT1R1_PKR AME_20170831.xlsm]Glossary&apos;" ta="$D$51"></r>
+<r n="xxGENxx.AvgBillRate" s="global" ts="tx_General" ta="$C$52"></r>
+<r n="xxGENxx.AvgPricePerHour" s="global" ts="tx_General" ta="$C$109"></r>
+<r n="xxGENxx.AvgSalary" s="global" ts="tx_General" ta="$C$75"></r>
+<r n="xxGENxx.CandidatesInMarket" s="global" ts="tx_General" ta="$C$68"></r>
+<r n="xxGENxx.CloseReview" s="global" ts="tx_General" ta="$C$138"></r>
+<r n="xxGENxx.Compensation" s="global" ts="tx_General" ta="$C$74"></r>
+<r n="xxGENxx.Continue" s="global" ts="tx_General" ta="$C$140"></r>
+<r n="xxGENxx.CopyrightText" s="global" ts="tx_General" ta="$C$5"></r>
+<r n="xxGENxx.CorporateChart1Title" s="global" ts="tx_General" ta="$C$133"></r>
+<r n="xxGENxx.CorporateChart2Title" s="global" ts="tx_General" ta="$C$134"></r>
+<r n="xxGENxx.CostofSales" s="global" ts="tx_General" ta="$C$84"></r>
+<r n="xxGENxx.CrmChartTitle" s="global" ts="tx_General" ta="$C$48"></r>
+<r n="xxGENxx.CrmPractice" s="global" ts="tx_General" ta="$C$112"></r>
+<r n="xxGENxx.CumulativeInvestment" s="global" ts="tx_General" ta="$C$82"></r>
+<r n="xxGENxx.DashboardGraphTitle1" s="global" ts="tx_General" ta="$C$35"></r>
+<r n="xxGENxx.DashboardGraphTitle2" s="global" ts="tx_General" ta="$C$36"></r>
+<r n="xxGENxx.DashboardGraphTitle3" s="global" ts="tx_General" ta="$C$37"></r>
+<r n="xxGENxx.DashboardGraphTitle4" s="global" ts="tx_General" ta="$C$38"></r>
+<r n="xxGENxx.DashboardMetric1" s="global" ts="tx_General" ta="$C$14"></r>
+<r n="xxGENxx.DashboardMetric2" s="global" ts="tx_General" ta="$C$15"></r>
+<r n="xxGENxx.DashboardMetric3" s="global" ts="tx_General" ta="$C$16"></r>
+<r n="xxGENxx.DashboardMetric4" s="global" ts="tx_General" ta="$C$17"></r>
+<r n="xxGENxx.DashboardMetric5" s="global" ts="tx_General" ta="$C$18"></r>
+<r n="xxGENxx.DashboardMetric6" s="global" ts="tx_General" ta="$C$19"></r>
+<r n="xxGENxx.DashboardMetric7" s="global" ts="tx_General" ta="$C$20"></r>
+<r n="xxGENxx.DashboardMetric8" s="global" ts="tx_General" ta="$C$21"></r>
+<r n="xxGENxx.DevelopmentFun" s="global" ts="tx_General" ta="$C$78"></r>
+<r n="xxGENxx.DevelopmentLevels" s="global" ts="tx_General" ta="$C$63"></r>
+<r n="xxGENxx.DevFunExpense" s="global" ts="tx_General" ta="$C$99"></r>
+<r n="xxGENxx.DirectorSlashEm" s="global" ts="tx_General" ta="$C$41"></r>
+<r n="xxGENxx.EmpAdminExpense" s="global" ts="tx_General" ta="$C$100"></r>
+<r n="xxGENxx.EndingHeadcount" s="global" ts="tx_General" ta="$C$73"></r>
+<r n="xxGENxx.EndingMarketShare" s="global" ts="tx_General" ta="$C$153"></r>
+<r n="xxGENxx.EngagementOverhead" s="global" ts="tx_General" ta="$C$87"></r>
+<r n="xxGENxx.EnterPassword" s="global" ts="tx_General" ta="$C$150"></r>
+<r n="xxGENxx.ErrorCheck1Text" s="global" ts="tx_General" ta="$C$7"></r>
+<r n="xxGENxx.ErrorCheck2Text" s="global" ts="tx_General" ta="$C$8"></r>
+<r n="xxGENxx.ErrorCheck3Text" s="global" ts="tx_General" ta="$C$9"></r>
+<r n="xxGENxx.ErrorCheck4Text" s="global" ts="tx_General" ta="$C$10"></r>
+<r n="xxGENxx.ErrorCheck5Text" s="global" ts="tx_General" ta="$C$11"></r>
+<r n="xxGENxx.ErrorCheck6Text" s="global" ts="tx_General" ta="$C$12"></r>
+<r n="xxGENxx.ErrorCheckSubmit" s="global" ts="tx_General" ta="$C$13"></r>
+<r n="xxGENxx.Export" s="global" ts="tx_General" ta="$C$142"></r>
+<r n="xxGENxx.ForecastedBookingsGrowth" s="global" ts="tx_General" ta="$C$55"></r>
+<r n="xxGENxx.FuturiaChartTitle" s="global" ts="tx_General" ta="$C$50"></r>
+<r n="xxGENxx.FuturiaPractice" s="global" ts="tx_General" ta="$C$116"></r>
+<r n="xxGENxx.GenAdminCost" s="global" ts="tx_General" ta="$C$96"></r>
+<r n="xxGENxx.GenTrainingSalaryExpense" s="global" ts="tx_General" ta="$C$98"></r>
+<r n="xxGENxx.GlobalDelivery" s="global" ts="tx_General" ta="$C$113"></r>
+<r n="xxGENxx.GlobalDeliveryCenters" s="global" ts="tx_General" ta="$C$45"></r>
+<r n="xxGENxx.GoodwillHoursExpense" s="global" ts="tx_General" ta="$C$88"></r>
+<r n="xxGENxx.GrossMargin" s="global" ts="tx_General" ta="$C$91"></r>
+<r n="xxGENxx.GrossProfit" s="global" ts="tx_General" ta="$C$90"></r>
+<r n="xxGENxx.HcmChartTitle" s="global" ts="tx_General" ta="$C$49"></r>
+<r n="xxGENxx.HcmPractice" s="global" ts="tx_General" ta="$C$115"></r>
+<r n="xxGENxx.HiringPlan" s="global" ts="tx_General" ta="$C$67"></r>
+<r n="xxGENxx.HoldScreenProceedText" s="global" ts="tx_General" ta="$C$146"></r>
+<r n="xxGENxx.HoldScreenWaitText" s="global" ts="tx_General" ta="$C$145"></r>
+<r n="xxGENxx.HoursStaffed" s="global" ts="tx_General" ta="$C$114"></r>
+<r n="xxGENxx.Import" s="global" ts="tx_General" ta="$C$141"></r>
+<r n="xxGENxx.ImportSuccessConfirmMessage" s="global" ts="tx_General" ta="$C$144"></r>
+<r n="xxGENxx.IncorrectPasswordMsg" s="global" ts="tx_General" ta="$C$147"></r>
+<r n="xxGENxx.IndustryEminence" s="global" ts="tx_General" ta="$C$80"></r>
+<r n="xxGENxx.InitiativesCatPrefix1" s="global" ts="tx_General" ta="$C$127"></r>
+<r n="xxGENxx.InitiativesCatPrefix2" s="global" ts="tx_General" ta="$C$128"></r>
+<r n="xxGENxx.InitiativesCatPrefix3" s="global" ts="tx_General" ta="$C$129"></r>
+<r n="xxGENxx.InitiativesSelected" s="global" ts="tx_General" ta="$C$130"></r>
+<r n="xxGENxx.InternalAssets" s="global" ts="tx_General" ta="$C$81"></r>
+<r n="xxGENxx.InvestmentLevel" s="global" ts="tx_General" ta="$C$121"></r>
+<r n="xxGENxx.InvoluntaryAttrition" s="global" ts="tx_General" ta="$C$71"></r>
+<r n="xxGENxx.InvoluntaryAttritionLevel" s="global" ts="tx_General" ta="$C$69"></r>
+<r n="xxGENxx.InYearDismissal" s="global" ts="tx_General" ta="$C$118"></r>
+<r n="xxGENxx.LastYear" s="global" ts="tx_General" ta="$C$53"></r>
+<r n="xxGENxx.LogoutConfirmationMsg" s="global" ts="tx_General" ta="$C$152"></r>
+<r n="xxGENxx.MarketGrowthForecast" s="global" ts="tx_General" ta="$C$110"></r>
+<r n="xxGENxx.Marketing" s="global" ts="tx_General" ta="$C$58"></r>
+<r n="xxGENxx.MarketingExpense" s="global" ts="tx_General" ta="$C$60"></r>
+<r n="xxGENxx.MarketingExpenseHeading" s="global" ts="tx_General" ta="$C$111"></r>
+<r n="xxGENxx.MarketingExpenses" s="global" ts="tx_General" ta="$C$94"></r>
+<r n="xxGENxx.NavigationMainLink1" s="global" ts="tx_General" ta="$C$22"></r>
+<r n="xxGENxx.NavigationMainLink2" s="global" ts="tx_General" ta="$C$23"></r>
+<r n="xxGENxx.NavigationMainLink2SubLink1" s="global" ts="tx_General" ta="$C$27"></r>
+<r n="xxGENxx.NavigationMainLink2SubLink2" s="global" ts="tx_General" ta="$C$28"></r>
+<r n="xxGENxx.NavigationMainLink2SubLink3" s="global" ts="tx_General" ta="$C$29"></r>
+<r n="xxGENxx.NavigationMainLink3" s="global" ts="tx_General" ta="$C$24"></r>
+<r n="xxGENxx.NavigationMainLink3SubLink1" s="global" ts="tx_General" ta="$C$30"></r>
+<r n="xxGENxx.NavigationMainLink3SubLink2" s="global" ts="tx_General" ta="$C$31"></r>
+<r n="xxGENxx.NavigationMainLink3SubLink3" s="global" ts="tx_General" ta="$C$32"></r>
+<r n="xxGENxx.NavigationMainLink4" s="global" ts="tx_General" ta="$C$25"></r>
+<r n="xxGENxx.NavigationMainLink4SubLink1" s="global" ts="tx_General" ta="$C$33"></r>
+<r n="xxGENxx.NavigationMainLink4SubLink2" s="global" ts="tx_General" ta="$C$34"></r>
+<r n="xxGENxx.NavigationMainLink5" s="global" ts="tx_General" ta="$C$26"></r>
+<r n="xxGENxx.Offshore" s="global" ts="tx_General" ta="$C$46"></r>
+<r n="xxGENxx.Onsite" s="global" ts="tx_General" ta="$C$44"></r>
+<r n="xxGENxx.OpMargin" s="global" ts="tx_General" ta="$C$107"></r>
+<r n="xxGENxx.OpProfit" s="global" ts="tx_General" ta="$C$106"></r>
+<r n="xxGENxx.OtherOpExpense" s="global" ts="tx_General" ta="$C$101"></r>
+<r n="xxGENxx.PeopleInvestments" s="global" ts="tx_General" ta="$C$76"></r>
+<r n="xxGENxx.PercProjectStaff" s="global" ts="tx_General" ta="$C$40"></r>
+<r n="xxGENxx.PercTotalRevenue" s="global" ts="tx_General" ta="$C$59"></r>
+<r n="xxGENxx.PmSlashAnalyst" s="global" ts="tx_General" ta="$C$42"></r>
+<r n="xxGENxx.PracticeGrowthForecast" s="global" ts="tx_General" ta="$C$54"></r>
+<r n="xxGENxx.Program1" s="global" ts="tx_General" ta="$C$123"></r>
+<r n="xxGENxx.Program2" s="global" ts="tx_General" ta="$C$124"></r>
+<r n="xxGENxx.Program3" s="global" ts="tx_General" ta="$C$125"></r>
+<r n="xxGENxx.Program4" s="global" ts="tx_General" ta="$C$126"></r>
+<r n="xxGENxx.ProjectStaffing" s="global" ts="tx_General" ta="$C$39"></r>
+<r n="xxGENxx.Recruiting" s="global" ts="tx_General" ta="$C$65"></r>
+<r n="xxGENxx.RecruitingDecisions" s="global" ts="tx_General" ta="$C$117"></r>
+<r n="xxGENxx.RecrutionDismissalCost" s="global" ts="tx_General" ta="$C$86"></r>
+<r n="xxGENxx.ResearchDevelopment" s="global" ts="tx_General" ta="$C$79"></r>
+<r n="xxGENxx.ResearchDevExp" s="global" ts="tx_General" ta="$C$104"></r>
+<r n="xxGENxx.ResetPassword" s="global" ts="tx_General" ta="$C$151"></r>
+<r n="xxGENxx.ResetSimulation" s="global" ts="tx_General" ta="$C$149"></r>
+<r n="xxGENxx.ReviewDecision" s="global" ts="tx_General" ta="$C$137"></r>
+<r n="xxGENxx.Round2Password" s="global" ts="tx_General" ta="$C$148"></r>
+<r n="xxGENxx.Sales" s="global" ts="tx_General" ta="$C$66"></r>
+<r n="xxGENxx.SalesDecision" s="global" ts="tx_General" ta="$C$108"></r>
+<r n="xxGENxx.SalesExpenses" s="global" ts="tx_General" ta="$C$93"></r>
+<r n="xxGENxx.SalesForcast" s="global" ts="tx_General" ta="$C$51"></r>
+<r n="xxGENxx.SalesforceAllocation" s="global" ts="tx_General" ta="$C$56"></r>
+<r n="xxGENxx.SalesHours" s="global" ts="tx_General" ta="$C$57"></r>
+<r n="xxGENxx.SalesMarketing" s="global" ts="tx_General" ta="$C$92"></r>
+<r n="xxGENxx.SnMChart1Title" s="global" ts="tx_General" ta="$C$131"></r>
+<r n="xxGENxx.SnMChart2Title" s="global" ts="tx_General" ta="$C$132"></r>
+<r n="xxGENxx.SpecialProgExpense" s="global" ts="tx_General" ta="$C$102"></r>
+<r n="xxGENxx.StartingHeadcount" s="global" ts="tx_General" ta="$C$70"></r>
+<r n="xxGENxx.StratergicInitiatives" s="global" ts="tx_General" ta="$C$122"></r>
+<r n="xxGENxx.Submit" s="global" ts="tx_General" ta="$C$139"></r>
+<r n="xxGENxx.SubmitDecisionAlertText" s="global" ts="tx_General" ta="$C$6"></r>
+<r n="xxGENxx.SubTitle" s="global" ts="tx_General" ta="$C$4"></r>
+<r n="xxGENxx.Success" s="global" ts="tx_General" ta="$C$143"></r>
+<r n="xxGENxx.Technical" s="global" ts="tx_General" ta="$C$43"></r>
+<r n="xxGENxx.ThoughtLeadership" s="global" ts="tx_General" ta="$C$61"></r>
+<r n="xxGENxx.ThoughtLeadershipExpenses" s="global" ts="tx_General" ta="$C$85"></r>
+<r n="xxGENxx.Title" s="global" ts="tx_General" ta="$C$3"></r>
+<r n="xxGENxx.TotalCostOfSales" s="global" ts="tx_General" ta="$C$89"></r>
+<r n="xxGENxx.TotalGenAdminExp" s="global" ts="tx_General" ta="$C$103"></r>
+<r n="xxGENxx.TotalOpExp" s="global" ts="tx_General" ta="$C$105"></r>
+<r n="xxGENxx.TotalPayrollExpense" s="global" ts="tx_General" ta="$C$62"></r>
+<r n="xxGENxx.TotalRevenue" s="global" ts="tx_General" ta="$C$83"></r>
+<r n="xxGENxx.TotalSalesMarketingExp" s="global" ts="tx_General" ta="$C$95"></r>
+<r n="xxGENxx.TotalThoughtLeadership" s="global" ts="tx_General" ta="$C$64"></r>
+<r n="xxGENxx.TrainingBudget" s="global" ts="tx_General" ta="$C$120"></r>
+<r n="xxGENxx.TrainingHours" s="global" ts="tx_General" ta="$C$119"></r>
+<r n="xxGENxx.TrainingPerEmployee" s="global" ts="tx_General" ta="$C$77"></r>
+<r n="xxGENxx.UnallocatedTimeSalaryExpense" s="global" ts="tx_General" ta="$C$97"></r>
+<r n="xxGENxx.Utilization" s="global" ts="tx_General" ta="$C$47"></r>
+<r n="xxGENxx.VoluntaryAttrition" s="global" ts="tx_General" ta="$C$72"></r>
+<r n="xxGENxx.WobblerTab1" s="global" ts="tx_General" ta="$C$135"></r>
+<r n="xxGENxx.WobblerTab2" s="global" ts="tx_General" ta="$C$136"></r>
+<r n="xxInitiative01xx.Category" s="global" ts="tx_Initiatives" ta="$C$4"></r>
+<r n="xxInitiative01xx.Content" s="global" ts="tx_Initiatives" ta="$C$5"></r>
+<r n="xxInitiative01xx.feedback" s="global" ts="tx_Initiatives" ta="$C$8"></r>
+<r n="xxInitiative01xx.ID" s="global" ts="tx_Initiatives" ta="$C$2"></r>
+<r n="xxInitiative01xx.name" s="global" ts="tx_Initiatives" ta="$C$6"></r>
+<r n="xxInitiative01xx.narrative" s="global" ts="tx_Initiatives" ta="$C$7"></r>
+<r n="xxInitiative01xx.PageType" s="global" ts="tx_Initiatives" ta="$C$3"></r>
+<r n="xxInitiative02xx.Category" s="global" ts="tx_Initiatives" ta="$C$12"></r>
+<r n="xxInitiative02xx.Content" s="global" ts="tx_Initiatives" ta="$C$13"></r>
+<r n="xxInitiative02xx.feedback" s="global" ts="tx_Initiatives" ta="$C$16"></r>
+<r n="xxInitiative02xx.ID" s="global" ts="tx_Initiatives" ta="$C$10"></r>
+<r n="xxInitiative02xx.name" s="global" ts="tx_Initiatives" ta="$C$14"></r>
+<r n="xxInitiative02xx.narrative" s="global" ts="tx_Initiatives" ta="$C$15"></r>
+<r n="xxInitiative02xx.PageType" s="global" ts="tx_Initiatives" ta="$C$11"></r>
+<r n="xxInitiative03xx.Category" s="global" ts="tx_Initiatives" ta="$C$20"></r>
+<r n="xxInitiative03xx.Content" s="global" ts="tx_Initiatives" ta="$C$21"></r>
+<r n="xxInitiative03xx.feedback" s="global" ts="tx_Initiatives" ta="$C$24"></r>
+<r n="xxInitiative03xx.ID" s="global" ts="tx_Initiatives" ta="$C$18"></r>
+<r n="xxInitiative03xx.name" s="global" ts="tx_Initiatives" ta="$C$22"></r>
+<r n="xxInitiative03xx.narrative" s="global" ts="tx_Initiatives" ta="$C$23"></r>
+<r n="xxInitiative03xx.PageType" s="global" ts="tx_Initiatives" ta="$C$19"></r>
+<r n="xxInitiative04xx.Category" s="global" ts="tx_Initiatives" ta="$C$28"></r>
+<r n="xxInitiative04xx.Content" s="global" ts="tx_Initiatives" ta="$C$29"></r>
+<r n="xxInitiative04xx.feedback" s="global" ts="tx_Initiatives" ta="$C$32"></r>
+<r n="xxInitiative04xx.ID" s="global" ts="tx_Initiatives" ta="$C$26"></r>
+<r n="xxInitiative04xx.name" s="global" ts="tx_Initiatives" ta="$C$30"></r>
+<r n="xxInitiative04xx.narrative" s="global" ts="tx_Initiatives" ta="$C$31"></r>
+<r n="xxInitiative04xx.PageType" s="global" ts="tx_Initiatives" ta="$C$27"></r>
+<r n="xxInitiative05xx.Category" s="global" ts="tx_Initiatives" ta="$C$36"></r>
+<r n="xxInitiative05xx.Content" s="global" ts="tx_Initiatives" ta="$C$37"></r>
+<r n="xxInitiative05xx.feedback" s="global" ts="tx_Initiatives" ta="$C$40"></r>
+<r n="xxInitiative05xx.ID" s="global" ts="tx_Initiatives" ta="$C$34"></r>
+<r n="xxInitiative05xx.name" s="global" ts="tx_Initiatives" ta="$C$38"></r>
+<r n="xxInitiative05xx.narrative" s="global" ts="tx_Initiatives" ta="$C$39"></r>
+<r n="xxInitiative05xx.PageType" s="global" ts="tx_Initiatives" ta="$C$35"></r>
+<r n="xxInitiative06xx.Category" s="global" ts="tx_Initiatives" ta="$C$44"></r>
+<r n="xxInitiative06xx.Content" s="global" ts="tx_Initiatives" ta="$C$45"></r>
+<r n="xxInitiative06xx.feedback" s="global" ts="tx_Initiatives" ta="$C$48"></r>
+<r n="xxInitiative06xx.ID" s="global" ts="tx_Initiatives" ta="$C$42"></r>
+<r n="xxInitiative06xx.name" s="global" ts="tx_Initiatives" ta="$C$46"></r>
+<r n="xxInitiative06xx.narrative" s="global" ts="tx_Initiatives" ta="$C$47"></r>
+<r n="xxInitiative06xx.PageType" s="global" ts="tx_Initiatives" ta="$C$43"></r>
+<r n="xxInitiative07xx.Category" s="global" ts="tx_Initiatives" ta="$C$52"></r>
+<r n="xxInitiative07xx.Content" s="global" ts="tx_Initiatives" ta="$C$53"></r>
+<r n="xxInitiative07xx.feedback" s="global" ts="tx_Initiatives" ta="$C$56"></r>
+<r n="xxInitiative07xx.ID" s="global" ts="tx_Initiatives" ta="$C$50"></r>
+<r n="xxInitiative07xx.name" s="global" ts="tx_Initiatives" ta="$C$54"></r>
+<r n="xxInitiative07xx.narrative" s="global" ts="tx_Initiatives" ta="$C$55"></r>
+<r n="xxInitiative07xx.PageType" s="global" ts="tx_Initiatives" ta="$C$51"></r>
+<r n="xxInitiative08xx.Category" s="global" ts="tx_Initiatives" ta="$C$60"></r>
+<r n="xxInitiative08xx.Content" s="global" ts="tx_Initiatives" ta="$C$61"></r>
+<r n="xxInitiative08xx.feedback" s="global" ts="tx_Initiatives" ta="$C$64"></r>
+<r n="xxInitiative08xx.ID" s="global" ts="tx_Initiatives" ta="$C$58"></r>
+<r n="xxInitiative08xx.name" s="global" ts="tx_Initiatives" ta="$C$62"></r>
+<r n="xxInitiative08xx.narrative" s="global" ts="tx_Initiatives" ta="$C$63"></r>
+<r n="xxInitiative08xx.PageType" s="global" ts="tx_Initiatives" ta="$C$59"></r>
+<r n="xxInitiative09xx.Category" s="global" ts="tx_Initiatives" ta="$C$68"></r>
+<r n="xxInitiative09xx.Content" s="global" ts="tx_Initiatives" ta="$C$69"></r>
+<r n="xxInitiative09xx.feedback" s="global" ts="tx_Initiatives" ta="$C$72"></r>
+<r n="xxInitiative09xx.ID" s="global" ts="tx_Initiatives" ta="$C$66"></r>
+<r n="xxInitiative09xx.name" s="global" ts="tx_Initiatives" ta="$C$70"></r>
+<r n="xxInitiative09xx.narrative" s="global" ts="tx_Initiatives" ta="$C$71"></r>
+<r n="xxInitiative09xx.PageType" s="global" ts="tx_Initiatives" ta="$C$67"></r>
+<r n="xxInitiative10xx.Category" s="global" ts="tx_Initiatives" ta="$C$76"></r>
+<r n="xxInitiative10xx.Content" s="global" ts="tx_Initiatives" ta="$C$77"></r>
+<r n="xxInitiative10xx.feedback" s="global" ts="tx_Initiatives" ta="$C$80"></r>
+<r n="xxInitiative10xx.ID" s="global" ts="tx_Initiatives" ta="$C$74"></r>
+<r n="xxInitiative10xx.name" s="global" ts="tx_Initiatives" ta="$C$78"></r>
+<r n="xxInitiative10xx.narrative" s="global" ts="tx_Initiatives" ta="$C$79"></r>
+<r n="xxInitiative10xx.PageType" s="global" ts="tx_Initiatives" ta="$C$75"></r>
+<r n="xxInitiative11xx.Category" s="global" ts="tx_Initiatives" ta="$C$84"></r>
+<r n="xxInitiative11xx.Content" s="global" ts="tx_Initiatives" ta="$C$85"></r>
+<r n="xxInitiative11xx.feedback" s="global" ts="tx_Initiatives" ta="$C$88"></r>
+<r n="xxInitiative11xx.ID" s="global" ts="tx_Initiatives" ta="$C$82"></r>
+<r n="xxInitiative11xx.name" s="global" ts="tx_Initiatives" ta="$C$86"></r>
+<r n="xxInitiative11xx.narrative" s="global" ts="tx_Initiatives" ta="$C$87"></r>
+<r n="xxInitiative11xx.PageType" s="global" ts="tx_Initiatives" ta="$C$83"></r>
+<r n="xxInitiative12xx.Category" s="global" ts="tx_Initiatives" ta="$C$92"></r>
+<r n="xxInitiative12xx.Content" s="global" ts="tx_Initiatives" ta="$C$93"></r>
+<r n="xxInitiative12xx.feedback" s="global" ts="tx_Initiatives" ta="$C$96"></r>
+<r n="xxInitiative12xx.ID" s="global" ts="tx_Initiatives" ta="$C$90"></r>
+<r n="xxInitiative12xx.name" s="global" ts="tx_Initiatives" ta="$C$94"></r>
+<r n="xxInitiative12xx.narrative" s="global" ts="tx_Initiatives" ta="$C$95"></r>
+<r n="xxInitiative12xx.PageType" s="global" ts="tx_Initiatives" ta="$C$91"></r>
+<r n="xxInitiative13xx.Category" s="global" ts="tx_Initiatives" ta="$C$100"></r>
+<r n="xxInitiative13xx.Content" s="global" ts="tx_Initiatives" ta="$C$101"></r>
+<r n="xxInitiative13xx.feedback" s="global" ts="tx_Initiatives" ta="$C$104"></r>
+<r n="xxInitiative13xx.ID" s="global" ts="tx_Initiatives" ta="$C$98"></r>
+<r n="xxInitiative13xx.name" s="global" ts="tx_Initiatives" ta="$C$102"></r>
+<r n="xxInitiative13xx.narrative" s="global" ts="tx_Initiatives" ta="$C$103"></r>
+<r n="xxInitiative13xx.PageType" s="global" ts="tx_Initiatives" ta="$C$99"></r>
+<r n="xxInitiative14xx.Category" s="global" ts="tx_Initiatives" ta="$C$108"></r>
+<r n="xxInitiative14xx.Content" s="global" ts="tx_Initiatives" ta="$C$109"></r>
+<r n="xxInitiative14xx.feedback" s="global" ts="tx_Initiatives" ta="$C$112"></r>
+<r n="xxInitiative14xx.ID" s="global" ts="tx_Initiatives" ta="$C$106"></r>
+<r n="xxInitiative14xx.name" s="global" ts="tx_Initiatives" ta="$C$110"></r>
+<r n="xxInitiative14xx.narrative" s="global" ts="tx_Initiatives" ta="$C$111"></r>
+<r n="xxInitiative14xx.PageType" s="global" ts="tx_Initiatives" ta="$C$107"></r>
+<r n="xxInitiative15xx.Category" s="global" ts="tx_Initiatives" ta="$C$116"></r>
+<r n="xxInitiative15xx.Content" s="global" ts="tx_Initiatives" ta="$C$117"></r>
+<r n="xxInitiative15xx.feedback" s="global" ts="tx_Initiatives" ta="$C$120"></r>
+<r n="xxInitiative15xx.ID" s="global" ts="tx_Initiatives" ta="$C$114"></r>
+<r n="xxInitiative15xx.name" s="global" ts="tx_Initiatives" ta="$C$118"></r>
+<r n="xxInitiative15xx.narrative" s="global" ts="tx_Initiatives" ta="$C$119"></r>
+<r n="xxInitiative15xx.PageType" s="global" ts="tx_Initiatives" ta="$C$115"></r>
+<r n="xxInitiative16xx.Category" s="global" ts="tx_Initiatives" ta="$C$124"></r>
+<r n="xxInitiative16xx.Content" s="global" ts="tx_Initiatives" ta="$C$125"></r>
+<r n="xxInitiative16xx.feedback" s="global" ts="tx_Initiatives" ta="$C$128"></r>
+<r n="xxInitiative16xx.ID" s="global" ts="tx_Initiatives" ta="$C$122"></r>
+<r n="xxInitiative16xx.name" s="global" ts="tx_Initiatives" ta="$C$126"></r>
+<r n="xxInitiative16xx.narrative" s="global" ts="tx_Initiatives" ta="$C$127"></r>
+<r n="xxInitiative16xx.PageType" s="global" ts="tx_Initiatives" ta="$C$123"></r>
+<r n="xxSim0Tool1" s="global" ts="Control" ta="$C$2"></r>
+<r n="xxW101xx.alt1" s="global" ts="tx_Wobblers" ta="$C$12"></r>
+<r n="xxW101xx.alt1_feedback" s="global" ts="tx_Wobblers" ta="$C$24"></r>
+<r n="xxW101xx.alt1_name" s="global" ts="tx_Wobblers" ta="$C$16"></r>
+<r n="xxW101xx.alt1_narrative" s="global" ts="tx_Wobblers" ta="$C$20"></r>
+<r n="xxW101xx.alt2" s="global" ts="tx_Wobblers" ta="$C$13"></r>
+<r n="xxW101xx.alt2_feedback" s="global" ts="tx_Wobblers" ta="$C$25"></r>
+<r n="xxW101xx.alt2_name" s="global" ts="tx_Wobblers" ta="$C$17"></r>
+<r n="xxW101xx.alt2_narrative" s="global" ts="tx_Wobblers" ta="$C$21"></r>
+<r n="xxW101xx.alt3" s="global" ts="tx_Wobblers" ta="$C$14"></r>
+<r n="xxW101xx.alt3_feedback" s="global" ts="tx_Wobblers" ta="$C$26"></r>
+<r n="xxW101xx.alt3_name" s="global" ts="tx_Wobblers" ta="$C$18"></r>
+<r n="xxW101xx.alt3_narrative" s="global" ts="tx_Wobblers" ta="$C$22"></r>
+<r n="xxW101xx.alt4" s="global" ts="tx_Wobblers" ta="$C$15"></r>
+<r n="xxW101xx.alt4_feedback" s="global" ts="tx_Wobblers" ta="$C$27"></r>
+<r n="xxW101xx.alt4_name" s="global" ts="tx_Wobblers" ta="$C$19"></r>
+<r n="xxW101xx.alt4_narrative" s="global" ts="tx_Wobblers" ta="$C$23"></r>
+<r n="xxW101xx.Content" s="global" ts="tx_Wobblers" ta="$C$4"></r>
+<r n="xxW101xx.fb_generic" s="global" ts="tx_Wobblers" ta="$C$29"></r>
+<r n="xxW101xx.feedbackimage" s="global" ts="tx_Wobblers" ta="$C$28"></r>
+<r n="xxW101xx.icon" s="global" ts="tx_Wobblers" ta="$C$9"></r>
+<r n="xxW101xx.ID" s="global" ts="tx_Wobblers" ta="$C$2"></r>
+<r n="xxW101xx.image" s="global" ts="tx_Wobblers" ta="$C$10"></r>
+<r n="xxW101xx.name" s="global" ts="tx_Wobblers" ta="$C$5"></r>
+<r n="xxW101xx.narrative" s="global" ts="tx_Wobblers" ta="$C$11"></r>
+<r n="xxW101xx.PageType" s="global" ts="tx_Wobblers" ta="$C$3"></r>
+<r n="xxW101xx.rangesuffix" s="global" ts="tx_Wobblers" ta="$C$7"></r>
+<r n="xxW101xx.round" s="global" ts="tx_Wobblers" ta="$C$6"></r>
+<r n="xxW101xx.time" s="global" ts="tx_Wobblers" ta="$C$8"></r>
+<r n="xxW202xx.alt1" s="global" ts="tx_Wobblers" ta="$C$42"></r>
+<r n="xxW202xx.alt1_feedback" s="global" ts="tx_Wobblers" ta="$C$54"></r>
+<r n="xxW202xx.alt1_name" s="global" ts="tx_Wobblers" ta="$C$46"></r>
+<r n="xxW202xx.alt1_narrative" s="global" ts="tx_Wobblers" ta="$C$50"></r>
+<r n="xxW202xx.alt2" s="global" ts="tx_Wobblers" ta="$C$43"></r>
+<r n="xxW202xx.alt2_feedback" s="global" ts="tx_Wobblers" ta="$C$55"></r>
+<r n="xxW202xx.alt2_name" s="global" ts="tx_Wobblers" ta="$C$47"></r>
+<r n="xxW202xx.alt2_narrative" s="global" ts="tx_Wobblers" ta="$C$51"></r>
+<r n="xxW202xx.alt3" s="global" ts="tx_Wobblers" ta="$C$44"></r>
+<r n="xxW202xx.alt3_feedback" s="global" ts="tx_Wobblers" ta="$C$56"></r>
+<r n="xxW202xx.alt3_name" s="global" ts="tx_Wobblers" ta="$C$48"></r>
+<r n="xxW202xx.alt3_narrative" s="global" ts="tx_Wobblers" ta="$C$52"></r>
+<r n="xxW202xx.alt4" s="global" ts="tx_Wobblers" ta="$C$45"></r>
+<r n="xxW202xx.alt4_feedback" s="global" ts="tx_Wobblers" ta="$C$57"></r>
+<r n="xxW202xx.alt4_name" s="global" ts="tx_Wobblers" ta="$C$49"></r>
+<r n="xxW202xx.alt4_narrative" s="global" ts="tx_Wobblers" ta="$C$53"></r>
+<r n="xxW202xx.Content" s="global" ts="tx_Wobblers" ta="$C$34"></r>
+<r n="xxW202xx.fb_generic" s="global" ts="tx_Wobblers" ta="$C$59"></r>
+<r n="xxW202xx.feedbackimage" s="global" ts="tx_Wobblers" ta="$C$58"></r>
+<r n="xxW202xx.icon" s="global" ts="tx_Wobblers" ta="$C$39"></r>
+<r n="xxW202xx.ID" s="global" ts="tx_Wobblers" ta="$C$32"></r>
+<r n="xxW202xx.image" s="global" ts="tx_Wobblers" ta="$C$40"></r>
+<r n="xxW202xx.name" s="global" ts="tx_Wobblers" ta="$C$35"></r>
+<r n="xxW202xx.narrative" s="global" ts="tx_Wobblers" ta="$C$41"></r>
+<r n="xxW202xx.PageType" s="global" ts="tx_Wobblers" ta="$C$33"></r>
+<r n="xxW202xx.rangesuffix" s="global" ts="tx_Wobblers" ta="$C$37"></r>
+<r n="xxW202xx.round" s="global" ts="tx_Wobblers" ta="$C$36"></r>
+<r n="xxW202xx.time" s="global" ts="tx_Wobblers" ta="$C$38"></r>
+<r n="xxW203xx.alt1" s="global" ts="tx_Wobblers" ta="$C$73"></r>
+<r n="xxW203xx.alt1_feedback" s="global" ts="tx_Wobblers" ta="$C$82"></r>
+<r n="xxW203xx.alt1_name" s="global" ts="tx_Wobblers" ta="$C$76"></r>
+<r n="xxW203xx.alt1_narrative" s="global" ts="tx_Wobblers" ta="$C$79"></r>
+<r n="xxW203xx.alt2" s="global" ts="tx_Wobblers" ta="$C$74"></r>
+<r n="xxW203xx.alt2_feedback" s="global" ts="tx_Wobblers" ta="$C$83"></r>
+<r n="xxW203xx.alt2_name" s="global" ts="tx_Wobblers" ta="$C$77"></r>
+<r n="xxW203xx.alt2_narrative" s="global" ts="tx_Wobblers" ta="$C$80"></r>
+<r n="xxW203xx.alt3" s="global" ts="tx_Wobblers" ta="$C$75"></r>
+<r n="xxW203xx.alt3_feedback" s="global" ts="tx_Wobblers" ta="$C$84"></r>
+<r n="xxW203xx.alt3_name" s="global" ts="tx_Wobblers" ta="$C$78"></r>
+<r n="xxW203xx.alt3_narrative" s="global" ts="tx_Wobblers" ta="$C$81"></r>
+<r n="xxW203xx.Content" s="global" ts="tx_Wobblers" ta="$C$65"></r>
+<r n="xxW203xx.fb_generic" s="global" ts="tx_Wobblers" ta="$C$86"></r>
+<r n="xxW203xx.feedbackimage" s="global" ts="tx_Wobblers" ta="$C$85"></r>
+<r n="xxW203xx.icon" s="global" ts="tx_Wobblers" ta="$C$70"></r>
+<r n="xxW203xx.ID" s="global" ts="tx_Wobblers" ta="$C$63"></r>
+<r n="xxW203xx.image" s="global" ts="tx_Wobblers" ta="$C$71"></r>
+<r n="xxW203xx.name" s="global" ts="tx_Wobblers" ta="$C$66"></r>
+<r n="xxW203xx.narrative" s="global" ts="tx_Wobblers" ta="$C$72"></r>
+<r n="xxW203xx.PageType" s="global" ts="tx_Wobblers" ta="$C$64"></r>
+<r n="xxW203xx.rangesuffix" s="global" ts="tx_Wobblers" ta="$C$68"></r>
+<r n="xxW203xx.round" s="global" ts="tx_Wobblers" ta="$C$67"></r>
+<r n="xxW203xx.time" s="global" ts="tx_Wobblers" ta="$C$69"></r>
+<r n="xxW204xx.alt1" s="global" ts="tx_Wobblers" ta="$C$99"></r>
+<r n="xxW204xx.alt1_feedback" s="global" ts="tx_Wobblers" ta="$C$111"></r>
+<r n="xxW204xx.alt1_name" s="global" ts="tx_Wobblers" ta="$C$103"></r>
+<r n="xxW204xx.alt1_narrative" s="global" ts="tx_Wobblers" ta="$C$107"></r>
+<r n="xxW204xx.alt2" s="global" ts="tx_Wobblers" ta="$C$100"></r>
+<r n="xxW204xx.alt2_feedback" s="global" ts="tx_Wobblers" ta="$C$112"></r>
+<r n="xxW204xx.alt2_name" s="global" ts="tx_Wobblers" ta="$C$104"></r>
+<r n="xxW204xx.alt2_narrative" s="global" ts="tx_Wobblers" ta="$C$108"></r>
+<r n="xxW204xx.alt3" s="global" ts="tx_Wobblers" ta="$C$101"></r>
+<r n="xxW204xx.alt3_feedback" s="global" ts="tx_Wobblers" ta="$C$113"></r>
+<r n="xxW204xx.alt3_name" s="global" ts="tx_Wobblers" ta="$C$105"></r>
+<r n="xxW204xx.alt3_narrative" s="global" ts="tx_Wobblers" ta="$C$109"></r>
+<r n="xxW204xx.alt4" s="global" ts="tx_Wobblers" ta="$C$102"></r>
+<r n="xxW204xx.alt4_feedback" s="global" ts="tx_Wobblers" ta="$C$114"></r>
+<r n="xxW204xx.alt4_name" s="global" ts="tx_Wobblers" ta="$C$106"></r>
+<r n="xxW204xx.alt4_narrative" s="global" ts="tx_Wobblers" ta="$C$110"></r>
+<r n="xxW204xx.Content" s="global" ts="tx_Wobblers" ta="$C$91"></r>
+<r n="xxW204xx.fb_generic" s="global" ts="tx_Wobblers" ta="$C$116"></r>
+<r n="xxW204xx.feedbackimage" s="global" ts="tx_Wobblers" ta="$C$115"></r>
+<r n="xxW204xx.icon" s="global" ts="tx_Wobblers" ta="$C$96"></r>
+<r n="xxW204xx.ID" s="global" ts="tx_Wobblers" ta="$C$89"></r>
+<r n="xxW204xx.image" s="global" ts="tx_Wobblers" ta="$C$97"></r>
+<r n="xxW204xx.name" s="global" ts="tx_Wobblers" ta="$C$92"></r>
+<r n="xxW204xx.narrative" s="global" ts="tx_Wobblers" ta="$C$98"></r>
+<r n="xxW204xx.PageType" s="global" ts="tx_Wobblers" ta="$C$90"></r>
+<r n="xxW204xx.rangesuffix" s="global" ts="tx_Wobblers" ta="$C$94"></r>
+<r n="xxW204xx.round" s="global" ts="tx_Wobblers" ta="$C$93"></r>
+<r n="xxW204xx.time" s="global" ts="tx_Wobblers" ta="$C$95"></r>
+<r n="xxW305xx.alt1" s="global" ts="tx_Wobblers" ta="$C$130"></r>
+<r n="xxW305xx.alt1_feedback" s="global" ts="tx_Wobblers" ta="$C$139"></r>
+<r n="xxW305xx.alt1_name" s="global" ts="tx_Wobblers" ta="$C$133"></r>
+<r n="xxW305xx.alt1_narrative" s="global" ts="tx_Wobblers" ta="$C$136"></r>
+<r n="xxW305xx.alt2" s="global" ts="tx_Wobblers" ta="$C$131"></r>
+<r n="xxW305xx.alt2_feedback" s="global" ts="tx_Wobblers" ta="$C$140"></r>
+<r n="xxW305xx.alt2_name" s="global" ts="tx_Wobblers" ta="$C$134"></r>
+<r n="xxW305xx.alt2_narrative" s="global" ts="tx_Wobblers" ta="$C$137"></r>
+<r n="xxW305xx.alt3" s="global" ts="tx_Wobblers" ta="$C$132"></r>
+<r n="xxW305xx.alt3_feedback" s="global" ts="tx_Wobblers" ta="$C$141"></r>
+<r n="xxW305xx.alt3_name" s="global" ts="tx_Wobblers" ta="$C$135"></r>
+<r n="xxW305xx.alt3_narrative" s="global" ts="tx_Wobblers" ta="$C$138"></r>
+<r n="xxW305xx.Content" s="global" ts="tx_Wobblers" ta="$C$122"></r>
+<r n="xxW305xx.fb_generic" s="global" ts="tx_Wobblers" ta="$C$143"></r>
+<r n="xxW305xx.feedbackimage" s="global" ts="tx_Wobblers" ta="$C$142"></r>
+<r n="xxW305xx.icon" s="global" ts="tx_Wobblers" ta="$C$127"></r>
+<r n="xxW305xx.ID" s="global" ts="tx_Wobblers" ta="$C$120"></r>
+<r n="xxW305xx.image" s="global" ts="tx_Wobblers" ta="$C$128"></r>
+<r n="xxW305xx.name" s="global" ts="tx_Wobblers" ta="$C$123"></r>
+<r n="xxW305xx.narrative" s="global" ts="tx_Wobblers" ta="$C$129"></r>
+<r n="xxW305xx.PageType" s="global" ts="tx_Wobblers" ta="$C$121"></r>
+<r n="xxW305xx.rangesuffix" s="global" ts="tx_Wobblers" ta="$C$125"></r>
+<r n="xxW305xx.round" s="global" ts="tx_Wobblers" ta="$C$124"></r>
+<r n="xxW305xx.time" s="global" ts="tx_Wobblers" ta="$C$126"></r>
+<r n="xxW306xx.alt1" s="global" ts="tx_Wobblers" ta="$C$156"></r>
+<r n="xxW306xx.alt1_feedback" s="global" ts="tx_Wobblers" ta="$C$162"></r>
+<r n="xxW306xx.alt1_name" s="global" ts="tx_Wobblers" ta="$C$158"></r>
+<r n="xxW306xx.alt1_narrative" s="global" ts="tx_Wobblers" ta="$C$160"></r>
+<r n="xxW306xx.alt2" s="global" ts="tx_Wobblers" ta="$C$157"></r>
+<r n="xxW306xx.alt2_feedback" s="global" ts="tx_Wobblers" ta="$C$163"></r>
+<r n="xxW306xx.alt2_name" s="global" ts="tx_Wobblers" ta="$C$159"></r>
+<r n="xxW306xx.alt2_narrative" s="global" ts="tx_Wobblers" ta="$C$161"></r>
+<r n="xxW306xx.Content" s="global" ts="tx_Wobblers" ta="$C$148"></r>
+<r n="xxW306xx.fb_generic" s="global" ts="tx_Wobblers" ta="$C$165"></r>
+<r n="xxW306xx.feedbackimage" s="global" ts="tx_Wobblers" ta="$C$164"></r>
+<r n="xxW306xx.icon" s="global" ts="tx_Wobblers" ta="$C$153"></r>
+<r n="xxW306xx.ID" s="global" ts="tx_Wobblers" ta="$C$146"></r>
+<r n="xxW306xx.image" s="global" ts="tx_Wobblers" ta="$C$154"></r>
+<r n="xxW306xx.name" s="global" ts="tx_Wobblers" ta="$C$149"></r>
+<r n="xxW306xx.narrative" s="global" ts="tx_Wobblers" ta="$C$155"></r>
+<r n="xxW306xx.PageType" s="global" ts="tx_Wobblers" ta="$C$147"></r>
+<r n="xxW306xx.rangesuffix" s="global" ts="tx_Wobblers" ta="$C$151"></r>
+<r n="xxW306xx.round" s="global" ts="tx_Wobblers" ta="$C$150"></r>
+<r n="xxW306xx.time" s="global" ts="tx_Wobblers" ta="$C$152"></r>
+<c f="Average Bill Rate" a="$C$52" r="52" c="3" w="tx_General" v="Average Bill Rate" fmt="General">
+</c>
+<c f="Avg. Price per Hour" a="$C$109" r="109" c="3" w="tx_General" v="Avg. Price per Hour" fmt="General">
+</c>
+<c f="Average Salary" a="$C$75" r="75" c="3" w="tx_General" v="Average Salary" fmt="General">
+</c>
+<c f="Candidates in Job Market" a="$C$68" r="68" c="3" w="tx_General" v="Candidates in Job Market" fmt="General">
+</c>
+<c f="Close Review" a="$C$138" r="138" c="3" w="tx_General" v="Close Review" fmt="General">
+</c>
+<c f="Compensation" a="$C$74" r="74" c="3" w="tx_General" v="Compensation" fmt="General">
+</c>
+<c f="Continue" a="$C$140" r="140" c="3" w="tx_General" v="Continue" fmt="General">
+</c>
+<c f="2018 BTS. All rights reserved" a="$C$5" r="5" c="3" w="tx_General" v="2018 BTS. All rights reserved" fmt="General">
+</c>
+<c f="Projected Growth by Practice" a="$C$133" r="133" c="3" w="tx_General" v="Projected Growth by Practice" fmt="General">
+</c>
+<c f="Salary Vs. Forecasted Revenue" a="$C$134" r="134" c="3" w="tx_General" v="Salary Vs. Forecasted Revenue" fmt="General">
+</c>
+<c f="Cost of Sales" a="$C$84" r="84" c="3" w="tx_General" v="Cost of Sales" fmt="General">
+</c>
+<c f="CRM Workload Distribution" a="$C$48" r="48" c="3" w="tx_General" v="CRM Workload Distribution" fmt="General">
+</c>
+<c f="CRM Practice" a="$C$112" r="112" c="3" w="tx_General" v="CRM Practice" fmt="General">
+</c>
+<c f="Cumulative Investment" a="$C$82" r="82" c="3" w="tx_General" v="Cumulative Investment" fmt="General">
+</c>
+<c f="Director" a="$C$35" r="35" c="3" w="tx_General" v="Director" fmt="General">
+</c>
+<c f="Analyst" a="$C$36" r="36" c="3" w="tx_General" v="Analyst" fmt="General">
+</c>
+<c f="Technical" a="$C$37" r="37" c="3" w="tx_General" v="Technical" fmt="General">
+</c>
+<c f="Delivery Centers" a="$C$38" r="38" c="3" w="tx_General" v="Delivery Centers" fmt="General">
+</c>
+<c f="Bookings" a="$C$14" r="14" c="3" w="tx_General" v="Bookings" fmt="General">
+</c>
+<c f="Bookings CAGR" a="$C$15" r="15" c="3" w="tx_General" v="Bookings CAGR" fmt="General">
+</c>
+<c f="Revenues" a="$C$16" r="16" c="3" w="tx_General" v="Revenues" fmt="General">
+</c>
+<c f="GM" a="$C$17" r="17" c="3" w="tx_General" v="GM" fmt="General">
+</c>
+<c f="OM" a="$C$18" r="18" c="3" w="tx_General" v="OM" fmt="General">
+</c>
+<c f="GW Hrs Expense" a="$C$19" r="19" c="3" w="tx_General" v="GW Hrs Expense" fmt="General">
+</c>
+<c f="Emp NPS" a="$C$20" r="20" c="3" w="tx_General" v="Emp NPS" fmt="General">
+</c>
+<c f="Client NPS" a="$C$21" r="21" c="3" w="tx_General" v="Client NPS" fmt="General">
+</c>
+<c f="Development and Fun (per Emp.)" a="$C$78" r="78" c="3" w="tx_General" v="Development and Fun (per Emp.)" fmt="General">
+</c>
+<c f="Development Levels" a="$C$63" r="63" c="3" w="tx_General" v="Development Levels" fmt="General">
+</c>
+<c f="Development &amp; Fun Expense" a="$C$99" r="99" c="3" w="tx_General" v="Development &amp; Fun Expense" fmt="General">
+</c>
+<c f="Director / Em" a="$C$41" r="41" c="3" w="tx_General" v="Director / Em" fmt="General">
+</c>
+<c f="Employee Admin Expense" a="$C$100" r="100" c="3" w="tx_General" v="Employee Admin Expense" fmt="General">
+</c>
+<c f="Ending Headcount (Pre-Hiring Plan)" a="$C$73" r="73" c="3" w="tx_General" v="Ending Headcount (Pre-Hiring Plan)" fmt="General">
+</c>
+<c f="Ending Market Share" a="$C$153" r="153" c="3" w="tx_General" v="Ending Market Share" fmt="General">
+</c>
+<c f="Engagement Overhead" a="$C$87" r="87" c="3" w="tx_General" v="Engagement Overhead" fmt="General">
+</c>
+<c f="Enter Password" a="$C$150" r="150" c="3" w="tx_General" v="Enter Password" fmt="General">
+</c>
+<c f="Your Offshore are overallocated in Consulting." a="$C$7" r="7" c="3" w="tx_General" v="Your Offshore are overallocated in Consulting." fmt="General">
+</c>
+<c f="Your Technical consultants are overallocated in Consulting," a="$C$8" r="8" c="3" w="tx_General" v="Your Technical consultants are overallocated in Consulting," fmt="General">
+</c>
+<c f="Your PMs/Analysts are overallocated in Consulting." a="$C$9" r="9" c="3" w="tx_General" v="Your PMs/Analysts are overallocated in Consulting." fmt="General">
+</c>
+<c f="Your directors/EMs are overallocated in Consulting." a="$C$10" r="10" c="3" w="tx_General" v="Your directors/EMs are overallocated in Consulting." fmt="General">
+</c>
+<c f="Your Sales Force are overutilized." a="$C$11" r="11" c="3" w="tx_General" v="Your Sales Force are overutilized." fmt="General">
+</c>
+<c f="You have not responded to all challenges." a="$C$12" r="12" c="3" w="tx_General" v="You have not responded to all challenges." fmt="General">
+</c>
+<c f="You will not be able to Submit decisions until you clear the above." a="$C$13" r="13" c="3" w="tx_General" v="You will not be able to Submit decisions until you clear the above." fmt="General">
+</c>
+<c f="Export" a="$C$142" r="142" c="3" w="tx_General" v="Export" fmt="General">
+</c>
+<c f="Forecasted Bookings Growth" a="$C$55" r="55" c="3" w="tx_General" v="Forecasted Bookings Growth" fmt="General">
+</c>
+<c f="Futuria Workload Distribution" a="$C$50" r="50" c="3" w="tx_General" v="Futuria Workload Distribution" fmt="General">
+</c>
+<c f="Futuria Practice" a="$C$116" r="116" c="3" w="tx_General" v="Futuria Practice" fmt="General">
+</c>
+<c f="General and Admin Costs" a="$C$96" r="96" c="3" w="tx_General" v="General and Admin Costs" fmt="General">
+</c>
+<c f="General Training Salary Expense" a="$C$98" r="98" c="3" w="tx_General" v="General Training Salary Expense" fmt="General">
+</c>
+<c f="Global Delivery" a="$C$113" r="113" c="3" w="tx_General" v="Global Delivery" fmt="General">
+</c>
+<c f="Global Delivery Centers" a="$C$45" r="45" c="3" w="tx_General" v="Global Delivery Centers" fmt="General">
+</c>
+<c f="Goodwill Hours Expense" a="$C$88" r="88" c="3" w="tx_General" v="Goodwill Hours Expense" fmt="General">
+</c>
+<c f="Gross Margin (% of Revenue)" a="$C$91" r="91" c="3" w="tx_General" v="Gross Margin (% of Revenue)" fmt="General">
+</c>
+<c f="Gross Profit" a="$C$90" r="90" c="3" w="tx_General" v="Gross Profit" fmt="General">
+</c>
+<c f="HCM Workload Distribution" a="$C$49" r="49" c="3" w="tx_General" v="HCM Workload Distribution" fmt="General">
+</c>
+<c f="HCM Practice" a="$C$115" r="115" c="3" w="tx_General" v="HCM Practice" fmt="General">
+</c>
+<c f="Hiring Plan" a="$C$67" r="67" c="3" w="tx_General" v="Hiring Plan" fmt="General">
+</c>
+<c f="Round 1 is submitted. Please type in the password to enable import." a="$C$146" r="146" c="3" w="tx_General" v="Round 1 is submitted. Please type in the password to enable import." fmt="General">
+</c>
+<c f="Round 1 is Submitted. Please wait for the simulation to continue." a="$C$145" r="145" c="3" w="tx_General" v="Round 1 is Submitted. Please wait for the simulation to continue." fmt="General">
+</c>
+<c f="Hours Staffed" a="$C$114" r="114" c="3" w="tx_General" v="Hours Staffed" fmt="General">
+</c>
+<c f="Import" a="$C$141" r="141" c="3" w="tx_General" v="Import" fmt="General">
+</c>
+<c f="Data Imported Successfully!" a="$C$144" r="144" c="3" w="tx_General" v="Data Imported Successfully!" fmt="General">
+</c>
+<c f="Incorrect Password.Please try again." a="$C$147" r="147" c="3" w="tx_General" v="Incorrect Password.Please try again." fmt="General">
+</c>
+<c f="Industry Eminence" a="$C$80" r="80" c="3" w="tx_General" v="Industry Eminence" fmt="General">
+</c>
+<c f="SM" a="$C$127" r="127" c="3" w="tx_General" v="SM" fmt="General">
+</c>
+<c f="HR" a="$C$128" r="128" c="3" w="tx_General" v="HR" fmt="General">
+</c>
+<c f="PD" a="$C$129" r="129" c="3" w="tx_General" v="PD" fmt="General">
+</c>
+<c f="Initiatives Selected" a="$C$130" r="130" c="3" w="tx_General" v="Initiatives Selected" fmt="General">
+</c>
+<c f="Internal Assets" a="$C$81" r="81" c="3" w="tx_General" v="Internal Assets" fmt="General">
+</c>
+<c f="Investment Level" a="$C$121" r="121" c="3" w="tx_General" v="Investment Level" fmt="General">
+</c>
+<c f="Involuntary Attrition" a="$C$71" r="71" c="3" w="tx_General" v="Involuntary Attrition" fmt="General">
+</c>
+<c f="Involuntary Attrition Level" a="$C$69" r="69" c="3" w="tx_General" v="Involuntary Attrition Level" fmt="General">
+</c>
+<c f="In-Year Dismissal" a="$C$118" r="118" c="3" w="tx_General" v="In-Year Dismissal" fmt="General">
+</c>
+<c f="Last Year" a="$C$53" r="53" c="3" w="tx_General" v="Last Year" fmt="General">
+</c>
+<c f="Are you sure you want to logout?" a="$C$152" r="152" c="3" w="tx_General" v="Are you sure you want to logout?" fmt="General">
+</c>
+<c f="Market Growth Forecast" a="$C$110" r="110" c="3" w="tx_General" v="Market Growth Forecast" fmt="General">
+</c>
+<c f="Marketing" a="$C$58" r="58" c="3" w="tx_General" v="Marketing" fmt="General">
+</c>
+<c f="Marketing Expense ($000s)" a="$C$60" r="60" c="3" w="tx_General" v="Marketing Expense ($000s)" fmt="General">
+</c>
+<c f="Marketing Expense" a="$C$111" r="111" c="3" w="tx_General" v="Marketing Expense" fmt="General">
+</c>
+<c f="Marketing Expenses" a="$C$94" r="94" c="3" w="tx_General" v="Marketing Expenses" fmt="General">
+</c>
+<c f="Quick Summary" a="$C$22" r="22" c="3" w="tx_General" v="Quick Summary" fmt="General">
+</c>
+<c f="Central" a="$C$23" r="23" c="3" w="tx_General" v="Central" fmt="General">
+</c>
+<c f="Sales and Marketing" a="$C$27" r="27" c="3" w="tx_General" v="Sales and Marketing" fmt="General">
+</c>
+<c f="Corporate" a="$C$28" r="28" c="3" w="tx_General" v="Corporate" fmt="General">
+</c>
+<c f="Strategic Initiatives" a="$C$29" r="29" c="3" w="tx_General" v="Strategic Initiatives" fmt="General">
+</c>
+<c f="Practices" a="$C$24" r="24" c="3" w="tx_General" v="Practices" fmt="General">
+</c>
+<c f="CRM" a="$C$30" r="30" c="3" w="tx_General" v="CRM" fmt="General">
+</c>
+<c f="HCM" a="$C$31" r="31" c="3" w="tx_General" v="HCM" fmt="General">
+</c>
+<c f="Futuria" a="$C$32" r="32" c="3" w="tx_General" v="Futuria" fmt="General">
+</c>
+<c f="Reports" a="$C$25" r="25" c="3" w="tx_General" v="Reports" fmt="General">
+</c>
+<c f="Profit and Loss" a="$C$33" r="33" c="3" w="tx_General" v="Profit and Loss" fmt="General">
+</c>
+<c f="Decision Summary" a="$C$34" r="34" c="3" w="tx_General" v="Decision Summary" fmt="General">
+</c>
+<c f="Events" a="$C$26" r="26" c="3" w="tx_General" v="Events" fmt="General">
+</c>
+<c f="Offshore" a="$C$46" r="46" c="3" w="tx_General" v="Offshore" fmt="General">
+</c>
+<c f="Onsite" a="$C$44" r="44" c="3" w="tx_General" v="Onsite" fmt="General">
+</c>
+<c f="Operating Margin (% of Revenue)" a="$C$107" r="107" c="3" w="tx_General" v="Operating Margin (% of Revenue)" fmt="General">
+</c>
+<c f="Operating Profit" a="$C$106" r="106" c="3" w="tx_General" v="Operating Profit" fmt="General">
+</c>
+<c f="Other Operating Expense" a="$C$101" r="101" c="3" w="tx_General" v="Other Operating Expense" fmt="General">
+</c>
+<c f="People Investment" a="$C$76" r="76" c="3" w="tx_General" v="People Investment" fmt="General">
+</c>
+<c f="% of Projects Staffed" a="$C$40" r="40" c="3" w="tx_General" v="% of Projects Staffed" fmt="General">
+</c>
+<c f="% of Total Revenue" a="$C$59" r="59" c="3" w="tx_General" v="% of Total Revenue" fmt="General">
+</c>
+<c f="Pm / Analyst" a="$C$42" r="42" c="3" w="tx_General" v="Pm / Analyst" fmt="General">
+</c>
+<c f="Practice Growth Forecast" a="$C$54" r="54" c="3" w="tx_General" v="Practice Growth Forecast" fmt="General">
+</c>
+<c f="Program 1" a="$C$123" r="123" c="3" w="tx_General" v="Program 1" fmt="General">
+</c>
+<c f="Program 2" a="$C$124" r="124" c="3" w="tx_General" v="Program 2" fmt="General">
+</c>
+<c f="Program 3" a="$C$125" r="125" c="3" w="tx_General" v="Program 3" fmt="General">
+</c>
+<c f="Program 4" a="$C$126" r="126" c="3" w="tx_General" v="Program 4" fmt="General">
+</c>
+<c f="Project Staffing" a="$C$39" r="39" c="3" w="tx_General" v="Project Staffing" fmt="General">
+</c>
+<c f="Recruiting" a="$C$65" r="65" c="3" w="tx_General" v="Recruiting" fmt="General">
+</c>
+<c f="Recruiting Decisions" a="$C$117" r="117" c="3" w="tx_General" v="Recruiting Decisions" fmt="General">
+</c>
+<c f="Recruiting / Dismissal Costs" a="$C$86" r="86" c="3" w="tx_General" v="Recruiting / Dismissal Costs" fmt="General">
+</c>
+<c f="Research and Development" a="$C$79" r="79" c="3" w="tx_General" v="Research and Development" fmt="General">
+</c>
+<c f="Research and Development Expense" a="$C$104" r="104" c="3" w="tx_General" v="Research and Development Expense" fmt="General">
+</c>
+<c f="bts287" a="$C$151" r="151" c="3" w="tx_General" v="bts287" fmt="General">
+</c>
+<c f="Reset Simulation" a="$C$149" r="149" c="3" w="tx_General" v="Reset Simulation" fmt="General">
+</c>
+<c f="Review Decision" a="$C$137" r="137" c="3" w="tx_General" v="Review Decision" fmt="General">
+</c>
+<c f="bts287" a="$C$148" r="148" c="3" w="tx_General" v="bts287" fmt="General">
+</c>
+<c f="Sales" a="$C$66" r="66" c="3" w="tx_General" v="Sales" fmt="General">
+</c>
+<c f="Sales Decision" a="$C$108" r="108" c="3" w="tx_General" v="Sales Decision" fmt="General">
+</c>
+<c f="Sales Expenses" a="$C$93" r="93" c="3" w="tx_General" v="Sales Expenses" fmt="General">
+</c>
+<c f="Sales Forecast" a="$C$51" r="51" c="3" w="tx_General" v="Sales Forecast" fmt="General">
+</c>
+<c f="Salesforce Allocation" a="$C$56" r="56" c="3" w="tx_General" v="Salesforce Allocation" fmt="General">
+</c>
+<c f="Sales Hours" a="$C$57" r="57" c="3" w="tx_General" v="Sales Hours" fmt="General">
+</c>
+<c f="Sales and Marketing" a="$C$92" r="92" c="3" w="tx_General" v="Sales and Marketing" fmt="General">
+</c>
+<c f="Forecasted Bookings ($m)" a="$C$131" r="131" c="3" w="tx_General" v="Forecasted Bookings ($m)" fmt="General">
+</c>
+<c f="Selling Utilization" a="$C$132" r="132" c="3" w="tx_General" v="Selling Utilization" fmt="General">
+</c>
+<c f="Special Program Expense" a="$C$102" r="102" c="3" w="tx_General" v="Special Program Expense" fmt="General">
+</c>
+<c f="Starting Headcount" a="$C$70" r="70" c="3" w="tx_General" v="Starting Headcount" fmt="General">
+</c>
+<c f="Strategic Initiatives" a="$C$122" r="122" c="3" w="tx_General" v="Strategic Initiatives" fmt="General">
+</c>
+<c f="Submit" a="$C$139" r="139" c="3" w="tx_General" v="Submit" fmt="General">
+</c>
+<c f="This will commit your inputs for current round." a="$C$6" r="6" c="3" w="tx_General" v="This will commit your inputs for current round." fmt="General">
+</c>
+<c f="Leadership in Action" a="$C$4" r="4" c="3" w="tx_General" v="Leadership in Action" fmt="General">
+</c>
+<c f="Success" a="$C$143" r="143" c="3" w="tx_General" v="Success" fmt="General">
+</c>
+<c f="Technical" a="$C$43" r="43" c="3" w="tx_General" v="Technical" fmt="General">
+</c>
+<c f="Thought Leadership" a="$C$61" r="61" c="3" w="tx_General" v="Thought Leadership" fmt="General">
+</c>
+<c f="Thought Leadership Expenses" a="$C$85" r="85" c="3" w="tx_General" v="Thought Leadership Expenses" fmt="General">
+</c>
+<c f="Avenade" a="$C$3" r="3" c="3" w="tx_General" v="Avenade" fmt="General">
+</c>
+<c f="Total Cost of Sales" a="$C$89" r="89" c="3" w="tx_General" v="Total Cost of Sales" fmt="General">
+</c>
+<c f="Total G&amp;A Expense" a="$C$103" r="103" c="3" w="tx_General" v="Total G&amp;A Expense" fmt="General">
+</c>
+<c f="Total Operating Expense" a="$C$105" r="105" c="3" w="tx_General" v="Total Operating Expense" fmt="General">
+</c>
+<c f="Total Payroll Expense (000s)" a="$C$62" r="62" c="3" w="tx_General" v="Total Payroll Expense (000s)" fmt="General">
+</c>
+<c f="Total Revenues" a="$C$83" r="83" c="3" w="tx_General" v="Total Revenues" fmt="General">
+</c>
+<c f="Total Sales and Marketing Expense" a="$C$95" r="95" c="3" w="tx_General" v="Total Sales and Marketing Expense" fmt="General">
+</c>
+<c f="Total Thought Leadership" a="$C$64" r="64" c="3" w="tx_General" v="Total Thought Leadership" fmt="General">
+</c>
+<c f="Training Budget" a="$C$120" r="120" c="3" w="tx_General" v="Training Budget" fmt="General">
+</c>
+<c f="Training Hours" a="$C$119" r="119" c="3" w="tx_General" v="Training Hours" fmt="General">
+</c>
+<c f="Training per Employee (hrs)" a="$C$77" r="77" c="3" w="tx_General" v="Training per Employee (hrs)" fmt="General">
+</c>
+<c f="Unallocated Time Salary Expense" a="$C$97" r="97" c="3" w="tx_General" v="Unallocated Time Salary Expense" fmt="General">
+</c>
+<c f="Utilization" a="$C$47" r="47" c="3" w="tx_General" v="Utilization" fmt="General">
+</c>
+<c f="Voluntary Attrition" a="$C$72" r="72" c="3" w="tx_General" v="Voluntary Attrition" fmt="General">
+</c>
+<c f="Scenario" a="$C$135" r="135" c="3" w="tx_General" v="Scenario" fmt="General">
+</c>
+<c f="Options" a="$C$136" r="136" c="3" w="tx_General" v="Options" fmt="General">
+</c>
+<c f="1" a="$C$4" r="4" c="3" w="tx_Initiatives" v="1" fmt="General">
+</c>
+<c f="Initiative01" a="$C$2" r="2" c="3" w="tx_Initiatives" v="Initiative01" fmt="General">
+</c>
+<c f="1. Cross-Selling Across All Practices" a="$C$6" r="6" c="3" w="tx_Initiatives" v="1. Cross-Selling Across All Practices" fmt="General">
+</c>
+<c f="Currently, less than 5 percent of Entrevard&apos;s sales come from cross-selling services from new practices to existing customers. Invest in training to better enable all salespeople to sell engagements beyond the practice in which they sit. Couple this training with enhanced incentives for cross-selling. &lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt;&lt;li&gt;Increase bookings, especially in the HCM and FUT practices&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;&lt;u&gt;Investment:&lt;/u&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;$1 Million (One-Time)&lt;/li&gt;&lt;li&gt;Increase Sales administrative costs (Ongoing)&lt;/li&gt;&lt;/ul&gt;" a="$C$7" r="7" c="3" w="tx_Initiatives" v="Currently, less than 5 percent of Entrevard&apos;s sales come from cross-selling services from new practices to existing customers. Invest in training to better enable all salespeople to sell engagements beyond the practice in which they sit. Couple this training with enhanced incentives for cross-selling. &lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt;&lt;li&gt;Increase bookings, especially in the HCM and FUT practices&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;&lt;u&gt;Investment:&lt;/u&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;$1 Million (One-Time)&lt;/li&gt;&lt;li&gt;Increase Sales administrative costs (Ongoing)&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$3" r="3" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="1" a="$C$12" r="12" c="3" w="tx_Initiatives" v="1" fmt="General">
+</c>
+<c f="Initiative02" a="$C$10" r="10" c="3" w="tx_Initiatives" v="Initiative02" fmt="General">
+</c>
+<c f="2. Expand the Presales Team" a="$C$14" r="14" c="3" w="tx_Initiatives" v="2. Expand the Presales Team" fmt="General">
+</c>
+<c f="The presales team&apos;s ability to quickly and accurately understand the customer and scope engagements can make the difference for Entrevard&apos;s ability to close sales and deliver projects effectively. Importantly, this team also plays a crucial role in integrating the Offshore workforce into Entrevard projects. Expand this team and place a central focus on customer understanding to fully meet client needs at this crucial stage.&lt;br /&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;ul&gt;&lt;li&gt;Increase the Productivity of Sales, Technical, PM/Analyst, and Director/EM employees&lt;/li&gt; &lt;li&gt;Increase Customer NPS&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;&lt;u&gt;Investment:&lt;/u&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;$200,000 (One-Time)&lt;/li&gt;&lt;li&gt;2,000 hours of Sales workforce time (Ongoing)&lt;/li&gt;&lt;/ul&gt;" a="$C$15" r="15" c="3" w="tx_Initiatives" v="The presales team&apos;s ability to quickly and accurately understand the customer and scope engagements can make the difference for Entrevard&apos;s ability to close sales and deliver projects effectively. Importantly, this team also plays a crucial role in integrating the Offshore workforce into Entrevard projects. Expand this team and place a central focus on customer understanding to fully meet client needs at this crucial stage.&lt;br /&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;ul&gt;&lt;li&gt;Increase the Productivity of Sales, Technical, PM/Analyst, and Director/EM employees&lt;/li&gt; &lt;li&gt;Increase Customer NPS&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;&lt;u&gt;Investment:&lt;/u&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;$200,000 (One-Time)&lt;/li&gt;&lt;li&gt;2,000 hours of Sales workforce time (Ongoing)&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$11" r="11" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="1" a="$C$20" r="20" c="3" w="tx_Initiatives" v="1" fmt="General">
+</c>
+<c f="Initiative03" a="$C$18" r="18" c="3" w="tx_Initiatives" v="Initiative03" fmt="General">
+</c>
+<c f="3. Double Down on Presence at Industry Conferences" a="$C$22" r="22" c="3" w="tx_Initiatives" v="3. Double Down on Presence at Industry Conferences" fmt="General">
+</c>
+<c f="Industry conferences are an opportunity for Entrevard to reinforce its thought leadership bona fides and reach new audiences, all while boosting its relationships with clients and partners. Increase Entrevard&apos;s focus on these conferences as you transition the company to becoming its own channel ,rather than relying on partners.&lt;br /&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Increase Thought Leadership across all practices&lt;/li&gt; &lt;li&gt;Increase Customer NPS&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;&lt;u&gt;Investment:&lt;/u&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;$750,000 (One-Time)&lt;/li&gt;&lt;li&gt;$500,000 (On-Going)&lt;/li&gt;&lt;li&gt;1,000 hours of Director/EM time&lt;/li&gt; &lt;li&gt;1,000 hours of Sales person time&lt;/li&gt;&lt;/ul&gt;" a="$C$23" r="23" c="3" w="tx_Initiatives" v="Industry conferences are an opportunity for Entrevard to reinforce its thought leadership bona fides and reach new audiences, all while boosting its relationships with clients and partners. Increase Entrevard&apos;s focus on these conferences as you transition the company to becoming its own channel ,rather than relying on partners.&lt;br /&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Increase Thought Leadership across all practices&lt;/li&gt; &lt;li&gt;Increase Customer NPS&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;&lt;u&gt;Investment:&lt;/u&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;$750,000 (One-Time)&lt;/li&gt;&lt;li&gt;$500,000 (On-Going)&lt;/li&gt;&lt;li&gt;1,000 hours of Director/EM time&lt;/li&gt; &lt;li&gt;1,000 hours of Sales person time&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$19" r="19" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="1" a="$C$28" r="28" c="3" w="tx_Initiatives" v="1" fmt="General">
+</c>
+<c f="Initiative04" a="$C$26" r="26" c="3" w="tx_Initiatives" v="Initiative04" fmt="General">
+</c>
+<c f="4. Focus on &quot;Prove It&quot; Moments in the Sales Cycle" a="$C$30" r="30" c="3" w="tx_Initiatives" v="4. Focus on &quot;Prove It&quot; Moments in the Sales Cycle" fmt="General">
+</c>
+<c f="Entrevard&apos;s culture and agility differentiate it from other professional services firms, so allowing potential clients to experience these aspects of working with Entrevard, not just hear about them, will increase its win rate. This process will be a bit more high touch, but the payoff could be significant. &lt;br/&gt; &lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Increase Sales Effectiveness across all practices &lt;/li&gt; &lt;/ul&gt;&lt;br /&gt; &lt;u&gt;Investment:&lt;/u&gt; &lt;br /&gt;&lt;ul&gt;&lt;li&gt;3,000 hours of Sales person time (On-Going)&lt;/li&gt;&lt;/ul&gt;" a="$C$31" r="31" c="3" w="tx_Initiatives" v="Entrevard&apos;s culture and agility differentiate it from other professional services firms, so allowing potential clients to experience these aspects of working with Entrevard, not just hear about them, will increase its win rate. This process will be a bit more high touch, but the payoff could be significant. &lt;br/&gt; &lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Increase Sales Effectiveness across all practices &lt;/li&gt; &lt;/ul&gt;&lt;br /&gt; &lt;u&gt;Investment:&lt;/u&gt; &lt;br /&gt;&lt;ul&gt;&lt;li&gt;3,000 hours of Sales person time (On-Going)&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$27" r="27" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="1" a="$C$36" r="36" c="3" w="tx_Initiatives" v="1" fmt="General">
+</c>
+<c f="Initiative05" a="$C$34" r="34" c="3" w="tx_Initiatives" v="Initiative05" fmt="General">
+</c>
+<c f="5. Expand Thought Leadership Publishing" a="$C$38" r="38" c="3" w="tx_Initiatives" v="5. Expand Thought Leadership Publishing" fmt="General">
+</c>
+<c f="One way to demonstrate to clients and potential clients the depth and breadth of industry specific expertise is by publishing the ideas and research of thought leaders in the company. This gives clients a taste of the expertise that you bring to the table, can help demonstrate value and thus influence willingness to pay premium prices. It can also act as marketing to potential clients and help to increase the quality and number of C Level conversations based on thought leadership. &lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Increase Thought Leadership &lt;/li&gt; &lt;li&gt;Increase Customer NPS&lt;/li&gt; &lt;/ul&gt;&lt;br /&gt; &lt;u&gt;Investment:&lt;/u&gt; &lt;br /&gt;&lt;ul&gt;&lt;li&gt;1,000 hours of Director/EM time (Ongoing)&lt;/li&gt; &lt;li&gt;$100,000 (Ongoing)&lt;/li&gt;&lt;/ul&gt;" a="$C$39" r="39" c="3" w="tx_Initiatives" v="One way to demonstrate to clients and potential clients the depth and breadth of industry specific expertise is by publishing the ideas and research of thought leaders in the company. This gives clients a taste of the expertise that you bring to the table, can help demonstrate value and thus influence willingness to pay premium prices. It can also act as marketing to potential clients and help to increase the quality and number of C Level conversations based on thought leadership. &lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Increase Thought Leadership &lt;/li&gt; &lt;li&gt;Increase Customer NPS&lt;/li&gt; &lt;/ul&gt;&lt;br /&gt; &lt;u&gt;Investment:&lt;/u&gt; &lt;br /&gt;&lt;ul&gt;&lt;li&gt;1,000 hours of Director/EM time (Ongoing)&lt;/li&gt; &lt;li&gt;$100,000 (Ongoing)&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$35" r="35" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="1" a="$C$44" r="44" c="3" w="tx_Initiatives" v="1" fmt="General">
+</c>
+<c f="Initiative06" a="$C$42" r="42" c="3" w="tx_Initiatives" v="Initiative06" fmt="General">
+</c>
+<c f="6. Improve Visibility into Offshore Processes" a="$C$46" r="46" c="3" w="tx_Initiatives" v="6. Improve Visibility into Offshore Processes" fmt="General">
+</c>
+<c f="One barrier to broader adoption of offshore capabilities among Entrevard leaders is the inability to easily understand and compare the processes and challenges of technical teams in the Jaipur Development Center (JDC) with that of traditional onshore consulting teams. To breakdown this barrier and help the Entrevard team and its clients more effectively and efficiently utilize the team in Jaipur, you set up a series of cross-office &quot;Lunch &amp;amp; Learn&quot;s and Q&amp;amp;A sessions led by both offshore employees and local employees that have visited the JDC. &lt;br /&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Increase Customer Success Score &lt;/li&gt; &lt;li&gt;Reduce the Project Risk associated with integrating Offshore support into engagements&lt;/li&gt; &lt;/ul&gt;&lt;br /&gt; &lt;u&gt;Investment:&lt;/u&gt; &lt;br /&gt;&lt;ul&gt;&lt;li&gt;500 hours of PM/Analyst time (One-time)&lt;/li&gt; &lt;li&gt;1,000 hours of Technical workforce time (One-time)&lt;/li&gt; &lt;li&gt;500 hours of Technical workforce time (Ongoing)&lt;/li&gt;&lt;/ul&gt;" a="$C$47" r="47" c="3" w="tx_Initiatives" v="One barrier to broader adoption of offshore capabilities among Entrevard leaders is the inability to easily understand and compare the processes and challenges of technical teams in the Jaipur Development Center (JDC) with that of traditional onshore consulting teams. To breakdown this barrier and help the Entrevard team and its clients more effectively and efficiently utilize the team in Jaipur, you set up a series of cross-office &quot;Lunch &amp;amp; Learn&quot;s and Q&amp;amp;A sessions led by both offshore employees and local employees that have visited the JDC. &lt;br /&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Increase Customer Success Score &lt;/li&gt; &lt;li&gt;Reduce the Project Risk associated with integrating Offshore support into engagements&lt;/li&gt; &lt;/ul&gt;&lt;br /&gt; &lt;u&gt;Investment:&lt;/u&gt; &lt;br /&gt;&lt;ul&gt;&lt;li&gt;500 hours of PM/Analyst time (One-time)&lt;/li&gt; &lt;li&gt;1,000 hours of Technical workforce time (One-time)&lt;/li&gt; &lt;li&gt;500 hours of Technical workforce time (Ongoing)&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$43" r="43" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="1" a="$C$52" r="52" c="3" w="tx_Initiatives" v="1" fmt="General">
+</c>
+<c f="Initiative07" a="$C$50" r="50" c="3" w="tx_Initiatives" v="Initiative07" fmt="General">
+</c>
+<c f="7. Alternative Compensation Structures" a="$C$54" r="54" c="3" w="tx_Initiatives" v="7. Alternative Compensation Structures" fmt="General">
+</c>
+<c f="With the needs of the workforce evolving and competition for the best talent only intensifying, younger workers will be drawn to more flexibility in compensation options. Rather than a standard salary/bonus/equity/benefits package, offer employees a flexible, points-based compensation option, in which points can be redeemed not just for cash, but also for equity, benefits, sabbaticals, and even items from the Entrevard store. In addition to making current employees more engaged today, this program will position Entrevard well for the future transition to a utility consulting model.&lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt; Increase Employee NPS &lt;/li&gt;&lt;li&gt; Additional increase to the value proposition to PM/Analyst and Technical employees&lt;/li&gt; &lt;/ul&gt;&lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;$1 Million (One-Time) &lt;/li&gt;&lt;li&gt;$ 500,000 (On-Going)&lt;/li&gt;&lt;/ul&gt;" a="$C$55" r="55" c="3" w="tx_Initiatives" v="With the needs of the workforce evolving and competition for the best talent only intensifying, younger workers will be drawn to more flexibility in compensation options. Rather than a standard salary/bonus/equity/benefits package, offer employees a flexible, points-based compensation option, in which points can be redeemed not just for cash, but also for equity, benefits, sabbaticals, and even items from the Entrevard store. In addition to making current employees more engaged today, this program will position Entrevard well for the future transition to a utility consulting model.&lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt; Increase Employee NPS &lt;/li&gt;&lt;li&gt; Additional increase to the value proposition to PM/Analyst and Technical employees&lt;/li&gt; &lt;/ul&gt;&lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;$1 Million (One-Time) &lt;/li&gt;&lt;li&gt;$ 500,000 (On-Going)&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$51" r="51" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="1" a="$C$60" r="60" c="3" w="tx_Initiatives" v="1" fmt="General">
+</c>
+<c f="Initiative08" a="$C$58" r="58" c="3" w="tx_Initiatives" v="Initiative08" fmt="General">
+</c>
+<c f="8. Launch a Leadership Academy" a="$C$62" r="62" c="3" w="tx_Initiatives" v="8. Launch a Leadership Academy" fmt="General">
+</c>
+<c f="The Entrevard Leadership Academy will take a programmatic approach to developing leaders at all levels of the organization, starting with EMs and above. It will focus particularly on three main components: &lt;ul&gt; &lt;li&gt;Self awareness through 360 feedback and personal coaching&lt;/li&gt; &lt;li&gt;Leadership communications&lt;/li&gt; &lt;li&gt;Strengthening a culture of innovation and accountability&lt;/li&gt; &lt;/ul&gt;  &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Reduce Cost of Sales due to improved productivity among Director/EMs&lt;/li&gt;  &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt;$ 750,000 (On-Going)&lt;/li&gt; &lt;/ul&gt;" a="$C$63" r="63" c="3" w="tx_Initiatives" v="The Entrevard Leadership Academy will take a programmatic approach to developing leaders at all levels of the organization, starting with EMs and above. It will focus particularly on three main components: &lt;ul&gt; &lt;li&gt;Self awareness through 360 feedback and personal coaching&lt;/li&gt; &lt;li&gt;Leadership communications&lt;/li&gt; &lt;li&gt;Strengthening a culture of innovation and accountability&lt;/li&gt; &lt;/ul&gt;  &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Reduce Cost of Sales due to improved productivity among Director/EMs&lt;/li&gt;  &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt;$ 750,000 (On-Going)&lt;/li&gt; &lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$59" r="59" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="2" a="$C$68" r="68" c="3" w="tx_Initiatives" v="2" fmt="General">
+</c>
+<c f="Initiative09" a="$C$66" r="66" c="3" w="tx_Initiatives" v="Initiative09" fmt="General">
+</c>
+<c f="9. Innovation Challenge" a="$C$70" r="70" c="3" w="tx_Initiatives" v="9. Innovation Challenge" fmt="General">
+</c>
+<c f="One of Entrevard&apos;s core values has always been a focus on Innovation. A culture of innovation has been central to the company&apos;s ability to attract and retain great talent, and it is part of the reason clients want to work with Entrevard. You decide that we need to focus innovation on mobile and cloud services and solutions and to take the innovation culture to the next level. You launch an internal &quot;Innovation Challenge&quot; for employees that encourages starting with deep understanding of our clients unmet needs, robust ideation and fast and cheap experimentation. Employees submit brief videos suggesting new insight, idea and the first assumption to test, and with their colleagues voting up their favorite ideas. As part of issuing this challenge, set aside funding to start experimenting with the top rated ideas. &lt;br /&gt;&lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt; &lt;ul&gt; &lt;li&gt;Increase Employee NPS&lt;/li&gt; &lt;li&gt;Increase Thought Leadership&lt;/li&gt; &lt;li&gt;Increase sales of Futuria&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt; &lt;ul&gt; &lt;li&gt;$500,000 (One-Time)&lt;/li&gt; &lt;li&gt;$250,000 (On-Going)&lt;/li&gt; &lt;/ul&gt;" a="$C$71" r="71" c="3" w="tx_Initiatives" v="One of Entrevard&apos;s core values has always been a focus on Innovation. A culture of innovation has been central to the company&apos;s ability to attract and retain great talent, and it is part of the reason clients want to work with Entrevard. You decide that we need to focus innovation on mobile and cloud services and solutions and to take the innovation culture to the next level. You launch an internal &quot;Innovation Challenge&quot; for employees that encourages starting with deep understanding of our clients unmet needs, robust ideation and fast and cheap experimentation. Employees submit brief videos suggesting new insight, idea and the first assumption to test, and with their colleagues voting up their favorite ideas. As part of issuing this challenge, set aside funding to start experimenting with the top rated ideas. &lt;br /&gt;&lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt; &lt;ul&gt; &lt;li&gt;Increase Employee NPS&lt;/li&gt; &lt;li&gt;Increase Thought Leadership&lt;/li&gt; &lt;li&gt;Increase sales of Futuria&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt; &lt;ul&gt; &lt;li&gt;$500,000 (One-Time)&lt;/li&gt; &lt;li&gt;$250,000 (On-Going)&lt;/li&gt; &lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$67" r="67" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="2" a="$C$76" r="76" c="3" w="tx_Initiatives" v="2" fmt="General">
+</c>
+<c f="Initiative10" a="$C$74" r="74" c="3" w="tx_Initiatives" v="Initiative10" fmt="General">
+</c>
+<c f="10. Career Incentives for Risk Taking &amp; Innovation" a="$C$78" r="78" c="3" w="tx_Initiatives" v="10. Career Incentives for Risk Taking &amp; Innovation" fmt="General">
+</c>
+<c f="Innovation has always been essential in Entrevard&apos;s mission of disrupting the world of professional services, but it is difficult to codify and reinforce when working with clients who may be more risk averse. Update Entrevard&apos;s career model to require innovative new approaches in order to get promoted at certain levels. Reward these innovations even if the approach was not 100% successful, in order to promote a culture of risk taking. &lt;br/&gt; &lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Increase Productivity for Director/EMs, PM/Analysts, and Technical employees&lt;/li&gt;  &lt;li&gt; Potential Decrease in Customer NPS&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt;Increase Unbillable Hours Expense&lt;/li&gt; &lt;/ul&gt;" a="$C$79" r="79" c="3" w="tx_Initiatives" v="Innovation has always been essential in Entrevard&apos;s mission of disrupting the world of professional services, but it is difficult to codify and reinforce when working with clients who may be more risk averse. Update Entrevard&apos;s career model to require innovative new approaches in order to get promoted at certain levels. Reward these innovations even if the approach was not 100% successful, in order to promote a culture of risk taking. &lt;br/&gt; &lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Increase Productivity for Director/EMs, PM/Analysts, and Technical employees&lt;/li&gt;  &lt;li&gt; Potential Decrease in Customer NPS&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt;Increase Unbillable Hours Expense&lt;/li&gt; &lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$75" r="75" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="2" a="$C$84" r="84" c="3" w="tx_Initiatives" v="2" fmt="General">
+</c>
+<c f="Initiative11" a="$C$82" r="82" c="3" w="tx_Initiatives" v="Initiative11" fmt="General">
+</c>
+<c f="11. Define and Communicate the Career Roadmap" a="$C$86" r="86" c="3" w="tx_Initiatives" v="11. Define and Communicate the Career Roadmap" fmt="General">
+</c>
+<c f="One of the reasons former Entrevard employees give for leaving voluntarily is a lack of visibility into their future career prospects if they stay at the firm. Address this concern by defining a clear career roadmap for both consultants and technical employees. Make investments to communicate this roadmap to all Entrevard employees. &lt;br/&gt; &lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Decrease Voluntary Attrition among Technical, PM/Analyst, and Director/EM employees &lt;/li&gt; &lt;li&gt; Increase PM/Analyst and Technical Employee Productivity&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt;$250,000 (One-Time)&lt;/li&gt; &lt;/ul&gt;" a="$C$87" r="87" c="3" w="tx_Initiatives" v="One of the reasons former Entrevard employees give for leaving voluntarily is a lack of visibility into their future career prospects if they stay at the firm. Address this concern by defining a clear career roadmap for both consultants and technical employees. Make investments to communicate this roadmap to all Entrevard employees. &lt;br/&gt; &lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Decrease Voluntary Attrition among Technical, PM/Analyst, and Director/EM employees &lt;/li&gt; &lt;li&gt; Increase PM/Analyst and Technical Employee Productivity&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt;$250,000 (One-Time)&lt;/li&gt; &lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$83" r="83" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="2" a="$C$92" r="92" c="3" w="tx_Initiatives" v="2" fmt="General">
+</c>
+<c f="Initiative12" a="$C$90" r="90" c="3" w="tx_Initiatives" v="Initiative12" fmt="General">
+</c>
+<c f="12. Hiring and retaining a diverse &amp; inclusive workforce" a="$C$94" r="94" c="3" w="tx_Initiatives" v="12. Hiring and retaining a diverse &amp; inclusive workforce" fmt="General">
+</c>
+<c f=" The ability to understand and operate in a multicultural world is critical to our growth and sustainability as a global company. This initiative will help to model our hiring after our continually more diverse business and customer base, where diversity and inclusion are visibly a part of everyday  business.&lt;br/&gt; &lt;br /&gt; This will increase the focus of your leadership team to build diverse teams at all levels and create an environment where all employees can contribute and do their best work. &lt;br/&gt; &lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Increase PM/Analyst, Technical, and Offshore Productivity&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt;$1 million (Ongoing)&lt;/li&gt; &lt;/ul&gt;" a="$C$95" r="95" c="3" w="tx_Initiatives" v=" The ability to understand and operate in a multicultural world is critical to our growth and sustainability as a global company. This initiative will help to model our hiring after our continually more diverse business and customer base, where diversity and inclusion are visibly a part of everyday  business.&lt;br/&gt; &lt;br /&gt; This will increase the focus of your leadership team to build diverse teams at all levels and create an environment where all employees can contribute and do their best work. &lt;br/&gt; &lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Increase PM/Analyst, Technical, and Offshore Productivity&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt;$1 million (Ongoing)&lt;/li&gt; &lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$91" r="91" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="2" a="$C$100" r="100" c="3" w="tx_Initiatives" v="2" fmt="General">
+</c>
+<c f="Initiative13" a="$C$98" r="98" c="3" w="tx_Initiatives" v="Initiative13" fmt="General">
+</c>
+<c f="13. Scale &quot;Agile Launch Week&quot; to All Projects" a="$C$102" r="102" c="3" w="tx_Initiatives" v="13. Scale &quot;Agile Launch Week&quot; to All Projects" fmt="General">
+</c>
+<c f="Entrevard has had great success with projects that begin with &quot;Agile Launch Week,&quot; when the full project team co-locates for an intense week to kick off project execution. Teams should to the extent possible include key client stakeholder in this process. This week of focused collaboration, proactively managing project risks, and kicking of the agile process has cut multiple weeks off average project timelines. Now, scale Agile Launch Week to all of Entrevard&apos;s projects, betting that the extra overhead will pay off in saved time and happier customers.&lt;br /&gt;&lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt; &lt;ul&gt; &lt;li&gt;Increase Customer NPS&lt;/li&gt; &lt;li&gt;Increase Productivity for PM/Analysts and Technical employees&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt; &lt;ul&gt; &lt;li&gt;Increase Engagement Overhead&lt;/li&gt; &lt;/ul&gt;" a="$C$103" r="103" c="3" w="tx_Initiatives" v="Entrevard has had great success with projects that begin with &quot;Agile Launch Week,&quot; when the full project team co-locates for an intense week to kick off project execution. Teams should to the extent possible include key client stakeholder in this process. This week of focused collaboration, proactively managing project risks, and kicking of the agile process has cut multiple weeks off average project timelines. Now, scale Agile Launch Week to all of Entrevard&apos;s projects, betting that the extra overhead will pay off in saved time and happier customers.&lt;br /&gt;&lt;br /&gt; &lt;u&gt;Potential Impact:&lt;/u&gt; &lt;ul&gt; &lt;li&gt;Increase Customer NPS&lt;/li&gt; &lt;li&gt;Increase Productivity for PM/Analysts and Technical employees&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt; &lt;ul&gt; &lt;li&gt;Increase Engagement Overhead&lt;/li&gt; &lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$99" r="99" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="3" a="$C$108" r="108" c="3" w="tx_Initiatives" v="3" fmt="General">
+</c>
+<c f="Initiative14" a="$C$106" r="106" c="3" w="tx_Initiatives" v="Initiative14" fmt="General">
+</c>
+<c f="14. Integration Readiness Plan" a="$C$110" r="110" c="3" w="tx_Initiatives" v="14. Integration Readiness Plan" fmt="General">
+</c>
+<c f="This plan will focus on the importance of integrating inorganic growth opportunities to achieve Entrevard&apos;s growth targets. It will emphasize maintaining of enhancing the Entrevard culture - paying particular attention to the retention of key talent and alignment to gaps in capability. It will further enhance the process in which the centralized Strategy Team coordinates with internal stakeholders during the originating, assessing, and closing process to better understand how integrating future acquisition targets might impact Entrevard. &lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Improve Entrevard&apos;s ability to onboard and integrate future acquisition targets&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; 500 hours of Director/EM time &lt;/li&gt; &lt;li&gt; $1 million (One-Time)&lt;/li&gt; &lt;li&gt; $500,000 (Ongoing)&lt;/li&gt; &lt;/ul&gt;" a="$C$111" r="111" c="3" w="tx_Initiatives" v="This plan will focus on the importance of integrating inorganic growth opportunities to achieve Entrevard&apos;s growth targets. It will emphasize maintaining of enhancing the Entrevard culture - paying particular attention to the retention of key talent and alignment to gaps in capability. It will further enhance the process in which the centralized Strategy Team coordinates with internal stakeholders during the originating, assessing, and closing process to better understand how integrating future acquisition targets might impact Entrevard. &lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Improve Entrevard&apos;s ability to onboard and integrate future acquisition targets&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; 500 hours of Director/EM time &lt;/li&gt; &lt;li&gt; $1 million (One-Time)&lt;/li&gt; &lt;li&gt; $500,000 (Ongoing)&lt;/li&gt; &lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$107" r="107" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="3" a="$C$116" r="116" c="3" w="tx_Initiatives" v="3" fmt="General">
+</c>
+<c f="Initiative15" a="$C$114" r="114" c="3" w="tx_Initiatives" v="Initiative15" fmt="General">
+</c>
+<c f="15. Futuria Organic Growth Objectives" a="$C$118" r="118" c="3" w="tx_Initiatives" v="15. Futuria Organic Growth Objectives" fmt="General">
+</c>
+<c f="To effectively drive rapid growth of the Futuria practice, you launch a new collaboration platform across the Region. The platform is built to enable account teams to share best practices and successful engagements with the rest of the company. The platform also enables the account teams to collaborate, but will primarily benefit the Futuria practice by learning from the delivery and relationship building experiences of CRM and HCM practice when they were in a similar growth stage. &lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Improve Entrevard&apos;s ability to utilize knowledge across practices to streamline new growth opportunities&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; $500,000 (One-Time) &lt;/li&gt; &lt;li&gt; $150,000 (Ongoing)&lt;/li&gt; &lt;li&gt; 1,000 hours of both Director/EMs and PM/Analysts time (Ongoing)&lt;/li&gt; &lt;/ul&gt;" a="$C$119" r="119" c="3" w="tx_Initiatives" v="To effectively drive rapid growth of the Futuria practice, you launch a new collaboration platform across the Region. The platform is built to enable account teams to share best practices and successful engagements with the rest of the company. The platform also enables the account teams to collaborate, but will primarily benefit the Futuria practice by learning from the delivery and relationship building experiences of CRM and HCM practice when they were in a similar growth stage. &lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Improve Entrevard&apos;s ability to utilize knowledge across practices to streamline new growth opportunities&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; $500,000 (One-Time) &lt;/li&gt; &lt;li&gt; $150,000 (Ongoing)&lt;/li&gt; &lt;li&gt; 1,000 hours of both Director/EMs and PM/Analysts time (Ongoing)&lt;/li&gt; &lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$115" r="115" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="3" a="$C$124" r="124" c="3" w="tx_Initiatives" v="3" fmt="General">
+</c>
+<c f="Initiative16" a="$C$122" r="122" c="3" w="tx_Initiatives" v="Initiative16" fmt="General">
+</c>
+<c f="16. Industry Focused Training" a="$C$126" r="126" c="3" w="tx_Initiatives" v="16. Industry Focused Training" fmt="General">
+</c>
+<c f="Across Entrevard, management has recognized a need to improve knowledge and insights in client service teams on the sectors they service in order to build better relationships and ensure &apos;exceptional&apos; quality is obtained. You will invest in multiple training sessions focused on building the knowledge of client-facing teams on the specific industries they serve, so that they can better speak the language of the customer. Furthermore, monthly meetings will allow teams to communicate emerging trends and needs facing these industries and any add-on sales opportunities as they present themselves. &lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Increase Industry Eminence by 1&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; 6,000 hours of Director/EM time (Ongoing) &lt;/li&gt; &lt;li&gt; $500,000 (Ongoing)&lt;/li&gt; &lt;/ul&gt;" a="$C$127" r="127" c="3" w="tx_Initiatives" v="Across Entrevard, management has recognized a need to improve knowledge and insights in client service teams on the sectors they service in order to build better relationships and ensure &apos;exceptional&apos; quality is obtained. You will invest in multiple training sessions focused on building the knowledge of client-facing teams on the specific industries they serve, so that they can better speak the language of the customer. Furthermore, monthly meetings will allow teams to communicate emerging trends and needs facing these industries and any add-on sales opportunities as they present themselves. &lt;br/&gt; &lt;br/&gt; &lt;u&gt;Potential Impact:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; Increase Employee NPS &lt;/li&gt; &lt;li&gt; Increase Industry Eminence by 1&lt;/li&gt; &lt;/ul&gt; &lt;u&gt;Investment:&lt;/u&gt;&lt;br/&gt; &lt;ul&gt; &lt;li&gt; 6,000 hours of Director/EM time (Ongoing) &lt;/li&gt; &lt;li&gt; $500,000 (Ongoing)&lt;/li&gt; &lt;/ul&gt;" fmt="General">
+</c>
+<c f="Initiative" a="$C$123" r="123" c="3" w="tx_Initiatives" v="Initiative" fmt="General">
+</c>
+<c f="1" a="$C$2" r="2" c="3" w="Control" v="1" fmt="General">
+</c>
+<c f="A" a="$C$12" r="12" c="3" w="tx_Wobblers" v="A" fmt="General">
+</c>
+<c f="You took a hard line with Sander by not letting him off the hook to perform the full role of Project Coordinator, even though it will be a stretch for him. By pairing him up with Pandora, but limiting her role to coaching, you set him up for immediate improvement and success. You also stretched Pandora&apos;s leadership skills by forcing her to equip, rather than eclipse, a junior team member." a="$C$24" r="24" c="3" w="tx_Wobblers" v="You took a hard line with Sander by not letting him off the hook to perform the full role of Project Coordinator, even though it will be a stretch for him. By pairing him up with Pandora, but limiting her role to coaching, you set him up for immediate improvement and success. You also stretched Pandora&apos;s leadership skills by forcing her to equip, rather than eclipse, a junior team member." fmt="General">
+</c>
+<c f="Have Pandora coach Sander" a="$C$16" r="16" c="3" w="tx_Wobblers" v="Have Pandora coach Sander" fmt="General">
+</c>
+<c f="Meet with Sander to share Lucy&apos;s observations and to underscore his responsibilities as Project Coordinator. He must take an active role in decisions that have an impact on the project schedule, and cannot be just a keeper of data. Ask Pandora to meet briefly with Sander before each project meeting to help him anticipate likely challenges to the project plan. Ask Pandora to stay in the background and not attend the meetings, so it is clear to everyone that Sander owns the Project Coordinator role." a="$C$20" r="20" c="3" w="tx_Wobblers" v="Meet with Sander to share Lucy&apos;s observations and to underscore his responsibilities as Project Coordinator. He must take an active role in decisions that have an impact on the project schedule, and cannot be just a keeper of data. Ask Pandora to meet briefly with Sander before each project meeting to help him anticipate likely challenges to the project plan. Ask Pandora to stay in the background and not attend the meetings, so it is clear to everyone that Sander owns the Project Coordinator role." fmt="General">
+</c>
+<c f="B" a="$C$13" r="13" c="3" w="tx_Wobblers" v="B" fmt="General">
+</c>
+<c f="The net of this approach is that you reduced Sander&apos;s role to just the administrative aspects of project coordination and took on the more difficult tasks yourself. While this approach fixed the issue for the project team, it distracted you from other important work in your early weeks on the job. Worse than that, Sander got the message that you don&apos;t think he is capable of rising to the challenge." a="$C$25" r="25" c="3" w="tx_Wobblers" v="The net of this approach is that you reduced Sander&apos;s role to just the administrative aspects of project coordination and took on the more difficult tasks yourself. While this approach fixed the issue for the project team, it distracted you from other important work in your early weeks on the job. Worse than that, Sander got the message that you don&apos;t think he is capable of rising to the challenge." fmt="General">
+</c>
+<c f="Provide air cover for Sander" a="$C$17" r="17" c="3" w="tx_Wobblers" v="Provide air cover for Sander" fmt="General">
+</c>
+<c f="Meet with Sander to share Lucy&apos;s observations and to get his perspective. Together, develop a plan where you will attend the next and some upcoming project team meetings. You will also meet with a few of your peers in the other departments to better understand what is going on, and intervene further if necessary. In the meeting with Sander, give him accountability for keeping the project plan accurate and calling out dependencies and risks." a="$C$21" r="21" c="3" w="tx_Wobblers" v="Meet with Sander to share Lucy&apos;s observations and to get his perspective. Together, develop a plan where you will attend the next and some upcoming project team meetings. You will also meet with a few of your peers in the other departments to better understand what is going on, and intervene further if necessary. In the meeting with Sander, give him accountability for keeping the project plan accurate and calling out dependencies and risks." fmt="General">
+</c>
+<c f="C" a="$C$14" r="14" c="3" w="tx_Wobblers" v="C" fmt="General">
+</c>
+<c f="Roxy had some hard questions for you when you shared your plan with her. &quot;Who ultimately owns the success of this, me or Sander? I&apos;m fine with coaching him, but if I am responsible for the outcomes, I am pretty much going to have to supervise the whole thing. Do you think this work justifies both of us being this involved?&quot; Sander was relieved to have some help on the project, but he ended up taking the more mundane tasks while letting Roxy effectively lead the real coordination..." a="$C$26" r="26" c="3" w="tx_Wobblers" v="Roxy had some hard questions for you when you shared your plan with her. &quot;Who ultimately owns the success of this, me or Sander? I&apos;m fine with coaching him, but if I am responsible for the outcomes, I am pretty much going to have to supervise the whole thing. Do you think this work justifies both of us being this involved?&quot; Sander was relieved to have some help on the project, but he ended up taking the more mundane tasks while letting Roxy effectively lead the real coordination..." fmt="General">
+</c>
+<c f="Pair Sander with Roxy" a="$C$18" r="18" c="3" w="tx_Wobblers" v="Pair Sander with Roxy" fmt="General">
+</c>
+<c f="Meet with Sander to share Lucy&apos;s observations and to emphasize the importance of the Project Coordinator role. Pair Sander with Roxy for this role - she will model the confidence and extroversion that Sander needs. Roxy has been interested in getting more coaching experience, so this should be a good opportunity. They can figure out how to divide up the project duties between themselves, and they will be mutually accountable for the project&apos;s success." a="$C$22" r="22" c="3" w="tx_Wobblers" v="Meet with Sander to share Lucy&apos;s observations and to emphasize the importance of the Project Coordinator role. Pair Sander with Roxy for this role - she will model the confidence and extroversion that Sander needs. Roxy has been interested in getting more coaching experience, so this should be a good opportunity. They can figure out how to divide up the project duties between themselves, and they will be mutually accountable for the project&apos;s success." fmt="General">
+</c>
+<c f="D" a="$C$15" r="15" c="3" w="tx_Wobblers" v="D" fmt="General">
+</c>
+<c f="The new Project Coordinator from Lucy&apos;s group quickly got the project under control. Sander was faced with either taking on a greatly diminished role in the project or pulling out entirely, which he elected to do. While you were able to find a more suitable project for him, the sting of failing in this very visible role has left him unsure of his capabilities and cautious about taking on new responsibilities." a="$C$27" r="27" c="3" w="tx_Wobblers" v="The new Project Coordinator from Lucy&apos;s group quickly got the project under control. Sander was faced with either taking on a greatly diminished role in the project or pulling out entirely, which he elected to do. While you were able to find a more suitable project for him, the sting of failing in this very visible role has left him unsure of his capabilities and cautious about taking on new responsibilities." fmt="General">
+</c>
+<c f="Take Sander off the hook" a="$C$19" r="19" c="3" w="tx_Wobblers" v="Take Sander off the hook" fmt="General">
+</c>
+<c f="Meet with Lucy and other senior project members to identify options for the Project Coordinator role - this role does not have to come from your group. The group agrees that the role is too critical for a junior team member and identifies someone on Lucy&apos;s team that can take over. Meet with Sander and let him know that his effort was appreciated, but that you misunderstood the scope of the role and now think it is not a good match for him as a junior team member. Identify another challenging assignment for Sander that is a better fit for his demonstrated capabilities." a="$C$23" r="23" c="3" w="tx_Wobblers" v="Meet with Lucy and other senior project members to identify options for the Project Coordinator role - this role does not have to come from your group. The group agrees that the role is too critical for a junior team member and identifies someone on Lucy&apos;s team that can take over. Meet with Sander and let him know that his effort was appreciated, but that you misunderstood the scope of the role and now think it is not a good match for him as a junior team member. Identify another challenging assignment for Sander that is a better fit for his demonstrated capabilities." fmt="General">
+</c>
+<c f="W101" a="$C$2" r="2" c="3" w="tx_Wobblers" v="W101" fmt="General">
+</c>
+<c f="The Sander Situation" a="$C$5" r="5" c="3" w="tx_Wobblers" v="The Sander Situation" fmt="General">
+</c>
+<c f="Your first week as new team leader has been hectic! While Pandora did a great job of keeping the team focused, a lot of decisions have been on hold since Zed&apos;s Zamboni incident. You have back-to- back meetings stretching into the next few weeks just to get up to speed on all the work.&lt;br&gt; &lt;br&gt; During your first few days, Sander volunteered to take on the role of coordinator for the Alpha project. While the project is significant in scope and critical for several departments, the coordinator role seemed fairly limited and well defined.&lt;br&gt; &lt;br&gt; Sander has been under-utilized. Because he was relatively new to his role, Pandora found it difficult to give him challenging work during her time as team leader. In your mind, you checked the &quot;re-engage Sander&quot; box by giving him this Alpha project challenge. You met with him to set clear expectations and moved on to your next appointment.&lt;br&gt; &lt;br&gt; This morning Lucy caught you in the hallway and said, &quot;You might need to reconsider having Sander coordinate the Alpha project. With the push to become more agile, this role is more important than ever. At both of our meetings this week Sander seemed very reluctant to speak up. He allowed other members to dictate changes to the project plan. If he won&apos;t, or can&apos;t, assert himself more, this project is going to be in trouble.&quot;&lt;br&gt; &lt;br&gt;&lt;b&gt;What do you do?&lt;/b&gt;" a="$C$11" r="11" c="3" w="tx_Wobblers" v="Your first week as new team leader has been hectic! While Pandora did a great job of keeping the team focused, a lot of decisions have been on hold since Zed&apos;s Zamboni incident. You have back-to- back meetings stretching into the next few weeks just to get up to speed on all the work.&lt;br&gt; &lt;br&gt; During your first few days, Sander volunteered to take on the role of coordinator for the Alpha project. While the project is significant in scope and critical for several departments, the coordinator role seemed fairly limited and well defined.&lt;br&gt; &lt;br&gt; Sander has been under-utilized. Because he was relatively new to his role, Pandora found it difficult to give him challenging work during her time as team leader. In your mind, you checked the &quot;re-engage Sander&quot; box by giving him this Alpha project challenge. You met with him to set clear expectations and moved on to your next appointment.&lt;br&gt; &lt;br&gt; This morning Lucy caught you in the hallway and said, &quot;You might need to reconsider having Sander coordinate the Alpha project. With the push to become more agile, this role is more important than ever. At both of our meetings this week Sander seemed very reluctant to speak up. He allowed other members to dictate changes to the project plan. If he won&apos;t, or can&apos;t, assert himself more, this project is going to be in trouble.&quot;&lt;br&gt; &lt;br&gt;&lt;b&gt;What do you do?&lt;/b&gt;" fmt="General">
+</c>
+<c f="SingleSelect" a="$C$3" r="3" c="3" w="tx_Wobblers" v="SingleSelect" fmt="General">
+</c>
+<c f="1" a="$C$7" r="7" c="3" w="tx_Wobblers" v="1" fmt="General">
+</c>
+<c f="1" a="$C$6" r="6" c="3" w="tx_Wobblers" v="1" fmt="General">
+</c>
+<c f="5400" a="$C$8" r="8" c="3" w="tx_Wobblers" v="5400" fmt="General">
+</c>
+<c f="A" a="$C$42" r="42" c="3" w="tx_Wobblers" v="A" fmt="General">
+</c>
+<c f="This year&apos;s conference is good, but not great. Ismail is relieved that the project is over, and he thanks you for your help. However, you can see what happened: once you shared your earlier approaches, Ismail&apos;s thinking was constrained. He took the safe route of following your template instead of designing an agenda to truly meet the needs of the participants." a="$C$54" r="54" c="3" w="tx_Wobblers" v="This year&apos;s conference is good, but not great. Ismail is relieved that the project is over, and he thanks you for your help. However, you can see what happened: once you shared your earlier approaches, Ismail&apos;s thinking was constrained. He took the safe route of following your template instead of designing an agenda to truly meet the needs of the participants." fmt="General">
+</c>
+<c f="Share the wisdom" a="$C$46" r="46" c="3" w="tx_Wobblers" v="Share the wisdom" fmt="General">
+</c>
+<c f="Before the project kickoff, you spend a day with Ismail, taking him through your prior experiences - the good, the bad, and the ugly. You ask him about each of the key stakeholder&apos;s desires for the conference, and you help him anticipate what they will want in the agenda. You also sketch the agenda for the last conference you planned and talk him through why it worked so well. You can see the relief on his face by the end of the meeting." a="$C$50" r="50" c="3" w="tx_Wobblers" v="Before the project kickoff, you spend a day with Ismail, taking him through your prior experiences - the good, the bad, and the ugly. You ask him about each of the key stakeholder&apos;s desires for the conference, and you help him anticipate what they will want in the agenda. You also sketch the agenda for the last conference you planned and talk him through why it worked so well. You can see the relief on his face by the end of the meeting." fmt="General">
+</c>
+<c f="B" a="$C$43" r="43" c="3" w="tx_Wobblers" v="B" fmt="General">
+</c>
+<c f="This year&apos;s conference gets an NPS of 68, a full 10 points higher than last year&apos;s! Ismail is elated, and the project stakeholders make it clear that they want Ismail to take on the same role next year. Ismail takes you aside shortly after the conference to say, &quot;Thanks for helping me develop my ideas and challenging me to make them stronger. This project was a stretch for me!&quot;" a="$C$55" r="55" c="3" w="tx_Wobblers" v="This year&apos;s conference gets an NPS of 68, a full 10 points higher than last year&apos;s! Ismail is elated, and the project stakeholders make it clear that they want Ismail to take on the same role next year. Ismail takes you aside shortly after the conference to say, &quot;Thanks for helping me develop my ideas and challenging me to make them stronger. This project was a stretch for me!&quot;" fmt="General">
+</c>
+<c f="Clarify his thoughts" a="$C$47" r="47" c="3" w="tx_Wobblers" v="Clarify his thoughts" fmt="General">
+</c>
+<c f="You have Ismail briefly walk you through the work he has done so far. It is clear he is worried and a bit stuck, so you cancel your afternoon appointments and find an empty conference room. &quot;Grab a marker,&quot; you tell Ismail as you take a seat. You have him sketch his ideas for the conference agenda on the whiteboard, asking questions to both challenge and clarify his thinking at key points. Toward the end of the meeting Ismail is clearly feeling more confident: he can describe his ideas more clearly, and he has identified seven key questions the group must work through to arrive at a solid agenda." a="$C$51" r="51" c="3" w="tx_Wobblers" v="You have Ismail briefly walk you through the work he has done so far. It is clear he is worried and a bit stuck, so you cancel your afternoon appointments and find an empty conference room. &quot;Grab a marker,&quot; you tell Ismail as you take a seat. You have him sketch his ideas for the conference agenda on the whiteboard, asking questions to both challenge and clarify his thinking at key points. Toward the end of the meeting Ismail is clearly feeling more confident: he can describe his ideas more clearly, and he has identified seven key questions the group must work through to arrive at a solid agenda." fmt="General">
+</c>
+<c f="C" a="$C$44" r="44" c="3" w="tx_Wobblers" v="C" fmt="General">
+</c>
+<c f="While Ismail&apos;s early plan was solid, he did not have enough conviction to push back on influential stakeholders. A few weeks into the project you had to intervene to drive a workable compromise. The conference was okay, but Ismail&apos;s development goal turned into drudgery as he watched events spiral out of his control..." a="$C$56" r="56" c="3" w="tx_Wobblers" v="While Ismail&apos;s early plan was solid, he did not have enough conviction to push back on influential stakeholders. A few weeks into the project you had to intervene to drive a workable compromise. The conference was okay, but Ismail&apos;s development goal turned into drudgery as he watched events spiral out of his control..." fmt="General">
+</c>
+<c f="Bolster his confidence" a="$C$48" r="48" c="3" w="tx_Wobblers" v="Bolster his confidence" fmt="General">
+</c>
+<c f="You have Ismail briefly walk you through the work he has done so far. It is clear he is worried and a bit stuck, but the work itself is solid. He has a workable first-draft agenda, and he is asking the right questions. &quot;This is impressive work,&quot; you tell Ismail. &quot;The agenda you have right now is probably 80 percent right, which is as good as you could hope for at this stage of the planning, and you have identified the important open questions.&quot; You can see relief and a bit of pride in Ismail&apos;s expression. &quot;In fact,&quot; you continue, &quot;with this as your starting point, I think you could realistically aim to surpass last year&apos;s conference results!&quot;" a="$C$52" r="52" c="3" w="tx_Wobblers" v="You have Ismail briefly walk you through the work he has done so far. It is clear he is worried and a bit stuck, but the work itself is solid. He has a workable first-draft agenda, and he is asking the right questions. &quot;This is impressive work,&quot; you tell Ismail. &quot;The agenda you have right now is probably 80 percent right, which is as good as you could hope for at this stage of the planning, and you have identified the important open questions.&quot; You can see relief and a bit of pride in Ismail&apos;s expression. &quot;In fact,&quot; you continue, &quot;with this as your starting point, I think you could realistically aim to surpass last year&apos;s conference results!&quot;" fmt="General">
+</c>
+<c f="D" a="$C$45" r="45" c="3" w="tx_Wobblers" v="D" fmt="General">
+</c>
+<c f="Ismail was able to steer the project stakeholders toward a great agenda, leveraging the research he did to keep everyone focused on the most important outcomes. The final agenda was pretty close to his original idea, but a few of your insights were reflected as well. The conference scored an NPS of 75, the best results in the history of the conference. Ismail grabs you in the hallway afterwards and says, &quot;Thanks for challenging me to get different perspectives and to re-think my design. The team has asked me to play the same role next year, and I can&apos;t wait.&quot;" a="$C$57" r="57" c="3" w="tx_Wobblers" v="Ismail was able to steer the project stakeholders toward a great agenda, leveraging the research he did to keep everyone focused on the most important outcomes. The final agenda was pretty close to his original idea, but a few of your insights were reflected as well. The conference scored an NPS of 75, the best results in the history of the conference. Ismail grabs you in the hallway afterwards and says, &quot;Thanks for challenging me to get different perspectives and to re-think my design. The team has asked me to play the same role next year, and I can&apos;t wait.&quot;" fmt="General">
+</c>
+<c f="Issue a challenge" a="$C$49" r="49" c="3" w="tx_Wobblers" v="Issue a challenge" fmt="General">
+</c>
+<c f="You have Ismail briefly walk you through the work he has done so far. It is clear he is worried and a bit stuck, but the work itself is solid. You tell him, &quot;I don&apos;t have time now, but we could meet early next week. I&apos;d like you to do a couple of things between now and then...&quot; You ask Ismail to talk to some conference participants from previous years and develop a clear point of view on the most critical outcomes from their point of view. &quot;When you have that, do a quick revision of your existing agenda,&quot; you advise him. At your subsequent meeting, after Ismail shares his findings and revised agenda, you share your best conference agenda and talk about why it worked." a="$C$53" r="53" c="3" w="tx_Wobblers" v="You have Ismail briefly walk you through the work he has done so far. It is clear he is worried and a bit stuck, but the work itself is solid. You tell him, &quot;I don&apos;t have time now, but we could meet early next week. I&apos;d like you to do a couple of things between now and then...&quot; You ask Ismail to talk to some conference participants from previous years and develop a clear point of view on the most critical outcomes from their point of view. &quot;When you have that, do a quick revision of your existing agenda,&quot; you advise him. At your subsequent meeting, after Ismail shares his findings and revised agenda, you share your best conference agenda and talk about why it worked." fmt="General">
+</c>
+<c f="W202" a="$C$32" r="32" c="3" w="tx_Wobblers" v="W202" fmt="General">
+</c>
+<c f="Conference Confidence" a="$C$35" r="35" c="3" w="tx_Wobblers" v="Conference Confidence" fmt="General">
+</c>
+<c f="One of the highlights of your department&apos;s year is planning for the User Conference. This event draws over 2,000 of your best customers, and it requires tremendous coordination between departments. Ismail&apos;s development plan (which he prepared with Zed, before the run-in with the Zamboni) includes a goal of being the Project Lead for this year&apos;s conference.&lt;br&gt; &lt;br&gt; Ismail, cautious by nature, approaches you a few weeks before the project kickoff. &quot;I&apos;m really excited to take this on, and I&apos;ve been thinking about it a lot. I know how to coordinate big projects, but I am new to event planning. Everyone has important things they want on the agenda. How am I supposed to prioritize them and create the best experience for our users?&quot; In your previous job, you handled three similar conferences. One was an utter disaster, precisely because no one took on the hard job of prioritizing and cutting content to create an elegant experience. You want to support Ismail and ensure a conference experience.&lt;br&gt; &lt;br&gt;&lt;b&gt;What do you do?&lt;/b&gt;" a="$C$41" r="41" c="3" w="tx_Wobblers" v="One of the highlights of your department&apos;s year is planning for the User Conference. This event draws over 2,000 of your best customers, and it requires tremendous coordination between departments. Ismail&apos;s development plan (which he prepared with Zed, before the run-in with the Zamboni) includes a goal of being the Project Lead for this year&apos;s conference.&lt;br&gt; &lt;br&gt; Ismail, cautious by nature, approaches you a few weeks before the project kickoff. &quot;I&apos;m really excited to take this on, and I&apos;ve been thinking about it a lot. I know how to coordinate big projects, but I am new to event planning. Everyone has important things they want on the agenda. How am I supposed to prioritize them and create the best experience for our users?&quot; In your previous job, you handled three similar conferences. One was an utter disaster, precisely because no one took on the hard job of prioritizing and cutting content to create an elegant experience. You want to support Ismail and ensure a conference experience.&lt;br&gt; &lt;br&gt;&lt;b&gt;What do you do?&lt;/b&gt;" fmt="General">
+</c>
+<c f="SingleSelect" a="$C$33" r="33" c="3" w="tx_Wobblers" v="SingleSelect" fmt="General">
+</c>
+<c f="1" a="$C$37" r="37" c="3" w="tx_Wobblers" v="1" fmt="General">
+</c>
+<c f="2" a="$C$36" r="36" c="3" w="tx_Wobblers" v="2" fmt="General">
+</c>
+<c f="2400" a="$C$38" r="38" c="3" w="tx_Wobblers" v="2400" fmt="General">
+</c>
+<c f="A" a="$C$73" r="73" c="3" w="tx_Wobblers" v="A" fmt="General">
+</c>
+<c f="While partnerships can be a good short term solution, in this case they do carry some consequences. Revenue increases as more engagements are staffed, but this revenue is lower margin than Entrevard&apos;s other work, so profitability takes a hit. Moreover, when Entrevard does not staff engagements directly, it loses crucial face time with the client and must cede some degree of quality control to its partner firm." a="$C$82" r="82" c="3" w="tx_Wobblers" v="While partnerships can be a good short term solution, in this case they do carry some consequences. Revenue increases as more engagements are staffed, but this revenue is lower margin than Entrevard&apos;s other work, so profitability takes a hit. Moreover, when Entrevard does not staff engagements directly, it loses crucial face time with the client and must cede some degree of quality control to its partner firm." fmt="General">
+</c>
+<c f="Partner to Flex Capacity" a="$C$76" r="76" c="3" w="tx_Wobblers" v="Partner to Flex Capacity" fmt="General">
+</c>
+<c f="Historically Entrevard has used partner consulting and development firms to fill capability gaps on specific engagements. Leverage these partnerships now to add capacity until Entrevard&apos;s resources catch up to its workload." a="$C$79" r="79" c="3" w="tx_Wobblers" v="Historically Entrevard has used partner consulting and development firms to fill capability gaps on specific engagements. Leverage these partnerships now to add capacity until Entrevard&apos;s resources catch up to its workload." fmt="General">
+</c>
+<c f="B" a="$C$74" r="74" c="3" w="tx_Wobblers" v="B" fmt="General">
+</c>
+<c f="While these unbillable hours are costly from a financial perspective, the returns to employees and customers are great. Project teams are grateful for the breathing room, and customers appreciate the sacrifice in the name of quality and results." a="$C$83" r="83" c="3" w="tx_Wobblers" v="While these unbillable hours are costly from a financial perspective, the returns to employees and customers are great. Project teams are grateful for the breathing room, and customers appreciate the sacrifice in the name of quality and results." fmt="General">
+</c>
+<c f="Unbillable Hours for Goodwill" a="$C$77" r="77" c="3" w="tx_Wobblers" v="Unbillable Hours for Goodwill" fmt="General">
+</c>
+<c f="Shuffle project schedules so the most stretched teams have several extra days to meet their deadlines. Let customers know they will not be charged for this extra time, as this is an effort to build goodwill. Target launch dates will still be met, by adding additional non-billable capacity during the testing phases." a="$C$80" r="80" c="3" w="tx_Wobblers" v="Shuffle project schedules so the most stretched teams have several extra days to meet their deadlines. Let customers know they will not be charged for this extra time, as this is an effort to build goodwill. Target launch dates will still be met, by adding additional non-billable capacity during the testing phases." fmt="General">
+</c>
+<c f="C" a="$C$75" r="75" c="3" w="tx_Wobblers" v="C" fmt="General">
+</c>
+<c f="Though the PMs are effective managers, there is only so much they can do in such an overheated environment. In this case, leadership was needed from the senior ranks of the organization. Employees are overworked, and project teams are crunched for time to ensure high quality output and build relationships with clients. Naturally, customer relationships suffer." a="$C$84" r="84" c="3" w="tx_Wobblers" v="Though the PMs are effective managers, there is only so much they can do in such an overheated environment. In this case, leadership was needed from the senior ranks of the organization. Employees are overworked, and project teams are crunched for time to ensure high quality output and build relationships with clients. Naturally, customer relationships suffer." fmt="General">
+</c>
+<c f="Do Nothing" a="$C$78" r="78" c="3" w="tx_Wobblers" v="Do Nothing" fmt="General">
+</c>
+<c f="Entrevard has long prided itself on its ability to maintain a culture of fun amid high productivity and hectic schedules. Encourage your PMs to carry on that tradition through this busy cycle, but take no other corrective action." a="$C$81" r="81" c="3" w="tx_Wobblers" v="Entrevard has long prided itself on its ability to maintain a culture of fun amid high productivity and hectic schedules. Encourage your PMs to carry on that tradition through this busy cycle, but take no other corrective action." fmt="General">
+</c>
+<c f="W203" a="$C$63" r="63" c="3" w="tx_Wobblers" v="W203" fmt="General">
+</c>
+<c f="Beware of Overheating" a="$C$66" r="66" c="3" w="tx_Wobblers" v="Beware of Overheating" fmt="General">
+</c>
+<c f="Investors are thrilled with Entrevard&apos;s performance thus far, particularly its strong growth numbers. However, one side effect of this rapid growth has been difficulty in hiring and onboarding new talent quickly enough to keep all projects staffed. Entrevard has been forced to make some clients wait 6-8 weeks between signing an SOW and starting an engagement, and Utilization is running high enough that you are starting to worry about employee burnout. &lt;br&gt; &lt;br&gt;&lt;b&gt; How will you handle this challenge?&lt;/b&gt;" a="$C$72" r="72" c="3" w="tx_Wobblers" v="Investors are thrilled with Entrevard&apos;s performance thus far, particularly its strong growth numbers. However, one side effect of this rapid growth has been difficulty in hiring and onboarding new talent quickly enough to keep all projects staffed. Entrevard has been forced to make some clients wait 6-8 weeks between signing an SOW and starting an engagement, and Utilization is running high enough that you are starting to worry about employee burnout. &lt;br&gt; &lt;br&gt;&lt;b&gt; How will you handle this challenge?&lt;/b&gt;" fmt="General">
+</c>
+<c f="SingleSelect" a="$C$64" r="64" c="3" w="tx_Wobblers" v="SingleSelect" fmt="General">
+</c>
+<c f="2" a="$C$68" r="68" c="3" w="tx_Wobblers" v="2" fmt="General">
+</c>
+<c f="2" a="$C$67" r="67" c="3" w="tx_Wobblers" v="2" fmt="General">
+</c>
+<c f="1200" a="$C$69" r="69" c="3" w="tx_Wobblers" v="1200" fmt="General">
+</c>
+<c f="A" a="$C$99" r="99" c="3" w="tx_Wobblers" v="A" fmt="General">
+</c>
+<c f="Roxy welcomed your participation in the meeting, and Pandora and Ismail shared ideas that they had been keeping to themselves. However, when you spoke up the group began to defer to you as the senior member. While Roxy did manage the agenda and capture thoughts on the whiteboard, she and the others looked to you for direction and validation of their ideas. You became the Multiplier by diminishing Roxy." a="$C$111" r="111" c="3" w="tx_Wobblers" v="Roxy welcomed your participation in the meeting, and Pandora and Ismail shared ideas that they had been keeping to themselves. However, when you spoke up the group began to defer to you as the senior member. While Roxy did manage the agenda and capture thoughts on the whiteboard, she and the others looked to you for direction and validation of their ideas. You became the Multiplier by diminishing Roxy." fmt="General">
+</c>
+<c f="Gently guide the conversation" a="$C$103" r="103" c="3" w="tx_Wobblers" v="Gently guide the conversation" fmt="General">
+</c>
+<c f="You walk over closer and listen silently for a while. Once you have observed, you say, &quot;Roxy you&apos;ve come up with some great ideas. Before you go further, I&apos;d love to hear Pandora and Ismail share some of their ideas, perhaps some we haven&apos;t heard yet.&quot; Return control of the meeting back to Roxy quickly to reinforce her role as the leader. Then you make a note in your system to follow up with each member of the team in their upcoming 1:1 meetings." a="$C$107" r="107" c="3" w="tx_Wobblers" v="You walk over closer and listen silently for a while. Once you have observed, you say, &quot;Roxy you&apos;ve come up with some great ideas. Before you go further, I&apos;d love to hear Pandora and Ismail share some of their ideas, perhaps some we haven&apos;t heard yet.&quot; Return control of the meeting back to Roxy quickly to reinforce her role as the leader. Then you make a note in your system to follow up with each member of the team in their upcoming 1:1 meetings." fmt="General">
+</c>
+<c f="B" a="$C$100" r="100" c="3" w="tx_Wobblers" v="B" fmt="General">
+</c>
+<c f="Bringing this up with Roxy while the instance was still fresh is critical. During your meeting later in the day, you probed and were able to get her to open up about the real challenge. &quot;I love leading creative meetings, but I don&apos;t know what to do when the others won&apos;t keep up. I know that Ismail and Pandora both probably have some important ideas and perspectives, but it feels like we have to put the whole meeting on pause to get them to open up.&quot; You spend some time helping her to plan a different agenda for the next meeting, one that has built-in time for reflection and sharing." a="$C$112" r="112" c="3" w="tx_Wobblers" v="Bringing this up with Roxy while the instance was still fresh is critical. During your meeting later in the day, you probed and were able to get her to open up about the real challenge. &quot;I love leading creative meetings, but I don&apos;t know what to do when the others won&apos;t keep up. I know that Ismail and Pandora both probably have some important ideas and perspectives, but it feels like we have to put the whole meeting on pause to get them to open up.&quot; You spend some time helping her to plan a different agenda for the next meeting, one that has built-in time for reflection and sharing." fmt="General">
+</c>
+<c f="Walk by and discuss afterwards" a="$C$104" r="104" c="3" w="tx_Wobblers" v="Walk by and discuss afterwards" fmt="General">
+</c>
+<c f="You listen for a moment and then continue walking to let the discussion run its course. Later that day, repurpose an existing meeting to talk to Roxy about how this went. You tell her, &quot;When I was observing your meeting earlier, I noticed that you were speaking 80+ percent of the time, and Pandora and Ismail were barely contributing. What are some ways you could do things a bit differently to help them open up?&quot;" a="$C$108" r="108" c="3" w="tx_Wobblers" v="You listen for a moment and then continue walking to let the discussion run its course. Later that day, repurpose an existing meeting to talk to Roxy about how this went. You tell her, &quot;When I was observing your meeting earlier, I noticed that you were speaking 80+ percent of the time, and Pandora and Ismail were barely contributing. What are some ways you could do things a bit differently to help them open up?&quot;" fmt="General">
+</c>
+<c f="C" a="$C$101" r="101" c="3" w="tx_Wobblers" v="C" fmt="General">
+</c>
+<c f="Your instinct that Ismail had more to contribute was correct. &quot;Sometimes it takes me a bit to collect my thoughts before I am comfortable sharing. Roxy is so full of energy and ideas that, by the time I&apos;m ready to share, the right moment has passed by,&quot; he said. You spent some time with Ismail brainstorming about how he could address the issue to provide the team with more of his experience and perspective. Your discussion with Pandora is similar, and he helps Ismail and the team by leveraging his interpersonal skills in future team meetings." a="$C$113" r="113" c="3" w="tx_Wobblers" v="Your instinct that Ismail had more to contribute was correct. &quot;Sometimes it takes me a bit to collect my thoughts before I am comfortable sharing. Roxy is so full of energy and ideas that, by the time I&apos;m ready to share, the right moment has passed by,&quot; he said. You spent some time with Ismail brainstorming about how he could address the issue to provide the team with more of his experience and perspective. Your discussion with Pandora is similar, and he helps Ismail and the team by leveraging his interpersonal skills in future team meetings." fmt="General">
+</c>
+<c f="Lean in with Pandora and Ismail" a="$C$105" r="105" c="3" w="tx_Wobblers" v="Lean in with Pandora and Ismail" fmt="General">
+</c>
+<c f="Observe the conversation silently, but afterwards find opportunities individually to ask Pandora and Ismail to step into your office. With Ismail, you coach him by mentioning that you have noticed that he has very insightful contributions, but he often keeps them to himself. Encourage him to share his ideas so that the team makes the best decisions possible. With Pandora, you follow up on his comment from your last 1:1 and discuss his strengths of charisma and group dynamics. You ask him how he could leverage these strengths even more with Roxy to keep the whole group even more involved in future meetings." a="$C$109" r="109" c="3" w="tx_Wobblers" v="Observe the conversation silently, but afterwards find opportunities individually to ask Pandora and Ismail to step into your office. With Ismail, you coach him by mentioning that you have noticed that he has very insightful contributions, but he often keeps them to himself. Encourage him to share his ideas so that the team makes the best decisions possible. With Pandora, you follow up on his comment from your last 1:1 and discuss his strengths of charisma and group dynamics. You ask him how he could leverage these strengths even more with Roxy to keep the whole group even more involved in future meetings." fmt="General">
+</c>
+<c f="D" a="$C$102" r="102" c="3" w="tx_Wobblers" v="D" fmt="General">
+</c>
+<c f="Your real-time reaction was effective, but by interrupting in the moment the momentum of the brainstorming session was compromised. Roxy was appreciative of your input, but it caught her by surprise. When you both returned into the meeting she made a clear effort to ask Pandora and Ismail for their thoughts and ideas at each turn. While somewhat effective, Pandora and Ismail mentioned to you afterwards that her efforts felt insincere. In your next 1:1 with Roxy you get her to open up more about the challenge, but she is already frustrated." a="$C$114" r="114" c="3" w="tx_Wobblers" v="Your real-time reaction was effective, but by interrupting in the moment the momentum of the brainstorming session was compromised. Roxy was appreciative of your input, but it caught her by surprise. When you both returned into the meeting she made a clear effort to ask Pandora and Ismail for their thoughts and ideas at each turn. While somewhat effective, Pandora and Ismail mentioned to you afterwards that her efforts felt insincere. In your next 1:1 with Roxy you get her to open up more about the challenge, but she is already frustrated." fmt="General">
+</c>
+<c f="Coach Roxy individually in the moment" a="$C$106" r="106" c="3" w="tx_Wobblers" v="Coach Roxy individually in the moment" fmt="General">
+</c>
+<c f="You walk closer and listen silently for a few minutes. Once you have observed and it is the right moment, say, &quot;Roxy, I just received an urgent request via email regarding another project. Would you mind chatting with me for a moment? Pandora and Ismail - my apologies - we will be right back!&quot; You use this as a brief coaching moment with Roxy, asking her what she could do differently to get more input from Pandora and Ismail before the meeting ends. You then make a note in your system to coach her more thoroughly on her collaboration approach at your scheduled 1:1 in two weeks." a="$C$110" r="110" c="3" w="tx_Wobblers" v="You walk closer and listen silently for a few minutes. Once you have observed and it is the right moment, say, &quot;Roxy, I just received an urgent request via email regarding another project. Would you mind chatting with me for a moment? Pandora and Ismail - my apologies - we will be right back!&quot; You use this as a brief coaching moment with Roxy, asking her what she could do differently to get more input from Pandora and Ismail before the meeting ends. You then make a note in your system to coach her more thoroughly on her collaboration approach at your scheduled 1:1 in two weeks." fmt="General">
+</c>
+<c f="W204" a="$C$89" r="89" c="3" w="tx_Wobblers" v="W204" fmt="General">
+</c>
+<c f="The Roxy Response" a="$C$92" r="92" c="3" w="tx_Wobblers" v="The Roxy Response" fmt="General">
+</c>
+<c f="You recently arranged a small team to create an account plan for a key customer that is considering implementing the Taking Care of Business HCM solution. Roxy is leading the account team of Pandora and Ismail to build her people management skills. During your recent 1:1 with Pandora, he mentioned that the planning is going well, but he feels that Roxy doesn&apos;t seem to need his input.&lt;br&gt; &lt;br&gt; Later in the week you are walking through the halls and pass a huddle space where Roxy and the team are engaged in an account planning session. Roxy is dominating the conversation, demonstrating the dynamic that Pandora had described to you. When she does pause for input, her questions begin with, &quot;Don&apos;t you think...?&quot; or &quot;Wouldn&apos;t you say...?&quot; Pandora tends to jump in and agree, adding little to the group&apos;s thinking but trying to show involvement, while Ismail is largely silent.&lt;br&gt; &lt;br&gt; &lt;b&gt;What do you do?&lt;/b&gt;" a="$C$98" r="98" c="3" w="tx_Wobblers" v="You recently arranged a small team to create an account plan for a key customer that is considering implementing the Taking Care of Business HCM solution. Roxy is leading the account team of Pandora and Ismail to build her people management skills. During your recent 1:1 with Pandora, he mentioned that the planning is going well, but he feels that Roxy doesn&apos;t seem to need his input.&lt;br&gt; &lt;br&gt; Later in the week you are walking through the halls and pass a huddle space where Roxy and the team are engaged in an account planning session. Roxy is dominating the conversation, demonstrating the dynamic that Pandora had described to you. When she does pause for input, her questions begin with, &quot;Don&apos;t you think...?&quot; or &quot;Wouldn&apos;t you say...?&quot; Pandora tends to jump in and agree, adding little to the group&apos;s thinking but trying to show involvement, while Ismail is largely silent.&lt;br&gt; &lt;br&gt; &lt;b&gt;What do you do?&lt;/b&gt;" fmt="General">
+</c>
+<c f="SingleSelect" a="$C$90" r="90" c="3" w="tx_Wobblers" v="SingleSelect" fmt="General">
+</c>
+<c f="3" a="$C$94" r="94" c="3" w="tx_Wobblers" v="3" fmt="General">
+</c>
+<c f="2" a="$C$93" r="93" c="3" w="tx_Wobblers" v="2" fmt="General">
+</c>
+<c f="1800" a="$C$95" r="95" c="3" w="tx_Wobblers" v="1800" fmt="General">
+</c>
+<c f="A" a="$C$130" r="130" c="3" w="tx_Wobblers" v="A" fmt="General">
+</c>
+<c f="You have successfully removed any doubt about the severity of Enzo&apos;s mistake. However, you have also removed, or at least diminished, some of Enzo&apos;s adventurous spirit. During the next few projects he is extremely cautious, taking great pains to avoid even the appearance of a mistake, fearing it may sideline his career at Entrevard entirely. As a result, he does not contribute as much in meetings, and you lose out on his great ideas." a="$C$139" r="139" c="3" w="tx_Wobblers" v="You have successfully removed any doubt about the severity of Enzo&apos;s mistake. However, you have also removed, or at least diminished, some of Enzo&apos;s adventurous spirit. During the next few projects he is extremely cautious, taking great pains to avoid even the appearance of a mistake, fearing it may sideline his career at Entrevard entirely. As a result, he does not contribute as much in meetings, and you lose out on his great ideas." fmt="General">
+</c>
+<c f="Actions have consequences" a="$C$133" r="133" c="3" w="tx_Wobblers" v="Actions have consequences" fmt="General">
+</c>
+<c f="You share the feedback you got from Roxy, sticking just to the facts, and you ask Enzo how the mistake happened. He explains that he probably took on too many assignments, got in a hurry, and skipped a deep quality check that would have uncovered his error.&lt;br&gt; &lt;br&gt; You share with Enzo that his actions have damaged Entrevard&apos;s credibility with the customer. It can be repaired, but he will not be a part of that account team going forward. You explain, &quot;Everyone here is busy, and we each have to manage our own commitments. A mistake like this is serious, so you are going to be assigned a smaller role in the next couple of projects until you regain the trust of the team.&quot;" a="$C$136" r="136" c="3" w="tx_Wobblers" v="You share the feedback you got from Roxy, sticking just to the facts, and you ask Enzo how the mistake happened. He explains that he probably took on too many assignments, got in a hurry, and skipped a deep quality check that would have uncovered his error.&lt;br&gt; &lt;br&gt; You share with Enzo that his actions have damaged Entrevard&apos;s credibility with the customer. It can be repaired, but he will not be a part of that account team going forward. You explain, &quot;Everyone here is busy, and we each have to manage our own commitments. A mistake like this is serious, so you are going to be assigned a smaller role in the next couple of projects until you regain the trust of the team.&quot;" fmt="General">
+</c>
+<c f="B" a="$C$131" r="131" c="3" w="tx_Wobblers" v="B" fmt="General">
+</c>
+<c f="Enzo appreciates your sympathetic approach, even though you were clear about the impacts of his mistake. He is able to perform well on his next projects, and he graduates from Roxy&apos;s close supervision in time, after demonstrating his commitment to thorough preparation in advance of key customer meetings, and requesting her input to keep improving." a="$C$140" r="140" c="3" w="tx_Wobblers" v="Enzo appreciates your sympathetic approach, even though you were clear about the impacts of his mistake. He is able to perform well on his next projects, and he graduates from Roxy&apos;s close supervision in time, after demonstrating his commitment to thorough preparation in advance of key customer meetings, and requesting her input to keep improving." fmt="General">
+</c>
+<c f="Get to the root cause" a="$C$134" r="134" c="3" w="tx_Wobblers" v="Get to the root cause" fmt="General">
+</c>
+<c f="You can tell that the general outline that Roxy gave you is correct, so rather than re-hash the basic facts, you probe into the underlying issues. &quot;Tell me about some of the key moments coming up to the meeting - where do you think things started to go wrong?&quot; As Enzo talks about his many projects and commitments, you probe to uncover why he overcommitted himself. He shares, &quot;I guess I feel that I need to prove myself to the team. I&apos;m still pretty new here, so maybe I have tended to overcompensate.&quot;&lt;br&gt; &lt;br&gt; You close the meeting on an encouraging note, but you don&apos;t soften the impact of his mistake. &quot;I&apos;m sure it felt terrible when the customer pointed out your error, and I bet you won&apos;t make that mistake again. You have some work to do to earn Roxy&apos;s trust back. She is the one who will have to restore the customer&apos;s confidence in us. As for your next project, you need to have Roxy do a rehearsal with you at least a few days in advance of the meeting.&quot;" a="$C$137" r="137" c="3" w="tx_Wobblers" v="You can tell that the general outline that Roxy gave you is correct, so rather than re-hash the basic facts, you probe into the underlying issues. &quot;Tell me about some of the key moments coming up to the meeting - where do you think things started to go wrong?&quot; As Enzo talks about his many projects and commitments, you probe to uncover why he overcommitted himself. He shares, &quot;I guess I feel that I need to prove myself to the team. I&apos;m still pretty new here, so maybe I have tended to overcompensate.&quot;&lt;br&gt; &lt;br&gt; You close the meeting on an encouraging note, but you don&apos;t soften the impact of his mistake. &quot;I&apos;m sure it felt terrible when the customer pointed out your error, and I bet you won&apos;t make that mistake again. You have some work to do to earn Roxy&apos;s trust back. She is the one who will have to restore the customer&apos;s confidence in us. As for your next project, you need to have Roxy do a rehearsal with you at least a few days in advance of the meeting.&quot;" fmt="General">
+</c>
+<c f="C" a="$C$132" r="132" c="3" w="tx_Wobblers" v="C" fmt="General">
+</c>
+<c f="Enzo already felt terrible about his mistake, so your quick pivot to look toward the future came as a big relief. By treating him as someone fully capable of recognizing his mistakes, learning from them, and making changes to prevent them, you actually helped Enzo become more confident through this incident. Your personal example helped him put his mistake in context - a lesson learned the hard way that he does not want to repeat. In his next assignment, he surprised Roxy by the proactive approach he took to ensure the quality of his deliverables. Multipliers admit their own mistakes, and they create space for others to talk about theirs ? but they insist that everyone learn from their mistakes." a="$C$141" r="141" c="3" w="tx_Wobblers" v="Enzo already felt terrible about his mistake, so your quick pivot to look toward the future came as a big relief. By treating him as someone fully capable of recognizing his mistakes, learning from them, and making changes to prevent them, you actually helped Enzo become more confident through this incident. Your personal example helped him put his mistake in context - a lesson learned the hard way that he does not want to repeat. In his next assignment, he surprised Roxy by the proactive approach he took to ensure the quality of his deliverables. Multipliers admit their own mistakes, and they create space for others to talk about theirs ? but they insist that everyone learn from their mistakes." fmt="General">
+</c>
+<c f="Problem solve" a="$C$135" r="135" c="3" w="tx_Wobblers" v="Problem solve" fmt="General">
+</c>
+<c f="You confirm the basic facts with Enzo, and you find that he agrees with Roxy&apos;s assessment. You continue by saying, &quot;This is a big mistake - it cost us credibility with the customer, and it cost you trust with the team.&quot; Then you share, &quot;I&apos;m not going to diminish the significance of what happened; however, mistakes happen, and now our focus should be on how to go forward.&quot;&lt;br&gt; &lt;br&gt; You ask Enzo to identify some things he can do differently to prevent mistakes making it in front of the customer in the future. He identifies that he should build in time to review his work, ideally with a colleague, in advance of customer meetings. You confide, &quot;A few years ago, in my previous job, I got careless about a major customer deliverable. What I do today is keep a checklist, like a pilot&apos;s pre-flight checklist. I still get it out and check off every item before major customer meetings.&quot;" a="$C$138" r="138" c="3" w="tx_Wobblers" v="You confirm the basic facts with Enzo, and you find that he agrees with Roxy&apos;s assessment. You continue by saying, &quot;This is a big mistake - it cost us credibility with the customer, and it cost you trust with the team.&quot; Then you share, &quot;I&apos;m not going to diminish the significance of what happened; however, mistakes happen, and now our focus should be on how to go forward.&quot;&lt;br&gt; &lt;br&gt; You ask Enzo to identify some things he can do differently to prevent mistakes making it in front of the customer in the future. He identifies that he should build in time to review his work, ideally with a colleague, in advance of customer meetings. You confide, &quot;A few years ago, in my previous job, I got careless about a major customer deliverable. What I do today is keep a checklist, like a pilot&apos;s pre-flight checklist. I still get it out and check off every item before major customer meetings.&quot;" fmt="General">
+</c>
+<c f="W305" a="$C$120" r="120" c="3" w="tx_Wobblers" v="W305" fmt="General">
+</c>
+<c f="The Presentation Pretender" a="$C$123" r="123" c="3" w="tx_Wobblers" v="The Presentation Pretender" fmt="General">
+</c>
+<c f="Enzo is perhaps your team&apos;s most popular resource - he has been requested for almost every project team, and everyone appreciates his energy and cheerfulness. So, it was a shock when Roxy came into your office, exclaiming, &quot;Enzo just destroyed our credibility with a big commercial customer!&quot; Talking through it, you learned that:&lt;br&gt; &lt;br&gt; &lt;ul&gt; &lt;li&gt;Enzo agreed to develop and present several slides at the customer&apos;s upcoming quarterly business review.&lt;/li&gt; &lt;li&gt;Roxy had asked him a week ahead of the meeting if he needed anything, and he said he was all set.&lt;/li&gt; &lt;li&gt;In the meeting, the customer pointed out that one of Enzo&apos;s slides referenced the prior year&apos;s metrics rather than those of the current year.&lt;/li&gt; &lt;li&gt;The meeting came to a complete stop, as all of Enzo&apos;s data and conclusions were predicated on the wrong data - they were worthless.&lt;/li&gt; &lt;/ul&gt; &lt;br&gt; &lt;br&gt;You pointed out to Roxy that she would have probably caught the mistake if she had more thoroughly reviewed Enzo&apos;s work. &quot;I will be sure to look at his work with a microscope next time, but I shouldn&apos;t have to watch out for carelessness like that!&quot; she replied. Silently, you agreed. &lt;br&gt; &lt;br&gt; You schedule an appointment with Enzo for the first open time on his calendar. As the meeting begins, he shares, &quot;I know I made a big mistake. I&apos;m not sure how to make it right...&quot;" a="$C$129" r="129" c="3" w="tx_Wobblers" v="Enzo is perhaps your team&apos;s most popular resource - he has been requested for almost every project team, and everyone appreciates his energy and cheerfulness. So, it was a shock when Roxy came into your office, exclaiming, &quot;Enzo just destroyed our credibility with a big commercial customer!&quot; Talking through it, you learned that:&lt;br&gt; &lt;br&gt; &lt;ul&gt; &lt;li&gt;Enzo agreed to develop and present several slides at the customer&apos;s upcoming quarterly business review.&lt;/li&gt; &lt;li&gt;Roxy had asked him a week ahead of the meeting if he needed anything, and he said he was all set.&lt;/li&gt; &lt;li&gt;In the meeting, the customer pointed out that one of Enzo&apos;s slides referenced the prior year&apos;s metrics rather than those of the current year.&lt;/li&gt; &lt;li&gt;The meeting came to a complete stop, as all of Enzo&apos;s data and conclusions were predicated on the wrong data - they were worthless.&lt;/li&gt; &lt;/ul&gt; &lt;br&gt; &lt;br&gt;You pointed out to Roxy that she would have probably caught the mistake if she had more thoroughly reviewed Enzo&apos;s work. &quot;I will be sure to look at his work with a microscope next time, but I shouldn&apos;t have to watch out for carelessness like that!&quot; she replied. Silently, you agreed. &lt;br&gt; &lt;br&gt; You schedule an appointment with Enzo for the first open time on his calendar. As the meeting begins, he shares, &quot;I know I made a big mistake. I&apos;m not sure how to make it right...&quot;" fmt="General">
+</c>
+<c f="SingleSelect" a="$C$121" r="121" c="3" w="tx_Wobblers" v="SingleSelect" fmt="General">
+</c>
+<c f="1" a="$C$125" r="125" c="3" w="tx_Wobblers" v="1" fmt="General">
+</c>
+<c f="3" a="$C$124" r="124" c="3" w="tx_Wobblers" v="3" fmt="General">
+</c>
+<c f="1800" a="$C$126" r="126" c="3" w="tx_Wobblers" v="1800" fmt="General">
+</c>
+<c f="A" a="$C$156" r="156" c="3" w="tx_Wobblers" v="A" fmt="General">
+</c>
+<c f="The acquisition went ahead and you were able to increase your Thought leadership for Futuria as well as your revenues. Some of the cost synergies failed to materialize and some of your employees were concerned over new roles and responsibilities resulting in a lower Employee NPS. However, these negative impacts can be negated through a well implemented Integration Readiness Plan." a="$C$162" r="162" c="3" w="tx_Wobblers" v="The acquisition went ahead and you were able to increase your Thought leadership for Futuria as well as your revenues. Some of the cost synergies failed to materialize and some of your employees were concerned over new roles and responsibilities resulting in a lower Employee NPS. However, these negative impacts can be negated through a well implemented Integration Readiness Plan." fmt="General">
+</c>
+<c f="Acquire ~" a="$C$158" r="158" c="3" w="tx_Wobblers" v="Acquire ~" fmt="General">
+</c>
+<c f="The immediate opportunity presented by acquiring ~&apos;s capabilities, resources, and relationships in Futuria is too good to pass up. After due diligence efforts are complete, you decide to acquire and integrate ~ as soon as possible." a="$C$160" r="160" c="3" w="tx_Wobblers" v="The immediate opportunity presented by acquiring ~&apos;s capabilities, resources, and relationships in Futuria is too good to pass up. After due diligence efforts are complete, you decide to acquire and integrate ~ as soon as possible." fmt="General">
+</c>
+<c f="B" a="$C$157" r="157" c="3" w="tx_Wobblers" v="B" fmt="General">
+</c>
+<c f="You are able to slowly increase revenues and your employee NPS increases slightly as your people enjoy being part of creating the future. You can speed the process up by proactively investing in Futuria Organic Growth." a="$C$163" r="163" c="3" w="tx_Wobblers" v="You are able to slowly increase revenues and your employee NPS increases slightly as your people enjoy being part of creating the future. You can speed the process up by proactively investing in Futuria Organic Growth." fmt="General">
+</c>
+<c f="Leverage the Power of Entrevard" a="$C$159" r="159" c="3" w="tx_Wobblers" v="Leverage the Power of Entrevard" fmt="General">
+</c>
+<c f="It will take some time to develop the additional Futuria capabilities and customer relationships that would come with an acquisition, but Entrevard can do it by leveraging the internal knowledge and expertise developed in similar environments in other practices." a="$C$161" r="161" c="3" w="tx_Wobblers" v="It will take some time to develop the additional Futuria capabilities and customer relationships that would come with an acquisition, but Entrevard can do it by leveraging the internal knowledge and expertise developed in similar environments in other practices." fmt="General">
+</c>
+<c f="W306" a="$C$146" r="146" c="3" w="tx_Wobblers" v="W306" fmt="General">
+</c>
+<c f="Build or Buy" a="$C$149" r="149" c="3" w="tx_Wobblers" v="Build or Buy" fmt="General">
+</c>
+<c f="Expanding Entrevard&apos;s capabilities in implementing Futuria-oriented solutions has become a major priority in recent years, and you&apos;re reaching a critical point in the transformation where you need to make a decision - Do you continue to build your delivery capabilities internally or do you buy these capabilities through acquisition? The due diligence team has come across a company so innovative its name is just a punctuation mark, ~ (&quot;Tilde&quot;), and in addition to a growing Futuria client base it will bring valuable internal assets to Entrevard&apos;s portfolio. ~ Also has a strong relationship with NWS, ASAP Cloud, and TCOB Financials that is more established than Entrevard&apos;s relationship with those technology partner. All in all, analysts expect this deal to be value accretive in the first or second year.&lt;br&gt; &lt;br&gt; While this acquisition is very exciting news for Entrevard, it also puts an additional burden on your time and resources. It will be important to smoothly integrate ~&apos;s people, accounts, and resources into Entrevard, and this will require some of your best people. How will you proceed?" a="$C$155" r="155" c="3" w="tx_Wobblers" v="Expanding Entrevard&apos;s capabilities in implementing Futuria-oriented solutions has become a major priority in recent years, and you&apos;re reaching a critical point in the transformation where you need to make a decision - Do you continue to build your delivery capabilities internally or do you buy these capabilities through acquisition? The due diligence team has come across a company so innovative its name is just a punctuation mark, ~ (&quot;Tilde&quot;), and in addition to a growing Futuria client base it will bring valuable internal assets to Entrevard&apos;s portfolio. ~ Also has a strong relationship with NWS, ASAP Cloud, and TCOB Financials that is more established than Entrevard&apos;s relationship with those technology partner. All in all, analysts expect this deal to be value accretive in the first or second year.&lt;br&gt; &lt;br&gt; While this acquisition is very exciting news for Entrevard, it also puts an additional burden on your time and resources. It will be important to smoothly integrate ~&apos;s people, accounts, and resources into Entrevard, and this will require some of your best people. How will you proceed?" fmt="General">
+</c>
+<c f="SingleSelect" a="$C$147" r="147" c="3" w="tx_Wobblers" v="SingleSelect" fmt="General">
+</c>
+<c f="2" a="$C$151" r="151" c="3" w="tx_Wobblers" v="2" fmt="General">
+</c>
+<c f="3" a="$C$150" r="150" c="3" w="tx_Wobblers" v="3" fmt="General">
+</c>
+<c f="1800" a="$C$152" r="152" c="3" w="tx_Wobblers" v="1800" fmt="General">
+</c>
+</workbook>

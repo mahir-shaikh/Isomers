@@ -1,0 +1,34 @@
+<div class="graph-wrapper row">
+    <div class="col-sm-3 graph-container">
+        <div class="graph-title">
+        	<text-outlet key="DashboardGraphTitle1"></text-outlet>
+        </div>
+        <div class="graph-data">
+            <solid-gauge rangeRef="tlOutputDBGaugeBusAEmp4Utiliz" min="0" max="1" numberFormat="0.0%" [chartOptions]="commonChartOption" width="100" height="70"></solid-gauge>
+        </div>
+    </div>
+    <div class="col-sm-3 graph-container">
+        <div class="graph-title">
+        	<text-outlet key="DashboardGraphTitle2"></text-outlet>
+        </div>
+        <div class="graph-data">
+            <solid-gauge rangeRef="tlOutputDBGaugeBusAEmp3Utiliz" min="0" max="1" numberFormat="0.0%" [chartOptions]="commonChartOption" width="100" height="70"></solid-gauge>
+        </div>
+    </div>
+    <div class="col-sm-3 graph-container">
+        <div class="graph-title">
+        	<text-outlet key="DashboardGraphTitle3"></text-outlet>
+        </div>
+        <div class="graph-data">
+            <solid-gauge rangeRef="tlOutputDBGaugeBusAEmp2Utiliz" min="0" max="1" numberFormat="0.0%" [chartOptions]="commonChartOption" width="100" height="70"></solid-gauge>   
+        </div>
+    </div>
+    <div class="col-sm-3 graph-container">
+        <div class="graph-title">
+        	<text-outlet key="DashboardGraphTitle4"></text-outlet>
+        </div>
+        <div class="graph-data">
+            <solid-gauge rangeRef="tlOutputDBGaugeBusAEmp9Utiliz" min="0" max="1" numberFormat="0.0%" [chartOptions]="commonChartOption" width="100" height="70"></solid-gauge>
+        </div>
+    </div>
+</div>

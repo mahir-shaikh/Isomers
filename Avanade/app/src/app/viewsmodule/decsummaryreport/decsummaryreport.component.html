@@ -1,0 +1,489 @@
+<div class="decsummary-data-container container">
+    <div class="header-container">
+        <span class="header-icon fa fa-file-text"></span>
+        <span class="header-text">
+            <text-outlet key="NavigationMainLink4"></text-outlet>
+        </span>
+        <span class="header-sub-text">
+            <text-outlet key="-"></text-outlet>
+            <text-outlet key="NavigationMainLink4SubLink2"></text-outlet>
+        </span>
+    </div>
+    <div class="data-wrapper row">
+        <div class="data-container col-sm-12">
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="SalesDecision"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row heading-row row">
+                    <div class="data-label col-sm-4">
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="CRM"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="HCM"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="Futuria"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="AvgPricePerHour"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAPricePerHr" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAPricePerHrV2" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAPricePerHrV3" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="MarketGrowthForecast"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAGrowthForecast" format="0.0%" scaler="1"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAGrowthForecastV2" format="0.0%" scaler="1"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAGrowthForecastV3" format="0.0%" scaler="1"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="SalesforceAllocation"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsSalesLevelPrac1" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsSalesLevelPrac2" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsSalesLevelPrac3" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="ThoughtLeadership"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputCompDevBusAV1"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputCompDevBusAV2"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputCompDevBusAV3"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="MarketingExpenseHeading"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsMarketingExp" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+            </div>
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="CrmPractice"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row heading-row row">
+                    <div class="data-label col-sm-4">
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="DirectorSlashEm"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="PmSlashAnalyst"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="Technical"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    	<text-outlet key="GlobalDelivery"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="HoursStaffed"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp4HrsCurrProj" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp3HrsCurrProj" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp2HrsCurrProj" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp9HrsCurrProj" format="0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="Offshore"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputPrac1OffshorePct" format="0,0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+            </div>
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="HcmPractice"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row heading-row row">
+                    <div class="data-label col-sm-4">
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="DirectorSlashEm"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="PmSlashAnalyst"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="Technical"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    	<text-outlet key="GlobalDelivery"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="HoursStaffed"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp4HrsCurrProjV2" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp3HrsCurrProjV2" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp2HrsCurrProjV2" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp9HrsCurrProjV2" format="0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="Offshore"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputPrac2OffshorePct" format="0,0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+            </div>
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="FuturiaPractice"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row heading-row row">
+                    <div class="data-label col-sm-4">
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="DirectorSlashEm"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="PmSlashAnalyst"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="Technical"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    	<text-outlet key="GlobalDelivery"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="HoursStaffed"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp4HrsCurrProjV3" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp3HrsCurrProjV3" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp2HrsCurrProjV3" format="0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp9HrsCurrProjV3" format="0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="Offshore"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputPrac3OffshorePct" format="0,0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+            </div>
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="RecruitingDecisions"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row heading-row row">
+                    <div class="data-label col-sm-2">
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="DirectorSlashEm"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="PmSlashAnalyst"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="Technical"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="Sales"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    	<text-outlet key="GlobalDelivery"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-2">
+                        <text-outlet key="HiringPlan"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEmp4BusAHire"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEmp3BusAHire"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEmp2BusAHire"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsHire"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEmp9BusAHire"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-2">
+                        <text-outlet key="InYearDismissal"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp4Dismiss"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp3Dismiss"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp2Dismiss"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsDismiss"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputBusAEmp9Dismiss"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-2">
+                        <text-outlet key="Compensation"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEmp4Salary"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEmp3Salary"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEmp2Salary"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-2">
+                        <text-outlet key="TrainingHours"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEmp4Training"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEmp3Training"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEmp2Training"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEntWFTraining"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-2">
+                        <text-outlet key="TrainingBudget"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEmp4TrainingNextYr" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEmp3TrainingNextYr" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEmp2TrainingNextYr" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsEntWFTrainingNextYr" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                    </div>
+                </div>
+            </div>
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="ResearchDevelopment"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row heading-row row">
+                    <div class="data-label col-sm-4">
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="IndustryEminence"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="InternalAssets"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="InvestmentLevel"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputIndustryEminence"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputInternalassets"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="StratergicInitiatives"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row heading-row row">
+                    <div class="data-label col-sm-4">
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <text-outlet key="Number"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <text-outlet key="Name"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="Program1"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsProgram1"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <calc-outlet ref="tlOutputEntSvcsProgram1Name"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="Program2"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsProgram2"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <calc-outlet ref="tlOutputEntSvcsProgram2Name"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="Program3"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsProgram3"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <calc-outlet ref="tlOutputEntSvcsProgram3Name"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-4">
+                        <text-outlet key="Program4"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-2">
+                        <calc-outlet ref="tlOutputEntSvcsProgram4"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <calc-outlet ref="tlOutputEntSvcsProgram4Name"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

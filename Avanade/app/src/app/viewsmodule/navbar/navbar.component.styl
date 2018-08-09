@@ -1,0 +1,99 @@
+.navigation-bar-container
+    color #FFF    
+    width 100%
+    > .navigation-bar-link
+        cursor pointer
+        padding 10px 20px
+        max-width 200px
+        font-size 1rem
+        position relative
+        color #FFF
+        width 200px
+        -webkit-transition all 0.5s ease
+        transition all 0.5s ease
+        white-space nowrap
+        text-overflow ellipsis
+        // overflow hidden
+        @media screen and (max-width 1024px)
+            padding 10px
+            padding-right 20px
+        calc-outlet, text-outlet
+            font-size 1rem
+        &.event-link
+            width auto
+            max-width 50px
+            background-color #D30000
+            font-size 20px
+            padding 0
+            padding-top 15px
+            text-align center
+            &.disabled
+                background-color #a3a3a3
+                pointer-events none
+            .navigation-bar-dropdown-link
+                font-size 16px
+                min-width 200px
+            &.isOpen
+                background-color #D30000
+        &.active
+            cursor default
+            background-color #c32b3d
+            &.navigation-bar-hover-link
+                cursor pointer
+    .navigation-bar-link-icon
+        padding-right 5px
+    .state
+        position absolute
+        right 10px
+        top 15px
+        font-size 1.25rem
+        @media screen and (max-width 1024px) and (min-width 768px)
+            right 5px
+    .navigation-bar-link-text
+        line-height 30px
+        transition all 0.5s ease
+    .navigation-bar-hover-link
+        > .navigation-bar-dropdown-link
+            // display none
+        &.isOpen
+        // &:hover
+            background-color #C32B3D
+            > .navigation-bar-dropdown-link
+                // display block
+                -webkit-transform scaleY(1)
+                transform scaleY(1)
+        .navigation-bar-dropdown-link
+            position absolute
+            z-index 5
+            width 100%
+            left 0
+            top 100%
+            text-align left
+            background-color #FFF
+            border 1px solid #3e3e3e
+            -webkit-transform scaleY(0)
+            transform scaleY(0)
+            -webkit-transform-origin 0 0
+            transform-origin 0 0
+            transition all 0.5s cubic-bezier(.5,0,.3,1)
+            .navigation-bar-link-text
+                display block
+                padding 5px 10px
+                cursor pointer
+                line-height 20px
+                color #6D747E
+                white-space normal
+                &:nth-child(even)
+                    background-color #ECF0F1
+                &:hover
+                    background-color #7B8C9D
+                    color #FFF
+                &.active
+                    cursor default
+                    background-color #c32b3d
+                    color #FFF
+                    pointer-events none
+    .bar
+        display inline-block
+        border-left 2px solid #fff
+        margin 1px 0

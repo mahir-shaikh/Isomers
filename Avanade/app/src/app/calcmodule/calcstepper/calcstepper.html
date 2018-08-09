@@ -1,0 +1,6 @@
+<form class='stepper'>
+  <div class='fa fa-plus add stepper-button' [class.isActive]="isFocused" [class.disabled]="formattedVal == max || value == max || formattedVal == outputMax || value == outputMax" role='button'></div>
+  <input class='field' #inputValue type='text' [value]="value" [min]='min' [max]='max' OnlyNumber="true" [step]="step" (change)="onChangeValue(inputValue.value)" (blur)="removeFocus(inputValue.value)" (focus)="setFocus()"/>
+  <span class="field-value" (click)="setFocusOnInput()" *ngIf="!isFocused">{{value | numFormat:format:scaler}}</span>
+  <div class='fa fa-minus subtract stepper-button' [class.isActive]="isFocused" [class.disabled]="formattedVal == min || value == min || formattedVal == outputMin || value == outputMin" role='button'></div>
+</form>

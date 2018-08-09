@@ -1,0 +1,43 @@
+<div class="intro-page-wrapper">
+    <div class="intro-page-container">
+        <div class="logo-container">
+            <img class="logo" src="../../../../assets/images/avanade_logo.png">
+        </div>
+        <div class="data-container animated bounceIn">
+            <div class="text-intro-info">
+                <div class="program-title-container">
+                    <text-outlet key="SubTitle"></text-outlet>
+                </div>
+            </div>
+            <div class = "program-roundinfo-container">
+                <div class="row teamno-container">
+                    <div class="data-label col-sm-6">
+                        <text-outlet key="Team Number"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <calc-input ref="tlInputTeamNumber" [IsReadOnly]="currentYear != 1"></calc-input>
+                    </div>
+                </div>
+                <div class="row teamname-container">
+                    <div class="data-label col-sm-6">
+                        <text-outlet key="Team Name"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <calc-input ref="tlInputTeamName" [IsReadOnly]="currentYear != 1"></calc-input>
+                    </div>
+                </div>
+                <div class="row round-container">
+                    <div class="data-label col-sm-6">
+                        <text-outlet key="Round"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <calc-input ref="tlInputTeamYear" IsReadOnly="true"></calc-input>
+                    </div>
+                </div>
+            </div>
+            <div class="button" (click)="navigateToNextPage()">
+                <text-outlet key="Start"></text-outlet>
+            </div>
+        </div>
+    </div>
+</div>

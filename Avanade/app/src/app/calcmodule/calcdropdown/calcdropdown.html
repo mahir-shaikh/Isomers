@@ -1,0 +1,10 @@
+<div class="ds-input-field">
+    <div class="btn-group" dropdown [(isOpen)]="status.isopen">
+        <button id="single-button" type="button" class="btn btn-primary sb-right" dropdownToggle [disabled]="disabled">
+            <span class="dropdown-text">{{getSelectedItem() | numFormat:format:scaler}}</span><span class="caret fa" [class.fa-angle-down]="!status.isopen" [class.fa-angle-up]="status.isopen"></span>
+        </button>
+        <ul dropdownMenu class="dropdown-menu-right" role="menu" aria-labelledby="single-button">
+            <li *ngFor="let item of _items"><a class="dropdown-item" href="javascript:void(0)" (click)="dropdownChanged(item)">{{item | numFormat:format:scaler}}</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<span [class.highlighted]="highlightNegative && isNegative" *ngIf="showValueBoolean">{{value | numFormat:format:scaler}}</span>
+<div *ngIf="showBalloonValue" class="metric-balloon animated" [class.fade-in]="showMetricBalloon" [class.slideOutUp]="!showMetricBalloon && changeInValue == 2" [class.slideOutDown]="!showMetricBalloon && changeInValue == 1" [class.increement]="changeInValue === 2" [class.decreement]="changeInValue === 1" [class.no-change-balloon-value]="changeInValue === 0">
+	<span class="fa fa-arrow-circle-up" *ngIf="changeInValue == 2" [tooltip]="differenceInValue" placement="right" container="body"></span>
+	<span class="fa fa-arrow-circle-down" *ngIf="changeInValue == 1" [tooltip]="differenceInValue" placement="right" container="body"></span>
+</div>

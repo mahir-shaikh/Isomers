@@ -1,0 +1,462 @@
+<div class="pnl-page-container container">
+    <div class="header-container">
+        <span class="header-icon fa fa-file-text"></span>
+        <span class="header-text">
+            <text-outlet key="NavigationMainLink4"></text-outlet>
+        </span>
+        <span class="header-sub-text">
+            <text-outlet key="-"></text-outlet>
+            <text-outlet key="NavigationMainLink4SubLink1"></text-outlet>
+        </span>
+    </div>
+    <div class="data-wrapper row">
+        <div class="data-container col-sm-12">
+            <div class="data-row row">
+                <div class="data-label col-sm-4">
+                </div>
+                <div class="data-value col-sm-2">
+                    <text-outlet key="CRM"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <text-outlet key="HCM"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <text-outlet key="Futuria"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <text-outlet key="Total"></text-outlet>
+                </div>        
+            </div>
+            <div class="data-row total-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="TotalRevenue"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J7" format="$0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L7" format="$0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N7" format="$0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P7" format="$0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="CostofSales"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="Compensation"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J10" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L10" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N10" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P10" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="ThoughtLeadershipExpenses"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J11" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L11" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N11" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P11" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="RecrutionDismissalCost"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J12" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L12" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N12" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P12" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="EngagementOverhead"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J13" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L13" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N13" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P13" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="GoodwillHoursExpense"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J14" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L14" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N14" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P14" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row total-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="TotalCostOfSales"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J15" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L15" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N15" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P15" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="GrossProfit"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J17" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L17" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N17" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P17" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="GrossMargin"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J18" format="0.0%" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L18" format="0.0%" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N18" format="0.0%" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P18" format="0.0%" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="SalesMarketing"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="SalesExpenses"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J21" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L21" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N21" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P21" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="MarketingExpenses"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J22" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L22" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N22" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P22" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row total-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="TotalSalesMarketingExp"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P23" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="GenAdminCost"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="UnallocatedTimeSalaryExpense"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J26" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L26" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N26" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P26" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="GenTrainingSalaryExpense"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J27" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L27" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N27" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P27" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="DevFunExpense"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J28" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L28" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N28" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P28" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="EmpAdminExpense"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J29" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L29" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N29" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P29" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="OtherOpExpense"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J30" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L30" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N30" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P30" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="SpecialProgExpense"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J31" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L31" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N31" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P31" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row total-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="TotalGenAdminExp"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P32" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="ResearchDevExp"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J34" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L34" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N34" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P34" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="TotalOpExp"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J36" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L36" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N36" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P36" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="OpProfit"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J38" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L38" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N38" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P38" format="0,0" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="data-row secondary-row row">
+                <div class="data-label col-sm-4">
+                    <text-outlet key="OpMargin"></text-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_J39" format="0.0%" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_L39" format="0.0%" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_N39" format="0.0%" highlightNegative="true"></calc-outlet>
+                </div>
+                <div class="data-value col-sm-2">
+                    <calc-outlet ref="tlOutput_tlPNLBusA_P39" format="0.0%" highlightNegative="true"></calc-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

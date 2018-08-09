@@ -1,0 +1,96 @@
+<div class="metrics-wrapper">
+    <div class="data-row row">
+        <div class="metrics-data">
+            <div class="metric-wrapper">
+                <span class="data-label">
+                    <text-outlet key="DashboardMetric1"></text-outlet>
+                </span>
+                <span class="data-value">
+                    <calc-outlet ref="tlOutputDBBookings" format="$0,0.0a" showBalloon="true" showValue="true" highlightNegative="true" isComparisionWithPriorRound="true" [formerValueRef]="'tlOutputDBYr'+prevYear+'Bookings'"></calc-outlet>
+                </span>
+            </div>
+        </div>
+        <div class="metrics-data">
+            <div class="metric-wrapper">
+                <span class="data-label">
+                    <text-outlet key="DashboardMetric2"></text-outlet>
+                </span>
+                <span class="data-value">
+                    <calc-outlet ref="tlOutputDBBookingsCAGR" format="0.0%" showBalloon="true" showValue="true" highlightNegative="true" isComparisionWithPriorRound="true" [formerValueRef]="'tlOutputDBYr'+prevYear+'BookingsCAGR'"></calc-outlet>
+                </span>
+            </div>
+        </div>
+        <div class="metrics-data">
+            <div class="metric-wrapper">
+                <span class="data-label">
+                    <text-outlet key="DashboardMetric3"></text-outlet>
+                </span>
+                <span class="data-value">
+                    <calc-outlet ref="tlOutputDBTotalRev" format="$0,0.0a" showBalloon="true" showValue="true" highlightNegative="true" isComparisionWithPriorRound="true" [formerValueRef]="'tlOutputDBYr'+prevYear+'TotalRev'"></calc-outlet>
+                </span>
+            </div>
+        </div>
+        <div class="metrics-data">
+            <div class="metric-wrapper">
+                <span class="data-label">
+                    <text-outlet key="DashboardMetric4"></text-outlet>
+                </span>
+                <span class="data-value">
+                    <calc-outlet ref="tlOutputDBGM" format="0.0%" showBalloon="true" showValue="true" highlightNegative="true" isComparisionWithPriorRound="true" [formerValueRef]="'tlOutputDBYr'+prevYear+'GM'"></calc-outlet>
+                </span>
+            </div>
+        </div>
+        <div class="metrics-data hide-on-small-screen">
+            <div class="metric-wrapper">
+                <span class="data-label">
+                    <text-outlet key="DashboardMetric5"></text-outlet>
+                </span>
+                <span class="data-value">
+                    <calc-outlet ref="tlOutputDBOM" format="0.0%" showBalloon="true" showValue="true" highlightNegative="true" isComparisionWithPriorRound="true" [formerValueRef]="'tlOutputDBYr'+prevYear+'OM'"></calc-outlet>
+                </span>
+            </div>
+        </div>
+
+        <div class="metrics-data show-on-small-screen">
+            <div class="metric-wrapper">
+                <span class="data-label">
+                    <text-outlet key="DashboardMetric5"></text-outlet>
+                </span>
+                <span class="data-value">
+                    <calc-outlet ref="tlOutputDBOM" format="0.0%" showBalloon="true" showValue="true" highlightNegative="true" isComparisionWithPriorRound="true" [formerValueRef]="'tlOutputDBYr'+prevYear+'OM'"></calc-outlet>
+                </span>
+            </div>
+        </div>
+        <div class="metrics-data">
+            <div class="metric-wrapper">
+                <span class="data-label">
+                    <text-outlet key="DashboardMetric6"></text-outlet>
+                </span>
+                <span class="data-value">
+                    <calc-outlet ref="tlOutputDBBusATotalQualityCost" format="$0,0.0a" showBalloon="true" showValue="true" highlightNegative="true" isComparisionWithPriorRound="true" [formerValueRef]="'tlOutputDBYr'+prevYear+'BusATotalQualityCost'"></calc-outlet>
+                </span>
+            </div>
+        </div>
+        <div class="metrics-data">
+            <div class="metric-wrapper">
+                <span class="data-label">
+                    <text-outlet key="DashboardMetric7"></text-outlet>
+                </span>
+                <span class="data-value">
+                    <calc-outlet ref="tlOutputDBESATEnd" format="0.0%" showBalloon="true" showValue="true" highlightNegative="true" isComparisionWithPriorRound="true" [formerValueRef]="'tlOutputDBYr'+prevYear+'ESATEnd'"></calc-outlet>
+                </span>
+            </div>
+        </div>
+        <div class="metrics-data">
+            <div class="metric-wrapper">
+                <span class="data-label">
+                    <text-outlet key="DashboardMetric8"></text-outlet>
+                </span>
+                <span class="data-value">
+                    <calc-outlet ref="tlOutputDBCSATEnd" format="0.0%" showBalloon="true" showValue="true" highlightNegative="true" isComparisionWithPriorRound="true" [formerValueRef]="'tlOutputDBYr'+prevYear+'CSATEnd'"></calc-outlet>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</div>

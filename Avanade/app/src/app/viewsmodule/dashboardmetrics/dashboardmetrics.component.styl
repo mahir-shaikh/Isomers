@@ -1,0 +1,43 @@
+.metrics-wrapper
+    float left
+    .data-row
+        .metrics-data
+            float left
+            .metric-wrapper
+                margin-right 10px
+                width 185px
+                float left
+                @media screen and (max-width 1220px)
+                    width 155px
+        .data-label
+            float left
+            text-outlet
+                margin-right 5px
+                white-space pre
+                @media screen and (max-width 1220px)
+                    font-family 'Open Sans Condensed'
+        .data-label,.data-value
+            padding 0
+            calc-outlet,text-outlet
+                font-size 13px
+                // color #FFF
+        .data-value
+            float right
+            calc-outlet,text-outlet
+                font-weight 600
+        .metrics-data
+            @media screen and (max-width 1024px)
+                padding 0
+                .data-label
+                    white-space nowrap
+                    padding-right 5px
+                .data-value
+                    text-align left
+                    padding-left 5px               
+    .hide-on-small-screen
+        @media screen and (max-width 1400px)
+            display none
+    .show-on-small-screen
+        display none
+        @media screen and (max-width 1399px)
+            display block

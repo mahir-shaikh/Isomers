@@ -1,0 +1,823 @@
+<div class="overview-container container row">
+    <div class="data-wrapper left-column col-sm-12 col-lg-6">
+        <div class="data-container">
+            <div class="data-heading row">
+              <div class="data-heading-text col-sm">
+                <text-outlet key="Central"></text-outlet>
+              </div>
+            </div>
+            <div class="data-row row">
+                <custom-accordian headingText="Sales and Marketing" [graphContentRef]="SnMTemplate" [tableContentRef]="SnMTableTemplate" link="/salesMarketing">
+                    <template #SnMTemplate>
+                        <div class="chart-wrapper row">
+                            <div class="chart-containter col-sm-6 col-lg-8">
+                                <div class="chart-heading">
+                                    <text-outlet key="SnMChart1Title"></text-outlet>
+                                </div>
+                                <div class="chart-data">
+                                    <basiccolumn 
+                                    rangeRef="tlOutput_tlGraphs_C200,tlOutput_tlGraphs_C201,tlOutput_tlGraphs_C202" 
+                                    categoryLabels="tlOutput_tlGraphs_B200,tlOutput_tlGraphs_B201,tlOutput_tlGraphs_B202"
+                                    seriesLabels="tlOutput_tlGraphs_C199" [chartOptions]="columnChartOption"
+                                    numberFormat="$0,0"
+                                    ></basiccolumn>
+                                </div>
+                            </div>
+                            <div class="chart-containter col-sm-6 col-lg-4">
+                                <div class="chart-heading">
+                                    <text-outlet key="SnMChart2Title"></text-outlet>
+                                </div>
+                                <div class="chart-data">
+                                    <solid-gauge rangeRef="tlOutputDBGaugeEmp6Utiliz" min="0" max="1" numberFormat="0.0%" [chartOptions]='gaugeChartOption'></solid-gauge>
+                                </div>
+                            </div>
+                        </div>                             
+                    </template>
+                    <template #SnMTableTemplate>
+                        <carousel class="carousel-table" interval="false">
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="CRM"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HCM"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Futuria"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="AvgPricePerHour"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAPricePerHr" format="$0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAPricePerHrV2" format="$0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAPricePerHrV3" format="$0,0"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="CRM"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HCM"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Futuria"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="MarketGrowthForecast"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAGrowthForecast" format="0.0%" scaler="100"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAGrowthForecastV2" format="0.0%" scaler="100"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAGrowthForecastV3" format="0.0%" scaler="100"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="CRM"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HCM"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Futuria"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="SalesforceAllocation"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsSalesLevelPrac1" format="0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsSalesLevelPrac2" format="0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsSalesLevelPrac3" format="0,0"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="CRM"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HCM"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Futuria"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="ThoughtLeadership"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputCompDevBusAV1"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputCompDevBusAV2"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputCompDevBusAV3"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <!-- <text-outlet key="GlobalDelivery"></text-outlet> -->
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="MarketingExpenseHeading"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsMarketingExp" format="$0,0"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </template>
+                </custom-accordian>
+            </div>
+            <div class="data-row row">
+                <custom-accordian headingText="Corporate" [graphContentRef]="CorporateTemplate" [tableContentRef]="CorporateTableTemplate" link="/corporate">
+                    <template #CorporateTemplate>
+                        <div class="chart-heading">
+                            <text-outlet key="CorporateChart1Title"></text-outlet>
+                        </div>
+                        <div class="chart-data">
+                            <basiccolumn 
+                            rangeRef="tlInputProd1Growth,tlInputProd1V2Growth,tlInputProd1V3Growth" 
+                            categoryLabels="tlOutput_tlGraphs_B200,tlOutput_tlGraphs_B201,tlOutput_tlGraphs_B202"
+                            seriesLabels="CorporateChart1Title" [chartOptions]="columnChartOption"
+                            numberFormat="0.0%"
+                            scalar="100"
+                            ></basiccolumn>
+                        </div>          
+                    </template>
+                    <template #CorporateTableTemplate>
+                        <carousel class="carousel-table" interval="false">
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="DirectorSlashEm"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="PmSlashAnalyst"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Technical"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Sales"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HiringPlan"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEmp4BusAHire"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEmp3BusAHire"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEmp2BusAHire"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsHire"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="GlobalDelivery"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HiringPlan"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEmp9BusAHire"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="DirectorSlashEm"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="PmSlashAnalyst"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Technical"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Sales"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <text-outlet key="InYearDismissal"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp4Dismiss"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp3Dismiss"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp2Dismiss"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsDismiss"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="GlobalDelivery"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="InYearDismissal"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp9Dismiss"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="DirectorSlashEm"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="PmSlashAnalyst"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Technical"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Compensation"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEmp4Salary"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEmp3Salary"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEmp2Salary"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="DirectorSlashEm"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="PmSlashAnalyst"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Technical"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Sales"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="TrainingHours"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEmp4Training"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEmp3Training"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEmp2Training"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEntWFTraining"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <!-- <text-outlet key="SalesDecision"></text-outlet> -->
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="DirectorSlashEm"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="PmSlashAnalyst"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Technical"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Sales"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="TrainingBudget"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEmp4TrainingNextYr" format="$0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEmp3TrainingNextYr" format="$0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEmp2TrainingNextYr" format="$0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputEntSvcsEntWFTrainingNextYr" format="$0,0"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </template>
+                </custom-accordian>
+            </div>
+            <div class="data-row row">
+                <custom-accordian headingText="Strategic Initiatives" [graphContentRef]="SITemplate" link="/stratergicInitiatives" alwaysOpen="true">
+                    <template #SITemplate>
+                        <div class="Initiatives-Table">
+                            <div class="heading-row row">
+                                <div class="data-label col-sm">
+                                    <text-outlet key="Initiatives"></text-outlet>
+                                </div>
+                                <div class="data-label col-sm">
+                                    <text-outlet key="Name"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm">
+                                    <text-outlet key="Program1"></text-outlet>
+                                </div>
+                                <div class="data-label col-sm">
+                                    <calc-outlet ref="tlOutput_tlInitiatives_N16"></calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm">
+                                    <text-outlet key="Program2"></text-outlet>
+                                </div>
+                                <div class="data-label col-sm">
+                                    <calc-outlet ref="tlOutput_tlInitiatives_N18"></calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm">
+                                    <text-outlet key="Program3"></text-outlet>
+                                </div>
+                                <div class="data-label col-sm">
+                                    <calc-outlet ref="tlOutput_tlInitiatives_N20"></calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm">
+                                    <text-outlet key="Program4"></text-outlet>
+                                </div>
+                                <div class="data-label col-sm">
+                                    <calc-outlet ref="tlOutput_tlInitiatives_N22"></calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template #SITableTemplate>
+                        <carousel class="carousel-table" interval="false">
+                            <slide>
+                                <div class="Data-Table Initiatives-Table col-sm-12">
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Initiatives1"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutput_tlInitiatives_N16"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table Initiatives-Table col-sm-12">
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Initiatives2"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutput_tlInitiatives_N18"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table Initiatives-Table col-sm-12">
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Initiatives3"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutput_tlInitiatives_N20"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table Initiatives-Table col-sm-12">
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Initiatives4"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutput_tlInitiatives_N22"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </template>
+                </custom-accordian>
+            </div>
+        </div>
+    </div>
+    <div class="data-wrapper right-column col-sm-12 col-lg-6">
+        <div class="data-container">
+            <div class="data-heading row">
+                <div class="data-heading-text col-sm">
+                    <text-outlet key="Practices"></text-outlet>
+                </div>
+            </div>
+            <div class="data-row row">
+                <custom-accordian headingText="CRM" [graphContentRef]="CrmTemplate" [tableContentRef]="CrmTableTemplate" link="/practice/CRM">
+                    <template #CrmTemplate>
+                        <div class="chart-heading">
+                            <text-outlet key="CrmChartTitle"></text-outlet>
+                        </div>
+                        <div class="chart-data">
+                            <piechart
+                            rangeRef="tlOutput_tlGraphs_C250,tlOutput_tlGraphs_D250,tlOutput_tlGraphs_E250,tlOutput_tlGraphs_F250,tlOutput_tlGraphs_G250,tlOutput_tlGraphs_H250" 
+                            seriesLabels="tlOutput_tlGraphs_C249,tlOutput_tlGraphs_D249,tlOutput_tlGraphs_E249,tlOutput_tlGraphs_F249,tlOutput_tlGraphs_G249,tlOutput_tlGraphs_H249"
+                            categoryLabels="CRM Workload Distribution" [chartOptions]="pieChartOpion"
+                            ></piechart>
+                        </div>
+                    </template>
+                    <template #CrmTableTemplate>
+                        <carousel class="carousel-table" interval="false">
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <text-outlet key="CrmPractice"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="DirectorSlashEm"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="PmSlashAnalyst"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Technical"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HoursStaffed"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp4HrsCurrProj" format="0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp3HrsCurrProj" format="0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp2HrsCurrProj" format="0,0"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <text-outlet key="CrmPractice"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="GlobalDelivery"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HoursStaffed"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp9HrsCurrProj" format="0,0"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <text-outlet key="CrmPractice"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <!-- <text-outlet key="GlobalDelivery"></text-outlet> -->
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Offshore"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputPrac1OffshorePct" format="0,0%"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </template>
+                </custom-accordian>
+            </div>
+            <div class="data-row row">
+                <custom-accordian headingText="HCM" [graphContentRef]="HcmTemplate" [tableContentRef]="HcmTableTemplate" link="/practice/HCM">
+                    <template #HcmTemplate>
+                        <div class="chart-heading">
+                            <text-outlet key="HcmChartTitle"></text-outlet>
+                        </div>
+                        <div class="chart-data">
+                            <piechart
+                            rangeRef="tlOutput_tlGraphs_C283,tlOutput_tlGraphs_D283,tlOutput_tlGraphs_E283,tlOutput_tlGraphs_F283,tlOutput_tlGraphs_G283,tlOutput_tlGraphs_H283" 
+                            seriesLabels="tlOutput_tlGraphs_C282,tlOutput_tlGraphs_D282,tlOutput_tlGraphs_E282,tlOutput_tlGraphs_F282,tlOutput_tlGraphs_G282,tlOutput_tlGraphs_H282"
+                            categoryLabels="HCM Workload Distribution" [chartOptions]="pieChartOpion"
+                            ></piechart>
+                        </div>
+                    </template>
+                    <template #HcmTableTemplate>
+                        <carousel class="carousel-table" interval="false">
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <text-outlet key="HcmPractice"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="DirectorSlashEm"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="PmSlashAnalyst"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Technical"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HoursStaffed"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp4HrsCurrProjV2" format="0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp3HrsCurrProjV2" format="0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp2HrsCurrProjV2" format="0,0"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <text-outlet key="HcmPractice"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="GlobalDelivery"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HoursStaffed"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp9HrsCurrProjV2" format="0,0"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <text-outlet key="HcmPractice"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <!-- <text-outlet key="GlobalDelivery"></text-outlet> -->
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Offshore"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputPrac2OffshorePct" format="0,0%"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </template>
+                </custom-accordian>
+            </div>
+            <div class="data-row row">
+                <custom-accordian headingText="Futuria" [graphContentRef]="FuturiaTemplate" [tableContentRef]="FuturiaTableTemplate" link="/practice/Futuria">
+                    <template #FuturiaTemplate>
+                        <div class="chart-heading">
+                            <text-outlet key="FuturiaChartTitle"></text-outlet>
+                        </div>
+                        <div class="chart-data">
+                            <piechart
+                            rangeRef="tlOutput_tlGraphs_C312,tlOutput_tlGraphs_D312,tlOutput_tlGraphs_E312,tlOutput_tlGraphsFE312,tlOutput_tlGraphs_G312,tlOutput_tlGraphs_H312" 
+                            seriesLabels="tlOutput_tlGraphs_C311,tlOutput_tlGraphs_D311,tlOutput_tlGraphs_E311,tlOutput_tlGraphs_F311,tlOutput_tlGraphs_G311,tlOutput_tlGraphs_H311" 
+                            categoryLabels="Futuria Workload Distribution" [chartOptions]="pieChartOpion"
+                            ></piechart>
+                        </div>
+                    </template>
+                    <template #FuturiaTableTemplate>
+                        <carousel class="carousel-table" interval="false">
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <text-outlet key="FuturiaPractice"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="DirectorSlashEm"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="PmSlashAnalyst"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Technical"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HoursStaffed"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp4HrsCurrProjV3" format="0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp3HrsCurrProjV3" format="0,0"></calc-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp2HrsCurrProjV3" format="0,0"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <text-outlet key="FuturiaPractice"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="GlobalDelivery"></text-outlet>
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="HoursStaffed"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputBusAEmp9HrsCurrProjV3" format="0,0"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="Data-Table col-sm-12">
+                                    <div class="heading-row row">
+                                        <div class="data-label heading-label col-sm">
+                                            <text-outlet key="FuturiaPractice"></text-outlet>
+                                        </div>
+                                        <div class="data-label col-sm">
+                                            <!-- <text-outlet key="GlobalDelivery"></text-outlet> -->
+                                        </div>
+                                    </div>
+                                    <div class="data-row row">
+                                        <div class="data-label col-sm">
+                                            <text-outlet key="Offshore"></text-outlet>
+                                        </div>
+                                        <div class="data-value col-sm">
+                                            <calc-outlet ref="tlOutputPrac3OffshorePct" format="0,0%"></calc-outlet>
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </template>
+                </custom-accordian>
+            </div>
+        </div>
+    </div>
+</div>

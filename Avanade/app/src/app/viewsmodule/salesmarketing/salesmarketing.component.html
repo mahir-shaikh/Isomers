@@ -1,0 +1,253 @@
+<div class="salesmarketing-data-container container">
+    <div class="header-container">
+        <span class="header-icon fa fa-compass"></span>
+        <span class="header-text">
+            <text-outlet key="NavigationMainLink2"></text-outlet>
+        </span>
+        <span class="header-sub-text">
+            <text-outlet key="-"></text-outlet>
+            <text-outlet key="NavigationMainLink2SubLink1"></text-outlet>
+        </span>
+    </div>
+    <div class="data-wrapper row">
+        <div class="data-container col-sm-12 col-lg-8">
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="SalesForcast"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-3">
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="CRM"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="HCM"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="Futuria"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-3">
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipAvgBillRate" useAsInnerHtml="true"></my-tooltip> -->
+                        <text-outlet key="AvgBillRate"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputProd1Price" format="$0,0" outputMin="0" outputMax="1000" step="1"></calc-stepper>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputProd1V2Price" format="$0,0" outputMin="0" outputMax="1000" step="1"></calc-stepper>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputProd1V3Price" format="$0,0" outputMin="0" outputMax="1000" step="1"></calc-stepper>
+                    </div>
+                </div>
+                <div class="data-row secondary-row row">
+                    <div class="data-label col-sm-3">
+                    	<text-outlet key="LastYear"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_H17" format="$0.0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_J17" format="$0.0"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_L17" format="$0.0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-3">
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipPracGrowthForecast" useAsInnerHtml="true"></my-tooltip> -->
+                        <text-outlet key="EndingMarketShare"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputProd1Growth" outputMin="0" outputMax="100" format="0.0%" scaler="100" inputScaler="100" step="0.1"></calc-stepper>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputProd1V2Growth" outputMin="0" outputMax="100" format="0.0%" scaler="100" inputScaler="100" step="0.1"></calc-stepper>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputProd1V3Growth" outputMin="0" outputMax="100" format="0.0%" scaler="100" inputScaler="100" step="0.1"></calc-stepper>
+                    </div>
+                </div>
+                <div class="data-row secondary-row row">
+                    <div class="data-label col-sm-3">
+                    	<text-outlet key="ForecastedBookingsGrowth"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_H21" format="0.0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_J21" format="0.0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_L21" format="0.0%"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row secondary-row row">
+                    <div class="data-label col-sm-3">
+                    	<text-outlet key="LastYearsMarketShare"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_H23" format="0.0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_J23" format="0.0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_L23" format="0.0%"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="SalesforceAllocation"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-3">
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="CRM"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="HCM"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="Futuria"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-3">
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipSalesHours" useAsInnerHtml="true"></my-tooltip> -->
+                        <text-outlet key="SalesHours"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputEntSvcsSalesSupportLevelPrac1" format="0,0" outputMin="0" outputMax="500000" step="100"></calc-stepper>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputEntSvcsSalesSupportLevelPrac2" format="0,0" outputMin="0" outputMax="500000" step="100"></calc-stepper>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputEntSvcsSalesSupportLevelPrac3" format="0,0" outputMin="0" outputMax="500000" step="100"></calc-stepper>
+                    </div>
+                </div>
+                <div class="data-row secondary-row row">
+                    <div class="data-label col-sm-3">
+                    	<text-outlet key="SalesforceAllocation"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_H33" format="0.0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_J33" format="0.0%"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_L33" format="0.0%"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="Marketing"></text-outlet>
+                    </div>
+                    <div class="data-info col-sm">
+                        <text-outlet key="PercTotalRevenue"></text-outlet>
+                        <calc-outlet ref="tlOutput_tlBusinessA_L37" format="0.0%"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm">
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipMarketingExpense" useAsInnerHtml="true"></my-tooltip> -->
+                    	<text-outlet key="MarketingExpense"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm">
+                        <calc-stepper ref="tlInputProd1Adv" format="0,0" outputMin="0" outputMax="100000" step="10"></calc-stepper>
+                    </div>
+                </div>
+            </div>
+            <div class="data-box">
+                <div class="data-heading row">
+                    <div class="data-heading-text col-sm">
+                        <text-outlet key="ThoughtLeadership"></text-outlet>
+                    </div>
+                    <div class="data-info col-sm">
+                        <text-outlet key="TotalPayrollExpense"></text-outlet>
+                        <calc-outlet ref="tlOutput_tlBusinessA_L44" format="$0.0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-3">
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="CRM"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="HCM"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <text-outlet key="Futuria"></text-outlet>
+                    </div>
+                </div>
+                <div class="data-row row">
+                    <div class="data-label col-sm-3">
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipDevelopmentLevels" useAsInnerHtml="true"></my-tooltip> -->
+                        <text-outlet key="DevelopmentLevels"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputCompDevBusAV1" outputMin="0" outputMax="5" step="1"></calc-stepper>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputCompDevBusAV2" outputMin="0" outputMax="5" step="1"></calc-stepper>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-stepper ref="tlInputCompDevBusAV3" outputMin="0" outputMax="5" step="1"></calc-stepper>
+                    </div>
+                </div>
+                <div class="data-row secondary-row row">
+                    <div class="data-label col-sm-3">
+                    	<text-outlet key="TotalThoughtLeadership"></text-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_H51"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_J51"></calc-outlet>
+                    </div>
+                    <div class="data-value col-sm-3">
+                        <calc-outlet ref="tlOutput_tlBusinessA_L51"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chart-container col-sm-12 col-lg-4">
+            <div class="graph-box">
+                <div class="graph-title">
+                    <text-outlet key="SnMChart1Title"></text-outlet>
+                </div>
+                <div class="graph-data">
+                    <basiccolumn 
+                    rangeRef="tlOutput_tlGraphs_C200,tlOutput_tlGraphs_C201,tlOutput_tlGraphs_C202" 
+                    categoryLabels="tlOutput_tlGraphs_B200,tlOutput_tlGraphs_B201,tlOutput_tlGraphs_B202"
+                    seriesLabels="tlOutput_tlGraphs_C199" chartOptions=""
+                    numberFormat="$0,0"
+                    ></basiccolumn>
+                </div>
+            </div>
+            <div class="graph-box">
+                <div class="graph-title">
+                    <text-outlet key="SnMChart2Title"></text-outlet>
+                </div>
+                <div class="graph-data">
+                    <solid-gauge rangeRef="tlOutputDBGaugeEmp6Utiliz" min="0" max="1" numberFormat="0.0%" [chartOptions]='gaugeChartOption' height="150"></solid-gauge>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,427 @@
+:host
+    height calc(100vh - 185px)
+    overflow auto
+    display block
+    @media screen and (max-width 768px)
+        height calc(100vh - 275px)
+.SI
+    &-dialog
+        margin 10px auto !important
+        // max-width 994px
+    &-instructions
+        color #fff
+        line-height 1.1em
+        margin 1rem
+    &-content
+        border-radius 15px
+        top 20px
+    &-header
+        padding 10px 20px
+        border-bottom none
+        border-top-left-radius 15px
+        border-top-right-radius 15px
+        margin 0
+        // background-color #7B8C9D
+        // min-height 80px
+        .main-title
+            display inline-block
+            background none
+            padding 10px
+            padding-top 0
+            margin 0
+            color #D30000
+            .header-icon
+                font-size 1.325rem
+                padding-right 5px
+            .header-text,.header-sub-text
+                font-size 1.325rem
+                calc-outlet, text-outlet
+                    font-size 1.325rem
+            .header-text
+                font-weight 500
+        .filter-tabs
+            background-color #FFF
+            margin-top 20px
+    .default-investment-text
+        padding 1rem
+    &-body
+        overflow hidden
+        // height calc(100vh - 370px)
+        position relative
+        padding 0
+        border-radius 15px
+        .footer
+            border-bottom-left-radius 15px
+            padding-bottom 22px
+            border-bottom-right-radius 15px
+            background -webkit-linear-gradient(270deg, rgba(90, 170, 250, 1) 0%, rgba(90, 170, 250, 1) 0%, rgba(0, 182, 221, 1) 100%, rgba(0, 182, 221, 1) 100%)
+            background linear-gradient(180deg, rgba(90, 170, 250, 1) 0%, rgba(90, 170, 250, 1) 0%, rgba(0, 182, 221, 1) 100%, rgba(0, 182, 221, 1) 100%)
+            width 100%
+            left 0
+            bottom 0
+            position absolute
+            transition background .3s ease-out
+            &:hover
+                background -webkit-linear-gradient(270deg, rgba(36, 109, 173, 1) 0%, rgba(36, 109, 173, 1) 0%, rgba(35, 86, 157, 1) 100%, rgba(35, 86, 157, 1) 100%)
+                background linear-gradient(180deg, rgba(36, 109, 173, 1) 0%, rgba(36, 109, 173, 1) 0%, rgba(35, 86, 157, 1) 100%, rgba(35, 86, 157, 1) 100%)
+            &.disabled
+                pointer-events none
+                background #bec0c1
+        .nav
+            &-item
+                margin-bottom 0
+            &-link
+                border none
+                background-color #f2f2f2
+                &:hover
+                    background-color yellow
+    .submit
+        float none
+        background none
+        border none
+        font-size 19px
+        text-transform uppercase
+        
+.investmentsChecked
+    float right
+    padding 5px 10px
+    background #fff
+    color #000
+    font-size 14px
+    font-weight 500
+    border 2px solid #fe4902
+.nav-tabs
+input, select, textarea
+    color #000000
+    width 100%
+
+textarea:focus, input:focus
+    color #0000ff
+
+.button
+    &Color
+        color #000000
+
+.hidden
+    display none
+
+.handCursor
+    cursor pointer
+
+.planningTool
+    background-color #ffffff
+    color #797979
+
+.content-row
+    padding 5px
+    overflow hidden
+
+.content-div
+    height 100%
+    overflow auto
+    
+.callOutBox
+    background-color transparent
+    color #ffffff
+    padding 20px
+    .callOutBoxContent
+        background-color #797979
+        overflow hidden
+
+.cell
+    padding-top 0.25em
+    padding-bottom 0.25em
+
+.row-tooltip
+    float left
+
+.placeholder
+    visibility hidden
+
+.paddingleft
+    padding-left 2em
+
+.textBox
+    padding-left 2em
+
+.multiSelect
+    transition all 1s linear
+    &Checked
+        border 2px solid #00b5eb
+        background #00b5eb
+        color #ffffff
+    &NotChecked
+        border 2px solid #00b5eb
+        background #ffffff
+        color #00b5eb
+    &Selected
+        background-color #ffffff
+        color #00B5EB
+        border 1px solid #C32B3D
+        border-bottom 1px solid transparent
+    &NotSelected
+        background-color #f2f2f2
+        color #00B5EB
+    &Disabled
+        border 2px solid #333333
+        border-color #797979 !important
+        background-color #797979 !important
+        background #999999
+        color #333333
+    &TextDisabled
+        background transparent
+        color #999999
+
+.investmentspage
+    &-header
+        height 46px
+        line-height 46px
+        background #66cc33
+        color #fff
+        .initiativesChecked
+            width 41%
+            float left
+            margin 0 20px
+            font-size 13px
+        &:after
+            clear both
+
+    &-initiative
+        width calc(100% - 40px)
+        height 150px
+        background-color white
+        overflow hidden
+        overflow-x auto
+        margin auto
+        margin-top 20px
+        z-index 1000
+        &:not(.filtered)
+                .initiative
+                    display inline-block
+        &-desc
+            &-cont
+                background white
+                border 1px solid #C32B3D
+                border-top none
+                padding 35px
+                margin 0 20px
+                overflow auto
+                // height calc(100vh - 610px)
+                margin-bottom 20px
+                position relative
+                box-shadow 0px 7px 20px 0px rgba(0,0,0,.2)
+                // z-index 1
+                h2
+                    color #D30000
+                    font-weight 400
+        .content-col
+            counter-reset headings
+            white-space nowrap
+            div.initiative
+                width 130px
+                height 150px
+                white-space normal
+                box-sizing border-box
+                position relative
+                &:not(.multiSelectSelected)
+                    border-bottom solid 1px #D30000
+                    background #f2f2f2
+                .multiSelect
+                    width 30px
+                    height 30px
+                    margin 15px 10px
+                    border 3px solid #a8adb4
+                    text-align center
+                    line-height 25px
+                    color #a8adb4
+                    position relative
+                    padding 0 5px
+                    background-color transparent
+                    border-radius 5px
+                .multiSelectText
+                    font-size 13px
+                    font-weight 400
+                    height 56px
+                    &:after
+                        display none
+
+        &-years
+            margin 0 10px
+            padding 20px
+            border-bottom 1px solid #fff
+            overflow hidden
+
+        &-year
+            font-size 14px
+
+        &-item
+            div:not(.hidden)
+                font-size 13px
+                padding 7px 0
+
+    &-branding
+        padding 0 20px
+        overflow hidden
+        &-title
+            float left
+            padding 3px 0
+            font-size 14px
+        &-input
+            margin 0 10em
+            .calc-input-control
+                .calc-input
+                    text-align center
+
+    &-other-details
+        padding 20px
+        font-size 13px
+
+.initiative
+    overflow hidden
+    &.showTriangle:after
+        width 0
+        height 0
+        border-bottom 35px solid transparent  /* left arrow slant */
+        border-top 35px solid transparent /* right arrow slant */
+        border-left 35px solid #CECECE /* bottom, add background color here */
+        font-size 0
+        line-height 0
+        display inline-block
+        content ""
+        transform rotate(-45deg)
+        top -22px
+        right -5px
+        position absolute
+        z-index 2
+    &-category
+        position absolute
+        right 0
+        top 0
+        padding 0 5px
+        color #fff
+        z-index 5
+    &-label
+        color #6D747E
+        display table-cell
+        vertical-align bottom
+        width 100%
+        height 56px
+        padding 5px 10px
+        line-height 1.1em
+    .fa-check:before
+        color #797979 !important
+    .multiSelectDisabled.fa-check:before
+        color #fff !important
+
+.filter
+    min-height 30px
+    margin-right 5px
+    cursor pointer
+    padding 5px 10px
+    font-size 12px
+    color #7B8C9D
+    opacity 0.6
+    border-bottom 4px solid transparent
+    @media (min-width 1200px)
+        font-size 16px
+    &:hover 
+        opacity 0.8
+        padding-bottom 7px
+        border-bottom 2px solid #D30000
+    &-tabs
+        display block
+        
+filterActive()
+    border-bottom 4px solid #D30000
+    opacity 1
+    padding-bottom 5px
+.category.filters
+    display flex
+    padding 5px 10px
+    text-align center
+    align-items center
+    &.cat-0
+        .filter-0
+            filterActive()
+    &.cat-1
+        .filter-1
+            filterActive()
+    &.cat-2
+        .filter-2
+            filterActive()
+    &.cat-3
+        .filter-3
+            filterActive()
+    &.cat-4
+        .filter-4
+            filterActive()
+    &.cat-5
+        .filter-5
+            filterActive()
+    &.cat-6
+        .filter-6
+            filterActive()
+    &.cat-7
+        .filter-7
+            filterActive()
+    &.cat-8
+        .filter-8
+            filterActive()
+            
+showInitiative()
+    display inline-block
+.filtered
+    .initiative
+        display none
+    .initiatives
+        &.cat-1
+            .initiative.cat-1
+                showInitiative()
+        &.cat-2
+            .initiative.cat-2
+                showInitiative()
+        &.cat-3
+            .initiative.cat-3
+                showInitiative()
+        &.cat-4
+            .initiative.cat-4
+                showInitiative()
+        &.cat-5
+            .initiative.cat-5
+                showInitiative()
+        &.cat-6
+            .initiative.cat-6
+                showInitiative()
+        &.cat-7
+            .initiative.cat-7
+                showInitiative()
+        &.cat-8
+            .initiative.cat-8
+                showInitiative()
+                
+.scroll
+    &-left, &-right
+        display inline-block
+        width 30px
+        height 150px
+        vertical-align top
+        margin-right -4px
+        text-align center
+        line-height 130px
+        font-family wib-icomoon
+        border solid 1px #f2f2f2
+        border-bottom solid 1px #C32B3D
+        cursor pointer
+        color #FE4803
+        &.disabled
+            pointer-events none
+            color #ccc
+.initiatives
+    width calc(100% - 60px)
+    overflow hidden
+    display inline-block
+    margin-right -4px
+    height 150px
+    .screen
+        width 1841px
+        transition margin 0.5s ease-in

@@ -1,0 +1,51 @@
+<div class="holdscreen-wrapper">
+    <div class="team-info">
+        <span class="team-number">
+            <text-outlet key="#"></text-outlet>
+            <calc-outlet ref="tlInputTeamNumber"></calc-outlet>
+        </span>
+        <span class="team-name">
+            <calc-outlet ref="tlInputTeamName"></calc-outlet>
+        </span>
+    </div>
+    <div class="lock-screen-icon-container">
+        <div class="lock-icon">
+            <span class="fa fa-lock" *ngIf="!showLoader"></span>
+            <span class="fa fa-spinner fa-pulse" *ngIf="showLoader"></span>
+        </div>
+    </div>
+    <div class="hold-text-container" *ngIf="mode === 0 && !showLoader">
+        <text-outlet key="HoldScreenWaitText"></text-outlet>
+    </div>
+    <div class="proceed-text-container" *ngIf="mode === 1 && !showLoader">
+        <text-outlet key="HoldScreenProceedText"></text-outlet>
+        <div class="password-container">
+            <span class="icon fa fa-key"></span>
+            <input type="password" [(ngModel)]="password" placeholder="Enter Password from Facilitator" #passwordText>
+        </div>
+        <div class="error-message" *ngIf="showPasswordErrorMessage"><text-outlet key="IncorrectPasswordMsg"></text-outlet></div>
+        <div class="button-container">
+            <button class="btn submit-btn" (click)="onPasswordSubmit()" [class.disabled]="(passwordText.value != actualPassword) && (passwordText.value != cancelPassword)"><text-outlet key="Import"></text-outlet></button>
+        </div>
+        <div class="button-container">
+            <button class="btn submit-btn" (click)="exportData()"><text-outlet key="Export"></text-outlet></button>
+        </div>
+    </div>
+</div>
+
+<im-importfile #importbalances (fileLoaded)="onFileLoaded($event)"></im-importfile>
+<div bsModal #importsuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': true}">
+    <div class="modal-dialog modal-sm import-success-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Success"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="ImportSuccessConfirmMessage"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-primary no-button" (click)="hideSuccessAlert()"><text-outlet key="Continue"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>

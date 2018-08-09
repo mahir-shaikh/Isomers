@@ -1,0 +1,178 @@
+<div class="hidden" [routerLink]="['/intro']" [routerLinkActive]="['active']"></div>
+<div class="hidden" [routerLink]="['/holdScreen']" [routerLinkActive]="['active']"></div>
+<div class="dashboard-container">
+    <div class="header-container">
+        <div class="logo-contianer">
+            <div class="logo">
+                <img class="image" src="../../../../assets/images/avanade_logo.png">
+            </div>
+            <div class="logo-text">
+                <span class="logo-heading-text">
+                    <text-outlet key="SubTitle"></text-outlet>
+                </span>
+            </div>
+        </div>
+        <div class="options">
+            <div class="hamburger-sign" (click)="openMenu($event)">
+                <span class="fa fa-ellipsis-v"></span>
+            </div>
+            <div class="menu" [class.show-menu]="showMenu" [clickOutActive]="showMenu" (clickOutside)="closeMenu()">
+                <!-- <span (click)="showPasswordModalRef(2)" class="menu-link export-link"><text-outlet key="Export"></text-outlet></span> -->
+                <span (click)="showPasswordModalRef(1)" class="menu-link reset-link"><text-outlet key="ResetSimulation"></text-outlet></span>
+                <!-- <span (click)="showLogoutAlert()" class="menu-link logout-link"><text-outlet key="Logout"></text-outlet></span> -->
+                <span (click)="showSubmitModal()" class="menu-link submit-link"><text-outlet key="Submit Decisions"></text-outlet></span>
+            </div>
+        </div>
+        <div class="user-info">
+            <span class="year-info">
+                <text-outlet key="Year"></text-outlet>
+                <calc-outlet ref="tlInputTeamYear"></calc-outlet>
+            </span>
+            <span class="team-info">
+                <text-outlet key="#"></text-outlet>
+                <calc-outlet ref="tlInputTeamNumber"></calc-outlet>
+                <calc-outlet ref="tlInputTeamName"></calc-outlet>
+            </span>
+        </div>
+    </div>
+    <div class="dashboard-data-wrapper row" [class.hideMetrics]="hideDashboardData">
+        <div class="dashboard-data-container p-0" [class.col-lg-8]="!hideDashboardData" [class.col-md-12]="!hideDashboardData" [class.col-sm-12]="hideDashboardData">
+            <div class="metrics-wrapper row">
+                <div class="metrics-contianer col-sm-12">
+                    <dashboard-metrics></dashboard-metrics>
+                </div>
+            </div>
+            <div class="navbar-wrapper row">
+                <div class="navbar-contianer col-sm-12 p-0">
+                    <app-navbar [eventList]="wobblerList" (onDisplayWobbler)="displayWobbler($event)"></app-navbar>
+                </div>
+            </div>
+        </div>
+        <div class="graphs-container col-md-12 col-lg-4 p-0">
+            <dashboardgraph></dashboardgraph>
+        </div>
+    </div>
+</div>
+<div class="submit-btn-container" *ngIf="hideSubmitBtn">
+    <div class="submit-btn" (click)="showSubmitModal()">
+        <text-outlet key="Submit"></text-outlet>
+        <br>
+        <text-outlet key="Decisions"></text-outlet>
+    </div>
+</div>
+<div class="footer-container">
+    <app-footer></app-footer>
+</div>
+
+<wobbler #wobbler (updateListEvent)="updateWobblerList()"></wobbler>
+
+<div bsModal #passwordModal="bs-modal" class="modal model-md animated password-modal fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"[config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <text-outlet key="ResetSimulation" *ngIf="passwordModalNumber == 1"></text-outlet>
+                    <text-outlet key="Export" *ngIf="passwordModalNumber == 2"></text-outlet>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="info-text" *ngIf="passwordModalNumber == 3 || passwordModalNumber == 4 || passwordModalNumber == 5">
+                        <text-outlet key="RoundCompletionMsg"></text-outlet>
+                    </div>
+                    <div class="password-container">
+                        <div class="password-text"><text-outlet key="EnterPassword"></text-outlet></div>
+                        <input type="password" [(ngModel)]="password" #passwordText>
+                    </div>
+                    <div class="error-message" *ngIf="showPasswordErrorMessage"><text-outlet key="IncorrectPasswordMsg"></text-outlet></div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-primary" (click)="hidePasswordModalRef()"><text-outlet key="Cancel"></text-outlet></button>
+                <button class="btn btn-danger" (click)="onPasswordSubmit()" [class.disabled]="password.value"><text-outlet key="Submit"></text-outlet></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #logoutModal="bs-modal" class="modal logout-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Logout"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="LogoutConfirmationMsg"></text-outlet>
+        </div>
+        <div class="button-container row">
+            <button type="button" class="btn btn-primary no-button" (click)="hideLogoutAlert()"><text-outlet key="No"></text-outlet></button>
+            <button type="button" class="btn btn-danger yes-button" (click)="hideLogoutAlert(true)"  [routerLink]="['/logout']"><text-outlet key="Yes"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #resetModal="bs-modal" class="modal reset-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Reset"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="ResetConfirmationMsg"></text-outlet>
+        </div>
+        <div class="button-container row" *ngIf="!showLoader">
+            <button type="button" class="btn btn-primary yes-button" (click)="resetRound()"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn btn-danger no-button" (click)="hideResetModal()"><text-outlet key="No"></text-outlet></button>
+        </div>
+        <div class="loader-container" *ngIf="showLoader">
+            <span class="loader fa fa-spinner fa-pulse"></span>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #errorModal="bs-modal" class="modal error-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Error"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="RoundOneErrorMsg" *ngIf="currentYear == 1"></text-outlet>
+            <text-outlet key="RoundTwoErrorMsg" *ngIf="currentYear == 2 || (currentYear == 3 && !showThirdErrorMsg)"></text-outlet>
+            <text-outlet key="RoundThreeErrorMsg" *ngIf="currentYear == 3 && showThirdErrorMsg"></text-outlet>
+        </div>
+        <div class="button-container row">
+            <button type="button" class="btn btn-danger no-button" (click)="hideErrorModal()"><text-outlet key="Ok"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #submitModal="bs-modal" class="modal submit-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+  <div class="modal-dialog modal-lg confirmation">
+    <div class="modal-content submit-popup-content">
+      <div class="modal-header main-header submit-popup">
+        <h4 class="modal-title eventTitle main-title"><span class="digital-ico fa fa-compass"></span><text-outlet key="Confirm"></text-outlet></h4>
+      </div>
+      <div class="modal-body eventBody">
+        <div class="confirmBody">
+          <text-outlet key="SubmitDecisionAlertText"></text-outlet>
+          <div class="error-message" *ngIf="errorCheck1 == false"><text-outlet key="ErrorCheck1Text"></text-outlet></div>
+          <div class="error-message" *ngIf="errorCheck2 == false"><text-outlet key="ErrorCheck2Text"></text-outlet></div>
+          <div class="error-message" *ngIf="errorCheck3 == false"><text-outlet key="ErrorCheck3Text"></text-outlet></div>
+          <div class="error-message" *ngIf="errorCheck4 == false"><text-outlet key="ErrorCheck4Text"></text-outlet></div>
+          <div class="error-message" *ngIf="errorCheck5 == false"><text-outlet key="ErrorCheck5Text"></text-outlet></div>
+          <div class="error-message" *ngIf="errorCheck6 == false"><text-outlet key="ErrorCheck6Text"></text-outlet></div>
+          <div *ngIf="errorCheck == false"><text-outlet key="ErrorCheckSubmit"></text-outlet></div>
+        </div>
+      </div>
+
+      <div class="button-container">
+       <button type="button" class="btn btn-primary" (click)="hideSubmitModal()"><text-outlet key="Cancel"></text-outlet><span class="digital-ico fa fa-chevron-left"></span></button>
+        <button type="button" class="btn btn-danger" [class.disabled]="errorCheck == false" (click)="nextRound()"><text-outlet key="Confirm"></text-outlet><span class="digital-ico fa fa-check"></span></button>
+      </div>
+    </div>
+  </div>
+</div>

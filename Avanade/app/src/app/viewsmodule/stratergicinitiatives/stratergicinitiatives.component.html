@@ -1,0 +1,67 @@
+<div class="strategicinvestment-wrapper container">
+    <div class="SI-dialog">
+    <div class="SI-content">
+      <div class="SI-header main-header">
+        <h4 class="SI-title eventTitle main-title">
+            <span class="header-icon fa fa-compass"></span>
+            <span class="header-text">
+                <text-outlet key="NavigationMainLink2"></text-outlet>
+            </span>
+            <span class="header-sub-text">
+                <text-outlet key="-"></text-outlet>
+                <text-outlet key="NavigationMainLink2SubLink3"></text-outlet>
+            </span>
+        </h4>
+        <span class="investmentsChecked">{{ totalChecked }} / {{ maxChecks }} <text-outlet key="InitiativesSelected"></text-outlet></span>
+        <!-- <p class="SI-instructions"><text-outlet key="InitiativesInstructions"></text-outlet></p> -->
+        <!-- <div class="filter-tabs" *ngIf="hasCategories">
+            <div class="category filters {{getFilters()}}">
+                <div class="filter filter-{{ci+1}}" *ngFor="let categoryFilter of categories; let ci=index" (click)="toggleFilter(ci+1)">{{categoryFilter}}</div>
+            </div>
+        </div> -->
+        
+            
+      </div>
+      <div class="SI-body eventBody">
+        <div class="investmentspage-initiative" [class.filtered]="isFiltered">
+            <div class="scroll-left" (click)="scroll(0)" [class.disabled]="scrollLeftDisabled">  </div>
+            <div class="content-col initiatives {{getFilters()}}">
+                <div class="screen">
+                    <div class="initiative cat-{{investment?.Category}}" *ngFor="let investment of investmentsArray; let i=index" [class.showTriangle]="hasCategories"
+                        [class.multiSelectSelected]="investment.isSelected" (click)="onSelect($event, i, investment.ID)">
+                        <div class="handCursor multiSelect" 
+                            [class.multiSelectChecked]="investment.isChecked" 
+                            [class.fa]="investment.isChecked" 
+                            [class.fa-check]="investment.isChecked" 
+                            [class.multiSelectNotChecked]="!investment.isChecked" 
+                            [class.multiSelectDisabled]="!investment.isEnabled" 
+                            (click)="onCheck($event, i, investment.ID)">
+                        </div>
+                        <div class="handCursor multiSelectText" 
+                            [class.multiSelectNotSelected]="!investment.isSelected" 
+                            [class.multiSelectTextDisabled]="!investment.isEnabled" >
+                            <span class="initiative-label" [innerHTML]="investment.name">
+                            <!-- {{ investment.name }} -->
+                            </span>
+                        </div>
+                        <span class="initiative-category" *ngIf="hasCategories">
+                            <text-outlet key="InitiativesCatPrefix{{investment.Category}}"></text-outlet>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-right" (click)="scroll(1)" [class.disabled]="scrollRightDisabled">  </div>
+        </div>
+        <div class="investmentspage-initiative-desc-cont">
+            <h2 [innerHTML]="header"></h2>
+            <p [innerHTML]="description" class="investmentspage-initiative-desc"></p>
+        </div>
+        <!-- <div class="footer rdinvestment-footer" (click)="showAlert()" [class.disabled]="initsRemaining === '0'">
+            <button type="button" class="submit btn btn-primary" aria-label="Close">
+              <span aria-hidden="true">Submit</span>
+            </button>
+        </div> -->
+      </div>
+    </div>
+    </div>
+</div>

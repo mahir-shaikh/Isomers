@@ -1,0 +1,147 @@
+<div bsModal #wobblerModal="bs-modal" class="modal wobbler-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-lg animated" [class.flipReverse]="animate">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">{{ name }}</h4>
+            </div>
+            <div class="modal-body tab-content row">
+                    <div class="tab0 col-sm-6" [class.hidden]="isViewed">
+                        <div class="image-placeholder">
+                            <!-- <img src="{{imagePath}}" /> -->
+                        </div>
+                        <div class="toggle-qst-body">
+                            <div>
+                                <div class="wobbler-narrative">
+                                    <p [innerHTML]="narrative"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab1 col-sm-6" [class.hidden]="isViewed" >
+                        <div class="button-wrapper">
+                            <div class="button-container">
+                                <div class="flex-grid">
+                                    <div class="flexrow wobbler-choice" *ngFor="let choice of choices; let i=index">
+                                        <button type="button" [class.highlighted]="answer === (i+1)" [class.disabled]="isViewed" class="btn btn-primary {{ choice.classLabel }}" (click)="onSelect(i)">
+                                            <span class="choice-icon fa " [class.fa-dot-circle-o]="answer === (i+1)" *ngIf="answer === (i+1)"></span>
+                                            <span class="choice-icon fa " [class.fa-circle-o]="answer != (i+1)" *ngIf="answer != (i+1)"></span>
+                                            <span class="choice-label">{{ choice.value }} : {{ choice.name }}</span>
+                                            <span class="choice-txt"><p [innerHTML]="choice.label"></p></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="!isViewed" class="footer eventpage-footer submit-btn-container">
+                            <button [class.disabled]="answer === -1" type="button" (click)="onSubmitWobbler(selfRef, 'W1R1')" class="btn event-decide submit-btn">
+                                <text-outlet key="Submit"></text-outlet>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    
+                    <div *ngIf="isViewed && readOnly" class="footer eventpage-footer">
+                        <button type="button" class="btn yes-button event-decide continue-btn" (click)="onSubmitWobbler()"><text-outlet key="Continue"></text-outlet></button>
+                    </div>
+                    
+                    <div *ngIf="isViewed && !readOnly" class="wobbler-feedback">
+                        <div class="wobbler-fb-title">
+                            <div class="wobbler-fb-title-text">
+                                <text-outlet key="YouSelected"></text-outlet>
+                                <br>
+                                <span class="bold">
+                                    {{ansName}}
+                                </span>
+                            </div>
+                            <div class="review-btn-container" (click)="showReviewModal()">
+                                <div class="review-btn">
+                                    <span class="review-icon fa fa-search"></span>
+                                    <text-outlet key="ReviewDecision"></text-outlet>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="wobbler-feedback-txt left">
+                            <div><b><text-outlet key="Feedback" class=""></text-outlet></b></div>
+                            <p [innerHTML]="feedback" class=""></p>
+                        </span>
+                        <button type="button" class="btn yes-button event-decide continue-btn" (click)="hideWobbler(true)" *ngIf="isViewed"><text-outlet key="Continue"></text-outlet></button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #wobblerOverrideModal="bs-modal" class="modal override-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><text-outlet key="Wobbler"></text-outlet></h4>
+                <span class="close-btn-container" (click)="hideWobblerOverride(0)"><span class="fa fa-times"></span></span>
+            </div>
+            <div class="modal-body">
+                <text-outlet key="Select Wobbler to activate in 5 seconds after clicking 'Activate'"></text-outlet>
+                <br /><br />
+                <div *ngFor="let wobbler of wobblersOverrideList; let i=index">
+                    <div [class.disabledText]="wobbler.isViewed">
+                        <input type="radio" id="wobbler{{i}}" name="wobbler" [value]="i" (change)="override=i">
+                        {{ wobbler.name }}
+                    </div>
+                    <br />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="button-container">
+                    <!-- <button type="button" class="btn btn-primary no-button" (click)="hideWobblerOverride(0)"><text-outlet key="Cancel"></text-outlet></button> -->
+                    <button type="button" class="btn yes-button" (click)="hideWobblerOverride(1)"><text-outlet key="Activate"></text-outlet></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #reviewModal="bs-modal" class="modal review-modal animated fadeInUp" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">{{ name }}</h4>
+                <span class="close-btn-container" (click)="hideReviewModal()"><span class="fa fa-times"></span></span>
+            </div>
+            <div class="modal-body">
+                <div class="review-wrapper" *ngIf="reviewVisible">
+                    <div class="review-choices">
+                        <div class="scenarioText">
+                            <p [innerHTML]="narrative"></p>
+                        </div>
+                        <div class="choice-btn-container">
+                            <span class="choice " *ngFor="let choice of choices; let i=index" [class.active]="reviewAnswer == (i+1)" (change)="reviewAnswer == (i+1)">
+                                <input class="floatLeft" id="{{pinID}}-choice-{{i}}" type="radio" [(ngModel)]="reviewAnswer" name="decision" [value]="i+1"  [checked]="(i+1) == reviewAnswer" [class.hidden]="true"/>
+                                <label class="event-choice" attr.for="{{pinID}}-choice-{{i}}">
+                                    <span class="selectedIcon fa fa-check-circle" *ngIf="selectedValue == (i+1)"></span> {{ choice.value }}. {{ choice.name }}
+                                </label>
+                            </span>
+                        </div>
+                        <div class="eventBody-container">
+                            <div class="alternative-section">
+                                <h3>{{wobbler["alt" + reviewAnswer]}}</h3>
+                            </div>
+                            <div class="narrative-section">
+                                <span [innerHTML]="wobbler['alt' + reviewAnswer + '_narrative']"></span>
+                            </div>
+                            <div class="feedback-section">
+                                <h3><text-outlet key="Feedback"></text-outlet></h3>
+                                <br />
+                                <span [innerHTML]="wobbler['alt' + reviewAnswer + '_feedback']"></span>
+                            </div>                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+                <div class="button-container">
+                    <button type="button" class="btn yes-button" (click)="hideReviewModal()"><text-outlet key="Activate"></text-outlet></button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+

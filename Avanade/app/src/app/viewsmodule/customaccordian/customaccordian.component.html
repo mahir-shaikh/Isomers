@@ -1,0 +1,12 @@
+<div class="row accordian-container">
+    <div class="col-sm-12 accordian-title">
+        <span class="title-text" (click)="navigateToLink()">{{headingText}}</span>
+        <span class="toggle-button pull-right fa fa-line-chart" [class.open]="isOpen" (click)="toggleState()" *ngIf="!alwaysOpen"></span>
+    </div>
+    <div class="col-sm-12 accordian-data" [class.hidden]="!isOpen">
+        <div #graphContainer></div>
+    </div>
+    <div class="table-data">
+        <div #tableContainer></div>
+    </div>
+</div>

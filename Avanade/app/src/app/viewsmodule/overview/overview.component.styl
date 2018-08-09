@@ -1,0 +1,59 @@
+:host
+    height calc(100vh - 185px)
+    overflow auto
+    display block
+    @media screen and (max-width 768px)
+        height calc(100vh - 275px)
+.overview-container
+    .data-wrapper
+        padding 20px 15px
+    .data-container
+        border 1px solid rgba(0,0,0,0.15)
+        height 100%
+        .data-heading
+            padding 30px 0
+            align-items center
+            .data-heading-text
+                font-size 1.75rem
+                color #ff4901
+                text-transform uppercase
+        .data-row
+            padding 10px 0
+            align-items center
+            justify-content center
+            .chart-heading
+                text-align center
+        .Initiatives-Table
+            border 1px solid #ccc
+            .heading-row
+                padding 5px 0
+                border-bottom 1px solid #ccc
+                .data-label
+                    font-weight 500
+            .data-row
+                padding 5px 0
+        .Data-Table
+            font-size 14px
+            text-align center
+            // @media screen and (min-width 1025px)
+                // white-space nowrap
+            .heading-row
+                padding 5px 0
+                .data-label
+                    color #6D747E
+                    padding 0 5px
+                    &.heading-label
+                        font-weight 500
+                        text-decoration underline
+            .data-row
+                padding 5px 0
+                .data-label
+                    color #D30000
+                    padding 0 5px
+                .data-value
+                    color #6D747E
+                    font-weight 500
+                    padding 0 5px
+            &.Initiatives-Table
+                white-space normal
+                padding 15px

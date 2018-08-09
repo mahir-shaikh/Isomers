@@ -1,0 +1,47 @@
+:host {
+  text-align: center;
+}
+.metric-balloon {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 3px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.35s ease;
+  cursor: pointer;
+}
+.metric-balloon.fade-in {
+  opacity: 1;
+}
+.metric-balloon.increement {
+  color: #008000;
+}
+.metric-balloon.decreement {
+  color: #f00;
+}
+.metric-balloon.no-change-balloon-value {
+  background-color: transparent;
+  color: transparent;
+}
+.highlighted {
+  color: #f00;
+}
+:host-context(.intro-page-wrapper) {
+  color: #000;
+}
+:host-context(.switch-to-heading) {
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  :host-context(.switch-to-heading) {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  :host-context(.switch-to-heading) {
+    font-size: 0.75rem;
+  }
+}

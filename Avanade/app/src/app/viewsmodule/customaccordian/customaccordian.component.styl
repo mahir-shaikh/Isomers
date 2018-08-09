@@ -1,0 +1,43 @@
+:host
+    width 100%
+.accordian-container
+    width 100%
+    background-color #FFF
+    .accordian-title
+        padding 10px 15px
+        .title-text
+            font-size 24px
+            color rgba(0, 0, 0, 0.5)
+            font-weight 500
+            border-bottom 2px solid #ff4a00
+            cursor pointer
+        .toggle-button
+            border 2px solid rgba(0,0,0,0.5)
+            border-radius 50%
+            padding 5px
+            cursor pointer
+            color rgba(0,0,0,0.5)
+            box-sizing border-box
+            &:hover
+                color #d80365
+                border 2px solid #d80365
+            &.open
+                color #fff
+                background #d80365
+                border 2px solid #d80365
+                &:hover
+                    color #fff
+                    border 2px solid #d80365
+                    
+    .accordian-data
+        padding-top 0
+        max-height 500px // anything above original height
+        overflow hidden
+        transition all 0.5s cubic-bezier(.5,0,.3,1)
+        &.hidden
+            max-height 0
+            
+    .table-data
+        background #F2F2F2
+        width calc(100% - 30px)
+        margin 0 15px

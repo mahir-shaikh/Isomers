@@ -1,0 +1,59 @@
+:host
+    height calc(100vh - 135px)
+    overflow auto
+    display block
+.decsummary-data-container
+    .header-container
+        padding 20px
+        background #7B8C9D
+        border-radius 50px
+        color #fff
+        box-shadow 0px 3px 3px 2px #e1dbdb
+        border-top 10px solid #fff
+        position fixed
+        width inherit
+        max-width 1200px
+        z-index 3
+        @media screen and (max-width 768px)
+            max-width 700px
+        .header-icon
+            font-size 1.325rem
+            padding-right 5px
+        .header-text,.header-sub-text
+            font-size 1.325rem
+            calc-outlet, text-outlet
+                font-size 1.325rem
+        .header-text
+            font-weight 500
+    .data-wrapper
+        padding-top 100px
+    .data-container
+        .data-box
+            padding 30px 0
+        .data-heading
+            padding 10px 0
+            align-items center
+            .data-heading-text
+                font-size 1.25rem
+                font-weight 500
+                color #ff4901
+            .data-info
+                text-align right
+        .data-row
+            padding 10px 0
+            align-items center
+            border-bottom 1px solid rgba(204, 204, 204, 0.2)
+            .data-label
+                text-align left
+                font-size 1.125rem
+                calc-outlet,text-outlet
+                    font-size 1.125rem
+            .data-value
+                text-align center
+                font-size 1.125rem
+                calc-outlet,text-outlet
+                    font-size 1.125rem
+        .heading-row
+            .data-value
+                font-weight 500
+                

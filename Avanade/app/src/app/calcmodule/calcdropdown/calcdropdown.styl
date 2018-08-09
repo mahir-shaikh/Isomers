@@ -1,0 +1,149 @@
+// ul[dropdownMenu]
+//     li
+//         list-style-type none
+
+// #single-button
+//     padding-top 5px
+//     padding-bottom 5px
+//     width 100%
+//     text-align left
+//     .btn .caret
+//         position absolute
+//         right 10px
+//         top 50%
+//     &.sb-right
+//         text-align right
+//         &.btn .caret
+//             position absolute
+//             left 10px
+//             top 50%
+
+// .btn-group.open 
+//     #single-button
+//         border-top-left-radius 5px
+//         border-top-right-radius 5px
+//         border-bottom-right-radius 0
+//         border-bottom-left-radius 0
+//     .caret
+//         border-bottom 4px dashed
+//         border-bottom 4px solid\9
+//         border-top none
+
+// .btn-group.dropdown
+//     width 100%
+
+// .dropdown-menu
+//     border-radius 0
+//     margin 0
+//     border solid 1px #005495
+//     li
+//         margin 0
+//         &:nth-child(even)
+//             background #f2f2f2
+//         a
+//             transition background ease-out .3s, color ease-out .3s
+//         a:hover
+//             background #005495
+//             color #fff
+
+// .dropdown-menu-right
+//     li
+//         text-align right
+
+
+@import "../../../../assets/css/mixins"
+.ds-input-field,
+.btn-group
+    height 100%
+    width 100%
+.dropdown-item.active, .dropdown-item:active
+    background-color #ECECEA
+    color #000
+.btn-primary.active, .btn-primary:active, .show > .btn-primary.dropdown-toggle
+    background-color #c2c2c2
+    color #000
+.dropdown
+    &.open
+        & ^[0]-menu
+            // display block
+            max-height 200px
+            overflow auto
+            min-width 100%
+            z-index 2
+            @media screen and (max-width 576px)
+                width 150px
+    &-toggle
+        cursor pointer
+        background-color rgba(255,255,255,0)
+        border 1px solid #767676
+        color #000
+        height 100%
+        width 100%
+        padding 15px
+        text-align left
+        border-radius 0
+        height 40px
+        &:hover, &:active
+            background-color #efefef
+/*        @media screen and (max-width 350px)
+            height 35px*/
+        .dropdown-text
+            width 70%
+            text-overflow ellipsis
+            display inline-block
+            overflow hidden
+            position absolute
+            top 50%
+            font-weight 500
+            font-size 16px
+            color #000
+            @media screen and (max-width 576px)
+                font-size 14px
+                
+            tranlateTop()
+        &.btn-primary
+            &:focus,
+            &:active
+                -webkit-box-shadow none
+                box-shadow none
+                border-color #ECECEA
+                background-color #ECECEA
+                color #000
+                .caret
+                    color #000
+        .caret
+            position absolute
+            right 15px
+            display inline-block
+            top 50%
+            font-size 1.5em
+            font-weight 800
+            color #6F4F7F
+            tranlateTop()
+        &:after
+            border 0
+        &-item
+            color #6D6E70
+
+.dropdown-toggle,
+.dropdown-menu    
+    font-size 0.875rem
+    .dropdown-item
+        padding 5px 1.5rem
+        white-space normal
+
+:host-context(.dropdown-container)
+    .dropdown-toggle
+        padding 5px
+        .dropdown-text
+            font-size 14px
+            @media screen and (max-width 1024px)
+                font-size 12px
+        .caret
+            font-size 18px
+            right 5px
+            
+:host-context(.dropdown-wrapper)
+    .ds-input-field,.btn-group
+        max-width 150px
+        margin auto
