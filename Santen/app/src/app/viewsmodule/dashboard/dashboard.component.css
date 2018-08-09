@@ -1,0 +1,201 @@
+:host {
+  display: block;
+}
+:host .hidden.active ~ .dashboard {
+  display: none;
+}
+:host .dashboard {
+  display: block;
+}
+.dashboard {
+  background-color: #fff;
+}
+.dashboard .row {
+  margin: 0;
+}
+.dashboard .format-bar {
+  background-color: #dcdcdc;
+}
+.dashboard .topbar {
+  padding-top: 15px;
+}
+.dashboard .topbar .heading-link-container {
+  padding: 0;
+}
+.dashboard .topbar .heading-link-container:after {
+  clear: both;
+  width: 100%;
+}
+.dashboard .topbar .heading-link-container .heading {
+  display: inline-block;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.dashboard .topbar .heading-link-container .heading .logo {
+  background: url("../../../../assets/images/SantenLogo.svg") no-repeat;
+  height: 25px;
+  width: 65px;
+}
+.dashboard .topbar .heading-link-container .heading .title {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 27px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.dashboard .topbar .heading-link-container .logout-link {
+  position: relative;
+  text-align: center;
+  top: -3px;
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  .dashboard .topbar .heading-link-container .logout-link {
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+  }
+}
+.dashboard .topbar .heading-link-container .logout-link-icon {
+  display: inline-block;
+  background: url("../../../../assets/images/icons/logout.svg") no-repeat;
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+  transform: scaleX(-1);
+}
+.dashboard .topbar .heading-link-container .logout-link-label {
+  margin-top: -8px;
+}
+.dashboard .topbar .heading-link-container .logout-link text-outlet {
+  font-size: 0.75rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.dashboard .topbar .heading-link-container .navigation-bar {
+  float: right;
+  padding: 0;
+}
+.dashboard .topbar .heading-link-container .navigation-bar-container {
+  float: right;
+  height: 100%;
+}
+@media screen and (max-width: 992px) {
+  .dashboard .topbar .heading-link-container .navigation-bar-container {
+    float: none;
+    justify-content: center;
+  }
+}
+.dashboard .topbar .heading-link-container .navigation-bar-link {
+  font-weight: 500;
+  display: inline-block;
+  padding: 0 11px 10px;
+  cursor: pointer;
+}
+.dashboard .topbar .heading-link-container .navigation-bar-link:hover {
+  color: #034ea1;
+}
+.dashboard .topbar .heading-link-container .navigation-bar-link.active {
+  border-bottom: 5px solid #034ea1;
+  color: #034ea1;
+  padding-bottom: 0;
+}
+.dashboard .topbar .format-metric-bar {
+  background-color: #6d6e70;
+}
+.dashboard .topbar .format-metric-bar-container {
+  padding: 0;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container {
+  padding: 10px 0;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row {
+  display: none;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row.active {
+  display: flex;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row [class*="col-"] {
+  padding: 0px;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row .dashboard-icon {
+  display: inline-block;
+  background: url("../../../../assets/images/icons/Dashboard.svg") no-repeat;
+  width: 100px;
+  height: 40px;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row .metric-tools-heading {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+@media screen and (max-width: 992px) {
+  .dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row .metric-tools-heading {
+    font-size: 11px;
+  }
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row .metric-tools-data {
+  color: #99dcf5;
+  text-align: center;
+  font-size: 18px;
+}
+.dashboard .topbar .format-metric-bar-container .format-tools-container {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #88898a;
+  font-size: 0.875rem;
+  color: #fff;
+  align-items: center;
+  justify-content: space-around;
+}
+.dashboard .topbar .format-metric-bar-container .format-tools-container .sync-icon {
+  display: inline-block;
+  background: url("../../../../assets/images/icons/Sync.svg") no-repeat;
+  background-size: cover;
+  height: 13px;
+  width: 13px;
+}
+.dashboard .topbar .format-metric-bar-container .format-tools-container .format-tool {
+  cursor: pointer;
+}
+.dashboard .topbar .format-metric-bar-container .format-tools-container .format-tool.disable-format-tool {
+  pointer-events: none;
+  color: #b9b8b8;
+}
+.dashboard .topbar .format-metric-bar-container .format-tools-container .format-tool:hover {
+  color: #f0f0f0;
+}
+.dashboard .topbar .format-metric-bar-container .format-tools-container .format-tool:active {
+  color: #99dcf5;
+}
+.dashboard .topbar .format-metric-bar-container .format-tools-container .format-tool:first-child {
+  padding-left: 5px;
+}
+.dashboard .topbar .format-metric-bar-container .format-tools-container .format-tool.help a {
+  text-decoration: none;
+  color: #fff;
+}
+.dashboard .topbar .format-metric-bar-container .format-tools-container .format-tool.help a:hover {
+  color: inherit;
+}
+.dashboard .topbar .format-metric-bar-container .format-tools-container .format-tool.help a:active {
+  color: #99dcf5;
+}
+.reset-modal .button-container,
+.logout-modal .button-container {
+  padding: 0 15px 10px;
+  text-align: center;
+}
+.reset-modal .button-container .yes-button,
+.logout-modal .button-container .yes-button {
+  float: left;
+}
+.reset-modal .button-container .no-button,
+.logout-modal .button-container .no-button {
+  float: right;
+}
+.reset-modal .button-container:after,
+.logout-modal .button-container:after {
+  clear: both;
+}

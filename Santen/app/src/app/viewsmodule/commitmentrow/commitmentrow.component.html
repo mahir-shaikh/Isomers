@@ -1,0 +1,14 @@
+<div class="action-plan-commitment-data col-sm-12 row">
+    <div class="col-sm-3 action-plan-commitment-data-content">
+        <textareabox [ref]="'tlInputActionCommitment'+commitmentRowNo"></textareabox>
+    </div>
+    <div class="col-sm-2 action-plan-commitment-data-content">
+        <calc-input [ref]="'tlInputActionAccountable'+commitmentRowNo"></calc-input>
+    </div>
+    <div class="col-sm-3 action-plan-commitment-data-content">
+        <mydatepicker [ref]="'tlInputActionCompletionDate'+commitmentRowNo" [timeType]="'text'" format="mmm dd, yyyy" [selectionTxtFontSize]="'0.875rem'"></mydatepicker>
+    </div>
+    <div class="col-sm-4 action-plan-commitment-data-content textareabox-container">
+        <textareabox [textareaRows]="2" [ref]="'tlInputActionOutcome'+commitmentRowNo"></textareabox>
+    </div>
+</div>

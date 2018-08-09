@@ -1,0 +1,133 @@
+@import "mixins"
+@import "core"
+@import "nouislider"
+
+
+html, body
+    min-height 100%
+body 
+    background url("../images/landing-background.jpg") no-repeat
+    color #6D6E70
+    overflow-x hidden
+    background-size cover
+    font-size 16px
+    font-family "OpenSans"
+    line-height 20px
+    
+.im-app.container-fluid
+    height 100vh
+    padding 0
+    .main
+        height 100%
+
+.dropdown-item
+    color #6D6E70
+
+.dark-blue-heading
+    color #034EA1
+    &-bold
+        color #034EA1
+        font-weight 600
+        
+.blue-heading
+    color #00ADEE
+    &-bold
+        color #00ADEE
+        font-weight 600
+        
+.grey-heading
+    color #DCDCDC
+    &-bold
+        color #DCDCDC
+        font-weight 600
+        
+.dark-grey-heading
+    color #6D6E70
+    &-bold
+        color #6D6E70
+        font-weight 600
+        
+.light-grey-heading
+    color #F0F0F0
+    &-bold
+        color #F0F0F0
+        font-weight 600
+    
+.nav-tabs
+    height 45px
+    background linear-gradient(#00ADEE, #034EA1)
+    border-bottom 0px
+    .nav-item
+        margin-bottom 0px
+        &:hover
+            background-color #00ADEF
+    .nav-item.active
+        background-color #00ADEF
+        &:after
+            content ''
+            width 0px
+            height 0px
+            border-left 10px solid transparent
+            border-right 10px solid transparent
+            border-top 10px solid #00ADEF
+            position relative
+            top 10px
+            left 46px
+            z-index 1
+    .nav-link
+        color #fff
+        height 100%
+        padding-top 10px
+        &:hover
+            border 1px solid transparent
+    .nav-link.active
+        color #fff
+        background-color #00ADEF
+        border 0px solid
+        
+.mydp .btnclear,
+.mydp .btnpicker,
+.mydp .headerbtn,
+.mydp .headermonthtxt,
+.mydp .headertodaybtn,
+.mydp .headeryeartxt,
+.mydp .selection
+    color #6d6e70 !important
+
+
+.tooltip-inner
+    padding 10px
+
+.region-color-1
+    color #36338D !important
+    calc-input
+        input
+            &:active,&:focus
+                background-color #36338D
+    calc-stepper
+        background-color #36338D
+                        
+.region-color-2
+    color #01A1A8 !important
+    calc-input
+        input
+            &:active,&:focus
+                background-color #01A1A8
+    calc-stepper
+        background-color #01A1A8 
+.region-color-3
+    color #0AA34A !important
+    calc-input
+        input
+            &:active,&:focus
+                background-color #0AA34A 
+    calc-stepper
+        background-color #0AA34A
+.region-color-4
+    color #7EBE42 !important
+    calc-input
+        input
+            &:active,&:focus
+                background-color #7EBE42 
+    calc-stepper
+        background-color #7EBE42

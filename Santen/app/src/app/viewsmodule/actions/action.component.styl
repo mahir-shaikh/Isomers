@@ -1,0 +1,184 @@
+.action-plan
+    background url("../../../../assets/images/action-plan-background.jpg") no-repeat
+    background-size cover
+    background-position center
+    height calc(100% - 104px)
+    width 100%
+    position relative
+    overflow auto
+    padding 20px 0
+    @media screen and (max-width 992px)
+        height calc(100% - 134px)
+    &-heading
+        padding 0
+        .action-icon
+            font-size 1.25rem
+            padding-right 5px
+        &-text
+            padding 15px
+            background linear-gradient(270deg, #00ADEE 0%, #034EA1 91%)
+            background -moz-linear-gradient(270deg, #00ADEE 0%, #034EA1 91%)
+            background -webkit-linear-gradient(270deg, #00ADEE 0%, #034EA1 91%)
+            background -o-linear-gradient(270deg, #00ADEE 0%, #034EA1 91%)
+            margin 0
+            color #FFF
+            .row
+                margin 0
+            .col-sm-11
+                padding 0
+            .email-icon
+                display inline-block
+                height 30px
+                width 30px
+                background url("../../../../assets/images/icons/Email.svg") no-repeat
+                background-size cover
+                cursor pointer
+                &-container
+                    text-align right
+                    padding 0
+    &-container
+        background-color rgba(255,255,255,0.8)
+        .row
+            margin 0
+        .action-plan
+            &-details
+                &-container
+                    padding 0
+            &-hypothesis,
+            &-commitment
+                margin-top 20px
+                & > [class^="col-sm"]
+                    padding 0
+                &-heading
+                    padding 0
+                    font-weight 500
+                    color #034EA1
+                    font-size 1.125rem
+                    align-items center
+                    border-bottom 2px solid #034EA1
+                    padding-bottom 5px
+                    .hypothesis-text,
+                    .commitment-text
+                        text-transform uppercase
+                    & > [class^="col-sm"]
+                        padding 0
+                    &-column
+                        font-size 0.875rem
+                        padding-right 10px !important
+                        &:last-child
+                            padding-right 0 !important
+                    .hypothesis
+                        &-text
+                            font-size 1.125rem
+                            line-height 35px
+                            vertical-align text-bottom
+                &-data
+                    padding 10px 0
+                    .commitment-row-button
+                        cursor pointer
+                    &-content
+                        padding-left 0
+                        padding-right 15px
+                        &:last-child
+                            padding-right 0
+                        calc-outlet
+                            font-size 0.875rem
+                            font-weight 600
+                            color #6D6E70
+                        textareabox,
+                        calc-input
+                            font-size 0.875rem
+                        &.textareabox-container
+                            // height 40px
+                        & > [class^="col-sm"]
+                            padding 0
+                            
+
+.content-textarea
+    width 100%
+    display block
+.email-modal
+    .modal-dialog
+        // height 100%
+        // margin auto
+        transform translate(0, 50%)
+        .modal-content
+            // position absolute
+            // width 100%
+            // top 50%
+            // -webkit-transform translateY(-50%)
+            // -moz-transform translateY(-50%)
+            // -ms-transform translateY(-50%)
+            // transform translateY(-50%)
+    .close
+        font-size 2rem
+    .modal-body
+        padding 20px
+        button.close
+            position absolute
+            top 5px
+            right 10px
+            &:focus
+                outline 0
+        .email-container
+            input,
+            textarea
+                width 100%
+                border-color #6D6E70
+                border-width 2px
+                padding 5px
+                &:active,
+                &:focus
+                    border-color #00ADEE
+            label
+                font-weight 500
+            .email-to-subject-container
+                justify-content center
+                align-items center
+                padding 15px 0
+            .email-icon-container
+                text-align center
+                .email-icon
+                    display inline-block
+                    background url('../../../../assets/images/icons/email-icon.png') no-repeat
+                    background-size contain
+                    height 90px
+                    width 90px                
+            .email-to-container
+                padding-bottom 10px
+                label
+                    margin-bottom 0
+                input
+                    height 35px
+                    width 85%
+                    margin-left 10px
+                    border-style solid
+                .row
+                    margin 0
+                    align-items center
+                    justify-content flex-end
+                .email-error-message
+                    color #F00
+                    font-size 0.75rem
+                    margin-left 10px
+                    width 85%
+            .email-subject-container
+                label
+                    margin-bottom 0
+                input
+                    height 35px
+                    width 85%
+                    margin-left 10px
+                    border-style solid
+                .row
+                    margin 0
+                    align-items center
+                    justify-content flex-end
+        .footer
+            padding-top 20px
+            text-align right
+            .btn
+                cursor pointer
+                &.submit.disabled
+                    pointer-events none
+                    cursor default

@@ -1,0 +1,45 @@
+.print-wrapper
+    .print-image
+        width 50%
+        padding-right 10px
+    .table-striped > .print-row
+        &:nth-of-type(even)
+            background-color #f9f9f9
+        &.heading-row
+            font-weight bold /* change this */
+        & > [class^=column-]
+            color inherit /* change this */
+    // .container
+    //     background-color rgb(225,225,225)
+    //     border 1px solid black
+    //     .row
+    //         .left-padded
+    //             padding-left 50px
+    //         p
+    //             margin 10px 0px
+    //     & > .row
+    //         border 1px solid #FFF
+    //         text-align middle
+    //         & > .col-md-12
+    //             margin 0px 0px
+    // .right-white-border
+    //     border-right 1px solid #FFF
+@media print
+    .col-sm
+        -webkit-flex-basis 0
+        -ms-flex-preferred-size 0
+        flex-basis 0
+        -webkit-box-flex 1
+        -webkit-flex-grow 1
+        -ms-flex-positive 1
+        flex-grow 1
+        max-width 100%
+    .content-block
+        page-break-inside avoid
+    [class*=column-]
+        text-align center
+        border 1px solid #ccc
+        border-collapse collapse
+    .column-0
+        text-align left
+    

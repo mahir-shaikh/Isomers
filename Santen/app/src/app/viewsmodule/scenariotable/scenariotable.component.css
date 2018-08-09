@@ -1,0 +1,83 @@
+.scenario-table-data {
+  margin: 5px 0px;
+}
+.scenario-table-data .row {
+  margin: 0px;
+}
+.scenario-table-data .metrics-data {
+  padding: 0px;
+}
+.scenario-table-data .metrics-data .heading {
+  padding: 6px 21px;
+  height: 35px;
+  font-weight: 500;
+  border-top: 1px dotted;
+}
+.scenario-table-data .metrics-data .data-content {
+  padding: 0px 6px;
+  height: 35px;
+  margin: 0px;
+}
+.scenario-table-data .metrics-data .metrics-heading {
+  padding: 0px;
+  border-left: 1px dotted;
+  border-bottom: 1px dotted;
+}
+.scenario-table-data .metrics-data table {
+  margin: 0px;
+}
+.scenario-table-data .metrics-data table thead th {
+  vertical-align: middle;
+  text-align: center;
+  color: #034ea1;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px dotted #000;
+}
+.scenario-table-data .metrics-data table tbody td {
+  border: 1px dotted;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.scenario-table-data .metrics-data table tbody td:first-child {
+  border-left: 0px;
+}
+.scenario-table-data .scrolling .headin-column {
+  border: 1px dotted #000;
+  border-bottom: 0px !important;
+  font-weight: 500;
+  padding: 6px;
+}
+.scenario-table-data .scrolling .border-bottom {
+  border-bottom: 1px dotted #000 !important;
+}
+.scenario-table-data .outer {
+  position: relative;
+}
+.scenario-table-data .inner {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+.scenario-table-data .key-metrics-data {
+  margin: 10px auto;
+}
+.scenario-table-data .key-metrics-data .headings {
+  text-align: center;
+  color: #034ea1;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.scenario-table-data .key-metrics-data .data-row {
+  font-weight: 500;
+  border: 1px dotted #000;
+}
+.scenario-table-data .key-metrics-data .data-row .heading-column {
+  font-size: 1rem;
+  border-right: 1px dotted #000;
+}
+.scenario-table-data .key-metrics-data .data-row .data-content {
+  font-size: 0.875rem;
+  text-align: center;
+}

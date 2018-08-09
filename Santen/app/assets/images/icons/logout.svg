@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px"
+	 viewBox="0 0 35 35" enable-background="new 0 0 35 35" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  x="494.001" y="367" width="34.997" height="35" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g>
+	<path fill="#6D6E70" d="M17.502,0c3.857,0,7.323,1.162,10.4,3.486c3.076,2.323,5.207,5.302,6.394,8.932h-3.668
+		c-1.021-2.688-2.713-4.861-5.085-6.517c-2.368-1.656-5.048-2.484-8.04-2.484c-3.86,0-7.17,1.383-9.936,4.146
+		c-2.764,2.765-4.146,6.077-4.146,9.934c0,3.86,1.382,7.173,4.146,9.937c2.766,2.764,6.077,4.147,9.936,4.147
+		c3.556,0,6.666-1.187,9.341-3.556c2.674-2.373,4.209-5.287,4.602-8.752H17.022l3.328,3.305l-2.483,2.482l-5.22-5.443
+		c-0.547-0.624-0.82-1.331-0.82-2.121c0-0.789,0.273-1.495,0.82-2.119l5.22-5.331l2.483,2.483l-3.328,3.304h17.865
+		c0.072,0.318,0.111,0.873,0.111,1.663c0,4.895-1.693,9.033-5.08,12.42C26.533,33.305,22.393,35,17.501,35
+		c-4.817,0-8.937-1.715-12.362-5.137c-3.426-3.426-5.138-7.547-5.138-12.364c0-4.815,1.713-8.935,5.138-12.362
+		C8.564,1.713,12.685,0,17.502,0z"/>
+</g>
+</svg>

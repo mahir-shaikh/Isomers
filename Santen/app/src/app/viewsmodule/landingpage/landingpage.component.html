@@ -1,0 +1,31 @@
+<div class="landing-page">
+    <div class="container">
+        <div class="row landing-page-content">
+            <div class="col-md-10 col-lg-8 landing-page-content-container bounceInDown" [class.animated]="isLoading">
+                <div class="heading">
+                    <div class="row">
+                        <div class="logo"></div>
+                        <div class="title">
+                            <text-outlet key="Title"></text-outlet>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-text">
+                    <div class="intro-text-heading dark-blue-heading">
+                        <text-outlet key="IntroText"></text-outlet>
+                    </div>
+                    <div class="intro-text-content">
+                        <text-outlet key="IntroTextContent"></text-outlet>
+                    </div>
+                </div>
+                <div class="team-row">
+                    <label class="dark-grey-heading-bold col-sm-12 team-label"><text-outlet key="TeamName"></text-outlet></label>
+                    <calc-input ref="tlTeamName" class="team-name-input"></calc-input>
+                </div>
+                <div class="row projects-container">
+                    <im-projectchooser></im-projectchooser>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

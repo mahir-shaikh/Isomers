@@ -1,0 +1,26 @@
+:host {
+  width: 100%;
+}
+.action-plan-commitment-data {
+  padding: 10px 0;
+  margin: 0;
+}
+.action-plan-commitment-data-content {
+  padding-left: 0;
+  padding-right: 15px;
+}
+.action-plan-commitment-data-content:last-child {
+  padding-right: 0;
+}
+.action-plan-commitment-data-content calc-outlet {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6d6e70;
+}
+.action-plan-commitment-data-content textareabox,
+.action-plan-commitment-data-content calc-input {
+  font-size: 0.875rem;
+}
+.action-plan-commitment-data-content > [class^="col-sm"] {
+  padding: 0;
+}

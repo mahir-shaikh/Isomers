@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px"
+	 viewBox="0 0 35 35" enable-background="new 0 0 35 35" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  x="495.675" y="367" width="31.65" height="35" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g>
+	<path fill="#6D6E70" d="M33.325,6.676v24.175c0,1.153-0.403,2.133-1.208,2.939C31.311,34.598,30.331,35,29.178,35H5.711
+		c-1.079,0-2.021-0.402-2.828-1.209c-0.806-0.807-1.208-1.786-1.208-2.939V4.147c0-1.153,0.402-2.133,1.208-2.938
+		C3.689,0.402,4.632,0,5.711,0h23.467c1.006,0,1.889,0.329,2.65,0.987c0.762,0.658,1.224,1.445,1.387,2.362H5.711
+		c-0.473,0-0.71,0.266-0.71,0.798v26.705c0,0.533,0.237,0.799,0.71,0.799h23.467c0.547,0,0.82-0.266,0.82-0.799V6.676H33.325z
+		 M17.223,12.775H14.45v2.884h-3.327v-2.884H8.351V9.449h2.772V6.676h3.327v2.772h2.772L17.223,12.775L17.223,12.775z M17.223,21.98
+		l-2.085,1.974l2.085,1.952l-2.417,2.416l-1.975-1.951l-1.952,1.951l-2.417-2.416l1.951-1.952L8.462,21.98l2.417-2.418l1.952,2.086
+		l1.975-2.086L17.223,21.98z M26.538,12.775H20.55V9.449h5.988V12.775z M26.538,21.646H20.55v-3.349h5.988V21.646z M20.55,24.975
+		h5.988v3.35H20.55V24.975z"/>
+</g>
+</svg>

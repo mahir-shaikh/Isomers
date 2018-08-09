@@ -1,0 +1,64 @@
+<div class="project-chooser">
+    <div class="create-new-project row col-sm-12">
+        <div class="new-project-heading col-sm-12 dark-grey-heading-bold"><text-outlet key="ProjectName"></text-outlet></div>
+        <input type="text" #projectname class="project-name-input" placeholder="Project Name" />
+        <div class="project-launch">
+            <div class="project-launch-btn" [class.disabled]="!projectname.value" (click)=" projectname.value && selectProject(projectname.value, true)"></div>
+            <span class="errormsg" *ngIf="projectExistsError"><text-outlet key="ProjectAlreadyExists!"></text-outlet></span>
+        </div>
+    </div>
+    <div class="recent-projects" *ngIf="projectsCount > 0">
+        <div class="project-heading dark-blue-heading">
+            <text-outlet key="Projects"></text-outlet>
+        </div>
+        <div class="recent-projects-container col-sm-12 p-0">
+            <div class="project col-sm" *ngFor="let project of arrProjects">
+                <im-project class="col-sm-12 p-0" [project]="project" (onSelect)="selectProject(project.getName())" (onDelete)="showDeleteProjectAlert(project.getName())" [class.active]="projectId == project.getName()"></im-project>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" bsModal #warningModal="bs-modal" [config]="{backdrop: 'static', keyboard: false}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left"><text-outlet key="Warning"></text-outlet></h4>
+        <!-- <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        <p><text-outlet key="ProjectExistsWarningMessage"></text-outlet></p>
+
+        <div class="buttons">
+        <div class="btn btn-primary" (click)="selectProject(projectname.value)">Continue</div>
+        <div class="btn btn-default" (click)="warningModal.hide()">Cancel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" bsModal #deleteProjectModal="bs-modal" [config]="{backdrop: 'static', keyboard: false}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left"><text-outlet key="Warning"></text-outlet></h4>
+        <!-- <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        <p><text-outlet key="DeleteProjectWarningMessage"></text-outlet></p>
+
+        <div class="buttons">
+        <div class="btn btn-danger" (click)="deleteProject(projectIdForDeletion)">Delete</div>
+        <div class="btn btn-default" (click)="deleteProjectModal.hide()">Cancel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

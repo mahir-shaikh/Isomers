@@ -1,0 +1,137 @@
+.report-plan
+    background url("../../../../assets/images/reports-background.jpg") no-repeat
+    background-size cover
+    background-position center
+    height calc(100% - 104px)
+    width 100%
+    position relative
+    overflow auto
+    overflow auto
+    padding 20px 0
+    @media screen and (max-width 992px)
+        height calc(100% - 134px)
+    &-heading
+        padding 0
+        .report-icon
+            font-size 1.25rem
+            padding-right 5px
+        &-text
+            padding 15px 0
+            padding-left 20px
+            background linear-gradient(270deg, #00ADEE 0%, #034EA1 91%)
+            background -moz-linear-gradient(270deg, #00ADEE 0%, #034EA1 91%)
+            background -webkit-linear-gradient(270deg, #00ADEE 0%, #034EA1 91%)
+            background -o-linear-gradient(270deg, #00ADEE 0%, #034EA1 91%)
+            margin 0
+            color #FFF
+    &-container
+        background-color rgba(255,255,255,0.8)
+        .row
+            margin 0
+        .report-plan
+            &-details
+                &-container
+                    padding 0
+        .report-summary-chart
+            padding 0
+            &.summary-table-chart
+                .toggle-scenario-button
+                    position absolute
+                    right 0px
+                    top 7px
+                    padding 7px
+                    font-size 12px
+                    background-color #034EA1
+                    color #fff
+                    cursor pointer                    
+                .summary-table-chart-title
+                    padding-bottom 5px
+                    font-size 1.125rem
+                    color #034EA1
+                    border-bottom 2px solid #034EA1
+                    font-weight 500
+                    padding-top 15px
+                .summary-table-data
+                    padding 15px 0
+                    font-weight 500
+                    .headings
+                        border 1px dotted
+                        .heading
+                            color #034EA1
+                            font-size 1rem
+                            border-right 1px dotted
+                            padding 6px
+                            text-align center
+                            &:first-child
+                                text-align left
+                            &:last-child
+                                border-right 0
+                    .data-row
+                        border 1px dotted
+                        .heading-column
+                            border-right 1px dotted
+                            padding 6px
+                        .data-content
+                            text-align center
+                            border-right 1px dotted
+                            padding 6px
+                            &:last-child
+                                border-right 0
+                        &:nth-child(even)
+                            border-bottom 0
+                            border-top 0
+                        &:last-child
+                            border-bottom 1px dotted
+            &.epv-chart
+                padding-right 15px
+                padding-top 10px
+                .epv-chart-title
+                    padding-bottom 10px
+                    color #034EA1
+                    font-weight 500
+                    text-align center
+            &.discounted-chart
+                padding-top 10px
+                .discounted-chart-title
+                    padding-bottom 10px
+                    color #034EA1
+                    font-weight 500
+                    text-align center
+        .report-scenario-charts
+            margin 15px 0px
+            .report-scenario-1,.report-scenario-2,.report-scenario-3
+                width 100%
+                margin-bottom 15px
+                .scenario-table-chart-data
+                    margin-top 15px
+                .scenario-table-chart-title
+                    padding 10px
+                    color #FFF
+                    background-color #034EA1
+                    font-size 1.125rem
+                    font-weight 500
+                    cursor pointer
+            .report-scenario-chart
+                padding 0
+                padding-top 15px
+                position relative
+                overflow hidden
+                .scenario-chart-title
+                    padding 10px
+                    float left
+                    width 100%
+                    top 15px
+                    z-index 1
+                    color #034EA1
+                    border-bottom 2px solid #034EA1
+                    font-size 1rem
+                    font-weight 500
+                    margin-bottom 5px
+                    .collapse-chart
+                        float right
+                    & ~ .hideChart
+                        display none
+                &.scenario-chart-3
+                    padding-bottom 15px
+            .animated
+                margin-top 40px

@@ -1,0 +1,37 @@
+.planningTool
+    input
+        width 100%
+        max-width 96px
+input
+    background #FFF
+    border 1px solid #6d6e70
+    width 100% 
+    padding 2px 10px
+    border-radius 0
+    text-align left
+    height 35px
+    font-size 0.875rem
+    &:active,&:focus
+        outline none
+        color #fff
+        background-color #034ea1
+        
+:host-context(.calc-input)
+    input {
+        color #fff
+        background-color #00c3ff
+        text-align center
+        border-radius 5px
+        border-color #00c3ff
+    }
+    
+:host-context(.team-name-input)
+    input{
+        width 335px
+    }
+    
+:host(.disabled)
+    input
+        background-color #6D6E70
+        color #fff
+        pointer-events none

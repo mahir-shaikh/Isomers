@@ -1,0 +1,173 @@
+<div class="action-plan animated fadeInDown">
+    <div class="action-plan-heading container">
+        <div class="action-plan-heading-text">
+            <div class="row">
+                <div class="col-sm-11">
+                    <div class="action-icon fa fa-cogs"></div>
+                    <text-outlet key="CommitToAction"></text-outlet>
+                </div>
+                <div class="col-sm-1 email-icon-container">
+                    <div class="email-icon" sendemail (click)="showEmailModal()"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="action-plan-container container">
+        <div class="action-plan-details row">
+            <div class="col-sm-12 action-plan-details-container">
+                <developmentplandetails [readOnly]="true"></developmentplandetails>
+            </div>
+        </div>
+        <div class="action-plan-hypothesis">
+            <div class="col-sm-12 action-plan-hypothesis-container row">
+                <div class="action-plan-hypothesis-heading col-sm-12 row">
+                    <div class="col-sm-3">
+                        <span class="hypothesis-text">
+                            <text-outlet key="Hypothesis"></text-outlet>
+                        </span>
+                    </div>
+                    <div class="col-sm-2 action-plan-hypothesis-heading-column">
+                        <text-outlet key="Validated"></text-outlet>
+                    </div>
+                    <div class="col-sm-7 action-plan-hypothesis-heading-column">
+                        <text-outlet key="FurtherInsights"></text-outlet>
+                    </div>
+                </div>
+                <div class="action-plan-hypothesis-data col-sm-12 row">
+                    <div class="col-sm-3 action-plan-hypothesis-data-content">
+                        <calc-outlet ref="tlInputPlanQ1Metric1"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 action-plan-hypothesis-data-content">
+                        <calc-dropdown [items]="['Yes', 'No']" ref="tlInputActionAsExpected4"></calc-dropdown>
+                    </div>
+                    <div class="col-sm-7 action-plan-hypothesis-data-content">
+                        <textareabox [textareaRows]="1" ref="tlInputActionAsExpectedInsight4"></textareabox>
+                    </div>
+                </div>
+                <div class="action-plan-hypothesis-data col-sm-12 row">
+                    <div class="col-sm-3 action-plan-hypothesis-data-content">
+                        <calc-outlet ref="tlInputPlanQ1Metric2"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 action-plan-hypothesis-data-content">
+                        <calc-dropdown [items]="['Yes', 'No']" ref="tlInputActionAsExpected5"></calc-dropdown>
+                    </div>
+                    <div class="col-sm-7 action-plan-hypothesis-data-content">
+                        <textareabox [textareaRows]="1" ref="tlInputActionAsExpectedInsight5"></textareabox>
+                    </div>
+                </div>
+                <div class="action-plan-hypothesis-data col-sm-12 row">
+                    <div class="col-sm-3 action-plan-hypothesis-data-content">
+                        <calc-outlet ref="tlInputPlanQ1Metric3"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 action-plan-hypothesis-data-content">
+                        <calc-dropdown [items]="['Yes', 'No']" ref="tlInputActionAsExpected6"></calc-dropdown>
+                    </div>
+                    <div class="col-sm-7 action-plan-hypothesis-data-content">
+                        <textareabox [textareaRows]="1" ref="tlInputActionAsExpectedInsight6"></textareabox>
+                    </div>
+                </div>
+                <div class="action-plan-hypothesis-data col-sm-12 row">
+                    <div class="col-sm-3 action-plan-hypothesis-data-content">
+                        <calc-outlet ref="tlInputPlanQ4Assumption1"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 action-plan-hypothesis-data-content">
+                        <calc-dropdown [items]="['Yes', 'No']" ref="tlInputActionAsExpected1"></calc-dropdown>
+                    </div>
+                    <div class="col-sm-7 action-plan-hypothesis-data-content">
+                        <textareabox [textareaRows]="1" ref="tlInputActionAsExpectedInsight1"></textareabox>
+                    </div>
+                </div>
+                <div class="action-plan-hypothesis-data col-sm-12 row">
+                    <div class="col-sm-3 action-plan-hypothesis-data-content">
+                        <calc-outlet ref="tlInputPlanQ4Assumption2"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 action-plan-hypothesis-data-content">
+                        <calc-dropdown [items]="['Yes', 'No']" ref="tlInputActionAsExpected2"></calc-dropdown>
+                    </div>
+                    <div class="col-sm-7 action-plan-hypothesis-data-content">
+                        <textareabox [textareaRows]="1" ref="tlInputActionAsExpectedInsight2"></textareabox>
+                    </div>
+                </div>
+                <div class="action-plan-hypothesis-data col-sm-12 row">
+                    <div class="col-sm-3 action-plan-hypothesis-data-content">
+                        <calc-outlet ref="tlInputPlanQ4Assumption3"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 action-plan-hypothesis-data-content">
+                        <calc-dropdown [items]="['Yes', 'No']" ref="tlInputActionAsExpected3"></calc-dropdown>
+                    </div>
+                    <div class="col-sm-7 action-plan-hypothesis-data-content">
+                        <textareabox [textareaRows]="1" ref="tlInputActionAsExpectedInsight3"></textareabox>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="action-plan-commitment">
+            <div class="col-sm-12 action-plan-commitment-container row">
+                <div class="action-plan-commitment-heading col-sm-12 row">
+                    <div class="col-sm-3">
+                        <span class="commitment-text">
+                            <text-outlet key="Commitment"></text-outlet>
+                        </span>
+                    </div>
+                    <div class="col-sm-2 action-plan-commitment-heading-column">
+                        <text-outlet key="IndividualAccountable"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 action-plan-commitment-heading-column">
+                        <text-outlet key="ExpectedCompletionDate"></text-outlet>
+                    </div>
+                    <div class="col-sm-4 action-plan-commitment-heading-column">
+                        <text-outlet key="ExpectedOutcome"></text-outlet>
+                    </div>
+                </div>
+                <div class="action-plan-commitment-data col-sm-12 row">
+                    <commitmentrow *ngFor="let commitment of commitmentrowArray; let i = index;"
+                    [commitmentRowNo]="i"></commitmentrow>
+                </div>
+                <div class="action-plan-commitment-data col-sm-12 row">
+                    <div class="btn btn-primary commitment-row-button" (click)="!disableCommitmentButton && onCommitmentRowAdd()" [class.disabled]="disableCommitmentButton">Add Row</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div bsModal #emailModal="bs-modal" class="modal email-modal fadeInUp delay-5" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', keyboard: false}">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body eventBody">
+        <button type="button" class="close" aria-label="Close" (click)="emailModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="email-container">
+            <div class="email-to-subject-container row">
+                <div class="col-sm-2 email-icon-container">
+                    <div class="email-icon"></div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="email-to-container">
+                        <div class="row">
+                            <label><text-outlet key="EmailTo"></text-outlet></label>
+                            <input type="email" [(ngModel)]="emailTo" (blur)="validateEmail()" />
+                            <div class="email-error-message">{{showError}}</div>
+                        </div>
+                    </div>
+                    <div class="email-subject-container">
+                        <div class="row">
+                            <label><text-outlet key="EmailSubject"></text-outlet></label>
+                            <input type="text" [(ngModel)]="emailSubject" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="email-body-container">
+                <textarea [(ngModel)]="emailBody" class="content-textarea" rows="15"></textarea>
+            </div>
+        </div>
+        <div class="footer email-modal-footer">
+            <button type="button" class="submit btn btn-primary" aria-label="Close" [class.disabled]="allowSubmit" (click)=" allowSubmit ? null : onSubmitEmailModal()">
+              <span aria-hidden="true">Submit</span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,194 @@
+<div class="report-plan animated fadeInDown">
+    <div class="report-plan-heading container">
+        <div class="report-plan-heading-text">
+            <div class="report-icon fa fa-bar-chart"></div>
+            <text-outlet key="ComparisionReport"></text-outlet>
+        </div>
+    </div>
+    <div class="report-plan-container container">
+        <div class="report-plan-details row">
+            <div class="col-sm-12 report-plan-details-container">
+                <developmentplandetails [readOnly]="true"></developmentplandetails>
+            </div>
+        </div>
+        <div class="report-summary-charts row">
+            <div class="col-sm-12 report-summary-chart summary-table-chart">
+                <div class="summary-table-chart-title">
+                    <text-outlet key="Summary"></text-outlet>
+                    <div class="toggle-scenario-button">
+                        <text-outlet key="HideScenario2and3" (click)="toggleAllScenarios()" *ngIf="toggleShowAllScenarios"></text-outlet>
+                        <text-outlet key="ShowScenario2and3" (click)="toggleAllScenarios()" *ngIf="!toggleShowAllScenarios"></text-outlet>
+                    </div>
+                </div>
+                <div class="summary-table-data">
+                    <div class="headings row">
+                        <div class="col-sm heading"></div>
+                        <div class="col-sm heading"><text-outlet key="Scenario1"></text-outlet></div>
+                        <div class="col-sm heading" *ngIf="!hideSeries.length"><text-outlet key="Scenario2"></text-outlet></div>
+                        <div class="col-sm heading" *ngIf="!hideSeries.length"><text-outlet key="Scenario3"></text-outlet></div>
+                    </div>
+                    <div class="row data-row roi-row">
+                        <div class="col-sm heading-column"><text-outlet key="Metric1"></text-outlet></div>
+                        <div class="col-sm data-content"><calc-outlet ref="tlOutputReportSummaryScenario1ROI" foramt="0.0%"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario2ROI" foramt="0.0%"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario3ROI" foramt="0.0%"></calc-outlet></div>
+                    </div>
+                    <div class="row data-row epv-row">
+                        <div class="col-sm heading-column"><text-outlet key="Metric2"></text-outlet></div>
+                        <div class="col-sm data-content"><calc-outlet ref="tlOutputReportSummaryScenario1EPV" format="($0,0a)"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario2EPV" format="($0,0a)"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario3EPV" format="($0,0a)"></calc-outlet></div>
+                    </div>
+                    <div class="row data-row npv-row">
+                        <div class="col-sm heading-column"><text-outlet key="Metric3"></text-outlet></div>
+                        <div class="col-sm data-content"><calc-outlet ref="tlOutputReportSummaryScenario1NPV" format="($0,0a)"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario2NPV" format="($0,0a)"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario3NPV" format="($0,0a)"></calc-outlet></div>
+                    </div>
+                    <div class="row data-row peak-sales-row">
+                        <div class="col-sm heading-column"><text-outlet key="Metric4"></text-outlet></div>
+                        <div class="col-sm data-content"><calc-outlet ref="tlOutputReportSummaryScenario1PeakSales" format="($0,0a)"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario2PeakSales" format="($0,0a)"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario3PeakSales" format="($0,0a)"></calc-outlet></div>
+                    </div>
+                    <div class="row data-row launch-date-row">
+                        <div class="col-sm heading-column"><text-outlet key="Metric5"></text-outlet></div>
+                        <div class="col-sm data-content"><calc-outlet ref="tlOutputReportSummaryScenario1LaunchDate"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario2LaunchDate"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario3LaunchDate"></calc-outlet></div>
+                    </div>
+                    <div class="row data-row rd-cost-row">
+                        <div class="col-sm heading-column"><text-outlet key="Metric6"></text-outlet></div>
+                        <div class="col-sm data-content"><calc-outlet ref="tlOutputReportSummaryScenario1RnDCost" format="($0,0a)"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario2RnDCost" format="($0,0a)"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario3RnDCost" format="($0,0a)"></calc-outlet></div>
+                    </div>
+                    <div class="row data-row pos-row">
+                        <div class="col-sm heading-column"><text-outlet key="Metric7"></text-outlet></div>
+                        <div class="col-sm data-content"><calc-outlet ref="tlOutputReportSummaryScenario1POS" format="0.0%"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario2POS" format="0.0%"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario3POS" format="0.0%"></calc-outlet></div>
+                    </div>
+                    <div class="row data-row breakeven-row">
+                        <div class="col-sm heading-column"><text-outlet key="PrintBreakeven"></text-outlet></div>
+                        <div class="col-sm data-content"><calc-outlet ref="tlOutputReportSummaryScenario1Breakeven"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario2Breakeven"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario3Breakeven"></calc-outlet></div>
+                    </div>
+                    <div class="row data-row irr-row">
+                        <div class="col-sm heading-column"><text-outlet key="IRR"></text-outlet></div>
+                        <div class="col-sm data-content"><calc-outlet ref="tlOutputReportSummaryScenario1IRR" format="0.0%"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario2IRR" format="0.0%"></calc-outlet></div>
+                        <div class="col-sm data-content" *ngIf="!hideSeries.length"><calc-outlet ref="tlOutputReportSummaryScenario3IRR" format="0.0%"></calc-outlet></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 report-summary-chart epv-chart">
+                <div class="epv-chart-title"><text-outlet key="EPVChartTitle"></text-outlet></div>
+                <div>
+                    <basiccolumn #epvChart
+                        rangeRef="[tlOutputGraphsScenario1EPV, tlOutputGraphsScenario2EPV, tlOutputGraphsScenario3EPV]"
+                        seriesLabels="[Scenario1, Scenario2, Scenario3]"
+                        [numberFormat]="'$0.0a'" [hideSeries]="hideSeries">
+                    </basiccolumn>
+                </div>
+            </div>
+            <div class="col-sm-6 report-summary-chart discounted-chart">
+                <div class="discounted-chart-title"><text-outlet key="DiscountedChartTitle"></text-outlet></div>
+                <div>
+                    <basicline #discountedChart
+                        [rangeref]="discountedChartData.toString()"
+                        [serieslabels]="discountedChartSeries.toString()"
+                        categorylabels="1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+                        numberformat="$0.0a"
+                        [chartoptions]='chartOptions' [hideSeries]="hideSeries">
+                    </basicline>
+                </div>
+            </div>
+        </div>
+        <div class="report-scenario-charts row">
+            <div class="report-scenario-1">
+                <div class="scenario-table-chart-title" (click)="onCollapseChart1()">
+                    <text-outlet key="Scenario1"></text-outlet>
+                    <span class="collapse-chart pull-right fa" [class.fa-angle-down]="!expandChart1" [class.fa-angle-up]="expandChart1" ></span>
+                </div>
+                <div class="scenario-table-chart-data" [class.collapse]="!expandChart1">
+                    <div class="scenario-table">
+                        <scenariotable scenarioId="1"></scenariotable>
+                    </div>            
+                    <div class="col-sm-12 report-scenario-chart scenario-chart-1">
+                        <div class="scenario-chart-title">
+                            <text-outlet key="ScenarioChart1"></text-outlet>                            
+                        </div>
+                        <div  class="animated"> <!-- [class.hideChart]="!expandChart1" --> 
+                        <!-- [class.slideOutUp]="!expandChart1" [class.slideInDown]="expandChart1"> -->
+                            <im-chart type="combination" 
+                                [seriesOptions]="seriesDataScenario1"
+                                plotOption="stackedcolumn"
+                                serieslabels="SalesMarketing, ResearchDevelopment, COGS, Revenues, OperatingMargin"
+                                categorylabels="[tlOutputReportSummaryScenario1LaunchYear1,tlOutputReportSummaryScenario1LaunchYear2,tlOutputReportSummaryScenario1LaunchYear3,tlOutputReportSummaryScenario1LaunchYear4,tlOutputReportSummaryScenario1LaunchYear5,tlOutputReportSummaryScenario1LaunchYear6,tlOutputReportSummaryScenario1LaunchYear7,tlOutputReportSummaryScenario1LaunchYear8,tlOutputReportSummaryScenario1LaunchYear9,tlOutputReportSummaryScenario1LaunchYear10]"
+                                yAxisTitle="Million" categoryFormat="0" [numberFormat]="'$0,0a'">
+                            </im-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="report-scenario-2" *ngIf="!hideSeries.length">
+                <div class="scenario-table-chart-title" (click)="onCollapseChart2()">
+                    <text-outlet key="Scenario2"></text-outlet>
+                    <span class="collapse-chart pull-right fa" [class.fa-angle-down]="!expandChart2" [class.fa-angle-up]="expandChart2" ></span>
+                </div>
+                <div class="scenario-table-chart-data" [class.collapse]="!expandChart2">
+                    <div>
+                        <scenariotable scenarioId="2"></scenariotable>
+                    </div> 
+                    <div class="col-sm-12 report-scenario-chart scenario-chart-2">
+                        <div class="scenario-chart-title">
+                            <text-outlet key="ScenarioChart2"></text-outlet>
+                            
+                        </div>
+                        <div  class="animated"><!--  [class.hideChart]="!expandChart2" > -->
+                        <!-- [class.slideOutUp]="!expandChart2" [class.slideInDown]="expandChart2"> -->
+                            <im-chart type="combination" 
+                                [seriesOptions]="seriesDataScenario2"
+                                plotOption="stackedcolumn"
+                                serieslabels="SalesMarketing, ResearchDevelopment, COGS, Revenues, OperatingMargin"
+                                categorylabels="[tlOutputReportSummaryScenario2LaunchYear1,tlOutputReportSummaryScenario2LaunchYear2,tlOutputReportSummaryScenario2LaunchYear3,tlOutputReportSummaryScenario2LaunchYear4,tlOutputReportSummaryScenario2LaunchYear5,tlOutputReportSummaryScenario2LaunchYear6,tlOutputReportSummaryScenario2LaunchYear7,tlOutputReportSummaryScenario2LaunchYear8,tlOutputReportSummaryScenario2LaunchYear9,tlOutputReportSummaryScenario2LaunchYear10]"
+                                yAxisTitle="Million" categoryFormat="0" [numberFormat]="'$0,0a'">
+                            </im-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div  class="report-scenario-3" *ngIf="!hideSeries.length">
+                <div class="scenario-table-chart-title" (click)="onCollapseChart3()">
+                    <text-outlet key="Scenario3"></text-outlet>
+                    <span class="collapse-chart pull-right fa" [class.fa-angle-down]="!expandChart3" [class.fa-angle-up]="expandChart3" ></span>
+                </div>
+                <div class="scenario-table-chart-data" [class.collapse]="!expandChart3">
+                    <div>
+                        <scenariotable scenarioId="3"></scenariotable>
+                    </div> 
+                    <div class="col-sm-12 report-scenario-chart scenario-chart-3">
+                        <div class="scenario-chart-title" >
+                            <text-outlet key="ScenarioChart3"></text-outlet>
+                            
+                        </div>
+                        <div  class="animated"> <!-- [class.hideChart]="!expandChart3" > -->
+                        <!-- [class.slideOutUp]="!expandChart3" [class.slideInDown]="expandChart3"> -->
+                            <im-chart type="combination" 
+                                [seriesOptions]="seriesDataScenario3"
+                                plotOption="stackedcolumn"
+                                serieslabels="SalesMarketing, ResearchDevelopment, COGS, Revenues, OperatingMargin"
+                                categorylabels="[tlOutputReportSummaryScenario3LaunchYear1,tlOutputReportSummaryScenario3LaunchYear2,tlOutputReportSummaryScenario3LaunchYear3,tlOutputReportSummaryScenario3LaunchYear4,tlOutputReportSummaryScenario3LaunchYear5,tlOutputReportSummaryScenario3LaunchYear6,tlOutputReportSummaryScenario3LaunchYear7,tlOutputReportSummaryScenario3LaunchYear8,tlOutputReportSummaryScenario3LaunchYear9,tlOutputReportSummaryScenario3LaunchYear10]"
+                                yAxisTitle="Million" categoryFormat="0" [numberFormat]="'$0,0a'">
+                            </im-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

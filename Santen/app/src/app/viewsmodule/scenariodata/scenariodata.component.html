@@ -1,0 +1,941 @@
+ <article class="content-div clearfix scenario-data animated fadeIn">
+    <button class="copy-button btn" *ngIf="activeNo != 0" (click)="copy()">
+        <span class="fa fa-copy"></span>
+        <text-outlet key="CopyBase"></text-outlet>
+    </button>
+    <div class="scenario-decisions">
+        <div class="development-plans row">
+            <div class="development-plans-heading">
+                <div class="development-plans-text">
+                    <div class="development-plans-icon"></div>
+                    <text-outlet key="DevelopmentPlan"></text-outlet>
+                </div>
+                <notes [noteRef]="'tlInputScenario'+scenarioId+'Notes1'" [notesTop]="15"></notes>
+            </div>
+
+            <div class="col-sm-9">
+                
+                <div class="clearfix top-row row">
+                    
+                    <div class="metric col-sm-4">
+                        <text-outlet key="DevelopmentPlan"></text-outlet>    
+                    </div>
+                    <div class="metric col-sm-2">
+                        <text-outlet key="R0"></text-outlet>
+                    </div>
+                    <div class="metric col-sm-2">
+                        <text-outlet key="P1"></text-outlet>
+                    </div>
+                    <div class="metric col-sm-2">
+                        <text-outlet key="P2"></text-outlet>
+                    </div>
+                    <div class="metric col-sm-2">
+                        <text-outlet key="P3"></text-outlet>
+                    </div>
+                </div>
+
+                <div class="scenario-decisions-section clearfix">
+                    <!--1st row-->
+                    <div class="content-row base-type row first-row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipAdditionalBioMarkerDiag"></my-tooltip>
+                                <text-outlet key="AdditionalBioMarkerDiag"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 padding-bottom-15 research-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="['0','2','5']" [ref]="'tlInputScenario'+scenarioId+'AddBiomarker'"></calc-dropdown>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">
+                            <div class="data-value-container">
+                            </div>                            
+                        </div>
+                        <div class="col-sm-2 phase2-data">
+                            <div class="data-value-container">
+                            </div>                            
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <!--2nd row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipFormulationAdministration"></my-tooltip>
+                                <text-outlet key="FormulationAdministration"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="['Administration1','Administration2','Administration3']" [ref]="'tlInputScenario'+scenarioId+'Administration'"></calc-dropdown>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">
+                            <div class="data-value-container">
+                            </div>                            
+                        </div>
+                        <div class="col-sm-2 phase2-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--3rd row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipTrialSize"></my-tooltip>
+                                <text-outlet key="TrialSize"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="DATA_LIST_SIZE_PH1" [ref]="'tlInputScenario'+scenarioId+'TrialSizePh1'"></calc-dropdown>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase2-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="DATA_LIST_SIZE_PH2" [ref]="'tlInputScenario'+scenarioId+'TrialSizePh2'"></calc-dropdown>
+                            </div>                            
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="DATA_LIST_SIZE_PH3" [ref]="'tlInputScenario'+scenarioId+'TrialSizePh3'"></calc-dropdown>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <!--4th row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipChangeInObservationPeriod"></my-tooltip>
+                                <text-outlet key="ChangeInObservationPeriod"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="changeInObservation" [ref]="'tlInputScenario'+scenarioId+'ObservationPh1'"></calc-dropdown>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase2-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="changeInObservation" [ref]="'tlInputScenario'+scenarioId+'ObservationPh2'"></calc-dropdown>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="changeInObservation" [ref]="'tlInputScenario'+scenarioId+'ObservationPh3'"></calc-dropdown>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--5th row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container ">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipMultinationalTrials"></my-tooltip>
+                                <text-outlet key="MultinationalTrials"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">   
+                            <div class="data-value-container">   
+                            </div>              
+                        </div>
+                        <div class="col-sm-2 phase2-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="['Local','Japan/US']" [ref]="'tlInputScenario'+scenarioId+'MNTrialsPh2'"></calc-dropdown>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="['Local','Japan/US']" [ref]="'tlInputScenario'+scenarioId+'MNTrialsPh3'"></calc-dropdown>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--6th row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipAdditionalIndicationsStudy"></my-tooltip>
+                                <text-outlet key="AdditionalIndicationsStudy"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">
+                            <div class="data-value-container"> 
+                            </div>                   
+                        </div>
+                        <div class="col-sm-2 phase2-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="['Yes','No']" [ref]="'tlInputScenario'+scenarioId+'AddIndication'"></calc-dropdown>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--7th row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipDrugDeliveryFrequency"></my-tooltip>
+                                <text-outlet key="DrugDeliveryFrequency"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">
+                            <div class="data-value-container">
+                            </div>                    
+                        </div>
+                        <div class="col-sm-2 phase2-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="['Low','Medium','High']" [ref]="'tlInputScenario'+scenarioId+'DDFrequency'"></calc-dropdown>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--8th row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipPhase2Study"></my-tooltip>
+                                <text-outlet key="Phase2Study"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data"> 
+                            <div class="data-value-container"> 
+                            </div>                  
+                        </div>
+                        <div class="col-sm-2 phase2-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="DATA_LIST_INDICATION" [ref]="'tlInputScenario'+scenarioId+'Ph2bStudy'"></calc-dropdown>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--9th row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipPrimaryEndPointsMetNo"></my-tooltip>
+                                <text-outlet key="PrimaryEndPointsMetNo"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">
+                            <div class="data-value-container"> 
+                            </div>                   
+                        </div>
+                        <div class="col-sm-2 phase2-data"> 
+                            <div class="data-value-container"> 
+                            </div>                  
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="['1','2']" [ref]="'tlInputScenario'+scenarioId+'PrimaryEndpoint'"></calc-dropdown>
+                            </div>                   
+                        </div>
+                    </div>
+
+                    <!--10th row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipSecondaryEndPointsMetNo"></my-tooltip>
+                                <text-outlet key="SecondaryEndPointsMetNo"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">  
+                            <div class="data-value-container"> 
+                            </div>                 
+                        </div>
+                        <div class="col-sm-2 phase2-data"> 
+                            <div class="data-value-container">
+                            </div>                   
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="['1','2']" [ref]="'tlInputScenario'+scenarioId+'SecondaryEndpoint'"></calc-dropdown>
+                            </div>               
+                        </div>
+                    </div>
+
+                    <!--11th row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipComparatorType"></my-tooltip>
+                                <text-outlet key="ComparatorType"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">
+                            <div class="data-value-container">
+                            </div>                    
+                        </div>
+                        <div class="col-sm-2 phase2-data">
+                            <div class="data-value-container">
+                            </div>                    
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                                <calc-dropdown [items]="DATA_LIST_COMPARATOR" [ref]="'tlInputScenario'+scenarioId+'Comparator'"></calc-dropdown>
+                            </div>        
+                        </div>
+                    </div>
+
+                    <!--12th row-->
+                    <div class="content-row base-type row">
+                        
+                        <div class="form-lebel col-sm-4">
+                            <div class="data-value-container">
+                                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipRegulatorySuccess"></my-tooltip>
+                                <text-outlet key="RegulatorySuccess"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 research-data">
+                            <div class="data-value-container">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 phase1-data">
+                            <div class="data-value-container">
+                            </div>                    
+                        </div>
+                        <div class="col-sm-2 phase2-data"> 
+                            <div class="data-value-container">
+                            </div>                   
+                        </div>
+                        <div class="col-sm-2 phase3-data">
+                            <div class="data-value-container">
+                                <calc-input [ref]="'tlInputScenario'+scenarioId+'RegulatorySuccess'" [min]="0" [max]="100" step="1" format="0%" scaler="100"></calc-input>                    
+                            </div>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notes-area col-sm-3">
+                
+            </div>
+            <div class="col-sm-12 bottom-section">
+                    <!--13th row-->
+                    <div class="content-row base-type row">  
+                        <div class="col-sm-9 row">                      
+                            <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipPTS"></my-tooltip>
+                                    <text-outlet key="PTS"></text-outlet>
+                                </div>
+                                </div>
+                            <div class="col-sm-2 research-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'ResearchPTS'" [outRef]="'tlOutputScenario'+scenarioId+'ResearchPTS'" outputMin="0" outputMax="1" step="1" scaler="100" format="0%" [class.disabled]="periodNumber >0"></calc-stepper>
+                                    </div>
+                                </div>
+                            <div class="col-sm-2 phase1-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph1PTS'" [outRef]="'tlOutputScenario'+scenarioId+'Ph1PTS'" step="1" scaler="100" outputMin="0" outputMax="1" format="0%" [class.disabled]="periodNumber > 1"></calc-stepper>
+                                    </div>
+                                </div>
+                            <div class="col-sm-2 phase2-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph2PTS'" [outRef]="'tlOutputScenario'+scenarioId+'Ph2PTS'" step="1" format="0%" scaler="100" outputMin="0" outputMax="1" [class.disabled]="periodNumber > 2"></calc-stepper>
+                                    </div>
+                                </div>
+                            <div class="col-sm-2 phase3-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph3PTS'" [outRef]="'tlOutputScenario'+scenarioId+'Ph3PTS'" step="1" format="0%" scaler="100" outputMin="0" outputMax="1" [class.disabled]="periodNumber > 3"></calc-stepper>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="form-lebel col-sm-3">
+                            <div class="data-value-container row">
+                                <text-outlet key="CumulativePOS" class="col-sm"></text-outlet>
+                                <calc-outlet [ref]="'tlOutputScenario'+scenarioId+'CumPOS'" class="col-sm" format="0.0%"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+
+                <!--14th row-->
+                    <div class="content-row base-type row">  
+                        <div class="col-sm-9 row">
+                            <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipTimeRequired"></my-tooltip>
+                                    <text-outlet key="TimeRequired"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 research-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'ResearchTimeReq'" [outRef]="'tlOutputScenario'+scenarioId+'ResearchTimeReq'" step="0.1" format="0.0" outputMin="0" outputMax="20" [class.disabled]="periodNumber > 0"></calc-stepper>
+                                </div>                                        
+                            </div>
+                            <div class="col-sm-2 phase1-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph1TimeReq'" [outRef]="'tlOutputScenario'+scenarioId+'Ph1TimeReq'" step="0.1" format="0.0" outputMin="0" outputMax="20" [class.disabled]="periodNumber > 1"></calc-stepper> 
+                                </div>                   
+                            </div>
+                            <div class="col-sm-2 phase2-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph2TimeReq'" [outRef]="'tlOutputScenario'+scenarioId+'Ph2TimeReq'" step="0.1" format="0.0" outputMin="0" outputMax="20" [class.disabled]="periodNumber > 2"></calc-stepper>
+                                </div>                    
+                            </div>
+                            <div class="col-sm-2 phase3-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph3TimeReq'" [outRef]="'tlOutputScenario'+scenarioId+'Ph3TimeReq'" step="0.1" format="0.0" outputMin="0" outputMax="20" [class.disabled]="periodNumber > 3"></calc-stepper>  
+                                </div>                  
+                            </div>
+                        </div>
+                        <div class="form-lebel col-sm-3">
+                            <div class="data-value-container row">
+                                <text-outlet key="ExpectedLaunchDate" class="col-sm"></text-outlet>
+                                <calc-outlet [ref]="'tlOutputScenario'+scenarioId+'LaunchDate'" class="col-sm" format="0" useRawValue="true"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!--15th row-->
+                    <div class="content-row base-type row">  
+                        <div class="col-sm-9 row"> 
+                            <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipRDCost"></my-tooltip>
+                                    <text-outlet key="RDCost"></text-outlet>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2 research-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'ResearchRnDCost'" [outRef]="'tlOutputScenario'+scenarioId+'ResearchRnDCost'" step="500000" inputFormat="0,0" format="millions" outputMin="0" [class.disabled]="periodNumber > 0"></calc-stepper>
+                                </div>                                        
+                            </div>
+                            <div class="col-sm-2 phase1-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph1RnDCost'" [outRef]="'tlOutputScenario'+scenarioId+'Ph1RnDCost'" step="500000" inputFormat="0,0" format="millions" outputMin="0" [class.disabled]="periodNumber > 1"></calc-stepper> 
+                                </div>                   
+                            </div>
+                            <div class="col-sm-2 phase2-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph2RnDCost'" [outRef]="'tlOutputScenario'+scenarioId+'Ph2RnDCost'" step="500000" inputFormat="0,0" format="millions" outputMin="0" [class.disabled]="periodNumber > 2"></calc-stepper> 
+                                </div>                   
+                            </div>
+                            <div class="col-sm-2 phase3-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph3RnDCost'" [outRef]="'tlOutputScenario'+scenarioId+'Ph3RnDCost'" step="500000" inputFormat="0,0" format="millions" outputMin="0" [class.disabled]="periodNumber > 3"></calc-stepper>
+                                </div>                    
+                            </div>
+                        </div>
+                        <div class="form-lebel col-sm-3">
+                            <div class="data-value-container row">
+                                <text-outlet key="TotalRDExpense" class="col-sm"></text-outlet>
+                                <calc-outlet [ref]="'tlOutputScenario'+scenarioId+'TotRnDCost'" class="col-sm" format="$0.0a"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--16th row-->                    
+                    <div class="content-row base-type row">  
+                        <div class="col-sm-9 row">
+                            <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipFTEsCost"></my-tooltip>
+                                    <text-outlet key="FTEsCost"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 research-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'ResearchFTECost'" [outRef]="'tlOutputScenario'+scenarioId+'ResearchFTECost'" format="millions" inputFormat="0,0" outputMin="0" step="100000" [class.disabled]="periodNumber > 0"></calc-stepper>
+                                </div>                                        
+                            </div>
+                            <div class="col-sm-2 phase1-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph1FTECost'" [outRef]="'tlOutputScenario'+scenarioId+'Ph1FTECost'" format="millions" inputFormat="0,0" outputMin="0" step="100000" [class.disabled]="periodNumber > 1"></calc-stepper>   
+                                </div>                 
+                            </div>
+                            <div class="col-sm-2 phase2-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph2FTECost'" [outRef]="'tlOutputScenario'+scenarioId+'Ph2FTECost'" format="millions" inputFormat="0,0" outputMin="0" step="100000" [class.disabled]="periodNumber > 2"></calc-stepper> 
+                                </div>                   
+                            </div>
+                            <div class="col-sm-2 phase3-data">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Ph3FTECost'" [outRef]="'tlOutputScenario'+scenarioId+'Ph3FTECost'" format="millions" inputFormat="0,0" outputMin="0" step="100000" [class.disabled]="periodNumber > 3"></calc-stepper>  
+                                </div>                  
+                            </div>
+                        </div>
+                        <div class="form-lebel col-sm-3">
+                            <div class="data-value-container row">
+                                <text-outlet key="TotalFteExpense" class="col-sm"></text-outlet>
+                                <calc-outlet [ref]="'tlOutputScenario'+scenarioId+'TotFTEExp'" class="col-sm" format="$0.0a"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+    
+        </div> 
+            <!--*******************************************************************-->
+
+            <div class="business-valuation row">
+                <div class="business-valuation-heading">
+                    <div class="business-valuation-text">
+                        <div class="business-valuation-icon"></div>
+                        <text-outlet key="BusinessValuation"></text-outlet>
+                    </div>
+                    <notes [noteRef]="'tlInputScenario'+scenarioId+'Notes2'" [notesTop]="15"></notes>
+                </div>
+                <div class="col-sm-9 regional-decisions">
+                        <div class="clearfix top-row row">
+                            
+                            <div class="metric col-sm-4">
+                                <div><text-outlet key="RegionalDecisions"></text-outlet></div>
+                            </div>
+
+                            <div class="metric col-sm-2 no-bg region-color-1">
+                                <text-outlet key="Region1"></text-outlet>
+                            </div>
+                            <div class="metric col-sm-2 no-bg region-color-2">
+                                <text-outlet key="Region2"></text-outlet>
+                            </div>
+                            <div class="metric col-sm-2 no-bg region-color-3">
+                                <text-outlet key="Region3"></text-outlet>
+                            </div>
+                            <div class="metric col-sm-2 no-bg region-color-4">
+                                <text-outlet key="Region4"></text-outlet>
+                            </div>
+                        </div>
+
+
+                    <!--1st Row-->
+                        <div class="content-row base-type row first-row">
+                            
+                            <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipEnterRegion"></my-tooltip>
+                                    <text-outlet key="EnterRegion"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-1">
+                                <div class="data-value-container">
+                                    <calc-checkbox [ref]="'tlInputScenario'+scenarioId+'EnterRegion1'" #CheckboxRegion1></calc-checkbox>
+                                </div>
+                                </div>
+                            <div class="col-sm-2 region-color-2">
+                                <div class="data-value-container">
+                                    <calc-checkbox [ref]="'tlInputScenario'+scenarioId+'EnterRegion2'" #CheckboxRegion2></calc-checkbox>
+                                </div>                                
+                            </div>
+                            <div class="col-sm-2 region-color-3">
+                                <div class="data-value-container">
+                                    <calc-checkbox [ref]="'tlInputScenario'+scenarioId+'EnterRegion3'" #CheckboxRegion3></calc-checkbox>
+                                </div>                                
+                            </div>
+                            <div class="col-sm-2 region-color-4">
+                                <div class="data-value-container">
+                                    <calc-checkbox [ref]="'tlInputScenario'+scenarioId+'EnterRegion4'" #CheckboxRegion4></calc-checkbox>
+                                </div>                                
+                            </div>
+                        </div>
+
+
+                        <!--2nd Row-->
+                        <div class="content-row base-type row">
+                            
+                            <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipAddressablePatientPopulation"></my-tooltip>
+                                    <text-outlet key="AddressablePatientPopulation"></text-outlet>
+                                </div>
+                            </div>
+                           <div class="col-sm-2 region-color-1">
+                                <div class="data-value-container">
+                                    <calc-input [ref]="'tlInputScenario'+scenarioId+'PatPopRegion1'" step="1" min="0" format="0,0" max="100000" [IsReadOnly]="!CheckboxRegion1.value" [class.disabled]="!CheckboxRegion1.value"></calc-input>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-2">
+                                <div class="data-value-container">
+                                    <calc-input [ref]="'tlInputScenario'+scenarioId+'PatPopRegion2'" step="1" min="0" format="0,0" max="100000" [IsReadOnly]="!CheckboxRegion2.value" [class.disabled]="!CheckboxRegion2.value"></calc-input>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-3">
+                                <div class="data-value-container">
+                                   <calc-input [ref]="'tlInputScenario'+scenarioId+'PatPopRegion3'" step="1" min="0" format="0,0" max="100000" [IsReadOnly]="!CheckboxRegion3.value" [class.disabled]="!CheckboxRegion3.value"></calc-input>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-4">
+                                <div class="data-value-container">
+                                    <calc-input [ref]="'tlInputScenario'+scenarioId+'PatPopRegion4'" step="1" min="0" format="0,0" max="100000" [IsReadOnly]="!CheckboxRegion4.value" [class.disabled]="!CheckboxRegion4.value"></calc-input>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--3rd Row-->
+                        <div class="content-row base-type row">
+                            
+                            <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipPeakMarketShare"></my-tooltip>
+                                    <text-outlet key="PeakMarketShare"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-1">
+                                <div class="data-value-container">
+                                    <calc-input [ref]="'tlInputScenario'+scenarioId+'PeakMSRegion1'" format="0%" scaler="100" step="1" min="0" max="100" [IsReadOnly]="!CheckboxRegion1.value" [class.disabled]="!CheckboxRegion1.value"></calc-input>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-2">
+                                <div class="data-value-container">
+                                    <calc-input [ref]="'tlInputScenario'+scenarioId+'PeakMSRegion2'" format="0%" scaler="100" step="1" min="0" max="100" [IsReadOnly]="!CheckboxRegion2.value" [class.disabled]="!CheckboxRegion2.value"></calc-input>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-3">
+                                <div class="data-value-container">
+                                    <calc-input [ref]="'tlInputScenario'+scenarioId+'PeakMSRegion3'" format="0%" scaler="100" step="1" min="0" max="100" [IsReadOnly]="!CheckboxRegion3.value" [class.disabled]="!CheckboxRegion3.value"></calc-input>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-4">
+                                <div class="data-value-container">
+                                    <calc-input [ref]="'tlInputScenario'+scenarioId+'PeakMSRegion4'" format="0%" scaler="100" step="1" min="0" max="100" [IsReadOnly]="!CheckboxRegion4.value" [class.disabled]="!CheckboxRegion4.value"></calc-input>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--4th Row-->
+                        <div class="content-row base-type row">
+                            
+                            <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipPricePatientYear"></my-tooltip>
+                                    <text-outlet key="PricePatientYear"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-1">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'PriceRegion1'" [outRef]="'tlOutputScenario'+scenarioId+'PriceRegion1'" scaler="1" step="1" format="0,0" outputMin="0" outputMax="100000" [class.disabled]="!CheckboxRegion1.value"></calc-stepper>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-2">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'PriceRegion2'" [outRef]="'tlOutputScenario'+scenarioId+'PriceRegion2'" scaler="1" step="1" format="0,0" outputMin="0" outputMax="100000" [class.disabled]="!CheckboxRegion2.value"></calc-stepper>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-3">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'PriceRegion3'" [outRef]="'tlOutputScenario'+scenarioId+'PriceRegion3'" scaler="1" step="1" format="0,0" outputMin="0" outputMax="100000" [class.disabled]="!CheckboxRegion3.value"></calc-stepper>   
+                                </div>                                 
+                            </div>
+                            <div class="col-sm-2 region-color-4">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'PriceRegion4'" [outRef]="'tlOutputScenario'+scenarioId+'PriceRegion4'" scaler="1" step="1" format="0,0" outputMin="0" outputMax="100000" [class.disabled]="!CheckboxRegion4.value"></calc-stepper>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--5th Row-->
+                        <div class="content-row base-type row">
+                            
+                            <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipSMPercRev"></my-tooltip>
+                                    <text-outlet key="SMPercRev"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-1">
+                                <div class="data-value-container">
+                                   <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Region1SnM'" [outRef]="'tlOutputScenario'+scenarioId+'Region1SnM'" step="1" format="0%" scaler="100" outputMin="0" outputMax="1" [class.disabled]="!CheckboxRegion1.value"></calc-stepper>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 region-color-2">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Region2SnM'" [outRef]="'tlOutputScenario'+scenarioId+'Region2SnM'" step="1" format="0%" scaler="100" outputMin="0" outputMax="1" [class.disabled]="!CheckboxRegion2.value"></calc-stepper>
+                                </div>                                
+                            </div>
+                            <div class="col-sm-2 region-color-3">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Region3SnM'" [outRef]="'tlOutputScenario'+scenarioId+'Region3SnM'" step="1" format="0%" scaler="100" outputMin="0" outputMax="1" [class.disabled]="!CheckboxRegion3.value"></calc-stepper>
+                                </div>                                
+                            </div>
+                            <div class="col-sm-2 region-color-4">
+                                <div class="data-value-container">
+                                    <calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Region4SnM'" [outRef]="'tlOutputScenario'+scenarioId+'Region4SnM'" step="1" format="0%" scaler="100" outputMin="0" outputMax="1" [class.disabled]="!CheckboxRegion4.value"></calc-stepper>                                    
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                     
+
+                <div class="col-sm-3">
+                    <div class="chart-area">
+                        <div class="chart-area-heading">
+                        <text-outlet key="DonutChartTitle"></text-outlet>
+                        </div>
+
+                        <div class="chart-area-content">
+                            <donut
+                            [rangeRef]="['tlOutputGraphsScenario'+scenarioId+'PeakSalesReg1','tlOutputGraphsScenario'+scenarioId+'PeakSalesReg2','tlOutputGraphsScenario'+scenarioId+'PeakSalesReg3','tlOutputGraphsScenario'+scenarioId+'PeakSalesReg4']"
+                            seriesLabels ="[Region1,Region2,Region3,Region4]"
+                            chartTitle="Metric4"
+                            height="220"
+                            [numberFormat]="'$0,0.0a'" 
+                            ></donut>
+                        </div>
+                    </div>                                         
+                </div>
+
+                <div class="col-sm-12 global-decisions">
+
+                    <div class="clearfix top-row row">                        
+                        <div class="metric">
+                            <text-outlet key="GlobalDecisions"></text-outlet>
+                        </div>                        
+                     </div>
+
+
+                    <!--1st Row-->
+                    <div class="content-row row base-type margin-15 first-row">
+                        <div class="col-sm-9">
+                            <div class="row">
+                            	<div class="form-lebel col-sm-4">
+                                    <div class="data-value-container">
+                                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipAvgPenetrationUptakeRate"></my-tooltip>
+                                    	<text-outlet key="AvgPenetrationUptakeRate"></text-outlet>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 global-value">
+                                    <div class="data-value-container">
+                                   		<calc-stepper [inRef]="'tlInputScenario'+scenarioId+'Penetration'" [outRef]="'tlOutputScenario'+scenarioId+'Penetration'" step="0.01" inputScaler="1" format="0.0%" scaler="100" min="-1" max="1" inputFormat="0.00"></calc-stepper>
+                                    </div>
+                                </div>
+
+                            	<div class="form-lebel col-sm-4">
+                                    <div class="data-value-container">
+                                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipMedicalAffairsEffort"></my-tooltip>
+                                    	<text-outlet key="MedicalAffairsEffort"></text-outlet>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 global-value">
+                                    <div class="data-value-container">
+                                   		 <calc-dropdown [items]="DATA_LIST_FORMULATION" [ref]="'tlInputScenario'+scenarioId+'MAEffort'"></calc-dropdown>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 global-value">
+                            <div class="data-value-container row">
+                                <text-outlet key="PrintBreakeven" class="col-sm"></text-outlet>
+                                <calc-outlet [ref]="'tlOutputScenario'+scenarioId+'Breakeven'" class="col-sm" format="0" useRawValue="true"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--2nd Row-->
+                    <div class="content-row row base-type margin-15">
+                        <div class="col-sm-9">
+                            <div class="row">
+                            	<div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipAvgPatientComplianceRate"></my-tooltip>
+                                	<text-outlet key="AvgPatientComplianceRate"></text-outlet>
+                                </div>
+                                </div>
+                                <div class="col-sm-2 global-value">
+                                <div class="data-value-container">
+                               		<calc-stepper  [inRef]="'tlInputScenario'+scenarioId+'Compliance'" [outRef]="'tlOutputScenario'+scenarioId+'Compliance'" step="1" format="0%" scaler="100" outputMin="0" outputMax="1"></calc-stepper>
+                                </div>
+                                </div>
+
+                                <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipRoyalty"></my-tooltip>
+                                    <text-outlet key="Royalty"></text-outlet>
+                                </div>
+                                </div>
+                                <div class="col-sm-2 global-value">
+                                <div class="data-value-container">
+                                    <calc-input [ref]="'tlInputScenario'+scenarioId+'Royalty'" [min]="0" [max]="100" step="1" format="0%" scaler="100"></calc-input>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 global-value">
+                            <div class="data-value-container row">
+                                <text-outlet key="PrintROI" class="col-sm"></text-outlet>
+                                <calc-outlet [ref]="'tlOutputScenario'+scenarioId+'ROI'" class="col-sm" format="0.0%"></calc-outlet>
+                            </div>
+                        </div>                            
+                    </div>
+
+
+                    <!--3rd Row-->
+                    <div class="content-row row base-type margin-15">
+                        <div class="col-sm-9">
+                            <div class="row">                           
+                            	<div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipDiscountRebatePerc"></my-tooltip>
+                                	<text-outlet key="DiscountRebatePerc"></text-outlet>
+                                </div>
+                                </div>
+                                <div class="col-sm-2 global-value">
+                                <div class="data-value-container">
+                               		<calc-stepper [inRef]="'tlInputScenario'+scenarioId+'DiscountRate'" [outRef]="'tlOutputScenario'+scenarioId+'DiscountRate'" step="1" format="0%" scaler="100" outputMin="0" outputMax="1"></calc-stepper>
+                                </div>
+                                </div>
+
+                                <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipDiscountRateEpv"></my-tooltip>
+                                    <text-outlet key="DiscountRateEpv"></text-outlet>
+                                </div>
+                                </div>
+                                <div class="col-sm-2 global-value">
+                                <div class="data-value-container">
+                                    <calc-input [ref]="'tlInputScenario'+scenarioId+'EPVRate'" [min]="0" [max]="100" step="1" format="0%" scaler="100"></calc-input>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 global-value">
+                            <div class="data-value-container row">
+                                <text-outlet key="PrintEPV" class="col-sm"></text-outlet>
+                                <calc-outlet [ref]="'tlOutputScenario'+scenarioId+'EPV'" class="col-sm" format="$(0.0a)"></calc-outlet>
+                            </div>
+                        </div>      
+                    </div>
+
+
+                    <!--4th Row-->
+                    <div class="content-row row base-type margin-15">
+                        <div class="col-sm-9">
+                            <div class="row">                            
+                            	<div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipAvgCogsPatientYear"></my-tooltip>
+                                	<text-outlet key="AvgCogsPatientYear"></text-outlet>
+                                </div>
+                                </div>
+                                <div class="col-sm-2 global-value">
+                                <div class="data-value-container">
+                               		<calc-stepper [inRef]="'tlInputScenario'+scenarioId+'COGS'" [outRef]="'tlOutputScenario'+scenarioId+'COGS'"scaler="1" step="1" format="0.00" outputMin="0" outputMax="100000"></calc-stepper>
+                                </div>
+                                </div>
+                            
+                                <div class="form-lebel col-sm-4">
+                                <div class="data-value-container">
+                                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipDiscountRateNpv"></my-tooltip>
+                                    <text-outlet key="DiscountRateNpv"></text-outlet>
+                                </div>
+                                </div>
+                                <div class="col-sm-2 global-value">
+                                <div class="data-value-container">
+                                    <calc-input [ref]="'tlInputScenario'+scenarioId+'NPVRate'" [min]="0" [max]="100" step="1" format="0%" scaler="100"></calc-input>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 global-value">
+                            <div class="data-value-container row">
+                                <text-outlet key="PrintNPV" class="col-sm"></text-outlet>
+                                <calc-outlet [ref]="'tlOutputScenario'+scenarioId+'NPV'" class="col-sm" format="$(0.0a)"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 column-chart">
+                    <div class="column-chart-heading">
+                        <div class="column-chart-text">
+                            <div class="column-chart-icon fa fa-bar-chart"></div>
+                            <text-outlet key="ColumnChartTitle"></text-outlet>
+                        </div>
+                    </div>
+                    <div class="chart-area">
+
+                        <div class="chart-area-content">
+                             <basiccolumn 
+                                        [rangeRef]="[['tlOutputGraphsScenario'+scenarioId+'SalesReg1Yr1','tlOutputGraphsScenario'+scenarioId+'SalesReg1Yr2','tlOutputGraphsScenario'+scenarioId+'SalesReg1Yr3','tlOutputGraphsScenario'+scenarioId+'SalesReg1Yr4','tlOutputGraphsScenario'+scenarioId+'SalesReg1Yr5','tlOutputGraphsScenario'+scenarioId+'SalesReg1Yr6','tlOutputGraphsScenario'+scenarioId+'SalesReg1Yr7','tlOutputGraphsScenario'+scenarioId+'SalesReg1Yr8','tlOutputGraphsScenario'+scenarioId+'SalesReg1Yr9','tlOutputGraphsScenario'+scenarioId+'SalesReg1Yr10'] ,['tlOutputGraphsScenario'+scenarioId+'SalesReg2Yr1','tlOutputGraphsScenario'+scenarioId+'SalesReg2Yr2','tlOutputGraphsScenario'+scenarioId+'SalesReg2Yr3','tlOutputGraphsScenario'+scenarioId+'SalesReg2Yr4','tlOutputGraphsScenario'+scenarioId+'SalesReg2Yr5','tlOutputGraphsScenario'+scenarioId+'SalesReg2Yr6','tlOutputGraphsScenario'+scenarioId+'SalesReg2Yr7','tlOutputGraphsScenario'+scenarioId+'SalesReg2Yr8','tlOutputGraphsScenario'+scenarioId+'SalesReg2Yr9','tlOutputGraphsScenario'+scenarioId+'SalesReg2Yr10'],['tlOutputGraphsScenario'+scenarioId+'SalesReg3Yr1','tlOutputGraphsScenario'+scenarioId+'SalesReg3Yr2','tlOutputGraphsScenario'+scenarioId+'SalesReg3Yr3','tlOutputGraphsScenario'+scenarioId+'SalesReg3Yr4','tlOutputGraphsScenario'+scenarioId+'SalesReg3Yr5','tlOutputGraphsScenario'+scenarioId+'SalesReg3Yr6','tlOutputGraphsScenario'+scenarioId+'SalesReg3Yr7','tlOutputGraphsScenario'+scenarioId+'SalesReg3Yr8','tlOutputGraphsScenario'+scenarioId+'SalesReg3Yr9','tlOutputGraphsScenario'+scenarioId+'SalesReg3Yr10'],['tlOutputGraphsScenario'+scenarioId+'SalesReg4Yr1','tlOutputGraphsScenario'+scenarioId+'SalesReg4Yr2','tlOutputGraphsScenario'+scenarioId+'SalesReg4Yr3','tlOutputGraphsScenario'+scenarioId+'SalesReg4Yr4','tlOutputGraphsScenario'+scenarioId+'SalesReg4Yr5','tlOutputGraphsScenario'+scenarioId+'SalesReg4Yr6','tlOutputGraphsScenario'+scenarioId+'SalesReg4Yr7','tlOutputGraphsScenario'+scenarioId+'SalesReg4Yr8','tlOutputGraphsScenario'+scenarioId+'SalesReg4Yr9','tlOutputGraphsScenario'+scenarioId+'SalesReg4Yr10']]" 
+
+                                        [categoryLabels]="['tlOutputReportSummaryScenario'+scenarioId+'LaunchYear1','tlOutputReportSummaryScenario'+scenarioId+'LaunchYear2','tlOutputReportSummaryScenario'+scenarioId+'LaunchYear3','tlOutputReportSummaryScenario'+scenarioId+'LaunchYear4','tlOutputReportSummaryScenario'+scenarioId+'LaunchYear5','tlOutputReportSummaryScenario'+scenarioId+'LaunchYear6','tlOutputReportSummaryScenario'+scenarioId+'LaunchYear7','tlOutputReportSummaryScenario'+scenarioId+'LaunchYear8','tlOutputReportSummaryScenario'+scenarioId+'LaunchYear9','tlOutputReportSummaryScenario'+scenarioId+'LaunchYear10']"
+                                        
+                                        seriesLabels="Region1, Region2, Region3, Region4"
+                                        [numberFormat]="'$0.0a'" 
+                                        categoryFormat="0"
+                                        height="300"
+                                        [chartOptions]='ColumnChartOptions'>
+                            </basiccolumn>
+                        </div>
+                    </div>     
+                </div> 
+
+            </div>
+        
+    </div>
+</article>

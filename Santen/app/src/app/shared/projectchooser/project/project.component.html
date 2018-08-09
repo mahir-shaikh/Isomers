@@ -1,0 +1,30 @@
+<div class="project">
+    <div class="col-sm-8 p-0">
+        <div class="row">
+            <div class="project-name col-sm-12 dark-grey-heading-bold">{{project.getName()}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info-row">
+                <div class="project-modified-date col-sm-7 p-0">Last modified</div>
+                <div class="blue-heading col-sm-5 p-0">{{project.getLastModifiedDate()}}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 info-row">
+                <div class="project-modified-time col-sm-7 p-0">Time</div>
+                <div class="blue-heading col-sm-5 p-0">{{project.getLastModifiedTime()}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2 p-0">
+        <div class="project-launch col-sm-2">
+            <div class="project-launch-btn col-sm" (click)="onSelect.emit();"></div>
+        </div>
+    </div>
+    <div class="col-sm-2 p-0">
+        <div class="project-delete col-sm-2">
+            <div class="project-delete-btn col-sm" (click)="onDelete.emit();"><span class="fa fa-trash-o"></span></div>
+        </div>
+    </div>
+
+</div>

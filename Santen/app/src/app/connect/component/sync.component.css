@@ -1,0 +1,20 @@
+.sync-status {
+  font-family: 'wib-icomoon'
+}
+.sync-status.status-InSync:before {
+  content:'\e941';
+}
+.sync-status.status-OutOfSync:before {
+  content:'\e942';
+}
+.sync-status.status-Syncing:before {
+  content:'\e943';
+}
+.sync-status.status-SyncError:before {
+  content:'\e943';
+  color: #f00;
+}
+.sync-status.status-NetworkError:before {
+  color: #f00;
+  content:'\e944';
+}

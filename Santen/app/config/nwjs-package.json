@@ -1,0 +1,17 @@
+{
+  "name": "WiB Isomer",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "window": {
+    "title": "WiB Isomer",
+    "icon": "btsLogo.png",
+    "toolbar": true,
+    "frame": true,
+    "fullscreen": false,
+    "resizable": true,
+    "kiosk": false,
+    "min_width": 1000,
+    "min_height": 700
+  },
+  "main": "index.html"
+}

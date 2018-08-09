@@ -1,0 +1,264 @@
+:host {
+  display: block;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+input,
+select,
+textarea {
+  color: #000;
+  width: 100%;
+}
+textarea:focus,
+input:focus {
+  color: #00f;
+}
+.scenario-data .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.scenario-decisions {
+  color: #6d6e70;
+  width: 100%;
+  padding: 15px;
+  padding-top: 0px;
+  background-color: rgba(255,255,255,0.8);
+}
+@media screen and (max-width: 1300px) {
+  .scenario-decisions {
+    font-size: 0.85em;
+  }
+}
+.scenario-decisions [class*="col-"] {
+  padding: 0px;
+}
+.scenario-decisions .base-type-heading {
+  text-align: center;
+}
+.scenario-decisions .base-type-heading > text-outlet {
+  font-weight: 500;
+}
+.scenario-decisions .forecast,
+.scenario-decisions .market-share-growth {
+  color: #005495;
+}
+.scenario-decisions .form-lebel {
+  position: relative;
+  font-size: 0.875rem;
+}
+.scenario-decisions .form-lebel > text-outlet {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: middle;
+}
+.scenario-decisions .form-lebel > text-outlet {
+  max-width: calc(100% - 30px);
+  margin-right: 2px;
+  margin-left: 6px;
+}
+.scenario-decisions .form-lebel > my-tooltip .tooltip-icon {
+  padding-top: 1px;
+}
+.scenario-decisions .content-row {
+  margin: 0px;
+  min-height: 30px;
+  flex-wrap: nowrap;
+}
+.scenario-decisions .content-row .col-sm-10.row {
+  padding: 0;
+}
+.scenario-decisions .content-row:before,
+.scenario-decisions .content-row:after {
+  display: table;
+  content: '';
+}
+.scenario-decisions .content-row:after {
+  clear: both;
+}
+.scenario-decisions .top-row {
+  margin-bottom: 5px;
+}
+.scenario-decisions .top-row .col-sm-2 {
+  text-align: center;
+}
+.scenario-decisions .top-row .col-sm-10.row {
+  padding: 0;
+}
+.scenario-decisions .top-row .metric {
+  display: inline-block;
+  color: #005495;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.scenario-decisions .development-plans-heading {
+  color: #034ea1;
+  padding-bottom: 15px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+}
+.scenario-decisions .development-plans-text {
+  padding: 15px 0 5px;
+  color: #034ea1;
+  font-weight: 500;
+  font-size: 1.125rem;
+  border-bottom: 2px solid #034ea1;
+}
+.scenario-decisions .development-plans-text text-outlet {
+  line-height: 35px;
+  vertical-align: text-bottom;
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+.scenario-decisions .development-plans-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background: url("../../../../assets/images/icons/DevPlan.svg") no-repeat;
+  background-size: 28px;
+}
+.scenario-decisions .development-plans .bottom-section {
+  padding: 0px;
+  margin-top: 2px;
+}
+.scenario-decisions .development-plans .bottom-section .col-sm-3 text-outlet {
+  font-weight: 500;
+}
+.scenario-decisions .business-valuation {
+  padding-bottom: 15px;
+}
+.scenario-decisions .business-valuation-heading {
+  color: #034ea1;
+  padding-bottom: 15px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+}
+.scenario-decisions .business-valuation-text {
+  padding: 15px 0 5px;
+  color: #034ea1;
+  font-weight: 500;
+  font-size: 1.125rem;
+  border-bottom: 2px solid #034ea1;
+}
+.scenario-decisions .business-valuation-text text-outlet {
+  line-height: 35px;
+  vertical-align: text-bottom;
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+.scenario-decisions .business-valuation-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background: url("../../../../assets/images/icons/BusinessVal.svg") no-repeat;
+  background-size: 28px;
+}
+.scenario-decisions .business-valuation .global-decisions {
+  margin-top: 10px;
+}
+.scenario-decisions .business-valuation .global-decisions .metric {
+  text-align: left;
+  width: 100%;
+  align-self: flex-end;
+}
+.scenario-decisions .business-valuation .global-decisions .col-sm-3 text-outlet {
+  font-weight: 500;
+}
+.scenario-decisions .business-valuation .regional-decisions .chart-area {
+  border: 1px solid #000;
+}
+.margin-15 {
+  margin-right: -15px !important;
+}
+.padding-bottom-15 {
+  padding-bottom: 15px;
+}
+.first-row .form-lebel .data-value-container {
+  padding-top: 10px;
+}
+.copy-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 45px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.copy-button:hover {
+  color: #f0f0f0;
+}
+.chart-area {
+  position: relative;
+}
+.chart-area-heading {
+  width: 100%;
+  background-color: #6d6e70;
+  color: #fff;
+  padding: 5px 15px;
+  text-align: center;
+}
+.column-chart {
+  padding: 0px;
+  margin-top: 15px;
+}
+.column-chart-heading {
+  color: #034ea1;
+  padding-bottom: 15px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+}
+.column-chart-text {
+  padding: 15px 0 5px;
+  color: #034ea1;
+  font-weight: 500;
+  font-size: 1.125rem;
+  border-bottom: 2px solid #034ea1;
+}
+.column-chart-text text-outlet {
+  line-height: 25px;
+  vertical-align: text-bottom;
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+.column-chart-icon {
+  color: #6d6e70;
+}
+.notes-area {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  font-size: 0.875rem;
+}
+.data-value-container {
+  padding: 5px;
+  height: 100%;
+}
+.form-lebel .data-value-container {
+  display: flex;
+}
+.form-lebel,
+.research-data,
+.phase1-data,
+.phase2-data,
+.phase3-data,
+.region-color-1,
+.region-color-2,
+.region-color-3,
+.region-color-4,
+.global-value {
+  padding: 0 2px 0 0 !important;
+  background-color: rgba(255,255,255,0.8);
+  background-clip: content-box;
+}
+.no-bg {
+  background: none;
+}

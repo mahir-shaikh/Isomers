@@ -1,0 +1,37 @@
+.notes-container
+    position absolute
+    z-index 200
+    // transition: width 0.35s, height 0.35s;
+    overflow hidden
+    .note-textarea-image
+        position absolute
+        right 5px
+        bottom  5px
+        height 63px
+        width 51px
+        &.expand
+            display none
+    .notes-text-row
+        width 100%
+        padding 5px 10px
+        color #FFF
+        cursor pointer
+        background-color #6d6e70
+        &:hover
+            background-color #4d4d4d           
+        .note-text
+            padding-right 20px
+        .fa
+            &.expand
+                position absolute
+                top 5px
+                right 15px
+    textareabox
+        display none
+        &.expand
+            display block
+            
+:host-context(.alignment-and-planning)
+    .notes-container
+        textareabox
+            font-size 0.75rem

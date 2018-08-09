@@ -1,0 +1,83 @@
+.project-chooser
+    height 100%
+    .create-new-project
+        margin 0
+        margin-bottom 25px
+        padding 0 15px
+        input
+            &:focus,
+            &:active
+                &::-webkit-input-placeholder
+                    color #FFF
+        input
+            &:focus,
+            &:active
+                &:-moz-placeholder
+                    color #FFF
+        input
+            &:focus,
+            &:active
+                &::-moz-placeholder
+                    color #FFF
+        input
+            &:focus,
+            &:active
+                &:-ms-input-placeholder
+                    color #FFF
+        .project-launch
+            margin-left 20px
+            &-btn
+                cursor pointer
+                background url("../../../../assets/images/icons/StartBtn.svg") no-repeat
+                background-size cover
+                height 30px
+                width 30px
+                &.disabled
+                    opacity 0.3
+                    cursor default
+            .fa
+                color #00ADEE
+                &:before
+                    font-size 2.5rem
+        .new-project-heading
+            margin-bottom 5px
+            padding-left 0
+            font-size 0.875 rem
+    .project
+        margin 15px 0
+        &.row
+            display block
+        &-heading
+            margin-bottom 10px
+            padding 0 15px
+            font-size 1.2rem
+            font-weight 500
+        &-name-input
+            width 335px
+            background #f0f0f0
+            border 1px solid #6d747e
+            color #6d747e
+            padding 2px 10px
+            border-radius 0
+            text-align left
+            height 35px
+            &:active,&:focus
+                outline none
+                color #fff
+                background-color #034ea1
+
+    .recent-projects
+        margin 0 15px
+        height calc(100% - 85px)
+        &-container
+            padding-top 20px
+            padding-bottom 20px
+            height calc(100% - 30px)
+            overflow auto
+            background-color #FFF
+            -webkit-column-count 2
+            -moz-column-count 2
+            column-count 2
+            -webkit-column-fill auto
+            -moz-column-fill auto
+            column-fill auto

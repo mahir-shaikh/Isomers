@@ -1,0 +1,9 @@
+.tooltip-icon {
+  cursor: pointer;
+  margin-right: 5px;
+  display: inline;
+  animation-delay: 1s;
+}
+.tooltip-icon:hover:before {
+  color: #034ea1;
+}

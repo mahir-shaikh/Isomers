@@ -1,0 +1,126 @@
+<!-- dont remove this line -->
+<div class="hidden" [routerLink]="['/dashboard']" [routerLinkActive]="['active']"></div>
+
+<!-- Dashboard will be visible only on the tool pages - not on the home page -->
+<div class="dashboard">
+    <div class="topbar">
+        <div class="heading-link-container container">
+            <div class="heading-link-row row">
+                <div class="col-lg-5 col-md-11 heading">
+                    <div class="row">
+                        <div class="logo"></div>
+                        <span class="title">
+                            <text-outlet key="Title"></text-outlet>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-1 logout-link" (click)="showAlert()">
+                    <div class="logout-link-icon"></div>
+                    <div class="logout-link-label"><text-outlet key="Logout"></text-outlet></div>
+                </div>
+                <div class="col-md-12 col-lg-6 navigation-bar">
+                    <div class="navigation-bar-container row">            
+                        <div class="navigation-bar-link" [routerLink]="['/dashboard']" routerLinkActive="active">
+                            <span class="navigation-bar-link-text"><text-outlet key="Home"></text-outlet></span>
+                        </div>
+                        <div class="navigation-bar-link" [routerLink]="['/developmentPlan']" routerLinkActive="active">
+                            <span class="navigation-bar-link-text"><text-outlet key="ProjectPlan"></text-outlet></span>
+                        </div>
+                        <div class="navigation-bar-link" [routerLink]="['/scenario']" routerLinkActive="active">
+                            <span class="navigation-bar-link-text"><text-outlet key="Senarios"></text-outlet></span>
+                        </div>
+                        <div class="navigation-bar-link" [routerLink]="['/reports']" routerLinkActive="active">
+                            <span class="navigation-bar-link-text"><text-outlet key="Reports"></text-outlet></span>
+                        </div>
+                        <div class="navigation-bar-link" [routerLink]="['/actionPlan']" routerLinkActive="active">
+                            <span class="navigation-bar-link-text"><text-outlet key="ActionPlan"></text-outlet></span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="format-metric-bar">
+            <div class="format-metric-bar-container container">
+                <div class="row">
+                    <div class="metric-tools-container col-sm-8 col-xl-9">
+                        <div class="metric-tools-row row" [routerLink]="['/scenario']" [routerLinkActive]="['active']">
+                            <div class="col-sm-2">
+                                <div class="dashboard-icon animated pulse"></div>
+                            </div>
+                            <div class="col-sm" *ngFor="let metric of metricvisibility" [class.hidden-xs-up]="!metric.visible">
+                                <div class="metric-tools-heading">
+                                    <text-outlet [key]="metric.label"></text-outlet>
+                                </div>
+                                <div class="metric-tools-data" *ngIf="currentscenario == 1">
+                                    <!-- <text-outlet key="$228M"></text-outlet> -->
+                                    <calc-outlet [ref]="'tlOutputDBScenario1'+metric.valueref" [format]="metric.format" useRawValue="true"></calc-outlet>
+                                </div>
+                                <div class="metric-tools-data" *ngIf="currentscenario == 2">
+                                    <!-- <text-outlet key="$228M"></text-outlet> -->
+                                    <calc-outlet [ref]="'tlOutputDBScenario2'+metric.valueref" [format]="metric.format" useRawValue="true"></calc-outlet>
+                                </div>
+                                <div class="metric-tools-data" *ngIf="currentscenario == 3">
+                                    <!-- <text-outlet key="$228M"></text-outlet> -->
+                                    <calc-outlet [ref]="'tlOutputDBScenario3'+metric.valueref" [format]="metric.format" useRawValue="true"></calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="format-tools-container col-sm-4 col-xl-3 row">
+                        <div class="help format-tool">
+                            <span class="fa fa-question-circle"></span>
+                            <a href="assets/userguide.pdf" target="_self" download="User guide.pdf"><text-outlet key="Help"></text-outlet></a>
+                        </div>
+                        <div class="reset format-tool" (click)="resetPage()" *ngIf="resetVisible">
+                            <span class="hide-format-tool"></span>
+                            <span class="fa fa-undo"></span>
+                            <text-outlet key="Reset"></text-outlet>
+                        </div>
+                        <div class="print-page format-tool" (click)="printPage()">
+                            <span class="fa fa-print"></span>
+                            <text-outlet key="Print"></text-outlet>
+                        </div>
+                        <div class="sync format-tool">
+                            <sync-status></sync-status>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm logout-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Logout"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="LogoutConfirmMsg"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-danger yes-button" (click)="hideAlert(true)"  [routerLink]="['logout']"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn btn-primary no-button" (click)="hideAlert()"><text-outlet key="No"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #resetModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog  reset-modal modal-sm">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Reset"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="ResetConfirmMsg"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-danger yes-button" (click)="hideResetAlert(true)"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn btn-primary no-button" (click)="hideResetAlert()"><text-outlet key="No"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>

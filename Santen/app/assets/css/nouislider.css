@@ -1,0 +1,58 @@
+/* no ui slider */
+.noUi-target {
+  box-shadow: none;
+  border: none;
+  background-color: #bec0c1;
+}
+.noUi-target.noUi-horizontal {
+  height: 1px;
+}
+.noUi-target.noUi-vertical {
+  width: 1px;
+}
+.noUi-horizontal .noUi-handle {
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 3px #333;
+  background: #ff7336;
+  width: 28px;
+  height: 28px;
+  left: -14px;
+  top: -14px;
+  text-align: center;
+  line-height: 28px;
+  color: #fff;
+  font-size: 0.625em;
+}
+.noUi-horizontal .noUi-handle:before,
+.noUi-horizontal .noUi-handle:after {
+  display: none;
+}
+.noUi-pips {
+  height: 30px;
+  padding: 0;
+}
+.noUi-marker-horizontal.noUi-marker-normal,
+.noUi-marker-vertical.noUi-marker-normal {
+  display: none;
+}
+.noUi-marker-horizontal.noUi-marker-large,
+.noUi-marker-vertical.noUi-marker-large {
+  height: 10px;
+  top: -5px;
+}
+.noUi-marker-horizontal.noUi-marker-sub,
+.noUi-marker-vertical.noUi-marker-sub {
+  height: 6px;
+  top: -3px;
+  width: 1px;
+  background: #e1e2e3;
+}
+.noUi-value-horizontal.noUi-value-sub,
+.noUi-value-vertical.noUi-value-sub,
+.noUi-value-horizontal.noUi-value-large,
+.noUi-value-vertical.noUi-value-large {
+  padding-top: 8px;
+  font-size: 10px;
+  color: #999;
+}

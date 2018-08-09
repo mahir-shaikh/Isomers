@@ -1,0 +1,234 @@
+.action-plan {
+  background: url("../../../../assets/images/action-plan-background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100% - 104px);
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  padding: 20px 0;
+}
+@media screen and (max-width: 992px) {
+  .action-plan {
+    height: calc(100% - 134px);
+  }
+}
+.action-plan-heading {
+  padding: 0;
+}
+.action-plan-heading .action-icon {
+  font-size: 1.25rem;
+  padding-right: 5px;
+}
+.action-plan-heading-text {
+  padding: 15px;
+  background: linear-gradient(270deg, #00adee 0%, #034ea1 91%);
+  background: -moz-linear-gradient(270deg, #00adee 0%, #034ea1 91%);
+  background: -webkit-linear-gradient(270deg, #00adee 0%, #034ea1 91%);
+  background: -o-linear-gradient(270deg, #00adee 0%, #034ea1 91%);
+  margin: 0;
+  color: #fff;
+}
+.action-plan-heading-text .row {
+  margin: 0;
+}
+.action-plan-heading-text .col-sm-11 {
+  padding: 0;
+}
+.action-plan-heading-text .email-icon {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background: url("../../../../assets/images/icons/Email.svg") no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+.action-plan-heading-text .email-icon-container {
+  text-align: right;
+  padding: 0;
+}
+.action-plan-container {
+  background-color: rgba(255,255,255,0.8);
+}
+.action-plan-container .row {
+  margin: 0;
+}
+.action-plan-container .action-plan-details-container {
+  padding: 0;
+}
+.action-plan-container .action-plan-hypothesis,
+.action-plan-container .action-plan-commitment {
+  margin-top: 20px;
+}
+.action-plan-container .action-plan-hypothesis > [class^="col-sm"],
+.action-plan-container .action-plan-commitment > [class^="col-sm"] {
+  padding: 0;
+}
+.action-plan-container .action-plan-hypothesis-heading,
+.action-plan-container .action-plan-commitment-heading {
+  padding: 0;
+  font-weight: 500;
+  color: #034ea1;
+  font-size: 1.125rem;
+  align-items: center;
+  border-bottom: 2px solid #034ea1;
+  padding-bottom: 5px;
+}
+.action-plan-container .action-plan-hypothesis-heading .hypothesis-text,
+.action-plan-container .action-plan-commitment-heading .hypothesis-text,
+.action-plan-container .action-plan-hypothesis-heading .commitment-text,
+.action-plan-container .action-plan-commitment-heading .commitment-text {
+  text-transform: uppercase;
+}
+.action-plan-container .action-plan-hypothesis-heading > [class^="col-sm"],
+.action-plan-container .action-plan-commitment-heading > [class^="col-sm"] {
+  padding: 0;
+}
+.action-plan-container .action-plan-hypothesis-heading-column,
+.action-plan-container .action-plan-commitment-heading-column {
+  font-size: 0.875rem;
+  padding-right: 10px !important;
+}
+.action-plan-container .action-plan-hypothesis-heading-column:last-child,
+.action-plan-container .action-plan-commitment-heading-column:last-child {
+  padding-right: 0 !important;
+}
+.action-plan-container .action-plan-hypothesis-heading .hypothesis-text,
+.action-plan-container .action-plan-commitment-heading .hypothesis-text {
+  font-size: 1.125rem;
+  line-height: 35px;
+  vertical-align: text-bottom;
+}
+.action-plan-container .action-plan-hypothesis-data,
+.action-plan-container .action-plan-commitment-data {
+  padding: 10px 0;
+}
+.action-plan-container .action-plan-hypothesis-data .commitment-row-button,
+.action-plan-container .action-plan-commitment-data .commitment-row-button {
+  cursor: pointer;
+}
+.action-plan-container .action-plan-hypothesis-data-content,
+.action-plan-container .action-plan-commitment-data-content {
+  padding-left: 0;
+  padding-right: 15px;
+}
+.action-plan-container .action-plan-hypothesis-data-content:last-child,
+.action-plan-container .action-plan-commitment-data-content:last-child {
+  padding-right: 0;
+}
+.action-plan-container .action-plan-hypothesis-data-content calc-outlet,
+.action-plan-container .action-plan-commitment-data-content calc-outlet {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6d6e70;
+}
+.action-plan-container .action-plan-hypothesis-data-content textareabox,
+.action-plan-container .action-plan-commitment-data-content textareabox,
+.action-plan-container .action-plan-hypothesis-data-content calc-input,
+.action-plan-container .action-plan-commitment-data-content calc-input {
+  font-size: 0.875rem;
+}
+.action-plan-container .action-plan-hypothesis-data-content > [class^="col-sm"],
+.action-plan-container .action-plan-commitment-data-content > [class^="col-sm"] {
+  padding: 0;
+}
+.content-textarea {
+  width: 100%;
+  display: block;
+}
+.email-modal .modal-dialog {
+  transform: translate(0, 50%);
+}
+.email-modal .close {
+  font-size: 2rem;
+}
+.email-modal .modal-body {
+  padding: 20px;
+}
+.email-modal .modal-body button.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.email-modal .modal-body button.close:focus {
+  outline: 0;
+}
+.email-modal .modal-body .email-container input,
+.email-modal .modal-body .email-container textarea {
+  width: 100%;
+  border-color: #6d6e70;
+  border-width: 2px;
+  padding: 5px;
+}
+.email-modal .modal-body .email-container input:active,
+.email-modal .modal-body .email-container textarea:active,
+.email-modal .modal-body .email-container input:focus,
+.email-modal .modal-body .email-container textarea:focus {
+  border-color: #00adee;
+}
+.email-modal .modal-body .email-container label {
+  font-weight: 500;
+}
+.email-modal .modal-body .email-container .email-to-subject-container {
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+.email-modal .modal-body .email-container .email-icon-container {
+  text-align: center;
+}
+.email-modal .modal-body .email-container .email-icon-container .email-icon {
+  display: inline-block;
+  background: url("../../../../assets/images/icons/email-icon.png") no-repeat;
+  background-size: contain;
+  height: 90px;
+  width: 90px;
+}
+.email-modal .modal-body .email-container .email-to-container {
+  padding-bottom: 10px;
+}
+.email-modal .modal-body .email-container .email-to-container label {
+  margin-bottom: 0;
+}
+.email-modal .modal-body .email-container .email-to-container input {
+  height: 35px;
+  width: 85%;
+  margin-left: 10px;
+  border-style: solid;
+}
+.email-modal .modal-body .email-container .email-to-container .row {
+  margin: 0;
+  align-items: center;
+  justify-content: flex-end;
+}
+.email-modal .modal-body .email-container .email-to-container .email-error-message {
+  color: #f00;
+  font-size: 0.75rem;
+  margin-left: 10px;
+  width: 85%;
+}
+.email-modal .modal-body .email-container .email-subject-container label {
+  margin-bottom: 0;
+}
+.email-modal .modal-body .email-container .email-subject-container input {
+  height: 35px;
+  width: 85%;
+  margin-left: 10px;
+  border-style: solid;
+}
+.email-modal .modal-body .email-container .email-subject-container .row {
+  margin: 0;
+  align-items: center;
+  justify-content: flex-end;
+}
+.email-modal .modal-body .footer {
+  padding-top: 20px;
+  text-align: right;
+}
+.email-modal .modal-body .footer .btn {
+  cursor: pointer;
+}
+.email-modal .modal-body .footer .btn.submit.disabled {
+  pointer-events: none;
+  cursor: default;
+}

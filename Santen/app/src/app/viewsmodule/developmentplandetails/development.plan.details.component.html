@@ -1,0 +1,223 @@
+<div class="col-sm-12 plan-details" *ngIf="!readOnly">
+    <div class="row plan-detail-row">
+        <div class="col-sm-4 plan-detail-row-data project-name">
+            <div class="row plan-detail-row-data-content project-name-content">
+                <my-tooltip class="project-name-tooltip" tooltipPlacement="right"></my-tooltip>
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="ProjectName"></text-outlet>
+                </div>
+                <!-- <calc-input css="calc-input"  ref="tlInputProd3ParticipantForecast" format="0,0%" step="1" scaler="100"  min="0" max="100"></calc-input> -->
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanProjectName" ></calc-outlet>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data disease-area">
+            <div class="row plan-detail-row-data-content disease-area-content">
+                <my-tooltip class="disease-area-tooltip" tooltipPlacement="right" key="ToolTipDiseaseArea"></my-tooltip>
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="DiseaseArea"></text-outlet>
+                </div>
+                <div class="col-md col-lg-6 data-value">
+                    <calc-dropdown [items]="['DiseaseArea1','DiseaseArea2', 'DiseaseArea3']" ref="tlInputPlanDiseaseArea" ></calc-dropdown>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data formulation">
+            <div class="row plan-detail-row-data-content formulation-content">
+                <my-tooltip class="formulation-tooltip" tooltipPlacement="right" key="ToolTipFormulation"></my-tooltip>
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="Formulation"></text-outlet>
+                </div>
+                <div class="col-md col-lg-6 data-value">
+                    <calc-input ref="tlInputPlanFormulation" ></calc-input>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row plan-detail-row">
+        <div class="col-sm-4 plan-detail-row-data target-indication">
+            <div class="row plan-detail-row-data-content target-indication-content">
+                <my-tooltip class="target-indication-tooltip" tooltipPlacement="right" key="ToolTipTargetIndication"></my-tooltip>
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="TargetIndication"></text-outlet>
+                </div>
+                <div class="col-md col-lg-6 data-value">
+                    <calc-input ref="tlInputPlanTargetIndication" ></calc-input>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data project-start-date">
+            <div class="row plan-detail-row-data-content project-start-date-content">
+                <my-tooltip class="project-start-tooltip" tooltipPlacement="right" key="ToolTipProjectStartDate"></my-tooltip>
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="ProjectStartDate"></text-outlet>
+                </div>
+                <div class="col-md col-lg-6 data-value">
+                    <calc-input ref="tlInputPlanProjectStartDate" format="string" step="1" max="2040" useRawValue="true" #StartDate></calc-input>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data target-launch-date">
+            <div class="row plan-detail-row-data-content target-launch-date-content">
+                <my-tooltip class="target-launch-tooltip" tooltipPlacement="right" key="ToolTipTargetLaunchDate"></my-tooltip>
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="TargetLaunchDate"></text-outlet>
+                </div>
+                <div class="col-md col-lg-6 data-value">
+                    <calc-input ref="tlInputPlanTargetLaunchDate" [min]="StartDate.value" max="2040" step="1" format="string" useRawValue="true"></calc-input>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row plan-detail-row">
+        <div class="col-sm-4 plan-detail-row-data current-stage">
+            <div class="row plan-detail-row-data-content current-stage-content">
+                <my-tooltip class="current-stage-tooltip" tooltipPlacement="right" key="ToolTipCurrentStage"></my-tooltip>
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="CurrentStage"></text-outlet>
+                </div>
+                <div class="col-md col-lg-6 data-value">
+                    <calc-dropdown [items]="['Research', 'Phase1', 'Phase2', 'Phase3']" ref="tlInputPlanCurrentStage" ></calc-dropdown>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data loe">
+            <div class="row plan-detail-row-data-content loe-content">
+                <my-tooltip class="loe-tooltip" tooltipPlacement="right" key="ToolTipLOE"></my-tooltip>
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="LOE"></text-outlet>
+                </div>
+                <div class="col-md col-lg-6 data-value">
+                    <calc-dropdown [items]="loeItems" ref="tlInputPlanLOEDate" ></calc-dropdown>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data acquistion-period">
+            <div class="row plan-detail-row-data-content acquistion-period-content">
+                <my-tooltip class="acquistion-period-tooltip" tooltipPlacement="right" key="ToolTipInLicensedAcquisitionPeriod"></my-tooltip>
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="InLicensedAcquisitionPeriod"></text-outlet>
+                </div>
+                <div class="col-md col-lg-6 data-value">
+                    <calc-dropdown [items]="DATA_LIST_ACQUISITION" ref="tlInputPlanInLicenseStage" ></calc-dropdown>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row plan-detail-row">        
+        <div class="col-sm-4 plan-detail-row-data acquistion-cost">
+            <div class="row plan-detail-row-data-content acquistion-cost-content">
+                <my-tooltip class="acquistion-cost-tooltip" tooltipPlacement="right" key="ToolTipInLicensedAcquisitionCost"></my-tooltip>
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="InLicensedAcquisitionCost"></text-outlet>
+                </div>
+                <div class="col-md col-lg-6 data-value">
+                    <calc-input ref="tlInputPlanInLicenseCost" format="0" step="1" min="0" max="99999"></calc-input>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data">
+        </div>
+    </div>
+</div>
+<div class="col-sm-12 plan-details read-only" *ngIf="readOnly">
+    <div class="row plan-detail-row">
+        <div class="col-sm-4 plan-detail-row-data project-name">
+            <div class="row plan-detail-row-data-content project-name-content">
+                <div class="col-md-5 col-lg-6 data-heading">
+                    <text-outlet key="ProjectName"></text-outlet>
+                </div>
+                <!-- <calc-input class="calc-input"  ref="tlInputProd3ParticipantForecast" format="0,0%" step="1" scaler="100"  min="0" max="100"></calc-input> -->
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanProjectName" ></calc-outlet>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data disease-area">
+            <div class="row plan-detail-row-data-content disease-area-content">
+                <div class="col-md-5 col-lg-6 data-heading"><text-outlet key="DiseaseArea"></text-outlet></div>
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanDiseaseArea" ></calc-outlet>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data formulation">
+            <div class="row plan-detail-row-data-content formulation-content">
+                <div class="col-md-5 col-lg-6 data-heading"><text-outlet key="Formulation"></text-outlet></div>
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanFormulation" ></calc-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row plan-detail-row">
+        <div class="col-sm-4 plan-detail-row-data target-indication">
+            <div class="row plan-detail-row-data-content target-indication-content">
+                <div class="col-md-5 col-lg-6 data-heading"><text-outlet key="TargetIndication"></text-outlet></div>
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanTargetIndication" ></calc-outlet>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data project-start-date">
+            <div class="row plan-detail-row-data-content project-start-date-content">
+                <div class="col-md-5 col-lg-6 data-heading"><text-outlet key="ProjectStartDate"></text-outlet></div>
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanProjectStartDate" format="string" useRawValue="true"></calc-outlet>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data target-launch-date">
+            <div class="row plan-detail-row-data-content target-launch-date-content">
+                <div class="col-md-5 col-lg-6 data-heading"><text-outlet key="TargetLaunchDate"></text-outlet></div>
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanTargetLaunchDate" format="string" useRawValue="true"></calc-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row plan-detail-row">
+        <div class="col-sm-4 plan-detail-row-data current-stage">
+            <div class="row plan-detail-row-data-content current-stage-content">
+                <div class="col-md-5 col-lg-6 data-heading"><text-outlet key="CurrentStage"></text-outlet></div>
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanCurrentStage" ></calc-outlet>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plan-detail-row-data loe">
+            <div class="row plan-detail-row-data-content loe-content">
+                <div class="col-md-5 col-lg-6 data-heading"><text-outlet key="LOE"></text-outlet></div>
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanLOEDate" format="string" useRawValue="true"></calc-outlet>
+                </div>
+            </div>
+        </div><div class="col-sm-4 plan-detail-row-data administration">
+            <div class="row plan-detail-row-data-content administration-content">
+                <div class="col-md-5 col-lg-6 data-heading"><text-outlet key="Administration"></text-outlet></div>
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlOutputPlanDrugAdministration" ></calc-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row plan-detail-row">
+        <div class="col-sm-4 plan-detail-row-data acquistion-period">
+            <div class="row plan-detail-row-data-content acquistion-period-content">
+                <div class="col-md-5 col-lg-6 data-heading"><text-outlet key="InLicensedAcquisitionPeriod"></text-outlet></div>
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanInLicenseStage" ></calc-outlet>
+                </div>
+            </div>
+        </div>    
+        <div class="col-sm-4 plan-detail-row-data acquistion-cost">
+            <div class="row plan-detail-row-data-content acquistion-cost-content">
+                <div class="col-md-5 col-lg-6 data-heading"><text-outlet key="InLicensedAcquisitionCost"></text-outlet></div>
+                <div class="col-md col-lg-6 data-value calc-outlet-border">
+                    <calc-outlet ref="tlInputPlanInLicenseCost"></calc-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

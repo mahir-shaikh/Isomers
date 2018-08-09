@@ -1,0 +1,42 @@
+.notes-container {
+  position: absolute;
+  z-index: 200;
+  overflow: hidden;
+}
+.notes-container .note-textarea-image {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  height: 63px;
+  width: 51px;
+}
+.notes-container .note-textarea-image.expand {
+  display: none;
+}
+.notes-container .notes-text-row {
+  width: 100%;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #6d6e70;
+}
+.notes-container .notes-text-row:hover {
+  background-color: #4d4d4d;
+}
+.notes-container .notes-text-row .note-text {
+  padding-right: 20px;
+}
+.notes-container .notes-text-row .fa.expand {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+.notes-container textareabox {
+  display: none;
+}
+.notes-container textareabox.expand {
+  display: block;
+}
+:host-context(.alignment-and-planning) .notes-container textareabox {
+  font-size: 0.75rem;
+}

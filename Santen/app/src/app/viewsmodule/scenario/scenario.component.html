@@ -1,0 +1,17 @@
+<div class="scenarios">
+    <div class="scenarios-container container">
+        <div class="eventBody">
+            <tabset>
+                <tab heading='{{scenario1}}' [active]="activeIndex === 0" (select)="setActiveIndex(0)">
+                    <scenariodata *ngIf="activeIndex === 0" [scenarioId]="scenarioNo" [scenario]="customerName" [activeNo]="activeIndex"></scenariodata>
+                </tab>
+                <tab heading='{{scenario2}}' [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                    <scenariodata *ngIf="activeIndex === 1" [scenarioId]="scenarioNo" [scenario]="customerName" [activeNo]="activeIndex"></scenariodata>
+                </tab>
+                <tab heading='{{scenario3}}' [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                    <scenariodata *ngIf="activeIndex === 2" [scenarioId]="scenarioNo" [scenario]="customerName" [activeNo]="activeIndex"></scenariodata>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+</div>

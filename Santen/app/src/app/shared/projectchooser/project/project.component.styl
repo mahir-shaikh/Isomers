@@ -1,0 +1,33 @@
+:host
+    display inline-block
+
+.project
+    font-size 0.75rem
+    font-weight 500
+    align-items center
+    display flex
+    flex-wrap wrap
+    .info-row
+        display flex
+        flex-wrap wrap
+    &.row
+        .p-2
+            padding-top 0 !important
+            padding-bottom 0 !important
+    &-name
+        font-size 0.875rem
+        padding-bottom 0 !important
+    &-launch
+        &-btn
+            cursor pointer
+            background url("../../../../assets/images/icons/StartBtn.svg") no-repeat
+            background-size contain
+            height 32px
+    &-delete
+        &-btn
+            background none
+            cursor pointer
+            .fa
+                color #00ADEE
+                &:before
+                    font-size 1.75rem

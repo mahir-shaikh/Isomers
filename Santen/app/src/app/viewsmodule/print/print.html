@@ -1,0 +1,26 @@
+<section class="print-wrapper container" *ngIf="_printData">
+    <article class="content-block" *ngFor="let contentBlock of _printData; let blockIndex = index">
+        <div [ngSwitch]="contentBlock.type" class="col-sm p-0">
+            <br class="line-break" *ngSwitchCase="'linebreak'" />
+            <div class="h3 col-sm p-0" *ngSwitchCase="'headertext'">
+                <text-outlet [key]="contentBlock.content" asInnerHtml="true"></text-outlet>
+            </div>
+            <div class="table-data col-sm" *ngSwitchCase="'table'">
+                <div class="table table-striped col-sm p-0">
+                    <div class="row print-row {{row?.class || ''}}"  *ngFor="let row of contentBlock.content; let i = index">
+                        <div class="column-{{colIndex}} col-sm p-1" *ngFor="let column of row.columns; let colIndex=index;" [class.isHeading]="column.isHeading">
+                            <span *ngIf="column.text" class="text-indent-{{column.indent || 0}}"><text-outlet [key]="column.text" [asInnerHtml]="column.asInnerHtml"></text-outlet></span>
+                            <calc-outlet *ngIf="column.value" [ref]="column.value" [format]="column.format" [scaler]="column.scaler" [yearRef]="column.yearRef"></calc-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  *ngSwitchCase="'image'" >
+            <img class="print-image" [src]="_domSanitizier.bypassSecurityTrustUrl(imageSrc)" *ngFor="let imageSrc of contentBlock.content; let i = index"/>
+            </div>
+            <div class="text col-sm p-0" *ngSwitchCaseDefault>
+                <text-outlet [key]="contentBlock.content" asInnerHtml="true"></text-outlet>
+            </div>
+        </div>
+    </article>
+</section>

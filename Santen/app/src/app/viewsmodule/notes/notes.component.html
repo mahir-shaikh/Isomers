@@ -1,0 +1,8 @@
+<div class="notes-container" [class.expand]="expanded" [style.right]="notesRight +'px'" [style.top]="notesTop +'px'">
+    <div class="notes-text-row"  (click)="expand($event)">
+        <span class="note-text"><text-outlet key="Notes"></text-outlet></span>
+        <span class="fa" [class.fa-plus]="!expanded" [class.expand]="expanded" [class.fa-minus]="expanded"></span>
+    </div>
+    <textareabox [ref]="noteRef" [style.height]="textareaHeight+'px'" [style.width]="textareaWidth+'px'" [class.expand]="expanded"></textareabox>
+    <!-- <div class="note-textarea-image" [class.expand]="!expanded"></div> -->
+</div>

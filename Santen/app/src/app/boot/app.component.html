@@ -1,0 +1,10 @@
+<div class="main hidden-print">
+    <im-dashboard *ngIf="isAppReady"></im-dashboard>
+    <router-outlet></router-outlet>
+</div>
+<div class="main visible-print-block">
+    <print></print>
+</div>
+<div class="hidden">
+    <a #sendEmail> </a>
+</div>

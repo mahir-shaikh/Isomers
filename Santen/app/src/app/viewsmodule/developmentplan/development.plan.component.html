@@ -1,0 +1,148 @@
+<div class="development-plan-details animated fadeInDown">
+    <div class="project-plan-heading container">
+        <div class="project-plan-heading-text">
+            <text-outlet key="Project Plan"></text-outlet>
+        </div>
+    </div>
+    <div class="development-plan-details-container container">
+        <div class="scientific-background">     
+            <div class="scientific-background-heading">
+                <div class="scientific-background-text">
+                    <div class="scientific-background-icon"></div>
+                    <text-outlet key="ScientificBackground"></text-outlet>
+                </div>
+                <notes noteRef="tlInputPlanNotes1" [notesRight]="35" [notesTop]="15"></notes>
+            </div>
+            <div class="row scientific-background-content">
+                <div class="col-sm-12 plan-details-container">
+                    <developmentplandetails [readOnly]="false"></developmentplandetails>
+                </div>
+              <!--   <div class="col-sm-4 plan-notes">
+                </div> -->          
+            </div>
+        </div>
+        <div class="alignment-and-planning">        
+            <div class="alignment-and-planning-text">
+                <div class="alignment-and-planning-icon"></div>
+                <text-outlet key="AlignmentPlanning"></text-outlet>
+            </div>
+            <div class="row alignment-and-planning-content">            
+                <div class="col-sm-12 plan-details">
+                    <div class="row plan-detail-row">
+                        <div class="row plan-detail-row-heading">
+                            <div class="col-sm-12">
+                                <text-outlet key="AlignmentPlanningStep1"></text-outlet>
+                            </div>
+                            <notes noteRef="tlInputPlanQ1Notes"></notes>
+                        </div>
+                        <div class="row plan-detail-row-data">
+                            <div class="row plan-detail-row-data-content">
+                                <div class="col-sm-4 metric-selection">
+                                    <div class="metric-selection-text"><text-outlet key="MetricText1"></text-outlet></div>
+                                    <div class="metric-selection-data">
+                                        <calc-outlet ref="tlInputPlanQ1Metric1"></calc-outlet>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 metric-selection">
+                                    <div class="metric-selection-text"><text-outlet key="MetricText2"></text-outlet></div>
+                                    <div>
+                                        <calc-dropdown [items]="metric2" ref="tlInputPlanQ1Metric2" ></calc-dropdown>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 metric-selection">
+                                    <div class="metric-selection-text"><text-outlet key="MetricText3"></text-outlet></div>
+                                    <div>
+                                        <calc-dropdown [items]="metric3" ref="tlInputPlanQ1Metric3" ></calc-dropdown>
+                                    </div>
+                                </div>                          
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 down-arrow-icon">
+                        <div class="down-arrow-bg"></div>
+                    </div>
+
+                    <div class="row plan-detail-row">
+                        <div class="row plan-detail-row-heading">
+                            <text-outlet key="AlignmentPlanningStep2"></text-outlet>
+                        </div>
+                        <div class="row plan-detail-row-data">
+                            <textareabox ref="tlInputPlanQ2Notes" ></textareabox>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 down-arrow-icon">
+                        <div class="down-arrow-bg"></div>
+                    </div>
+
+                    <div class="row plan-detail-row">
+                        <div class="row plan-detail-row-heading">
+                            <text-outlet key="AlignmentPlanningStep3"></text-outlet>
+                        </div>
+                        <div class="row plan-detail-row-data">
+                            <textareabox ref="tlInputPlanQ3Notes" ></textareabox>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 down-arrow-icon">
+                        <div class="down-arrow-bg"></div>
+                    </div>
+
+                    <div class="row plan-detail-row">
+                        <div class="row plan-detail-row-heading">
+                            <div class="col-sm-12">
+                                <text-outlet key="AlignmentPlanningStep4"></text-outlet>
+                            </div>
+                            <notes noteRef="tlInputPlanQ4Notes"></notes>
+                        </div>
+
+                        <div class="row plan-detail-row-data">
+                            <div class="row plan-detail-row-data-content">
+                                <div class="col-sm-4 assumption-col">
+                                    <div><text-outlet key="Assumption1"></text-outlet></div>
+                                    <div class="plan-detail-row-textarea">
+                                        <textareabox ref="tlInputPlanQ4Assumption1" ></textareabox>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 assumption-col">
+                                    <div><text-outlet key="Assumption2"></text-outlet></div>
+                                    <div class="plan-detail-row-textarea">
+                                        <textareabox ref="tlInputPlanQ4Assumption2" ></textareabox>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 assumption-col">
+                                    <div><text-outlet key="Assumption3"></text-outlet></div>
+                                    <div class="plan-detail-row-textarea">
+                                        <textareabox ref="tlInputPlanQ4Assumption3" ></textareabox>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 down-arrow-icon">
+                        <div class="down-arrow-bg"></div>
+                    </div>
+
+                    <div class="row plan-detail-row">
+                        <div class="row plan-detail-row-heading">
+                            <text-outlet key="AlignmentPlanningStep5"></text-outlet>
+                        </div>
+                        <div class="row plan-detail-row-data">
+                            <textareabox ref="tlInputPlanQ5" ></textareabox>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 down-arrow-icon">
+                        <div class="down-arrow-bg"></div>
+                    </div>
+                    <div class="row plan-detail-row">
+                        <div class="row plan-detail-row-heading">
+                            <text-outlet key="AlignmentPlanningStep6"></text-outlet>
+                        </div>
+                        <div class="row plan-detail-row-data">
+                            <textareabox ref="tlInputPlanQ6" ></textareabox>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>

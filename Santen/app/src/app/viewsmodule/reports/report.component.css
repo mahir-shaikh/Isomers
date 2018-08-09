@@ -1,0 +1,178 @@
+.report-plan {
+  background: url("../../../../assets/images/reports-background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100% - 104px);
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  overflow: auto;
+  padding: 20px 0;
+}
+@media screen and (max-width: 992px) {
+  .report-plan {
+    height: calc(100% - 134px);
+  }
+}
+.report-plan-heading {
+  padding: 0;
+}
+.report-plan-heading .report-icon {
+  font-size: 1.25rem;
+  padding-right: 5px;
+}
+.report-plan-heading-text {
+  padding: 15px 0;
+  padding-left: 20px;
+  background: linear-gradient(270deg, #00adee 0%, #034ea1 91%);
+  background: -moz-linear-gradient(270deg, #00adee 0%, #034ea1 91%);
+  background: -webkit-linear-gradient(270deg, #00adee 0%, #034ea1 91%);
+  background: -o-linear-gradient(270deg, #00adee 0%, #034ea1 91%);
+  margin: 0;
+  color: #fff;
+}
+.report-plan-container {
+  background-color: rgba(255,255,255,0.8);
+}
+.report-plan-container .row {
+  margin: 0;
+}
+.report-plan-container .report-plan-details-container {
+  padding: 0;
+}
+.report-plan-container .report-summary-chart {
+  padding: 0;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .toggle-scenario-button {
+  position: absolute;
+  right: 0px;
+  top: 7px;
+  padding: 7px;
+  font-size: 12px;
+  background-color: #034ea1;
+  color: #fff;
+  cursor: pointer;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-chart-title {
+  padding-bottom: 5px;
+  font-size: 1.125rem;
+  color: #034ea1;
+  border-bottom: 2px solid #034ea1;
+  font-weight: 500;
+  padding-top: 15px;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data {
+  padding: 15px 0;
+  font-weight: 500;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data .headings {
+  border: 1px dotted;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data .headings .heading {
+  color: #034ea1;
+  font-size: 1rem;
+  border-right: 1px dotted;
+  padding: 6px;
+  text-align: center;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data .headings .heading:first-child {
+  text-align: left;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data .headings .heading:last-child {
+  border-right: 0;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data .data-row {
+  border: 1px dotted;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data .data-row .heading-column {
+  border-right: 1px dotted;
+  padding: 6px;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data .data-row .data-content {
+  text-align: center;
+  border-right: 1px dotted;
+  padding: 6px;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data .data-row .data-content:last-child {
+  border-right: 0;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data .data-row:nth-child(even) {
+  border-bottom: 0;
+  border-top: 0;
+}
+.report-plan-container .report-summary-chart.summary-table-chart .summary-table-data .data-row:last-child {
+  border-bottom: 1px dotted;
+}
+.report-plan-container .report-summary-chart.epv-chart {
+  padding-right: 15px;
+  padding-top: 10px;
+}
+.report-plan-container .report-summary-chart.epv-chart .epv-chart-title {
+  padding-bottom: 10px;
+  color: #034ea1;
+  font-weight: 500;
+  text-align: center;
+}
+.report-plan-container .report-summary-chart.discounted-chart {
+  padding-top: 10px;
+}
+.report-plan-container .report-summary-chart.discounted-chart .discounted-chart-title {
+  padding-bottom: 10px;
+  color: #034ea1;
+  font-weight: 500;
+  text-align: center;
+}
+.report-plan-container .report-scenario-charts {
+  margin: 15px 0px;
+}
+.report-plan-container .report-scenario-charts .report-scenario-1,
+.report-plan-container .report-scenario-charts .report-scenario-2,
+.report-plan-container .report-scenario-charts .report-scenario-3 {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.report-plan-container .report-scenario-charts .report-scenario-1 .scenario-table-chart-data,
+.report-plan-container .report-scenario-charts .report-scenario-2 .scenario-table-chart-data,
+.report-plan-container .report-scenario-charts .report-scenario-3 .scenario-table-chart-data {
+  margin-top: 15px;
+}
+.report-plan-container .report-scenario-charts .report-scenario-1 .scenario-table-chart-title,
+.report-plan-container .report-scenario-charts .report-scenario-2 .scenario-table-chart-title,
+.report-plan-container .report-scenario-charts .report-scenario-3 .scenario-table-chart-title {
+  padding: 10px;
+  color: #fff;
+  background-color: #034ea1;
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.report-plan-container .report-scenario-charts .report-scenario-chart {
+  padding: 0;
+  padding-top: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.report-plan-container .report-scenario-charts .report-scenario-chart .scenario-chart-title {
+  padding: 10px;
+  float: left;
+  width: 100%;
+  top: 15px;
+  z-index: 1;
+  color: #034ea1;
+  border-bottom: 2px solid #034ea1;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.report-plan-container .report-scenario-charts .report-scenario-chart .scenario-chart-title .collapse-chart {
+  float: right;
+}
+.report-plan-container .report-scenario-charts .report-scenario-chart .scenario-chart-title ~ .hideChart {
+  display: none;
+}
+.report-plan-container .report-scenario-charts .report-scenario-chart.scenario-chart-3 {
+  padding-bottom: 15px;
+}
+.report-plan-container .report-scenario-charts .animated {
+  margin-top: 40px;
+}

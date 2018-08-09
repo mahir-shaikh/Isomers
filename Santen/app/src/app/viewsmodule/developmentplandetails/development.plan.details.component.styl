@@ -1,0 +1,58 @@
+.plan-details
+    padding 0
+    .plan-detail-row
+        margin 10px 0
+        padding 0
+        align-items center
+        &-data
+            margin 0
+            padding 0
+            padding-right 15px
+            &:last-child
+                padding-right 0
+            &-content
+                margin 0
+                padding 0
+                align-items center
+                calc-outlet
+                    text-align center                
+                .project-name-tooltip
+                    visibility hidden
+                .data-value
+                    max-width 105px
+                    height 35px
+                    text-align center
+                    padding 0px
+                    margin-left auto
+                    margin-right 0
+                    font-weight 500
+                    font-size 0.875rem
+                    &.calc-outlet-border
+                        padding 5px
+                        height auto
+                        font-weight 600
+                        color #034EA1
+            .data-heading
+                padding 0px
+                font-weight 500
+                font-size 0.875rem
+        &-data
+            height 100%
+            margin auto 0px
+    &.read-only
+        .plan-detail-row-data-content
+            &.acquistion-cost-content
+                padding-right 15px
+            .data-value
+                text-align left
+                margin 0 auto
+                
+:host-context(.action-plan)
+    .plan-details
+        .plan-detail-row-data-content
+            &:first-child
+                padding-left 0
+            &:last-child
+                padding-right 0
+            &.acquistion-cost-content
+                padding-right 15px
