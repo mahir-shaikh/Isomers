@@ -1,0 +1,45 @@
+@import "mixins"
+@import "core"
+@import "nouislider"
+
+
+html, body
+    min-height 100%
+body
+    background url("../images/background.jpg") no-repeat
+    overflow-x hidden
+    background-size cover
+    font-size 16px
+    font-family "OpenSans"
+    line-height 20px
+    color #111
+.im-app
+    padding 0px
+    height 100vh
+    .main
+        height 100%
+.nav-tabs
+    justify-content flex-end
+    .nav-item
+        margin 0 2.5px
+        margin-bottom -1px
+        &:last-child
+            margin-right 0
+    .nav-link
+        background #999
+        color #FFF
+        &.active
+            background -webkit-linear-gradient(#F2F2F2, #FFF)
+            background -o-linear-gradient(#F2F2F2, #FFF)
+            background -moz-linear-gradient(#F2F2F2, #FFF)
+            background linear-gradient(#F2F2F2, #FFF)
+            color #81658F
+            
+.switch.switch-medium
+    background-color #775886 !important
+    &.checked
+        background-color rgb(100, 189, 99) !important
+
+
+.home-link-icon.fa
+    font-size 1.625rem

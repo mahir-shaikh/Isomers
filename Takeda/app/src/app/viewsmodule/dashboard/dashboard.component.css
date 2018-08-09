@@ -1,0 +1,293 @@
+:host {
+  display: block;
+}
+:host .hidden.active ~ .dashboard {
+  display: none;
+}
+:host .dashboard {
+  display: block;
+}
+.dashboard .row {
+  margin: 0;
+}
+.dashboard .format-bar {
+  background-color: #dcdcdc;
+}
+.dashboard .footer {
+  width: 100%;
+  background-color: #666;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 5px 0;
+  padding-right: 10px;
+  left: 0;
+  z-index: 2000;
+}
+.dashboard .footer .bts-icon {
+  height: 21px;
+  width: 63px;
+  background: url("../../../../assets/images/bts-icon.png") no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+  display: inline-block;
+}
+.dashboard .topbar {
+  background-color: #fff;
+  margin: 0;
+  align-items: center;
+}
+.dashboard .topbar .logo-container {
+  width: 100%;
+}
+.dashboard .topbar .logo-container .takeda-icon {
+  background: url("../../../../assets/images/takeda-icon.png") no-repeat;
+  height: 30px;
+}
+.dashboard .topbar .format-metric-bar {
+  padding: 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+.dashboard .topbar .format-metric-bar .logout-link-icon {
+  padding-top: 10px;
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+  margin-right: 2px;
+}
+.dashboard .topbar .format-metric-bar .sync-container {
+  text-align: center;
+  padding: 5px 0px;
+  color: #666;
+}
+.dashboard .topbar .format-metric-bar .link-container {
+  text-align: right;
+  padding-right: 15px;
+  padding-left: 10px;
+  border-left: 1px solid #ddd;
+}
+.dashboard .topbar .format-metric-bar-container {
+  padding: 0px 15px;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container {
+  padding: 4px 0;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row {
+  justify-content: flex-end;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row .metric-tool {
+  padding: 1px 5px;
+  font-size: 0.75rem;
+  height: 20px;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row .metric-tool-heading {
+  padding: 0px 5px;
+  display: inline-block;
+  color: #7c7c7c;
+  font-weight: 500;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row .metric-tool-heading:after {
+  content: ':';
+  color: #7c7c7c;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row .metric-tool-data {
+  display: inline-block;
+  padding: 0px;
+  font-weight: 500;
+}
+.dashboard .topbar .format-metric-bar-container .metric-tools-container .metric-tools-row .metric-tool-data calc-outlet {
+  color: #f00;
+}
+.dashboard .heading-link-container {
+  padding: 0;
+  background-color: #6f4f7f;
+  margin: 10px;
+  margin-bottom: 0px;
+}
+.dashboard .heading-link-container:after {
+  clear: both;
+  width: 100%;
+}
+.dashboard .heading-link-container .heading-link-row {
+  height: 50px;
+  padding: 10px 0px;
+}
+.dashboard .heading-link-container .heading {
+  display: inline-block;
+  padding-left: 10px;
+}
+.dashboard .heading-link-container .heading .title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 27px;
+  font-weight: 500;
+}
+.dashboard .heading-link-container .performance-dashboard-link {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: right;
+  line-height: 27px;
+}
+.dashboard .heading-link-container .performance-dashboard-link .fa {
+  cursor: pointer;
+  padding: 0 8px;
+}
+.dashboard .heading-link-container .performance-dashboard-link .fa.home-link-icon {
+  padding-right: 0;
+}
+.dashboard .heading-link-container .performance-dashboard-link .fa.role-play {
+  padding-left: 0;
+}
+.performance-modal {
+  max-width: none;
+  width: calc(100vw - 30px);
+  margin: 15px;
+}
+.performance-modal .modal-content {
+  height: calc(100vh - 62px);
+}
+.performance-modal .modal-content .modal-header {
+  padding: 15px 20px;
+}
+.performance-modal .modal-content .modal-header .modal-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #6f4f7f;
+  padding: 0px 10px;
+}
+.performance-modal .modal-content .modal-header .modal-title-icon {
+  display: inline-block;
+}
+.performance-modal .modal-content .modal-header .modal-title-text {
+  display: inline-block;
+  padding-left: 5px;
+}
+.performance-modal .modal-content .modal-header .fa-close {
+  cursor: pointer;
+}
+.performance-modal .modal-content .modal-body {
+  overflow-y: auto;
+}
+.application-mode-modal .modal-title {
+  color: #775886;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.application-mode-modal .fa-close {
+  cursor: pointer;
+}
+.application-mode-modal .modal-body .application-mode {
+  margin: 0;
+  align-items: center;
+  justify-content: space-around;
+  color: #666;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+.application-mode-modal .modal-body .application-mode .mode {
+  padding: 0 10px;
+}
+.application-mode-modal .button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.application-mode-modal .button-container .btn {
+  cursor: pointer;
+}
+.score-modal .modal-header {
+  text-align: right;
+  border-bottom: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+.score-modal .modal-header .heading {
+  padding: 0.5rem;
+  text-align: left;
+  padding: 1rem;
+  padding-right: 0;
+  color: #775886;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.score-modal .modal-header .fa-close {
+  padding-right: 1rem;
+}
+.score-modal .fa-close {
+  cursor: pointer;
+}
+.score-modal .modal-body {
+  padding-top: 0;
+}
+.score-modal .modal-body .error-message {
+  padding: 10px 0;
+  color: #f00;
+  font-size: 0.75rem;
+}
+.score-modal .modal-body .title-text {
+  padding-bottom: 5px;
+}
+.score-modal .modal-body .password-container {
+  margin-top: 10px;
+}
+.score-modal .modal-body .password-container .password-text {
+  padding-bottom: 5px;
+}
+.score-modal .modal-body .password-container input {
+  width: 100%;
+  background-color: #eae2ee;
+  border: 1px solid #000;
+}
+.score-modal .modal-body .password-container input:active,
+.score-modal .modal-body .password-container input:focus {
+  background-color: #6f4f7f;
+  color: #fff;
+  border: 1px solid #000;
+}
+.score-modal .button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.score-modal .button-container .btn {
+  cursor: pointer;
+}
+.logout-modal .button-container {
+  padding: 0 15px 10px;
+  text-align: center;
+}
+.logout-modal .button-container .btn {
+  cursor: pointer;
+}
+.logout-modal .button-container .yes-button {
+  float: left;
+}
+.logout-modal .button-container .no-button {
+  float: right;
+}
+.logout-modal .button-container:after {
+  clear: both;
+}
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2001;
+  background-color: rgba(255,255,255,0.9);
+}
+.loading-gif {
+  position: absolute;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

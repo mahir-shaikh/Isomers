@@ -1,0 +1,425 @@
+<div class="regionteritory-data">
+    <div class="regionteritory-data-container">
+        <div class="forecast-results regionteritory-data-container-row row">
+            <div class="col-sm-7">
+                <div class="forecast-results-heading regionteritory-data-heading">
+                    <text-outlet key="ForecastResults"></text-outlet>
+                    <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'ForecastTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                </div>
+                <div class="forecast-results-table data-table">
+                    <div class="heading-row row">
+                        <div class="heading-column col-sm-4">
+                            <text-outlet key=""></text-outlet>
+                        </div>
+                        <div class="heading-column col-sm-2">
+                            <text-outlet key="Volume"></text-outlet>
+                            <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'VolumeTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                        </div>
+                        <div class="heading-column col-sm-2">
+                            <text-outlet key="Growth"></text-outlet>
+                            <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'GrowthTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                        </div>
+                        <div class="heading-column col-sm-2">
+                        </div>
+                        <div class="heading-column col-sm-2">
+                            <!-- <text-outlet key="AnnualDetails"></text-outlet> -->
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="data-row-heading-column col-sm-4">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer1Title'" [yearRef]="'tlTeamRound'"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer1Volume'" [yearRef]="'tlTeamRound'" format='0,0'></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer1Forecast'" [yearRef]="'tlTeamRound'" [format]="'0'"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">                  
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer1Visits'" [yearRef]="'tlTeamRound'" format='0,0'></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="data-row-heading-column col-sm-4">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer2Title'" [yearRef]="'tlTeamRound'"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer3Volume'" [yearRef]="'tlTeamRound'" format='0,0'></calc-outlet> 
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer3Forecast'" [yearRef]="'tlTeamRound'" format="0"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer2Visits'" [yearRef]="'tlTeamRound'" format='0,0'></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="data-row-heading-column col-sm-4">
+                            <text-outlet key="Provider3"></text-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer2Volume'" [yearRef]="'tlTeamRound'" format='0,0'></calc-outlet> 
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer2Forecast'" [yearRef]="'tlTeamRound'" format="0"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                        </div>
+                        <div class="data-value col-sm-2">
+                           <!--  <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Payer2Visits'" [yearRef]="'tlTeamRound'" format='0,0'></calc-outlet> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="chart-container chart-container-1">
+                    <div class="chart-title"><text-outlet key="MarketShare"></text-outlet></div>
+                    <div class="chart">
+                        <basiccolumn
+                            [rangeRef]="marketShareRangeRef"
+                            [categoryLabels]="'TRXShare, NRXShare'"
+                            [seriesLabels]="'Previous, Current'"
+                            [year]="'tlTeamRound'"
+                            [numberFormat]="'0.00%'"
+                            height="135"
+                        ></basiccolumn>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="territory-strategy regionteritory-data-container-row row">
+            <div class="col-sm-7">
+                <div class="territory-strategy-heading regionteritory-data-heading">
+                    <text-outlet key="SampleAllocation"></text-outlet>
+                    <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'ResourceAllocTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                </div>
+                <div class="territory-strategy-table data-table">
+                    <div class="heading-row row">
+                        <div class="heading-column col-sm-4">
+                        </div>
+                        <div class="heading-column col-sm-2">
+                        </div>
+                        <div class="heading-column col-sm-2">
+                            <text-outlet key="Samples"></text-outlet>
+                            <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'AllocPercSalesTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                        </div>
+                        <div class="heading-column col-sm-2">
+                            <text-outlet key="Current"></text-outlet>
+                            <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'CurrentAllocationTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                        </div>
+                        <div class="heading-column col-sm-2">
+                            <text-outlet key="Previous"></text-outlet>
+                            <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'PrevAllocationTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="data-row-heading-column col-sm-4">
+                            <text-outlet [key]="area+'AllocationItem1'"></text-outlet>
+                            <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'SampleTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'SamplesPerc'" [yearRef]="'tlTeamRound'" outputMin="0" outputMax="1" step="0.01" format="0%" ></calc-stepper>
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Samples'" [yearRef]="'tlTeamRound'" format="0,0"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'SampleCost'" [yearRef]="'tlTeamRound'" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'PrevSampleCost'" [yearRef]="'tlTeamRound'" format="$0,0"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="data-row-heading-column col-sm-4">
+                            <text-outlet [key]="area+'AllocationItem2'"></text-outlet>
+                            <!-- <calc-outlet [ref]="'tlOut'+area+'1Seg'+areaId+'AllocationTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'PromotionAllocation'" [yearRef]="'tlTeamRound'" outputMin="0" outputMax="1" step="0.01" format="0%" ></calc-stepper>
+                        </div>
+                        <div class="data-value col-sm-2">
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'CurrentPromotionAllocation'" [yearRef]="'tlTeamRound'" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlInput'+area+'1Seg'+areaId+'PrevPromotionAllocation'" [yearRef]="'tlTeamRound'" format="$0,0"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="data-row-sub-heading-column col-sm-4">
+                            <text-outlet [key]="area+'AllocationItem3'"></text-outlet>
+                            <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'SpeakerTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'SpeakersPerc'" [yearRef]="'tlTeamRound'" outputMin="0" outputMax="1" step="0.01" format="0%" ></calc-stepper>
+                        </div>
+                        <div class="data-value col-sm-2">
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'SpeakerCost'" [yearRef]="'tlTeamRound'" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'PrevSpeakerCost'" [yearRef]="'tlTeamRound'" format="$0,0"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="data-row-sub-heading-column col-sm-4">
+                            <text-outlet [key]="area+'AllocationItem4'"></text-outlet>
+                            <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'PromotionTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlInput'+area+'1Seg'+areaId+'PromotionPerc'" [yearRef]="'tlTeamRound'" format="0%"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'PromotionCost'" [yearRef]="'tlTeamRound'" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="data-value col-sm-2">
+                            <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'PrevPromotionCost'" [yearRef]="'tlTeamRound'" format="$0,0"></calc-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="chart-container chart-container-2">
+                    <div class="chart-title"><text-outlet key="ProfitLossStatement"></text-outlet></div>
+                    <div class="chart">
+                        <stackedcolumn
+                            [rangeref]="profitLossRangeRef"
+                            [serieslabels]="'Profit, InternalDevelopment, LunchMoney, Speakers, Samples, Reimbursement'"
+                            [categorylabels]="'Previous, Current'"
+                            [year]="'tlTeamRound'"
+                            [numberformat]="'$0,0a'"
+                            height="225"
+                        ></stackedcolumn>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="regionteritory-data-container-row row">
+            <div class="col-sm-7">
+                <div class="internal-resources" *ngIf="areaId == 1">
+                    <div class="internal-resources-heading regionteritory-data-heading">
+                       <text-outlet [key]="area+'InternalResources'"></text-outlet>
+                       <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'InternalResTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                    </div>
+                    <div class="internal-resources-table">
+                        <div class="heading-row row">
+                            <div class="heading-column col-sm-4">
+                            </div>
+                            <div class="heading-column col-sm-2">
+                            </div>
+                            <div class="heading-column col-sm-2">
+                                <text-outlet key="FTEs"></text-outlet>
+                                <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'InternalResFTEsTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                            </div>
+                            <div class="heading-column col-sm-2" *ngIf="area == 'Prod'">
+                                <!-- <text-outlet key="Cost"></text-outlet> -->
+                            </div>
+                            <div class="heading-column col-sm-2" *ngIf="area == 'Prod'">
+                                <!-- <text-outlet key="RepTime"></text-outlet> -->
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="data-row-heading-column col-sm-4">
+                                <text-outlet key="CrossFunctional"></text-outlet>
+                                <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'CfCollabTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'CfCollab'" [yearRef]="'tlTeamRound'" step="1" min="0" max="5" format="0"></calc-stepper>
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'CfCollabFTEs'" [yearRef]="'tlTeamRound'"></calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2" *ngIf="area == 'Prod'"> 
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'CfCollabCost'" [yearRef]="'tlTeamRound'" format="$0,0"></calc-outlet>          
+                            </div>
+                            <div class="data-value col-sm-2" *ngIf="area == 'Prod'">
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'CfRepTime'" [yearRef]="'tlTeamRound'" format="0"></calc-outlet> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rep-management">
+                    <div class="rep-management-heading regionteritory-data-heading">
+                        <text-outlet [key]="area+'RepManagement'"></text-outlet>
+                        <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'RepMgmtTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                    </div>
+                    <div class="rep-management-table">
+                        <div class="heading-row row">
+                            <div class="heading-column col-sm-4">
+                            </div>
+                            <div class="heading-column col-sm-2">
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Rep1Title'" [yearRef]="'tlTeamRound'" *ngIf="area == 'Prod'"></calc-outlet>
+                                <text-outlet [key]="area+'RepManagementA'" *ngIf="area == 'Reg'"></text-outlet>
+                            </div>
+                            <div class="heading-column col-sm-2">
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Rep2Title'" [yearRef]="'tlTeamRound'" *ngIf="area == 'Prod'"></calc-outlet>
+                                <text-outlet key="FTEs" *ngIf="area == 'Reg'"></text-outlet>
+                            </div>
+                            <div class="heading-column col-sm-2" *ngIf="area == 'Prod'">
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Rep3Title'" [yearRef]="'tlTeamRound'" *ngIf="area == 'Prod'"></calc-outlet>
+                            </div>
+                            <div class="heading-column col-sm-2">
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="data-row-heading-column col-sm-4">
+                                <text-outlet key="Coaching"></text-outlet>
+                                <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'CoachingTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'Rep1Coaching'" [yearRef]="'tlTeamRound'" max="5" min="0" step="1" format="0"></calc-stepper>
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'Rep2Coaching'" [yearRef]="'tlTeamRound'" max="5" min="0" step="1" format="0" *ngIf="area == 'Prod'"></calc-stepper>
+
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Rep1CoachingFTEs'" [yearRef]="'tlTeamRound'" format="0" *ngIf="area == 'Reg'"></calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2" *ngIf="area == 'Prod'"> 
+                                <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'Rep3Coaching'" [yearRef]="'tlTeamRound'" max="5" min="0" step="1" format="0"></calc-stepper>       
+                            </div>
+                            <div class="data-value col-sm-2">
+                            </div>
+                        </div>
+                        <div class="data-row row" *ngIf="area == 'Prod'">
+                            <div class="data-row-heading-column col-sm-4">
+                                <text-outlet key="FTEs"></text-outlet>
+                                <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'FTEsTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Rep1CoachingFTEs'" [yearRef]="'tlTeamRound'" format="0"></calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2" *ngIf="area == 'Prod'">
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Rep2CoachingFTEs'" [yearRef]="'tlTeamRound'" format="0"></calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2" *ngIf="area == 'Prod'"> 
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Rep3CoachingFTEs'" [yearRef]="'tlTeamRound'" format="0"></calc-outlet>         
+                            </div>
+                            <div class="data-value col-sm-2">
+                            </div>
+                        </div>
+                        <div class="heading-row row" *ngIf="area == 'Prod'">
+                            <div class="heading-column col-sm-4">
+                            </div>
+                            <div class="heading-column col-sm-2">
+                            </div>
+                            <div class="heading-column col-sm-2">
+                                <text-outlet key="FTEs"></text-outlet>
+                            </div>
+                            <div class="heading-column col-sm-2">
+                            </div>
+                            <div class="heading-column col-sm-2">
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="data-row-heading-column col-sm-4">
+                                <text-outlet key="RegionalTrainers" *ngIf="area == 'Prod'"></text-outlet>
+                                <text-outlet key="PeopleManagement" *ngIf="area == 'Reg'"></text-outlet>
+                                <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'RegTrainerTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'RegTrainer'" [yearRef]="'tlTeamRound'" step="1" max="5" min="0" format="0"></calc-stepper>
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'RegTrainerFTEs'" [yearRef]="'tlTeamRound'"></calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2">      
+                            </div>
+                            <div class="data-value col-sm-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bag-weighting" *ngIf="area == 'Prod'">
+                    <div class="bag-weighting-heading regionteritory-data-heading">
+                    </div>
+                    <div class="bag-weighting-table">
+                        <div class="heading-row row">
+                            <div class="heading-column col-sm-4 regionteritory-data-heading">
+                                <text-outlet key="BagWeighting"></text-outlet>
+                            </div>
+                            <div class="heading-column col-sm-2">
+                            </div>
+                            <div class="heading-column col-sm-2">
+                            </div>
+                            <div class="heading-column col-sm-2">
+                            </div>
+                            <div class="heading-column col-sm-2">
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="data-row-heading-column col-sm-4">
+                                <!-- <text-outlet key="Squintrellix"></text-outlet> -->
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Therapy1Title'" [yearRef]="'tlTeamRound'"></calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'Therapy1Rep1Weight'" [yearRef]="'tlTeamRound'" step="0.01" outputMin="0" outputMax="1" format="0%" ></calc-stepper>
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'Therapy1Rep2Weight'" [yearRef]="'tlTeamRound'" step="0.01" outputMin="0" outputMax="1" format="0%" ></calc-stepper>
+                            </div>
+                            <div class="data-value col-sm-2"> 
+                                <calc-stepper [ref]="'tlInput'+area+'1Seg'+areaId+'Therapy1Rep3Weight'" [yearRef]="'tlTeamRound'" step="0.01" outputMin="0" outputMax="1" format="0%" ></calc-stepper>
+                            </div>
+                            <div class="data-value col-sm-2">
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="data-row-heading-column col-sm-4">
+                                <text-outlet key="PreviousWeight"></text-outlet>
+                                <!-- <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Therapy1PrevWeightTitle'" [yearRef]="'tlTeamRound'"></calc-outlet> -->
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Therapy1Rep1PrevWeight'" [yearRef]="'tlTeamRound'" format="0%"></calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2">
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Therapy1Rep2PrevWeight'" [yearRef]="'tlTeamRound'" format="0%"></calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2"> 
+                                <calc-outlet [ref]="'tlOutput'+area+'1Seg'+areaId+'Therapy1Rep3PrevWeight'" [yearRef]="'tlTeamRound'" format="0%"></calc-outlet>      
+                            </div>
+                            <div class="data-value col-sm-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="chart-container chart-container-3">
+                    <div class="chart-title"><text-outlet key="InternalMetrics"></text-outlet></div>
+                    <div class="chart">
+                        <basiccolumn
+                            [rangeRef]="internalMetricsRangeRef"
+                            [categoryLabels]="'ESAT, MarketExecution'"
+                            [seriesLabels]="'Previous, Current'"
+                            [year]="'tlTeamRound'"
+                            [numberFormat]="'0'"
+                            height="200"
+                        ></basiccolumn>
+                    </div>
+                </div><div class="chart-container chart-container-4">
+                    <div class="chart-title"><text-outlet [key]="area+'ChartManagement'"></text-outlet></div>
+                    <div class="chart">                
+                        <stackedcolumn
+                            [rangeref]="areaManagementRangeRef"
+                            [serieslabels]="'InternalTime, FieldTime'"
+                            [categorylabels]="managementChartLabels"
+                            [year]="'tlTeamRound'"
+                            [numberformat]="'0%'"
+                            max="1"
+                            height="200"
+                        ></stackedcolumn>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

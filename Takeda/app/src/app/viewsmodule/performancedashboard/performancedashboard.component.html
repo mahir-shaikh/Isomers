@@ -1,0 +1,473 @@
+<div class="performance-dashboard-wrapper">
+    <div class="performance-dashboard performance-summary row">
+        <div class="performance-dashboard-heading row">
+            <text-outlet key="PerformanceSummary"></text-outlet>
+        </div>
+        <div class="performance-dashboard-data row">
+            <div class="col-sm-2">                 
+                <table class="heading-table">
+                    <thead class="">
+                        <tr>
+                            <th class="data-heading"><text-outlet key="Position"></text-outlet></th>
+                        </tr>
+                    </thead>
+                    <tbody>                        
+                        <tr>
+                            <td class="data-row"><text-outlet [key]="area+'Title0'"></text-outlet></td>
+                        </tr>
+                        <tr>
+                            <td class="data-row"><text-outlet [key]="area+'Title1'"></text-outlet></td>
+                        </tr>
+                        <tr>
+                            <td class="data-row"><text-outlet [key]="area+'Title2'"></text-outlet></td>
+                        </tr>
+                        <tr>
+                            <td class="data-row"><text-outlet [key]="area+'Title3'"></text-outlet></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-10">
+                <div class="tables-container row">
+                    <div class="col-sm-5 col-4-table-container">
+                        <div class="table-heading blue-bg"><text-outlet key="TRXPerformance"></text-outlet></div>                            
+                        <table class="table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th class="data-heading"><text-outlet key="TRXShare"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="TRXVolume"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                </tr>
+                            </thead>
+                            <tbody>                                
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3TRxVolumeChange'" [yearRef]="'tlTeamRound'"  ></calc-outlet></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="col-sm-5 col-4-table-container">
+                        <div class="table-heading blue-bg"><text-outlet key="NRXPerformance"></text-outlet></div>                       
+                        <table class="table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th class="data-heading"><text-outlet key="NRXShare"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="NRXVolume"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1NRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1NRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1NRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1NRxVolumeChange'" [yearRef]="'tlTeamRound'"  ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1NRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1NRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1NRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1NRxVolumeChange'" [yearRef]="'tlTeamRound'"  ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2NRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2NRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2NRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2NRxVolumeChange'" [yearRef]="'tlTeamRound'"  ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3NRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3NRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3NRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3NRxVolumeChange'" [yearRef]="'tlTeamRound'"  ></calc-outlet></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="performance-dashboard competitors row">
+        <div class="performance-dashboard-heading row">
+            <text-outlet key="Competitors"></text-outlet>
+        </div>
+        <div class="performance-dashboard-data row">
+            <div class="col-sm-2">              
+                <table class="heading-table">
+                    <thead class="">
+                        <tr>
+                            <th class="data-heading"><text-outlet key="Position"></text-outlet></th>
+                        </tr>
+                    </thead>
+                    <tbody>                        
+                        <tr>
+                            <td class="data-row"><text-outlet [key]="area+'Title0'"></text-outlet></td>
+                        </tr>
+                        <tr>
+                            <td class="data-row"><text-outlet [key]="area+'Title1'"></text-outlet></td>
+                        </tr>
+                        <tr>
+                            <td class="data-row"><text-outlet [key]="area+'Title2'"></text-outlet></td>
+                        </tr>
+                        <tr>
+                            <td class="data-row"><text-outlet [key]="area+'Title3'"></text-outlet></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-10">
+                <div class="tables-container row">
+                    <div class="col-sm-2 col-2-table-container">
+                        <div class="table-heading red-bg"><text-outlet key="ADMMarket"></text-outlet></div>                            
+                        <table class="table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th class="data-heading"><text-outlet key="TRXVolume"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                </tr>
+                            </thead>
+                            <tbody>                                
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1TotalMarketVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1TotalMarketVolumeChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1TotalMarketVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1TotalMarketVolumeChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2TotalMarketVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2TotalMarketVolumeChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3TotalMarketVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3TotalMarketVolumeChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="col-sm-5 col-4-table-container">
+                        <div class="table-heading blue-bg"><text-outlet key="Squintrellix"></text-outlet></div>                       
+                        <table class="table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th class="data-heading"><text-outlet key="TRXShare"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="TRXVolume"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1TRxShareCompView'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1TRxShareChangeCompView'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1TRxVolumeCompView'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1TRxVolumeChangeCompView'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1TRxShareCompView'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1TRxShareChangeCompView'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1TRxVolumeCompView'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1TRxVolumeChangeCompView'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2TRxShareCompView'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2TRxShareChangeCompView'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2TRxVolumeCompView'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2TRxVolumeChangeCompView'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3TRxShareCompView'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3TRxShareChangeCompView'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3TRxVolumeCompView'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3TRxVolumeChangeCompView'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-sm-5 col-4-table-container">
+                        <div class="table-heading green-bg"><text-outlet key="Vibrand"></text-outlet></div>                            
+                        <table class="table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th class="data-heading"><text-outlet key="TRXShare"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="TRXVolume"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                </tr>
+                            </thead>
+                            <tbody>                                
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1TRxVolumeChange'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1Comp1TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1Comp1TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1Comp1TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1Comp1TRxVolumeChange'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2Comp1TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2Comp1TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2Comp1TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2Comp1TRxVolumeChange'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3Comp1TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3Comp1TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3Comp1TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3Comp1TRxVolumeChange'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-sm-5 col-4-table-container">
+                        <div class="table-heading green-bg"><text-outlet key="Prestige"></text-outlet></div>                       
+                        <table class="table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th class="data-heading"><text-outlet key="TRXShare"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="TRXVolume"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2TRxVolumeChange'" [yearRef]="'tlTeamRound'"  ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1Comp2TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1Comp2TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1Comp2TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg1Comp2TRxVolumeChange'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2Comp2TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2Comp2TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2Comp2TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg2Comp2TRxVolumeChange'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3Comp2TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3Comp2TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3Comp2TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Seg3Comp2TRxVolumeChange'" [yearRef]="'tlTeamRound'" ></calc-outlet></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="performance-dashboard managed-core-details row">
+        <div class="performance-dashboard-heading row">
+            <text-outlet key="ManagedCareDetail"></text-outlet>
+        </div>
+        <div class="performance-dashboard-data row">
+            <div class="col-sm-2">                
+                <table class="heading-table">
+                    <thead class="">
+                        <tr>
+                            <th class="data-heading"><text-outlet key="Provider"></text-outlet></th>
+                        </tr>
+                    </thead>
+                    <tbody>                        
+                        <tr>
+                            <td class="data-row"><text-outlet key="Provider1"></text-outlet></td>
+                        </tr>
+                        <tr>
+                            <td class="data-row"><text-outlet key="Provider2"></text-outlet></td>
+                        </tr>
+                        <tr>
+                            <td class="data-row"><text-outlet key="Provider3"></text-outlet></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-10">
+                <div class="tables-container row">
+                    <div class="col-sm-2 col-2-table-container">
+                        <div class="table-heading red-bg"><text-outlet key="ADMMarket"></text-outlet></div>                            
+                        <table class="table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th class="data-heading"><text-outlet key="TRXVolume"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="PercentageContribution"></text-outlet></th>                   
+                                </tr>
+                            </thead>
+                            <tbody>                                
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer1TRxTotalVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer1TRxContrib'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer3TRxTotalVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer3TRxContrib'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer2TRxTotalVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer2TRxContrib'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="col-sm-6 col-5-table-container">
+                        <div class="table-heading blue-bg"><text-outlet key="Squintrellix"></text-outlet></div>                       
+                        <table class="table-striped" >
+                            <thead class="">
+                                <tr>
+                                    <th class="data-heading"><text-outlet key="TierRestrictions"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="TRXShare"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="TRXVolume"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer1Tier'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer1TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer1TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer1TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer1TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer3Tier'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer3TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer3TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer3TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer3TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer2Tier'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer2TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer2TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer2TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Payer2TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-sm-6 col-5-table-container">
+                        <div class="table-heading green-bg"><text-outlet key="Vibrand"></text-outlet></div>                            
+                        <table class="table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th class="data-heading"><text-outlet key="TierRestrictions"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="TRXShare"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="TRXVolume"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                </tr>
+                            </thead>
+                            <tbody>                                
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer1Tier'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer1TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer1TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer1TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer1TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer3Tier'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer3TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer3TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer3TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer3TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer2Tier'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer2TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer2TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer2TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp1Payer2TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-sm-6 col-5-table-container">
+                        <div class="table-heading green-bg"><text-outlet key="Prestige"></text-outlet></div>                       
+                        <table class="table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th class="data-heading"><text-outlet key="TierRestrictions"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="TRXShare"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="TRXVolume"></text-outlet></th>
+                                    <th class="data-heading"><text-outlet key="Change"></text-outlet></th>
+                                </tr>
+                            </thead>
+                            <tbody class=" area-{{area}}">
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer1Tier'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer1TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer1TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer1TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer1TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer3Tier'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer3TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer3TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer3TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer3TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                                <tr>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer2Tier'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer2TRxShare'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer2TRxShareChange'" [yearRef]="'tlTeamRound'" format="0.00%" ></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer2TRxVolume'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                    <td class="data-row"><calc-outlet [ref]="'tlOutput'+area+'1Comp2Payer2TRxVolumeChange'" [yearRef]="'tlTeamRound'"></calc-outlet></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

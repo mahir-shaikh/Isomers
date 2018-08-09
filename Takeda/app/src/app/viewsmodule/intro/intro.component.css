@@ -1,0 +1,190 @@
+.intro-page-wrapper {
+  height: 80vh;
+  min-width: 720px;
+  max-width: 900px;
+  background-color: rgba(255,255,255,0.8);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.intro-page-wrapper .row {
+  margin: 0px;
+}
+.intro-page-wrapper .logout-link-container {
+  text-align: right;
+  padding-top: 10px;
+  justify-content: flex-end;
+}
+.intro-page-wrapper .logout-link-container margin-right -5px {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.intro-page-wrapper .logout-link-container .logout-link-icon {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 2px;
+}
+.intro-page-wrapper .logout-link-container .sync-container {
+  display: inline-block;
+  padding-right: 10px;
+  color: #666;
+}
+.intro-page-wrapper .intro-section {
+  height: calc(100% - 124px);
+  align-items: center;
+}
+.intro-page-wrapper .logo-section .logo-container,
+.intro-page-wrapper .intro-section .logo-container {
+  margin: 0;
+  justify-content: space-between;
+  padding: 0;
+}
+.intro-page-wrapper .logo-section .right-section,
+.intro-page-wrapper .intro-section .right-section {
+  padding-right: 0px;
+}
+.intro-page-wrapper .logo-section .bts-logo-container .bts-logo,
+.intro-page-wrapper .intro-section .bts-logo-container .bts-logo {
+  background: url("../../../../assets/images/bts-logo.svg") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  display: inline-block;
+  height: 53px;
+  width: 122px;
+  margin: 20px 0px;
+}
+.intro-page-wrapper .logo-section .takeda-logo-container .takeda-logo,
+.intro-page-wrapper .intro-section .takeda-logo-container .takeda-logo {
+  height: 50px;
+  width: 140px;
+  background: url("../../../../assets/images/takeda-logo.png") no-repeat;
+  margin: 20px 0px;
+}
+.intro-page-wrapper .logo-section .intro-image-container,
+.intro-page-wrapper .intro-section .intro-image-container {
+  padding-bottom: 15px;
+}
+.intro-page-wrapper .logo-section .intro-image-container .takeda-intro-image,
+.intro-page-wrapper .intro-section .intro-image-container .takeda-intro-image {
+  height: 477px;
+  width: 336px;
+  background: url("../../../../assets/images/intro-image.jpg") no-repeat;
+  background-size: cover;
+  background-position: right;
+  margin-left: auto;
+}
+.intro-page-wrapper .logo-section .program-title-container,
+.intro-page-wrapper .intro-section .program-title-container {
+  font-weight: 500;
+  margin: 30px 0;
+}
+.intro-page-wrapper .logo-section .program-title-container .ProgramTitle,
+.intro-page-wrapper .intro-section .program-title-container .ProgramTitle {
+  color: #666;
+  font-size: 1.4375rem;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+.intro-page-wrapper .logo-section .program-title-container .ProgramSubTitle,
+.intro-page-wrapper .intro-section .program-title-container .ProgramSubTitle {
+  font-size: 1.1875rem;
+  color: #96a145;
+}
+.intro-page-wrapper .logo-section .team-info,
+.intro-page-wrapper .intro-section .team-info {
+  color: #666;
+  align-items: flex-end;
+}
+.intro-page-wrapper .logo-section .team-info .team-round-container,
+.intro-page-wrapper .intro-section .team-info .team-round-container {
+  margin: 20px 0;
+}
+.intro-page-wrapper .logo-section .team-info .team-name-container,
+.intro-page-wrapper .intro-section .team-info .team-name-container {
+  margin: 10px 0;
+}
+.intro-page-wrapper .logo-section .team-info .team-round,
+.intro-page-wrapper .intro-section .team-info .team-round {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  padding: 0px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  line-height: 25px;
+  background-color: #666;
+}
+.intro-page-wrapper .logo-section .team-info .team-round calc-outlet,
+.intro-page-wrapper .intro-section .team-info .team-round calc-outlet {
+  color: #fff;
+}
+.intro-page-wrapper .logo-section .team-info .team-round-title,
+.intro-page-wrapper .intro-section .team-info .team-round-title {
+  height: 25px;
+  line-height: 25px;
+  font-weight: 500;
+  font-size: 1.125rem;
+  padding-right: 10px;
+}
+.intro-page-wrapper .logo-section .team-info .team-name-container,
+.intro-page-wrapper .intro-section .team-info .team-name-container,
+.intro-page-wrapper .logo-section .team-info .team-number-container,
+.intro-page-wrapper .intro-section .team-info .team-number-container,
+.intro-page-wrapper .logo-section .team-info .team-round-container,
+.intro-page-wrapper .intro-section .team-info .team-round-container {
+  text-align: left;
+  padding-left: 0px;
+}
+.intro-page-wrapper .logo-section .team-info .team-name-title,
+.intro-page-wrapper .intro-section .team-info .team-name-title,
+.intro-page-wrapper .logo-section .team-info .team-number-title,
+.intro-page-wrapper .intro-section .team-info .team-number-title,
+.intro-page-wrapper .logo-section .team-info .team-round-title,
+.intro-page-wrapper .intro-section .team-info .team-round-title {
+  padding-bottom: 5px;
+}
+.intro-page-wrapper .logo-section .team-info .button-container,
+.intro-page-wrapper .intro-section .team-info .button-container {
+  text-align: left;
+  padding-left: 0px;
+}
+.intro-page-wrapper .logo-section .team-info .button-container .next-button,
+.intro-page-wrapper .intro-section .team-info .button-container .next-button {
+  border-radius: 0px;
+  background-color: #666;
+  border-color: #666;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
+.intro-page-wrapper .logo-section .team-info .button-container .next-button:focus,
+.intro-page-wrapper .intro-section .team-info .button-container .next-button:focus {
+  box-shadow: 0 0 0 2px #666;
+}
+.logout-modal .button-container {
+  padding: 0 15px 10px;
+  text-align: center;
+}
+.logout-modal .button-container .btn {
+  cursor: pointer;
+}
+.logout-modal .button-container .yes-button {
+  float: left;
+}
+.logout-modal .button-container .no-button {
+  float: right;
+}
+.logout-modal .button-container:after {
+  clear: both;
+}

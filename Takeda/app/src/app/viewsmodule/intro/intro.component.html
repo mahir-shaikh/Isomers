@@ -1,0 +1,76 @@
+<div class="intro-page-wrapper container">
+    <div class="logout-link-container">            
+        <div class="sync-container"><sync-status></sync-status></div>
+        <div class="logout-link-icon fa fa-power-off" (click)="showLogoutAlert()"  title="Logout"></div>
+    </div>
+
+    <div class="logo-section row">
+        <div class="col-sm-12 logo-container row">
+            <div class="bts-logo-container">
+                <div class="bts-logo"></div>                
+            </div>
+            <div class="takeda-logo-container">
+                <div class="takeda-logo"></div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="intro-section row">
+        <div class="col-sm-6 left-section">
+            <div class="program-title-container">
+                <div class="ProgramTitle">
+                    <text-outlet key="IntroHeading"></text-outlet>
+                </div>
+                <!-- <div class="ProgramSubTitle">
+                    <text-outlet key="IntroSubHeading"></text-outlet>
+                </div> -->
+            </div>
+            <div class="team-info row">
+                <div class="team-round-container col-sm-12" *ngIf="hideNavigation">
+                    <span class="team-round-title"><text-outlet key="Round"></text-outlet></span>
+                    <span class="team-round col-sm-12"><calc-outlet [ref]="'tlTeamRound'"></calc-outlet></span>
+                </div>
+
+                <div class="team-name-container col-sm-10">
+                    <div class="team-name-title"><text-outlet key="TeamName"></text-outlet></div>
+                    <div class="team-name"><calc-input [ref]="'tlInputTeamName'"></calc-input></div>
+                </div>
+                <div class="team-number-container col-sm-8">
+                    <div class="team-number-title"><text-outlet key="TeamNumber"></text-outlet></div>
+                    <div class="team-number"><calc-input [ref]="'tlInputTeamNumber'"></calc-input></div>
+                </div>
+                <div class="button-container col-sm-2" *ngIf="hideNavigation">
+                <button class="btn btn-primary next-button" (click)="takeToArea()">
+                    <span class="fa fa-arrow-right"></span>
+                </button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-sm-6 right-section">
+
+            <div class="intro-image-container">
+                <div class="takeda-intro-image"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div bsModal #logoutModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm logout-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Logout"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="LogoutConfirmMsg"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-danger yes-button" (click)="hideLogoutAlert(true)"  [routerLink]="['/logout']"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn btn-primary no-button" (click)="hideLogoutAlert()"><text-outlet key="No"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>

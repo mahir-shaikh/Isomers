@@ -1,0 +1,109 @@
+.performance-dashboard-wrapper .row {
+  margin: 0px;
+}
+.performance-dashboard-wrapper .col-sm-10 {
+  padding: 0;
+}
+.performance-dashboard-wrapper .performance-dashboard {
+  width: 100%;
+}
+.performance-dashboard-wrapper .performance-dashboard-heading {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  color: #f00;
+  font-size: 1rem;
+  background: -webkit-linear-gradient(left, #f2f2f2, #fff);
+  background: -o-linear-gradient(right, #f2f2f2, #fff);
+  background: -moz-linear-gradient(right, #f2f2f2, #fff);
+  background: linear-gradient(to right, #f2f2f2, #fff);
+}
+.performance-dashboard-wrapper .performance-dashboard-data {
+  width: 100%;
+  padding: 5px;
+  padding-top: 0px;
+}
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+table td,
+table th {
+  height: 25px;
+  padding: 0.375rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+}
+table th {
+  text-align: center;
+  font-weight: 500;
+  height: 35px;
+  max-height: 35px;
+  padding: 0px;
+}
+.table-heading {
+  background-color: #ddd;
+  height: 35px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 35px;
+  color: #fff;
+  font-size: 0.875rem;
+}
+.tables-container {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+.heading-table {
+  position: absolute;
+  bottom: 20px;
+}
+.heading-table td,
+.heading-table th {
+  text-align: left;
+  padding-left: 0px;
+}
+.table-striped {
+  border: 1px solid #d7d7d7;
+  border-top: 0px;
+}
+.table-striped th {
+  background-color: #f7f7f7;
+  color: #333;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #e5efef;
+}
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #f7f7f7;
+}
+.col-2-table-container,
+.col-4-table-container,
+.col-5-table-container {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.col-2-table-container {
+  min-width: 200px;
+  max-width: 200px;
+}
+.col-4-table-container {
+  min-width: 320px;
+  max-width: 330px;
+}
+.col-5-table-container {
+  min-width: 400px;
+  max-width: 400px;
+}
+.red-bg {
+  background-color: #e5433c;
+}
+.blue-bg {
+  background-color: #47a4ad;
+}
+.green-bg {
+  background-color: #96a145;
+}

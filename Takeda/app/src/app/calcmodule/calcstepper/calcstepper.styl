@@ -1,0 +1,47 @@
+:host
+    display inline-block
+    width 100%
+    height 30px
+    background-color #EBE3EF
+    color #111
+    overflow hidden
+    
+:host(.disabled)
+    background-color #6D6E70
+    .stepper-button
+        pointer-events none
+        color #DCDCDC
+    
+.stepper
+    font-size 0.875rem
+    @media screen and (max-width 1024px)
+        font-size 0.75rem
+    & > *
+      float left
+      display inline-block
+    .field-value
+        width calc(100% - 15px)
+        padding 5px 3px
+        text-align center
+        overflow hidden
+        &.negative
+            color red
+    &-button
+        cursor pointer
+        display inline-block
+        font-size 12px
+        width 15px
+        height 15px
+        position absolute
+        right 0px
+        margin-right 5px
+        color #6D6D6E
+        text-align center
+            
+    .add
+        top 0px
+        margin-top 1px
+    .subtract
+        top 17px
+    .hidden
+        display none

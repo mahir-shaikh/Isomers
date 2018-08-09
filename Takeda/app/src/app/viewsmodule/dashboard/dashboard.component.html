@@ -1,0 +1,216 @@
+<!-- dont remove this line -->
+<div class="hidden" [routerLink]="['/intro']" [routerLinkActive]="['active']"></div>
+
+<!-- Dashboard will be visible only on the tool pages - not on the home page -->
+<div class="dashboard">
+    <div class="topbar row">
+        <div class="logo-container col-sm-3">
+            <div class="takeda-icon"></div>
+        </div>
+
+        <div class="format-metric-bar col-sm-9 row">
+            <div class="format-metric-bar-container col-sm-10 row">
+                <div class="metric-tools-container col-sm-12">
+                    <div class="metric-tools-row row">
+                        <div class="metric-tool">
+                            <div class="metric-tool-heading">
+                                <text-outlet key="TRXShare"></text-outlet>
+                            </div>
+                            <div class="metric-tool-data">
+                                <calc-outlet [ref]="'tlOutput'+area+'1TRxShareDash'" format="0.00%" useRawValue="true"></calc-outlet>
+                            </div>
+                        </div>
+                        <div class="metric-tool">
+                            <div class="metric-tool-heading">
+                                <text-outlet key="NRXShare"></text-outlet>
+                            </div>
+                            <div class="metric-tool-data">
+                                <calc-outlet [ref]="'tlOutput'+area+'1NRxShareDash'" format="0.00%" useRawValue="true"></calc-outlet>
+                            </div>
+                        </div>
+                        <div class="metric-tool">
+                            <div class="metric-tool-heading">
+                                <text-outlet key="TRXVolume"></text-outlet>
+                            </div>
+                            <div class="metric-tool-data">
+                                <calc-outlet [ref]="'tlOutput'+area+'1TRxVolDash'" format="0,0" useRawValue="true"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-tools-row row">
+                        <div class="metric-tool">
+                            <div class="metric-tool-heading">
+                                <text-outlet key="OperationalEfficiency"></text-outlet>
+                            </div>
+                            <div class="metric-tool-data">
+                                <calc-outlet [ref]="'tlOutput'+area+'1OpEffDash'" format="0.0" useRawValue="true"></calc-outlet>
+                            </div>
+                        </div>
+                        <div class="metric-tool">
+                            <div class="metric-tool-heading">
+                                <text-outlet key="EmployeeEngagement"></text-outlet>
+                            </div>
+                            <div class="metric-tool-data">
+                                <calc-outlet [ref]="'tlOutput'+area+'1ESATDash'" format="0.0" useRawValue="true"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-tools-row row">
+                        <div class="metric-tool">
+                            <div class="metric-tool-heading">
+                                <text-outlet key="FTERemaining"></text-outlet>
+                            </div>
+                            <div class="metric-tool-data">
+                                <calc-outlet [ref]="'tlOutput'+area+'1FTEsRemainingDash'" [yearRef]="'tlTeamRound'"></calc-outlet>
+                            </div>
+                        </div>
+                        <div class="metric-tool">
+                            <div class="metric-tool-heading">
+                                <text-outlet key="SamplesRemaining"></text-outlet>
+                            </div>
+                            <div class="metric-tool-data">
+                                <calc-outlet [ref]="'tlOutput'+area+'1SampleBudgetRemainingDash'" [yearRef]="'tlTeamRound'" format="0.0%"></calc-outlet>
+                            </div>
+                        </div>
+                        <div class="metric-tool">
+                            <div class="metric-tool-heading">
+                                <text-outlet key="PromotionRemaining"></text-outlet>
+                            </div>
+                            <div class="metric-tool-data">
+                                <calc-outlet [ref]="'tlOutput'+area+'1PromotionBudgetRemainingDash'" [yearRef]="'tlTeamRound'" format="0.0%"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="link-container">
+                <div class="logout-link-icon fa fa-power-off" (click)="showLogoutAlert()" title="Logout"></div><br>
+                <div class="sync-container"><sync-status></sync-status></div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="heading-link-container">
+            <div class="heading-link-row row">
+                <div class="col-sm-9 heading">
+                    <span class="title">
+                        <text-outlet key="Title"></text-outlet>
+                    </span>
+                </div>
+                <div class="col-sm-3 performance-dashboard-link">
+                    <div class="role-play fa fa-arrow-right" (click)="showScoreModalRef()"></div>
+                    <div class="performance-dashboard-link-icon fa fa-line-chart" (click)="showPerformanceDashboard()"></div>
+                    <div class="home-link-icon fa fa-home"  (click)="gotoHome()"></div>
+                </div>                
+            </div>
+        </div>
+        
+    
+    <div class="footer">
+        <div class="bts-icon"></div>
+    </div>
+</div>
+
+<div bsModal #performanceModal="bs-modal" class="modal model-lg animated fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg performance-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <div class="model-title-icon fa fa-snowflake-o"></div>
+    	            <div class="modal-title-text"><text-outlet key="PerformanceDashBoard"></text-outlet></div>
+                </div>
+                <span class="pull-right fa fa-close" (click)="hidePerformanceDashboard()"></span>
+            </div>
+            <div class="modal-body">
+                <performancedashboard></performancedashboard>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #changeArea="bs-modal" class="modal model-sm animated application-mode-modal fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <div class="modal-title-text"><text-outlet key="SetApplicationMode"></text-outlet></div>
+                </div>
+                <span class="pull-right fa fa-close" (click)="hideChangeArea()"></span>
+            </div>
+            <div class="modal-body">
+                <div class="application-mode row">
+                    <div class="mode mode-1"><text-outlet key="RDB"></text-outlet></div>
+                    <div class="mode-switch"><ui-switch [(ngModel)]="changeAreaMode"></ui-switch></div>
+                    <div class="mode mode-2"><text-outlet key="DBM"></text-outlet></div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-primary" (click)="onAreaChangeSubmit($event)"><text-outlet key="Submit"></text-outlet></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #scoreModal="bs-modal" class="modal model-sm animated score-modal fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"[config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-sm-11 heading"><text-outlet key="Alert"></text-outlet></div>
+                <span class="fa fa-close" (click)="hideScoreModalRef()"></span>
+            </div>
+            <div class="modal-body">
+                <div *ngIf="!scoreInput">
+                    <div class="password-container">
+                        <div class="password-text"><text-outlet key="EnterPassword"></text-outlet></div>
+                        <input type="password" [(ngModel)]="password" #passwordText>
+                    </div>
+                    <div class="error-message" *ngIf="showErrorMessage"><text-outlet key="ErrorMessageRound"></text-outlet></div>
+                    <div class="error-message" *ngIf="showPasswordErrorMessage"><text-outlet key="PasswordErrorMessage"></text-outlet></div>
+                </div>
+                <div *ngIf="scoreInput">
+                    <div class="title-text"><text-outlet key="RoleplayMessageRound2"></text-outlet></div>                    
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-primary" (click)="onScoreSubmit($event)" [class.disabled]="password.value"><text-outlet key="Submit"></text-outlet></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #errModal="bs-modal" class="modal model-sm animated errormessage-modal fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"[config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-sm-11 heading"><text-outlet key="Alert"></text-outlet></div>
+                <span class="fa fa-close" (click)="errModal.hide()"></span>
+            </div>
+            <div class="modal-body">
+                <div class="error-message"><text-outlet key="ErrorMessageRound"></text-outlet></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div bsModal #logoutModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm logout-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Logout"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="LogoutConfirmMsg"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-danger yes-button" (click)="hideLogoutAlert(true)"  [routerLink]="['/logout']"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn btn-primary no-button" (click)="hideLogoutAlert()"><text-outlet key="No"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="loader-container" *ngIf="showLoader">
+    <img class="loading-gif" src="../../../../assets/images/loading.gif">
+</div>

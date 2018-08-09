@@ -1,0 +1,58 @@
+:host {
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  background-color: #ebe3ef;
+  color: #111;
+  overflow: hidden;
+}
+:host(.disabled) {
+  background-color: #6d6e70;
+}
+:host(.disabled) .stepper-button {
+  pointer-events: none;
+  color: #dcdcdc;
+}
+.stepper {
+  font-size: 0.875rem;
+}
+@media screen and (max-width: 1024px) {
+  .stepper {
+    font-size: 0.75rem;
+  }
+}
+.stepper > * {
+  float: left;
+  display: inline-block;
+}
+.stepper .field-value {
+  width: calc(100% - 15px);
+  padding: 5px 3px;
+  text-align: center;
+  overflow: hidden;
+}
+.stepper .field-value.negative {
+  color: #f00;
+}
+.stepper-button {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 0px;
+  margin-right: 5px;
+  color: #6d6d6e;
+  text-align: center;
+}
+.stepper .add {
+  top: 0px;
+  margin-top: 1px;
+}
+.stepper .subtract {
+  top: 17px;
+}
+.stepper .hidden {
+  display: none;
+}

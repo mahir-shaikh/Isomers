@@ -1,0 +1,32 @@
+.planningTool
+    input
+        width 100%
+        max-width 96px
+input
+    background-color #F7F7F7
+    border 1px solid #D9D9D9
+    width 100% 
+    padding 2px 10px
+    border-radius 0
+    text-align left
+    font-size 0.875rem
+    color #111
+    text-align center
+    overflow hidden
+    @media screen and (max-width 1024px)
+        font-size 0.75rem
+    &:active,&:focus
+        outline none
+        background-color #EBE3EF
+        
+:host(.disabled)
+    input
+        background-color #6D6E70
+        color #fff
+        pointer-events none
+        
+:host-context(.intro-section){
+    input{
+        text-align left
+    }
+}

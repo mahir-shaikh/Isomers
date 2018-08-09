@@ -1,0 +1,6 @@
+<form class='stepper'>
+  <div class='fa fa-angle-up add stepper-button' role='button'></div>
+  <input class='field hidden' type='number' [value]='value' [min]='min' [max]='max' readonly="readonly" [step]="step" />
+  <span class="field-value" [class.negative]="showNegativeColor">{{formattedVal}}</span>
+  <div class='fa fa-angle-down subtract stepper-button' role='button'></div>
+</form>

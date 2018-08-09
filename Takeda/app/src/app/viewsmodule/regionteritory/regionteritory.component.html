@@ -1,0 +1,21 @@
+<div class="regionteritory">
+    <div class="regionteritory-container">
+        <div class="eventBody">
+            <div class="title-container">
+                <div class="title-icon fa fa-snowflake-o"></div>
+                <text-outlet [key]="titleKey"></text-outlet>
+            </div>
+            <tabset>
+                <tab heading='{{areaHeading1}}' [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                    <regionteritorydata *ngIf="activeIndex === 1" [areaId]="activeIndex"></regionteritorydata>
+                </tab>
+                <tab heading='{{areaHeading2}}' [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                    <regionteritorydata *ngIf="activeIndex === 2" [areaId]="activeIndex"></regionteritorydata>
+                </tab>
+                <tab heading='{{areaHeading3}}' [active]="activeIndex === 3" (select)="setActiveIndex(3)">
+                    <regionteritorydata *ngIf="activeIndex === 3" [areaId]="activeIndex"></regionteritorydata>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+</div>

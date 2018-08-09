@@ -1,0 +1,240 @@
+:host
+    display block
+    .hidden.active ~ .dashboard
+        display none
+    .dashboard
+        display block
+
+.dashboard
+    .row
+        margin 0
+    .format-bar
+        background-color #dcdcdc
+    .footer
+        width 100%
+        background-color #666
+        text-align right
+        position fixed
+        width 100%
+        bottom 0
+        padding 5px 0
+        padding-right 10px
+        left 0
+        z-index 2000
+        .bts-icon
+            height 21px
+            width 63px
+            background url("../../../../assets/images/bts-icon.png") no-repeat
+            background-size cover
+            vertical-align middle
+            display inline-block
+    .topbar
+        background-color #fff
+        margin 0
+        align-items center
+        .logo-container
+            width 100%
+            .takeda-icon
+                background url("../../../../assets/images/takeda-icon.png") no-repeat
+                height 30px
+        .format-metric-bar
+            padding 0
+            justify-content flex-end
+            align-items center
+            .logout-link-icon
+                padding-top 10px
+                font-size 1rem
+                color #666
+                cursor pointer
+                margin-right 2px
+            .sync-container
+                text-align center
+                padding 5px 0px
+                color #666
+            .link-container
+                text-align right
+                padding-right 15px
+                padding-left 10px
+                border-left 1px solid #ddd
+            &-container
+                padding 0px 15px
+                justify-content flex-end
+                padding-right 10px
+                .metric-tools-container
+                    padding 4px 0
+                    .metric-tools-row
+                        justify-content flex-end
+                        .metric-tool
+                            padding 1px 5px
+                            font-size 0.75rem
+                            height 20px
+                            &-heading
+                                padding 0px 5px
+                                display inline-block
+                                color #7C7C7C
+                                font-weight 500
+                                &:after
+                                    content ':'
+                                    color #7C7C7C         
+                            &-data
+                                display inline-block
+                                padding 0px
+                                font-weight 500
+                                calc-outlet
+                                    color #F00
+                
+    .heading-link-container
+        padding 0
+        background-color #6F4F7F
+        margin 10px
+        margin-bottom 0px
+        &:after
+            clear both
+            width 100%
+        .heading-link-row
+            height 50px
+            padding 10px 0px
+        .heading
+            display inline-block
+            padding-left 10px
+            .title
+                color #FFF
+                text-transform uppercase
+                font-size 1rem
+                line-height 27px
+                font-weight 500
+        .performance-dashboard-link
+            color #FFF
+            font-size 20px
+            font-weight 500
+            text-align right
+            line-height 27px
+            .fa
+                cursor pointer
+                padding 0 8px
+                &.home-link-icon
+                    padding-right 0
+                &.role-play
+                    padding-left 0
+            
+        
+                
+.performance-modal
+    max-width none
+    width calc(100vw - 30px)
+    margin 15px
+    .modal-content
+        height calc(100vh - 62px)
+        .modal-header
+            padding 15px 20px
+            .modal-title
+                font-size 20px
+                font-weight 500
+                color #6F4F7F
+                padding 0px 10px
+                &-icon
+                    display inline-block
+                &-text
+                    display inline-block
+                    padding-left 5px
+            .fa-close
+                cursor pointer
+        .modal-body
+            overflow-y auto
+            
+.application-mode-modal
+    .modal-title
+        color #775886
+        font-size 1.125rem
+        font-weight 500
+    .fa-close
+        cursor pointer
+    .modal-body
+        .application-mode
+            margin 0
+            align-items center
+            justify-content space-around
+            color #666
+            font-weight 500
+            font-size 0.875rem
+            .mode
+                padding 0 10px
+    .button-container
+        text-align center
+        margin-bottom 20px
+        .btn
+            cursor pointer
+        
+.score-modal
+    .modal-header
+        text-align right
+        border-bottom 0
+        padding 0
+        justify-content flex-end
+        .heading
+            padding 0.5rem
+            text-align left
+            padding 1rem
+            padding-right 0
+            color #775886
+            font-size 1.125rem
+            font-weight 500
+        .fa-close
+            padding-right 1rem
+    .fa-close
+        cursor pointer
+    .modal-body        
+        padding-top 0
+        .error-message
+            padding 10px 0
+            color #F00
+            font-size 0.75rem
+        .title-text
+            padding-bottom 5px
+        .password-container
+            margin-top 10px
+            .password-text
+                padding-bottom 5px
+            input
+                width 100%
+                background-color #EAE2EE
+                border 1px solid #000
+                &:active,&:focus
+                    background-color #6F4F7F
+                    color #fff
+                    border 1px solid #000
+    .button-container
+        text-align center
+        margin-bottom 20px
+        .btn
+            cursor pointer
+            
+.logout-modal
+    .button-container
+        padding 0 15px 10px
+        text-align center
+        .btn
+            cursor pointer
+        .yes-button
+            float left
+        .no-button
+            float right
+        &:after
+            clear both
+ .loader-container
+     position fixed
+     top 0
+     left 0
+     right 0
+     bottom 0
+     z-index 2001
+     background-color rgba(255, 255, 255, 0.9)
+    .loading-gif
+      position absolute
+      width 150px
+      top 50%
+      left 50%
+      -webkit-transform translate(-50%, -50%)
+      -moz-transform translate(-50%, -50%)
+      -ms-transform translate(-50%, -50%)
+      transform translate(-50%, -50%)
