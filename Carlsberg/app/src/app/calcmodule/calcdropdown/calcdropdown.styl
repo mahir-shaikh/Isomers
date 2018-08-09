@@ -1,0 +1,125 @@
+// ul[dropdownMenu]
+//     li
+//         list-style-type none
+
+// #single-button
+//     padding-top 5px
+//     padding-bottom 5px
+//     width 100%
+//     text-align left
+//     .btn .caret
+//         position absolute
+//         right 10px
+//         top 50%
+//     &.sb-right
+//         text-align right
+//         &.btn .caret
+//             position absolute
+//             left 10px
+//             top 50%
+
+// .btn-group.open 
+//     #single-button
+//         border-top-left-radius 5px
+//         border-top-right-radius 5px
+//         border-bottom-right-radius 0
+//         border-bottom-left-radius 0
+//     .caret
+//         border-bottom 4px dashed
+//         border-bottom 4px solid\9
+//         border-top none
+
+// .btn-group.dropdown
+//     width 100%
+
+// .dropdown-menu
+//     border-radius 0
+//     margin 0
+//     border solid 1px #005495
+//     li
+//         margin 0
+//         &:nth-child(even)
+//             background #f2f2f2
+//         a
+//             transition background ease-out .3s, color ease-out .3s
+//         a:hover
+//             background #005495
+//             color #fff
+
+// .dropdown-menu-right
+//     li
+//         text-align right
+
+
+@import "../../../../assets/css/mixins"
+.ds-input-field,
+.btn-group
+    height 100%
+    width 100%
+.dropdown-item.active, .dropdown-item:active
+    background-color #003f11
+    border-color #003f11
+    color #FFF
+.btn-primary.active, .btn-primary:active, .show > .btn-primary.dropdown-toggle
+    background-color #003f11
+    border-color #003f11
+    color #FFF
+.dropdown
+    &.open
+        & ^[0]-menu
+            // display block
+            max-height 172px
+            overflow auto
+            min-width 100%
+    &-toggle
+        background-color #E6EDE1  
+        color #111
+        height 100%
+        width 100%
+        padding 5px
+        padding-left 10px
+        text-align left
+        border-radius 0
+        border-color #D9D9D9
+        .dropdown-text
+            width 70%
+            text-overflow ellipsis
+            display inline-block
+            overflow hidden
+            position absolute
+            top 50%
+            tranlateTop()
+        &.btn-primary
+            &:focus,
+            &:active
+                -webkit-box-shadow none
+                box-shadow none
+                background-color #003f11
+                color #FFF
+                .caret
+                    color #FFF
+        .caret
+            position absolute
+            right 5px
+            display inline-block
+            top 50%
+            font-size 1.1em
+            font-weight 800
+            color #111
+            tranlateTop()
+        &:after
+            border 0
+        &-item
+            color #6D6E70
+
+.dropdown-toggle,
+.dropdown-menu    
+    font-size 0.875rem
+
+:host-context(.sku-page-wrapper .info-section)
+        .dropdown-toggle
+            padding 15px
+            .caret
+                right 15px
+            &,.dropdown-menu
+                font-size 1rem

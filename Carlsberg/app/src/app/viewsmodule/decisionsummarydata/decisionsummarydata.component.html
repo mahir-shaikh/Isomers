@@ -1,0 +1,411 @@
+<div class="decision-summary-data-wrapper animated" [class.slideInUp]="doAnimation">
+    <div class="table-container container">
+        <table class="table-condensed table">
+            <!-- <tr class="row info-row">
+                <th class="col-sm-12 info-text">
+                    <text-outlet key="ValuesInThousand"></text-outlet>
+                </th>
+            </tr> -->
+            <tr class="row heading-row">
+                <th class="col-sm-3 data-label">
+                    <text-outlet key="Ch1"></text-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot1"'></calc-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot2"'></calc-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot3"'></calc-outlet>
+                </th>
+            </tr>
+
+            <!-- 1st Block of Table -->
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="SalesForecast"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot1SF"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot2SF"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot3SF"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="Pack"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot1Pack"' useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot2Pack"' useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot3Pack"' useRawValue="true"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="CustomerPrice"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot1CP"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot2CP"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot3CP"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="Promotion1Type"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot1Promo1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot2Promo1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot3Promo1"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="NumberOfWeeks"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot1PW1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot2PW1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot3PW1"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="ExpectedPromotionShare"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot1PS1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot2PS1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot3PS1"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="Promotion2Type"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot1Promo2"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot2Promo2"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot3Promo2"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="NumberOfWeeks"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot1PW2"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot2PW2"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot3PW2"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="ExpectedPromotionShare"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot1PS2"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot2PS2"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh1Prod"+prodNo+"Slot3PS2"'></calc-outlet>
+                </td>
+            </tr>
+
+            <!-- 2nd Block of Table -->
+            <tr class="row heading-row">
+                <th class="col-sm-3 data-label">
+                    <text-outlet key="Ch2"></text-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot1"'></calc-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot2"'></calc-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot3"'></calc-outlet>
+                </th>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="SalesForecast"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot1SF"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot2SF"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot3SF"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="Pack"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot1Pack"' useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot2Pack"' useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot3Pack"' useRawValue="true"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="CustomerPrice"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot1CP"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot2CP"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh2Prod"+prodNo+"Slot3CP"'></calc-outlet>
+                </td>
+            </tr>
+
+            <!-- 3rd Block of Table -->
+            <tr class="row heading-row">
+                <th class="col-sm-3 data-label">
+                    <text-outlet key="Ch3"></text-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot1"'></calc-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot2"'></calc-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot3"'></calc-outlet>
+                </th>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="SalesForecast"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot1SF"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot2SF"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot3SF"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="Pack"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot1Pack"' useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot2Pack"' useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot3Pack"' useRawValue="true"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="CustomerPrice"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot1CP"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot2CP"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot3CP"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="Promotion1Type"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot1Promo1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot2Promo1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot3Promo1"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="NumberOfWeeks"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot1PW1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot2PW1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot3PW1"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="ExpectedPromotionShare"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot1PS1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot2PS1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh3Prod"+prodNo+"Slot3PS1"'></calc-outlet>
+                </td>
+            </tr>
+
+            <!-- 4th Block of Table -->
+            <tr class="row heading-row">
+                <th class="col-sm-3 data-label">
+                    <text-outlet key="Ch4"></text-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot1"'></calc-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot2"'></calc-outlet>
+                </th>
+                <th class="col-sm-3 data-label">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot3"'></calc-outlet>
+                </th>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="SalesForecast"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot1SF"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot2SF"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot3SF"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="Pack"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot1Pack"' useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot2Pack"' useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot3Pack"' useRawValue="true"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="CustomerPrice"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot1CP"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot2CP"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot3CP"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="Promotion1Type"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot1Promo1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot2Promo1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot3Promo1"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="NumberOfWeeks"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot1PW1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot2PW1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot3PW1"'></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col-sm-3 data-label">
+                    <text-outlet key="ExpectedPromotionShare"></text-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot1PS1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot2PS1"'></calc-outlet>
+                </td>
+                <td class="col-sm-3 data-value">
+                    <calc-outlet [ref]='"tlOutputDecSumCh4Prod"+prodNo+"Slot3PS1"'></calc-outlet>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

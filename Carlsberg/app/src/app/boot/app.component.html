@@ -1,0 +1,4 @@
+<div class="main" [class.introScreen]="isAppReady">
+    <im-dashboard *ngIf="isAppReady"></im-dashboard>
+    <router-outlet></router-outlet>
+</div>

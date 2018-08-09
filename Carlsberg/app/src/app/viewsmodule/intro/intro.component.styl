@@ -1,0 +1,130 @@
+.intro-page
+    height calc(100% - 42px)
+    margin-left -30px
+    margin-right -30px
+    background url("../../../../assets/images/intro_background.jpg") no-repeat
+    background-size cover
+    overflow hidden
+    .row
+        margin 0
+    .left-section
+        .carlsberg-logo-container
+            padding 15px
+            .carlsberg-logo
+                background url("../../../../assets/images/Carlsberg_logo_White.png") no-repeat
+                background-size contain
+                width 100%
+                height 100px
+        .inputs-container
+            justify-content flex-end
+            align-items center
+            text-align center
+    .right-section
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        flex-direction column
+        padding-right 0
+        justify-content center
+        .shadow-effect
+            background-color rgba(25,70,25,0.7)
+            -moz-border-radius 100% 0 0 100%
+            border-radius 100% 0 0 100%
+            height 200%
+            top -50%
+            position absolute
+            width 100%
+        .decision-container
+            text-align right
+            z-index 1
+            .logout-link,.sync-link
+                position relative
+                text-align center
+                cursor pointer
+                width 75px
+                height 60px
+                background-color #000
+                color #FFF
+                display inline-flex
+                flex-direction column
+                justify-content center
+                margin 50px 0
+                &-icon,
+                &-label
+                    font-weight 500
+                    text-outlet
+                        font-size 0.875rem
+        .inputs-container
+            margin 100px
+            z-index 1
+            .input-field-row,.input-field-label-row
+                justify-content center
+            .round-container,.team-name-container,.team-number-container,.next-button-container
+                margin 20px 0
+                justify-content center
+            .round-label,.team-name-label,.team-number-label
+                font-size 1.125rem
+                font-weight 500
+                color #FFF
+                text-align center
+                padding-right 0
+            .team-name-label
+                padding-bottom 10px
+            .team-name-input
+                padding-right 0px
+                background-color rgba(0,0,0,0.3)
+                width 274px
+            .round-output,.team-name-input,.team-number-input
+                padding-left 0
+            .round-output
+                calc-outlet
+                    padding 5px 10px
+                    font-weight 600
+                    color #fff            
+            .labels
+                margin 5px
+                width 127px
+            .field
+                background-color rgba(0,0,0,0.3)
+                margin 5px
+                padding 0
+                text-align center
+                height 180px
+                width 127px
+                vertical-align middle
+                line-height 180px
+                font-size 6.5625rem
+                text-align center
+                &.round-output
+                    background-color #b8a177
+                    border 0
+                calc-outlet
+                    font-size 6.5625rem
+                    font-weight normal
+            .next-button-container
+                justify-content center
+                text-align center
+                .next-button
+                    color #000
+                    background-color #FFF
+                    border-radius 50%
+                    height 50px
+                    width 50px
+                    line-height 60px
+                    margin 0 35%
+                    .fa
+                        font-size 1.5rem
+                        font-weight 600
+                        cursor pointer
+                        
+.logout-modal
+    .button-container
+        padding 0 15px 10px
+        text-align center
+        .yes-button
+            float left
+        .no-button
+            float right
+        &:after
+            clear both

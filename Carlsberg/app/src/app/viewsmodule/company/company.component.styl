@@ -1,0 +1,119 @@
+.company-page
+    height calc(100% - 250px)
+    overflow auto
+    background-color rgba(255,255,255,0.8)
+    font-size 0.875rem
+    @media screen and (max-width 1024px)
+        font-size 0.75rem
+    .row
+        margin 0
+    .company-heading-container
+        padding 10px
+        background-color rgba(255,255,255,0.5)
+        .company-heading
+            &-text,&-sub-text
+                font-size 1rem
+                color #032904
+                font-weight 500
+            &-sub-text
+                &:before
+                    content '>'
+                 
+                    padding 5px
+    .heading-text
+        color #003F11
+        font-size 1.125rem
+        font-weight 500
+        padding 15px 10px
+    .package-innovation-section
+        margin 0
+        flex-direction column
+        .package-innovation-heading
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        .package-innovation-table
+            background-color #FFF
+            padding 0 10px
+            .heading-row
+                font-weight 500
+                text-align center
+                min-height 30px
+                line-height 30px
+                padding 15px 10px
+            .data-row
+                text-align center
+                padding-bottom 10px
+                .data-value
+                    padding 1px
+                    padding-left 3px
+                    background-color #F4F4F4
+                    background-clip content-box
+                    min-height 30px
+                    line-height 30px
+                    &:first-child
+                    &:last-child
+                        padding-left 0
+                    calc-outlet
+                        display block
+                        padding 5px
+    .mtu-allocation-section
+        .heading-text
+            background-color #fff
+            border-bottom: 1px solid rgba(0,63,17,0.8) 
+            color #003f11
+        .mtu-allocation-image
+            background url("../../../../assets/images/channel.jpg")
+            background-size cover
+            background-clip content-box
+            padding-left 0
+        .mtu-allocation-data
+            padding 15px 0
+    .stratergic-innitiative-section
+        .stratergic-innitiative-heading
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        .stratergic-innitiative-data
+            padding 0
+            margin-bottom 5px
+            .si-dropdown
+                margin-right 5px
+                padding 10px 10px 0
+                background-color #fff
+                @media(max-width 1024px)
+                    margin-right 0
+                &:last-child
+                    padding-bottom 10px
+        .table-container
+            margin 15px 0
+            margin-top 0
+            text-align center
+            background-color #FFF
+            &.mtu-expense-table
+                padding 10px
+                &:last-child
+                    margin-bottom 5px
+                .heading-value
+                    background-color #FFF
+                    padding 10px 0
+                .heading-row
+                    padding 0
+            &:last-child
+                margin-bottom 20px
+            .heading-row
+                font-weight 500
+                padding 10px 0
+            .left-column
+                text-align left
+            .data-row
+                .data-value
+                    padding 1px
+                    background-color #F4F4F4
+                    background-clip content-box
+                    min-height 30px
+                    line-height 30px
+                    calc-outlet
+                    text-outlet
+                        padding 7px
+                        display block

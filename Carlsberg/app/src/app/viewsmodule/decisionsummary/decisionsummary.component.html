@@ -1,0 +1,18 @@
+<div class="decision-summary-wrapper animated slideInUp">
+    <div class="decision-summary-container">
+        <tabset>
+            <tab heading='{{prod2}}' [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                <decision-summary-data [doAnimation]="doAnimation" *ngIf="activeIndex === 1" [prodNo]="2"></decision-summary-data>
+            </tab>
+            <tab heading='{{prod3}}' [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                <decision-summary-data [doAnimation]="doAnimation" *ngIf="activeIndex === 2" [prodNo]="3"></decision-summary-data>
+            </tab>
+            <tab heading='{{prod1}}' [active]="activeIndex === 0" (select)="setActiveIndex(0)">
+                <decision-summary-data [doAnimation]="doAnimation" *ngIf="activeIndex === 0" [prodNo]="1"></decision-summary-data>
+            </tab>
+            <tab heading='{{prod4}}' [active]="activeIndex === 3" (select)="setActiveIndex(3)">
+                <decision-summary-data [doAnimation]="doAnimation" *ngIf="activeIndex === 3" [prodNo]="4"></decision-summary-data>
+            </tab>
+        </tabset>
+    </div>
+</div>

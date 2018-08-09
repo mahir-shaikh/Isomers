@@ -1,0 +1,246 @@
+<div class="company-page animated slideInUp">
+    <div class="row company-data">
+        <div class="col-sm-6 ">
+            <div class="row package-innovation-section">
+                <div class="package-innovation-heading heading-text">
+                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipPackageInnovation"></my-tooltip>
+                    <text-outlet key="PackageInnovation"></text-outlet>
+                </div>
+                <div class="package-innovation-table">
+                    <div class="row heading-row">
+                        <div class="col-sm-6">
+                        </div>
+                        <div class="col-sm-3">
+                            <text-outlet key="MtuRequired"></text-outlet>
+                        </div>
+                        <div class="col-sm-3">
+                            <text-outlet key="Expense"></text-outlet>
+                        </div>                      
+                    </div>
+                    <div class="row data-row">
+                        <div class="col-sm-6 data-value">
+                            <calc-dropdown [items]="PackList" ref="tlInputPackInnovation1"></calc-dropdown>
+                        </div>
+                        <div class="col-sm-3 data-value">
+                            <calc-outlet ref="tlOutputPackInnovation1Emp1Req"></calc-outlet>
+                        </div>
+                        <div class="col-sm-3 data-value">
+                            <calc-outlet ref="tlOutputPackInnovation1Exp"></calc-outlet>
+                        </div>                      
+                    </div>
+                    <div class="row data-row">
+                        <div class="col-sm-6 data-value">
+                            <calc-dropdown [items]="PackList" ref="tlInputPackInnovation2"></calc-dropdown>
+                        </div>
+                        <div class="col-sm-3 data-value">
+                            <calc-outlet ref="tlOutputPackInnovation2Emp1Req"></calc-outlet>
+                        </div>
+                        <div class="col-sm-3 data-value">
+                            <calc-outlet ref="tlOutputPackInnovation2Exp"></calc-outlet>
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+            <div class="row mtu-allocation-section">
+                <!-- <div class="col-sm-3 mtu-allocation-image">
+                </div> -->
+                <div class="col-sm-12 mtu-allocation-data">
+                    <div class="mtu-allocation-heading  heading-text">
+                        <text-outlet key="MtuAllocation"></text-outlet>
+                    </div>
+                    <div class="mtu-allocation-chart">
+                        <!-- Chart -->
+                        <donut
+                        [rangeRef]="['tlOutputChartEmp1PackInnovation','tlOutputChartEmp1Promotions','tlOutputChartEmp1Marketing','tlOutputChartEmp1SI','tlOutputChartEmp1ValDriv','tlOutputChartEmp1NewSlots','tlOutputChartEmp1Reports','tlOutputChartEmp1Unassigned']"
+                        seriesLabels ="[PackageInnovation,Promotions,TradeMarketing,StratergicInnitiatives,ValueDrivers,NewSlots,MarketResearch,Available]"
+                        height="460" >
+                        </donut>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 stratergic-innitiative-section">
+            <div class="stratergic-innitiative-heading heading-text">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipStratergicInnitiatives"></my-tooltip>
+                <text-outlet key="StratergicInnitiatives"></text-outlet>
+            </div>
+            <div class="strategic-data row">
+                <div class="stratergic-innitiative-data col-sm-12 col-xl-6">
+                    <div class="si-dropdown">
+                        <calc-dropdown [items]="ProjectList" ref="tlInputSi1"></calc-dropdown>
+                    </div>
+                    <div class="si-dropdown">
+                        <calc-dropdown [items]="ProjectList" ref="tlInputSi2"></calc-dropdown>
+                    </div>
+                    <div class="si-dropdown">
+                        <calc-dropdown [items]="ProjectList" ref="tlInputSi3"></calc-dropdown>                  
+                    </div>
+                </div>
+
+                <div class="table-container mtu-expense-table col-sm-12 col-xl-6">
+                    <div class="row heading-row">
+                        <div class="col-sm-6 heading-value">
+                            <text-outlet key="MtuRequired"></text-outlet>
+                        </div>
+                        <div class="col-sm-6 heading-value">
+                            <text-outlet key="Expense"></text-outlet>
+                        </div>
+                    </div>
+                    <div class="row data-row">
+                        <div class="col-sm-6 data-value">
+                            <calc-outlet ref="tlOutputSiEmp1Req"></calc-outlet>
+                        </div>
+                        <div class="col-sm-6 data-value">
+                            <calc-outlet ref="tlOutputSiExp"></calc-outlet>                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stratergic-innitiative-sub-heading heading-text">
+                <text-outlet key="PrevInitiatives"></text-outlet>
+            </div>
+            <div class="table-container year-1-table">
+                <div class="row heading-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Year1"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <text-outlet key="Number"></text-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <text-outlet key="Name"></text-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Initiative1"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputSI1CodeR1"></calc-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <calc-outlet ref="tlOutputSI1NameR1"></calc-outlet>                       
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Initiative2"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputSI2CodeR1"></calc-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <calc-outlet ref="tlOutputSI2NameR1"></calc-outlet>                       
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Initiative3"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputSI3CodeR1"></calc-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <calc-outlet ref="tlOutputSI3NameR1"></calc-outlet>                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container year-2-table">
+                <div class="row heading-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Year2"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <text-outlet key="Number"></text-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <text-outlet key="Name"></text-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Initiative1"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputSI1CodeR2"></calc-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <calc-outlet ref="tlOutputSI1NameR2"></calc-outlet>                       
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Initiative2"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputSI2CodeR2"></calc-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <calc-outlet ref="tlOutputSI2NameR2"></calc-outlet>                       
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Initiative3"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputSI3CodeR2"></calc-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <calc-outlet ref="tlOutputSI3NameR2"></calc-outlet>                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container year-3-table">
+                <div class="row heading-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Year3"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <text-outlet key="Number"></text-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <text-outlet key="Name"></text-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Initiative1"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputSI1CodeR3"></calc-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <calc-outlet ref="tlOutputSI1NameR3"></calc-outlet>                       
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Initiative2"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputSI2CodeR3"></calc-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <calc-outlet ref="tlOutputSI2NameR3"></calc-outlet>                       
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-value left-column">
+                        <text-outlet key="Initiative3"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputSI3CodeR3"></calc-outlet>
+                    </div>
+                    <div class="col-sm-6 data-value">
+                        <calc-outlet ref="tlOutputSI3NameR3"></calc-outlet>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

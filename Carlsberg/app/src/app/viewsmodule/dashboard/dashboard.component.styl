@@ -1,0 +1,439 @@
+:host
+    display block
+    .hidden.active ~ .dashboard
+        display none
+    .dashboard
+        display block
+ .dashboard
+     .row
+        margin 0
+    .navigation-bar
+        color #FFF
+        background-color rgba(0, 63, 17, 0.8)
+        &-container
+            width 100%
+            justify-content center
+            align-items center
+            > .navigation-bar-link
+                margin 0 5px
+                padding 10px
+                min-width 100px
+                font-size 0.875rem
+                text-align center
+                position relative
+                text-transform uppercase
+                &:hover
+                    background-color #809F88
+            .reports-link
+                .navigation-bar-dropdown-link
+                    .navigation-bar-link-text
+                        font-size 0.75rem
+            .navigation-bar-link.active
+                background-color #809F88
+            .bar
+                display inline-block
+                padding 5px 0
+            .navigation-bar-link-text
+                cursor pointer
+                line-height 30px
+                font-weight 500
+            .navigation-bar-hover-link
+                > .navigation-bar-dropdown-link
+                    display none
+                &:hover
+                    color #FFF
+                    > .navigation-bar-dropdown-link
+                        display block
+                .navigation-bar-dropdown-link
+                    position absolute
+                    z-index 1
+                    min-width 100px
+                    width 100%
+                    left 0
+                    text-align left
+                    top 100%
+                    border 1px solid #809F88
+                    padding-top 10px
+                    padding-bottom 10px
+                    background-color #809F88
+                    &.reports-link-ul
+                        width 150%
+                        left auto
+                        right 0
+                    .navigation-bar-link-text
+                        display block
+                        padding 5px 10px
+                        cursor pointer
+                        &:hover
+                            background-color rgba(8, 86, 30, 0.8)
+                    .navigation-bar-link-text.active
+                        background-color rgba(8, 86, 30, 0.8)
+                        cursor default
+                        &.nonactive
+                            background-color #809F88
+    .heading-bread-crumb
+        justify-content space-between
+        padding 15px
+        margin-bottom 2px !important
+        background-color rgba(255, 255, 255, 0.8)
+        .heading-title
+            .heading    
+                &-text,&-sub-text
+                    font-size 1rem
+                    color #032904
+                    font-weight 500
+
+                &-sub-text
+                    &.display-text
+                        &:before
+                            content '>'
+                            padding 5px
+        .report-decision-container
+            color #003f11
+            font-size 1rem
+            font-weight 500
+            text-align right
+            .fa
+                color #003f11
+                transform scaleX(-1)
+                cursor pointer
+                &.fa-play-down
+                    transform rotate(90deg)
+            .reports-container
+                position relative
+                display inline-block
+                padding-right 20px
+                text-outlet
+                    cursor pointer
+                .reports-list
+                    font-weight 400
+                    min-width 200px
+                    display none
+                    background-color #0b9a33
+                    color #FFF
+                    position absolute
+                    right 100%
+                    padding 10px 0
+                    top 0
+                    z-index 1
+                    margin-right 5px
+                    border-radius 5px
+                    text-align left
+                    &.show-reports
+                        display block
+                    .report-link
+                        cursor pointer
+                        padding 5px 10px
+                        &:hover
+                            color #636362
+                            background-color #FFF
+            .decisions-container
+                position relative
+                display inline-block
+                padding-right 5px
+                text-outlet
+                    cursor pointer
+                .decisions-list
+                    font-weight 400
+                    min-width 200px
+                    display none
+                    background-color #0b9a33
+                    color #FFF
+                    position absolute
+                    right 100%
+                    padding 10px 0
+                    top 0
+                    z-index 1
+                    margin-right 5px
+                    border-radius 5px
+                    text-align left
+                    &.show-decisions
+                        display block
+                    .decision-link
+                        cursor pointer
+                        padding 5px 10px
+                        &:hover
+                            color #636362
+                            background-color #FFF
+    .topbar
+        padding 0
+        align-items center
+        position relative
+        justify-content space-between
+        background-color rgba(255, 255, 255, 0.8)
+        &.increase-font-size
+            align-items inherit
+        .bar
+            display inline-block
+        .gauge
+            // border-right 1px solid rgb(189,189,189)
+            padding 0
+        .label-row
+            .col-sm
+                // border-right 1px solid rgb(189,189,189)
+                padding 0
+        .dashboard-metrics-container.increase-font-size
+            justify-content flex-end
+        .dashboard-metric-container
+            justify-content flex-end
+            padding 0
+        .carlsberg-logo
+            width 100%
+            margin 10px 0
+            &-container
+                margin-left 15px
+                width 120px
+        .dashboard-metric-charts-container
+            text-align center
+            padding 15px 0px
+            .dashboard-metric-charts-container-wrapper
+                padding 0
+                font-weight 500
+                solid-gauge
+                    display inline-block
+            .gauge-row
+                align-items center
+                height 100%
+                // border-right 1px solid rgb(189,189,189)
+                &:last-child
+                    border-right-width 0
+                .gauge
+                    height 100%
+                    align-items center
+                    justify-content center
+                    display -webkit-box
+                    display -webkit-flex
+                    display -ms-flexbox
+                    display flex
+                    flex-direction column
+                    .gauge-name
+                        font-size 14px
+        .dashboard-metrics-container
+            padding 0
+            .dashboard-metric-revenues
+                padding 0
+                align-items center
+            .dashboard-values-contianer
+                padding 0 25px
+            .dashboard-metrics
+                // border-right 1px solid rgb(189,189,189)
+                padding 0
+                justify-content space-between
+                height 33%
+                align-items center
+                &.dashboard-metrics-3
+                    height 34%
+                &.increase-font-size
+                    height 50%
+                    &.dashboard-metrics-3
+                        height 50%
+                    .dashboard-metric-heading
+                        // font-size 1.125rem
+                    .dashboard-metric
+                        font-size 0.75rem
+                        calc-outlet
+                            font-size 0.75rem
+                &:last-child
+                    border-right-width 0
+                .dashboard-metric-heading
+                    padding 0
+                    text-align right
+                    color #032904
+                    font-weight 600
+                    font-size 1rem
+                    &:after
+                        content '|'
+                .dashboard-metric
+                    align-items center
+                    font-size 0.8125rem
+                    font-weight 500
+                    padding 0
+                    &.no-whitespace
+                        white-space nowrap
+                    text-outlet
+                        padding 0
+                        font-weight 600
+                    calc-outlet
+                        padding 0
+                        font-size 0.8125rem
+                        font-weight 400
+                        padding-left 3px
+                        color #000
+                        text-align right
+.footer
+    position fixed
+    bottom 0
+    left 0
+    right 0
+    z-index 2000
+    margin 0
+    background-color #231F20
+    .bts-logo-container
+        padding 10px
+    .bts-icon
+        height 21px
+        width 63px
+        background url("../../../../assets/images/bts-icon.png") no-repeat
+        background-size cover
+        vertical-align middle
+        display inline-block
+    .round-row, .team-name-row
+        vertical-align middle
+        text-align center
+        display none
+        font-size 1rem
+        font-weight 500
+        color #FFF
+        &.active
+            display inline-block
+        &.hidden
+            display none
+        .round-label-container,.team-name-label-container
+            display inline-block
+            font-size 1.25rem
+            vertical-align middle
+        .round-value,.team-name-value
+            display inline-flex
+            vertical-align middle
+            height 100%
+            border 5px solid #231f20
+            align-items center
+            background-color #003f11
+            padding 11px
+            border-bottom 3px solid #231f20
+            calc-outlet
+                font-size 1.25rem
+                color #FFF
+    .footer-menu.hidden
+        display none
+    .footer-menu.hidden.active
+        display inline-block
+    .footer-menu
+        display inline-block
+        color #fff
+        position absolute
+        right 50px
+        cursor pointer
+        padding-top 15px
+    .footer-menu-content
+        position absolute
+        bottom 10px
+        color #fff
+        border 2px solid #2d2d2d
+        width 175px
+        background-color #000
+        right 145px
+        .menu-item-header
+            background-color #1A1A1A 
+            padding 10px
+            text-align center
+        .menu-item
+            padding 10px
+            padding-left 20px
+            color #C2C2C2
+            cursor pointer
+            .menu-item-icon
+                float right
+                padding-right 10px
+        .menu-item.hidden
+            display none
+.report-modal
+    font-weight 500
+    .modal-header
+        position relative
+        text-align center
+        flex-direction column
+        background-color #E5E5E5
+        .modal-title
+            color #003f11
+            font-size 1.625rem
+        .close-button
+            background url("../../../../assets/images/icons/close.png") no-repeat
+            background-size cover
+            height 26px
+            width 26px
+            position absolute
+            top 15px
+            right 15px
+            cursor pointer
+    .row
+        margin 0
+    .modal-body
+        padding 25px
+        text-align center
+        .input-checks
+            padding 10px
+            flex-direction column
+            position relative
+            flex-wrap nowrap
+            .report-name
+            .confirm-message
+                padding 15px
+                justify-content center
+                align-items center
+                height calc(100% - 40px)
+                background-color #272727
+                color #3E7726
+                font-size 1.125rem
+                &.buyed-report
+                    background-color #003f11
+            .confirm-message
+                background-color #000
+            .buy-button-container
+                background-color #3E7726
+                color #FFF
+                padding 10px
+                font-size 1.25rem
+                justify-content space-around
+                .buy-report-button
+                    cursor pointer
+                .confirm-button
+                .cancel-button
+                    font-size 1rem
+                    
+.exit-modal,.reset-modal,.import-success-modal
+    .button-container
+        padding 0 15px 10px
+        text-align center
+        .btn
+            cursor pointer
+            calc-outlet
+                color #FFF
+        .yes-button
+            float left
+        .no-button
+            float right
+        &:after
+            clear both
+            
+.reset-modal
+    .modal-body
+        text-align center
+        .info-text
+            font-size 14px
+        .error-message
+            font-size 12px
+            color red
+
+@media(max-width 1365px)
+    .dashboard
+        .topbar
+            font-size 0.75rem
+            font-weight 500
+            .carlsberg-logo-container
+                    width 90px
+            .report-decision-container
+                padding 0 5px
+            .dashboard-metrics-container
+                .dashboard-values-contianer
+                    padding 0 15px
+                .dashboard-metric-heading
+                    font-size 0.75rem
+                .dashboard-metrics
+                    padding-left 10px
+                    padding-right 10px
+                    .dashboard-metric
+                        text-outlet
+                            font-size 0.75rem
+                        calc-outlet
+                            font-size 0.75rem

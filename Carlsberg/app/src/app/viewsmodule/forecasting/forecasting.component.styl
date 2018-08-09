@@ -1,0 +1,142 @@
+.channel-wrapper
+    height calc(100% - 250px)
+    overflow auto
+    
+    .no-padding
+        padding 0px
+    
+    .white-background
+        background-color #FFF
+
+    .row
+        margin 0px
+
+    .tooltip-container
+        display flex
+        flex-wrap nowrap
+        align-items center
+        justify-content center
+    
+    /*.header-image
+        height 210px;
+        background url("../../../../assets/images/header.jpg") no-repeat;
+        background-size cover;
+        margin 20px 0 10px;*/
+    .chart-container
+        .chart-heading
+            color #003f11
+            font-size 1rem
+            font-weight 500
+            padding 10px
+            background-color #fff
+            border-bottom: 1px solid rgba(0,63,17,0.8) 
+            
+    .channel-heading-container
+        padding 10px
+        background-color rgba(255,255,255,0.5)
+
+        .channel-heading    
+            &-text,&-sub-text
+                font-size 1rem
+                color #032904
+                font-weight 500
+
+            &-sub-text
+                &:before
+                    content '>'
+                    padding 5px
+
+    .info-section
+        padding 7.5px
+        background-color rgba(255,255,255,0.8)
+        margin-bottom 2px
+        .trade-terms-chart-heading
+            font-size 1.25rem
+            color #032904
+            font-weight 500
+
+        .heading-container
+            font-size 1.25rem
+            padding 10px
+            color  #032904
+            font-weight 500
+
+
+        .table-container,.reports-wrapper,.chart-container
+            background-color #FFF
+            background-clip content-box
+            padding 7.5px
+            .row
+                .data-value:last-child
+                    margin-right 2px
+            .row:last-child
+                margin-bottom 2px
+
+    .trade-marketing
+        .table-container
+            background-color #F4F4F4
+            .main-heading
+                background-color #F4F4F4
+            .left-column
+                text-align left !important
+                padding-left 25px !important
+                background-color #F4F4F4 !important
+            .row
+                background-color #F4F4F4
+                .data-value:last-child
+                    margin-right 0px
+            .row:last-child
+                margin-bottom 0px
+
+    .value-drivers
+        .table-container
+            .main-heading
+                font-weight normal
+        
+    .table-container
+        .main-heading
+            background-color #FFF
+    
+            .data-value
+                background-clip border-box
+                text-align center
+                padding 5px
+                border 1px solid #FFF
+                calc-outlet, text-outlet
+                        display inline-flex
+                        justify-content center
+                        align-items center
+                        height 100%
+    
+        .heading-row
+            text-align center
+            font-weight 500
+    
+        .data-row
+            .data-value,.data-heading
+                background-color #F4F4F4
+                background-clip border-box
+                text-align center
+                padding 5px
+                border 1px solid #FFF
+                calc-outlet
+                    display inline-flex
+                    justify-content center
+                    align-items center
+                    height 100%
+
+    
+            .left-column
+                background-color #FFF
+                text-align left
+    
+        .product-title
+            font-weight 500;
+            div.data-value
+                calc-outlet
+                    color #032904
+    
+        .highlighted-row
+            .data-value,.data-heading
+                background-color #E6E0E0 !important
+                color #0B532B

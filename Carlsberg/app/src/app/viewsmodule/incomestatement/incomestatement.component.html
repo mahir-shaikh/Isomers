@@ -1,0 +1,571 @@
+<div class="income-statement-page-wrapper row animated" [class.slideInUp]="animationBool" (animationend)="animationDone($event)">
+    <div class="income-statement-body col-sm-10">
+        <div class="table-container">
+            <table class="table-condensed table">
+                <tr class="row info-row">
+                    <th class="col-sm-12 info-text">
+                        <text-outlet key="ValuesInThousand"></text-outlet>
+                    </th>
+                </tr>
+                <tr class="row heading-row">
+                    <th class="col-sm-2 data-label">
+                    </th>
+                    <th class="col-sm-2 data-label">
+                        <calc-outlet [ref]="'tlOutput'+StatementOf+tableIndex[0]"></calc-outlet>
+                    </th>
+                    <th class="col-sm-2 data-label">
+                        <calc-outlet [ref]="'tlOutput'+StatementOf+tableIndex[1]"></calc-outlet>
+                    </th>
+                    <th class="col-sm-2 data-label">
+                        <calc-outlet [ref]="'tlOutput'+StatementOf+tableIndex[2]"></calc-outlet>
+                    </th>
+                    <th class="col-sm-2 data-label">
+                        <calc-outlet [ref]="'tlOutput'+StatementOf+tableIndex[3]"></calc-outlet>
+                    </th>
+                    <th class="col-sm-2 data-label">
+                        <text-outlet key="Total"></text-outlet>
+                    </th>
+                </tr>
+                <tr class="row sub-heading-row">
+                    <td class="col-sm-12 data-label">
+                        <text-outlet key="Sales"></text-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Turnover"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'Turn'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'Turn'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'Turn'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'Turn'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNLTurnTot'"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Excise"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'Excise'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'Excise'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'Excise'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'Excise'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNLExciseTot'"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="GrossSales"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'GrossSales'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'GrossSales'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'GrossSales'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'GrossSales'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNLGrossSalesTot'"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Discounts"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'Discounts'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'Discounts'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'Discounts'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'Discounts'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNLDiscountsTot'"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row total-row last-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="NetSales"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'NetRev'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'NetRev'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'NetRev'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'NetRev'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLNetRevTot"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row sub-heading-row">
+                    <td class="col-sm-12 data-label">
+                        <text-outlet key="CostOfGoodsSold"></text-outlet>
+                    </td>
+                </tr>
+                <!-- <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Materials"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'MatExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'MatExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'MatExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'MatExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLMatExpTot"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Labor"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'LabExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'LabExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'LabExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'LabExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLLabExpTot"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Machinery"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'MachExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'MachExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'MachExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'MachExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLMachExpTot"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Depriciation"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'DepExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'DepExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'DepExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'DepExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLDepExpTot"></calc-outlet>
+                    </td>
+                </tr> -->
+                <tr class="row data-row total-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="TotalCogs"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'CostRev'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'CostRev'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'CostRev'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'CostRev'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLCostRevTot"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row last-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="PercNetSales"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'CostRevPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'CostRevPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'CostRevPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'CostRevPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLCostRevTotPct"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row sub-heading-row highlight-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="GrossProfit"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'GroProfit'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'GroProfit'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'GroProfit'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'GroProfit'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLGroProfitTot"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="GrossMargin"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'GM'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'GM'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'GM'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'GM'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLGroProfitTotPct"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Logistics"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'LogExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'LogExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'LogExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'LogExp'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLLogExpTot"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row last-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="PercNetSales"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'LogExpPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'LogExpPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'LogExpPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'LogExpPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLLogExpTotPct"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row sub-heading-row highlight-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Gpal"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'GPaL'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'GPaL'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'GPaL'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'GPaL'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLGPaLTot"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row last-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="GpalPerc"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'GPaLMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'GPaLMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'GPaLMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'GPaLMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLGPaLTotPct"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row sub-heading-row">
+                    <td class="col-sm-12 data-label">
+                        <text-outlet key="Overhead"></text-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row" *ngIf="StatementOf == 'Ch'">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Sales"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'TMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'TMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'TMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'TMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLChTotTMkt"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="TradeMarketing"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'TMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'TMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'TMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'TMkt'"></calc-outlet>
+                    </td>
+                    <!-- Used ngif because range refs are having different structure -->
+                    <td class="col-sm-2 data-value" *ngIf="StatementOf == 'Prod'">
+                        <calc-outlet ref="tlOutputPNLProdTMkt"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value" *ngIf="StatementOf == 'Ch'">
+                        <calc-outlet ref="tlOutputPNLChTotTMkt"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row" *ngIf="StatementOf == 'Prod'">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="BrandMarketing"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'BMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'BMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'BMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'BMkt'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLProdBMkt"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row total-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="TotalOverhead"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'Overhead'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'Overhead'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'Overhead'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'Overhead'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLChTotOverhead"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row last-row">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="PercNetSales"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'OverheadPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'OverheadPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'OverheadPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'OverheadPct'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLChTotOverheadPct"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row sub-heading-row highlight-row" *ngIf="StatementOf == 'Prod'">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Gbc"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'GBC'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'GBC'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'GBC'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'GBC'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLProdTotGBC"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row" *ngIf="StatementOf == 'Prod'">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="PercNetSales"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'GBCMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'GBCMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'GBCMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'GBCMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLProdTotGBCMargin"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row sub-heading-row highlight-row" *ngIf="StatementOf == 'Ch'">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="Gcc"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'GCC'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'GCC'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'GCC'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'GCC'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLChTotGCC"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row" *ngIf="StatementOf == 'Ch'">
+                    <td class="col-sm-2 data-label">
+                        <text-outlet key="PercNetSales"></text-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[0]+'GCCMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[1]+'GCCMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[2]+'GCCMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet [ref]="'tlOutputPNL'+StatementOf+tableIndex[3]+'GCCMargin'"></calc-outlet>
+                    </td>
+                    <td class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLChTotGCCMargin"></calc-outlet>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

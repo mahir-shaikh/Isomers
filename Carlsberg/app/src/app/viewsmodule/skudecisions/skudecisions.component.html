@@ -1,0 +1,246 @@
+<div class="sku-page-wrapper animated" [class.slideInUp]="animationBool" (animationend)="animationDone($event)">
+    <!-- <div class="header-image"></div> -->
+    <div class="row info-section">
+        <div class="col-sm-12 dropdown-container">
+            <div class="dropdown-cont">
+                <calc-dropdown [items]="VTList" [ref]="'tlInputCh'+ChannelNo+'VT'"></calc-dropdown>
+            </div>
+        </div>
+
+        <div class="col-sm-5 chart-container">
+            <!-- Chart -->
+            <!-- <stackedcolumn 
+                [rangeref]="[['tlOutputCh'+ChannelNo+'WaterfallVisible1','tlOutputCh'+ChannelNo+'WaterfallVisible2','tlOutputCh'+ChannelNo+'WaterfallVisible3','tlOutputCh'+ChannelNo+'WaterfallVisible4','tlOutputCh'+ChannelNo+'WaterfallVisible5','tlOutputCh'+ChannelNo+'WaterfallVisible6'],['tlOutputCh'+ChannelNo+'WaterfallInvisible1','tlOutputCh'+ChannelNo+'WaterfallInvisible2','tlOutputCh'+ChannelNo+'WaterfallInvisible3','tlOutputCh'+ChannelNo+'WaterfallInvisible4','tlOutputCh'+ChannelNo+'WaterfallInvisible5','tlOutputCh'+ChannelNo+'WaterfallInvisible6'] ]" 
+
+                [categorylabels]="['tlOutputCh'+ChannelNo+'WaterfallxLabel1','tlOutputCh'+ChannelNo+'WaterfallxLabel2','tlOutputCh'+ChannelNo+'WaterfallxLabel3','tlOutputCh'+ChannelNo+'WaterfallxLabel4','tlOutputCh'+ChannelNo+'WaterfallxLabel5','tlOutputCh'+ChannelNo+'WaterfallxLabel6']"
+                                        
+                serieslabels="Gpal,COGS"
+                height="300"
+                >
+            </stackedcolumn> -->
+
+            <waterfall 
+                [rangeref]="['tlOutputCh'+ChannelNo+'WaterfallStart','tlOutputCh'+ChannelNo+'WaterfallDelta1','tlOutputCh'+ChannelNo+'WaterfallDelta2','tlOutputCh'+ChannelNo+'WaterfallDelta3','tlOutputCh'+ChannelNo+'WaterfallDelta4','tlOutputCh'+ChannelNo+'WaterfallEnd']" 
+                       
+                [serieslabels]="['tlOutputCh'+ChannelNo+'WaterfallxLabel1','tlOutputCh'+ChannelNo+'WaterfallxLabel2','tlOutputCh'+ChannelNo+'WaterfallxLabel3','tlOutputCh'+ChannelNo+'WaterfallxLabel4','tlOutputCh'+ChannelNo+'WaterfallxLabel5','tlOutputCh'+ChannelNo+'WaterfallxLabel6']"
+
+                [categorylabels]="['LastYearsGPaL','Volume','Price','Mix','COGS','ForecastedGPal']"
+
+                [chartoptions]="waterfallChartOptions"
+
+                [sum]="'tlOutputCh'+ChannelNo+'WaterfallxLabel6'"
+                height="340"
+                [numberformat]="'0,0a'"
+                >
+            </waterfall>
+
+
+        </div>
+        <div class="col-sm-7 table-container">
+            <div class="col-4-table">
+                <div class="row heading-row">
+                    <div class="col-sm-3"><text-outlet key=""></text-outlet></div>
+                    <div class="col-sm-6"><text-outlet key="Total"></text-outlet></div>
+                    <div class="col-sm-3"><text-outlet key="PerLitre"></text-outlet></div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-heading"></div>
+                    <div class="col-sm-3 data-value"><text-outlet key="InThousands"></text-outlet></div>
+                    <div class="col-sm-3 data-value"></div>
+                    <div class="col-sm-3 data-value"></div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-heading"><text-outlet key="Turnover"></text-outlet></div>
+                    <div class="col-sm-3 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtTurn'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtTurnPct'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-pvol-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtTurnPVol'"></calc-outlet></div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-heading"><text-outlet key="Excise"></text-outlet></div>
+                    <div class="col-sm-3 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtExcise'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtExcisePct'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-pvol-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtExcisePVol'"></calc-outlet></div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-heading"><text-outlet key="GrossSales"></text-outlet></div>
+                    <div class="col-sm-3 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtGrossSales'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtGrossSalesPct'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-pvol-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtGrossSalesPVol'"></calc-outlet></div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-heading"><text-outlet key="Discounts"></text-outlet></div>
+                    <div class="col-sm-3 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtDiscounts'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtDiscountsPct'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-pvol-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtDiscountsPVol'"></calc-outlet></div>
+                </div>
+                <div class="row data-row highlighted-row">
+                    <div class="col-sm-3 data-heading"><text-outlet key="NetSales"></text-outlet></div>
+                    <div class="col-sm-3 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtTotalRev'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtTotalRevPct'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-pvol-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtTotalRevPVol'"></calc-outlet></div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-heading"><text-outlet key="TotalCogs"></text-outlet></div>
+                    <div class="col-sm-3 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtTotalCOGs'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtTotalCOGsPct'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-pvol-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtTotalCOGsPVol'"></calc-outlet></div>
+                </div>
+                <div class="row data-row highlighted-row">
+                    <div class="col-sm-3 data-heading"><text-outlet key="GrossProfit"></text-outlet></div>
+                    <div class="col-sm-3 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtGP'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtGPPct'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-pvol-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtGPPVol'"></calc-outlet></div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-3 data-heading"><text-outlet key="Logistics"></text-outlet></div>
+                    <div class="col-sm-3 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtLogExp'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtLogExpPct'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-pvol-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtLogExpPVol'"></calc-outlet></div>
+                </div>
+                <div class="row data-row highlighted-row">
+                    <div class="col-sm-3 data-heading"><text-outlet key="Gpal"></text-outlet></div>
+                    <div class="col-sm-3 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtGPaL'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtGPaLPct'"></calc-outlet></div>
+                    <div class="col-sm-3 data-value total-pvol-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtGPaLPVol'"></calc-outlet></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-5 table-container volume-table">
+            <div class="col-2-table">
+                <div class="row data-row">
+                    <div class="col-sm-6 data-heading"><text-outlet key="VolumeSold"></text-outlet> <text-outlet key="InThousands"></text-outlet></div>
+                    <div class="col-sm-6 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtVolSold'"></calc-outlet></div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-6 data-heading"><text-outlet key="UnitsSold"></text-outlet> <text-outlet key="InThousands"></text-outlet></div>
+                    <div class="col-sm-6 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtUnitsSold'"></calc-outlet></div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-6 data-heading"><text-outlet key="CustomerProfit"></text-outlet> <text-outlet key="InThousands"></text-outlet></div>
+                    <div class="col-sm-6 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtCp'"></calc-outlet></div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-6 data-heading"><text-outlet key="WeightedDistribution"></text-outlet></div>
+                    <div class="col-sm-6 data-value total-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VtWd'"></calc-outlet></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-7 reports-wrapper">
+            <div class="report-container">
+                <div class="report-heading row">
+                    <div class="col-sm">
+                    <text-outlet key="Reports"></text-outlet>
+                    </div>
+                </div>
+                <div class="assortement-containter row">
+                    <div class="report-data-heading col-sm-6">
+                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipAssortementAnalysis"></my-tooltip>
+                        <text-outlet key="AssortementAnalysis"></text-outlet>
+                    </div>
+                    <div class="assortement-report-btn col-sm-3" (click)="onReportBtnClick('Assortement')">
+                        <text-outlet key="BuyReport" *ngIf="!assortementReportBought"></text-outlet>
+                        <text-outlet key="ReadReport" *ngIf="assortementReportBought"></text-outlet>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <div class="promotions-containter row" *ngIf="ChannelNo != '2'">
+                    <div class="report-data-heading col-sm-6">
+                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipPromotionsAnalysis"></my-tooltip>
+                        <text-outlet key="PromotionsAnalysis"></text-outlet>
+                    </div>
+                    <div class="promotions-report-btn col-sm-3" (click)="onReportBtnClick('Promotion')">
+                        <text-outlet key="BuyReport" *ngIf="!promotionReportBought"></text-outlet>
+                        <text-outlet key="ReadReport" *ngIf="promotionReportBought"></text-outlet>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <div class="row output-data-container">
+                    <div class="report-data-heading">
+                        <text-outlet key="MtuRequired"></text-outlet>
+                    </div>
+                    <div class="report-data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'AnalyticsEmp1Req'"></calc-outlet>
+                    </div>
+                    <span><text-outlet key="|"></text-outlet></span>
+                    <div class="report-data-heading">
+                        <text-outlet key="Expense"></text-outlet>
+                    </div>
+                    <div class="report-data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'AnalyticsExp'"></calc-outlet>   
+                    </div>          
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row slot-section">
+        <div class="row product-slot">
+            <slots [ChannelNo]="ChannelNo" [ProdNo]="2" [isMain]="true"></slots>
+        </div>
+
+        <div class="row product-slot">
+            <slots [ChannelNo]="ChannelNo" [ProdNo]="3"></slots>
+        </div>
+
+        <div class="row product-slot">
+            <slots [ChannelNo]="ChannelNo" [ProdNo]="1"></slots>
+        </div>
+
+        <div class="row product-slot">
+            <slots [ChannelNo]="ChannelNo" [ProdNo]="4"></slots>
+        </div>
+        
+    </div>
+</div>
+
+
+<div bsModal #reportModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm report-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><text-outlet key="BuyReport"></text-outlet></h4>
+            </div>
+            <div class="modal-body">
+                <text-outlet key="BuyReportConfirmMsg"></text-outlet>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-danger yes-button" (click)="buyReport()"><text-outlet key="Yes"></text-outlet></button>
+                <button class="btn btn-primary no-button" (click)="hideReportConfirmtionMsg()"><text-outlet key="No"></text-outlet></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #assortementModal="bs-modal" class="modal model-lg animated fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-lg assortement-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <div class="modal-title-text"><text-outlet key="AssortementAnalysis"></text-outlet></div>                    
+                </div>
+                <span class="pull-right fa fa-close" (click)="hideAssortementReport()"></span>
+            </div>
+            <div class="modal-body">
+                <assortement-analysis *ngIf="showAssortmentReport" [ChannelNo]="ChannelNo"></assortement-analysis>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #promotionModal="bs-modal" class="modal model-lg animated fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}" *ngIf="ChannelNo != '2'">
+    <div class="modal-dialog modal-lg promotion-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <div class="modal-title-text"><text-outlet key="PromotionsAnalysis"></text-outlet></div>                    
+                </div>
+                <span class="pull-right fa fa-close" (click)="hidePromotionReport()"></span>
+            </div>
+            <div class="modal-body">
+                <promotion-analysis *ngIf="showPromotionReport" [ChannelNo]="ChannelNo"></promotion-analysis>
+            </div>
+        </div>
+    </div>
+</div>

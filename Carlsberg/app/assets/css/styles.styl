@@ -1,0 +1,47 @@
+@import "mixins"
+@import "core"
+@import "nouislider"
+
+
+html, body
+    min-height 100%
+body
+    background url("../images/splash_background.gif")
+    overflow hidden
+    background-size cover
+    font-size 16px
+    font-family "OpenSans"
+    line-height 20px
+    color #111
+.im-app
+    padding 0px
+    height 100vh
+    .main
+        height 100%
+        
+.decision-summary-wrapper
+    .nav-tabs
+        background #809f88
+        border-bottom 0px
+        .nav-item
+            margin-bottom 0px
+            &:hover
+                background-color rgba(0,63,17,0.8)
+        .nav-item.active
+            background-color rgba(0,63,17,0.8)
+        .nav-link
+            color #fff
+            height 100%
+            padding-top 10px
+            &:hover
+                border 1px solid transparent
+        .nav-link.active
+            color #fff
+            background-color rgba(0,63,17,0.8)
+            border 0px solid
+            
+.assortement-analysis-wrapper,.promotion-modal-content
+    .highcharts-data-label
+        text
+            fill black !important
+            text-shadow 1px 1px white, 1px -1px white, -1px -1px white, -1px 1px white

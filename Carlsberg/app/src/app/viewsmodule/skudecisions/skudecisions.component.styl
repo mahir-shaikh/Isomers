@@ -1,0 +1,178 @@
+.sku-page-wrapper
+    height calc(100% - 250px)
+    overflow auto
+    .sku-heading-container
+        padding 10px
+        background-color rgba(255,255,255,0.5)
+        .sku-heading
+            &-text,&-sub-text
+                font-size 1rem
+                color #032904
+                font-weight 500
+            &-sub-text
+                &:before
+                    content '>'
+                    padding 5px
+    .row
+        margin 0
+    .info-section
+        padding 7.5px
+        background-color rgba(255,255,255,0.8)
+        margin-bottom 2px
+        .dropdown-container
+            padding 15px
+            text-align right
+            .dropdown-cont
+                margin-left auto
+                width 25%
+                max-width 25%
+        .chart-container
+            background none
+            padding 0
+            padding 0 15px
+        
+.table-container
+    background-color #FFF
+    padding 10px 0
+    &.volume-table
+        padding 15px
+        background-color transparent
+        .col-2-table
+            padding 15px
+            background-color #FFF
+    .col-2-table
+        display inline-block
+    .col-4-table,
+    .col-2-table
+        height 100%
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        flex-direction column
+        justify-content space-around  
+        padding 1px      
+        .heading-row
+            text-align center
+            font-weight 500
+            padding-bottom 10px
+        .data-row
+            .data-heading
+                text-align left
+            .data-value,.data-heading
+                background-color #F4F4F4
+                background-clip content-box
+                padding 1px
+                line-height 20px
+                text-outlet, calc-outlet
+                    padding 5px
+                    display block
+                text-outlet
+                    display inline-block
+            .data-value
+                text-align center
+        .highlighted-row
+            .data-value,.data-heading
+                background-color #E6E0E0 !important
+                color #0B532B
+    .col-4-table
+        .data-row
+            .total-value
+                border-right-width 0
+                padding-right 0
+            .total-perc-value
+                border-left-width 0
+                padding-left 0
+            
+.reports-wrapper
+    padding 0
+    .report-container
+        background url("../../../../assets/images/reports_bg.jpg")
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        flex-direction column
+        justify-content space-around
+        height 100%
+    .report-heading
+        color #0B532B
+        font-weight 500
+        font-size 1rem
+        text-align center
+    .assortement-containter,
+    .promotions-containter
+        padding 2px
+        .report-data-heading
+            text-align right
+            font-weight 500
+            line-height 30px
+        .promotions-report-btn,.assortement-report-btn
+            border 1px solid #000
+            background-color #fff
+            cursor pointer
+            padding 1px
+            color #0B532B
+            text-align center
+            font-weight 500
+            justify-content: center;
+            align-items: center;
+            display -webkit-box
+            display -webkit-flex
+            display -ms-flexbox
+            display: flex;
+    .output-data-container
+        text-align center
+        display block
+        .report-data-heading,.report-data-value
+            display inline-block
+            padding 5px
+            font-weight 500
+        .report-data-heading
+            &:after
+                content ':'      
+
+    
+.slot-section
+    margin 10px 0
+    .product-slot
+        margin 1px 0
+        background-color rgba(255,255,255,0.8)
+        flex-direction column
+        width 100%
+        
+.report-modal
+    .button-container
+        padding 0 15px 10px
+        text-align center
+        .btn
+            cursor pointer
+        .yes-button
+            float left
+        .no-button
+            float right
+        &:after
+            clear both
+            
+.assortement-modal,.promotion-modal
+    max-width none
+    width calc(100vw - 30px)
+    margin 15px
+    .modal-content
+        height calc(100vh - 82px)
+        .modal-header
+            padding 15px 20px
+            background-color #003f11
+            color #fff
+            .modal-title
+                font-size 20px
+                font-weight 500
+                padding 0px 10px
+                &-text
+                    display inline-block
+                    padding-left 5px
+            .fa-close
+                cursor pointer
+        .modal-body
+            overflow-y auto
+    

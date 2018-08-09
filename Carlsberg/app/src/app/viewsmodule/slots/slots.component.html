@@ -1,0 +1,111 @@
+<div class="slots-wrapper">
+    <div class="slot-heading row">
+        <div class="slot-heading-text">
+            <text-outlet [key]="'Prod'+ProdNo"></text-outlet>
+        </div>
+    </div>
+    <div class="slot-data">
+        <div class="row heading-row">
+            <div class="col-sm data-column left-column index-column">
+                <img [src]="'../../../../assets/images/Prod'+ProdNo+'.png'" class="image-logo">
+            </div>
+            <div class="col-sm data-column left-column">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipSalesForecast"></my-tooltip>
+                <text-outlet key="SalesForecast"></text-outlet>
+            </div>
+            <div class="col-sm data-column left-column">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipPack"></my-tooltip>
+                <text-outlet key="Pack"></text-outlet>
+            </div>
+            <div class="col-sm data-column left-column">
+                <text-outlet key="ExpectedPriceRange"></text-outlet>
+            </div>
+            <div class="col-sm data-column left-column">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipCustomerPrice"></my-tooltip>
+                <text-outlet key="CustomerPrice"></text-outlet>
+            </div>
+            <div class="col-sm data-column left-column">
+                <text-outlet key="CustomerMargin"></text-outlet>
+            </div>
+            <div class="col-sm data-column left-column middle-column">
+                <text-outlet key="ShelfPrice"></text-outlet>
+            </div>
+            <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1' || ChannelNo == '3' || ChannelNo == '4'">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipPromotionType"></my-tooltip>
+                <text-outlet key="Promotion1Type" *ngIf="isMain"></text-outlet>
+                <text-outlet key="PromotionPlan" *ngIf="!isMain"></text-outlet>
+            </div>
+            <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1' || ChannelNo == '3' || ChannelNo == '4'">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipNumberOfWeeks"></my-tooltip>
+                <text-outlet key="NumberOfWeeks"></text-outlet>
+            </div>
+            <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1' || ChannelNo == '3' || ChannelNo == '4'">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipExpectedPromotionShare"></my-tooltip>
+                <text-outlet key="ExpectedPromotionShare"></text-outlet>
+            </div>
+            <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1'">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipPromotionType"></my-tooltip>
+                <text-outlet key="Promotion2Type" *ngIf="isMain"></text-outlet>
+                <text-outlet key="PromotionPlan" *ngIf="!isMain"></text-outlet>
+            </div>
+            <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1'">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipNumberOfWeeks"></my-tooltip>
+                <text-outlet key="NumberOfWeeks"></text-outlet>
+            </div>
+            <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1'">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipExpectedPromotionShare"></my-tooltip>
+                <text-outlet key="ExpectedPromotionShare"></text-outlet>
+            </div>
+            <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1' || ChannelNo == '3' || ChannelNo == '4'">
+                <text-outlet key="AvgPromotionPrice"></text-outlet>
+            </div>
+            <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1' || ChannelNo == '3' || ChannelNo == '4'">
+                <text-outlet key="AvgSellingPrice"></text-outlet>
+            </div>
+        </div>
+    
+
+        <slot-row *ngFor="let row of NoOfVisibleSlots;let 'activeIndex' = index;"  [SlotNo]="activeIndex + 1" [ProdNo]="ProdNo" [ChannelNo]="ChannelNo"></slot-row>
+
+        <div class="summary-row row">
+
+        <div class="basic-data slot-btn-container">
+            <div class="add-slot-btn" [class.disable-button]="canAddSlot">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipAddSlot"></my-tooltip>
+                <span class="fa fa-plus-circle btn-icon" (click)="!canAddSlot && AddSlot()"></span>
+                <span (click)="!canAddSlot && AddSlot()"><text-outlet key="AddSlot"></text-outlet></span>
+            </div>
+            <span><text-outlet key="|"></text-outlet></span>
+            <div class="mtu-container">
+                <span class="data-heading"><text-outlet key="MtuRequired"></text-outlet></span>
+                <span class="data-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod'+ProdNo+'NewSlotEmp1'"></calc-outlet></span>
+            </div>
+            <span><text-outlet key="|"></text-outlet></span>
+            <div class="expense-container">
+                <span class="data-heading"><text-outlet key="Expense"></text-outlet></span>
+                <span class="data-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod'+ProdNo+'NewSlotExp'"></calc-outlet></span>
+            </div>
+            <span><text-outlet key="|"></text-outlet></span>
+            <div class="remove-slot-btn" [class.disable-button]="canRemoveSlot">
+                <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipRemoveSlot"></my-tooltip>
+                <span class="fa fa-minus-circle btn-icon" (click)="!canRemoveSlot && RemoveSlot()"></span>
+                <span (click)="!canRemoveSlot && RemoveSlot()"><text-outlet key="RemoveSlot"></text-outlet></span>
+            </div>
+        </div>
+
+
+        <div class="promo-data" *ngIf="ChannelNo != 2">
+            <div class="mtu-container">
+                <span class="data-heading"><text-outlet key="MtuRequired"></text-outlet></span>
+                <span class="data-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod'+ProdNo+'PromoEmp1'"></calc-outlet></span>
+            </div>
+            <span><text-outlet key="|"></text-outlet></span>
+            <div class="expense-container">
+                <span class="data-heading"><text-outlet key="Expense"></text-outlet></span>
+                <span class="data-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod'+ProdNo+'PromoExp'"></calc-outlet></span>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>

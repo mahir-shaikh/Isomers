@@ -1,0 +1,309 @@
+<div class="assortement-analysis-wrapper">
+    <div class="row reports-container">
+        <div class="col-sm-6 chart-container row">
+        <div class="chart-heading">
+            <text-outlet key="AssortementReportChartTitle1"></text-outlet>
+        </div>
+         <bubble #chart1 [rangeRefX]="gbcRangeRefX"
+                [rangeRefY]="gbcRangeRefY"
+                [rangeRefZ]="gbcRangeRefZ"
+                [chartOptions]="gcbChartOptions"
+                numberFormatX="0%"
+                numberFormatY="0a"
+                numberFormatZ="0,0"
+                [bubblesLabels]="gbcLabelChart1"
+                [seriesLabels]="'tlOutputCh'+ChannelNo+'Analytic1Chart1Type1,tlOutputCh'+ChannelNo+'Analytic1Chart1Type2,tlOutputCh'+ChannelNo+'Analytic1Chart1Type3,tlOutputCh'+ChannelNo+'Analytic1Chart1Type4'" 
+                [bubblesPerSeries]="bubblePerSeriesArray"
+                xLabel="Weighted Distribution" yLabel="GPaL ROS" zLabel="Volume">
+            </bubble>   
+        </div>
+        <div class="col-sm-6 chart-container row">
+            <div class="chart-heading">
+                <text-outlet key="AssortementReportChartTitle2"></text-outlet>
+            </div>
+             <bubble [rangeRefX]="pvRangeRefX"
+                    [rangeRefY]="pvRangeRefY"
+                    [rangeRefZ]="pvRangeRefZ"
+                    [chartOptions]="pvChartOptions"
+                    numberFormatX="millions"
+                    numberFormatY="0%"
+                    numberFormatZ="0,0"
+                    [bubblesLabels]="pvLabelChart1"
+                    [seriesLabels]="'tlOutputCh'+ChannelNo+'Analytic1Chart2Type1,tlOutputCh'+ChannelNo+'Analytic1Chart2Type2,tlOutputCh'+ChannelNo+'Analytic1Chart2Type3,tlOutputCh'+ChannelNo+'Analytic1Chart2Type4'" 
+                    [bubblesPerSeries]="bubblePerSeriesArray"
+                    xLabel="Volume" yLabel="Price">
+                </bubble>   
+        </div>
+    </div>
+    <div class="row reports-container">
+        <div class="col-sm-6 chart-container row">
+            <div class="chart-heading">
+                <text-outlet key="PricePerLiter"></text-outlet>
+            </div>
+             <scatter *ngIf="ChannelNo != 2"
+                [rangeref]="basicLineRangeRef"
+                [categorylabels]="basiclineCategoryLabels"
+                [dataPerSeries]="basiclineDataPerSeries"
+                [serieslabels]="['ShelfPrice', 'AvgPrice', 'AvgPromoPrice']"
+                [chartoptions]="PplChartOptions"
+            ></scatter>
+
+            <scatter *ngIf="ChannelNo == 2"
+                [rangeref]="basicLineRangeRef"
+                [categorylabels]="basiclineCategoryLabels"
+                [dataPerSeries]="basiclineDataPerSeries"
+                [serieslabels]="['ShelfPrice']"
+                [chartoptions]="PplChartOptions"
+            ></scatter> 
+        </div>
+    </div>
+    <!-- <div class="row table-container">
+            <div class="table-heading col-sm-12"><text-outlet key="MarketReportHeading"></text-outlet></div>
+            <table class="table-condensed table">
+                <tr class="row heading-row">
+                    <th class="col-sm">
+                    </th>
+                    <th class="col-sm data-label">
+                        <text-outlet key="MakingStatement"></text-outlet>
+                    </th>
+                    <th class="col-sm data-label">
+                        <text-outlet key="CelebratingFun"></text-outlet>
+                    </th>
+                    <th class="col-sm data-label">
+                        <text-outlet key="RelaxUnwind"></text-outlet>
+                    </th>
+                    <th class="col-sm data-label">
+                        <text-outlet key="ConnectingBonding"></text-outlet>
+                    </th>
+                </tr>
+
+                <!-- 1st Block of Table 
+                <tr class="row sub-heading-row light-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="Prod1"></text-outlet>
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                </tr>
+                <tr class="row data-row light-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="TotalSize"></text-outlet>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col1Row1'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col2Row1'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col3Row1'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col4Row1'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col5Row1'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col6Row1'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col7Row1'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col8Row1'"></calc-outlet></span>
+                    </td>
+                </tr>
+                <tr class="row data-row light-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="OurShare"></text-outlet>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col1Row2'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col2Row2'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col3Row2'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col4Row2'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col5Row2'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col6Row2'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col7Row2'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col8Row2'"></calc-outlet></span>
+                    </td>
+                </tr>
+
+                <!-- 2nd Block of Table 
+                <tr class="row sub-heading-row dark-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="Prod2"></text-outlet>
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                </tr>
+                <tr class="row data-row dark-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="TotalSize"></text-outlet>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col1Row3'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col2Row3'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col3Row3'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col4Row3'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col5Row3'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col6Row3'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col7Row3'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col8Row3'"></calc-outlet></span>
+                    </td>
+                </tr>
+                <tr class="row data-row dark-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="OurShare"></text-outlet>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col1Row4'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col2Row4'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col3Row4'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col4Row4'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col5Row4'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col6Row4'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col7Row4'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col8Row4'"></calc-outlet></span>
+                    </td>
+                </tr>
+
+                <!-- 3rd Block of Table 
+                <tr class="row sub-heading-row light-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="Prod3"></text-outlet>
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                </tr>
+                <tr class="row data-row light-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="TotalSize"></text-outlet>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col1Row5'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col2Row5'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col3Row5'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col4Row5'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col5Row5'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col6Row5'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col7Row5'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col8Row5'"></calc-outlet></span>
+                    </td>
+                </tr>
+                <tr class="row data-row light-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="OurShare"></text-outlet>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col1Row6'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col2Row6'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col3Row6'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col4Row6'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col5Row6'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col6Row6'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col7Row6'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col8Row6'"></calc-outlet></span>
+                    </td>
+                </tr>
+
+                <!-- 4th Block of Table 
+                <tr class="row sub-heading-row dark-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="Prod4"></text-outlet>
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                    <td class="col-sm">
+                    </td>
+                </tr>
+                <tr class="row data-row dark-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="TotalSize"></text-outlet>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col1Row7'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col2Row7'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col3Row7'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col4Row7'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col5Row7'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col6Row7'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col7Row7'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col8Row7'"></calc-outlet></span>
+                    </td>
+                </tr>
+                <tr class="row data-row dark-bg">
+                    <td class="col-sm data-label">
+                        <text-outlet key="OurShare"></text-outlet>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col1Row8'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col2Row8'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col3Row8'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col4Row8'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col5Row8'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col6Row8'"></calc-outlet></span>
+                    </td>
+                    <td class="col-sm data-value">
+                        <span class="raw-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col7Row8'"></calc-outlet></span>
+                        <span class="perc-value"><calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Analytic1Table1Col8Row8'"></calc-outlet></span>
+                    </td>
+                </tr>
+            </table>
+    </div> -->
+</div>

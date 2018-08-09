@@ -1,0 +1,567 @@
+<div class="customer-report-page-wrapper row animated slideInUp">
+    <div class="customer-report-body col-sm-10">
+		<div class="table-container">
+			<table class="table-condensed table">
+				<tr class="row info-row">
+                    <th class="col-sm-12 info-text">
+                        <text-outlet key="ValuesInThousand"></text-outlet>
+                    </th>
+                </tr>
+		        <tr class="row heading-row">
+		            <th class="col-sm-2">
+		            </th>
+		            <th class="col-sm-2 data-label">
+		            	<text-outlet key="Ch1"></text-outlet>
+		            </th>
+		            <th class="col-sm-2 data-label">
+		                <text-outlet key="Ch2"></text-outlet>
+		            </th>
+		            <th class="col-sm-2 data-label">
+		                <text-outlet key="Ch3"></text-outlet>
+		            </th>
+		            <th class="col-sm-2 data-label">
+		                <text-outlet key="Ch4"></text-outlet>
+		            </th>
+		            <th class="col-sm-2 data-label">
+		            	<text-outlet key="Total"></text-outlet>
+		            </th>
+		        </tr>
+
+		        <!-- 1st Block of Table -->
+		        <tr class="row sub-heading-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Prod2"></text-outlet>
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot1"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod2Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod2Slot1CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod2Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod2Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot2"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod2Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod2Slot2CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod2Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod2Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot3"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod2Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod2Slot3CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod2Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod2Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row total-row last-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Total"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputProd2CustProfitTot"></calc-outlet>
+		            </td>
+		        </tr>
+
+		        <!-- 2nd Block of Table -->
+		        <tr class="row sub-heading-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Prod3"></text-outlet>
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot1"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod3Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod3Slot1CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod3Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod3Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot2"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod3Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod3Slot2CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod3Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod3Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot3"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod3Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod3Slot3CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod3Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod3Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row total-row last-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Total"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputProd3CustProfitTot"></calc-outlet>
+		            </td>
+		        </tr>
+
+		        <!-- 3rd Block of Table -->
+		        <tr class="row sub-heading-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Prod1"></text-outlet>
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot1"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod1Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod1Slot1CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod1Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod1Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot2"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod1Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod1Slot2CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod1Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod1Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot3"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod1Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod1Slot3CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod1Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod1Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row total-row last-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Total"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputProd1CustProfitTot"></calc-outlet>
+		            </td>
+		        </tr>
+
+		        <!-- 4th Block of Table -->
+		        <tr class="row sub-heading-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Prod4"></text-outlet>
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot1"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod4Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod4Slot1CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod4Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod4Slot1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot2"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod4Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod4Slot2CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod4Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod4Slot2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Slot3"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod4Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod4Slot3CustProfitBase"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod4Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod4Slot3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            </td>
+		        </tr>
+		        <tr class="row data-row total-row last-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Total"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1Prod4CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2Prod4CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3Prod4CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4Prod4CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputProd4CustProfitTot"></calc-outlet>
+		            </td>
+		        </tr>
+
+		        <!-- 5th Block of Table -->
+		        <tr class="row sub-heading-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="TradeInvestments"></text-outlet>
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		            <td class="col-sm-2">
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Distribution"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1ValDriv1Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2ValDriv1Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3ValDriv1Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4ValDriv1Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputValDriv1Exp"></calc-outlet>
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="ShelfSpace"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1ValDriv2Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2ValDriv2Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3ValDriv2Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4ValDriv2Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputValDriv2Exp"></calc-outlet>
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="FloorSpace"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1ValDriv3Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2ValDriv3Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3ValDriv3Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4ValDriv3Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputValDriv3Exp"></calc-outlet>
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="CoolSpace"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1ValDriv4Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2ValDriv4Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3ValDriv4Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4ValDriv4Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputValDriv4Exp"></calc-outlet>
+		            </td>
+		        </tr>
+		        <tr class="row data-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Visibility"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1ValDriv5Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2ValDriv5Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3ValDriv5Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4ValDriv5Exp"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputValDriv5Exp"></calc-outlet>
+		            </td>
+		        </tr>
+		        <tr class="row data-row total-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="Total"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1ValDrivExpTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2ValDrivExpTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3ValDrivExpTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4ValDrivExpTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputValDrivExpTot"></calc-outlet>
+		            </td>
+		        </tr>
+
+		        <!-- Last Row -->
+		        <tr class="row data-row total-row final-row">
+		            <td class="col-sm-2 data-label">
+		                <text-outlet key="TotalCustomerProfit"></text-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh1CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh2CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh3CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputCh4CustProfitTot"></calc-outlet>
+		            </td>
+		            <td class="col-sm-2 data-value">
+		            	<calc-outlet ref="tlOutputTotTradeInv"></calc-outlet>
+		            </td>
+		        </tr>
+			</table>
+		</div>
+	</div>
+</div>

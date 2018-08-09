@@ -1,0 +1,359 @@
+<div class="channel-wrapper animated" [class.slideInUp]="animationBool" (animationend)="animationDone($event)">
+    <!-- <div class="header-image"></div> -->
+    <div class="forecasting info-section">
+        <div class="row heading-container">
+            <span class="forecasting-heading-text">
+                <text-outlet key="Forecasting"></text-outlet>
+            </span>
+        </div>
+        <div class="forecasting-content row">
+            <div class="col-sm-8 no-padding">
+                <div class="table-container white-background ">
+                    <div class="row heading-row main-heading">
+                        <div class="col-sm-2 left-column data-value">
+                            &nbsp;
+                        </div>
+                        <div class="col-sm-4 text-center data-value">
+                            <text-outlet key="Mainstream"></text-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <text-outlet key="Premium"></text-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <text-outlet key="SuperPremium"></text-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <text-outlet key="Total"></text-outlet>
+                        </div>
+                    </div>
+                    <div class="row data-row product-title">
+                        <div class="col-sm-2 left-column data-value">
+                            &nbsp;
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-outlet ref="tlOutputProd2"></calc-outlet>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-outlet ref="tlOutputProd3"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet ref="tlOutputProd1"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet ref="tlOutputProd4"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                        </div>
+                    </div>
+                    <div class="row data-row">
+                        <div class="col-sm-2 data-value left-column data-value">
+                            <text-outlet key="MarketDemand"></text-outlet>
+                        </div>
+                        <div class="col-sm-4 text-center data-value" colspan="2">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod2n3MktSize'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod1MktSize'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod4MktSize'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'MarketDemandTot'"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="row data-row">
+                        <div class="col-sm-2 data-value left-column data-value tooltip-container row ">
+                            <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipForcastedShare"></my-tooltip>
+                            <text-outlet key="ForcastedShare"></text-outlet>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-input [ref]="'tlInputCh'+ChannelNo+'Prod2Forecast'" format="0%" min="0" max="100" scaler="100" step="1"></calc-input>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-input [ref]="'tlInputCh'+ChannelNo+'Prod3Forecast'" format="0%" min="0" max="100" scaler="100" step="1"></calc-input>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-input [ref]="'tlInputCh'+ChannelNo+'Prod1Forecast'" format="0%" min="0" max="100" scaler="100" step="1"></calc-input>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod4VolForcast'" *ngIf="ChannelNo != 4"></calc-outlet>
+                            <calc-input [ref]="'tlInputCh'+ChannelNo+'Prod4Forecast'" format="0%" min="0" max="100" scaler="100" step="1" *ngIf="ChannelNo == 4"></calc-input>
+                        </div>
+                        <div class="col-sm data-value"></div>
+                    </div>
+                    <div class="row data-row">
+                        <div class="col-sm-2 data-value left-column data-value">
+                            <text-outlet key="VolumeForecast"></text-outlet>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod2VolForcast'"></calc-outlet>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod3VolForcast'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod1VolForcast'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod4VolForcast'" *ngIf="ChannelNo == 4"></calc-outlet>
+                            <calc-input [ref]="'tlInputCh'+ChannelNo+'Prod4Forecast'" format="0,0" min="0" step="1" *ngIf="ChannelNo != 4"></calc-input>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'VolForecastTot'"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="row data-row">
+                        <div class="col-sm-2 data-value left-column data-value">
+                            <text-outlet key="NetSales"></text-outlet>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod2NetSales'"></calc-outlet>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod3NetSales'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod1NetSales'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod4NetSales'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'NetSalesTot'"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="row data-row">
+                        <div class="col-sm-2 data-value left-column data-value">
+                            <text-outlet key="GPaL"></text-outlet>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod2GPaL'"></calc-outlet>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod3GPaL'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod1GPaL'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod4GPaL'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'GPaLTot'"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="row data-row">
+                        <div class="col-sm-2 data-value left-column data-value">
+                            <text-outlet key="CustomerProfit"></text-outlet>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod2CustProfit'"></calc-outlet>
+                        </div>
+                        <div class="col-sm-2 data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod3CustProfit'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod1CustProfit'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod4CustProfit'"></calc-outlet>
+                        </div>
+                        <div class="col-sm data-value">
+                            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'CustProfitTot'"></calc-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 no-padding chart-container">
+                <div class="gross-brand-contribution-chart  white-background">
+                    <div class="chart-heading">
+                        <text-outlet [key]="'GPalperBrand'"></text-outlet>
+                    </div>
+                    <!--  <bubble [rangeRefX]="gbcRangeRefX"
+                            [rangeRefY]="gbcRangeRefY"
+                            [rangeRefZ]="gbcRangeRefZ"
+                            numberFormatX="0%"
+                            numberFormatY="millions"
+                            [bubblesLabels]="'tlOutputCh1Analytic1Chart1Label1,tlOutputCh1Analytic1Chart1Label2,tlOutputCh1Analytic1Chart1Label3,tlOutputCh1Analytic1Chart1Label4,tlOutputCh1Analytic1Chart1Label5,tlOutputCh1Analytic1Chart1Label6,tlOutputCh1Analytic1Chart1Label7,tlOutputCh1Analytic1Chart1Label8,tlOutputCh1Analytic1Chart1Label9,tlOutputCh1Analytic1Chart1Label10,tlOutputCh1Analytic1Chart1Label11,tlOutputCh1Analytic1Chart1Label12'"
+                            [seriesLabels]="'tlOutputCh1Analytic1Chart1Type1,tlOutputCh1Analytic1Chart1Type2,tlOutputCh1Analytic1Chart1Type3,tlOutputCh1Analytic1Chart1Type4'" 
+                            [bubblesPerSeries]="'3,3,3,3'"
+                            [seriesLabels]="'tlOutputCh1Analytic1Chart1Type1,tlOutputCh1Analytic1Chart1Type2,tlOutputCh1Analytic1Chart1Type3,tlOutputCh1Analytic1Chart1Type4'" ></bubble> -->
+                    <stackedcolumn height="236" [charttitle]="'tlOutputCh+'+ChannelNo+'ProfitChartHeading'" [rangeref]="gbcRangeRef" [serieslabels]="'Gpal, Logistics, Cogs'" [categorylabels]="'tlOutputProd2, tlOutputProd3,tlOutputProd1,tlOutputProd4'" [numberformat]="'millions'"
+                    [chartoptions]="gcbChartOptions"
+                    [totalRef]="gbcTotalRef" totalformat="0%"
+                    >
+                    </stackedcolumn>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="value-drivers info-section">
+        <div class="row heading-container">
+            <span class="value-drivers-heading-text">
+                <text-outlet key="ValueDrivers"></text-outlet>
+            </span>
+        </div>
+        <div class="value-drivers-content">
+            <div class="table-container">
+                <div class="row heading-row main-heading">
+                    <div class="col-sm-2 data-value left-column">
+                    </div>
+                    <div class="col-sm data-value tooltip-container row">
+                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipDistribution"></my-tooltip>
+                        <text-outlet key="Distribution"></text-outlet>
+                    </div>
+                    <div class="col-sm data-value tooltip-container row">
+                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipShelfSpace"></my-tooltip>
+                        <text-outlet key="ShelfSpace"></text-outlet>
+                    </div>
+                    <div class="col-sm data-value tooltip-container row">
+                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipFloorSpace"></my-tooltip>
+                        <text-outlet key="FloorSpace"></text-outlet>
+                    </div>
+                    <div class="col-sm data-value tooltip-container row">
+                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipCoolSpace"></my-tooltip>
+                        <text-outlet key="CoolSpace"></text-outlet>
+                    </div>
+                    <div class="col-sm data-value tooltip-container row">
+                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipVisibility"></my-tooltip>
+                        <text-outlet key="Visibility"></text-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <text-outlet key="Total"></text-outlet>
+                    </div>
+                    <div class="col-sm data-value tooltip-container row">
+                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipConditionality"></my-tooltip>
+                        <text-outlet key="Conditionality"></text-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-2 data-value left-column">
+                        <text-outlet key="InvestementLevel"></text-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-dropdown [items]="LEVELS" [ref]="'tlInputCh'+ChannelNo+'ValDriv1'"></calc-dropdown>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-dropdown [items]="LEVELS" [ref]="'tlInputCh'+ChannelNo+'ValDriv2'"></calc-dropdown>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-dropdown [items]="LEVELS" [ref]="'tlInputCh'+ChannelNo+'ValDriv3'"></calc-dropdown>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-dropdown [items]="LEVELS" [ref]="'tlInputCh'+ChannelNo+'ValDriv4'"></calc-dropdown>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-dropdown [items]="LEVELS" [ref]="'tlInputCh'+ChannelNo+'ValDriv5'"></calc-dropdown>
+                    </div>
+                    <div class="col-sm data-value">
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-dropdown [items]="LEVELS" [ref]="'tlInputCh'+ChannelNo+'ValDrivCond'"></calc-dropdown>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-2 data-value left-column">
+                        <text-outlet key="MtuRequired"></text-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDriv1Emp1'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDriv2Emp1'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDriv3Emp1'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDriv4Emp1'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDriv5Emp1'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDrivEmp1Tot'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDrivCondEmp1'"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-2 data-value left-column">
+                        <text-outlet key="Expense"></text-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDriv1Exp'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDriv2Exp'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDriv3Exp'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDriv4Exp'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDriv5Exp'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDrivExpTot'"></calc-outlet>
+                    </div>
+                    <div class="col-sm data-value">
+                        <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'ValDrivCondExp'"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row info-section">
+        <div class="col-sm-7 no-padding">
+            <div class="trade-terms-chart chart-container">
+                <div class="chart-heading trade-terms-chart-heading">
+                    <text-outlet [key]="'TradeTermsConditionality'"></text-outlet>
+                </div>
+                <stackedbar height=125  [rangeref]="tradeTermsRangeRef" [categorylabels]="'tlOutputCh'+ChannelNo+'TTHeading'" [serieslabels]="' UnconditionalTradeInv, ConditionalTradeInv'" [numberformat]="'0,0'">
+                </stackedbar>
+            </div>
+        </div>
+        <div class="col-sm-5 no-padding">
+            <div class="trade-marketing">
+                <div class="row heading-container">
+                    <span class="trade-marketing-heading-text tooltip-container row">
+                        <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" key="ToolTipTradeMarketingPlan"></my-tooltip>
+                        <text-outlet key="TradeMarketingPlan"></text-outlet>
+                    </span>
+                </div>
+                <div class="trade-marketing-plan-content">
+                    <div class="table-container">
+                        <div class="row heading-row main-heading">
+                            <div class="col-sm-6 data-value left-column">
+                                <text-outlet key="SelectPlan"></text-outlet>
+                            </div>
+                            <div class="col-sm-6 data-value">
+                                <calc-dropdown [items]="PLANS" [ref]="'tlInputCh'+ChannelNo+'MarkPlan'"></calc-dropdown>
+                            </div>
+                        </div>
+                        <div class="row data-row">
+                            <div class="col-sm-6 data-value left-column">
+                                <text-outlet key="MtuRequired"></text-outlet>
+                            </div>
+                            <div class="col-sm-6 data-value">
+                                <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'MarkPlanEmp1Req'"></calc-outlet>
+                            </div>
+                        </div>
+                        <div class="row data-row">
+                            <div class="col-sm-6 data-value left-column">
+                                <text-outlet key="Expense"></text-outlet>
+                            </div>
+                            <div class="col-sm-6 data-value">
+                                <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'MarkPlanExp'"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

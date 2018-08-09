@@ -1,0 +1,52 @@
+<div class="row slot-row">
+    <div class="col-sm data-column left-column index-column">
+            <text-outlet [key]="'Slot'+SlotNo"></text-outlet>
+        </div>
+        <div class="col-sm data-column left-column" *ngIf="SlotNo==1">
+            <calc-outlet [ref]="'tlinputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'Forecast'" format="0%" ></calc-outlet>
+        </div>
+        <div class="col-sm data-column left-column" *ngIf="SlotNo!=1">
+            <calc-input [ref]="'tlinputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'Forecast'" format="0%" min="1" max="100" scaler="100" step="1"></calc-input>
+        </div>
+        <div class="col-sm data-column left-column">
+            <calc-dropdown [items]="PackList" [ref]="'tlinputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'Pack'" [recheck]="true"></calc-dropdown>
+        </div>
+        <div class="col-sm data-column left-column">
+            <calc-outlet [ref]="'tloutputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'RSPLow'"></calc-outlet>
+            <span><text-outlet key="-"></text-outlet></span>
+            <calc-outlet [ref]="'tloutputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'RSPHigh'"></calc-outlet>
+        </div>
+        <div class="col-sm data-column left-column">
+            <calc-input [ref]="'tlinputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'CustPrice'" format="0.00" min="0.1" step="0.01" max="250"></calc-input>
+        </div>
+        <div class="col-sm data-column left-column">
+            <calc-outlet [ref]="'tloutputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'CM'"></calc-outlet>
+        </div>
+        <div class="col-sm data-column left-column middle-column">
+            <calc-outlet [ref]="'tlOutputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'SP'"></calc-outlet>
+        </div>
+        <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1' || ChannelNo == '3' || ChannelNo == '4'">
+            <calc-dropdown [items]="PromoList" [ref]="'tlinputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'Promo1'"></calc-dropdown>
+        </div>
+        <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1' || ChannelNo == '3' || ChannelNo == '4'">
+            <calc-input [ref]="'tlinputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'Promo1Weeks'" format="0,0" min="0" max="25"></calc-input>
+        </div>
+        <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1' || ChannelNo == '3' || ChannelNo == '4'">
+            <calc-input [ref]="'tlinputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'Promo1ShareFrc'" format="0%" min="0" [max]="maxLimit1" scaler="100" step="1"></calc-input>
+        </div>
+        <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1'">
+            <calc-dropdown [items]="PromoList" [ref]="'tlinputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'Promo2'"></calc-dropdown>
+        </div>
+        <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1'">
+            <calc-input [ref]="'tlinputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'Promo2Weeks'" format="0,0" min="0" max="25"></calc-input>
+        </div>
+        <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1'">
+            <calc-input [ref]="'tlinputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'Promo2ShareFrc'" format="0%" min="0" [max]="maxLimit2" scaler="100" step="1"></calc-input>
+        </div>
+        <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1' || ChannelNo == '3' || ChannelNo == '4'">
+            <calc-outlet [ref]="'tloutputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'AvgPromoPrice'"></calc-outlet>
+        </div>
+        <div class="col-sm data-column right-column" *ngIf="ChannelNo == '1' || ChannelNo == '3' || ChannelNo == '4'">
+            <calc-outlet [ref]="'tloutputCh'+ChannelNo+'Prod'+ProdNo+'Slot'+SlotNo+'AvgSellPrice'"></calc-outlet>
+        </div>
+</div>

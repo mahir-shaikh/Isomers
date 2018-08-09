@@ -1,0 +1,4 @@
+<span class="calc-input-control">
+<input class="calc-input calc-input--{{type}} dark-grey-heading" type="text" [ngModel]="value" (ngModelChange)="onModelChange($event)" name="{{ref}}" (blur)="saveDataToModel($event)" value="{{value}}" [format]="format" [scaler]="scaler" numberformatter step="{{step}}" min={{min}} max="{{max}}" [readonly]="IsReadOnly"
+placeholder={{placeholderValue}}/>
+</span>

@@ -1,0 +1,401 @@
+<div class="income-statement-page-wrapper row animated slideInUp">
+    <div class="income-statement-body col-sm-10">
+        <div class="table-container">
+            <table class="table-condensed table">
+                <tr class="row info-row">
+                    <th class="col-sm-12 info-text">
+                        <text-outlet key="ValuesInThousand"></text-outlet>
+                    </th>
+                </tr>
+                <tr class="row heading-row">
+                    <th class="col-sm-3">
+                    </th>
+                    <th class="col-sm-3 data-label">
+                        <text-outlet key="Company"></text-outlet>
+                    </th>
+                    <th class="col-sm-3 data-label">
+                        <text-outlet key="PercNetSales"></text-outlet>
+                    </th>
+                    <th class="col-sm-3 data-label">
+                        <text-outlet key="PerLitre"></text-outlet>
+                    </th>
+                </tr>
+
+                <!-- 1st Block of Table -->
+                <tr class="row sub-heading-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Sales"></text-outlet>
+                    </td>
+                    <td class="col-sm-3">
+                    </td>
+                    <td class="col-sm-3">
+                    </td>
+                    <td class="col-sm-3">
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Turnover"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLTurnTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLTurnTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Excise"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLExciseTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLExciseTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="GrossSales"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGrossSalesTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGrossSalesTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Discounts"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLDiscountsTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLDiscountsTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row total-row last-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="NetSales"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLNetRevTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLNetRevTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLNetRevTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+
+                <!-- 2nd Block of Table -->
+                <tr class="row sub-heading-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="CostOfGoodsSold"></text-outlet>
+                    </td>
+                    <td class="col-sm-3">
+                    </td>
+                    <td class="col-sm-3">
+                    </td>
+                    <td class="col-sm-3">
+                    </td>
+                </tr>
+                <!-- <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Materials"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLMatExpTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLMatExpTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLMatExpTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Labor"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLLabExpTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLLabExpTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLLabExpTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Machinery"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLMachExpTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLMachExpTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLMachExpTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Depriciation"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLDepExpTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLDepExpTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLDepExpTotPVol"></calc-outlet>
+                    </td>
+                </tr> -->
+                <tr class="row data-row total-row last-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="TotalCogs"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLCostRevTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLCostRevTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLCostRevTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+
+                <!-- 3rd Block of Table -->
+                <tr class="row sub-heading-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="GrossProfit"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGroProfitTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGroProfitTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGroProfitTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row last-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Logistics"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLLogExpTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLLogExpTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLLogExpTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row sub-heading-row last-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Gpal"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGPaLTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGPaLTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGPaLTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                
+                <!-- 4th Block of Table -->
+                <tr class="row sub-heading-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Overhead"></text-outlet>
+                    </td>
+                    <td class="col-sm-3">
+                    </td>
+                    <td class="col-sm-3">
+                    </td>
+                    <td class="col-sm-3">
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Sales"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLSalesExpTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLSalesExpTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLSalesExpTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="TradeMarketing"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLTMktExpTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLTMktExpTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLTMktExpTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="BrandMarketing"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLBMktExpTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLBMktExpTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLBMktExpTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="ResearchDevelopment"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLRnDExpTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLRnDExpTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLRnDExpTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="GeneralAdministration"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGnAdminExp"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGnAdminExpPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLGnAdminExpTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row total-row last-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="TotalOverhead"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLOverheadExpTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLOverheadExpTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLOverheadExpTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+
+                <!-- 5th Block of Table -->
+                <tr class="row sub-heading-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="EBIT"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLEbitTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLEbitTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLEbitTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row last-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="FinancialNet"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLFinNetTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLFinNetTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLFinNetTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row sub-heading-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="EBT"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLEbtTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLEbtTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLEbtTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row data-row last-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="Taxes"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLCTaxTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLCTaxTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLCTaxTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+                <tr class="row sub-heading-row">
+                    <td class="col-sm-3 data-label">
+                        <text-outlet key="NetIncome"></text-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLNetIncTot"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLNetIncTotPct"></calc-outlet>
+                    </td>
+                    <td class="col-sm-3 data-value">
+                        <calc-outlet ref="tlOutputPNLNetIncTotPVol"></calc-outlet>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

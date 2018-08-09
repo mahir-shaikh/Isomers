@@ -1,0 +1,499 @@
+<div class="dashboard-container container-fluid  animated">
+    <!-- dont remove this line -->
+    <div class="hidden" [routerLink]="['/intro']" [routerLinkActive]="['active']"></div>
+    <!-- Dashboard will be visible only on the tool pages - not on the home page -->
+    <div class="dashboard row">
+        <div class="topbar row" [class.increase-font-size]="!showChannelDashboard">
+            <div class="carlsberg-logo-container">
+                <img class="carlsberg-logo" src="../../../../assets/images/carlsberg-logo.png" />
+            </div>
+            <div class="dashboard-metric-container col-sm-10 row">
+                <div class="dashboard-metric-charts-container col-sm-5 col-xl-5 row" *ngIf="showChannelDashboard">
+                    <div class="dashboard-metric-charts-container-wrapper col-sm-12">
+                        <div class="gauge-row row">
+                            <div class="gauge col-sm">
+                                <solid-gauge [rangeRef]="'tlOutputCh'+currentChannel+'Emp1GaugeValue'" [min]="0" [max]="150" [numberFormat]="'0,0'" chartOptions='{ "chart": { "marginTop": -10}, "pane": { "center": ["50%", "70%"], "size": "83%", "startAngle": -90, "endAngle": 90, "background": [{ "innerRadius": "100%", "outerRadius": "100%", "backgroundColor": "#eee", "shape": "arc", "borderWidth": 12, "borderColor": "rgba(0,0,0,0.3)"}] }, "plotOptions": { "solidgauge": { "innerRadius": "100%", "outerRadius": "100%", "borderWidth": 12, "borderColor": "#003f11", "linecap": "square", "stickyTracking": false, "dataLabels": { "y": -15, "style": { "color": "#000", "fontSize": "0.825em"}} } }, "yAxis": { "title": { "y": 95, "style": { "color": "#000", "fontSize": "1.5em", "textTransform": "uppercase" } }, "minColor": "#a9d41a", "maxColor": "#a9d41a" } }' width="90" applyHeight="true" height="60"></solid-gauge>
+                                <div class="gauge-name">
+                                    <text-outlet key="MTUAvailable"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="gauge col-sm">
+                                <solid-gauge [rangeRef]="'tlOutputCh'+currentChannel+'NewSlotAvailGaugeValue'" [min]="0" [max]="3" [numberFormat]="'0,0'" chartOptions='{ "chart": { "marginTop": -10}, "pane": { "center": ["50%", "70%"], "size": "83%", "startAngle": -90, "endAngle": 90, "background": [{ "innerRadius": "100%", "outerRadius": "100%", "backgroundColor": "#eee", "shape": "arc", "borderWidth": 12, "borderColor": "rgba(0,0,0,0.3)"}] }, "plotOptions": { "solidgauge": { "innerRadius": "100%", "outerRadius": "100%", "borderWidth": 12, "borderColor": "#003f11", "linecap": "square", "stickyTracking": false, "dataLabels": { "y": -15, "style": { "color": "#000", "fontSize": "0.825em"}} } }, "yAxis": { "title": { "y": 95, "style": { "color": "#000", "fontSize": "1.5em", "textTransform": "uppercase" } }, "minColor": "#a9d41a", "maxColor": "#a9d41a" } }' width="90" applyHeight="true" height="60"></solid-gauge>
+                                <div class="gauge-name">
+                                    <text-outlet key="SLotsAvailable"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="gauge col-sm" *ngIf="currentChannel != 2">
+                                <solid-gauge [rangeRef]="'tlOutputCh'+currentChannel+'PromoWeeksAvailGaugeValue'" [min]="2" [max]="50" [numberFormat]="'0,0'" chartOptions='{ "chart": { "marginTop": -10}, "pane": { "center": ["50%", "70%"], "size": "83%", "startAngle": -90, "endAngle": 90, "background": [{ "innerRadius": "100%", "outerRadius": "100%", "backgroundColor": "#eee", "shape": "arc", "borderWidth": 12, "borderColor": "rgba(0,0,0,0.3)"}] }, "plotOptions": { "solidgauge": { "innerRadius": "100%", "outerRadius": "100%", "borderWidth": 12, "borderColor": "#003f11", "linecap": "square", "stickyTracking": false, "dataLabels": { "y": -15, "style": { "color": "#000", "fontSize": "0.825em"}} } }, "yAxis": { "title": { "y": 95, "style": { "color": "#000", "fontSize": "1.5em", "textTransform": "uppercase" } }, "minColor": "#a9d41a", "maxColor": "#a9d41a" } }' applyHeight="true" width="90" height="60"></solid-gauge>
+                                <div class="gauge-name">
+                                    <text-outlet key="PromotionAvailable"></text-outlet>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="label-row row">
+                            <div class="mtu-solid-gauge col-sm">
+                                <div>
+                                    <text-outlet key="MTUAvailable"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="slot-solid-gauge col-sm">
+                                <div>
+                                    <text-outlet key="SLotsAvailable"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="promo-solid-gauge col-sm" *ngIf="currentChannel != 2">
+                                <div>
+                                    <text-outlet key="PromotionAvailable"></text-outlet>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="dashboard-metrics-container col-sm-7 col-xl-7 row" [class.increase-font-size]="!showChannelDashboard" [class.col-sm-10]="!showChannelDashboard">
+                    <div class="dashboard-metric-charts-container col-sm-3 row" *ngIf="showCompanyHeading">
+                        <div class="dashboard-metric-charts-container-wrapper col-sm-12">
+                            <div class="gauge-row row">
+                                <div class="gauge col-sm">
+                                    <!-- didn't used channel no  below as it remaining MTU no is same for all channel -->
+                                    <solid-gauge [rangeRef]="'tlOutputCh1Emp1GaugeValue'" [min]="0" [max]="150" [numberFormat]="'0,0'" chartOptions='{ "chart": { "marginTop": -10}, "pane": { "center": ["50%", "70%"], "size": "83%", "startAngle": -90, "endAngle": 90, "background": [{ "innerRadius": "100%", "outerRadius": "100%", "backgroundColor": "#eee", "shape": "arc", "borderWidth": 12, "borderColor": "rgba(0,0,0,0.3)"}] }, "plotOptions": { "solidgauge": { "innerRadius": "100%", "outerRadius": "100%", "borderWidth": 12, "borderColor": "#003f11", "linecap": "square", "stickyTracking": false, "dataLabels": { "y": -15, "style": { "color": "#000", "fontSize": "0.825em"}} } }, "yAxis": { "title": { "y": 95, "style": { "color": "#000", "fontSize": "1.5em", "textTransform": "uppercase" } }, "minColor": "#a9d41a", "maxColor": "#a9d41a" } }' width="90" applyHeight="true" height="60"></solid-gauge>
+                                    <div>
+                                        <text-outlet key="MTUAvailable"></text-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm dashboard-metric-revenues row">
+                        <div class="dashboard-metrics-1 dashboard-metrics col-sm-12 row" [class.increase-font-size]="!showChannelDashboard">
+                            <div class="dashboard-company-heading dashboard-metric-heading col-sm-2 col-xl-3">
+                                <text-outlet key="Company"></text-outlet>
+                                <text-outlet key="InMillion"></text-outlet>
+                            </div>
+                            <div class="col-sm-10 col-xl-9 row dashboard-values-contianer">
+                                <div class="dashboard-company-rev dashboard-metric col-sm-3">
+                                    <text-outlet key="RevMillion" class=""></text-outlet>
+                                    <calc-outlet ref="tlOutputDB1Item1" format="millions" class="col"></calc-outlet>
+                                </div>
+                                <div class="dashboard-gpal-rev dashboard-metric col-sm-3">
+                                    <text-outlet key="GpalMillion" class=""></text-outlet>
+                                    <calc-outlet ref="tlOutputDB1SubItem2"  class="col"></calc-outlet>
+                                </div>
+                                <div class="dashboard-ebit-rev dashboard-metric col-sm-4">
+                                    <text-outlet key="EbitMillion" class=""></text-outlet>
+                                    <calc-outlet ref="tlOutputDB1Item3" format="millions"  class="col"></calc-outlet>
+                                </div>
+                                <div class="dashboard-cp-rev dashboard-metric no-whitespace col-sm-2">
+                                    <text-outlet key="CPMillion" class=""></text-outlet>
+                                    <calc-outlet ref="tlOutputDB1Item4" format="millions" class="col"></calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-metrics-2 dashboard-metrics col-sm-12 row" *ngIf="showChannelDashboard">
+                            <div class="dashboard-channel-heading dashboard-metric-heading col-sm-2 col-xl-3">
+                                <text-outlet [key]="'Ch'+(currentChannel)" *ngIf="currentChannel==1"></text-outlet>
+                                <text-outlet [key]="'DashboardChannel'+(currentChannel)" *ngIf="currentChannel!=1"></text-outlet>
+                                <text-outlet key="InMillion"></text-outlet>
+                            </div>
+                            <div class="col-sm-10 col-xl-9 row dashboard-values-contianer">
+                                <div class="dashboard-channel-rev dashboard-metric col-sm-3">
+                                    <text-outlet key="RevMillion" class=""></text-outlet>
+                                    <calc-outlet [ref]="'tlOutputDB'+(currentChannel + 1)+'Item1'" format="millions" class=""></calc-outlet>
+                                </div>
+                                <div class="dashboard-channel-rev dashboard-metric col-sm-3">
+                                    <text-outlet key="GpalMillion" class=""></text-outlet>
+                                    <calc-outlet [ref]="'tlOutputDB'+(currentChannel + 1)+'SubItem2'"  class=""></calc-outlet>
+                                </div>
+                                <div class="dashboard-channel-rev dashboard-metric col-sm-4">
+                                    <text-outlet key="GccMillion" class=""></text-outlet>
+                                    <calc-outlet [ref]="'tlOutputDB'+(currentChannel + 1)+'SubItem3'" class=""></calc-outlet>
+                                </div>
+                                <div class="dashboard-channel-rev dashboard-metric no-whitespace col-sm-2">
+                                    <text-outlet key="CPMillion" class=""></text-outlet>
+                                    <calc-outlet [ref]="'tlOutputDB'+(currentChannel + 1)+'Item4'" format="millions" class=""></calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-metrics-3 dashboard-metrics col-sm-12 row" [class.increase-font-size]="!showChannelDashboard">
+                            <div class="dashboard-greensberg-heading dashboard-metric-heading col-sm-2 col-xl-3">
+                                <text-outlet key="Gbc"></text-outlet>
+                                
+                            </div>
+                            <div class="col-sm-10 col-xl-9 row dashboard-values-contianer">
+                                <div class="dashboard-greensberg-rev dashboard-metric col-sm-3">
+                                    <text-outlet key="Prod2Million" class=""></text-outlet>
+                                    <calc-outlet ref="tlOutputDB6SubItem2" class=""></calc-outlet>
+                                </div>
+                                <div class="dashboard-harken-rev dashboard-metric col-sm-3">
+                                    <text-outlet key="Prod3Million" class=""></text-outlet>
+                                    <calc-outlet ref="tlOutputDB6SubItem3" class=""></calc-outlet>
+                                </div>
+                                <div class="dashboard-kara-rev dashboard-metric col-sm-4">
+                                    <text-outlet key="Prod1Million" class=""></text-outlet>
+                                    <calc-outlet ref="tlOutputDB6SubItem1" class=""></calc-outlet>
+                                </div>
+                                <div class="dashboard-brew-master-rev dashboard-metric no-whitespace col-sm-2">
+                                    <text-outlet key="Prod4Million" class=""></text-outlet>
+                                    <calc-outlet ref="tlOutputDB6SubItem4" class=""></calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 navigation-bar p-0">
+            <div class="navigation-bar-container row">
+                <div class="navigation-bar-link" [routerLink]="['/intro']" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><text-outlet key="Introduction"></text-outlet></span>
+                </div>
+                <div class="bar">|</div>
+                <div class="navigation-bar-link" [routerLink]="['/dashboard']" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><text-outlet key="Company"></text-outlet></span>
+                </div>
+                <div class="bar">|</div>
+                <div class="navigation-bar-link navigation-bar-hover-link" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><text-outlet key="Ch1"></text-outlet></span>
+                    <div class="navigation-bar-dropdown-link">
+                        <span class="navigation-bar-link-text" [routerLink]="['/channel','Hypermarket']" routerLinkActive="active"><text-outlet key="Channel"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/SKUs','Hypermarket']" routerLinkActive="active"><text-outlet key="SKUs"></text-outlet></span>
+                    </div>
+                </div>
+                <div class="bar">|</div>
+                <div class="navigation-bar-link navigation-bar-hover-link" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><text-outlet key="Ch2"></text-outlet></span>
+                    <div class="navigation-bar-dropdown-link">
+                        <span class="navigation-bar-link-text" [routerLink]="['/channel','Discounters']" routerLinkActive="active"><text-outlet key="Channel"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/SKUs','Discounters']" routerLinkActive="active"><text-outlet key="SKUs"></text-outlet></span>
+                    </div>
+                </div>
+                <div class="bar">|</div>
+                <div class="navigation-bar-link navigation-bar-hover-link" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><text-outlet key="Ch3"></text-outlet></span>
+                    <div class="navigation-bar-dropdown-link">
+                        <span class="navigation-bar-link-text" [routerLink]="['/channel','Convenience']" routerLinkActive="active"><text-outlet key="Channel"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/SKUs','Convenience']" routerLinkActive="active"><text-outlet key="SKUs"></text-outlet></span>
+                    </div>
+                </div>
+                <div class="bar">|</div>
+                <div class="navigation-bar-link navigation-bar-hover-link" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><text-outlet key="Ch4"></text-outlet></span>
+                    <div class="navigation-bar-dropdown-link">
+                        <span class="navigation-bar-link-text" [routerLink]="['/channel','OnTrade']" routerLinkActive="active"><text-outlet key="Channel"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/SKUs','OnTrade']" routerLinkActive="active"><text-outlet key="SKUs"></text-outlet></span>
+                    </div>
+                </div>
+                <div class="bar">|</div>
+                <div class="navigation-bar-link navigation-bar-hover-link reports-link" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><text-outlet key="Reports"></text-outlet></span>
+                    <div class="navigation-bar-dropdown-link reports-link-ul">
+                        <span class="navigation-bar-link-text" [routerLink]="['/income-statement']" routerLinkActive="active" [routerLink]="['/income-statement','Channels']" routerLinkActive="nonactive" [routerLink]="['/income-statement','Brands']" routerLinkActive="nonactive"><text-outlet key="IncomeStatement"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/income-statement','Channels']" routerLinkActive="active"><text-outlet key="IncomeStatementChannel"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/income-statement','Brands']" routerLinkActive="active"><text-outlet key="IncomeStatementBrand"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/customer-report']" routerLinkActive="active"><text-outlet key="CustomerReport"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/decision-summary']" routerLinkActive="active"><text-outlet key="DecisionSummary"></text-outlet></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="heading-bread-crumb row">
+            <div class="heading-title">
+                <span class="heading-text" [class.display-text]="showChannelHeading"><text-outlet [key]="'Ch'+currentChannel" *ngIf="showChannelHeading"></text-outlet></span>
+                <span class="heading-text" [class.display-text]="showCompanyHeading"><text-outlet key="CorporateDecisions" *ngIf="showCompanyHeading"></text-outlet></span>
+                <span class="heading-sub-text" [class.display-text]="showChannelSubtitle"><text-outlet key="ChannelSubtitle" *ngIf="showChannelSubtitle"></text-outlet></span>
+                <span class="heading-sub-text" [class.display-text]="showSKUSubtitle"><text-outlet key="SkuDecision" *ngIf="showSKUSubtitle"></text-outlet></span>
+                <span class="heading-text" [class.display-text]="showIncomeStatementHeading"><text-outlet [key]="breadCrumbHeading" *ngIf="showIncomeStatementHeading"></text-outlet></span>
+                <span class="heading-text" [class.display-text]="showCustomerReportHeading"><text-outlet key="CustomerProfitReport" *ngIf="showCustomerReportHeading"></text-outlet></span>
+                <span class="heading-text" [class.display-text]="showDecisionSummaryHeading"><text-outlet key="DecisionSummary" *ngIf="showDecisionSummaryHeading"></text-outlet></span>
+            </div>
+            <div class="report-decision-container row">
+                <!-- <div class="reports-container">
+                    <span #arrowDown1 class="fa fa-play" [class.fa-play-down]="showReports" (click)="onReportsClick()"></span>
+                    <text-outlet #arrowDownText1 key="Reports" (click)="onReportsClick()"></text-outlet>
+                    <div class="reports-list" [class.show-reports]="showReports">
+                        <div class="report-link income-link" [routerLink]="['/income-statement']" routerLinkActive="active">
+                            <text-outlet key="IncomeStatement"></text-outlet>
+                        </div>
+                        <div class="report-link income-channel-link" [routerLink]="['/income-statement','Channels']" routerLinkActive="active">
+                            <text-outlet key="IncomeStatementChannel"></text-outlet>
+                        </div>
+                        <div class="report-link income-brand-link" [routerLink]="['/income-statement','Brands']" routerLinkActive="active">
+                            <text-outlet key="IncomeStatementBrand"></text-outlet>
+                        </div>
+                        <div class="report-link customer-report-link" [routerLink]="['/customer-report']" routerLinkActive="active">
+                            <text-outlet key="CustomerReport"></text-outlet>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="decisions-container">
+                    <span #arrowDown2 class="fa fa-play" [class.fa-play-down]="showDecisions" (click)="onDecisionsClick()"></span>
+                    <text-outlet #arrowDownText2 key="Decisions" (click)="onDecisionsClick()"></text-outlet>
+                    <div class="decisions-list" [class.show-decisions]="showDecisions">
+                        <div class="decision-link reset-link" (click)="resetData()">
+                            <text-outlet key="Reset"></text-outlet>
+                        </div>
+                        <div class="decision-link buy-report-link" (click)="openReportModal()">
+                            <text-outlet key="BuyReport"></text-outlet>
+                        </div>
+                        <div class="decision-link region-link">
+                            <text-outlet key="Region"></text-outlet>
+                        </div>
+                        <div class="decision-link inport-link" (click)="importBalances()">
+                            <text-outlet key="Import"></text-outlet>
+                        </div>
+                        <div class="decision-link export-link">
+                            <text-outlet key="Export" (click)="exportDecisions()"></text-outlet>
+                        </div>
+                        <div class="decision-link exit-link" (click)="exit()">
+                            <text-outlet key="Exit"></text-outlet>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer row">
+        <!-- <div class="bts-logo-container col-sm-7" [class.col-sm-12]="router.url==='/intro'"> -->
+        <div class="bts-logo-container col-4" [class.col-10]="router.url==='/intro'">
+            <div class="bts-icon"></div>
+        </div>
+        <div class="team-name-row col-4 active" [class.hidden]="router.url==='/intro'">
+            <div class="team-name-label-container">
+                <text-outlet key="TeamName" class="team-name-label labels"></text-outlet>
+            </div>
+            <div class="team-name-value">
+                <calc-outlet ref="tlInputTeamName" class="round-output"></calc-outlet>
+            </div>
+        </div>
+        <div class="round-row col-2 active" [class.hidden]="router.url==='/intro'">
+            <div class="round-label-container">
+                <text-outlet key="Round" class="round-label labels"></text-outlet>
+            </div>
+            <div class="round-value">
+                <calc-outlet ref="tlOutputRound" class="round-output"></calc-outlet>
+            </div>
+        </div>
+        <div class="footer-menu-container col-2">
+            <div class="footer-menu" (click)="toggleFooterMenu()">
+                <span #footerMenu class="fa fa-lg" [class.fa-caret-left]="!showDropDown" [class.fa-caret-up]="showDropDown"></span>
+                <text-outlet #footerMenuText key="BTSMeny"></text-outlet>
+            </div>
+            <div class="footer-menu-content" *ngIf="showDropDown">
+                <div class="menu-item-header">
+                    <text-outlet key="BTSMeny"></text-outlet>
+                </div>
+                <div class="menu-item" (click)="showResetAlert()" [class.hidden]="router.url==='/intro'">
+                    <text-outlet key="Reset"></text-outlet>
+                    <i class="fa fa-chevron-right menu-item-icon" aria-hidden="true"></i>
+                </div>
+                <div class="menu-item" (click)="openReportModal()" [class.hidden]="router.url==='/intro'">
+                    <text-outlet key="BuyReport"></text-outlet>
+                    <i class="fa fa-chevron-right menu-item-icon" aria-hidden="true"></i>
+                </div>
+                <div class="menu-item" (click)="exportDecisions()">
+                    <text-outlet key="Export"></text-outlet>
+                    <i class="fa fa-chevron-right menu-item-icon" aria-hidden="true"></i>
+                </div>
+                <div class="menu-item" (click)="importBalances()">
+                    <text-outlet key="Import"></text-outlet>
+                    <i class="fa fa-chevron-right menu-item-icon" aria-hidden="true"></i>
+                </div>
+                <div class="menu-item" (click)="showExitAlert()">
+                    <text-outlet key="Exit"></text-outlet>
+                    <i class="fa fa-chevron-right menu-item-icon" aria-hidden="true"></i>
+                </div>
+                <div class="menu-item">
+                    <text-outlet key="Region"></text-outlet>
+                    <i class="fa fa-chevron-right menu-item-icon" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="decisions-container">
+            <span #arrowDown2 class="fa fa-play" [class.fa-play-down]="showDecisions" (click)="onDecisionsClick()"></span>
+            <text-outlet #arrowDownText2 key="BTSMeny" (click)="onDecisionsClick()"></text-outlet>
+            <div class="decisions-list" [class.show-decisions]="showDecisions">
+                <div class="decision-link reset-link" (click)="resetData()" [class.hidden]="router.url==='/intro'">
+                    <text-outlet key="Reset"></text-outlet>
+                </div>
+                <div class="decision-link buy-report-link" (click)="openReportModal()" [class.hidden]="router.url==='/intro'">
+                    <text-outlet key="BuyReport"></text-outlet>
+                </div>
+                <div class="decision-link region-link">
+                    <text-outlet key="Region"></text-outlet>
+                </div>
+                <div class="decision-link inport-link" (click)="importBalances()">
+                    <text-outlet key="Import"></text-outlet>
+                </div>
+                <div class="decision-link export-link">
+                    <text-outlet key="Export" (click)="exportDecisions()"></text-outlet>
+                </div>
+                <div class="decision-link exit-link" (click)="exit()">
+                    <text-outlet key="Exit"></text-outlet>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <im-importfile #importbalances (fileLoaded)="onFileLoaded($event)"></im-importfile>
+</div>
+
+
+<div bsModal #buyReportModal="bs-modal" class="modal report-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-lg report-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="image-container"><img src="../../../../assets/images/icons/buy-report.png" class="buy-report-image"/></div>
+                <h4 class="modal-title">
+                    <text-outlet key="BuyReport"></text-outlet>
+                </h4>
+                <div class="close-button" (click)="buyReportModal.hide()"></div>
+                <!-- <button type="button" class="close" aria-label="Close" (click)="emailModal.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button> -->
+            </div>
+            <div class="modal-body">
+                <div class="input-check-container row">
+                    <div class="input-checks col-sm-4 row">
+                        <div class="report-name row" *ngIf="!confirmToBuy1">
+                            <text-outlet key="Report1"></text-outlet>
+                        </div>
+                        <div class="confirm-message row" *ngIf="confirmToBuy1">
+                            <text-outlet key="BuyReportConfirmMsg"></text-outlet>
+                        </div>
+                        <div class="buy-button-container row">
+                            <text-outlet class="buy-button buy-report-button" *ngIf="!buyedReport1 && !confirmToBuy1" (click)="buyReport(1)" key="BUY"></text-outlet>
+                            <text-outlet class="canel-button buy-report-button" (click)="confirmationBuyReport(1)" *ngIf="confirmToBuy1" key="cancel"></text-outlet>
+                            <text-outlet class="confirm-button buy-report-button" (click)="confirmationBuyReport(1, true)" *ngIf="confirmToBuy1" key="Confirm"></text-outlet>
+                            <span class="fa fa-check buyed" *ngIf="buyedReport1"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="input-checks col-sm-4 row">
+                        <div class="report-name row" *ngIf="!confirmToBuy2">
+                            <text-outlet key="Report2"></text-outlet>
+                        </div>
+                        <div class="confirm-message row" *ngIf="confirmToBuy2">
+                            <text-outlet key="BuyReportConfirmMsg"></text-outlet>
+                        </div>
+                        <div class="buy-button-container row">
+                            <text-outlet class="buy-button buy-report-button" *ngIf="!buyedReport2 && !confirmToBuy2" (click)="buyReport(2)" key="BUY"></text-outlet>
+                            <text-outlet class="canel-button buy-report-button" (click)="confirmationBuyReport(2)" *ngIf="confirmToBuy2" key="cancel"></text-outlet>
+                            <text-outlet class="confirm-button buy-report-button" (click)="confirmationBuyReport(2, true)" *ngIf="confirmToBuy2" key="Confirm"></text-outlet>
+                            <span class="fa fa-check buyed" *ngIf="buyedReport2"></span>
+                        </div>
+                    </div> -->
+                    <div class="input-checks col-sm-4 row">
+                        <div class="report-name row" *ngIf="!confirmToBuy3">
+                            <text-outlet key="Report3"></text-outlet>
+                        </div>
+                        <div class="confirm-message row" *ngIf="confirmToBuy3">
+                            <text-outlet key="BuyReportConfirmMsg"></text-outlet>
+                        </div>
+                        <div class="buy-button-container row">
+                            <text-outlet class="buy-button buy-report-button" *ngIf="!buyedReport3 && !confirmToBuy3" (click)="buyReport(3)" key="BUY"></text-outlet>
+                            <text-outlet class="canel-button buy-report-button" (click)="confirmationBuyReport(3)" *ngIf="confirmToBuy3" key="cancel"></text-outlet>
+                            <text-outlet class="confirm-button buy-report-button" (click)="confirmationBuyReport(3, true)" *ngIf="confirmToBuy3" key="Confirm"></text-outlet>
+                            <span class="fa fa-check buyed" *ngIf="buyedReport3"></span>
+                        </div>
+                    </div>
+                    <div class="input-checks col-sm-4 row">
+                        <div class="report-name row" *ngIf="!confirmToBuy4">
+                            <text-outlet key="Report4"></text-outlet>
+                        </div>
+                        <div class="confirm-message row" *ngIf="confirmToBuy4">
+                            <text-outlet key="BuyReportConfirmMsg"></text-outlet>
+                        </div>
+                        <div class="buy-button-container row">
+                            <text-outlet class="buy-button buy-report-button" *ngIf="!buyedReport4 && !confirmToBuy4" (click)="buyReport(4)" key="BUY"></text-outlet>
+                            <text-outlet class="canel-button buy-report-button" (click)="confirmationBuyReport(4)" *ngIf="confirmToBuy4" key="cancel"></text-outlet>
+                            <text-outlet class="confirm-button buy-report-button" (click)="confirmationBuyReport(4, true)" *ngIf="confirmToBuy4" key="Confirm"></text-outlet>
+                            <span class="fa fa-check buyed" *ngIf="buyedReport4"></span>
+                        </div>
+                    </div>
+                    <div class="input-checks col-sm-4 row">
+                        <div class="report-name row" *ngIf="!confirmToBuy5">
+                            <text-outlet key="Report5"></text-outlet>
+                        </div>
+                        <div class="confirm-message row" *ngIf="confirmToBuy5">
+                            <text-outlet key="BuyReportConfirmMsg"></text-outlet>
+                        </div>
+                        <div class="buy-button-container row">
+                            <text-outlet class="buy-button buy-report-button" *ngIf="!buyedReport5 && !confirmToBuy5" (click)="buyReport(5)" key="BUY"></text-outlet>
+                            <text-outlet class="canel-button buy-report-button" (click)="confirmationBuyReport(5)" *ngIf="confirmToBuy5" key="cancel"></text-outlet>
+                            <text-outlet class="confirm-button buy-report-button" (click)="confirmationBuyReport(5, true)" *ngIf="confirmToBuy5" key="Confirm"></text-outlet>
+                            <span class="fa fa-check buyed" *ngIf="buyedReport5"></span>
+                        </div>
+                    </div>
+                    <div class="input-checks col-sm-4 row">
+                        <div class="report-name row" *ngIf="!confirmToBuy6">
+                            <text-outlet key="Report6"></text-outlet>
+                        </div>
+                        <div class="confirm-message row" *ngIf="confirmToBuy6">
+                            <text-outlet key="BuyReportConfirmMsg"></text-outlet>
+                        </div>
+                        <div class="buy-button-container row">
+                            <text-outlet class="buy-button buy-report-button" *ngIf="!buyedReport6 && !confirmToBuy6" (click)="buyReport(6)" key="BUY"></text-outlet>
+                            <text-outlet class="canel-button buy-report-button" (click)="confirmationBuyReport(6)" *ngIf="confirmToBuy6" key="cancel"></text-outlet>
+                            <text-outlet class="confirm-button buy-report-button" (click)="confirmationBuyReport(6, true)" *ngIf="confirmToBuy6" key="Confirm"></text-outlet>
+                            <span class="fa fa-check buyed" *ngIf="buyedReport6"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #exitModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm exit-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="ExitMsg"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="ExitConfirmationMsg"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-danger yes-button" (click)="exit()"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn btn-primary no-button" (click)="hideExitAlert()"><text-outlet key="No"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #resetModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-md reset-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="ResetMsg"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <span class="info-text"><text-outlet key="ResetConfirmationMsg"></text-outlet></span>
+            <div class="password-container">
+                <!-- <div class="password-text"><text-outlet key="EnterPassword"></text-outlet></div> -->
+                <input type="password" [(ngModel)]="password" #passwordText>
+            </div>
+            <div class="error-message" *ngIf="showPasswordErrorMessage"><text-outlet key="IncorrectPasswordMsg"></text-outlet></div>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-danger yes-button" (click)="onPasswordSubmit()" [class.disabled]="password.value"><text-outlet key="Submit"></text-outlet></button>
+            <!-- <button type="button" class="btn btn-danger yes-button" (click)="resetData()"><text-outlet key="Yes"></text-outlet></button> -->
+            <button type="button" class="btn btn-primary no-button" (click)="hideResetAlert()"><text-outlet key="Cancel"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #importsuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': true}">
+    <div class="modal-dialog modal-sm import-success-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Success"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="ImportSuccessConfirmMessage"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-primary" (click)="hideAlert()"><text-outlet key="Continue"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>

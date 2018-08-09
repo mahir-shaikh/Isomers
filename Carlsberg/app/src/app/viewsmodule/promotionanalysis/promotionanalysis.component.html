@@ -1,0 +1,65 @@
+<div class="promotion-modal-content">
+    <div class="row row-1">
+        <div class="basicline-container chart-container col-sm-6">
+            <div class="chart-labels"><text-outlet key="VolumeUplift"></text-outlet></div>
+            <!-- <scatter
+                [rangeref]="basicLineRangeRef"
+                [categorylabels]="basiclineCategoryLabels"
+                [dataPerSeries]="basiclineDataPerSeries"
+                [serieslabels]="['ShelfPrice', 'AvgPrice', 'AvgPromoPrice']"
+                [chartoptions]="PplChartOptions"
+            ></scatter>   -->
+            <bubble [rangeRefX]="gbcRangeRefXBubbleChart3"
+                    [rangeRefY]="gbcRangeRefYBubbleChart3"
+                    [rangeRefZ]="gbcRangeRefZBubbleChart3"
+                    numberFormatX="0%"
+                    numberFormatY="0%"
+                    numberFormatZ="0,0"
+                    [chartOptions]="gcbChartOptions3"
+                    [bubblesLabels]="gbcLabelChart3"
+                    [seriesLabels]="'tlOutputCh'+ChannelNo+'Analytic2Chart5Type1,tlOutputCh'+ChannelNo+'Analytic2Chart5Type2,tlOutputCh'+ChannelNo+'Analytic2Chart5Type3,tlOutputCh'+ChannelNo+'Analytic2Chart5Type4'" 
+                    [bubblesPerSeries]="bubblePerSeriesArray"
+                    xLabel="Volume Uplift" yLabel="ROI" zLabel="Volume"></bubble>
+        </div>
+        <div class="bubble-container-1 chart-container col-sm-6">
+            <div class="chart-labels"><text-outlet key="GpalUplift"></text-outlet></div>
+            <bubble [rangeRefX]="gbcRangeRefXBubbleChart1"
+                    [rangeRefY]="gbcRangeRefYBubbleChart1"
+                    [rangeRefZ]="gbcRangeRefZBubbleChart1"
+                    numberFormatX="0%"
+                    numberFormatY="0%"
+                    numberFormatZ="0,0"
+                    [chartOptions]="gcbChartOptions1"
+                    [bubblesLabels]="gbcLabelChart1"
+                    [seriesLabels]="'tlOutputCh'+ChannelNo+'Analytic2Chart3Type1,tlOutputCh'+ChannelNo+'Analytic2Chart3Type2,tlOutputCh'+ChannelNo+'Analytic2Chart3Type3,tlOutputCh'+ChannelNo+'Analytic2Chart3Type4'" 
+                    [bubblesPerSeries]="bubblePerSeriesArray"
+                    xLabel="GPal Uplift" yLabel="ROI" zLabel="Volume"></bubble>
+        </div>
+    </div>
+    <div class="row row-2">
+        <div class="stacked-column-container chart-container col-sm-6">
+            <div class="chart-labels"><text-outlet key="PromotionShare"></text-outlet></div>
+            <stackedcolumn
+                [rangeref]="stackedcolumnRangeRef"
+                [categorylabels]="stackedcolumnCategoryLabels"
+                [serieslabels]="stackedcolumnSeriesLabel"
+                numberformat="0%"
+                [chartoptions]="stackedColumnChartOptions"
+            ></stackedcolumn>            
+        </div>
+        <div class="bubble-container-2 chart-container col-sm-6">
+            <div class="chart-labels"><text-outlet key="CustomerUplift"></text-outlet></div>
+            <bubble [rangeRefX]="gbcRangeRefXBubbleChart2"
+                    [rangeRefY]="gbcRangeRefYBubbleChart2"
+                    [rangeRefZ]="gbcRangeRefZBubbleChart2"
+                    numberFormatX="0%"
+                    numberFormatY="0%"
+                    numberFormatZ="0,0"
+                    [chartOptions]="gcbChartOptions2"
+                    [bubblesLabels]="gbcLabelChart2" 
+                    [seriesLabels]="'tlOutputCh'+ChannelNo+'Analytic2Chart3Type1,tlOutputCh'+ChannelNo+'Analytic2Chart3Type2,tlOutputCh'+ChannelNo+'Analytic2Chart3Type3,tlOutputCh'+ChannelNo+'Analytic2Chart3Type4'" 
+                    [bubblesPerSeries]="bubblePerSeriesArray"
+                    xLabel="Customer Uplift" yLabel="GPaL Uplift" zLabel="Volume"></bubble>
+        </div>
+    </div>
+</div>
