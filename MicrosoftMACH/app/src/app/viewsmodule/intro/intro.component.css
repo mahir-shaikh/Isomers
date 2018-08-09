@@ -1,0 +1,77 @@
+.intro-container {
+  height: 100vh;
+  position: relative;
+}
+.intro-container .intro-row {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+}
+.intro-container .intro-row .logo-simulation-container {
+  position: relative;
+  height: 100%;
+  background-image: url("../../../../assets/images/intro_1.jpg");
+  background-size: cover;
+  padding-right: 50px;
+}
+.intro-container .intro-row .logo-simulation-container .logo-simulation-info {
+  position: relative;
+  top: 47%;
+  transform: translateY(-47%);
+}
+.intro-container .intro-row .logo-simulation-container .logo-simulation-info .logo {
+  background-image: url("../../../../assets/images/bestamp.png");
+  background-size: cover;
+  height: 90px;
+  width: 50%;
+  margin-left: auto;
+}
+.intro-container .intro-row .logo-simulation-container .logo-simulation-info .simulation-heading {
+  text-align: right;
+}
+.intro-container .intro-row .logo-simulation-container .logo-simulation-info .simulation-heading calc-outlet {
+  font-size: 5rem;
+  line-height: 5rem;
+  color: #fff;
+}
+.intro-container .intro-row .intro-info {
+  padding-left: 50px;
+}
+.intro-container .intro-row .intro-info .label-image {
+  display: inline-block;
+  vertical-align: bottom;
+  background-color: #01426a;
+}
+.intro-container .intro-row .intro-info .label-image .icon {
+  height: 50px;
+  padding: 5px;
+}
+.intro-container .intro-row .intro-info .info calc-input {
+  display: inline-block;
+  width: 88%;
+}
+.intro-container .intro-row .intro-info .year-info {
+  padding: 20px 0;
+  text-align: center;
+}
+.intro-container .intro-row .intro-info .year-info calc-outlet {
+  font-size: 2rem;
+}
+.intro-container .intro-row .intro-info .team-number-info {
+  padding: 0;
+  padding-bottom: 20px;
+}
+.intro-container .intro-row .intro-info .team-name-info {
+  padding: 0;
+}
+.intro-container .intro-row .intro-info .button-container {
+  padding-top: 20px;
+  text-align: center;
+}
+.intro-container .intro-row .intro-info .button-container .next-button {
+  padding: 15px 50px;
+}
+.intro-container .intro-row .intro-info .button-container .next-button calc-outlet {
+  font-size: 1.5rem;
+}

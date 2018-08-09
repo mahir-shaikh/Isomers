@@ -1,0 +1,311 @@
+@import '../../../../assets/css/colors.styl'
+
+.topnavbar-container
+    background-color #FFF
+    color #303030
+    justify-content space-between
+    // align-items center
+    // height 250px
+    flex-direction column
+    position relative
+    margin-bottom 10px
+    .commit-btn-container
+        position absolute
+        right 25px
+        top -2px
+        z-index 1
+        @media screen and (max-width 768px)
+            position static
+            text-align center
+            padding-top 20px
+        .commit-btn
+            border-radius 0
+            height 40px
+            cursor pointer
+            background-color $er-light-color1
+            color #FFF
+            &:hover,&:active
+                background-color $er-color1
+            text-outlet
+                font-size 0.95rem
+        &.hidden
+            display none
+    .dashboard-data
+        // border-bottom 3px solid #F2F2F2
+        padding 5px 10px 0
+        font-size 0.75rem
+        calc-outlet, text-outlet
+            font-size 0.75rem
+        .dashboard-data-row
+            padding 5px 0
+            border-bottom 1px dotted #d4d4d4
+            &:last-child
+                border-bottom none
+            .form-label
+                color #333333
+                font-weight 500
+                calc-outlet,text-outlet
+                    font-size 0.875rem
+                    @media screen and (min-width 1100px)
+                        font-size 1rem
+            .form-data
+                padding 0 10px
+                @media screen and (max-width 768px)
+                    padding 0 8px
+                .actual-data
+                    .data-label
+                        color #333333
+                        font-size 0.875rem
+                        calc-outlet,text-outlet
+                            font-size 0.875rem
+                            @media screen and (min-width 1100px)
+                                font-size 1rem
+                    .data-value
+                        color $color1
+                        font-weight 500
+                        font-size 0.875rem
+                        // font-size 0.9375rem
+                        calc-outlet,text-outlet
+                            font-size 0.875rem
+                            // font-size 0.9375rem
+                            @media screen and (min-width 1100px)
+                                font-size 1rem
+                .summary-data
+                    font-style italic
+    .dashboard-chart
+        background-color #f4f5f6
+        border-top 3px solid $color1
+        width 100%
+        padding-bottom 10px
+        align-items center
+        .chart-wrapper
+            display inline-grid
+            .chart-container
+                // z-index 1
+        .label-container
+            @media screen and (max-width 768px)
+                display flex
+                justify-content space-between
+                align-items center
+                padding-top 10px
+        .chart-title
+            text-align left
+            padding-left 10px
+            color #000
+            font-size 0.875rem
+            white-space nowrap
+            margin-top -15px
+            position relative
+            z-index 1
+            calc-outlet,text-outlet
+                font-size 0.875rem
+        .customer-success
+            text-align left
+            padding-left 10px
+            font-size 0.875rem
+            white-space nowrap
+            display inline-block
+            color #333333
+            font-weight 500
+            padding-bottom 10px
+            calc-outlet,text-outlet
+                font-size 0.875rem
+        .series-label
+            color #0055b0
+            .chart-legend
+                // padding 5px
+                padding-left 15px
+                font-size 0.75rem
+                display inline-block
+                calc-outlet,text-outlet
+                    font-size 0.75rem
+                @media screen and (max-width 768px)
+                    float right
+                &:before
+                    content ''
+                    height 15px
+                    width 15px
+                    // position absolute
+                    // left 25px
+                    display inline-block
+                    margin-right 10px
+                    position relative
+                    top 4px
+            .last-round
+                color #333
+                &:before
+                    background-color $light-color1
+            .this-round
+                color #333
+                &:before
+                    background-color $color1
+                
+    &.colorOne
+        .dashboard-data .dashboard-data-row .form-data .actual-data .data-value
+            color $color1
+        .dashboard-chart
+            border-color $color1
+            .series-label .chart-legend
+                &.last-round
+                    // color $color1
+                    &:before
+                        background-color $light-color1
+                &.this-round
+                    // color $color1
+                    &:before
+                        background-color $color1
+        .dashboard-chart .customer-success
+            // color $color1
+            
+    &.colorTwo
+        .dashboard-data .dashboard-data-row .form-data .actual-data .data-value
+            color $color2
+        .dashboard-chart
+            border-color $color2
+            .series-label
+                .chart-legend
+                    &.last-round
+                        // color $color2
+                        &:before
+                            background-color $light-color2
+                    &.this-round
+                        // color $color2
+                        &:before
+                            background-color $color2
+        .dashboard-chart .customer-success
+            // color $color2
+            
+    &.colorThree
+        .dashboard-data .dashboard-data-row .form-data .actual-data .data-value
+            color $color3
+        .dashboard-chart
+            border-color $color3
+            .series-label .chart-legend
+                &.last-round
+                    // color $color3
+                    &:before
+                        background-color $light-color3
+                &.this-round
+                    // color $color3
+                    &:before
+                        background-color $color3
+        .dashboard-chart .customer-success
+            // color $color3
+            
+    &.colorFour
+        .dashboard-data .dashboard-data-row .form-data .actual-data .data-value
+            color $color4
+        .dashboard-chart
+            border-color $color4
+            .series-label .chart-legend
+                &.last-round
+                    // color $color4
+                    &:before
+                        background-color $light-color4
+                &.this-round
+                    // color $color4
+                    &:before
+                        background-color $color4
+        .dashboard-chart .customer-success
+            // color $color4
+            
+    &.colorOne.isErActive
+        .dashboard-data .dashboard-data-row .form-data .actual-data .data-value
+            color $er-color1
+        .dashboard-chart
+            border-color $er-color1
+            .series-label .chart-legend
+                &.last-round
+                    // color $er-color1
+                    &:before
+                        background-color $er-light-color1
+                &.this-round
+                    // color $er-color1
+                    &:before
+                        background-color $er-color1
+        .dashboard-chart .customer-success
+            // color $er-color1
+            
+    &.colorTwo.isErActive
+        .dashboard-data .dashboard-data-row .form-data .actual-data .data-value
+            color $er-color1
+        .dashboard-chart
+            border-color $er-color1
+            .series-label
+                .chart-legend
+                    &.last-round
+                        color $er-color1
+                        &:before
+                            background-color $er-light-color1
+                    &.this-round
+                        color $er-color1
+                        &:before
+                            background-color $er-color1
+        .dashboard-chart .customer-success
+            // color $er-color1
+            
+    &.colorThree.isErActive
+        .dashboard-data .dashboard-data-row .form-data .actual-data .data-value
+            color $er-color1
+        .dashboard-chart
+            border-color $er-color1
+            .series-label .chart-legend
+                &.last-round
+                    color $er-color1
+                    &:before
+                        background-color $er-light-color1
+                &.this-round
+                    color $er-color1
+                    &:before
+                        background-color $er-color1
+        .dashboard-chart .customer-success
+            // color $er-color1
+            
+    &.colorFour.isErActive
+        .dashboard-data .dashboard-data-row .form-data .actual-data .data-value
+            color $er-color1
+        .dashboard-chart
+            border-color $er-color1
+            .series-label .chart-legend
+                &.last-round
+                    color $er-color1
+                    &:before
+                        background-color $er-light-color1
+                &.this-round
+                    color $er-color1
+                    &:before
+                        background-color $er-color1
+        .dashboard-chart .customer-success
+            // color $er-light-color1
+        
+
+.commit-modal
+    // position absolute
+    top 20%
+    // left 50%
+    // -ms-transform transalate(-50%,-50%)
+    // -o-transform transalate(-50%,-50%)
+    // -webkit-transform transalate(-50%,-50%)
+    // transform transalate(-50%,-50%)
+    .modal-content
+        border-radius 0
+    .button-container
+        padding 0 15px 10px
+        text-align center
+        .btn
+            cursor pointer
+            border-radius 0
+            color #FFF
+            calc-outlet
+                color #FFF
+        .yes-button
+            border 1px solid $er-color1
+            background-color $er-color1
+            // float left
+        .no-button
+            border 1px solid $er-color4
+            background-color $er-color4
+            // float right
+        &:after
+            clear both
+            

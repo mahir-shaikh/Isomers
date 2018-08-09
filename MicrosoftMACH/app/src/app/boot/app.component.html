@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="row">
+        <div class="hidden" [routerLink]="['/intro']" [routerLinkActive]="['active']"></div>
+        <div class="hidden" [routerLink]="['/forecast']" [routerLinkActive]="['active']"></div>
+        <!-- <div class="hidden" [routerLink]="['/splash']" [routerLinkActive]="['hide-topnavbar']"></div> -->
+        <div class="hidden" [routerLink]="['/pnl']" [routerLinkActive]="['hide-topnavbar']"></div>
+        <div class="hidden" [routerLink]="['/splash']" [routerLinkActive]="['active']"></div>
+        <div class="hidden" [routerLink]="['/engineeringRequest']" [routerLinkActive]="['active']"></div>
+        <div class="dashboard-app">
+            <im-dashboard *ngIf="isAppReady"></im-dashboard>
+        </div>
+        <div class="topnavbar-page">
+            <topnavbar *ngIf="isAppReady"></topnavbar>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

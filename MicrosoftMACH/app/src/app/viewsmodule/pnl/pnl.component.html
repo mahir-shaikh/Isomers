@@ -1,0 +1,690 @@
+<div class="pnl-page-wrapper colorFour">
+    <div class="main-heading-text-container row">
+        <div class="main-heading-text col-sm-12">
+            <text-outlet key="PnlMainHeading"></text-outlet>
+        </div>
+    </div>
+    <div class="pnl-body">
+        <div class="table-container">
+            <div class="table-condensed table">
+                <div class="pnl-note">
+                    <text-outlet key="PnlNote"></text-outlet>
+                </div>
+                <div class="row heading-row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                        <!-- <calc-outlet ref="tlOutputPNLLabelProd1"></calc-outlet> -->
+                        <text-outlet key="ProductivityAndBusiness"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-label">
+                        <!-- <calc-outlet ref="tlOutputPNLLabelProd2"></calc-outlet> -->
+                        <text-outlet key="IntelligentCloud"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-label">
+                        <!-- <calc-outlet ref="tlOutputPNLLabelProd3"></calc-outlet> -->
+                        <text-outlet key="PersonalComputing"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-label">
+                        <!-- <calc-outlet ref="nmTotal"></calc-outlet> -->
+                        <text-outlet key="Total"></text-outlet>
+                    </div>
+                </div>
+
+                <!-- 1st Block of Table -->
+                <div class="row sub-heading-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmRevenue"></calc-outlet> -->
+                        <text-outlet key="Revenue"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmSeg1"></calc-outlet> -->
+                        <text-outlet key="Enterprise"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1Seg1Rev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd2Seg1Rev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3Seg1Rev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLSeg1TotalRev" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="SMC"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1Seg2Rev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd2Seg2Rev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3Seg2Rev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLSeg2TotalRev" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmSeg3"></calc-outlet> -->
+                        <text-outlet key="Consumer"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1Seg3Rev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <!-- <calc-outlet ref="tlOutputPNLProd2Seg3Rev"></calc-outlet> -->
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3Seg3Rev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLSeg3TotalRev" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row total-row last-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmTotal"></calc-outlet> -->
+                        <text-outlet key="Total"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1TotalRev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd2TotalRev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3TotalRev" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalRev" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+
+                <!-- 2nd Block of Table -->
+                <div class="row sub-heading-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmCOGS"></calc-outlet> -->
+                        <text-outlet key="COGS"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmSeg1"></calc-outlet> -->
+                        <text-outlet key="Enterprise"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1Seg1COGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd2Seg1COGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3Seg1COGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLSeg1TotalCOGS" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="SMC"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1Seg2COGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd2Seg2COGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3Seg2COGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLSeg2TotalCOGS" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmSeg3"></calc-outlet> -->
+                        <text-outlet key="Consumer"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1Seg3COGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <!-- <calc-outlet ref="tlOutputPNLProd2Seg3COGS"></calc-outlet> -->
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3Seg3COGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLSeg3TotalCOGS" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row total-row last-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmTotal"></calc-outlet> -->
+                        <text-outlet key="Total"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1TotalCOGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd2TotalCOGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3TotalCOGS" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalCOGS" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+
+                <!-- 3rd Block of Table -->
+                <div class="row sub-heading-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmGrossProfit"></calc-outlet> -->
+                        <text-outlet key="GrossProfit"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmSeg1"></calc-outlet> -->
+                        <text-outlet key="Enterprise"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1Seg1GrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd2Seg1GrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3Seg1GrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLSeg1TotalGrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="SMC"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1Seg2GrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd2Seg2GrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3Seg2GrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLSeg2TotalGrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmSeg3"></calc-outlet> -->
+                        <text-outlet key="Consumer"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1Seg3GrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <!-- <calc-outlet ref="tlOutputPNLProd2Seg3GrossProfit"></calc-outlet> -->
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3Seg3GrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLSeg3TotalGrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row total-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmTotalGrossProfit"></calc-outlet> -->
+                        <text-outlet key="TotalGrossProfit"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1TotalGrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd2TotalGrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3TotalGrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalGrossProfit" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row total-row last-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmTotalGrossMargin"></calc-outlet> -->
+                        <text-outlet key="TotalGrossMargin"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd1TotalGrossMargin" format="0%"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd2TotalGrossMargin" format="0%"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value splitter">
+                        <calc-outlet ref="tlOutputPNLProd3TotalGrossMargin" format="0%"></calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalGrossMargin" format="0%"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-condensed table">
+                <!-- 4th Block of Table -->
+                <div class="row sub-heading-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmSalesMktgExp"></calc-outlet> -->
+                        <text-outlet key="SalesMarketingExpense"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg1"></calc-outlet> -->
+                        <text-outlet key="MarketingExpense"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalMktgExp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="PartnerActivities"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalPartnerExp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="ATUSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalResource1Exp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="STUSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalResource2Exp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="CTUSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalResource3Exp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="ServicesSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalResource4Exp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="GlobalDemandCenterSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalResource5Exp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="FieldSalesSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalResource6Exp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg3"></calc-outlet> -->
+                        <text-outlet key="DirectSalesSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalResource7Exp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg4"></calc-outlet> -->
+                        <text-outlet key="InsideSalesSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalResource8Exp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg5"></calc-outlet> -->
+                        <text-outlet key="PartnerGroupSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalPartnerSalaryExp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row total-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmTotalGrossProfit"></calc-outlet> -->
+                        <text-outlet key="TotalSalesMarketingExpense"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalSalesMktgExp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row total-row last-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmTotalGrossMargin"></calc-outlet> -->
+                        <text-outlet key="% of Total Revenue"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLSalesMktgPct" format="0%"></calc-outlet>
+                    </div>
+                </div>
+
+                <!-- 5th Block of Table -->
+                <div class="row sub-heading-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- <calc-outlet ref="nmGenAdmin"></calc-outlet> -->
+                        <text-outlet key="GenAdministrative"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg1"></calc-outlet> -->
+                        <text-outlet key="TalentDevelopment"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalTalentExp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg2"></calc-outlet> -->
+                        <text-outlet key="OperationsSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalOpsExp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg3"></calc-outlet> -->
+                        <text-outlet key="UnallocatedSalary"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalUnallocatedSalaryExp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmSeg4"></calc-outlet> -->
+                        <text-outlet key="MiscGenAdministrative"></text-outlet>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalMiscExp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row total-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmTotalGenAdmin"></calc-outlet> -->
+                        <text-outlet key="TotalGenAdministrative"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLGenAdminExp" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row total-row last-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmTotalGenAdminPct"></calc-outlet> -->
+                        <text-outlet key="PercTotalRevenue"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLGenAdminPct" format="0%"></calc-outlet>
+                    </div>
+                </div>
+
+                <!-- Last Row -->
+                <div class="row data-row total-row final-row mt-20">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmTotalOpProfit"></calc-outlet> -->
+                        <text-outlet key="TotalOperatingProfit"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalOpProfit" format="$0,0"></calc-outlet>
+                    </div>
+                </div>
+                <div class="row data-row total-row final-row">
+                    <div class="col-sm-4 data-label">
+                        <!-- Change -->
+                        <!-- <calc-outlet ref="nmTotalOpMargin"></calc-outlet> -->
+                        <text-outlet key="TotalOperatingMargin"></text-outlet>
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                    </div>
+                    <div class="col-sm-2 data-value">
+                        <calc-outlet ref="tlOutputPNLTotalOpMargin" format="0%"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

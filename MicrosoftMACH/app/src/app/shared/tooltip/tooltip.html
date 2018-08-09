@@ -1,0 +1,6 @@
+<!--<a href="#" [tooltip]="'Foo'" #tooltip='bs-tooltip' >Check me out!</a>-->
+
+<div class="tooltip-icon animated " [class.customAnimation]="enable" [tooltip]="tooltipText" tooltipAnimation="true" [placement]="tooltipPlacement" container="body" *ngIf="!useAsInnerHtml" (click)="toggleClass()"><img src="../../../../assets/images/icons/information.svg" class="icon"></div>
+
+<template #templateRef><div [innerHtml]="tooltipText"></div></template>
+<div class="tooltip-icon" [tooltip]="templateRef" tooltipAnimation="true" [placement]="tooltipPlacement" container="body" *ngIf="useAsInnerHtml"><img src="../../../../assets/images/icons/information.svg" class="icon"></div>

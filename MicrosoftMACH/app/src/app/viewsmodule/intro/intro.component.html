@@ -1,0 +1,51 @@
+<div class="intro-container">
+    <div class="intro-row row">
+        <div class="logo-simulation-container col-sm-6">
+            <div class="logo-simulation-info">
+                <div class="logo-container">
+                    <img src="../../../../assets/images/Microsoft_white.png" class="logo">
+                </div>
+                <div class="simulation-heading">
+                    <!-- <calc-outlet ref="nmProgramSubtitle"></calc-outlet> -->
+                    <text-outlet key="SubTitle"></text-outlet>
+                </div>
+            </div>
+        </div>
+        <div class="intro-info col-sm-6 row">
+            <div class="info team-number-info col-sm-10 col-md-7">
+                <div class="label-image"><img src="../../../../assets/images/icons/team_no.svg" class="team-number-icon icon" /></div><calc-input ref="tlInputTeamNumber" [IsReadOnly]="currentYear == 2"></calc-input>
+            </div>
+            <div class="info team-name-info  col-sm-10 col-md-7">
+                <div class="label-image"><img src="../../../../assets/images/icons/team_name.svg" class="team-number-icon icon" /></div><calc-input ref="tlInputTeamName" [IsReadOnly]="currentYear == 2"></calc-input>
+            </div>
+            <div class="button-container col-sm-10 col-md-7">
+                <button class="btn btn-primary next-button" (click)="navigateToNextPage()">
+                    <text-outlet key="StartRound" *ngIf="currentYear == 1 && isFresh"></text-outlet>
+                    <text-outlet key="NextRound" *ngIf="currentYear == 2 && isFresh"></text-outlet>
+                    <text-outlet key="Continue" *ngIf="!isFresh"></text-outlet>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="reset-btn-container">
+        <span class="reset-btn fa fa-refresh" (click)="showResetAlert()"></span>
+    </div> -->
+</div>
+
+
+<div bsModal #resetModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm reset-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Reset"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="Are you sure?"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-danger yes-button" (click)="resetData()"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn btn-primary no-button" (click)="hideResetAlert()"><text-outlet key="No"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>

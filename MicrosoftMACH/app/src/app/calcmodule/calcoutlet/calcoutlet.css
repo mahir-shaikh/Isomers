@@ -1,0 +1,26 @@
+:host {
+  font-size: 0.875rem;
+  color: #333;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  :host {
+    font-size: 0.75rem;
+  }
+}
+:host-context(.intro-page-wrapper) {
+  color: #000;
+}
+:host-context(.switch-to-heading) {
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  :host-context(.switch-to-heading) {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  :host-context(.switch-to-heading) {
+    font-size: 0.75rem;
+  }
+}

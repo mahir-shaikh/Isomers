@@ -1,0 +1,269 @@
+<div class="topnavbar-container" [class.isErActive]="isERActive" [class.colorOne]="isColorOneActive" [class.colorTwo]="isColorTwoActive" [class.colorThree]="isColorThreeActive" [class.colorFour]="isColorFourActive">
+    <div class="dashboard-data row">
+        <div class="row col-sm-12 dashboard-data-row">
+            <div class="col-sm-2 form-label">
+                <text-outlet key="Dashboard1KpiName0"></text-outlet>
+            </div>
+            <div class="col-sm-10 row p-0">
+                <!--<div class="col-sm col-md-3 form-data">
+                    <div class="actual-data">
+                        <span class="data-label">
+                            <text-outlet key="Dashboard1KpiName1"></text-outlet>
+                        </span>
+                        <span class="data-value">
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardCLV'" format="$0,0.0" showBalloon="true" showValue="true" differenceFormat="$0,0.00"></calc-outlet>
+                        </span>
+                    </div>
+                    <div class="summary-data">
+                        <span class="data-value">
+                        </span>
+                    </div>
+                </div>-->
+                <div class="col-sm col-md-3 form-data">
+                    <div class="actual-data">
+                        <span class="data-label">
+                            <text-outlet key="Dashboard1KpiName2"></text-outlet>
+                        </span>
+                        <span class="data-value">
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardRev'" format="$0,0.0" showBalloon="true" showValue="true" differenceFormat="$0,0.00"></calc-outlet>
+                        </span>
+                    </div>
+                    <div class="summary-data">
+                        <span class="data-value">
+                            <text-outlet key="("></text-outlet>
+                            <text-outlet key="Growth"></text-outlet>
+                            <text-outlet key=":"></text-outlet>
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardRevGrowth'" format="0.0%"></calc-outlet>
+                            <text-outlet key=")"></text-outlet>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm col-md-3 form-data">
+                    <div class="actual-data">
+                        <span class="data-label">
+                            <text-outlet key="Dashboard1KpiName3"></text-outlet>
+                        </span>
+                        <span class="data-value">
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardGrossProfit'" format="$0,0.0" showBalloon="true" showValue="true" differenceFormat="$0,0.00"></calc-outlet>
+                        </span>
+                    </div>
+                    <div class="summary-data">
+                        <span class="data-value">
+                            <text-outlet key="("></text-outlet>
+                            <text-outlet key="Margin"></text-outlet>
+                            <text-outlet key=":"></text-outlet>
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardGrossMargin'" format="0.0%"></calc-outlet>
+                            <text-outlet key=")"></text-outlet>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm col-md-3 form-data">
+                    <div class="actual-data">
+                        <span class="data-label">
+                            <text-outlet key="Dashboard1KpiName4"></text-outlet>
+                        </span>
+                        <span class="data-value">
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardOpProfit'" format="$0,0.0" showBalloon="true" showValue="true" differenceFormat="$0,0.00"></calc-outlet>
+                        </span>
+                    </div>
+                    <div class="summary-data">
+                        <span class="data-value">
+                            <text-outlet key="("></text-outlet>
+                            <text-outlet key="Margin"></text-outlet>
+                            <text-outlet key=":"></text-outlet>
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardOpMargin'" format="0.0%"></calc-outlet>
+                            <text-outlet key=")"></text-outlet>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm col-md-3 form-data">
+                    <div class="commit-btn-container" [class.hidden]="!isERActive">
+                        <button class="commit-btn btn" (click)="showCommitModal()"><text-outlet key="Commit"></text-outlet></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-sm-12 dashboard-data-row">
+            <div class="col-sm-2 form-label">
+                <text-outlet key="Dashboard2KpiName0"></text-outlet>
+            </div>
+            <div class="col-sm-10 row p-0">
+                <div class="col-sm col-md-3 form-data">
+                    <div class="actual-data">
+                        <span class="data-label">
+                            <text-outlet key="Dashboard2KpiName1"></text-outlet>
+                        </span>
+                        <span class="data-value">
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardCloudAdopt'" format="0.0%" showBalloon="true" showValue="true" differenceFormat="0.00%"></calc-outlet>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm col-md-3 form-data">
+                    <div class="actual-data">
+                        <span class="data-label">
+                            <text-outlet key="Dashboard2KpiName2"></text-outlet>
+                        </span>
+                        <span class="data-value">
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardAvgConsumption'" format="0.0%" showBalloon="true" showValue="true"></calc-outlet>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm col-md-3 form-data">
+                    <div class="actual-data">
+                        <span class="data-label">
+                            <text-outlet key="Dashboard2KpiName3"></text-outlet>
+                        </span>
+                        <span class="data-value">
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardAvgChurn'" format="0.0%" showBalloon="true" showValue="true" differenceFormat="0.00%" isReversed="true"></calc-outlet>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-sm-12 dashboard-data-row">
+            <div class="col-sm-2 form-label">
+                <text-outlet key="Dashboard3KpiName0"></text-outlet>
+            </div>
+            <div class="col-sm-10 row p-0">
+                <div class="col-sm col-md-3 form-data">
+                    <div class="actual-data">
+                        <span class="data-label">
+                            <text-outlet key="Dashboard3KpiName1"></text-outlet>
+                        </span>
+                        <span class="data-value">
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardWHI'" format="0.0" showBalloon="true" showValue="true" differenceFormat="0.00"></calc-outlet>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm col-md-3 form-data">
+                    <div class="actual-data">
+                        <span class="data-label">
+                            <text-outlet key="Dashboard3KpiName2"></text-outlet>
+                        </span>
+                        <span class="data-value">
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardCPE'" format="0.0" showBalloon="true" showValue="true" differenceFormat="0.00"></calc-outlet>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm col-md-3 form-data">
+                    <div class="actual-data">
+                        <span class="data-label">
+                            <text-outlet key="Dashboard3KpiName3" *ngIf="!isERActive"></text-outlet>
+                            <text-outlet key="Dashboard3KpiName4" *ngIf="isERActive"></text-outlet>
+                        </span>
+                        <span class="data-value">
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardETUs'" showBalloon="true" showValue="true" *ngIf="isERActive"></calc-outlet>
+                            <calc-outlet [ref]="'tlOutput'+routeName+'DashboardFTEs'" showBalloon="true" showValue="true" *ngIf="!isERActive"></calc-outlet>
+                        </span>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+ 
+        <!--<div class="col-sm-12 col-md-3 col-lg-2 chart-wrapper label-container">
+            <div class="customer-success"><text-outlet key="ChartTitle0"></text-outlet></div>
+            <div class="chart-container series-label">
+                <div class="chart-legend this-round"><text-outlet key="ThisRound"></text-outlet></div>
+                <div class="chart-legend last-round"><text-outlet key="LastRound"></text-outlet></div>
+            </div>
+        </div>-->
+        <!--<div class="col-sm-3 col-md-2 chart-wrapper">
+            <div class="chart-container revenue-chart">
+                <basicbar
+                        rangeRef="[tlOutputGraphsCustRevenueOpening,tlOutputGraphsCustRevenueClosing]"
+                        seriesLabels="tlOutputGraphsLabelCustRevenueLastRound, tlOutputGraphsLabelCustRevenueThisRound"
+                        categoryLabels="tlOutputGraphsLabelCustRevenue"
+                        height="80"
+                        width="145"
+                        numberFormat="0,0.0"
+                        [chartOptions]="commonChartOption"
+                ></basicbar>
+            </div>
+            <div class="chart-title">
+            <!-- <calc-outlet ref="tlOutputGraphsLabelCustRevenue"></calc-outlet> 
+                <text-outlet key="ChartTitle1"></text-outlet>
+            </div>
+        </div>-->
+        <!--<div class="col-sm-3 col-md-2 chart-wrapper">
+            <div class="chart-container operatingmargin-chart">
+                <basicbar
+                        rangeRef="[tlOutputGraphsCustOpMarginOpening,tlOutputGraphsCustOpMarginClosing]"
+                        seriesLabels="tlOutputGraphsLabelCustOpMarginLastRound, tlOutputGraphsLabelCustOpMarginThisRound"
+                        categoryLabels="tlOutputGraphsLabelCustOpMargin"
+                        height="80"
+                        width="145"
+                        numberFormat="0,0.0"
+                        [chartOptions]="commonChartOption"
+                ></basicbar>
+            </div>
+            <div class="chart-title">
+                <!-- <calc-outlet ref="tlOutputGraphsLabelCustOpMargin"></calc-outlet> 
+                <text-outlet key="ChartTitle2"></text-outlet>
+            </div>
+        </div>-->
+        <!--<div class="col-sm-3 col-md-2 chart-wrapper">
+            <div class="chart-container csat-chart">
+                <basicbar
+                        rangeRef="[tlOutputGraphsCustCSATOpening,tlOutputGraphsCustCSATClosing]"
+                        seriesLabels="tlOutputGraphsLabelCustCSATLastRound, tlOutputGraphsLabelCustCSATThisRound"
+                        categoryLabels="tlOutputGraphsLabelCustCSAT"
+                        height="80"
+                        width="145"
+                        numberFormat="0,0.0"
+                        [chartOptions]="commonChartOption"
+                ></basicbar>
+            </div>
+            <div class="chart-title">
+                <!-- <calc-outlet ref="tlOutputGraphsLabelCustCSAT"></calc-outlet> -
+                <text-outlet key="ChartTitle3"></text-outlet>
+            </div>
+        </div>-->
+        <!--<div class="col-sm-3 col-md-2 chart-wrapper">
+            <div class="chart-container ee-chart">
+                <basicbar
+                        rangeRef="[tlOutputGraphsCustEEOpening,tlOutputGraphsCustEEClosing]"
+                        seriesLabels="tlOutputGraphsLabelCustEELastRound, tlOutputGraphsLabelCustEEThisRound"
+                        categoryLabels="tlOutputGraphsLabelCustEE"
+                        height="80"
+                        width="145"
+                        numberFormat="0,0.0"
+                        [chartOptions]="commonChartOption"
+                ></basicbar>
+            </div>
+            <div class="chart-title">
+                <!-- <calc-outlet ref="tlOutputGraphsLabelCustEE"></calc-outlet> -
+                <text-outlet key="ChartTitle4"></text-outlet>
+            </div>
+        </div>-->
+        <!--<div class="col-sm-12 col-md-2">
+            <div class="commit-btn-container" [class.hidden]="!isERActive">
+                <button class="commit-btn btn" (click)="showCommitModal()"><text-outlet key="Commit"></text-outlet></button>
+            </div>
+        </div>-->
+    
+    <!-- <div class="commit-btn-container" [class.hidden]="!isERActive">
+        <button class="commit-btn btn" (click)="showCommitModal()"><text-outlet key="Commit"></text-outlet></button>
+    </div> -->
+</div>
+
+<div bsModal #commitModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-lg commit-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Commit"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="CommitMsgEtuZero" *ngIf="etusRemaining == 0"></text-outlet>
+            <text-outlet key="CommitMsgEtuLessThanZero" *ngIf="etusRemaining < 0"></text-outlet>
+            <text-outlet key="CommitMsgEtuMoreThanZero" *ngIf="etusRemaining > 0"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn yes-button" (click)="commitER()" *ngIf="etusRemaining >= 0"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn no-button" (click)="hideCommitAlert()" *ngIf="etusRemaining >= 0"><text-outlet key="No"></text-outlet></button>
+            <button type="button" class="btn no-button" (click)="hideCommitAlert()" *ngIf="etusRemaining < 0"><text-outlet key="Ok"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>

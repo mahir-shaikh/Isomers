@@ -1,0 +1,236 @@
+<div class="marketing-data-container colorOne animated slideInUp">
+    <div class="page-heading">
+        <text-outlet key="OpsMarketingMainHeading"></text-outlet>
+    </div>
+    <div class="data-common-container row">
+        <div class="marketing-budget col-12">
+            <div class="data-col-container">
+                <div class="data-label-heading row">
+                    <text-outlet key="TotalMarketingBudget"></text-outlet>
+                </div>
+                <div class = "data-row-col row">
+                    <div class = "data-col col-4">
+                        <div class="tooltip-first-container">
+                            <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton14">
+                            <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D43"> -->
+                            </my-tooltip>
+                            <span class="data-label"><text-outlet key="MarketingBudget"></text-outlet></span>
+                        </div>
+                    </div>
+                    <div class = "data-col-val col-4">
+                        <span class="data-value"><calc-stepper ref="tlInputOpsTotalMarketingBudget" min="0" max="10000000" outputMin="0" outputMax="10000000" step="250000" format="($0,0)"></calc-stepper></span>
+                    </div>
+                    <div class="data-col-val col-4"></div>
+                    <div class = "data-col-secondary col-4">
+                        <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                    </div>
+                    <div class = "data-col-val italic col-4">
+                        <span class="data-value"><calc-outlet ref="tlOutputOpsTotalMarketingBudgetOpening" format="($0,0)"></calc-outlet></span>
+                    </div>
+                    <div class="data-col-val col-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="segment-allocation-container col-12">
+            <div class="segment row">
+                <div class="commercial-segment col-6">
+                    <div class="data-col-container">
+                        <div class="data-label-heading row">
+                            <div class="tooltip-first-container">
+                                <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton15">
+                                <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D44"> -->
+                                </my-tooltip>
+                                <span class="data-label"><text-outlet key="CommercialSegmentAllocation"></text-outlet></span>
+                            </div>
+                        </div>
+                        <div class = "data-row-col row">
+                            <div class = "data-col col-6">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <span class="data-label"><text-outlet key="PercTotalBudget"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val col-4">
+                                <span class="data-value"><calc-stepper ref="tlInputOpsCommercialMarketingBudget" min="0" max="100" outputMin="0" outputMax="100" step="5" scaler="100" format="0%"></calc-stepper></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="ThisRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsCommercialMktgBudgetClosing" format="($0,0)"></calc-outlet></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsCommercialMktgBudgetOpening" format="($0,0)"></calc-outlet></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="consumer-segment col-6">
+                    <div class="data-col-container">
+                        <div class="data-label-heading row">
+                            <div class="tooltip-first-container">
+                                <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton15">
+                                <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D44"> -->
+                                </my-tooltip>
+                                <span class="data-label"><text-outlet key="ConsumerSegmentAllocation"></text-outlet></span>
+                            </div>
+                        </div>
+                        <div class = "data-row-col row">
+                            <div class = "data-col col-6">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <span class="data-label"><text-outlet key="PercTotalBudget"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val col-4">
+                                <span class="data-value"><calc-input ref="tlInputOpsConsumerMarketingBudget" scaler="100" format="0%" IsReadOnly="true"></calc-input></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="ThisRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsConsumerMktgBudgetClosing" format="($0,0)"></calc-outlet></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsConsumerMktgBudgetOpening" format="($0,0)"></calc-outlet></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="ambition row">
+                <div class="ambition-intelligent col-6">
+                    <div class="data-col-container">
+                        <div class="data-label-heading row">
+                            <div class="tooltip-first-container">
+                                <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton16">
+                                <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D45"> 
+                                </my-tooltip>
+                                <span class="data-label"><text-outlet key="AmbitionAllocation"></text-outlet></span>
+                            </div>
+                        </div>
+                        <div class = "data-row-col row">
+                            <div class = "data-col col-6">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <span class="data-label"><text-outlet key="ProductivityAndBusiness"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val col-4">
+                                <span class="data-value"><calc-stepper ref="tlInputOpsCommercialProd1Marketing" min="0" [max]="maxLimitPB" outputMin="0" [outputMax]="maxLimitPB" step="5" scaler="100" format="0%"></calc-stepper></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="ThisRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsCommercialProd1MktgBudgetClosing"  format="($0,0)"></calc-outlet></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="H59tlOutputOpsCommercialProd1MktgBudgetOpening" format="($0,0)"></calc-outlet></span>
+                            </div>
+                        </div>
+                        <div class = "data-row-col row">
+                            <div class = "data-col col-6">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <span class="data-label"><text-outlet key="IntelligentCloud"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val col-4">
+                                <span class="data-value"><calc-stepper ref="tlInputOpsCommercialProd2Marketing" min="0" [max]="maxLimitIC" outputMin="0" [outputMax]="maxLimitIC" step="5" scaler="100" format="0%"></calc-stepper></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="ThisRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsCommercialProd2MktgBudgetClosing" format="($0,0)"></calc-outlet></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsCommercialProd2MktgBudgetOpening" format="($0,0)"></calc-outlet></span>
+                            </div>
+                        </div>
+                        <div class = "data-row-col row">
+                            <div class = "data-col col-6">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <span class="data-label"><text-outlet key="PersonalComputing"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val col-4">
+                                <span class="data-value"><calc-input ref="tlInputOpsCommercialProd3Marketing" scaler="100" format="0%" IsReadOnly="true"></calc-input></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="ThisRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsCommercialProd3MktgBudgetClosing" format="($0,0)"></calc-outlet></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsCommercialProd3MktgBudgetOpening" format="($0,0)"></calc-outlet></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ambition-allocation col-6">
+                    <div class="data-col-container">
+                        <div class="data-label-heading row">
+                            <div class="tooltip-first-container">
+                                <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton16">
+                                <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D45">
+                                </my-tooltip>
+                                <span class="data-label"><text-outlet key="AmbitionAllocation"></text-outlet></span>
+                            </div>
+                        </div>
+                        <div class = "data-row-col row">
+                            <div class = "data-col col-6">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <span class="data-label"><text-outlet key="ProductivityAndBusiness"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val col-4">
+                                <span class="data-value"><calc-stepper ref="tlInputOpsConsumerProd1Marketing" min="0" max="100" outputMin="0" outputMax="100" step="5" scaler="100" format="0%"></calc-stepper></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="ThisRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsConsumerProd1MktgBudgetClosing" format="($0,0)"></calc-outlet></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsConsumerProd1MktgBudgetOpening" format="($0,0)"></calc-outlet></span>
+                            </div>
+                        </div>
+                        <div class = "data-row-col row">
+                            <div class = "data-col col-6">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <span class="data-label"><text-outlet key="PersonalComputing"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val col-4">
+                                <span class="data-value"><calc-input ref="tlInputOpsConsumerProd3Marketing" scaler="100" format="0%" IsReadOnly="true"></calc-input></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="ThisRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsConsumerProd3MktgBudgetClosing" format="($0,0)"></calc-outlet></span>
+                            </div>
+                            <div class = "data-col-secondary col-6">
+                                <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                            </div>
+                            <div class = "data-col-val-label col-4">
+                                <span class="data-value"><calc-outlet ref="tlOutputOpsConsumerProd3MktgBudgetOpening" format="($0,0)"></calc-outlet></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>

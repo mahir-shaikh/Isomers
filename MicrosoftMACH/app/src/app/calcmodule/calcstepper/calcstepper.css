@@ -1,0 +1,97 @@
+:host {
+  display: inline-block;
+  width: 100%;
+  max-width: 111px;
+  height: 25px;
+  background-color: #ececea;
+  color: #111;
+  overflow: hidden;
+  position: relative;
+}
+:host .stepper {
+  height: 100%;
+}
+:host input {
+  margin-left: 23px;
+  height: 100%;
+  width: calc(100% - 48px);
+  text-align: right;
+  color: #000369;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  padding-right: 5px;
+}
+:host input:active,
+:host input:focus {
+  color: #fff;
+  background-color: #000369;
+  border-top: 1px solid #000369;
+  border-bottom: 1px solid #000369;
+}
+@media screen and (max-width: 350px) {
+  :host {
+    height: 30px;
+    line-height: 30px;
+  }
+}
+:host(.disabled) {
+  background-color: #6d6e70;
+}
+:host(.disabled) .stepper-button {
+  pointer-events: none;
+  color: #000369;
+}
+.stepper {
+  font-size: 0.875rem;
+}
+.stepper > * {
+  float: left;
+  display: inline-block;
+}
+.stepper .field-value {
+  width: calc(100% - 60px);
+  left: 30px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  color: #000;
+}
+@media screen and (max-width: 350px) {
+  .stepper .field-value {
+    height: 30px;
+    line-height: 30px;
+  }
+}
+.stepper .field-value.negative {
+  color: #f00;
+}
+.stepper-button {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.75rem;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  position: absolute;
+  color: #fff;
+  background-color: #000369;
+  text-align: center;
+}
+@media screen and (max-width: 350px) {
+  .stepper-button {
+    height: 30px;
+    line-height: 30px;
+  }
+}
+.stepper .add {
+  right: 0;
+}
+.stepper .subtract {
+  left: 0;
+}
+.stepper .hidden {
+  display: none;
+}

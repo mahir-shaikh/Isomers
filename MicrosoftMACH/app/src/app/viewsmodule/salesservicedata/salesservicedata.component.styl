@@ -1,0 +1,75 @@
+@import '../../../../assets/css/colors.styl'
+
+:host
+	overflow auto
+	
+.salesservice-wrapper
+	.data-container
+		.page-heading
+			text-transform uppercase
+			color #fff
+			font-size 1.25rem
+			padding 10px 25px
+			margin 0 10px
+			calc-outlet,text-outlet
+				font-size 1.25rem
+				text-transform uppercase
+				color #fff
+		.data-content-container
+			margin 5px 10px 10px 10px
+			background-color #fff
+			.page-sub-heading-container
+				font-size 1.125rem
+				.page-sub-heading
+					padding 15px 25px
+			.all-tooltip-container
+				padding 5px
+				.tooltip-container
+					padding 5px
+					font-size 1.125rem
+					text-align center
+					calc-outlet,text-outlet
+						font-size 1.125rem
+		.chart
+			background-color #fff
+			// .empty-chart-space
+			//     padding-bottom 10px
+			//     background #f7f7f7
+			//     padding-left 25px
+			//     background-clip content-box
+			//     padding-right 0
+			.basic-column-chart
+				width 100%
+				padding 0 25px 10px
+		.last-round-container
+			padding 25px
+			background-color #fff
+			.stepper-val-container
+				.data-val
+					text-align center
+			.input-val-container
+				.data-row-col
+					padding 0
+					justify-content space-between
+					font-size 0.875rem
+					font-style italic
+					calc-outlet,text-outlet
+						font-size 0.875rem
+				.data-val
+					text-align center
+	.adjust-text
+		-webkit-transform translateX(-30px)
+		transform translateX(-30px)
+	.colorThree
+		.page-heading
+			background-color #3d1071
+	.colorTwo
+		.page-heading
+			background-color  #44458c
+
+@media screen and (max-width: 768px)
+	.salesservice-wrapper
+		.data-container
+			.data-content-container
+				.adjust-text
+					transform translateX(0)

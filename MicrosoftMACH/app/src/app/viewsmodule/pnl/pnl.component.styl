@@ -1,0 +1,123 @@
+@import '../../../../assets/css/colors.styl'
+
+:host
+    overflow auto
+    
+.pnl-page-wrapper
+    font-size 0.875rem
+    justify-content center
+    margin 0px
+    // height calc(100% - 50px)
+    // overflow auto
+    .main-heading-text-container
+        padding 10px 0
+        background-color $color4
+        height 40px
+        margin 10px
+        .main-heading-text
+            color #FFF
+            padding-left 25px
+            text-transform uppercase
+            calc-outlet, text-outlet
+                font-size 1.25rem
+    table
+        margin 0        
+        td,th
+            padding 0
+            border none
+        th
+            font-weight 500
+            text-align center
+    .pnl-note
+        text-align right
+        text-outlet
+            font-size 0.75rem
+    .pnl-body
+        margin 0 10px
+        .table-container
+            background-color #FFF
+            margin-top 10px
+            padding 15px 25px
+            margin-bottom 10px
+            tr:last-child
+                padding-bottom 10px
+            .row 
+                padding 0
+            .heading-row
+                color $color4
+                font-weight 500
+                font-size 1rem
+                padding-top 5px
+                background #e1e1e1
+                .data-label
+                    font-weight 500
+                    padding 5px
+                    background-clip border-box
+                    /*background-color #e1e1e1*/
+                    text-align center
+                    // background #e1e1e1
+                    border 1px dotted transparent
+                    calc-outlet, text-outlet
+                        font-size 1.125rem
+            .sub-heading-row
+                .data-label
+                    font-weight 500
+                    padding 5px 0
+                    color $color4
+                    font-weight 500
+                    background-clip border-box
+                    calc-outlet, text-outlet
+                        font-size 1.125rem
+                .data-value
+                    font-weight 500
+                    background-clip border-box
+                    border 1px solid #FFF
+                    text-align center
+                    background-color #F4F4F4
+                    calc-outlet
+                        height 100%
+                        display inline-flex
+                        align-items center    
+            .data-row
+                .data-label
+                   //font-weight 500
+                    // padding-left 40px
+                    font-style italic
+                    padding-left 20px
+                    border 1px dotted lightgray
+                    calc-outlet, text-outlet
+                        font-size 1rem
+                        height 100%
+                        display inline-flex
+                        align-items center    
+                .data-value
+                    text-align center
+                    background-color #FFF
+                    padding 5px
+                    background-clip border-box
+                    border 1px dotted lightgray
+                .splitter
+                    /*border-right 1px solid #dbd8d8*/
+            .last-row
+                margin-bottom 10px
+            .total-row
+                .data-label
+                    font-style normal !important
+                    font-weight 500
+                    /*padding-left 0 !important*/
+                    background #e1e1e1
+                    border 1px dotted transparent !important
+                .data-value
+                    /*background-color $color4*/
+                    background-color #e1e1e1
+                    /*color #FFF*/
+                    color black
+                    font-weight 500
+                    border 1px dotted transparent
+            .final-row
+                margin 0    
+                .data-label
+                    font-weight 500
+                    color #000
+            .mt-20
+                margin-top 20px

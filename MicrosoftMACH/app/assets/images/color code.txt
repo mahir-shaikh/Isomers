@@ -1,0 +1,32 @@
+1 box blue 		#0055b0 
+2 box greyish blue  	#44458c
+3 Very dark violet	#3d1071
+4 dark blue 		#010637
+------------------------------------------------------------
+5 Light gray		#d4d4d4	(lines)
+6 Dark grey		#303030 (background color for box)
+7 Dark grayish red.	#aaa9a9 (Use in Metris lable)
+8 Very dark gray	#333333 (Use in Metris)
+9 Light grayish blue.	#f4f5f6 (background color for graph chat)
+10 Very dark gray. 	#4a4a4a (titles)
+-------------------------------------------------------
+11 sky blue		#88CDFE	(blue line)
+12 box greyish blue	#bebedb (greyish blue line)	
+13 Very light violet	#d3bef0	(violet line)
+14 Light blue		#6d77da	(Light blue line) 
+-------------------------------------------------------
+15 dark blue 3 color	#002854 (graph 3 color blue)
+16 dark greyish blue	#1e1e3f (graph 3 color greyish blue)
+17 Very dark violet	#1e013f	(graph 3 color Very dark violet)
+18 black 		#000000	(graph 3 color dark blue)
+-------------------------------------------------------
+19 4 shade of blue	#01458f (graph 4 color blue)
+20 2 shade of blue	#2f77c4y(graph 2 color blue)
+-------------------------------------------------------
+21 Dark cyan		#008272 (green)
+22 Vivid cyan.		#1dae9c	(light green)
+23 dark cyan		#005c51 (3 color of green)
+23 Very dark cyan	#00362f	(dark green)
+
+
+

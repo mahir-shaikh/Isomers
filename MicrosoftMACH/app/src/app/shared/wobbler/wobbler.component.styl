@@ -1,0 +1,193 @@
+@import '../../../../assets/css/colors.styl'
+
+.wobbler-modal
+    overflow auto
+    .button-container
+        padding 0
+        text-align center
+    .wobbler-narrative
+        margin-bottom 40px
+    .btn-primary
+        width 100%
+        text-align left
+        border-radius 10px
+        background $main-color
+        padding 20px
+        margin-bottom 10px
+        color #fff
+        display flex
+        border none
+        box-shadow 7px 7px 15px 0px rgba(0,0,0,0.1)
+        white-space normal
+        cursor pointer
+        transition box-shadow .3s ease-out
+        &:hover
+            box-shadow 7px 7px 15px 0px rgba(0,0,0,0.25)
+        .choice-label
+            padding-right 20px
+            font-weight 500
+            font-size 1.7em
+        .choice-txt
+            flex 1
+        &.highlighted
+            background $highlight-color1
+            box-shadow 7px 7px 15px 0px rgba(0,0,0,0.5)
+        &.disabled
+            box-shadow none
+            cursor default
+    .event-decide
+        outline none
+        height 40px
+        text-transform uppercase
+        text-align center
+        width 130px
+        border-radius 40px
+        background $highlight-color2
+        border 2px solid $highlight-color2
+        color #fff
+        letter-spacing 1px
+        text-shadow 0
+        cursor pointer
+        margin-top 1em
+        transition all 0.25s ease
+        float right
+        position relative
+        box-shadow initial
+        display block
+        padding 0
+    .wobbler-feedback
+        background #fff
+        padding 20px 0
+        margin-top 20px
+        .wobbler-fb-title
+            margin-bottom 1em
+            font-weight 500
+            color $gray4
+        .wobbler-feedback-txt
+            color $main-color
+            text-align left
+            display inherit
+            margin-bottom 20px
+        .btn-close
+            margin 0 auto
+            display inherit
+            position relative
+            text-align center
+            background none
+            white-space initial
+            cursor pointer
+            svg
+                .close-base
+                    stroke-dasharray 10
+                    animation closeAnima 5s ease-out infinite
+                .close-ico
+                    transition transform .3s ease-in
+                    transform-origin 50% 50%
+            .close-btn-txt
+                color $gray3
+            &:hover
+                .close-ico
+                    transform scale(1.2)
+
+.highlighted
+    background-color #FF0000
+.disabled
+    background-color #999999
+    cursor default
+.disabledText
+    color $color1    
+
+.modal-content
+    border none
+    border-radius 0
+    .modal-header
+        display block
+        border none
+        margin 0
+        padding 5px 20px
+        background #BFBFBF !important
+        .close-btn-container
+            padding 5px 9px
+            position absolute
+            top -18px
+            right -18px
+            background #B8B8B8
+            border 3px solid #000
+            border-radius 50%
+            cursor pointer
+        h4
+            color $color1
+    .modal-body
+        margin 0
+        padding 25px 30px 50px 30px
+        .modal-footer
+            margin 0
+    .modal-footer
+        margin 0 25px
+        padding 20px 0
+        .yes-button
+            border-radius 0
+            color #FFF
+            cursor pointer
+            background #01426A !important
+            &:hover
+                background #3271B4 !important
+    .wobbler-choice
+        button
+            border-radius 0
+            background #01426A !important 
+            &.disabled
+                background #01426A !important  
+            &.highlighted
+                background #3271B4 !important             
+    .event-decide
+        background #01426A !important
+        border #01426A !important
+        border-radius 0
+        &:hover
+            background #3271B4 !important
+        &.disabled
+            background grey !important
+            border grey !important
+    .wobbler-feedback-txt
+        color #01426A !important
+
+.modal-backdrop.fade.in.show
+    opacity 0.8 !important
+    
+
+[data-toggle=buttons]>.btn input[type=radio]
+    position relative
+    
+input[type='radio']
+    -webkit-appearance none
+    width 20px
+    height 20px
+    border 1px solid darkgray
+    border-radius 50%
+    outline none
+    top 3px
+    left -5px
+
+input[type='radio']:hover
+    box-shadow 0 0 5px 0px $light-color1 inset
+
+input[type='radio']:before
+    content ''
+    display block
+    width 60%
+    height 60%
+    margin  20% auto    
+    border-radius 50%    
+
+input[type='radio']:checked:before
+    background $color1
+    
+.wobbler-alert
+    height 152px
+    top 265px
+    padding 0 0 200px 0
+    text-outlet
+        text-align center
+    .event-decide
+        right 310px

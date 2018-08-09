@@ -1,0 +1,117 @@
+@import '../../../../assets/css/colors.styl'
+
+:host
+	overflow auto
+.talentdevelopment-wrapper
+	.consumer-data, .commercial-data
+		.consumer-segment-title
+			color #fff
+			background $color
+			padding 10px 25px
+			font-size 1.25rem
+			margin 0 10px
+		.talentdevelopment-container
+			.talentdevelopment-left-section, .talentdevelopment-right-section
+				background #fff
+				margin-top 5px
+			.talentdevelopment-right-section
+				margin-left 10px
+				padding 10px 15px
+				.report-analysis-holder
+					margin-top 15px
+				.talentdevelopment-report-title
+					padding 0 10px
+					font-size 1.125rem
+			.talentdevelopment-left-section
+				height calc(100% - 5px)
+				padding 15px 25px 15px 15px
+				.talentdevelopment-title
+					margin-left 10px
+					font-size 1.125rem
+				.talentdevelopment-interactive-panel
+					margin-left -3px
+					.data-row
+						padding 5px 0
+						.talentdevelopment-output-value
+							text-align center
+							// background #f5f5f5
+							font-style italic
+						.talentdevelopment-label
+							font-size 0.875rem
+							font-style italic
+							color #303030
+							padding-left 40px
+						.talentdevelopment-label-primary
+							display flex
+							align-items center
+							font-size 1rem
+							calc-outlet,text-outlet
+								font-size 1rem
+								color $color3
+	.consumer-data
+		.talentdevelopment-container
+			margin 0 10px 10px 10px
+
+	.commercial-data
+		.commercial-segment-title
+			padding 10px 25px
+			font-size 1.25rem
+			color #fff
+			background #0055b0
+			text-transform uppercase
+			margin 0 10px
+		.talentdevelopment-container
+			margin 0 10px 5px 10px
+			.talentdevelopment-left-section, .talentdevelopment-right-section
+				background #fff
+				margin-top 5px
+			.talentdevelopment-right-section
+				padding 15px
+				margin-left 10px
+				height calc(100% - 10px)
+				.report-analysis-holder
+					margin-top 15px
+				.talentdevelopment-report-title
+					padding 0 10px
+					font-size 1.125rem
+			.talentdevelopment-left-section
+				padding 15px 25px 15px 15px
+				height calc(100% - 10px)
+				.talentdevelopment-title
+					margin-left 10px
+				.talentdevelopment-interactive-panel
+					margin-left -3px
+					.data-row
+						padding 5px 0
+						.talentdevelopment-output-value
+							text-align center
+							// background #f5f5f5
+							font-style italic
+						.talentdevelopment-label
+							font-size 0.875rem
+							font-style italic
+							color #303030
+						.talentdevelopment-label-primary
+							display flex
+							align-items center
+							font-size 1rem
+							calc-outlet,text-outlet
+								font-size 1rem
+								color #0055b0
+
+@media screen and (max-width: 768px)
+	.talentdevelopment-wrapper
+		.consumer-data, .commercial-data
+			.talentdevelopment-container
+				.talentdevelopment-right-section
+					margin-left 0
+
+		.consumer-data
+			.talentdevelopment-container
+				.talentdevelopment-right-section
+					margin-top 10px
+
+@media screen and (max-width: 1200px)
+	.talentdevelopment-wrapper
+		.talentdevelopment-interactive-panel
+			padding-top 10px

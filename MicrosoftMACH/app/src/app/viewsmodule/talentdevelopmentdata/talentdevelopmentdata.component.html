@@ -1,0 +1,229 @@
+<div class="talentdevelopment-wrapper">
+	<div class="consumer-data animated slideInUp" *ngIf="!type">
+		<div class="consumer-segment-title">
+			<text-outlet key="ConsumerTab2MainHeading"></text-outlet>
+		</div>
+		<div class="talentdevelopment-container row colorThree">
+			<div class="col-md-6 col-sm-12 p-0">
+				<div class="talentdevelopment-left-section">
+					<div class="talentdevelopment-title">
+						<text-outlet key="ConsumerTab2MainHeading"></text-outlet>
+					</div>
+					<div class="talentdevelopment-interactive-panel">
+						<!--<div class="data-row row">
+							<div class="talentdevelopment-label-primary col-sm col-lg-12 col-xl">
+								<my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton31"></my-tooltip>
+								<!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D60"></my-tooltip> 
+								<calc-outlet ref="tlOutputConsumerLabelSkill1"></calc-outlet>
+							</div>
+							<div class="talentdevelopment-input-button col-sm">
+								<calc-option [items]="buttonItem" ref="tlInputConsumerSkill1"></calc-option>
+							</div>
+						</div>-->
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<span>
+								<text-outlet key="TotalInvestment"></text-outlet>
+							</span>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputConsumerSkill1TotalInvest"></calc-outlet>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="FtesRequired"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputConsumerSkill1FTEs"></calc-outlet>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="BudgetRequired"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputConsumerSkill1Exp" format="$0,0"></calc-outlet>
+							</div>
+						</div>
+						<hr>
+						<!--<div class="data-row row">
+							<div class="talentdevelopment-label-primary col-sm col-lg-12 col-xl">
+								<my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton32"></my-tooltip>
+								<!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D61"></my-tooltip> 
+								<calc-outlet ref="tlOutputConsumerLabelSkill2"></calc-outlet>
+							</div>
+							<div class="talentdevelopment-input-button col-sm">
+								<calc-option [items]="buttonItem" ref="tlInputConsumerSkill2"></calc-option>
+							</div>
+						</div>-->
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="TotalInvestment"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col">
+								<calc-outlet ref="tlOutputConsumerSkill2TotalInvest"></calc-outlet>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="FtesRequired"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputConsumerSkill2FTEs"></calc-outlet>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="BudgetRequired"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputConsumerSkill2Exp" format="$0,0"></calc-outlet>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12 p-0">
+			<div class="talentdevelopment-right-section">
+				<div class="talentdevelopment-report-title">
+					<text-outlet key="TalentSkillAnalysis"></text-outlet>
+				</div>
+				<div class="report-analysis-holder col-sm-12">
+					<basicbar rangeRef="tlOutputGraphsConsumerSkill2Closing, tlOutputGraphsConsumerSkill1Closing, tlOutputGraphsConsumerSkill2Opening, tlOutputGraphsConsumerSkill1Opening, tlOutputGraphsConsumerSkill2IndAvg, tlOutputGraphsConsumerSkill1IndAvg" seriesLabels="tlOutputGraphsLabelConsumerSkillsThisRound, tlOutputGraphsLabelConsumerSkillsLastRound, tlOutputGraphsLabelConsumerSkillsIndAvg" categoryLabels="tlOutputGraphsLabelConsumerSkill2, tlOutputGraphsLabelConsumerSkill1" [numberFormat]="'0,0'" height="500"></basicbar>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="commercial-data animated slideInUp" *ngIf="type">
+		<div class="commercial-segment-title">
+			<text-outlet key="CommercialTab2MainHeading"></text-outlet>
+		</div>
+		<div class="talentdevelopment-container row colorOne">
+			<div class="col-md-6 col-sm-12 p-0">
+				<div class="talentdevelopment-left-section">
+					<div class="talentdevelopment-title">
+						<text-outlet key="CommercialTab2MainHeading"></text-outlet>
+					</div>
+					<div class="talentdevelopment-interactive-panel">
+						<div class="data-row row">
+							<div class="talentdevelopment-label-primary col-sm col-lg-12 col-xl">
+								<my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton31"></my-tooltip>
+								<!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D60"></my-tooltip> -->
+								<calc-outlet ref="tlOutputCommercialLabelSkill1"></calc-outlet>
+							</div>
+							<div class="talentdevelopment-input-button col-sm">
+								<calc-option [items]="buttonItem" ref="tlInputOpsSkill1"></calc-option>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="TotalInvestment"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputCommercialSkill1TotalInvest"></calc-outlet>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="FtesRequired"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputCommercialSkill1FTEs"></calc-outlet>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="BudgetRequired"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputCommercialSkill1Exp" format="$0,0"></calc-outlet>
+							</div>
+						</div>
+						<hr>
+						<div class="data-row row">
+							<div class="talentdevelopment-label-primary col-sm col-lg-12 col-xl">
+								<my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton32"></my-tooltip>
+								<!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D61"></my-tooltip> -->
+								<calc-outlet ref="tlOutputCommercialLabelSkill2"></calc-outlet>
+							</div>
+							<div class="talentdevelopment-input-button col-sm">
+								<calc-option [items]="buttonItem" ref="tlInputOpsSkill2"></calc-option>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="TotalInvestment"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputCommercialSkill2TotalInvest"></calc-outlet>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="FtesRequired"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputCommercialSkill2FTEs"></calc-outlet>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="BudgetRequired"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputCommercialSkill2Exp" format="$0,0"></calc-outlet>
+							</div>
+						</div>
+						<hr>
+						<div class="data-row row">
+							<div class="talentdevelopment-label-primary col-sm col-lg-12 col-xl">
+								<my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton21"></my-tooltip>
+								<!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D50"></my-tooltip> -->
+								<calc-outlet ref="tlOutputCommercialLabelSkill3"></calc-outlet>
+							</div>
+							<div class="talentdevelopment-input-button col-sm">
+								<calc-option [items]="buttonItem" ref="tlInputOpsSkill3"></calc-option>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="TotalInvestment"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputCommercialSkill3TotalInvest"></calc-outlet>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="FtesRequired"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputCommercialSkill3FTEs"></calc-outlet>
+							</div>
+						</div>
+						<div class="data-row row">
+							<div class="talentdevelopment-label col-sm">
+								<text-outlet key="BudgetRequired"></text-outlet>
+							</div>
+							<div class="talentdevelopment-output-value col-sm">
+								<calc-outlet ref="tlOutputCommercialSkill3Exp" format="$0,0"></calc-outlet>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12 p-0">
+				<div class="talentdevelopment-right-section">
+					<div class="talentdevelopment-report-title">
+						<text-outlet key="TalentSkillAnalysis"></text-outlet>
+					</div>
+					<div class="report-analysis-holder col-sm-12">
+						<basicbar rangeRef="tlOutputGraphsCommercialSkill3Closing, tlOutputGraphsCommercialSkill2Closing, tlOutputGraphsCommercialSkill1Closing, tlOutputGraphsCommercialSkill3Opening, tlOutputGraphsCommercialSkill2Opening, tlOutputGraphsCommercialSkill1Opening, tlOutputGraphsCommercialSkill3IndAvg, tlOutputGraphsCommercialSkill2IndAvg, tlOutputGraphsCommercialSkill1IndAvg" seriesLabels="tlOutputGraphsLabelCommercialSkillsThisRound, tlOutputGraphsLabelCommercialSkillsLastRound, tlOutputGraphsLabelCommercialSkillsIndAvg" categoryLabels="tlOutputGraphsLabelCommercialSkill3, tlOutputGraphsLabelCommercialSkill2, tlOutputGraphsLabelCommercialSkill1" [numberFormat]="'0,0'" height="500"></basicbar>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

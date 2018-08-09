@@ -1,0 +1,318 @@
+<div class="pricingforecasting-wrapper">
+    <div class="consumer-data animated slideInUp" *ngIf="!type">
+        <div class="consumer-segment-container colorThree">
+            <div class="consumer-segment-title">
+                <text-outlet key="CommercialTab1MainHeading"></text-outlet>
+            </div>
+            <div class="consumer-segment-holder row">
+                <div class="pricing-strategy-container col-sm-12 col-md-12 col-lg-12">
+                    <div class="pricing-strategy-title">
+                        <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton29"></my-tooltip>
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D58"></my-tooltip> -->
+                        <span class="pricing-strategy-title-label">
+						<text-outlet key="PricingStrategy"></text-outlet>
+					</span>
+                    </div>
+                    <div class="pricing-strategy-holder">
+                        <div class="data-row row">
+                            <div class="pricing-strategy-label col-sm col-xl-3">
+                                <text-outlet key="ProductivityAndBusiness"></text-outlet>
+                            </div>
+                            <div class="pricing-strategy-button col-sm col-xl">
+                                <calc-option [items]="buttonItem" ref="tlInputConsumerProd1Price"></calc-option>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="data-row row">
+                            <div class="pricing-strategy-label col-sm col-xl-3">
+                                <text-outlet key="PersonalComputing"></text-outlet>
+                            </div>
+                            <div class="pricing-strategy-button col-sm col-xl">
+                                <calc-option [items]="buttonItem" ref="tlInputConsumerProd3Price"></calc-option>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="consumer-forcasting-wrapper row">
+                <!--<div class="col-md-6 col-sm-12 p-0">
+                    <div class="left-section">
+                        <div class="data-row row ">
+                        	<div class="forecasting-title col-sm-12">
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton30"></my-tooltip>
+    	                         <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D59"></my-tooltip> 
+    	                        <span>
+    	                            <text-outlet key="ConsumerForecasting"></text-outlet>
+    	                        </span>
+    	                        <div class="forecasting-title-sub-label col-sm-12">
+    	                            <text-outlet key="NewSubscriptionDevices"></text-outlet>
+    	                        </div>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label-primary col-sm">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <text-outlet key="ProductivityAndBusiness"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-input col-sm-5">
+                                <calc-stepper ref="tlInputConsumerProd1Seg3Share" min="1" max="30" outputMin="1" outputMax="30" step="1" scaler="100" format="0%"></calc-stepper>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label col-sm">
+                                <text-outlet key="LastRound"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-output col-sm-5">
+                                <calc-outlet ref="tlOutputConsumerProd1Seg3ShareOpening" format="0%"></calc-outlet>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label-primary col-sm">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <text-outlet key="PersonalComputing"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-input col-sm-5">
+                                <calc-stepper ref="tlInputConsumerProd3Seg3Share" min="1" max="30" outputMin="1" outputMax="30" step="1" scaler="100" format="0%"></calc-stepper>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label col-sm">
+                                <text-outlet key="LastRound"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-output col-sm-5">
+                                <calc-outlet ref="tlOutputConsumerProd3Seg3ShareOpening" format="0%"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="col-md-6 col-sm-12 p-0">
+                    <div class="right-section">
+                        <div class="data-row row consumer-revene-title">
+                            <text-outlet key="ConsumerRevenue"></text-outlet>
+                            <span class="million-text"><text-outlet key="InMillions"></text-outlet></span>
+                        </div>
+                        <div class="row report-analysis">
+                            <div class="report-analysis-holder col-sm-12">
+                                <stackedcolumn [rangeref]="consumerRangeRef" serieslabels="tlOutputGraphsLabelSeg3NewRev, tlOutputGraphsLabelSeg3OnPremRev, tlOutputGraphsLabelSeg3RenewedRev, tlOutputGraphsLabelSeg3DefRev" categorylabels="tlOutputGraphsLabelCommercialProd1Seg3, tlOutputGraphsLabelConsumerProd3Seg3" numberformat="$0,0" height="300">
+                                </stackedcolumn>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <div class="commercial-data" *ngIf="type">
+        <div class="commercial-segment-container colorTwo animated slideInUp">
+            <div class="commercial-segment-title">
+                <text-outlet key="CommercialTab1MainHeading"></text-outlet>
+            </div>
+            <div class="commercial-segment-holder row">
+                <div class="pricing-strategy-container col-sm-12 col-md-12 col-lg-12">
+                    <div class="pricing-strategy-title">
+                        <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton29"></my-tooltip>
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D58"></my-tooltip> -->
+                        <text-outlet key="PricingStrategy"></text-outlet>
+                    </div>
+                    <div class="pricing-strategy-holder">
+                        <div class="data-row row">
+                            <div class="pricing-strategy-label col-sm col-xl-3">
+                                <text-outlet key="ProductivityAndBusiness"></text-outlet>
+                            </div>
+                            <div class="pricing-strategy-button col-sm col-xl">
+                                <calc-option [items]="buttonItem" ref="tlInputCommercialProd1Price"></calc-option>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="data-row row">
+                            <div class="pricing-strategy-label col-sm col-xl-3">
+                                <text-outlet key="IntelligentCloud"></text-outlet>
+                            </div>
+                            <div class="pricing-strategy-button col-sm col-xl">
+                                <calc-option [items]="buttonItem" ref="tlInputCommercialProd2Price"></calc-option>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="data-row row">
+                            <div class="pricing-strategy-label col-sm col-xl-3">
+                                <text-outlet key="PersonalComputing"></text-outlet>
+                            </div>
+                            <div class="pricing-strategy-button col-sm col-xl">
+                                <calc-option [items]="buttonItem" ref="tlInputCommercialProd3Price"></calc-option>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="enterprise-forecasting-wrapper row">
+                <div class="col-md-6 col-sm-12 p-0">
+                    <div class="left-section">
+                        <div class="row">
+                            <div class="forecasting-title col-sm-12">
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton30"></my-tooltip>
+                                
+                                <text-outlet key="EnterpriseForecasting"></text-outlet>
+                                <div class="sub-title col-sm-12 col-md-12 col-lg-12">
+                                    <text-outlet key="NewSubscriptionDevices"></text-outlet>
+                                </div>
+                            </div>
+                         
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label-primary col-sm">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <text-outlet key="ProductivityAndBusiness"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-input col-sm-5">
+                                <calc-stepper ref="tlInputCommercialProd1Seg1Share" min="1" max="30" outputMin="1" outputMax="30" step="1" scaler="100" format="0%"></calc-stepper>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label col-sm">
+                                <text-outlet key="LastRound"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-output col-sm-5">
+                                <calc-outlet ref="tlOutputCommercialProd1Seg1ShareOpening" format="0%"></calc-outlet>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label-primary col-sm">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <text-outlet key="IntelligentCloud"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-input col-sm-5">
+                                <calc-stepper ref="tlInputCommercialProd2Seg1Share" min="1" max="30" outputMin="1" outputMax="30" step="1" scaler="100" format="0%"></calc-stepper>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label col-sm">
+                                <text-outlet key="LastRound"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-output col-sm-5">
+                                <calc-outlet ref="tlOutputCommercialProd2Seg1ShareOpening" format="0%"></calc-outlet>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label-primary col-sm">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <text-outlet key="PersonalComputing"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-input col-sm-5">
+                                <calc-stepper ref="tlInputCommercialProd3Seg1Share" min="1" max="30" outputMin="1" outputMax="30" step="1" scaler="100" format="0%"></calc-stepper>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label col-sm">
+                                <text-outlet key="LastRound"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-output col-sm-5">
+                                <calc-outlet ref="tlOutputCommercialProd3Seg1ShareOpening" format="0%"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-md-6 col-xl-6 p-0">
+                    <div class="right-section">
+                        <div class="row commercial-revene-title">
+                            <text-outlet key="EnterpriseRevenue"></text-outlet>
+                            <span class="million-text"><text-outlet key="InMillions"></text-outlet></span>
+                        </div>
+                        <div class="report-analysis row">
+
+                            <div class="report-analysis-holder col-sm-12">
+                                <stackedcolumn height="250" [rangeref]="enterpriseRangeRef" serieslabels="tlOutputGraphsLabelSeg1NewRev, tlOutputGraphsLabelSeg1OnPremRev, tlOutputGraphsLabelSeg1RenewedRev, tlOutputGraphsLabelSeg1ServicesRev, tlOutputGraphsLabelSeg1DefRev" categorylabels="tlOutputGraphsLabelCommercialProd1Seg1, tlOutputGraphsLabelCommercialProd2Seg1, tlOutputGraphsLabelConsumerProd3Seg1" numberformat="$0,0">
+                                </stackedcolumn>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!--<div class="smb-forecasting-container row">
+                <div class="col-md-6 col-sm-12 p-0">
+                    <div class="left-section">
+                        <div class="row">
+                        	<div class="forecasting-title col-sm-12">
+    	                        
+    	                        <text-outlet key="SMBForecasting"></text-outlet>
+    	                        <div class="sub-title-smb-forecasting col-sm-12 col-md-12 col-lg-12">
+    	                            <text-outlet key="NewSubscriptionDevices"></text-outlet>
+    	                        </div>
+                            </div>
+                          
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label-primary col-sm">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <text-outlet key="ProductivityAndBusiness"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-input col-sm-5">
+                                <calc-stepper ref="tlInputCommercialProd1Seg2Share" min="1" max="30" outputMin="1" outputMax="30" step="1" scaler="100" format="0%"></calc-stepper>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label col-sm">
+                                <text-outlet key="LastRound"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-output col-sm-5">
+                                <calc-outlet ref="tlOutputCommercialProd1Seg2ShareOpening" format="0%"></calc-outlet>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label-primary col-sm">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <text-outlet key="IntelligentCloud"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-input col-sm-5">
+                                <calc-stepper ref="tlInputCommercialProd2Seg2Share" min="1" max="30" outputMin="1" outputMax="30" step="1" scaler="100" format="0%"></calc-stepper>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label col-sm">
+                                <text-outlet key="LastRound"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-output col-sm-5">
+                                <calc-outlet ref="tlOutputCommercialProd2Seg2ShareOpening" format="0%"></calc-outlet>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label-primary col-sm">
+                                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                                <text-outlet key="PersonalComputing"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-input col-sm-5">
+                                <calc-stepper ref="tlInputCommercialProd3Seg2Share" min="1" max="30" outputMin="1" outputMax="30" step="1" scaler="100" format="0%"></calc-stepper>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="forecasting-interative-panel-label col-sm">
+                                <text-outlet key="LastRound"></text-outlet>
+                            </div>
+                            <div class="forecasting-interactive-panel-output col-sm-5">
+                                <calc-outlet ref="tlOutputCommercialProd3Seg2ShareOpening" format="0%"></calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 p-0">
+                    <div class="right-section">
+                        <div class="commercial-revene-title row">
+                            <text-outlet key="SMB"></text-outlet>
+                            <span class="million-text"><text-outlet key="InMillions"></text-outlet></span>
+                        </div>
+                        <div class="report-analysis row">
+                            <div class="report-analysis-holder col-sm-12">
+                                <stackedcolumn height="250" [rangeref]="smbRangeRef" serieslabels="tlOutputGraphsLabelSeg2NewRev, tlOutputGraphsLabelSeg2OnPremRev, tlOutputGraphsLabelSeg2RenewedRev, tlOutputGraphsLabelSeg2ServicesRev, tlOutputGraphsLabelSeg2DefRev" categorylabels="tlOutputGraphsLabelCommercialProd1Seg2, tlOutputGraphsLabelCommercialProd2Seg2, tlOutputGraphsLabelCommercialProd3Seg2" numberformat="$0,0">
+                                </stackedcolumn>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>

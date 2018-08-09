@@ -1,0 +1,98 @@
+<div class="erplatformdata-wrapper colorOne isErActive animated slideInUp">
+    <div class="main-heading-text-container row">
+        <div class="main-heading-text col-sm-12">
+            <text-outlet key="ErPlatformMainHeading"></text-outlet>
+        </div>
+    </div>
+    <div class="row">
+        <div class="data-wrapper col-sm-12 col-md-6 p-0">
+            <div class="data-container">
+                <div class="sub-heading-text-container row">
+                    <div class="sub-heading-text col-sm-12">
+                        <text-outlet key="ErPlatformDataHeading"></text-outlet>
+                    </div>
+                </div>
+                <div class="erplatform-data-container col-sm-12">
+                    <!--1st row-->
+                    <div class="row erplatform-data-row">
+                        <div class="row col-sm-12 erplatform-primary-row">
+                            <div class="col-sm col-lg-12 col-xl form-label">
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton1" useAsInnerHtml="true"></my-tooltip>
+                                <text-outlet key="ErLabelPlatform1"></text-outlet>
+                            </div>
+                            <div class="col-sm data-value"><calc-option [items]="itemsArray" ref="tlInputEGSecurity"></calc-option></div>
+                        </div>
+                        <div class="row col-sm-12 erplatform-secondary-row">
+                            <div class="col-sm form-label "><text-outlet key="TotalInvestment"></text-outlet></div>
+                            <div class="col-sm data-value"><calc-outlet ref="tlOutputEGSecurityClosing"></calc-outlet></div>                
+                        </div>
+                        <div class="row col-sm-12 erplatform-secondary-row">
+                            <div class="col-sm form-label "><text-outlet key="EtusRequired"></text-outlet></div>
+                            <div class="col-sm data-value"><calc-outlet ref="tlOutputEGSecurityETUs"></calc-outlet></div>                
+                        </div>
+                    </div>
+
+                    <div class="line-break"></div>
+                    <!--2nd row-->
+                    <div class="row erplatform-data-row">
+                        <div class="row col-sm-12 erplatform-primary-row">
+                            <div class="col-sm col-lg-12 col-xl form-label ">
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton2"></my-tooltip>
+                                <text-outlet key="ErLabelPlatform2"></text-outlet>
+                            </div>
+                            <div class="col-sm data-value"><calc-option [items]="itemsArray" ref="tlInputEGInteroperability"></calc-option></div>
+                        </div>
+                        <div class="row col-sm-12 erplatform-secondary-row">
+                            <div class="col-sm form-label "><text-outlet key="TotalInvestment"></text-outlet></div>
+                            <div class="col-sm data-value"><calc-outlet ref="tlOutputEGInteroperabilityTotalInvest"></calc-outlet></div>                
+                        </div>
+                        <div class="row col-sm-12 erplatform-secondary-row">
+                            <div class="col-sm form-label "><text-outlet key="EtusRequired"></text-outlet></div>
+                            <div class="col-sm data-value"><calc-outlet ref="tlOutputEGInteroperabilityETUs"></calc-outlet></div>                
+                        </div>
+                    </div>
+
+                    <div class="line-break"></div>
+                    <!--3rd row-->
+                    <div class="row erplatform-data-row">
+                        <div class="row col-sm-12 erplatform-primary-row">
+                            <div class="col-sm col-lg-12 col-xl form-label ">
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton3"></my-tooltip>
+                                <text-outlet key="ErLabelPlatform3"></text-outlet>
+                            </div>
+                            <div class="col-sm data-value"><calc-option [items]="itemsArray" ref="tlInputEGScalability"></calc-option></div>
+                        </div>
+                        <div class="row col-sm-12 erplatform-secondary-row">
+                            <div class="col-sm form-label "><text-outlet key="TotalInvestment"></text-outlet></div>
+                            <div class="col-sm data-value"><calc-outlet ref="tlOutputEGScalabilityClosing"></calc-outlet></div>                
+                        </div>
+                        <div class="row col-sm-12 erplatform-secondary-row">
+                            <div class="col-sm form-label"><text-outlet key="EtusRequired"></text-outlet></div>
+                            <div class="col-sm data-value"><calc-outlet ref="tlOutputEGScalabilityETUs"></calc-outlet></div>                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chart-wrapper col-sm-12 col-md-6 p-0">
+            <div class="chart-container">
+                <div class="sub-heading-text-container row">
+                    <div class="sub-heading-text col-sm-12">
+                        <text-outlet key="ErPlatformChartHeading"></text-outlet>
+                    </div>
+                </div>
+                <div class="erplatform-chart-container">
+                    <!--Chart-->
+                    <basicbar
+                        rangeRef="tlOutputGraphsSecurityClosing, tlOutputGraphsInteroperabilityClosing, tlOutputGraphsScalabilityClosing, tlOutputGraphsSecurityOpening, tlOutputGraphsInteroperabilityOpening, tlOutputGraphsScalabilityOpening, tlOutputGraphsSecurityIndAvg, tlOutputGraphsInteroperabilityIndAvg, tlOutputGraphsScalabilityIndAvg"
+                        categoryLabels="tlOutputGraphsLabelSecurity, tlOutputGraphsLabelInteroperability, tlOutputGraphsLabelScalability"
+                        seriesLabels="tlOutputGraphsLabelEGPlatformThisRound, tlOutputGraphsLabelEGPlatformLastRound, tlOutputGraphsLabelEGPlatformIndAvg"
+                        numberFormat="0,0"
+                        [chartOptions]="customChartOption"
+                        height="480"
+                    ></basicbar>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

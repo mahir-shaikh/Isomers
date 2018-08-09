@@ -1,0 +1,67 @@
+@import '../../../../assets/css/colors.styl'
+
+:host
+	overflow auto
+.ops-infrastructure-container
+	.ops-infrastructure-title 
+		color white
+		padding 10px 25px
+		background #0055b0
+		font-size 1.25rem
+		text-transform uppercase
+		margin 0 10px
+	.ops-infrastructure-holder
+		margin 5px 10px 0 10px
+		.ops-instrastructure-right-section-holder
+			margin-left 10px
+		.ops-instrastructure-left-section-holder, .ops-instrastructure-right-section-holder
+			background #fff
+			padding 0 15px
+			.ops-data-title
+				padding 25px 10px 5px
+				text-outlet
+					font-size 1.125rem
+			.infrastructure-header
+				justify-content space-between
+			.ops-data-details
+				.data-row
+					justify-content space-between
+				.label-style-italic
+					font-style italic
+					font-size 0.875rem
+					color #303030
+				.ops-label-header
+					color #025AA5
+					font-size 1rem
+					display flex
+					align-items center
+					margin-left -5px
+
+				.ops-label
+					padding 5px 0 0 35px
+				.ops-input
+					padding 10px 0
+				.ops-output
+					padding 5px 0
+					font-style italic
+				.ops-input, .ops-output
+					text-align center
+		
+		.ops-instrastructure-left-section-holder
+			height calc(100% - 10px)
+			.label-align-center
+				text-align center
+
+		.ops-instrastructure-right-section-holder
+			height calc(100% - 10px)
+			.ops-data-analysis-report
+				margin 10px
+				padding-bottom 15px
+
+@media screen and (max-width: 768px)
+	.ops-infrastructure-container
+		.ops-infrastructure-holder
+			.ops-instrastructure-left-section-holder
+				padding-bottom 25px
+			.ops-instrastructure-right-section-holder
+				margin-left 0

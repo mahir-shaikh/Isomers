@@ -1,0 +1,102 @@
+.intro-container
+    height 100vh
+    position relative
+    .intro-row
+        align-items center
+        justify-content center
+        height 100%
+        color #FFF
+        .logo-simulation-container
+            position relative
+            height 100%
+            background-image url("../../../../assets/images/intro_1.jpg")
+            background-size cover
+            padding-right 50px
+            .logo-simulation-info
+                position relative
+                top 47%
+                transform translateY(-47%)
+                text-align right
+                .logo-container
+                    // background-image url("../../../../assets/images/Microsoft_white.png")
+                    // background-repeat no-repeat
+                    // background-size contain
+                    margin-left auto
+                    margin-bottom 50px
+                    .logo
+                        height 75px
+                        @media screen and (max-width 768px)
+                            height 70px
+                .simulation-heading
+                    margin-left auto
+                    calc-outlet,text-outlet
+                        font-size 4rem
+                        line-height 4rem
+                        color #FFF
+                    
+        .intro-info
+            padding-left 50px
+            .label-image
+                display inline-block
+                vertical-align bottom
+                background-color #0053AB
+                width 50px
+                height 50px
+                .icon
+                    height 50px
+                    padding 5px
+            .info
+                calc-input
+                    display inline-block
+                    width calc(100% - 50px)
+                    max-height 50px
+            .year-info
+                padding 20px 0
+                text-align center
+                calc-outlet
+                    font-size 2rem
+            .team-number-info
+                padding 0
+                padding-bottom 20px
+                .team-number-icon
+                    // height 40px
+            .team-name-info
+                padding 0
+            .button-container
+                padding 20px 0
+                text-align center
+                .next-button
+                    padding 15px 0
+                    text-align center
+                    border-radius 0
+                    background-color #0053AB
+                    border-color #164274
+                    width 100%
+                    text-transform uppercase
+                    word-spacing 5px
+                    cursor pointer
+                    calc-outlet
+                        font-size 1.5rem
+    .reset-btn-container
+        position absolute
+        right 0
+        top 0
+        .reset-btn
+            margin 10px
+            cursor pointer
+            
+.reset-modal
+    .button-container
+        padding 0 15px 10px
+        text-align center
+        .btn
+            cursor pointer
+            border-radius 0
+            calc-outlet
+                color #FFF
+        .yes-button
+            float left
+        .no-button
+            float right
+        &:after
+            clear both

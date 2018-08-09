@@ -1,0 +1,302 @@
+<div class="salesservice-wrapper">
+  <div class="consumer-data colorThree animated slideInUp" *ngIf="!type">
+    <div class="data-container">
+        <div class="page-heading">
+            <text-outlet key="ConsumerTab3MainHeading"></text-outlet>
+        </div>
+        <div class="data-content-container">
+            <div class="page-sub-heading-container row">
+                <div class="page-sub-heading col-12">
+                    <text-outlet key="SalesServicesStrategy"></text-outlet>
+                </div>
+            </div>
+            <!--1st row-->
+            <div class="all-tooltip-container row">
+                <div class="tooltip-container col-1">
+                </div>
+                <div class="tooltip-first-container tooltip-container adjust-text col-sm">
+                    <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton33">
+                    <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D62"> -->
+                    </my-tooltip>
+                    <calc-outlet ref="tlOutputConsumerLabelResource1"></calc-outlet>
+                </div>
+                <div class="tooltip-second-container tooltip-container adjust-text col-sm">
+                    <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton34">
+                    <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D63"> -->
+                    </my-tooltip>
+                    <calc-outlet ref="tlOutputConsumerLabelResource2"></calc-outlet>
+                </div>
+                <div class="tooltip-third-container tooltip-container adjust-text col-sm">
+                    <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton35">
+                    <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D64">--> 
+                    </my-tooltip>
+                    <calc-outlet ref="tlOutputConsumerLabelResource3"></calc-outlet>
+                </div>
+            </div>
+            <!--2nd row-->
+            <div class="chart row">
+                <div class="basic-column-chart col-12">
+                    <basiccolumn
+                    rangeRef="tlOutputGraphsConsumerResource1Opening,tlOutputGraphsConsumerResource2Opening,tlOutputGraphsConsumerResource3Opening,tlOutputGraphsConsumerResource1Closing,tlOutputGraphsConsumerResource2Closing,tlOutputGraphsConsumerResource3Closing,tlOutputGraphsConsumerResource1IndAvg,tlOutputGraphsConsumerResource2IndAvg,tlOutputGraphsConsumerResource3IndAvg"
+                    seriesLabels="tlOutputGraphsLabelConsumerResourcesLastRound,tlOutputGraphsLabelConsumerResourcesThisRound,tlOutputGraphsLabelConsumerResourcesIndAvg"
+                    categoryLabels="tlOutputGraphsLabelConsumerResource1,tlOutputGraphsLabelConsumerResource2,tlOutputGraphsLabelConsumerResource3"
+                    height=250
+                    chartOptions='{"chart":{"marginTop" : "35"},"xAxis":{"tickWidth":0,"lineWidth":0,"labels":{"enabled":false}}}   '
+                    numberFormat='0,0'
+                    >
+                    </basiccolumn>
+                </div>
+            </div>
+            <!--3rd row-->
+            <div class="last-round-container">
+                <div class="stepper-val-container row">
+                    <div class="data-row-col col-1">
+                        <div class="data-label">
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-value"><calc-stepper ref="tlInputConsumerDirectSalesFTEs" min="0" max="500" outputMin="0" outputMax="500" step="5" format="0"></calc-stepper></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-value"><calc-stepper ref="tlInputConsumerInsideSalesFTEs" min="0" max="500" outputMin="0" outputMax="500" step="5" format="0"></calc-stepper></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-value"><calc-stepper ref="tlInputConsumerServicesFTEs" min="0" max="500" outputMin="0" outputMax="500" step="5" format="0"></calc-stepper></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-val-container row">
+                    <div class="data-row-col col-1">
+                        <div class="data-label">
+                            <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-label"><calc-outlet ref="tlOutputConsumerResource1Opening"></calc-outlet></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-label"><calc-outlet ref="tlOutputConsumerResource2Opening"></calc-outlet></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-label"><calc-outlet ref="tlOutputConsumerResource3Opening"></calc-outlet></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="commercial-data colorTwo animated slideInUp" *ngIf="type">
+    <div class="data-container">
+        <div class="page-heading">
+            <text-outlet key="CommercialTab3MainHeading"></text-outlet>
+        </div>
+        <div class="data-content-container">
+            <div class="page-sub-heading-container row">
+                <div class="page-sub-heading col-12">
+                    <text-outlet key="Enterpriseservices"></text-outlet>
+                </div>
+            </div>
+            <!--1st row-->
+            <div class="all-tooltip-container row">
+                <div class="tooltip-container col-1">
+                </div>
+                <div class="tooltip-first-container tooltip-container adjust-text col-sm">
+                    <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton22">
+                    <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D51"> -->
+                    </my-tooltip>
+                    <calc-outlet ref="tlOutputCommercialLabelResource1"></calc-outlet>
+                </div>
+                <div class="tooltip-second-container tooltip-container adjust-text col-sm">
+                    <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton23">
+                    <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D52"> -->
+                    </my-tooltip>
+                    <calc-outlet ref="tlOutputCommercialLabelResource2"></calc-outlet>
+                </div>
+                <div class="tooltip-third-container tooltip-container adjust-text col-sm">
+                    <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton24">
+                    <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D53"> -->
+                    </my-tooltip>
+                    <calc-outlet ref="tlOutputCommercialLabelResource3"></calc-outlet>
+                </div>
+                <div class="tooltip-first-container tooltip-container adjust-text col-sm">
+                    <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton41">
+                    <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D51"> -->
+                    </my-tooltip>
+                    <calc-outlet ref="tlOutputCommercialLabelResource4"></calc-outlet>
+                </div>
+            </div>
+            <!--2nd row-->
+            <div class="chart row">
+                <div class="basic-column-chart col-12">
+                    <basiccolumn
+                    rangeRef="tlOutputGraphsCommercialResource1Opening,tlOutputGraphsCommercialResource2Opening,tlOutputGraphsCommercialResource3Opening,tlOutputGraphsCommercialResource4Opening,tlOutputGraphsCommercialResource1Closing,tlOutputGraphsCommercialResource2Closing,tlOutputGraphsCommercialResource3Closing,tlOutputGraphsCommercialResource4Closing,tlOutputGraphsCommercialResource1IndAvg,tlOutputGraphsCommercialResource2IndAvg,tlOutputGraphsCommercialResource3IndAvg,tlOutputGraphsCommercialResource4IndAvg"
+                    seriesLabels="tlOutputGraphsLabelCommercialResourcesLastRound,tlOutputGraphsLabelCommercialResourcesThisRound,tlOutputGraphsLabelCommercialResourcesIndAvg"
+                    categoryLabels="tlOutputGraphsLabelCommercialResource1,tlOutputGraphsLabelCommercialResource2,tlOutputGraphsLabelCommercialResource3,tlOutputGraphsLabelCommercialResource3"
+                    height=250
+                    chartOptions='{"chart":{"marginTop" : "35"},"xAxis":{"tickWidth":0,"lineWidth":0,"labels":{"enabled":false}}}'
+                    numberFormat='0,0'
+                    >
+                    </basiccolumn>
+                </div>
+            </div>
+            <!--3rd row-->
+            <div class="last-round-container">
+                <div class="stepper-val-container row">
+                    <div class="data-row-col col-1">
+                        <div class="data-label">
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-value"><calc-stepper ref="tlInputCommercialATUFTEs" min="0" max="500" outputMin="0" outputMax="500" step="5" format="0"></calc-stepper></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-value"><calc-stepper ref="tlInputCommercialSTUFTEs" min="0" max="500" outputMin="0" outputMax="500" step="5" format="0"></calc-stepper></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-value"><calc-stepper ref="tlInputCommercialCSUFTEs" min="0" max="500" outputMin="0" outputMax="500" step="5" format="0"></calc-stepper></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-value"><calc-stepper ref="tlInputCommercialServicesFTEs" min="0" max="500" outputMin="0" outputMax="500" step="5" format="0"></calc-stepper></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-val-container row">
+                    <div class="data-row-col col-1">
+                        <div class="data-label">
+                            <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-label"><calc-outlet ref="tlOutputCommercialResource1Opening"></calc-outlet></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-label"><calc-outlet ref="tlOutputCommercialResource2Opening"></calc-outlet></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-label"><calc-outlet ref="tlOutputCommercialResource3Opening"></calc-outlet></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-label"><calc-outlet ref="tlOutputCommercialResource4Opening"></calc-outlet></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="data-content-container">
+            <div class="page-sub-heading-container row">
+                <div class="page-sub-heading col-12">
+                    <text-outlet key="SMCServices"></text-outlet>
+                </div>
+            </div>
+            <!--1st row-->
+            <div class="all-tooltip-container row">
+                <div class="tooltip-container col-1">
+                </div>
+                <div class="tooltip-first-container tooltip-container adjust-text col-sm">
+                    <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton40">
+                    <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D51"> -->
+                    </my-tooltip>
+                    <calc-outlet ref="tlOutputCommercialLabelResource5"></calc-outlet>
+                </div>
+                <div class="tooltip-second-container tooltip-container adjust-text col-sm">
+                    <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton42">
+                    <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D52"> -->
+                    </my-tooltip>
+                    <calc-outlet ref="tlOutputCommercialLabelResource6"></calc-outlet>
+                </div>
+                <div class="tooltip-third-container tooltip-container adjust-text col-sm">
+                    <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton43">
+                    <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D53"> -->
+                    </my-tooltip>
+                    <calc-outlet ref="tlOutputCommercialLabelResource7"></calc-outlet>
+                </div>
+            </div>
+            <!--2nd row-->
+            <div class="chart row">
+                <div class="basic-column-chart col-12">
+                    <basiccolumn
+                    rangeRef="tlOutputCommercialResource5Opening,tlOutputGraphsCommercialResource6Opening,tlOutputGraphsCommercialResource7Opening,tlOutputGraphsCommercialResource5Closing,tlOutputGraphsCommercialResource6Closing,tlOutputGraphsCommercialResource7Closing,tlOutputGraphsCommercialResource5IndAvg,tlOutputGraphsCommercialResource6IndAvg,tlOutputGraphsCommercialResource7IndAvg"
+                    seriesLabels="tlOutputGraphsLabelCommercialResourcesLastRound,tlOutputGraphsLabelCommercialResourcesThisRound,tlOutputGraphsLabelCommercialResourcesIndAvg"
+                    categoryLabels="tlOutputGraphsLabelCommercialResource1,tlOutputGraphsLabelCommercialResource2,tlOutputGraphsLabelCommercialResource3"
+                    height=250
+                    chartOptions='{"chart":{"marginTop" : "35"},"xAxis":{"tickWidth":0,"lineWidth":0,"labels":{"enabled":false}}}'
+                    numberFormat='0,0'
+                    >
+                    </basiccolumn>
+                </div>
+            </div>
+            <!--3rd row-->
+            <div class="last-round-container">
+                <div class="stepper-val-container row">
+                    <div class="data-row-col col-1">
+                        <div class="data-label">
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-value"><calc-stepper ref="tlInputCommercialGlobalDemandCenterFTEs" min="0" max="500" outputMin="0" outputMax="500" step="5" format="0"></calc-stepper></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-value"><calc-stepper ref="tlInputCommercialInsideSalesFTEs" min="0" max="500" outputMin="0" outputMax="500" step="5" format="0"></calc-stepper></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-value"><calc-stepper ref="tlInputCommercialFieldSalesFTEs" min="0" max="500" outputMin="0" outputMax="500" step="5" format="0"></calc-stepper></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-val-container row">
+                    <div class="data-row-col col-1">
+                        <div class="data-label">
+                            <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-label"><calc-outlet ref="tlOutputCommercialResource5Opening"></calc-outlet></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-label"><calc-outlet ref="tlOutputCommercialResource6Opening"></calc-outlet></span>
+                        </div>
+                    </div>
+                    <div class="data-row-col col-sm">
+                        <div class="data-val adjust-text">
+                            <span class="data-label"><calc-outlet ref="tlOutputCommercialResource7Opening"></calc-outlet></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,201 @@
+@import '../../../../assets/css/colors.styl'
+
+:host
+    overflow auto
+.pricingforecasting-wrapper
+    .consumer-data
+        .consumer-segment-container
+            .consumer-segment-title
+                padding 10px 25px
+                color #fff
+                background $color3
+                font-size 1.25rem
+                text-transform uppercase
+                margin 0 10px
+            .consumer-segment-holder
+                margin 5px 10px 0 10px
+                .pricing-strategy-container
+                    background white
+                .pricing-strategy-container
+                    padding 10px 25px
+                    .pricing-strategy-title
+                        padding 15px 0 0 0
+                        font-size 1.125rem
+                    .pricing-strategy-holder
+                        margin 0 -15px
+                        padding 10px 0
+                        .pricing-strategy-button
+                            text-align right
+                        .pricing-strategy-label
+                            color $color3
+                            font-size 1rem
+                            display flex
+                            align-items center
+                            white-space nowrap
+            .consumer-forcasting-wrapper
+                margin 10px 10px 0 10px
+                padding-bottom 10px
+                .left-section, .right-section
+                    background #fff
+                    padding 10px 15px
+                .right-section
+                    margin-left 10px
+                    padding 10px
+                    height calc(100% - 0px)
+                    .consumer-revene-title
+                        padding 10px 15px 10px 12px
+                        font-size 1.125rem
+                    .report-analysis
+                        padding 10px 15px
+                        .report-analysis-holder
+                            padding 0px
+
+
+                .left-section
+                    height calc(100% - 0px)
+                    .data-row
+                        padding 5px 0
+                        margin 0px -5px
+                        .forecasting-interactive-panel-input 
+                            text-align right
+                        .forecasting-interactive-panel-output
+                            text-align right
+                            padding-right 60px
+                        .forecasting-interative-panel-label
+                            font-style italic
+                            font-size 0.875rem
+                            color #303030
+                            padding-left 35px
+                        .forecasting-interative-panel-label-primary
+                            font-size 1rem
+                            color $color3
+                            display flex
+                            align-items center
+                            .icon-circle
+                                font-size 10px
+                                margin-right 10px
+                                color #fff
+                .forecasting-title
+                    font-size 1.125rem
+                    padding 10px 0 0 15px 
+                    .forecasting-title-sub-label
+                        font-size 0.75rem
+                        margin-left 15px
+                        font-style italic
+
+    .commercial-data
+        .commercial-segment-container
+            .commercial-segment-title
+                color #fff
+                background $color2
+                padding 10px 25px
+                font-size 1.25rem
+                text-transform uppercase
+                margin 0 10px
+            .commercial-segment-holder
+                margin 5px 10px 0 10px
+                .pricing-strategy-container
+                    background white
+                    padding 25px 0 5px 10px
+                    .pricing-strategy-title
+                        margin-left 15px
+                        font-size 1.125rem
+                        padding-bottom 10px
+                    .data-row
+                        .forecasting-interactive-panel-input 
+                            text-align right
+                        .forecasting-interactive-panel-output
+                            text-align right
+                            padding-right 60px
+                            font-style italic
+                    .pricing-strategy-holder
+                        padding 10px 0
+                        .pricing-strategy-label
+                            color $color2
+                            font-size 1rem
+                            display flex
+                            align-items center
+                            white-space nowrap
+            
+            .enterprise-forecasting-wrapper, .smb-forecasting-container
+                margin 10px
+                .left-section, .right-section
+                    background #fff
+                    padding: 25px 15px
+                .left-section
+                    height calc(100% - 0px)
+                    .forecasting-title
+                        font-size 1.125rem
+                        padding-bottom 10px
+                        white-space nowrap
+                        .sub-title
+                            font-size 0.75rem
+                            margin-left 15px
+                            font-style italic
+                        .sub-title-smb-forecasting
+                            font-size 0.75rem
+                            margin-left -15px
+                            font-style italic
+                    .align-center
+                        text-align center
+                    .data-row
+                        padding 5px 0
+                        .forecasting-interactive-panel-output
+                            text-align right
+                            padding-right 60px
+                            font-style italic
+                        .forecasting-interactive-panel-input
+                            text-align right
+                            
+                        .forecasting-interative-panel-label
+                            font-style italic
+                            font-size 0.875rem
+                            color #303030
+                            padding-left 35px
+                        .forecasting-interative-panel-label-primary
+                            font-size 1rem
+                            color $color2
+                            display flex
+                            align-items center
+                            .icon-circle
+                                font-size 10px
+                                margin-right 10px
+                                color #fff
+                .right-section
+                    margin-left 10px 
+                    padding 25px 10px
+                    height calc(100% - 0px)
+                    .commercial-revene-title
+                        padding 5px 15px
+                        font-size 1.125rem
+                    .report-analysis
+                        padding 15px
+                        .report-analysis-holder
+                            padding 0px
+.million-text
+    padding 0 5px
+    text-outlet
+        font-size 0.75rem
+
+@media screen and (max-width: 768px)
+    .pricingforecasting-wrapper
+        .consumer-data
+            .consumer-segment-container
+                .consumer-forcasting-wrapper
+                    .right-section
+                        margin-left 0
+                        margin-top 10px
+                        margin-bottom 10px
+
+        .commercial-data
+            .commercial-segment-container
+                .enterprise-forecasting-wrapper, .smb-forecasting-container
+                    .right-section
+                        margin-left 0
+                        margin-top 10px
+                .smb-forecasting-container
+                    .left-section
+                        margin-top 10px
+                    .right-section
+                        margin-top 20px
+                        margin-bottom 10px

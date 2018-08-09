@@ -1,0 +1,5 @@
+<div class="radio-group" data-toggle="buttons">
+  <label class="btn custom-radio-button" [class.checked]="selectedItemNumber == i" *ngFor="let item of _items; let i = index">
+    <input type="radio" [name]="ref" [value]="item" [id]="ref + '_option' + i" (click)="selectionChanged(i)" [checked]="selectedItemNumber == i"> {{item}}
+  </label>
+</div>

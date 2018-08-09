@@ -1,0 +1,65 @@
+<div class="ops-infrastructure-container colorOne animated slideInUp">
+    <div class="ops-infrastructure-title">
+        <text-outlet key="OpsInfrastructureMainHeading"></text-outlet>
+    </div>
+    <div class="ops-infrastructure-holder row">
+        <div class="col-md-6 col-sm-12 p-0">
+            <div class="ops-instrastructure-left-section-holder">
+                <div class="row infrastructure-header">
+                    <div class="ops-data-title col-sm-6">
+                        <text-outlet key="OpsInfrastructureDataHeading"></text-outlet>
+                    </div>
+                    <div class="col-sm-3 ops-data-title label-align-center">
+                        <!-- <text-outlet key="OpsInfrastructureDataSubHeading"></text-outlet> -->
+                    </div>
+                </div>
+                <div class="ops-data-details">
+                    <div class="data-row row">
+                        <div class="ops-label-header  col-sm-6">
+                            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton13"></my-tooltip>
+                            <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D42"></my-tooltip> -->
+                            <text-outlet key="DataCenters"></text-outlet>
+                        </div>
+                        <div class="ops-input col-sm-3">
+                            <calc-stepper ref="tlInputOpsDataCenter" min="-5" max="10" outputMin="-5" outputMax="10" step="1" format="0"></calc-stepper>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="ops-label  col-sm-6 label-style-italic">
+                            <text-outlet key="TotalDataCenters"></text-outlet>
+                        </div>
+                        <div class="ops-output col-sm-3">
+                            <calc-outlet ref="tlOutputOpsDataCenterClosing"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="ops-label  col-sm-6  label-style-italic">
+                            <text-outlet key="Cost"></text-outlet>
+                        </div>
+                        <div class="ops-output col-sm-3">
+                            <calc-outlet ref="tlOutputOpsDataCenterCost" format="($0,0)"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="ops-label  col-sm-6  label-style-italic">
+                            <text-outlet key="RecommededUtilization"></text-outlet>
+                        </div>
+                        <div class="ops-output col-sm-3">
+                            <calc-outlet ref="tlOutputOpsDataCenterRecUtiliz" format="0%"></calc-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 p-0">
+            <div class="ops-instrastructure-right-section-holder">
+                <div class="ops-data-title infrastructure-header">
+                    <text-outlet key="OpsInfrastructureChartHeading"></text-outlet>
+                </div>
+                <div class="ops-data-analysis-report">
+                    <piechart rangeRef="tlOutputGraphsDCUtilized, tlOutputGraphsDCAvail" seriesLabels="tlOutputGraphsLabelDCUtilized,tlOutputGraphsLabelDCAvail" numberFormat="0%"></piechart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

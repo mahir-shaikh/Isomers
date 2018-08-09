@@ -1,0 +1,91 @@
+<!-- <div class="erproductdata-wrapper isErActive" [class.colorTwo]="prodNo == 1" [class.colorThree]="prodNo == 2" [class.colorFour]="prodNo == 3"> -->
+<div class="erproductdata-wrapper colorOne isErActive  animated" [class.slideInUp]="shouldAnimate">
+    <div class="main-heading-text-container row">
+        <div class="main-heading-text col-sm-12">
+            <text-outlet [key]="'ErProd' + prodNo + 'MainHeading'"></text-outlet>
+        </div>
+    </div>
+    <div class="row">
+        <div class="data-wrapper col-sm-12 col-md-6 p-0">
+            <div class="data-container">
+                <div class="sub-heading-text-container row">
+                    <div class="sub-heading-text col-sm-12">
+                        <text-outlet [key]="'ErProd' + prodNo + 'DataHeading'"></text-outlet>
+                    </div>
+                </div>
+                <div class="erproduct-data-container col-sm-12">
+                    <!--1st row-->
+                    <div class="row erproduct-data-row">
+                        <div class="row col-sm-12 erproduct-primary-row">
+                            <div class="col-sm col-lg-12 col-xl form-label">
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton4" *ngIf="prodNo == 1"></my-tooltip>
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton6" *ngIf="prodNo == 2"></my-tooltip>
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton8" *ngIf="prodNo == 3"></my-tooltip>
+                                <text-outlet [key]="'ErLabelProd' + prodNo + 'Offerring1'"></text-outlet>
+                            </div>
+                            <div class="col-sm data-value"><calc-option [items]="itemsArray" [ref]="'tlInputEGProd' + prodNo + 'Offering1'"></calc-option></div>
+                        </div>
+                        <div class="row col-sm-12 erproduct-secondary-row">
+                            <div class="col-sm form-label "><text-outlet key="TotalInvestment"></text-outlet></div>
+                            <div class="col-sm data-value"><calc-outlet [ref]="'tlOutputEGSProd' + prodNo + 'Offering1Closing'"></calc-outlet></div>                
+                        </div>
+                        <div class="row col-sm-12 erproduct-secondary-row">
+                            <div class="col-sm form-label "><text-outlet key="EtusRequired"></text-outlet></div>
+                            <div class="col-sm data-value"><calc-outlet [ref]="'tlOutputEGSProd' + prodNo + 'Offering1ETUs'"></calc-outlet></div>                
+                        </div>
+                    </div>
+
+                    <div class="line-break"></div>
+                    <!--2nd row-->
+                    <div class="row erproduct-data-row">
+                        <div class="row col-sm-12 erproduct-primary-row">
+                            <div class="col-sm col-lg-12 col-xl form-label ">
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton5" *ngIf="prodNo == 1"></my-tooltip>
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton7" *ngIf="prodNo == 2"></my-tooltip>
+                                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoBu9tton1" *ngIf="prodNo == 3"></my-tooltip>
+                                <text-outlet [key]="'ErLabelProd' + prodNo + 'Offerring2'"></text-outlet>
+                            </div>
+                            <div class="col-sm data-value"><calc-option [items]="itemsArray" [ref]="'tlInputEGProd' + prodNo + 'Offering2'"></calc-option></div>
+                        </div>
+                        <div class="row col-sm-12 erproduct-secondary-row">
+                            <div class="col-sm form-label "><text-outlet key="TotalInvestment"></text-outlet></div>
+                            <div class="col-sm data-value"><calc-outlet [ref]="'tlOutputEGSProd' + prodNo + 'Offering2Closing'"></calc-outlet></div>                
+                        </div>
+                        <div class="row col-sm-12 erproduct-secondary-row">
+                            <div class="col-sm form-label "><text-outlet key="EtusRequired"></text-outlet></div>
+                            <div class="col-sm data-value"><calc-outlet [ref]="'tlOutputEGSProd' + prodNo + 'Offering2ETUs'"></calc-outlet></div>                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chart-wrapper col-sm-12 col-md-6 p-0">
+            <div class="chart-container">
+                <div class="sub-heading-text-container row">
+                    <div class="sub-heading-text col-sm-12">
+                        <text-outlet [key]="'ErProd' + prodNo + 'ChartHeading'"></text-outlet>
+                    </div>
+                </div>
+                <div class="erproduct-chart-container">
+                    <!--Chart-->
+                    <basicbar
+                        [rangeRef]="chartRangeRef"
+                        [categoryLabels]="'tlOutputGraphsLabelProd'+prodNo+'Offering1, tlOutputGraphsLabelProd'+prodNo+'Offering2'"
+                        [seriesLabels]="'tlOutputGraphsLabelEGProd'+prodNo+'ThisRound, tlOutputGraphsLabelEGProd'+prodNo+'LastRound, tlOutputGraphsLabelEGProd'+prodNo+'IndAvg'"
+                        numberFormat="0,0"
+                        forceRedraw="true"
+                        *ngIf="prodNo != 3"
+                    ></basicbar>
+                     <basicbar
+                        [rangeRef]="chartRangeRef"
+                        [categoryLabels]="'tlOutputGraphsLabelProd'+prodNo+'Offering1,Devices'"
+                        [seriesLabels]="'tlOutputGraphsLabelEGProd'+prodNo+'ThisRound, tlOutputGraphsLabelEGProd'+prodNo+'LastRound, tlOutputGraphsLabelEGProd'+prodNo+'IndAvg'"
+                        numberFormat="0,0"
+                        forceRedraw="true"
+                        *ngIf="prodNo == 3"
+                    ></basicbar>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

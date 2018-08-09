@@ -1,0 +1,200 @@
+<div class="hidden" [routerLink]="['/intro']" [routerLinkActive]="['active']"></div>
+<div class="hidden" [routerLink]="['/forecast']" [routerLinkActive]="['active']"></div>
+<div class="dashboard-container row">
+    <div class="topbar col-sm-12">
+        <div class="logo-simulation-container">
+            <img  src ="../../../../assets/images/microsoft-grey.png" class="logo">
+            <div class="links fa fa-bars" [class.isOpen]="isHamburgerMenuOpen" (click)="openMenu(3, $event)">
+                <!-- <img src="../../../../assets/images/icons/hamburger-icon.svg" class="hamburger-icon" /> -->
+                <div class="link-dropdown-list-container" [clickOutActive]="isHamburgerMenuOpen" (clickOutside)="closeMenu(3)">
+                    <div class="link-dropdown-item" (click)="exportDecisions()">
+                        <!-- <calc-outlet ref="NmExport"></calc-outlet> -->
+                        <text-outlet key="Export"></text-outlet>
+                    </div>
+                    <div class="link-dropdown-item" (click)="showPasswordModalRef(2)">
+                        <!-- <calc-outlet ref="NmExport"></calc-outlet> -->
+                        <text-outlet key="Import"></text-outlet>
+                    </div>
+                    <div class="link-dropdown-item" (click)="showPasswordModalRef(3)">
+                        <!-- <calc-outlet ref="NmExport"></calc-outlet> -->
+                        <text-outlet key="Reset"></text-outlet>
+                    </div>
+                </div>
+            </div>
+            <div class="team-info-container row">
+                <div class="team-info col-sm p-0">
+                    <div class="year">
+                        <text-outlet key="Round"></text-outlet> <calc-outlet ref="tlInputTeamRound"></calc-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-bar" *ngIf="!isERActive">
+            <div class="navigation-bar-container">
+                <div class="navigation-bar-link navigation-bar-hover-link" routerLinkActive="active" (click)="openMenu(0, $event)" [class.isOpen]="isOperationMenuOpen">
+                    <span class="navigation-bar-link-text">
+                        <span class="fa fa-ellipsis-v bar-icon"></span>
+                        <span class="icon-container operations-icon">
+                            <img src="../../../../assets/images/icons/Operations_&_Marketing.svg" class="menu-icon inactive-icon">
+                            <img src="../../../../assets/images/icons/Operations_&_Marketing_open.svg" class="menu-icon active-icon">
+                        </span>
+                        <span class="nav-name">
+                            <text-outlet key="MainTab1"></text-outlet>
+                        </span>
+                    </span>
+                    <div class="navigation-bar-dropdown-link" [clickOutActive]="isOperationMenuOpen" (clickOutside)="closeMenu(0)">
+                        <span class="navigation-bar-link-text" [routerLink]="['/opsOperation']" routerLinkActive="active"><text-outlet key="OpsOperationMainHeading"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/opsInfrastructure']" routerLinkActive="active"><text-outlet key="OpsInfrastructureMainHeading"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/opsMarketing']" routerLinkActive="active"><text-outlet key="OpsMarketingMainHeading"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/talentdevelopment','1']" routerLinkActive="active"><text-outlet key="CommercialTab2MainHeading"></text-outlet></span>
+                    </div>
+                </div>
+                <div class="navigation-bar-link navigation-bar-hover-link" routerLinkActive="active" (click)="openMenu(1, $event)" [class.isOpen]="isCommercialMenuOpen">
+                    <span class="navigation-bar-link-text">
+                        <span class="fa fa-ellipsis-v bar-icon"></span>
+                        <span class="icon-container operations-icon">
+                            <img src="../../../../assets/images/icons/Commercial_segment.svg" class="menu-icon inactive-icon">
+                            <img src="../../../../assets/images/icons/Commercial_segment_open.svg" class="menu-icon active-icon">
+                        </span>
+                        <span class="nav-name">
+                            <text-outlet key="MainTab2"></text-outlet>
+                        </span>
+                    </span>
+                    <div class="navigation-bar-dropdown-link" [clickOutActive]="isCommercialMenuOpen" (clickOutside)="closeMenu(1)">
+                        <span class="navigation-bar-link-text" [routerLink]="['/pricingForecasting','1']" routerLinkActive="active"><text-outlet key="CommercialTab1MainHeading"></text-outlet></span>
+                        <!--<span class="navigation-bar-link-text" [routerLink]="['/talentdevelopment','1']" routerLinkActive="active"><text-outlet key="CommercialTab2MainHeading"></text-outlet></span>-->
+                        <span class="navigation-bar-link-text" [routerLink]="['/salesService','1']" routerLinkActive="active"><text-outlet key="CommercialTab3MainHeading"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/partner','1']" routerLinkActive="active"><text-outlet key="CommercialTab4MainHeading"></text-outlet></span>
+                    </div>
+                </div>
+                <div class="navigation-bar-link navigation-bar-hover-link" routerLinkActive="active" (click)="openMenu(2, $event)" [class.isOpen]="isConsumerMenuOpen">
+                    <span class="navigation-bar-link-text">
+                        <span class="fa fa-ellipsis-v bar-icon"></span>
+                        <span class="icon-container operations-icon">
+                            <img src="../../../../assets/images/icons/Consumerll_segment.svg" class="menu-icon inactive-icon">
+                            <img src="../../../../assets/images/icons/Consumerll_segment_open.svg" class="menu-icon active-icon">
+                        </span>
+                        <span class="nav-name">
+                            <text-outlet key="MainTab3"></text-outlet>
+                        </span>
+                    </span>
+                    <div class="navigation-bar-dropdown-link" [clickOutActive]="isConsumerMenuOpen" (clickOutside)="closeMenu(2)">
+                        <span class="navigation-bar-link-text" [routerLink]="['/pricingForecasting','0']" routerLinkActive="active"><text-outlet key="ConsumerTab1MainHeading"></text-outlet></span>
+                        <!--<span class="navigation-bar-link-text" [routerLink]="['/talentdevelopment','0']" routerLinkActive="active"><text-outlet key="ConsumerTab2MainHeading"></text-outlet></span>-->
+                        <span class="navigation-bar-link-text" [routerLink]="['/salesService','0']" routerLinkActive="active"><text-outlet key="ConsumerTab3MainHeading"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/partner','0']" routerLinkActive="active"><text-outlet key="ConsumerNavPartner"></text-outlet></span>
+                    </div>
+                </div>
+                <div class="navigation-bar-link" [routerLink]="['/pnl']" routerLinkActive="active">
+                    <span class="navigation-bar-link-text">
+                        <!-- <span class="fa fa-bars bar-icon"></span> -->
+                        <span class="icon-container operations-icon">
+                            <img src="../../../../assets/images/icons/proft-loss.svg" class="menu-icon inactive-icon">
+                            <img src="../../../../assets/images/icons/proft-loss_open.svg" class="menu-icon active-icon">
+                        </span>
+                        <span class="nav-name">
+                            <text-outlet key="MainTab4"></text-outlet>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="navigation-bar er-navigation-bar" *ngIf="isERActive">
+            <div class="navigation-bar-container er-navigation-bar-container">
+                <div class="navigation-bar-link" [routerLink]="['/erPlatform']" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><text-outlet key="Platform"></text-outlet></span>
+                </div>
+                <div class="navigation-bar-link" [routerLink]="['/erProduct','1']" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><calc-outlet ref="nmProd1"></calc-outlet></span>
+                </div>
+                <div class="navigation-bar-link" [routerLink]="['/erProduct','2']" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><calc-outlet ref="nmProd2"></calc-outlet></span>
+                </div>
+                <div class="navigation-bar-link" [routerLink]="['/erProduct','3']" routerLinkActive="active">
+                    <span class="navigation-bar-link-text"><calc-outlet ref="nmProd3"></calc-outlet></span>
+                </div>
+            </div>
+        </div> -->
+        <div class="navigation-bar er-navigation-bar" *ngIf="isERActive">
+            <div class="navigation-bar-container er-navigation-bar-container">
+                <div class="navigation-bar-link navigation-bar-hover-link isOpen" routerLinkActive="active" (click)="openMenu(4, $event)">
+                    <span class="navigation-bar-link-text">
+                        <!--<span class="fa fa-ellipsis-v bar-icon"></span>-->
+                        <span class="icon-container operations-icon">
+                            <img src="../../../../assets/images/icons/Engineering_Requests.svg" class="menu-icon inactive-icon">
+                            <img src="../../../../assets/images/icons/Engineering_Requests_open.svg" class="menu-icon active-icon">
+                        </span>
+                        <span class="nav-name">
+                            <text-outlet key="MainTab5"></text-outlet>
+                        </span>
+                    </span>
+                    <!--<div class="navigation-bar-dropdown-link" [clickOutActive]="isEngineeringMenuOpen" (clickOutside)="closeMenu(4)">
+                        <span class="navigation-bar-link-text" [routerLink]="['/erPlatform']" routerLinkActive="active"><text-outlet key="ErPlatformMainHeading"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/erProduct','1']" routerLinkActive="active"><text-outlet key="ErProd1MainHeading"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/erProduct','2']" routerLinkActive="active"><text-outlet key="ErProd2MainHeading"></text-outlet></span>
+                        <span class="navigation-bar-link-text" [routerLink]="['/erProduct','3']" routerLinkActive="active"><text-outlet key="ErProd3MainHeading"></text-outlet></span>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<im-importfile #importbalances (fileLoaded)="onFileLoaded($event)"></im-importfile>
+<wobbler #wobbler></wobbler>
+
+<div bsModal #importsuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': true}">
+    <div class="modal-dialog modal-sm import-success-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Success"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="ImportSuccessConfirmMessage"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-primary no-button" (click)="hideSuccessAlert()"><text-outlet key="Continue"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #exportModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm export-modal">
+        <div class="modal-content">
+        <div class="modal-body">
+            <text-outlet key="UnableToExportMsg"></text-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-primary no-button" (click)="hideExportAlert()"><text-outlet key="Ok"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #passwordModal="bs-modal" class="modal model-sm animated password-modal fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"[config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-sm-11 heading">
+                    <text-outlet key="Export" *ngIf="passwordModalNumber == 1"></text-outlet>
+                    <text-outlet key="Import" *ngIf="passwordModalNumber == 2"></text-outlet>
+                    <text-outlet key="Reset" *ngIf="passwordModalNumber == 3"></text-outlet>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="password-container">
+                        <div class="password-text"><text-outlet key="EnterPassword"></text-outlet></div>
+                        <input type="password" [(ngModel)]="password" #passwordText>
+                    </div>
+                    <div class="error-message" *ngIf="showPasswordErrorMessage"><text-outlet key="IncorrectPasswordMsg"></text-outlet></div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-primary" (click)="onPasswordSubmit()" [class.disabled]="password.value"><text-outlet key="Submit"></text-outlet></button>
+                <button class="btn btn-primary" (click)="hidePasswordModalRef()"><text-outlet key="Cancel"></text-outlet></button>
+            </div>
+        </div>
+    </div>
+</div>

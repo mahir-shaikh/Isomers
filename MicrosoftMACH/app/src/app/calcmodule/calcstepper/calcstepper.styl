@@ -1,0 +1,141 @@
+@import '../../../../assets/css/colors.styl'
+
+:host
+    display inline-block
+    width 100%
+    max-width 111px
+    height 25px
+    background-color #ECECEA
+    // color #111
+    overflow hidden
+    position relative
+    border 1px solid #BABABA
+    .stepper
+        height 100%
+    input
+        margin-left 23px
+        height 100%
+        width calc(100% - 48px)
+        text-align right
+        color #000369
+        border-top 1px solid #F0F0F0
+        border-bottom 1px solid #F0F0F0
+        padding-right 5px
+        &:active,
+        &:focus
+            color #fff
+            background-color #000369
+            border-top 1px solid #000369
+            border-bottom 1px solid #000369
+    @media screen and (max-width 350px)
+        height 30px
+        line-height 30px
+
+:host(.disabled)
+    background-color #6D6E70
+    .stepper-button
+        pointer-events none
+        color #000369
+    
+.stepper
+    font-size 0.875rem
+    & > *
+      float left
+      display inline-block
+      
+    .field-value
+        width calc(100% - 50px)
+        left 25px
+        position relative
+        text-align center
+        overflow hidden
+        height 25px
+        line-height 25px
+        color #000
+        @media screen and (max-width 350px)
+            height 30px
+            line-height 30px
+        &.negative
+            color red
+    &-button
+        cursor pointer
+        display inline-block
+        font-size 0.75rem
+        width 25px
+        height 25px
+        line-height 25px
+        position absolute
+        text-align center
+        color $color1
+        &:hover, &:active
+            background-color $color1
+            color #fff
+            transition color 1s
+        @media screen and (max-width 350px)
+            height 30px
+            line-height 30px
+        &.disabled
+            background-color #000
+            color #FFF !important
+            pointer-events none
+    .add
+        right 0
+        border-left 1px solid #BABABA
+    .subtract
+        left 0
+        border-right 1px solid #BABABA
+    .hidden
+        display none
+
+:host-context(.marketing-budget)
+    max-width 141px
+
+:host-context(.colorOne)
+    .stepper .field-value
+        color $color1
+    .stepper-button
+        color $color1
+        &:hover,&:active
+            background-color $color1
+            color #fff
+            transition color 1s
+:host-context(.colorTwo)
+    .stepper .field-value
+        color $color2
+    .stepper-button
+        color $color2
+        &:hover,&:active
+            background-color $color2
+            color #fff
+            transition color 1s
+:host-context(.colorThree)
+    .stepper .field-value
+        color $color3
+    .stepper-button
+        color $color3
+        &:hover,&:active
+            background-color $color3
+            color #fff
+            transition color 1s
+:host-context(.colorFour)
+    .stepper .field-value
+        color $color4
+    .stepper-button
+        color $color4
+        &:hover,&:active
+            background-color $color4
+            color #fff
+            transition color 1s
+        
+:host-context(.colorOne.isErActive)
+    .stepper .field-value
+        color $er-color1
+:host-context(.colorTwo.isErActive)
+    .stepper .field-value
+        color $er-color2
+:host-context(.colorThree.isErActive)
+    .stepper .field-value
+        color $er-color3
+:host-context(.colorFour.isErActive)
+    .stepper .field-value
+        color $er-color4

@@ -1,0 +1,115 @@
+<div class="operations-data-container colorOne animated slideInUp">
+    <div class="page-heading">
+        <text-outlet key="OpsOperationMainHeading"></text-outlet>
+    </div>
+    <div class="data-common-container row">
+        <div class="data-container col-sm-12 col-md-6">
+            <div class="data-col-container">
+                <div class="data-row-col row">
+                    <div class="data-heading-op col-6">
+                        <text-outlet key="OpsOperationDataHeading"></text-outlet>
+                    </div>
+                    <div class="data-heading-fte col-3">
+                        <text-outlet key="OpsOperationDataSubHeading"></text-outlet>
+                    </div>
+                </div>
+                <div class = "data-row-col row">
+                    <div class = "data-col-primary col-6">
+                        <div class="tooltip-first-container">
+                            <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D39"> -->
+                            <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton10">
+                            </my-tooltip>
+                            <span class="data-label"><text-outlet key="SoftwareEngineering"></text-outlet></span>
+                        </div>
+                    </div>
+                    <div class = "data-col-val col-3">
+                        <span class="data-value"><calc-stepper ref="tlInputOpsITFTEs" min="0" max="100" outputMin="0" outputMax="100" step="5" format="0"></calc-stepper></span>
+                    </div>
+                    <div class = "data-col secondary col-6 p-0">
+                        <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                    </div>
+                    <div class = "data-col-val secondary col-3">
+                        <span class="data-value"><calc-outlet ref="tlOutputOpsITOpening"></calc-outlet></span>
+                    </div>
+                </div>
+                <!--<div class = "data-row-col row">
+                    <div class = "data-col-primary col-6">
+                        <div class="tooltip-first-container">
+                            <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton40">
+                            <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D69"> 
+                            </my-tooltip>
+                            <span class="data-label"><text-outlet key="GlobalDemandCenter"></text-outlet></span>
+                        </div>
+                    </div>
+                    <div class = "data-col-val col-3">
+                        <!--<span class="data-value"><calc-stepper ref="tlInputOpsGlobalDemandCenterFTEs" min="0" max="100" outputMin="0" outputMax="100" step="5" format="0"></calc-stepper></span>
+                    </div>
+                    <div class = "data-col secondary col-6 p-0">
+                        <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                    </div>
+                    <div class = "data-col-val secondary col-3">
+                        <!--<span class="data-value"><calc-outlet ref="tlOutputOpsGlobalDemandOpening"></calc-outlet></span>
+                    </div>
+                </div>-->
+                <div class = "data-row-col row">
+                    <div class = "data-col-primary col-6">
+                        <div class="tooltip-first-container">
+                            <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton11">
+                            <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D40"> -->
+                            </my-tooltip>
+                            <span class="data-label"><text-outlet key="SupplyChain"></text-outlet></span>
+                        </div>
+                    </div>
+                    <div class = "data-col-val col-3">
+                        <span class="data-value"><calc-stepper ref="tlInputOpsSupplyChainFTEs" min="0" max="100" outputMin="0" outputMax="100" step="5" format="0"></calc-stepper></span>
+                    </div>
+                    <div class = "data-col secondary col-6 p-0">
+                        <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                    </div>
+                    <div class = "data-col-val secondary col-3">
+                        <span class="data-value"><calc-outlet ref="tlOutputOpsSupplyChainOpening"></calc-outlet></span>
+                    </div>
+                </div>
+                <div class = "data-row-col row">
+                    <div class = "data-col-primary col-6">
+                        <div class="tooltip-first-container">
+                            <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="tlOutputInfoButton12">
+                            <!-- <my-tooltip class="sales-tooltip" tooltipPlacement="right" key="InfoButton!D41"> -->
+                            </my-tooltip>
+                            <span class="data-label"><text-outlet key="Collaboration"></text-outlet></span>
+                        </div>
+                    </div>
+                    <div class = "data-col-val col-3">
+                        <span class="data-value"><calc-stepper ref="tlInputOpsCollabFTEs" min="0" max="100" outputMin="0" outputMax="100" step="5" format="0"></calc-stepper></span>
+                    </div>
+                    <div class = "data-col secondary col-6 p-0">
+                        <span class="data-label"><text-outlet key="LastRound"></text-outlet></span>
+                    </div>
+                    <div class = "data-col-val secondary col-3">
+                        <span class="data-value"><calc-outlet ref="tlOutputOpsCollabOpening"></calc-outlet></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="internal-readiness-container col-sm-12 col-md-6">
+            <div class="data-col-container">
+                <div class="data-label">
+                    <text-outlet key="OpsOperatiponChartHeading"></text-outlet>
+                </div>
+                <div class = "chart">
+                <!-- <im-chart type="combination" 
+                    [seriesOptions]="seriesInternalReadiness"
+                    plotOption="stackedcolumn"
+                    numberformat="0%"
+                    max="1"
+                    showInLegend="tlOutputGraphsLabelIntReadinessOpening, tlOutputGraphsLabelIntReadinessITFTEs, tlOutputGraphsLabelIntReadinessSupplyChainFTEs, tlOutputGraphsLabelIntReadinessInfrastructure, tlOutputGraphsLabelIntReadinessIClosing"
+                    chartoptions='{"exporting":{"enabled":false}}'
+                ></im-chart> -->
+                <stackedcolumn 
+                	[rangeref]="internalReportData" [serieslabels]="internalReportDataSerialLabel" categorylabels="OpsOperatiponChartHeading" [totalValue]="closingData" numberformat="0,0.00" totalName="Ending Internal Readiness" [chartoptions]="chartOptions">
+                </stackedcolumn>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

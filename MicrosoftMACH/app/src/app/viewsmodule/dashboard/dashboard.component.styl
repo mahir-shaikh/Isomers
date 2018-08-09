@@ -1,0 +1,386 @@
+@import '../../../../assets/css/colors.styl'
+
+.hidden.active ~ .dashboard-container
+        display none
+        
+.dashboard-container
+    height 100%
+    color #FFF
+    .topbar
+        height 100%
+        padding 0
+        background-color #303030
+        .logo-simulation-container
+            padding-right 15px
+            padding-left 15px
+            height 80px
+            display inline-block
+            @media screen and (max-width 1080px)
+                height 50px
+                display block
+            .logo
+                height 20px
+        .links
+            position relative
+            padding-left 20px
+            padding-top 15px
+            padding-bottom 15px
+            display inline-block
+            color #5C6063
+            cursor pointer
+            font-size 1.25rem
+            &.isOpen
+                .link-dropdown-list-container
+                    // display initial
+                    transform scaleX(1)
+            .link-dropdown-list-container
+                position absolute
+                top 10px
+                left 60px
+                z-index 20000
+                background-color #3e3e3e
+                // display none
+                transform scaleX(0)
+                transform-origin 0 0
+                transition all 0.5s cubic-bezier(.5,0,.3,1)
+                &:before
+                    content ''
+                    width 0px
+                    height 0px
+                    border-top 15px solid transparent
+                    border-bottom 15px solid transparent
+                    border-right 15px solid #3e3e3e
+                    border-left 0 solid #3e3e3e
+                    position absolute
+                    top 10px
+                    left -15px
+                    z-index 1
+                .link-dropdown-item
+                    padding 10px 30px
+                    cursor pointer
+                    calc-outlet
+                    text-outlet
+                        font-size 1rem
+                        color #FFF
+                    &:hover
+                        calc-outlet
+                        text-outlet
+                            color #f7d61e
+        .team-info-container
+            text-align right
+            margin-top 10px
+            @media screen and (max-width 1080px)
+                display inline-block
+                padding-left 25px
+            .team-info
+                .year
+                    font-size 0.875rem
+                    calc-outlet,text-outlet
+                        font-size 0.875rem
+        .navigation-bar
+            color #FFF
+            display inline-block
+            height calc(100% - 80px)
+            width 100%
+            @media screen and (max-width 1080px)
+                position absolute
+                height auto
+            &-container
+                width 100%
+                > .navigation-bar-link
+                    cursor pointer
+                    margin 10px auto
+                    padding 10px
+                    min-width 100px
+                    font-size 0.75rem
+                    text-align center
+                    position relative
+                    // height calc(25% - 15px)
+                    background-color #FFF
+                    height 125px
+                    width 150px
+                    -webkit-transition all 0.5s ease
+                    transition all 0.5s ease
+                    // -webkit-transform scale(0.9)
+                    // transform scale(0.9)
+                    // -webkit-transform-origin top
+                    // transform-origin top
+                    // z-index 2
+                    calc-outlet, text-outlet
+                        font-size 0.75rem
+                    @media screen and (max-width 1080px)
+                        display inline-block
+                        margin 10px
+                    &:nth-child(1)
+                        color $color1
+                        &:hover
+                            background-color $color1
+                            color #FFF
+                            box-shadow 0 0 0 5px $shadow-color1 inset
+                    &:nth-child(2)
+                        color $color2
+                        &:hover
+                            background-color $color2
+                            color #FFF
+                            box-shadow 0 0 0 5px $shadow-color2 inset
+                    &:nth-child(3)
+                        color $color3
+                        &:hover
+                            background-color $color3
+                            color #FFF
+                            box-shadow 0 0 0 5px $shadow-color3 inset
+                    &:nth-child(4)
+                        color $color4
+                        &:hover
+                            background-color $color4
+                            color #FFF
+                            box-shadow 0 0 0 5px $shadow-color4 inset
+                    // &:hover:not(.isOpen)
+                    //     box-shadow 0 0 0 5px #fff
+                .navigation-bar-link
+                    &:nth-child(1).active,&:nth-child(1).isOpen
+                        background-color $color1
+                        color #FFF
+                        box-shadow 0 0 0 5px $shadow-color1 inset
+                        .navigation-bar-dropdown-link
+                            .navigation-bar-link-text
+                                &.active
+                                    background-color $color1
+                                &:hover
+                                    background-color $color1
+                    &:nth-child(2).active,&:nth-child(2).isOpen
+                        background-color $color2
+                        color #FFF
+                        box-shadow 0 0 0 5px $shadow-color2 inset
+                        .navigation-bar-dropdown-link
+                            .navigation-bar-link-text
+                                &.active
+                                    background-color $color2
+                                &:hover
+                                    background-color $color2
+                    &:nth-child(3).active,&:nth-child(3).isOpen
+                        background-color $color3
+                        color #FFF
+                        box-shadow 0 0 0 5px $shadow-color3 inset
+                        .navigation-bar-dropdown-link
+                            .navigation-bar-link-text
+                                &.active
+                                    background-color $color3
+                                &:hover
+                                    background-color $color3
+                    &:nth-child(4).active,&:nth-child(4).isOpen
+                        background-color $color4
+                        color #FFF
+                        box-shadow 0 0 0 5px $shadow-color4 inset
+                        .navigation-bar-dropdown-link
+                            .navigation-bar-link-text
+                                &.active
+                                    background-color $color4
+                                &:hover
+                                    background-color $color4
+                
+                .navigation-bar-link-text
+                    line-height 30px
+                    font-weight 500
+                    transition all 0.5s ease
+                .navigation-bar-hover-link
+                    > .navigation-bar-dropdown-link
+                        // display none
+                    &.isOpen
+                        > .navigation-bar-dropdown-link
+                            // display block
+                            -webkit-transform scaleX(1)
+                            transform scaleX(1)
+                            @media screen and (max-width 1080px)
+                                -webkit-transform scaleY(1)
+                                transform scaleY(1)
+                    .navigation-bar-dropdown-link
+                        position absolute
+                        z-index 9
+                        min-width 100px
+                        width 102%
+                        left 108%
+                        text-align left
+                        top 0
+                        color #FFF
+                        border 1px solid #3e3e3e
+                        padding 10px
+                        background-color #3e3e3e
+                        -webkit-transform scaleX(0)
+                        transform scaleX(0)
+                        -webkit-transform-origin 0 0
+                        transform-origin 0 0
+                        transition all 0.5s cubic-bezier(.5,0,.3,1)
+                        @media screen and (max-width 1080px)
+                            top 106%
+                            left 0
+                            -webkit-transform scaleY(0)
+                            transform scaleY(0)
+                        &:before
+                            content ''
+                            width 0px
+                            height 0px
+                            border-top 15px solid transparent
+                            border-bottom 15px solid transparent
+                            border-right 15px solid #3e3e3e
+                            border-left 0 solid #3e3e3e
+                            position absolute
+                            top 10px
+                            left -15px
+                            z-index 1
+                            @media screen and (max-width 1080px)
+                                border-left 15px solid transparent
+                                border-right 15px solid transparent
+                                border-bottom 15px solid #3e3e3e
+                                border-top 0 solid #3e3e3e
+                                top -10px
+                                left calc(50% - 7.5px)
+                        .navigation-bar-link-text
+                            display block
+                            padding 5px 10px
+                            margin 5px 0
+                            cursor pointer
+                            line-height 20px
+        .er-navigation-bar
+            &-container
+                > .navigation-bar-link
+                    &:nth-child(1)
+                        color $er-color1
+                        &:hover
+                            background-color $er-color1
+                            color #FFF
+                            box-shadow 0 0 0 5px $er-shadow-color1 inset
+                    &:nth-child(2)
+                        color $er-color2
+                        &:hover
+                            background-color $er-color2
+                            color #FFF
+                    &:nth-child(3)
+                        color $er-color3
+                        &:hover
+                            background-color $er-color3
+                            color #FFF
+                    &:nth-child(4)
+                        color $er-color4
+                        &:hover
+                            background-color $er-color4
+                            color #FFF
+                .navigation-bar-link
+                    &:nth-child(1).active,&:nth-child(1).isOpen
+                        background-color $er-color1
+                        color #FFF
+                        box-shadow 0 0 0 5px $er-shadow-color1 inset
+                        .navigation-bar-dropdown-link
+                            .navigation-bar-link-text
+                                &.active
+                                    background-color $er-color1
+                                &:hover
+                                    background-color $er-color1
+                    &:nth-child(2).active,&:nth-child(2).isOpen
+                        background-color $er-color2
+                        color #FFF
+                        .navigation-bar-dropdown-link
+                            .navigation-bar-link-text
+                                &.active
+                                    background-color $er-color2
+                                &:hover
+                                    background-color $er-color2
+                    &:nth-child(3).active,&:nth-child(3).isOpen
+                        background-color $er-color3
+                        color #FFF
+                        .navigation-bar-dropdown-link
+                            .navigation-bar-link-text
+                                &.active
+                                    background-color $er-color3
+                                &:hover
+                                    background-color $er-color3
+                    &:nth-child(4).active,&:nth-child(4).isOpen
+                        background-color $er-color4
+                        color #FFF
+                        .navigation-bar-dropdown-link
+                            .navigation-bar-link-text
+                                &.active
+                                    background-color $er-color4
+                                &:hover
+                                    background-color $er-color4
+
+    .navigation-bar-link
+        .navigation-bar-link-text
+            .bar-icon
+                position absolute
+                right 10px
+                pointer-events none
+                font-size 1.25rem
+            .nav-name
+                position absolute
+                bottom 0
+                left 8px
+                pointer-events none
+            .icon-container
+                position absolute
+                top 50%
+                left 50%
+                -ms-transform translate(-50%,-50%)
+                -webkit-transform translate(-50%,-50%)
+                transform translate(-50%,-50%)
+                pointer-events none
+                height 125px
+                width 150px
+                .menu-icon
+                    height 125px
+                .active-icon
+                    display none
+                .inactive-icon
+                    display block
+        &.isOpen,&.active,&:hover
+            .navigation-bar-link-text
+                .icon-container
+                    .active-icon
+                        display block
+                    .inactive-icon
+                        display none
+                        
+.import-success-modal,.export-modal
+    top 20%
+    .button-container
+        margin auto
+        padding 10px
+        .btn
+            cursor pointer
+            border-radius 0
+            calc-outlet
+                color #FFF
+            
+.password-modal
+    .modal-header
+        .heading
+            text-align left
+            color $color1
+            font-size 1.125rem
+            font-weight 500
+    .modal-body        
+        padding-top 0
+        .error-message
+            padding 10px 0
+            color #F00
+            font-size 0.75rem
+        .title-text
+            padding-bottom 5px
+        .password-container
+            margin-top 10px
+            .password-text
+                padding-bottom 5px
+            input
+                width 100%
+                background-color $light-color1
+                border 1px solid #000
+                &:active,&:focus
+                    background-color $color1
+                    color #fff
+                    border 1px solid #000
+    .button-container
+        text-align center
+        margin-bottom 20px
+        .btn
+            border-radius 0
+            cursor pointer

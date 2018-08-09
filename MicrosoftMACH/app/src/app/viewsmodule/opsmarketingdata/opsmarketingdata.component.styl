@@ -1,0 +1,266 @@
+@import '../../../../assets/css/colors.styl'
+
+:host
+    overflow auto
+    
+.marketing-data-container
+    // background-color #F2F2F2
+    // height calc(100% - 250px)
+    // overflow-x hidden
+    // overflow-y auto
+    .icon-circle
+        font-size 10px
+        margin-right 10px
+        color #fff        
+    .page-heading
+        text-transform uppercase
+        font-size 1.25rem
+        color #fff
+        padding 10px 25px
+        background-color #0055b0
+        margin 0 10px
+        calc-outlet, text-outlet
+            font-size 1.25rem
+            text-transform uppercase
+            color #fff
+    .marketing-budget
+        margin 5px 10px 10px
+        background-color #fff
+        padding-left 25px
+        max-width calc(100% - 20px)
+        .data-col-container
+            padding 0 0 9px 0
+            .data-row-col
+                padding 15px 0
+                justify-content space-between
+                .data-col-val
+                    padding 0
+                    text-align center
+                    &.italic
+                        font-style italic
+                // .data-col-val-secondary
+                //     font-size 0.75rem
+                //     padding 5px 0
+                //     calc-outlet,text-outlet
+                //         font-size 0.75rem
+                .data-col-secondary
+                    padding 0
+                    font-size 0.875rem
+                    font-style italic
+                    padding-left 30px
+                    calc-outlet,text-outlet
+                        font-size 0.875rem
+        .data-label-heading
+            color #000
+            padding 25px 0 10px
+            calc-outlet
+                color #000
+                font-size 1.125rem
+            font-size 1.125rem
+        .data-col
+            padding 0
+            font-size 0.75rem
+            display flex
+            align-items center
+            calc-outlet,text-outlet
+                font-size 0.75rem
+            &:first-child
+                color $color1
+                font-size 1.25rem
+                text-outlet
+                    font-size 1rem
+    .segment-allocation-container
+        padding 0
+        .ambition
+        	margin-bottom 10px
+        .segment
+            margin-bottom 5px
+        .commercial-segment
+            padding 0 2px 0 0
+            .data-col-container
+                padding 0 25px 9px 25px
+                background-color #fff
+                margin 0 5px 5px 10px
+                .data-row-col
+                    padding 15px 0
+                    justify-content space-between
+                    .data-col-val
+                        padding 0
+                        text-align center
+                        @media screen and (max-width 1080px)
+                            text-align right
+                    .data-col-val-label
+                        padding 0
+                        text-align center
+                        font-style italic
+                        @media screen and (max-width 1080px)
+                            text-align center
+                    .data-col-secondary
+                        padding 0
+                        font-size 0.875rem
+                        font-style italic 
+                        padding-left 30px
+                        calc-outlet,text-outlet
+                            font-size 0.875rem
+            .data-label-heading
+                color black
+                padding 25px 0 10px
+                font-size 1.125rem
+                calc-outlet
+                    color #000
+                    font-size 1.125rem
+            .data-col
+                padding 0
+                display flex
+                align-items center
+                &:first-child
+                    color $color1
+                    font-size 1rem
+                calc-outlet,text-outlet
+                    font-size 1rem
+        .consumer-segment
+            padding 0 0 0 2px
+            .data-col-container
+                padding 0 25px 9px 25px
+                background-color #fff
+                margin 0 10px 5px 5px
+                height calc(100% - 5px)
+                .data-row-col
+                    padding 15px 0
+                    justify-content space-between
+                    .data-col-val
+                        padding 0
+                        text-align center
+                        @media screen and (max-width 1080px)
+                            text-align right
+                    .data-col-val-label
+                        padding 0
+                        text-align center
+                        font-style italic
+                        @media screen and (max-width 1080px)
+                            text-align center
+
+                    .data-col-secondary
+                        padding 0
+                        font-size 0.875rem
+                        font-style italic 
+                        padding-left 30px
+                        calc-outlet,text-outlet
+                            font-size 0.875rem
+            .data-label-heading
+                padding 25px 0 10px
+                color black
+                font-size 1.125rem
+                calc-outlet
+                    color #000
+                    font-size 1.125rem
+            .data-col
+                padding 0
+                display flex
+                align-items center
+                &:first-child
+                    color $color1
+                    font-size 1rem
+                calc-outlet,text-outlet
+                    font-size 1rem
+        .ambition-intelligent
+            padding 0px 5px 0px 10px
+            .data-row-col
+                border-bottom 2px solid #f2f2f2
+                justify-content space-between
+                &:last-child
+                    border-bottom 0
+                &:first-child
+                    margin-top 0
+            .data-col-container
+                padding 0 25px 9px 25px
+                background-color #fff
+                .data-row-col
+                    padding 15px 0
+                    justify-content space-between
+                    .data-col-val
+                        padding 0
+                        text-align center
+                        @media screen and (max-width 1080px)
+                            text-align right
+
+                    .data-col-val-label
+                        padding 0
+                        text-align center
+                        font-style italic
+                        @media screen and (max-width 1080px)
+                            text-align center
+
+                    .data-col-secondary
+                        padding 0
+                        font-size 0.875rem
+                        font-style italic
+                        padding-left 30px
+                        calc-outlet,text-outlet
+                            font-size 0.875rem
+            .data-label-heading
+                color black
+                padding 25px 0 10px
+                font-size 1.125rem
+                calc-outlet
+                    color #000
+                    font-size 1.125rem
+            .data-col
+                padding 0
+                display flex
+                align-items center
+                &:first-child
+                    color $color1
+                    font-size 1rem
+                calc-outlet,text-outlet
+                    font-size 1rem
+        .ambition-allocation
+            padding 0px 10px 0px 5px
+            .data-row-col
+                border-bottom 2px solid #f2f2f2
+                justify-content space-between
+                &:last-child
+                    border-bottom 0
+                &:first-child
+                    margin-top 0
+            .data-col-container
+                padding 0 25px 9px 25px
+                background-color #fff
+                height 100%
+                .data-row-col
+                    padding 15px 0
+                    justify-content space-between
+                    .data-col-val
+                        padding 0
+                        text-align center
+                        @media screen and (max-width 1080px)
+                            text-align right
+                    .data-col-val-label
+                        padding 0
+                        text-align center
+                        font-style italic
+                        @media screen and (max-width 1080px)
+                            text-align center
+                    .data-col-secondary
+                        padding 0
+                        font-size 0.875rem
+                        font-style italic 
+                        padding-left 30px
+                        calc-outlet,text-outlet
+                            font-size 0.875rem
+            .data-label-heading
+                padding 25px 0 10px
+                color black
+                font-size 1.125rem
+                calc-outlet
+                    color #000
+                    font-size 1.125rem
+            .data-col
+                padding 0
+                display flex
+                align-items center
+                &:first-child
+                    color $color1
+                    font-size 1rem
+                calc-outlet,text-outlet
+                    font-size 1rem

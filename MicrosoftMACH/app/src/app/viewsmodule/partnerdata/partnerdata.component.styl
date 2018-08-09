@@ -1,0 +1,170 @@
+@import '../../../../assets/css/colors.styl'
+
+:host
+    overflow auto
+.partner-wrapper
+    .consumer-partner-container, .commercial-partner-container
+        .partner-title
+            color #fff
+            padding 10px 25px
+            font-size 1.25rem
+            text-transform uppercase
+            margin 0 10px
+        
+
+        .partner-activities-holder, .partner-prioritization-holder
+            background #fff
+            /*margin-top 10px*/
+            padding 15px
+            .data-row
+                padding 5px 0
+                margin-left -15px
+                .output-value
+                    text-align center
+                    font-style italic
+                .align-center
+                    text-align center
+                    font-size 0.875rem
+                .input-label
+                    font-size 1rem
+                    display flex
+                    align-items center
+                    .icon-circle
+                        font-size 10px
+                        margin-right 10px
+                        color #fff
+
+                .output-label
+                    font-size 0.875rem
+                    font-style italic
+                    color #303030
+                    /*padding-left 35px*/
+                    transform translateX(22px)
+
+
+    .consumer-partner-container
+        .partner-title
+            background $color3
+        .partner-activities-holder
+            margin 5px 10px 0 10px
+            .partner-activities-title
+                font-size 1.125rem
+                padding-bottom 10px
+                padding-top 5px
+                margin-left -10px
+            .interactive-panel
+                margin-left -10px
+                .data-row
+                    .splitter
+                        border-right 1px solid lightgray
+                        margin-bottom -150px
+                    .input-label
+                        color $color3
+                        .icon-circle
+                            font-size 10px
+                            margin-right 10px
+                            color #fff
+                    .partner-text
+                        font-size 1.125rem
+                        color $color3
+                        text-align center
+        .partner-prioritization-holder
+            margin 10px
+            .data-row
+                .input-label    
+                    color $color3
+                    .icon-circle
+                        font-size 10px
+                        margin-right 10px
+                        color #fff
+            .partner-prioritization-title
+                font-size 1.125rem
+                padding-top 5px
+                
+    .commercial-partner-container
+        .partner-title
+            background $color2
+
+        .partner-activities-holder
+            margin 5px 10px 0 10px
+            .data-row
+                .splitter
+                    border-right 1px solid lightgray
+                    margin-bottom -150px
+                .input-label
+                    color $color2
+            .partner-activities-align-center
+                text-align center
+            .partner-activities-title
+                font-size 1.125rem
+                padding 5px 0
+
+        .partner-prioritization-holder
+            margin 10px 10px 0 10px
+            .data-row
+                .input-label
+                    color $color2
+            .partner-prioritization-title
+                font-size 1.125rem
+                padding 5px 0
+
+        .cloud-migration-holder
+            margin 0 10px 10px 10px
+            .left-section, .right-section
+                background #fff
+                margin-top 10px
+                padding 15px 30px
+            .right-section
+                margin-left 10px
+                height calc(100% - 10px)
+                .data-row
+                    .report-title
+                        padding 0 15px
+                        font-size 1.125rem
+                    .migration-report-holder
+                        padding 10px 15px
+
+            .left-section, .right-section
+                .data-row
+                    padding 5px 0
+                    margin-left -15px
+                    .report-title
+                        padding 0 10px
+                        font-size 1.125rem
+                    .migration-report-label
+                        text-align center
+                    .migration-report-label
+                        padding-bottom 10px
+                    .align-center
+                        text-align center
+                    .internalReadiness
+                        font-size 0.75rem
+                        font-style italic
+                        color #303030
+
+    .partner-text
+        padding-top 20px
+
+    /*.activities-prioritization-wrapper*/
+    .partner-activities-holder
+        padding 25px
+        
+.blank
+    @media screen and (max-width 1100px)
+        display none
+
+
+@media screen and (max-width: 768px)
+    .partner-wrapper
+        /*.consumer-data, .commercial-data 
+            .partner-title
+                margin 0 10px*/
+
+        .commercial-data
+            .cloud-migration-holder
+                .left-section
+                    margin-top 10px
+
+                .right-section
+                    margin-left 0
+                    margin-bottom 10px

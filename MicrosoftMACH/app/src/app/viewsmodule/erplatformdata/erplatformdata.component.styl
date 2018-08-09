@@ -1,0 +1,96 @@
+@import '../../../../assets/css/colors.styl'
+
+:host
+    overflow auto
+.erplatformdata-wrapper
+    // height calc(100% - 250px)
+    // overflow auto
+    // background-color #f2f2f2
+    .main-heading-text-container
+        padding 10px 0
+        background-color $er-color1
+        height 40px
+        margin 0 10px
+        .main-heading-text
+            color #FFF
+            padding-left 25px
+            text-transform uppercase
+            calc-outlet
+                font-size 1.25rem
+    .sub-heading-text-container
+        padding 20px 0 5px
+        .sub-heading-text
+            color #4a4a4a
+            padding-left 25px
+            calc-outlet,text-outlet
+                font-size 1.125rem
+    .data-container,.chart-container
+        background-color #FFF
+        margin 5px 0
+        height calc(100% - 20px)
+        .heading-text
+            calc-outlet
+                font-size 1.125rem
+                color #000
+    .data-container
+        margin-right 5px
+        margin-left 10px
+        @media screen and (max-width 768px)
+            // margin-right 0
+            // margin-bottom 0px
+            margin 5px 10px
+            height calc(100% - 10px)
+    .chart-container
+        margin-left 5px
+        margin-right 10px
+        @media screen and (max-width 768px)
+            // margin-left 0
+            // margin-top 0px
+            margin 5px 10px
+            height calc(100% - 10px)
+    .erplatform-data-container
+        padding 0 25px 10px
+        .erplatform-data-row
+            margin 10px 0
+            .erplatform-primary-row
+                padding 5px 0
+                align-items center
+                .form-label
+                    padding 0
+                    font-size 1rem
+                    display flex
+                    calc-outlet,text-outlet
+                        font-size 1rem
+                        color $er-color1
+                    .curtom-tooltip
+                        margin-right 5px
+                .data-value
+                    padding 0
+                    calc-outlet,text-outlet
+                        font-size 1rem
+                        color #333
+            .erplatform-secondary-row
+                padding 5px 0
+                align-items center
+                .form-label
+                    padding 0
+                    padding-left 30px
+                    font-style italic
+                    color $dark-grey
+                    font-size 0.75rem
+                    calc-outlet,text-outlet
+                        font-size 0.875rem
+                        color $dark-grey
+                .data-value
+                    padding 0
+                    text-align center
+                    font-style italic
+                    // background-color #f5f5f5
+                    calc-outlet,text-outlet
+                        font-size 1rem
+                        color #333
+        .line-break
+            border-top 1px solid #d4d4d4
+    .erplatform-chart-container
+        padding 15px
+        padding-top 0

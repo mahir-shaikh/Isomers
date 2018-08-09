@@ -1,0 +1,655 @@
+<div class="partner-wrapper">
+    <div class="consumer-data animated slideInUp" *ngIf="!type">
+        <div class="consumer-partner-container colorThree">
+            <div class="partner-title">
+                <text-outlet key="ConsumerTab4MainHeading"></text-outlet>
+            </div>
+      <!--       <div class="activities-prioritization-wrapper row"> -->
+            <div class="partner-activities-holder row">
+                <div class="partner-activities-holder col-sm-12">
+                    <div class="partner-activities-title">
+                        <text-outlet key="OneCommercialPartnerActivities"></text-outlet>
+                    </div>
+                    <div class="interactive-panel row">
+                        <div class="col-sm-12 col-xl-6 p-0">
+                            <div class="data-row row partner-text">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="input-label col-sm col-lg-4">
+                                    <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton36"></my-tooltip>
+                                    <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D65"></my-tooltip> -->
+                                    <text-outlet key="PartnerDevelopment"></text-outlet>
+                                </div>
+                                <div class="input-value col-sm">
+                                    <calc-option [items]="buttonItem" ref="tlInputConsumerPartnerDevelopment"></calc-option>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="TotalInvestment"></text-outlet>
+                                </div>
+                                <div class="col-sm output-value">
+                                    <calc-outlet ref="tlOutputConsumerPartnerDevelopTotalInvest"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="FtesRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputConsumerPartnerDevelopFTEs"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="BudgetRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputConsumerPartnerDevelopExp" format="$0,0"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6 p-0">
+                            <div class="data-row row partner-text">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="input-label col-sm col-lg-4">
+                                    <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton37"></my-tooltip>
+                                    <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D66"></my-tooltip> -->
+                                    <text-outlet key="PartnerIncentives"></text-outlet>
+                                </div>
+                                <div class="input-value col-sm">
+                                    <calc-option [items]="buttonItem" ref="tlInputConsumerPartnerIncentives"></calc-option>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="TotalInvestment"></text-outlet>
+                                </div>
+                                <div class="col-sm output-value">
+                                    <calc-outlet ref="tlOutputConsumerPartnerIncentivesClosing"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="FtesRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputConsumerPartnerIncentivesFTEs"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="BudgetRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputConsumerPartnerIncentivesExp" format="$0,0"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6 p-0">
+                            <div class="data-row row partner-text">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="input-label col-sm col-lg-4">
+                                    <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton38"></my-tooltip>
+                                    <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D67"></my-tooltip> -->
+                                    <text-outlet key="PartnerEducation"></text-outlet>
+                                </div>
+                                <div class="input-value col-sm">
+                                    <calc-option [items]="buttonItem" ref="tlInputConsumerPartnerEducation"></calc-option>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="TotalInvestment"></text-outlet>
+                                </div>
+                                <div class="col-sm output-value">
+                                    <calc-outlet ref="tlOutputConsumerPartnerEducationClosing"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="FtesRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm output-value">
+                                    <calc-outlet ref="tlOutputConsumerPartnerEducationFTEs"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="BudgetRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputConsumerPartnerEducationExp" format="$0,0"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <!--  <div class="partner-activities-holder row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="partner-activities-title">
+                        <text-outlet key="OneCommercialPartnerActivities"></text-outlet>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm col-md col-lg partner-text splitter">
+                            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D54"></my-tooltip>
+                            <text-outlet key="PartnerDevelopment"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg partner-text splitter">
+                            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D55"></my-tooltip>
+                            <text-outlet key="PartnerIncentives"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg partner-text">
+                            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D56"></my-tooltip>
+                            <text-outlet key="PartnerEducation"></text-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm-2 col-md-2 col-lg-2 input-label">
+                            <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                            <text-outlet key="Investment"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg input-value">
+                            <calc-option [items]="buttonItem" ref="tlInputConsumerPartnerDevelopment"></calc-option>
+                        </div>
+                        <div class="col-sm col-md col-lg input-value">
+                            <calc-option [items]="buttonItem" ref="tlInputConsumerPartnerIncentives"></calc-option>
+                        </div>
+                        <div class="col-sm col-md col-lg input-value">
+                            <calc-option [items]="buttonItem" ref="tlInputConsumerPartnerEducation"></calc-option>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm-2 col-md-2 col-lg-2 output-label">
+                            <text-outlet key="TotalInvestment"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputConsumerPartnerDevelopTotalInvest"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputConsumerPartnerIncentivesClosing"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputConsumerPartnerEducationClosing"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm-2 col-md-2 col-lg-2 output-label">
+                            <text-outlet key="FtesRequired"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputConsumerPartnerDevelopFTEs"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputConsumerPartnerIncentivesFTEs"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputConsumerPartnerEducationFTEs"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm-2 col-md-2 col-lg-2 output-label">
+                            <text-outlet key="BudgetRequired"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputConsumerPartnerDevelopExp" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputConsumerPartnerIncentivesExp" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputConsumerPartnerEducationExp" format="$0,0"></calc-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="partner-prioritization-holder row">
+                <div class="col-sm-12">
+                    <div class="partner-prioritization-title">
+                        <my-tooltip class="custom-tooltip" tooltipPlacement="right" useAsInnerHtml="true" key="TooltipConsumerPartnerPrioritization"></my-tooltip>
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton39"></my-tooltip> -->
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D68"></my-tooltip> -->
+                        <text-outlet key="OneCommercialPartnerPrioritization"></text-outlet>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm"></div>
+                        <div class="col-sm align-center">
+                            <text-outlet key="Oem"></text-outlet>
+                        </div>
+                        <div class="col-sm align-center">
+                            <text-outlet key="Retailer"></text-outlet>
+                        </div>
+                        <div class="col-sm align-center">
+                            <text-outlet key="Developer"></text-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm input-label">
+                            <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                            <text-outlet key="PercentTimeBudget"></text-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-stepper ref="tlInputConsumerPartner4Pct" min="0" [max]="maxLimitOEM" outputMin="0" [outputMax]="maxLimitOEM" step="1" scaler="100" format="0%"></calc-stepper>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-stepper ref="tlInputConsumerPartner5Pct" min="0" [max]="maxLimitRetailer" outputMin="0" [outputMax]="maxLimitRetailer" step="1" scaler="100" format="0%"></calc-stepper>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-input ref="tlInputConsumerPartner6Pct" scaler="100" format="0%" IsReadOnly=true></calc-input>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm output-label">
+                            <text-outlet key="FtesAllocated"></text-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputConsumerPartner4FTes"></calc-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputConsumerPartner5FTEs"></calc-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputConsumerPartner6FTEs"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm output-label">
+                            <text-outlet key="BudgetRequired"></text-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputConsumerPartner4Exp" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputConsumerPartner5Exp" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputConsumerPartner6Exp" format="$0,0"></calc-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="commercial-data animated slideInUp" *ngIf="type">
+        <div class="commercial-partner-container colorTwo">
+            <div class="partner-title">
+                <text-outlet key="CommercialTab4MainHeading"></text-outlet>
+            </div>
+            <!-- <div class="activities-prioritization-wrapper row"> -->
+            <div class="partner-activities-holder row">
+                <div class="col-sm-12">
+                    <div class="partner-activities-title">
+                        <text-outlet key="OneCommercialPartnerActivities"></text-outlet>
+                    </div>
+                    <div class="interactive-panel row">
+                        <div class="col-sm-12 col-xl-6 p-0">
+                            <div class="data-row row partner-text">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="input-label col-sm col-lg-4">
+                                    <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton25"></my-tooltip>
+                                    <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D54"></my-tooltip> -->
+                                    <text-outlet key="PartnerDevelopment"></text-outlet>
+                                </div>
+                                <div class="input-value col-sm">
+                                    <calc-option [items]="buttonItem" ref="tlInputCommercialPartnerDevelopment"></calc-option>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="TotalInvestment"></text-outlet>
+                                </div>
+                                <div class="col-sm output-value">
+                                    <calc-outlet ref="tlOutputCommercialPartnerDevelopTotalInvest"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="FtesRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputCommercialPartnerDevelopFTEs"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="BudgetRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputCommercialPartnerDevelopExp" format="$0,0"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6 p-0">
+                            <div class="data-row row partner-text">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="input-label col-sm col-lg-4">
+                                    <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton26"></my-tooltip>
+                                    <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D55"></my-tooltip> -->
+                                    <text-outlet key="PartnerIncentives"></text-outlet>
+                                </div>
+                                <div class="input-value col-sm">
+                                    <calc-option [items]="buttonItem" ref="tlInputCommercialPartnerIncentives"></calc-option>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="TotalInvestment"></text-outlet>
+                                </div>
+                                <div class="col-sm output-value">
+                                    <calc-outlet ref="tlOutputCommercialPartnerIncentivesTotalInvest"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="FtesRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputCommercialPartnerIncentivesFTEs"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="BudgetRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputCommercialPartnerIncentivesExp" format="$0,0"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6 p-0">
+                            <div class="data-row row partner-text">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="input-label col-sm col-lg-4">
+                                    <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton27"></my-tooltip>
+                                    <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D56"></my-tooltip> -->
+                                    <text-outlet key="PartnerEducation"></text-outlet>
+                                </div>
+                                <div class="input-value col-sm">
+                                    <calc-option [items]="buttonItem" ref="tlInputCommercialPartnerEducation"></calc-option>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="TotalInvestment"></text-outlet>
+                                </div>
+                                <div class="col-sm output-value">
+                                    <calc-outlet ref="tlOutputCommercialPartnerEducationTotalInvest"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="FtesRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputCommercialPartnerEducationFTEs"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                            <div class="data-row row">
+                                <!-- <div class="col-sm-2 blank"></div> -->
+                                <div class="col-sm col-lg-4 output-label">
+                                    <text-outlet key="BudgetRequired"></text-outlet>
+                                </div>
+                                <div class="col-sm  output-value">
+                                    <calc-outlet ref="tlOutputCommercialPartnerEducationExp" format="$0,0"></calc-outlet>
+                                </div>
+                                <!-- <div class="col-sm-4 blank"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="partner-activities-holder row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="partner-activities-title">
+                        <text-outlet key="OneCommercialPartnerActivities"></text-outlet>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm col-md col-lg partner-activities-align-center splitter">
+                            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D54"></my-tooltip>
+                            <text-outlet key="PartnerDevelopment"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg partner-activities-align-center splitter">
+                            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D55"></my-tooltip>
+                            <text-outlet key="PartnerIncentives"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg partner-activities-align-center">
+                            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D56"></my-tooltip>
+                            <text-outlet key="PartnerEducation"></text-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm-2 col-md-2 col-lg-2 input-label">
+                            <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                            <text-outlet key="Investment"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg">
+                            <calc-option [items]="buttonItem" ref="tlInputCommercialPartnerDevelopment"></calc-option>
+                        </div>
+                        <div class="col-sm col-md col-lg">
+                            <calc-option [items]="buttonItem" ref="tlInputCommercialPartnerIncentives"></calc-option>
+                        </div>
+                        <div class="col-sm col-md col-lg">
+                            <calc-option [items]="buttonItem" ref="tlInputCommercialPartnerEducation"></calc-option>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm-2 col-md-2 col-lg-2 output-label">
+                            <text-outlet key="TotalInvestment"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputCommercialPartnerDevelopTotalInvest"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputCommercialPartnerIncentivesTotalInvest"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputCommercialPartnerEducationTotalInvest"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm-2 col-md-2 col-lg-2 output-label">
+                            <text-outlet key="FtesRequired"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputCommercialPartnerDevelopFTEs"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputCommercialPartnerIncentivesFTEs"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputCommercialPartnerEducationFTEs"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm-2 col-md-2 col-lg-2 output-label">
+                            <text-outlet key="BudgetRequired"></text-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputCommercialPartnerDevelopExp" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputCommercialPartnerIncentivesExp" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="col-sm col-md col-lg output-value">
+                            <calc-outlet ref="tlOutputCommercialPartnerEducationExp" format="$0,0"></calc-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="partner-prioritization-holder row">
+                <div class="col-sm-12">
+                    <div class="partner-prioritization-title">
+                        <my-tooltip class="custom-tooltip" tooltipPlacement="right" useAsInnerHtml="true" key="TooltipCommercialPartnerPrioritization"></my-tooltip>
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="tlOutputInfoButton28"></my-tooltip> -->
+                        <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="InfoButton!D57"></my-tooltip> -->
+                        <text-outlet key="OneCommercialPartnerPrioritization"></text-outlet>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm"></div>
+                        <div class="col-sm align-center">
+                            <text-outlet key="IPServices"></text-outlet>
+                        </div>
+                        <div class="col-sm align-center">
+                            <text-outlet key="SystemIntegrators"></text-outlet>
+                        </div>
+                        <div class="col-sm align-center">
+                            <text-outlet key="ManagedServices"></text-outlet>
+                        </div>
+                        <div class="col-sm align-center">
+                            <text-outlet key="Channels"></text-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm input-label">
+                            <i class="fa fa-circle icon-circle" aria-hidden="true"></i>
+                            <text-outlet key="PercentTimeBudget"></text-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-stepper ref="tlInputCommercialPartner1Pct" min="0" [max]="maxLimitISV" outputMin="0" [outputMax]="maxLimitISV" step="1" format="0%" scaler="100"></calc-stepper>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-stepper ref="tlInputCommercialPartner2Pct" min="0" [max]="maxLimitSI" outputMin="0" [outputMax]="maxLimitSI" step="1" format="0%" scaler="100"></calc-stepper>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-stepper ref="tlInputCommercialPartner3Pct" min="0" [max]="maxLimitMS" outputMin="0" [outputMax]="maxLimitMS" step="1" format="0%" scaler="100"></calc-stepper>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-input ref="tlInputCommercialPartner4Pct" scaler="100" format="0%" IsReadOnly=true></calc-input>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm output-label">
+                            <text-outlet key="FtesAllocated"></text-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputCommercialPartner1FTes"></calc-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputCommercialPartner2FTEs"></calc-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputCommercialPartner3FTEs"></calc-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputCommercialPartner4FTEs"></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="data-row row">
+                        <div class="col-sm output-label">
+                            <text-outlet key="BudgetRequired"></text-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputCommercialPartner1Exp" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputCommercialPartner2Exp" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputCommercialPartner3Exp" format="$0,0"></calc-outlet>
+                        </div>
+                        <div class="col-sm output-value">
+                            <calc-outlet ref="tlOutputCommercialPartner4Exp" format="$0,0"></calc-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="cloudMigrationIsVisible" class="cloud-migration-holder row">
+                <div class="col-md-6 col-sm-12 p-0">
+                    <div class="left-section">
+                        <div class="data-row row">
+                            <div class="report-title">
+                                <text-outlet key="CloudMigration"></text-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="col-sm">
+                                <div class="migration-report-holder">
+                                    <piechart rangeRef="tlOutputGraphsCloudSubs, tlOutputGraphsOnPremiseLicense" seriesLabels="tlOutputGraphsLabelCloudSubs, tlOutputGraphsLabelOnPremiseLicense" numberFormat="0%">
+                                    </piechart>
+                                </div>
+                                <div class="migration-report-label">
+                                    <text-outlet key="MigrationRate"></text-outlet>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="col-sm-9 col-md-8"></div>
+                            <div class="col-sm-3 col-md-4 align-center">
+                                <div>
+                                    <calc-stepper ref="tlInputCommercialCloudMigration" min="0" max="15" outputMin="0" outputMax="15" step="1" scaler="100" format="0%"></calc-stepper>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="col-sm-9 col-md-8">
+                                <div class="internalReadiness">
+                                    <text-outlet key="InternalReadiness"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-md-4 align-center">
+                                <div>
+                                    <calc-outlet ref="tlOutputCommercialInternalReadiness"></calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 p-0">
+                    <div class="right-section">
+                        <div class="data-row row">
+                            <div class="report-title col-sm-12">
+                                <text-outlet key="CloudMigration"></text-outlet>
+                            </div>
+                            <div class="migration-report-holder col-lg col-sm col-md">
+                                <basiccolumn rangeRef="tlOutputGraphsCloudMigrate, tlOutputGraphsCloudChurn" seriesLabels="tlOutputGraphsLabelCloudMigrated, tlOutputGraphsLabelCloudChurn" height=400 numberFormat='0,0'>
+                                </basiccolumn>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

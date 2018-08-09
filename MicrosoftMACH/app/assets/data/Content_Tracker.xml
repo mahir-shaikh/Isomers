@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<workbook>
+<r n="exportParamOptimize" s="global" ts="Control" ta="$C$3"></r>
+<r n="nmSeg1" s="global" ts="&apos;C:\Users\Lenovo\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\NPSP9L1I\[MACHSkillUpT1R1_PKR AME_20170831.xlsm]Glossary&apos;" ta="$D$51"></r>
+<r n="xxGENxx.AmbitionAllocation" s="global" ts="tx_General" ta="$C$74"></r>
+<r n="xxGENxx.ATUSalary" s="global" ts="tx_General" ta="$C$177"></r>
+<r n="xxGENxx.BudgetRequired" s="global" ts="tx_General" ta="$C$25"></r>
+<r n="xxGENxx.Channels" s="global" ts="tx_General" ta="$C$83"></r>
+<r n="xxGENxx.ChartTitle0" s="global" ts="tx_General" ta="$C$94"></r>
+<r n="xxGENxx.ChartTitle1" s="global" ts="tx_General" ta="$C$95"></r>
+<r n="xxGENxx.ChartTitle2" s="global" ts="tx_General" ta="$C$96"></r>
+<r n="xxGENxx.ChartTitle3" s="global" ts="tx_General" ta="$C$97"></r>
+<r n="xxGENxx.ChartTitle4" s="global" ts="tx_General" ta="$C$98"></r>
+<r n="xxGENxx.CloudMigration" s="global" ts="tx_General" ta="$C$92"></r>
+<r n="xxGENxx.COGS" s="global" ts="tx_General" ta="$C$29"></r>
+<r n="xxGENxx.Collaboration" s="global" ts="tx_General" ta="$C$67"></r>
+<r n="xxGENxx.CommercialSegmentAllocation" s="global" ts="tx_General" ta="$C$70"></r>
+<r n="xxGENxx.CommercialTab1MainHeading" s="global" ts="tx_General" ta="$C$153"></r>
+<r n="xxGENxx.CommercialTab2MainHeading" s="global" ts="tx_General" ta="$C$154"></r>
+<r n="xxGENxx.CommercialTab3MainHeading" s="global" ts="tx_General" ta="$C$155"></r>
+<r n="xxGENxx.CommercialTab4MainHeading" s="global" ts="tx_General" ta="$C$156"></r>
+<r n="xxGENxx.Commit" s="global" ts="tx_General" ta="$C$41"></r>
+<r n="xxGENxx.CommitMsgEtuLessThanZero" s="global" ts="tx_General" ta="$C$159"></r>
+<r n="xxGENxx.CommitMsgEtuMoreThanZero" s="global" ts="tx_General" ta="$C$160"></r>
+<r n="xxGENxx.CommitMsgEtuZero" s="global" ts="tx_General" ta="$C$158"></r>
+<r n="xxGENxx.Consumer" s="global" ts="tx_General" ta="$C$102"></r>
+<r n="xxGENxx.ConsumerForecasting" s="global" ts="tx_General" ta="$C$55"></r>
+<r n="xxGENxx.ConsumerNavPartner" s="global" ts="tx_General" ta="$C$165"></r>
+<r n="xxGENxx.ConsumerRevenue" s="global" ts="tx_General" ta="$C$58"></r>
+<r n="xxGENxx.ConsumerSegmentAllocation" s="global" ts="tx_General" ta="$C$73"></r>
+<r n="xxGENxx.ConsumerTab1MainHeading" s="global" ts="tx_General" ta="$C$149"></r>
+<r n="xxGENxx.ConsumerTab2MainHeading" s="global" ts="tx_General" ta="$C$150"></r>
+<r n="xxGENxx.ConsumerTab3MainHeading" s="global" ts="tx_General" ta="$C$151"></r>
+<r n="xxGENxx.ConsumerTab4MainHeading" s="global" ts="tx_General" ta="$C$152"></r>
+<r n="xxGENxx.Cost" s="global" ts="tx_General" ta="$C$27"></r>
+<r n="xxGENxx.CTUSalary" s="global" ts="tx_General" ta="$C$179"></r>
+<r n="xxGENxx.Dashboard1KpiName0" s="global" ts="tx_General" ta="$C$105"></r>
+<r n="xxGENxx.Dashboard1KpiName1" s="global" ts="tx_General" ta="$C$106"></r>
+<r n="xxGENxx.Dashboard1KpiName2" s="global" ts="tx_General" ta="$C$107"></r>
+<r n="xxGENxx.Dashboard1KpiName3" s="global" ts="tx_General" ta="$C$108"></r>
+<r n="xxGENxx.Dashboard1KpiName4" s="global" ts="tx_General" ta="$C$109"></r>
+<r n="xxGENxx.Dashboard2KpiName0" s="global" ts="tx_General" ta="$C$110"></r>
+<r n="xxGENxx.Dashboard2KpiName1" s="global" ts="tx_General" ta="$C$111"></r>
+<r n="xxGENxx.Dashboard2KpiName2" s="global" ts="tx_General" ta="$C$112"></r>
+<r n="xxGENxx.Dashboard2KpiName3" s="global" ts="tx_General" ta="$C$113"></r>
+<r n="xxGENxx.Dashboard3KpiName0" s="global" ts="tx_General" ta="$C$114"></r>
+<r n="xxGENxx.Dashboard3KpiName1" s="global" ts="tx_General" ta="$C$115"></r>
+<r n="xxGENxx.Dashboard3KpiName2" s="global" ts="tx_General" ta="$C$116"></r>
+<r n="xxGENxx.Dashboard3KpiName3" s="global" ts="tx_General" ta="$C$117"></r>
+<r n="xxGENxx.Dashboard3KpiName4" s="global" ts="tx_General" ta="$C$118"></r>
+<r n="xxGENxx.DataCenters" s="global" ts="tx_General" ta="$C$48"></r>
+<r n="xxGENxx.DataCenterUtilization" s="global" ts="tx_General" ta="$C$49"></r>
+<r n="xxGENxx.Decrease" s="global" ts="tx_General" ta="$C$18"></r>
+<r n="xxGENxx.Developer" s="global" ts="tx_General" ta="$C$85"></r>
+<r n="xxGENxx.Devices" s="global" ts="tx_General" ta="$C$161"></r>
+<r n="xxGENxx.DirectSalesSalary" s="global" ts="tx_General" ta="$C$33"></r>
+<r n="xxGENxx.EnterPassword" s="global" ts="tx_General" ta="$C$171"></r>
+<r n="xxGENxx.Enterprise" s="global" ts="tx_General" ta="$C$101"></r>
+<r n="xxGENxx.EnterpriseForecasting" s="global" ts="tx_General" ta="$C$59"></r>
+<r n="xxGENxx.EnterpriseOperatingUnitResources" s="global" ts="tx_General" ta="$C$75"></r>
+<r n="xxGENxx.EnterpriseRevenue" s="global" ts="tx_General" ta="$C$61"></r>
+<r n="xxGENxx.Enterpriseservices" s="global" ts="tx_General" ta="$C$175"></r>
+<r n="xxGENxx.ErLabelPlatform1" s="global" ts="tx_General" ta="$C$119"></r>
+<r n="xxGENxx.ErLabelPlatform2" s="global" ts="tx_General" ta="$C$120"></r>
+<r n="xxGENxx.ErLabelPlatform3" s="global" ts="tx_General" ta="$C$121"></r>
+<r n="xxGENxx.ErLabelProd1Offerring1" s="global" ts="tx_General" ta="$C$125"></r>
+<r n="xxGENxx.ErLabelProd1Offerring2" s="global" ts="tx_General" ta="$C$126"></r>
+<r n="xxGENxx.ErLabelProd2Offerring1" s="global" ts="tx_General" ta="$C$130"></r>
+<r n="xxGENxx.ErLabelProd2Offerring2" s="global" ts="tx_General" ta="$C$131"></r>
+<r n="xxGENxx.ErLabelProd3Offerring1" s="global" ts="tx_General" ta="$C$135"></r>
+<r n="xxGENxx.ErLabelProd3Offerring2" s="global" ts="tx_General" ta="$C$136"></r>
+<r n="xxGENxx.ErPlatformChartHeading" s="global" ts="tx_General" ta="$C$124"></r>
+<r n="xxGENxx.ErPlatformDataHeading" s="global" ts="tx_General" ta="$C$123"></r>
+<r n="xxGENxx.ErPlatformMainHeading" s="global" ts="tx_General" ta="$C$122"></r>
+<r n="xxGENxx.ErProd1ChartHeading" s="global" ts="tx_General" ta="$C$129"></r>
+<r n="xxGENxx.ErProd1DataHeading" s="global" ts="tx_General" ta="$C$128"></r>
+<r n="xxGENxx.ErProd1MainHeading" s="global" ts="tx_General" ta="$C$127"></r>
+<r n="xxGENxx.ErProd2ChartHeading" s="global" ts="tx_General" ta="$C$134"></r>
+<r n="xxGENxx.ErProd2DataHeading" s="global" ts="tx_General" ta="$C$133"></r>
+<r n="xxGENxx.ErProd2MainHeading" s="global" ts="tx_General" ta="$C$132"></r>
+<r n="xxGENxx.ErProd3ChartHeading" s="global" ts="tx_General" ta="$C$139"></r>
+<r n="xxGENxx.ErProd3DataHeading" s="global" ts="tx_General" ta="$C$138"></r>
+<r n="xxGENxx.ErProd3MainHeading" s="global" ts="tx_General" ta="$C$137"></r>
+<r n="xxGENxx.EtusRequired" s="global" ts="tx_General" ta="$C$23"></r>
+<r n="xxGENxx.FieldSalesSalary" s="global" ts="tx_General" ta="$C$182"></r>
+<r n="xxGENxx.FTEs" s="global" ts="tx_General" ta="$C$51"></r>
+<r n="xxGENxx.FtesAllocated" s="global" ts="tx_General" ta="$C$26"></r>
+<r n="xxGENxx.FtesRequired" s="global" ts="tx_General" ta="$C$24"></r>
+<r n="xxGENxx.GenAdministrative" s="global" ts="tx_General" ta="$C$38"></r>
+<r n="xxGENxx.GlobalDemandCenter" s="global" ts="tx_General" ta="$C$65"></r>
+<r n="xxGENxx.GlobalDemandCenterSalary" s="global" ts="tx_General" ta="$C$181"></r>
+<r n="xxGENxx.GrossProfit" s="global" ts="tx_General" ta="$C$104"></r>
+<r n="xxGENxx.Growth" s="global" ts="tx_General" ta="$C$11"></r>
+<r n="xxGENxx.ImportSuccessConfirmMessage" s="global" ts="tx_General" ta="$C$163"></r>
+<r n="xxGENxx.IncorrectPasswordMsg" s="global" ts="tx_General" ta="$C$172"></r>
+<r n="xxGENxx.Increase" s="global" ts="tx_General" ta="$C$20"></r>
+<r n="xxGENxx.Infrastructure" s="global" ts="tx_General" ta="$C$15"></r>
+<r n="xxGENxx.InMillions" s="global" ts="tx_General" ta="$C$169"></r>
+<r n="xxGENxx.InsideSalesSalary" s="global" ts="tx_General" ta="$C$34"></r>
+<r n="xxGENxx.IntelligentCloud" s="global" ts="tx_General" ta="$C$60"></r>
+<r n="xxGENxx.InternalReadiness" s="global" ts="tx_General" ta="$C$68"></r>
+<r n="xxGENxx.Investment" s="global" ts="tx_General" ta="$C$81"></r>
+<r n="xxGENxx.IPServices" s="global" ts="tx_General" ta="$C$89"></r>
+<r n="xxGENxx.LastRound" s="global" ts="tx_General" ta="$C$57"></r>
+<r n="xxGENxx.MainTab1" s="global" ts="tx_General" ta="$C$43"></r>
+<r n="xxGENxx.MainTab2" s="global" ts="tx_General" ta="$C$44"></r>
+<r n="xxGENxx.MainTab3" s="global" ts="tx_General" ta="$C$45"></r>
+<r n="xxGENxx.MainTab4" s="global" ts="tx_General" ta="$C$46"></r>
+<r n="xxGENxx.MainTab5" s="global" ts="tx_General" ta="$C$47"></r>
+<r n="xxGENxx.Maintain" s="global" ts="tx_General" ta="$C$19"></r>
+<r n="xxGENxx.ManagedServices" s="global" ts="tx_General" ta="$C$91"></r>
+<r n="xxGENxx.Margin" s="global" ts="tx_General" ta="$C$12"></r>
+<r n="xxGENxx.Marketing" s="global" ts="tx_General" ta="$C$16"></r>
+<r n="xxGENxx.MarketingBudget" s="global" ts="tx_General" ta="$C$99"></r>
+<r n="xxGENxx.MarketingExpense" s="global" ts="tx_General" ta="$C$31"></r>
+<r n="xxGENxx.MigrationRate" s="global" ts="tx_General" ta="$C$93"></r>
+<r n="xxGENxx.MiscGenAdministrative" s="global" ts="tx_General" ta="$C$5"></r>
+<r n="xxGENxx.NewSubscriptionDevices" s="global" ts="tx_General" ta="$C$56"></r>
+<r n="xxGENxx.NextRound" s="global" ts="tx_General" ta="$C$164"></r>
+<r n="xxGENxx.Oem" s="global" ts="tx_General" ta="$C$162"></r>
+<r n="xxGENxx.OneCommercialPartnerActivities" s="global" ts="tx_General" ta="$C$87"></r>
+<r n="xxGENxx.OneCommercialPartnerPrioritization" s="global" ts="tx_General" ta="$C$88"></r>
+<r n="xxGENxx.Operations" s="global" ts="tx_General" ta="$C$14"></r>
+<r n="xxGENxx.OperationsSalary" s="global" ts="tx_General" ta="$C$39"></r>
+<r n="xxGENxx.OpsInfrastructureChartHeading" s="global" ts="tx_General" ta="$C$147"></r>
+<r n="xxGENxx.OpsInfrastructureDataHeading" s="global" ts="tx_General" ta="$C$145"></r>
+<r n="xxGENxx.OpsInfrastructureDataSubHeading" s="global" ts="tx_General" ta="$C$146"></r>
+<r n="xxGENxx.OpsInfrastructureMainHeading" s="global" ts="tx_General" ta="$C$144"></r>
+<r n="xxGENxx.OpsMarketingMainHeading" s="global" ts="tx_General" ta="$C$148"></r>
+<r n="xxGENxx.OpsOperationDataHeading" s="global" ts="tx_General" ta="$C$141"></r>
+<r n="xxGENxx.OpsOperationDataSubHeading" s="global" ts="tx_General" ta="$C$142"></r>
+<r n="xxGENxx.OpsOperationMainHeading" s="global" ts="tx_General" ta="$C$140"></r>
+<r n="xxGENxx.OpsOperatiponChartHeading" s="global" ts="tx_General" ta="$C$143"></r>
+<r n="xxGENxx.PartnerActivities" s="global" ts="tx_General" ta="$C$32"></r>
+<r n="xxGENxx.PartnerDevelopment" s="global" ts="tx_General" ta="$C$78"></r>
+<r n="xxGENxx.PartnerEducation" s="global" ts="tx_General" ta="$C$80"></r>
+<r n="xxGENxx.PartnerGroupSalary" s="global" ts="tx_General" ta="$C$35"></r>
+<r n="xxGENxx.PartnerIncentives" s="global" ts="tx_General" ta="$C$79"></r>
+<r n="xxGENxx.PartnerPrioritization" s="global" ts="tx_General" ta="$C$82"></r>
+<r n="xxGENxx.Password" s="global" ts="tx_General" ta="$C$173"></r>
+<r n="xxGENxx.PercentTimeBudget" s="global" ts="tx_General" ta="$C$86"></r>
+<r n="xxGENxx.PercTotalBudget" s="global" ts="tx_General" ta="$C$71"></r>
+<r n="xxGENxx.PercTotalRevenue" s="global" ts="tx_General" ta="$C$37"></r>
+<r n="xxGENxx.PersonalComputing" s="global" ts="tx_General" ta="$C$54"></r>
+<r n="xxGENxx.Platform" s="global" ts="tx_General" ta="$C$13"></r>
+<r n="xxGENxx.PnlMainHeading" s="global" ts="tx_General" ta="$C$157"></r>
+<r n="xxGENxx.PnlNote" s="global" ts="tx_General" ta="$C$170"></r>
+<r n="xxGENxx.PricingStrategy" s="global" ts="tx_General" ta="$C$52"></r>
+<r n="xxGENxx.ProductivityAndBusiness" s="global" ts="tx_General" ta="$C$53"></r>
+<r n="xxGENxx.RecommededUtilization" s="global" ts="tx_General" ta="$C$28"></r>
+<r n="xxGENxx.Retailer" s="global" ts="tx_General" ta="$C$84"></r>
+<r n="xxGENxx.Revenue" s="global" ts="tx_General" ta="$C$103"></r>
+<r n="xxGENxx.SalesMarketingExpense" s="global" ts="tx_General" ta="$C$30"></r>
+<r n="xxGENxx.SalesServicesStrategy" s="global" ts="tx_General" ta="$C$76"></r>
+<r n="xxGENxx.ServicesSalary" s="global" ts="tx_General" ta="$C$180"></r>
+<r n="xxGENxx.SignificantDecrease" s="global" ts="tx_General" ta="$C$17"></r>
+<r n="xxGENxx.SignificantIncrease" s="global" ts="tx_General" ta="$C$21"></r>
+<r n="xxGENxx.SMB" s="global" ts="tx_General" ta="$C$63"></r>
+<r n="xxGENxx.SMBForecasting" s="global" ts="tx_General" ta="$C$62"></r>
+<r n="xxGENxx.SMC" s="global" ts="tx_General" ta="$C$100"></r>
+<r n="xxGENxx.SMCServices" s="global" ts="tx_General" ta="$C$176"></r>
+<r n="xxGENxx.SoftwareEngineering" s="global" ts="tx_General" ta="$C$64"></r>
+<r n="xxGENxx.StartRound" s="global" ts="tx_General" ta="$C$42"></r>
+<r n="xxGENxx.STUSalary" s="global" ts="tx_General" ta="$C$178"></r>
+<r n="xxGENxx.SubTitle" s="global" ts="tx_General" ta="$C$4"></r>
+<r n="xxGENxx.SupplyChain" s="global" ts="tx_General" ta="$C$66"></r>
+<r n="xxGENxx.SystemIntegrators" s="global" ts="tx_General" ta="$C$90"></r>
+<r n="xxGENxx.TalentSkillAnalysis" s="global" ts="tx_General" ta="$C$77"></r>
+<r n="xxGENxx.ThisRound" s="global" ts="tx_General" ta="$C$72"></r>
+<r n="xxGENxx.Title" s="global" ts="tx_General" ta="$C$3"></r>
+<r n="xxGENxx.TooltipCommercialPartnerPrioritization" s="global" ts="tx_General" ta="$C$167"></r>
+<r n="xxGENxx.TooltipConsumerPartnerPrioritization" s="global" ts="tx_General" ta="$C$166"></r>
+<r n="xxGENxx.TotalDataCenters" s="global" ts="tx_General" ta="$C$50"></r>
+<r n="xxGENxx.TotalGenAdministrative" s="global" ts="tx_General" ta="$C$6"></r>
+<r n="xxGENxx.TotalGrossMargin" s="global" ts="tx_General" ta="$C$8"></r>
+<r n="xxGENxx.TotalGrossProfit" s="global" ts="tx_General" ta="$C$9"></r>
+<r n="xxGENxx.TotalInvestment" s="global" ts="tx_General" ta="$C$22"></r>
+<r n="xxGENxx.TotalMarketingBudget" s="global" ts="tx_General" ta="$C$69"></r>
+<r n="xxGENxx.TotalOperatingMargin" s="global" ts="tx_General" ta="$C$10"></r>
+<r n="xxGENxx.TotalOperatingProfit" s="global" ts="tx_General" ta="$C$7"></r>
+<r n="xxGENxx.TotalSalesMarketingExpense" s="global" ts="tx_General" ta="$C$36"></r>
+<r n="xxGENxx.UnableToExportMsg" s="global" ts="tx_General" ta="$C$168"></r>
+<r n="xxGENxx.UnallocatedSalary" s="global" ts="tx_General" ta="$C$40"></r>
+<r n="xxGENxx.WobblerMessage" s="global" ts="tx_General" ta="$C$174"></r>
+<r n="xxSim0Tool1" s="global" ts="Control" ta="$C$2"></r>
+<r n="xxW101xx.alt1" s="global" ts="tx_Wobblers" ta="$C$12"></r>
+<r n="xxW101xx.alt1_feedback" s="global" ts="tx_Wobblers" ta="$C$18"></r>
+<r n="xxW101xx.alt1_narrative" s="global" ts="tx_Wobblers" ta="$C$15"></r>
+<r n="xxW101xx.alt2" s="global" ts="tx_Wobblers" ta="$C$13"></r>
+<r n="xxW101xx.alt2_feedback" s="global" ts="tx_Wobblers" ta="$C$19"></r>
+<r n="xxW101xx.alt2_narrative" s="global" ts="tx_Wobblers" ta="$C$16"></r>
+<r n="xxW101xx.alt3" s="global" ts="tx_Wobblers" ta="$C$14"></r>
+<r n="xxW101xx.alt3_feedback" s="global" ts="tx_Wobblers" ta="$C$20"></r>
+<r n="xxW101xx.alt3_narrative" s="global" ts="tx_Wobblers" ta="$C$17"></r>
+<r n="xxW101xx.Content" s="global" ts="tx_Wobblers" ta="$C$4"></r>
+<r n="xxW101xx.fb_generic" s="global" ts="tx_Wobblers" ta="$C$22"></r>
+<r n="xxW101xx.feedbackimage" s="global" ts="tx_Wobblers" ta="$C$21"></r>
+<r n="xxW101xx.icon" s="global" ts="tx_Wobblers" ta="$C$8"></r>
+<r n="xxW101xx.ID" s="global" ts="tx_Wobblers" ta="$C$2"></r>
+<r n="xxW101xx.image" s="global" ts="tx_Wobblers" ta="$C$9"></r>
+<r n="xxW101xx.name" s="global" ts="tx_Wobblers" ta="$C$5"></r>
+<r n="xxW101xx.narrative" s="global" ts="tx_Wobblers" ta="$C$11"></r>
+<r n="xxW101xx.PageType" s="global" ts="tx_Wobblers" ta="$C$3"></r>
+<r n="xxW101xx.round" s="global" ts="tx_Wobblers" ta="$C$6"></r>
+<r n="xxW101xx.time" s="global" ts="tx_Wobblers" ta="$C$7"></r>
+<r n="xxW101xx.type" s="global" ts="tx_Wobblers" ta="$C$10"></r>
+<r n="xxW102xx.alt1" s="global" ts="tx_Wobblers" ta="$C$34"></r>
+<r n="xxW102xx.alt1_feedback" s="global" ts="tx_Wobblers" ta="$C$40"></r>
+<r n="xxW102xx.alt1_narrative" s="global" ts="tx_Wobblers" ta="$C$37"></r>
+<r n="xxW102xx.alt2" s="global" ts="tx_Wobblers" ta="$C$35"></r>
+<r n="xxW102xx.alt2_feedback" s="global" ts="tx_Wobblers" ta="$C$41"></r>
+<r n="xxW102xx.alt2_narrative" s="global" ts="tx_Wobblers" ta="$C$38"></r>
+<r n="xxW102xx.alt3" s="global" ts="tx_Wobblers" ta="$C$36"></r>
+<r n="xxW102xx.alt3_feedback" s="global" ts="tx_Wobblers" ta="$C$42"></r>
+<r n="xxW102xx.alt3_narrative" s="global" ts="tx_Wobblers" ta="$C$39"></r>
+<r n="xxW102xx.Content" s="global" ts="tx_Wobblers" ta="$C$27"></r>
+<r n="xxW102xx.icon" s="global" ts="tx_Wobblers" ta="$C$31"></r>
+<r n="xxW102xx.ID" s="global" ts="tx_Wobblers" ta="$C$25"></r>
+<r n="xxW102xx.image" s="global" ts="tx_Wobblers" ta="$C$32"></r>
+<r n="xxW102xx.name" s="global" ts="tx_Wobblers" ta="$C$28"></r>
+<r n="xxW102xx.narrative" s="global" ts="tx_Wobblers" ta="$C$33"></r>
+<r n="xxW102xx.PageType" s="global" ts="tx_Wobblers" ta="$C$26"></r>
+<r n="xxW102xx.round" s="global" ts="tx_Wobblers" ta="$C$29"></r>
+<r n="xxW102xx.time" s="global" ts="tx_Wobblers" ta="$C$30"></r>
+<r n="xxW203xx.alt1" s="global" ts="tx_Wobblers" ta="$C$57"></r>
+<r n="xxW203xx.alt1_feedback" s="global" ts="tx_Wobblers" ta="$C$63"></r>
+<r n="xxW203xx.alt1_narrative" s="global" ts="tx_Wobblers" ta="$C$60"></r>
+<r n="xxW203xx.alt2" s="global" ts="tx_Wobblers" ta="$C$58"></r>
+<r n="xxW203xx.alt2_feedback" s="global" ts="tx_Wobblers" ta="$C$64"></r>
+<r n="xxW203xx.alt2_narrative" s="global" ts="tx_Wobblers" ta="$C$61"></r>
+<r n="xxW203xx.alt3" s="global" ts="tx_Wobblers" ta="$C$59"></r>
+<r n="xxW203xx.alt3_feedback" s="global" ts="tx_Wobblers" ta="$C$65"></r>
+<r n="xxW203xx.alt3_narrative" s="global" ts="tx_Wobblers" ta="$C$62"></r>
+<r n="xxW203xx.Content" s="global" ts="tx_Wobblers" ta="$C$50"></r>
+<r n="xxW203xx.fb_generic" s="global" ts="tx_Wobblers" ta="$C$67"></r>
+<r n="xxW203xx.feedbackimage" s="global" ts="tx_Wobblers" ta="$C$66"></r>
+<r n="xxW203xx.icon" s="global" ts="tx_Wobblers" ta="$C$54"></r>
+<r n="xxW203xx.ID" s="global" ts="tx_Wobblers" ta="$C$48"></r>
+<r n="xxW203xx.image" s="global" ts="tx_Wobblers" ta="$C$55"></r>
+<r n="xxW203xx.name" s="global" ts="tx_Wobblers" ta="$C$51"></r>
+<r n="xxW203xx.narrative" s="global" ts="tx_Wobblers" ta="$C$56"></r>
+<r n="xxW203xx.PageType" s="global" ts="tx_Wobblers" ta="$C$49"></r>
+<r n="xxW203xx.round" s="global" ts="tx_Wobblers" ta="$C$52"></r>
+<r n="xxW203xx.time" s="global" ts="tx_Wobblers" ta="$C$53"></r>
+<c f="Ambition Allocation" a="$C$74" r="74" c="3" w="tx_General" v="Ambition Allocation" fmt="General">
+</c>
+<c f="Account Team Unit Salary" a="$C$177" r="177" c="3" w="tx_General" v="Account Team Unit Salary" fmt="General">
+</c>
+<c f="Budget Required" a="$C$25" r="25" c="3" w="tx_General" v="Budget Required" fmt="General">
+</c>
+<c f="Channels" a="$C$83" r="83" c="3" w="tx_General" v="Channels" fmt="General">
+</c>
+<c f="Customer Success" a="$C$94" r="94" c="3" w="tx_General" v="Customer Success" fmt="General">
+</c>
+<c f="Revenue" a="$C$95" r="95" c="3" w="tx_General" v="Revenue" fmt="General">
+</c>
+<c f="Operating Margin" a="$C$96" r="96" c="3" w="tx_General" v="Operating Margin" fmt="General">
+</c>
+<c f="CSAT" a="$C$97" r="97" c="3" w="tx_General" v="CSAT" fmt="General">
+</c>
+<c f="Employee Engagement" a="$C$98" r="98" c="3" w="tx_General" v="Employee Engagement" fmt="General">
+</c>
+<c f="Cloud Migration" a="$C$92" r="92" c="3" w="tx_General" v="Cloud Migration" fmt="General">
+</c>
+<c f="Cost of Goods Sold" a="$C$29" r="29" c="3" w="tx_General" v="Cost of Goods Sold" fmt="General">
+</c>
+<c f="Collaboration" a="$C$67" r="67" c="3" w="tx_General" v="Collaboration" fmt="General">
+</c>
+<c f="Commercial Segment Allocation" a="$C$70" r="70" c="3" w="tx_General" v="Commercial Segment Allocation" fmt="General">
+</c>
+<c f="Pricing" a="$C$153" r="153" c="3" w="tx_General" v="Pricing" fmt="General">
+</c>
+<c f="Expertise Development" a="$C$154" r="154" c="3" w="tx_General" v="Expertise Development" fmt="General">
+</c>
+<c f="Resources" a="$C$155" r="155" c="3" w="tx_General" v="Resources" fmt="General">
+</c>
+<c f="One Commercial Partner" a="$C$156" r="156" c="3" w="tx_General" v="One Commercial Partner" fmt="General">
+</c>
+<c f="Commit" a="$C$41" r="41" c="3" w="tx_General" v="Commit" fmt="General">
+</c>
+<c f="You have used more ETUs than you have available to you this year. Please re-adjust your investments before committing." a="$C$159" r="159" c="3" w="tx_General" v="You have used more ETUs than you have available to you this year. Please re-adjust your investments before committing." fmt="General">
+</c>
+<c f="You have not used all of your available ETUs. These ETUs cannot be used anywhere else this round and will not carry over to next round. Are you sure you would like to commit?" a="$C$160" r="160" c="3" w="tx_General" v="You have not used all of your available ETUs. These ETUs cannot be used anywhere else this round and will not carry over to next round. Are you sure you would like to commit?" fmt="General">
+</c>
+<c f="Are you sure you would like to submit your engineering requests? You will not be able to adjust your decisions once submitted." a="$C$158" r="158" c="3" w="tx_General" v="Are you sure you would like to submit your engineering requests? You will not be able to adjust your decisions once submitted." fmt="General">
+</c>
+<c f="Consumer" a="$C$102" r="102" c="3" w="tx_General" v="Consumer" fmt="General">
+</c>
+<c f="Consumer Forecasting" a="$C$55" r="55" c="3" w="tx_General" v="Consumer Forecasting" fmt="General">
+</c>
+<c f="Partner" a="$C$165" r="165" c="3" w="tx_General" v="Partner" fmt="General">
+</c>
+<c f="Consumer Revenue" a="$C$58" r="58" c="3" w="tx_General" v="Consumer Revenue" fmt="General">
+</c>
+<c f="Consumer Segment Allocation" a="$C$73" r="73" c="3" w="tx_General" v="Consumer Segment Allocation" fmt="General">
+</c>
+<c f="Pricing" a="$C$149" r="149" c="3" w="tx_General" v="Pricing" fmt="General">
+</c>
+<c f="Expertise Development" a="$C$150" r="150" c="3" w="tx_General" v="Expertise Development" fmt="General">
+</c>
+<c f="Resources" a="$C$151" r="151" c="3" w="tx_General" v="Resources" fmt="General">
+</c>
+<c f="Partner" a="$C$152" r="152" c="3" w="tx_General" v="Partner" fmt="General">
+</c>
+<c f="Cost" a="$C$27" r="27" c="3" w="tx_General" v="Cost" fmt="General">
+</c>
+<c f="Customer Team Unit Salary" a="$C$179" r="179" c="3" w="tx_General" v="Customer Team Unit Salary" fmt="General">
+</c>
+<c f="Financial" a="$C$105" r="105" c="3" w="tx_General" v="Financial" fmt="General">
+</c>
+<c f="CLV" a="$C$106" r="106" c="3" w="tx_General" v="CLV" fmt="General">
+</c>
+<c f="Revenue" a="$C$107" r="107" c="3" w="tx_General" v="Revenue" fmt="General">
+</c>
+<c f="Gross Profit" a="$C$108" r="108" c="3" w="tx_General" v="Gross Profit" fmt="General">
+</c>
+<c f="Op Profit" a="$C$109" r="109" c="3" w="tx_General" v="Op Profit" fmt="General">
+</c>
+<c f="Cloud" a="$C$110" r="110" c="3" w="tx_General" v="Cloud" fmt="General">
+</c>
+<c f="Cloud Adoption" a="$C$111" r="111" c="3" w="tx_General" v="Cloud Adoption" fmt="General">
+</c>
+<c f="Avg. Consumption" a="$C$112" r="112" c="3" w="tx_General" v="Avg. Consumption" fmt="General">
+</c>
+<c f="Avg. Churn" a="$C$113" r="113" c="3" w="tx_General" v="Avg. Churn" fmt="General">
+</c>
+<c f="KPIs" a="$C$114" r="114" c="3" w="tx_General" v="KPIs" fmt="General">
+</c>
+<c f="Culture" a="$C$115" r="115" c="3" w="tx_General" v="Culture" fmt="General">
+</c>
+<c f="Customer Obsession" a="$C$116" r="116" c="3" w="tx_General" v="Customer Obsession" fmt="General">
+</c>
+<c f="FTEs" a="$C$117" r="117" c="3" w="tx_General" v="FTEs" fmt="General">
+</c>
+<c f="ETUs" a="$C$118" r="118" c="3" w="tx_General" v="ETUs" fmt="General">
+</c>
+<c f="Data Centers" a="$C$48" r="48" c="3" w="tx_General" v="Data Centers" fmt="General">
+</c>
+<c f="Data Center Utilization" a="$C$49" r="49" c="3" w="tx_General" v="Data Center Utilization" fmt="General">
+</c>
+<c f="Decrease" a="$C$18" r="18" c="3" w="tx_General" v="Decrease" fmt="General">
+</c>
+<c f="Developer" a="$C$85" r="85" c="3" w="tx_General" v="Developer" fmt="General">
+</c>
+<c f="Devices" a="$C$161" r="161" c="3" w="tx_General" v="Devices" fmt="General">
+</c>
+<c f="Direct Sales Salary" a="$C$33" r="33" c="3" w="tx_General" v="Direct Sales Salary" fmt="General">
+</c>
+<c f="Enter Password" a="$C$171" r="171" c="3" w="tx_General" v="Enter Password" fmt="General">
+</c>
+<c f="Enterprise" a="$C$101" r="101" c="3" w="tx_General" v="Enterprise" fmt="General">
+</c>
+<c f="Enterprise Forecasting" a="$C$59" r="59" c="3" w="tx_General" v="Enterprise Forecasting" fmt="General">
+</c>
+<c f="Enterprise Operating Unit Resources" a="$C$75" r="75" c="3" w="tx_General" v="Enterprise Operating Unit Resources" fmt="General">
+</c>
+<c f="Enterprise Revenue" a="$C$61" r="61" c="3" w="tx_General" v="Enterprise Revenue" fmt="General">
+</c>
+<c f="Enterprise Resources" a="$C$175" r="175" c="3" w="tx_General" v="Enterprise Resources" fmt="General">
+</c>
+<c f="Security" a="$C$119" r="119" c="3" w="tx_General" v="Security" fmt="General">
+</c>
+<c f="Interoperability" a="$C$120" r="120" c="3" w="tx_General" v="Interoperability" fmt="General">
+</c>
+<c f="Scalability" a="$C$121" r="121" c="3" w="tx_General" v="Scalability" fmt="General">
+</c>
+<c f="Workspace 365" a="$C$125" r="125" c="3" w="tx_General" v="Workspace 365" fmt="General">
+</c>
+<c f="Dynamo 365" a="$C$126" r="126" c="3" w="tx_General" v="Dynamo 365" fmt="General">
+</c>
+<c f="Azul Infrastructure" a="$C$130" r="130" c="3" w="tx_General" v="Azul Infrastructure" fmt="General">
+</c>
+<c f="Azul Applications, Data, and AI" a="$C$131" r="131" c="3" w="tx_General" v="Azul Applications, Data, and AI" fmt="General">
+</c>
+<c f="Doors OS" a="$C$135" r="135" c="3" w="tx_General" v="Doors OS" fmt="General">
+</c>
+<c f="Devices" a="$C$136" r="136" c="3" w="tx_General" v="Devices" fmt="General">
+</c>
+<c f="Platform Investments Analysis" a="$C$124" r="124" c="3" w="tx_General" v="Platform Investments Analysis" fmt="General">
+</c>
+<c f="Platform Investments" a="$C$123" r="123" c="3" w="tx_General" v="Platform Investments" fmt="General">
+</c>
+<c f="Platform Investments" a="$C$122" r="122" c="3" w="tx_General" v="Platform Investments" fmt="General">
+</c>
+<c f="Productivity &amp; Business Investments Analysis" a="$C$129" r="129" c="3" w="tx_General" v="Productivity &amp; Business Investments Analysis" fmt="General">
+</c>
+<c f="Productivity &amp; Business" a="$C$128" r="128" c="3" w="tx_General" v="Productivity &amp; Business" fmt="General">
+</c>
+<c f="Productivity &amp; Business" a="$C$127" r="127" c="3" w="tx_General" v="Productivity &amp; Business" fmt="General">
+</c>
+<c f="Intelligent Cloud Investments Analysis" a="$C$134" r="134" c="3" w="tx_General" v="Intelligent Cloud Investments Analysis" fmt="General">
+</c>
+<c f="Intelligent Cloud" a="$C$133" r="133" c="3" w="tx_General" v="Intelligent Cloud" fmt="General">
+</c>
+<c f="Intelligent Cloud" a="$C$132" r="132" c="3" w="tx_General" v="Intelligent Cloud" fmt="General">
+</c>
+<c f="Personal Computing Investments Analysis" a="$C$139" r="139" c="3" w="tx_General" v="Personal Computing Investments Analysis" fmt="General">
+</c>
+<c f="Personal Computing" a="$C$138" r="138" c="3" w="tx_General" v="Personal Computing" fmt="General">
+</c>
+<c f="Personal Computing" a="$C$137" r="137" c="3" w="tx_General" v="Personal Computing" fmt="General">
+</c>
+<c f="ETUs Required" a="$C$23" r="23" c="3" w="tx_General" v="ETUs Required" fmt="General">
+</c>
+<c f="Field Sales Salary" a="$C$182" r="182" c="3" w="tx_General" v="Field Sales Salary" fmt="General">
+</c>
+<c f="FTEs" a="$C$51" r="51" c="3" w="tx_General" v="FTEs" fmt="General">
+</c>
+<c f="FTEs Allocated" a="$C$26" r="26" c="3" w="tx_General" v="FTEs Allocated" fmt="General">
+</c>
+<c f="FTEs Required" a="$C$24" r="24" c="3" w="tx_General" v="FTEs Required" fmt="General">
+</c>
+<c f="General &amp; Administrative" a="$C$38" r="38" c="3" w="tx_General" v="General &amp; Administrative" fmt="General">
+</c>
+<c f="Global Demand Center" a="$C$65" r="65" c="3" w="tx_General" v="Global Demand Center" fmt="General">
+</c>
+<c f="Global Demand Center Salary" a="$C$181" r="181" c="3" w="tx_General" v="Global Demand Center Salary" fmt="General">
+</c>
+<c f="Gross Profit" a="$C$104" r="104" c="3" w="tx_General" v="Gross Profit" fmt="General">
+</c>
+<c f="Growth" a="$C$11" r="11" c="3" w="tx_General" v="Growth" fmt="General">
+</c>
+<c f="Import Successful" a="$C$163" r="163" c="3" w="tx_General" v="Import Successful" fmt="General">
+</c>
+<c f="The Password you have entered is incorrect. Please try again." a="$C$172" r="172" c="3" w="tx_General" v="The Password you have entered is incorrect. Please try again." fmt="General">
+</c>
+<c f="Increase" a="$C$20" r="20" c="3" w="tx_General" v="Increase" fmt="General">
+</c>
+<c f="Infrastructure" a="$C$15" r="15" c="3" w="tx_General" v="Infrastructure" fmt="General">
+</c>
+<c f="(in millions)" a="$C$169" r="169" c="3" w="tx_General" v="(in millions)" fmt="General">
+</c>
+<c f="Inside Sales Salary" a="$C$34" r="34" c="3" w="tx_General" v="Inside Sales Salary" fmt="General">
+</c>
+<c f="Intelligent Cloud" a="$C$60" r="60" c="3" w="tx_General" v="Intelligent Cloud" fmt="General">
+</c>
+<c f="Internal Readiness" a="$C$68" r="68" c="3" w="tx_General" v="Internal Readiness" fmt="General">
+</c>
+<c f="Investment" a="$C$81" r="81" c="3" w="tx_General" v="Investment" fmt="General">
+</c>
+<c f="ISV" a="$C$89" r="89" c="3" w="tx_General" v="ISV" fmt="General">
+</c>
+<c f="Last Round" a="$C$57" r="57" c="3" w="tx_General" v="Last Round" fmt="General">
+</c>
+<c f="Operations &amp; Marketing" a="$C$43" r="43" c="3" w="tx_General" v="Operations &amp; Marketing" fmt="General">
+</c>
+<c f="Commercial Segment" a="$C$44" r="44" c="3" w="tx_General" v="Commercial Segment" fmt="General">
+</c>
+<c f="Consumer Segment" a="$C$45" r="45" c="3" w="tx_General" v="Consumer Segment" fmt="General">
+</c>
+<c f="Profit &amp; Loss Statement" a="$C$46" r="46" c="3" w="tx_General" v="Profit &amp; Loss Statement" fmt="General">
+</c>
+<c f="Engineering Requests" a="$C$47" r="47" c="3" w="tx_General" v="Engineering Requests" fmt="General">
+</c>
+<c f="Maintain" a="$C$19" r="19" c="3" w="tx_General" v="Maintain" fmt="General">
+</c>
+<c f="Managed Services" a="$C$91" r="91" c="3" w="tx_General" v="Managed Services" fmt="General">
+</c>
+<c f="Margin" a="$C$12" r="12" c="3" w="tx_General" v="Margin" fmt="General">
+</c>
+<c f="Marketing" a="$C$16" r="16" c="3" w="tx_General" v="Marketing" fmt="General">
+</c>
+<c f="Marketing Budget" a="$C$99" r="99" c="3" w="tx_General" v="Marketing Budget" fmt="General">
+</c>
+<c f="Marketing Expense" a="$C$31" r="31" c="3" w="tx_General" v="Marketing Expense" fmt="General">
+</c>
+<c f="Migration Rate" a="$C$93" r="93" c="3" w="tx_General" v="Migration Rate" fmt="General">
+</c>
+<c f="Misc. General &amp; Administrative" a="$C$5" r="5" c="3" w="tx_General" v="Misc. General &amp; Administrative" fmt="General">
+</c>
+<c f="(New Subscriptions/Devices)" a="$C$56" r="56" c="3" w="tx_General" v="(New Subscriptions/Devices)" fmt="General">
+</c>
+<c f="Start Round 2 &gt;" a="$C$164" r="164" c="3" w="tx_General" v="Start Round 2 &gt;" fmt="General">
+</c>
+<c f="OEM" a="$C$162" r="162" c="3" w="tx_General" v="OEM" fmt="General">
+</c>
+<c f="Partner Activities" a="$C$87" r="87" c="3" w="tx_General" v="Partner Activities" fmt="General">
+</c>
+<c f="Partner Prioritization" a="$C$88" r="88" c="3" w="tx_General" v="Partner Prioritization" fmt="General">
+</c>
+<c f="Operations" a="$C$14" r="14" c="3" w="tx_General" v="Operations" fmt="General">
+</c>
+<c f="Operations Salary" a="$C$39" r="39" c="3" w="tx_General" v="Operations Salary" fmt="General">
+</c>
+<c f="Data Center Utilization" a="$C$147" r="147" c="3" w="tx_General" v="Data Center Utilization" fmt="General">
+</c>
+<c f="Data Centers" a="$C$145" r="145" c="3" w="tx_General" v="Data Centers" fmt="General">
+</c>
+<c f="FTEs" a="$C$146" r="146" c="3" w="tx_General" v="FTEs" fmt="General">
+</c>
+<c f="Infrastructure" a="$C$144" r="144" c="3" w="tx_General" v="Infrastructure" fmt="General">
+</c>
+<c f="Marketing" a="$C$148" r="148" c="3" w="tx_General" v="Marketing" fmt="General">
+</c>
+<c f="Operations" a="$C$141" r="141" c="3" w="tx_General" v="Operations" fmt="General">
+</c>
+<c f="FTEs" a="$C$142" r="142" c="3" w="tx_General" v="FTEs" fmt="General">
+</c>
+<c f="Operations" a="$C$140" r="140" c="3" w="tx_General" v="Operations" fmt="General">
+</c>
+<c f="Internal Readiness" a="$C$143" r="143" c="3" w="tx_General" v="Internal Readiness" fmt="General">
+</c>
+<c f="Partner Activities" a="$C$32" r="32" c="3" w="tx_General" v="Partner Activities" fmt="General">
+</c>
+<c f="Partner Development" a="$C$78" r="78" c="3" w="tx_General" v="Partner Development" fmt="General">
+</c>
+<c f="Partner Education" a="$C$80" r="80" c="3" w="tx_General" v="Partner Education" fmt="General">
+</c>
+<c f="Partner Group Salary" a="$C$35" r="35" c="3" w="tx_General" v="Partner Group Salary" fmt="General">
+</c>
+<c f="Partner Incentives" a="$C$79" r="79" c="3" w="tx_General" v="Partner Incentives" fmt="General">
+</c>
+<c f="Partner Prioritization" a="$C$82" r="82" c="3" w="tx_General" v="Partner Prioritization" fmt="General">
+</c>
+<c f="skillup" a="$C$173" r="173" c="3" w="tx_General" v="skillup" fmt="General">
+</c>
+<c f="% of Time/Budget" a="$C$86" r="86" c="3" w="tx_General" v="% of Time/Budget" fmt="General">
+</c>
+<c f="% of Total Budget" a="$C$71" r="71" c="3" w="tx_General" v="% of Total Budget" fmt="General">
+</c>
+<c f="% of Total Revenue" a="$C$37" r="37" c="3" w="tx_General" v="% of Total Revenue" fmt="General">
+</c>
+<c f="Personal Computing" a="$C$54" r="54" c="3" w="tx_General" v="Personal Computing" fmt="General">
+</c>
+<c f="Platform" a="$C$13" r="13" c="3" w="tx_General" v="Platform" fmt="General">
+</c>
+<c f="Profit &amp; Loss Statement" a="$C$157" r="157" c="3" w="tx_General" v="Profit &amp; Loss Statement" fmt="General">
+</c>
+<c f="*All $ values are in millions." a="$C$170" r="170" c="3" w="tx_General" v="*All $ values are in millions." fmt="General">
+</c>
+<c f="Pricing Strategy" a="$C$52" r="52" c="3" w="tx_General" v="Pricing Strategy" fmt="General">
+</c>
+<c f="Productivity &amp; Business" a="$C$53" r="53" c="3" w="tx_General" v="Productivity &amp; Business" fmt="General">
+</c>
+<c f="Recommended Utilization" a="$C$28" r="28" c="3" w="tx_General" v="Recommended Utilization" fmt="General">
+</c>
+<c f="Retailer" a="$C$84" r="84" c="3" w="tx_General" v="Retailer" fmt="General">
+</c>
+<c f="Revenue" a="$C$103" r="103" c="3" w="tx_General" v="Revenue" fmt="General">
+</c>
+<c f="Sales &amp; Marketing Expense" a="$C$30" r="30" c="3" w="tx_General" v="Sales &amp; Marketing Expense" fmt="General">
+</c>
+<c f="Consumer Resources" a="$C$76" r="76" c="3" w="tx_General" v="Consumer Resources" fmt="General">
+</c>
+<c f="Services Salary" a="$C$180" r="180" c="3" w="tx_General" v="Services Salary" fmt="General">
+</c>
+<c f="Significant Decrease" a="$C$17" r="17" c="3" w="tx_General" v="Significant Decrease" fmt="General">
+</c>
+<c f="Significant Increase" a="$C$21" r="21" c="3" w="tx_General" v="Significant Increase" fmt="General">
+</c>
+<c f="SMC Revenue" a="$C$63" r="63" c="3" w="tx_General" v="SMC Revenue" fmt="General">
+</c>
+<c f="SMC Forecasting" a="$C$62" r="62" c="3" w="tx_General" v="SMC Forecasting" fmt="General">
+</c>
+<c f="SMC" a="$C$100" r="100" c="3" w="tx_General" v="SMC" fmt="General">
+</c>
+<c f="SMC Resources" a="$C$176" r="176" c="3" w="tx_General" v="SMC Resources" fmt="General">
+</c>
+<c f="Software Engineering" a="$C$64" r="64" c="3" w="tx_General" v="Software Engineering" fmt="General">
+</c>
+<c f="Start Round 1 &gt;" a="$C$42" r="42" c="3" w="tx_General" v="Start Round 1 &gt;" fmt="General">
+</c>
+<c f="Specialist Team Unit Salary" a="$C$178" r="178" c="3" w="tx_General" v="Specialist Team Unit Salary" fmt="General">
+</c>
+<c f="MACH Simulation Experience" a="$C$4" r="4" c="3" w="tx_General" v="MACH Simulation Experience" fmt="General">
+</c>
+<c f="Supply Chain" a="$C$66" r="66" c="3" w="tx_General" v="Supply Chain" fmt="General">
+</c>
+<c f="System Integrators" a="$C$90" r="90" c="3" w="tx_General" v="System Integrators" fmt="General">
+</c>
+<c f="Talent Skill Analysis" a="$C$77" r="77" c="3" w="tx_General" v="Talent Skill Analysis" fmt="General">
+</c>
+<c f="This Round" a="$C$72" r="72" c="3" w="tx_General" v="This Round" fmt="General">
+</c>
+<c f="Microsoft" a="$C$3" r="3" c="3" w="tx_General" v="Microsoft" fmt="General">
+</c>
+<c f="The percentage of the total time and budget spent with partners that you would like to allocate to each of Nimbolt&apos;s partners. Preferred partners vary depending on who the customer is and what ambition they are looking to buy and deploy.&lt;br&gt;&lt;br&gt;Partner Descriptions&lt;br&gt;ISVs: Build additional applications on the Azure platform that customers can utilize.&lt;br&gt;Systems Integrators: Shape and deploy Nimbolt technology with customers.&lt;br&gt;Managed Services: Manage customers complex IT systems&lt;br&gt;Channels: Expand the scale and reach of Nimbolt products through directly selling Nimbolt offerings or putting them on other hardware" a="$C$167" r="167" c="3" w="tx_General" v="The percentage of the total time and budget spent with partners that you would like to allocate to each of Nimbolt&apos;s partners. Preferred partners vary depending on who the customer is and what ambition they are looking to buy and deploy.&lt;br&gt;&lt;br&gt;Partner Descriptions&lt;br&gt;ISVs: Build additional applications on the Azure platform that customers can utilize.&lt;br&gt;Systems Integrators: Shape and deploy Nimbolt technology with customers.&lt;br&gt;Managed Services: Manage customers complex IT systems&lt;br&gt;Channels: Expand the scale and reach of Nimbolt products through directly selling Nimbolt offerings or putting them on other hardware" fmt="General">
+</c>
+<c f="The percentage of the total time and budget spent with partners that you would like to allocate to each of Nimbolt&apos;s partners. Preferred partners vary depending on who the customer is and what ambition they are looking to buy and deploy.&lt;br&gt;&lt;br&gt;Partner Descriptions&lt;br&gt;Developers: Create software applications on Nimbolt&apos;s Doors OS&lt;br&gt;OEM: Incorporate Nimbolt technology onto their existing hardware to help make Doors OS more widely adopted.&lt;br&gt;Retailers: Sell Nimbolt technology through retail stores." a="$C$166" r="166" c="3" w="tx_General" v="The percentage of the total time and budget spent with partners that you would like to allocate to each of Nimbolt&apos;s partners. Preferred partners vary depending on who the customer is and what ambition they are looking to buy and deploy.&lt;br&gt;&lt;br&gt;Partner Descriptions&lt;br&gt;Developers: Create software applications on Nimbolt&apos;s Doors OS&lt;br&gt;OEM: Incorporate Nimbolt technology onto their existing hardware to help make Doors OS more widely adopted.&lt;br&gt;Retailers: Sell Nimbolt technology through retail stores." fmt="General">
+</c>
+<c f="Total Data Centers" a="$C$50" r="50" c="3" w="tx_General" v="Total Data Centers" fmt="General">
+</c>
+<c f="Total General &amp; Administrative" a="$C$6" r="6" c="3" w="tx_General" v="Total General &amp; Administrative" fmt="General">
+</c>
+<c f="Total Gross Margin" a="$C$8" r="8" c="3" w="tx_General" v="Total Gross Margin" fmt="General">
+</c>
+<c f="Total Gross Profit" a="$C$9" r="9" c="3" w="tx_General" v="Total Gross Profit" fmt="General">
+</c>
+<c f="Total Investment" a="$C$22" r="22" c="3" w="tx_General" v="Total Investment" fmt="General">
+</c>
+<c f="Total Marketing Budget" a="$C$69" r="69" c="3" w="tx_General" v="Total Marketing Budget" fmt="General">
+</c>
+<c f="Total Operating Margin" a="$C$10" r="10" c="3" w="tx_General" v="Total Operating Margin" fmt="General">
+</c>
+<c f="Total Operating Profit" a="$C$7" r="7" c="3" w="tx_General" v="Total Operating Profit" fmt="General">
+</c>
+<c f="Total Sales &amp; Marketing Expense" a="$C$36" r="36" c="3" w="tx_General" v="Total Sales &amp; Marketing Expense" fmt="General">
+</c>
+<c f="FTEs/ETUs needs to be greater than or equal to zero in order to export decisions." a="$C$168" r="168" c="3" w="tx_General" v="FTEs/ETUs needs to be greater than or equal to zero in order to export decisions." fmt="General">
+</c>
+<c f="Unallocated Salary" a="$C$40" r="40" c="3" w="tx_General" v="Unallocated Salary" fmt="General">
+</c>
+<c f="You have received an urgent message. Please click &quot;OK&quot; to continue." a="$C$174" r="174" c="3" w="tx_General" v="You have received an urgent message. Please click &quot;OK&quot; to continue." fmt="General">
+</c>
+<c f="1" a="$C$2" r="2" c="3" w="Control" v="1" fmt="General">
+</c>
+<c f="W101" a="$C$2" r="2" c="3" w="tx_Wobblers" v="W101" fmt="General">
+</c>
+<c f="New Data on the SMC Sector" a="$C$5" r="5" c="3" w="tx_Wobblers" v="New Data on the SMC Sector" fmt="General">
+</c>
+<c f="Regional Leadership Team,&lt;br&gt;&lt;br&gt;Our recent research has shown that the SMC customer segment is growing faster than we expected: there are almost 79 million SMC organizations worldwide, spending close to $600 Billion on IT investments. Our team has found that customer-centric integrated marketing engines can help us generate leads, increase new subscription growth, and drive consumption. Since SMC customers like frequent touchpoints with their technology providers, additional investment in the Global Demand Center could help build out more automated processes driven by AI.&lt;br&gt;&lt;br&gt;Best,&lt;br&gt;Ricky Mouse&lt;br&gt;Global Customer Segmentation Team" a="$C$11" r="11" c="3" w="tx_Wobblers" v="Regional Leadership Team,&lt;br&gt;&lt;br&gt;Our recent research has shown that the SMC customer segment is growing faster than we expected: there are almost 79 million SMC organizations worldwide, spending close to $600 Billion on IT investments. Our team has found that customer-centric integrated marketing engines can help us generate leads, increase new subscription growth, and drive consumption. Since SMC customers like frequent touchpoints with their technology providers, additional investment in the Global Demand Center could help build out more automated processes driven by AI.&lt;br&gt;&lt;br&gt;Best,&lt;br&gt;Ricky Mouse&lt;br&gt;Global Customer Segmentation Team" fmt="General">
+</c>
+<c f="SingleSelect" a="$C$3" r="3" c="3" w="tx_Wobblers" v="SingleSelect" fmt="General">
+</c>
+<c f="1" a="$C$6" r="6" c="3" w="tx_Wobblers" v="1" fmt="General">
+</c>
+<c f="600" a="$C$7" r="7" c="3" w="tx_Wobblers" v="600" fmt="General">
+</c>
+<c f="InfoUpdate" a="$C$10" r="10" c="3" w="tx_Wobblers" v="InfoUpdate" fmt="General">
+</c>
+<c f="A" a="$C$34" r="34" c="3" w="tx_Wobblers" v="A" fmt="General">
+</c>
+<c f="The Engineering group accepts your request, and the Table keyboard gets re-launched in the market in time for you to meet your revenue forecast. However, the urgency of the request caused some chaos and reprioritization within the Engineering group. Also, given the quick turnaround, consumers detected a bug not caught by the Engineering team which caused ongoing frustration.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Customer Obsession:+.5&lt;/li&gt;&lt;li&gt;Collaboration: -3&lt;/li&gt;&lt;li&gt;Culture: -1&lt;/li&gt;&lt;/ul&gt;" a="$C$40" r="40" c="3" w="tx_Wobblers" v="The Engineering group accepts your request, and the Table keyboard gets re-launched in the market in time for you to meet your revenue forecast. However, the urgency of the request caused some chaos and reprioritization within the Engineering group. Also, given the quick turnaround, consumers detected a bug not caught by the Engineering team which caused ongoing frustration.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Customer Obsession:+.5&lt;/li&gt;&lt;li&gt;Collaboration: -3&lt;/li&gt;&lt;li&gt;Culture: -1&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Send a request to Engineering to have the Table keyboard fixed and re-launched to the market. Because time is of the essence, release the new keyboard back into stores as soon as it has been built and tested by Nimbolt.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;FTEs: 15&lt;/li&gt;&lt;li&gt;Cost: $2,000,000&lt;/li&gt;&lt;/ul&gt;" a="$C$37" r="37" c="3" w="tx_Wobblers" v="Send a request to Engineering to have the Table keyboard fixed and re-launched to the market. Because time is of the essence, release the new keyboard back into stores as soon as it has been built and tested by Nimbolt.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;FTEs: 15&lt;/li&gt;&lt;li&gt;Cost: $2,000,000&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="B" a="$C$35" r="35" c="3" w="tx_Wobblers" v="B" fmt="General">
+</c>
+<c f="The Engineering team accepts the request, and Bullseye is very excited that you brought them onboard to help with testing. You successfully fixed the initial issue, and you eliminated some bugs during the initial testing with the help of the Bullseye associates. In addition, Bullseye associates learned more about the Table, and were able to sell it more effectively in stores. Even though you captured a lot of the revenue that would have been lost, the trade-off was the stress and reprioritization that occurred in the Engineering team to make this possible.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Customer Obession: +1&lt;/li&gt;&lt;li&gt;Collaboration: -3&lt;/li&gt;&lt;li&gt;PC Revenue: +$3,000,000&lt;/li&gt;&lt;li&gt;Culture: -1&lt;/li&gt;&lt;/ul&gt;" a="$C$41" r="41" c="3" w="tx_Wobblers" v="The Engineering team accepts the request, and Bullseye is very excited that you brought them onboard to help with testing. You successfully fixed the initial issue, and you eliminated some bugs during the initial testing with the help of the Bullseye associates. In addition, Bullseye associates learned more about the Table, and were able to sell it more effectively in stores. Even though you captured a lot of the revenue that would have been lost, the trade-off was the stress and reprioritization that occurred in the Engineering team to make this possible.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Customer Obession: +1&lt;/li&gt;&lt;li&gt;Collaboration: -3&lt;/li&gt;&lt;li&gt;PC Revenue: +$3,000,000&lt;/li&gt;&lt;li&gt;Culture: -1&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Send a request to Engineering to have the keyboard fixed and enlist the Bullseye sales force as testers before re-launching to the broader market. Bullseye would appreciate our quick action and our partner mindset in bringing them in to be part of the solution.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;FTEs: 20&lt;/li&gt;&lt;li&gt;Cost: $2,000,000&lt;/li&gt;&lt;ul&gt;" a="$C$38" r="38" c="3" w="tx_Wobblers" v="Send a request to Engineering to have the keyboard fixed and enlist the Bullseye sales force as testers before re-launching to the broader market. Bullseye would appreciate our quick action and our partner mindset in bringing them in to be part of the solution.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;FTEs: 20&lt;/li&gt;&lt;li&gt;Cost: $2,000,000&lt;/li&gt;&lt;ul&gt;" fmt="General">
+</c>
+<c f="C" a="$C$36" r="36" c="3" w="tx_Wobblers" v="C" fmt="General">
+</c>
+<c f="While you are not able to hit your revenue targets this year, the additional research provided you with a new business opportunity. Through conversations with Inside Sales you learn that SMCs such as architecture and graphic design firms would be able to use Table, specifically the stylus pen, thereby eliminating a step in their process from hand drawing to digitization. You present the full business case to the Engineering group, who is excited by the new customer opportunity and the additional revenue this could generate for their product in the long term.br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Customer Obession: +1.5&lt;/li&gt;&lt;li&gt;Collaboration: +3&lt;/li&gt;&lt;li&gt;PC Revenue: +$6,000,000&lt;/li&gt;&lt;li&gt;Customer Operating Margin: ++&lt;/li&gt;&lt;/ul&gt;" a="$C$42" r="42" c="3" w="tx_Wobblers" v="While you are not able to hit your revenue targets this year, the additional research provided you with a new business opportunity. Through conversations with Inside Sales you learn that SMCs such as architecture and graphic design firms would be able to use Table, specifically the stylus pen, thereby eliminating a step in their process from hand drawing to digitization. You present the full business case to the Engineering group, who is excited by the new customer opportunity and the additional revenue this could generate for their product in the long term.br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Customer Obession: +1.5&lt;/li&gt;&lt;li&gt;Collaboration: +3&lt;/li&gt;&lt;li&gt;PC Revenue: +$6,000,000&lt;/li&gt;&lt;li&gt;Customer Operating Margin: ++&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Do additional research and analysis on consumer usage of Table. If we can involve field sellers, Inside Sales, and Bullseye, we may be able to gather enough data not only to support our case for the fix to Engineering, but also to uncover other usage issues. This will take more time up front, resulting in missed revenue targets for this year.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;FTEs: 45&lt;/li&gt;&lt;li&gt;Cost: $2,000,000&lt;/li&gt;&lt;li&gt;PC Revenue: -$1,000,000&lt;/li&gt;&lt;/ul&gt;" a="$C$39" r="39" c="3" w="tx_Wobblers" v="Do additional research and analysis on consumer usage of Table. If we can involve field sellers, Inside Sales, and Bullseye, we may be able to gather enough data not only to support our case for the fix to Engineering, but also to uncover other usage issues. This will take more time up front, resulting in missed revenue targets for this year.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;FTEs: 45&lt;/li&gt;&lt;li&gt;Cost: $2,000,000&lt;/li&gt;&lt;li&gt;PC Revenue: -$1,000,000&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="W102" a="$C$25" r="25" c="3" w="tx_Wobblers" v="W102" fmt="General">
+</c>
+<c f="Missing the Mark" a="$C$28" r="28" c="3" w="tx_Wobblers" v="Missing the Mark" fmt="General">
+</c>
+<c f="Regional Leadership Team,&lt;br&gt;&lt;br&gt;I just reviewed our revenue numbers for Table, and we are nowhere near our revenue target. I took the liberty of connecting with Bullseye, our top-selling retailer, to find out why sales have been so poor. It seems that many consumers are returning the Table after a few days because the keyboard is not working properly. Because of this issue, Bullseye doesn&apos;t feel comfortable promoting the Table. If Bullseye is starting to de-emphasize Table, it is likely that other retailers like BuyBest may follow suit.&lt;br&gt;&lt;br&gt;If we do not fix this problem, I forecast us to only deliver 83% of our revenue target. Remember, the Table is not only a big consumer focus for us - our goal is to expand this product in the commercial space, starting with small-medium corporate customers. What is your recommendation on how we should proceed?&lt;br&gt;&lt;br&gt;Thank You,&lt;br&gt;Rubeus Haggle,&lt;br&gt;VP Nimbolt Personal Computing" a="$C$33" r="33" c="3" w="tx_Wobblers" v="Regional Leadership Team,&lt;br&gt;&lt;br&gt;I just reviewed our revenue numbers for Table, and we are nowhere near our revenue target. I took the liberty of connecting with Bullseye, our top-selling retailer, to find out why sales have been so poor. It seems that many consumers are returning the Table after a few days because the keyboard is not working properly. Because of this issue, Bullseye doesn&apos;t feel comfortable promoting the Table. If Bullseye is starting to de-emphasize Table, it is likely that other retailers like BuyBest may follow suit.&lt;br&gt;&lt;br&gt;If we do not fix this problem, I forecast us to only deliver 83% of our revenue target. Remember, the Table is not only a big consumer focus for us - our goal is to expand this product in the commercial space, starting with small-medium corporate customers. What is your recommendation on how we should proceed?&lt;br&gt;&lt;br&gt;Thank You,&lt;br&gt;Rubeus Haggle,&lt;br&gt;VP Nimbolt Personal Computing" fmt="General">
+</c>
+<c f="SingleSelect" a="$C$26" r="26" c="3" w="tx_Wobblers" v="SingleSelect" fmt="General">
+</c>
+<c f="1" a="$C$29" r="29" c="3" w="tx_Wobblers" v="1" fmt="General">
+</c>
+<c f="900" a="$C$30" r="30" c="3" w="tx_Wobblers" v="900" fmt="General">
+</c>
+<c f="A" a="$C$57" r="57" c="3" w="tx_Wobblers" v="A" fmt="General">
+</c>
+<c f="During your face-to-face meeting, you were able to illustrate how, over recent years, Nimbolt&apos;s expertise and breadth of offerings have been a great benefit for Cola Co. Cola Co. was happy with the outcome of the meeting and decided to stick with Azul as their cloud technology provider. They even engaged Nimbolt to build out some additional applications to get maximum use out of the service.&lt;br&gt;&lt;ul&gt;&lt;li&gt;Customer Obession: +0.5&lt;/li&gt;&lt;li&gt;IC Consumption: +2%&lt;/li&gt;&lt;/ul&gt;" a="$C$63" r="63" c="3" w="tx_Wobblers" v="During your face-to-face meeting, you were able to illustrate how, over recent years, Nimbolt&apos;s expertise and breadth of offerings have been a great benefit for Cola Co. Cola Co. was happy with the outcome of the meeting and decided to stick with Azul as their cloud technology provider. They even engaged Nimbolt to build out some additional applications to get maximum use out of the service.&lt;br&gt;&lt;ul&gt;&lt;li&gt;Customer Obession: +0.5&lt;/li&gt;&lt;li&gt;IC Consumption: +2%&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Schedule a face-to-face with the Cola Co. Chief Information Officer and Business Decision Makers to get a better understanding of Cola Co.&apos;s challenges. Your goal in this meeting is to lead with how Nimbolt&apos;s solutions differ from M.I.B.&apos;s solutions. Articulate how Nimbolt&apos;s Azul cloud technologies can provide more than a data analytics platform. Nimbolt solutions listen, learn, and predict, highlighting future growth opportunities for Cola Co. You will not focus on pricing during this meeting time but hope to justify why your price is higher than M.I.B. This discussion will help form relationships with the CIO and other Business Decision Makers that can be leveraged down the road for future discussions about Digital Transformation work.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;FTEs: 15&lt;/li&gt;&lt;/ul&gt;" a="$C$60" r="60" c="3" w="tx_Wobblers" v="Schedule a face-to-face with the Cola Co. Chief Information Officer and Business Decision Makers to get a better understanding of Cola Co.&apos;s challenges. Your goal in this meeting is to lead with how Nimbolt&apos;s solutions differ from M.I.B.&apos;s solutions. Articulate how Nimbolt&apos;s Azul cloud technologies can provide more than a data analytics platform. Nimbolt solutions listen, learn, and predict, highlighting future growth opportunities for Cola Co. You will not focus on pricing during this meeting time but hope to justify why your price is higher than M.I.B. This discussion will help form relationships with the CIO and other Business Decision Makers that can be leveraged down the road for future discussions about Digital Transformation work.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;FTEs: 15&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="B" a="$C$58" r="58" c="3" w="tx_Wobblers" v="B" fmt="General">
+</c>
+<c f="Cola Co. was very excited to see how much Nimbolt values the relationship, and they were grateful that you could get more competitive on pricing. They asked you to implement Azul Infrastructure data platform, and they said they look forward to working with your team again. Unfortunately, your margin takes a hit because of this price decrease, and the Cola Co. account lead is concerned that you have opened the door for more competitors to come in and further drive down your price.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Customer Obession: +1.5&lt;/li&gt;&lt;li&gt;IC Revenue: -$500,000&lt;/li&gt;&lt;/ul&gt;" a="$C$64" r="64" c="3" w="tx_Wobblers" v="Cola Co. was very excited to see how much Nimbolt values the relationship, and they were grateful that you could get more competitive on pricing. They asked you to implement Azul Infrastructure data platform, and they said they look forward to working with your team again. Unfortunately, your margin takes a hit because of this price decrease, and the Cola Co. account lead is concerned that you have opened the door for more competitors to come in and further drive down your price.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Customer Obession: +1.5&lt;/li&gt;&lt;li&gt;IC Revenue: -$500,000&lt;/li&gt;&lt;/ul&gt;" fmt="General">
+</c>
+<c f="Our relationship with Cola Co. is too important to take unnecessary risk. Given Cola Co.&apos;s influence and the credibility they extend to Nimbolt, we should provide the 20-percent discount. This will ensure we keep M.I.B out of the conversation. We may lose some return on the discount now, but losing Cola Co. as a client would have an immediate impact, as well as long reaching residual impacts. Showing that we are flexible in pricing our solutions should also open up doors for us to be Cola Co.&apos;s go-to partner for any future Digital Transformation projects.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;FTEs: None&lt;/ul&gt;&lt;/li&gt;" a="$C$61" r="61" c="3" w="tx_Wobblers" v="Our relationship with Cola Co. is too important to take unnecessary risk. Given Cola Co.&apos;s influence and the credibility they extend to Nimbolt, we should provide the 20-percent discount. This will ensure we keep M.I.B out of the conversation. We may lose some return on the discount now, but losing Cola Co. as a client would have an immediate impact, as well as long reaching residual impacts. Showing that we are flexible in pricing our solutions should also open up doors for us to be Cola Co.&apos;s go-to partner for any future Digital Transformation projects.&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;FTEs: None&lt;/ul&gt;&lt;/li&gt;" fmt="General">
+</c>
+<c f="W203" a="$C$48" r="48" c="3" w="tx_Wobblers" v="W203" fmt="General">
+</c>
+<c f="The Price is Right?!?" a="$C$51" r="51" c="3" w="tx_Wobblers" v="The Price is Right?!?" fmt="General">
+</c>
+<c f="Regional Leadership Team,&lt;br&gt;&lt;br&gt;Over the last few years, we have built a strong relationship with Cola Co., a customer in the retail industry.  Nimbolt has deployed several Azul applications and currently hosts Cola Co.&apos;s data on Azul infrastructure. Most recently, we have proposed adding Azul&apos;s data analytics platform to their solution, which will run in tandem with the other Azul products they use.&lt;br&gt;&lt;br&gt;Our main point of contact at Cola Co. recently reached out to let us know that M.I.B., one of Nimbolt&apos;s largest competitors for data analytics, is aggressively pursuing Cola Co. to win their business. M.I.B. has offered to provide its data analytics offerings for 20 percent less (no deployment costs) than what Nimbolt has historically offered.&lt;br&gt;&lt;br&gt;Cola Co. is interested in Nimbolt&apos;s data analytics platform and wants to know if we can match M.I.B.&apos;s offer. Our ability to tell the Cola Co. story to other customers helps us demonstrate our industry expertise and helps build the Nimbolt brand.&lt;br&gt;&lt;br&gt;If we don&apos;t handle this situation right it could have wider ramifications, such as potentially opening the door for M.I.B to propose a full migration of all cloud applications and storage over to their platform.  How should we proceed?&lt;br&gt;&lt;br&gt;Best,&lt;br&gt;Elena Jackson&lt;br&gt;ATU, Cola Co. Account" a="$C$56" r="56" c="3" w="tx_Wobblers" v="Regional Leadership Team,&lt;br&gt;&lt;br&gt;Over the last few years, we have built a strong relationship with Cola Co., a customer in the retail industry.  Nimbolt has deployed several Azul applications and currently hosts Cola Co.&apos;s data on Azul infrastructure. Most recently, we have proposed adding Azul&apos;s data analytics platform to their solution, which will run in tandem with the other Azul products they use.&lt;br&gt;&lt;br&gt;Our main point of contact at Cola Co. recently reached out to let us know that M.I.B., one of Nimbolt&apos;s largest competitors for data analytics, is aggressively pursuing Cola Co. to win their business. M.I.B. has offered to provide its data analytics offerings for 20 percent less (no deployment costs) than what Nimbolt has historically offered.&lt;br&gt;&lt;br&gt;Cola Co. is interested in Nimbolt&apos;s data analytics platform and wants to know if we can match M.I.B.&apos;s offer. Our ability to tell the Cola Co. story to other customers helps us demonstrate our industry expertise and helps build the Nimbolt brand.&lt;br&gt;&lt;br&gt;If we don&apos;t handle this situation right it could have wider ramifications, such as potentially opening the door for M.I.B to propose a full migration of all cloud applications and storage over to their platform.  How should we proceed?&lt;br&gt;&lt;br&gt;Best,&lt;br&gt;Elena Jackson&lt;br&gt;ATU, Cola Co. Account" fmt="General">
+</c>
+<c f="SingleSelect" a="$C$49" r="49" c="3" w="tx_Wobblers" v="SingleSelect" fmt="General">
+</c>
+<c f="2" a="$C$52" r="52" c="3" w="tx_Wobblers" v="2" fmt="General">
+</c>
+<c f="1200" a="$C$53" r="53" c="3" w="tx_Wobblers" v="1200" fmt="General">
+</c>
+</workbook>
