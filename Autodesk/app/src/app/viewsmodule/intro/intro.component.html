@@ -1,0 +1,51 @@
+<div class="intro-page-wrapper animated zoomIn">
+    <div class="program-title-container">
+        <calc-outlet ref="nmProgramTitle"></calc-outlet>
+    </div>
+    <div class="dropdown-container">
+        <div class="language-dropdown">
+            <div class="dropdown-heading">
+                <calc-outlet ref="nmSelectLanguage"></calc-outlet>
+            </div>
+            <calc-dropdown [items]="LanguageList" ref="tlInputLanguage" (onchange)="selectLanguage($event)" (onselect)="isChangingLanguage = true"></calc-dropdown>
+        </div>
+        <div class="currency-dropdown">
+            <div class="dropdown-heading">
+                <calc-outlet ref="nmSelectCurrency"></calc-outlet>
+            </div>
+            <calc-dropdown [items]="CurrencyList" ref="tlInputCurrency"></calc-dropdown>
+        </div>
+        <div class="first-time">
+            <span class="video-icon" (click)="showTutorial()"><img src="../../../../assets/images/icons/video_splash_screen_1.svg">
+            </span>
+            <calc-outlet ref="nmFirstTimeMessage" (click)="showTutorial()"></calc-outlet>
+        </div>
+        <div class="legend-container">
+            <div class="legend-heading">
+                <calc-outlet ref="nmLegend"></calc-outlet>
+            </div>
+            <div class="legend-text">
+                <calc-outlet ref="nmFY1"></calc-outlet>
+                =
+                <calc-outlet ref="nmFY1_Def" useRawValue="true"></calc-outlet>
+            </div>
+            <div class="legend-text">
+                <calc-outlet ref="nmFY2"></calc-outlet>
+                =
+                <calc-outlet ref="nmFY2_Def" useRawValue="true"></calc-outlet>
+            </div>
+            <div class="legend-text">
+                <calc-outlet ref="nmFY3"></calc-outlet>
+                =
+                <calc-outlet ref="nmFY3_Def" useRawValue="true"></calc-outlet>
+            </div>
+        </div>
+    </div>
+
+    <div class="next-button-container">
+        <div class="next-button animated" [class.isFirstTime]="isAnimationOver" [class.bounceIn]="toBounce && !isChangingLanguage"  [class.disabled]="isChangingLanguage" (click)="navigateToInputs()" (animationend)="onAnimationDone($event)">
+            <span class="fa fa-angle-right"></span>
+        </div>
+    </div>
+</div>
+

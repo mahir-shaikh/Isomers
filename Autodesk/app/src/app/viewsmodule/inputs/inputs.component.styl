@@ -1,0 +1,127 @@
+.inputs-page-wrapper
+    height calc(100% - 200px)
+    @media screen and (max-width 992px)
+        height calc(100% - 150px)
+    @media screen and (max-width 768px)
+        height calc(100% - 120px)
+    /*.container
+        @media screen and (max-width 576px)
+            margin-left 10px
+            margin-right 10px
+            padding 0
+            width calc(100% - 20px)*/
+    .new-path-container
+        height 60px
+        background-color rgba(255,255,255,0.3)
+        padding 0
+        .new-path-button
+            display inline-block
+            background-color #7FB843
+            cursor pointer
+            padding 10px
+            margin-top 10px
+            position relative
+            left -13px
+            box-shadow 1px 1px 8px rgba(0, 0, 0, 0.54)
+            color #FFF
+            font-size 0.875rem
+            calc-outlet
+                color #FFF
+                font-size 0.875rem
+            @media screen and (max-width 350px)
+                font-size 0.75rem
+                calc-outlet
+                    font-size 0.75rem
+            &:hover
+                background-color #80ad50
+            &:after
+                content ''
+                width 0px
+                height 0px
+                border-top 10px solid transparent
+                border-bottom 10px solid transparent
+                border-right 10px solid #031313
+                position absolute
+                top 34px
+                left 4px
+                z-index 1
+                transform rotate(-225deg)
+        .new-path-button.disabled
+            background-color #808080
+            pointer-events none
+            color #000
+            calc-outlet
+                color #000
+        .data-metrics
+            padding 20px 0px
+            text-shadow 1px 1px 5px #000
+            @media screen and (max-width 576px)
+                padding 10px 0
+            .language-metric
+                color #eceaea
+                display inline-block
+                padding-right 10px
+                @media screen and (max-width 576px)
+                    display block
+                calc-outlet
+                    color #fff
+            .currency-metric
+                color #eceaea
+                display inline-block
+                padding-right 15px
+                @media screen and (max-width 576px)
+                    display block
+                calc-outlet
+                    color #fff
+    .input-data-container
+        height calc(100% - 60px)
+        background-color rgba(255,255,255,0.3)
+        carousel
+            slide
+                &:after,&:before
+                    content ''
+                    position absolute
+                    height 100%
+                    width 30px
+                    background-color rgba(255,255,255,0.8)
+                    -webkit-animation-duration 1s
+                    animation-duration 1s
+                    -webkit-animation-delay 1s
+                    animation-delay 1s
+                    -webkit-animation-fill-mode both
+                    animation-fill-mode both
+                    @media screen and (max-width 576px)
+                        width 10px
+                &:after
+                    right 0
+                &:before
+                    left 0
+            .slideInRight
+                &:after
+                    animation-name slideInRight
+                    -webkit-animation-name slideInRight
+                &:before
+                    animation-name fadeIn
+                    -webkit-animation-name fadeIn
+            .slideInLeft
+                &:after
+                    animation-name fadeIn
+                    -webkit-animation-name fadeIn
+                &:before
+                    animation-name slideInLeft
+                    -webkit-animation-name slideInLeft
+            .animating
+                display block !important
+                pointer-events none
+                &:after, &:before
+                    width 0 !important
+                    -webkit-animation-delay 0s
+                    animation-delay 0s
+                    -webkit-animation-duration 1s
+                    animation-duration 1s
+            .firstSlide
+                &:before
+                    display none
+            .lastSlide
+                &:after
+                    display none

@@ -1,0 +1,609 @@
+<div class="print-wrapper" >
+    <div class="table-heading">
+        <calc-outlet ref="nmBenchmarks"></calc-outlet>
+    </div>
+    <div class="table-container benchmark-table">
+        <table class="table-condensed table-bordered table">
+            <tr class="row heading-row">
+                <th class="col">
+                </th>
+                <th class="col data-label" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlInputPath1_ProdMT" useRawValue="true"></calc-outlet>
+                    <span class="fa fa-long-arrow-right"></span>
+                    <calc-outlet ref="tlInputPath1_ProdSub" useRawValue="true"></calc-outlet>
+                </th>
+                <th class="col data-label" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlInputPath2_ProdMT" useRawValue="true"></calc-outlet>
+                    <span class="fa fa-long-arrow-right"></span>
+                    <calc-outlet ref="tlInputPath2_ProdSub" useRawValue="true"></calc-outlet>
+                </th>
+                <th class="col data-label" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlInputPath3_ProdMT" useRawValue="true"></calc-outlet>
+                    <span class="fa fa-long-arrow-right"></span>
+                    <calc-outlet ref="tlInputPath3_ProdSub" useRawValue="true"></calc-outlet>
+                </th>
+                <th class="col data-label" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlInputPath4_ProdMT" useRawValue="true"></calc-outlet>
+                    <span class="fa fa-long-arrow-right"></span>
+                    <calc-outlet ref="tlInputPath4_ProdSub" useRawValue="true"></calc-outlet>
+                </th>
+                <th class="col data-label">
+                    <calc-outlet ref="nmTotal"></calc-outlet>
+                </th>
+            </tr>
+
+            <!-- 1st Block of Table -->
+            <tr class="row sub-heading-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_MtExp"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_MtExp_Yr1" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1MTCost_Yr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2MTCost_Yr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3MTCost_Yr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4MTCost_Yr1"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalMTCost_Yr1"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_MtExp_Yr2" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1MTCost_Yr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2MTCost_Yr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3MTCost_Yr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4MTCost_Yr2"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalMTCost_Yr2"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_MtExp_Yr3" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1MTCost_Yr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2MTCost_Yr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3MTCost_Yr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4MTCost_Yr3"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalMTCost_Yr3"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row total-row last-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_MtExp_Total" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1MTCost_AllYears"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2MTCost_AllYears"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3MTCost_AllYears"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4MTCost_AllYears"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalMTCost_AllYears"></calc-outlet>
+                </td>
+            </tr>
+
+            <!-- 2nd Block of Table -->
+            <tr class="row sub-heading-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_NewSubSRP"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_NewSubSRPInv_1Yr" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1SubSRP"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2SubSRP"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3SubSRP"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4SubSRP"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalSubSRP"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_NewSubSRPInv" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1SubSRP3Yr"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2SubSRP3Yr"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3SubSRP3Yr"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4SubSRP3Yr"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalSubSRP3Yr"></calc-outlet>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="table-heading">
+        <calc-outlet ref="nmInvOpt"></calc-outlet>
+    </div>
+    <div class="table-container msa-table">
+        <table class="table-condensed table-bordered table">
+            <tr class="row heading-row">
+                <th class="col">
+                </th>
+                <th class="col data-label" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlInputPath1_ProdMT" useRawValue="true"></calc-outlet>
+                    <span class="fa fa-long-arrow-right"></span>
+                    <calc-outlet ref="tlInputPath1_ProdSub" useRawValue="true"></calc-outlet>
+                </th>
+                <th class="col data-label" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlInputPath2_ProdMT" useRawValue="true"></calc-outlet>
+                    <span class="fa fa-long-arrow-right"></span>
+                    <calc-outlet ref="tlInputPath2_ProdSub" useRawValue="true"></calc-outlet>
+                </th>
+                <th class="col data-label" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlInputPath3_ProdMT" useRawValue="true"></calc-outlet>
+                    <span class="fa fa-long-arrow-right"></span>
+                    <calc-outlet ref="tlInputPath3_ProdSub" useRawValue="true"></calc-outlet>
+                </th>
+                <th class="col data-label" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlInputPath4_ProdMT" useRawValue="true"></calc-outlet>
+                    <span class="fa fa-long-arrow-right"></span>
+                    <calc-outlet ref="tlInputPath4_ProdSub" useRawValue="true"></calc-outlet>
+                </th>
+                <th class="col data-label">
+                    <calc-outlet ref="nmTotal"></calc-outlet>
+                </th>
+            </tr>
+
+            <!-- 1st Block of Table -->
+            <tr class="row sub-heading-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Header" useRawValue="true"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Yr1" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr1_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr1_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr1_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr1_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr1_CostYr1"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Yr2" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr1_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr1_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr1_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr1_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr1_CostYr2"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Yr3" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr1_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr1_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr1_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr1_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr1_CostYr3"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row total-row last-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Total" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr1_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr1_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr1_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr1_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr1_CostTotal"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row total-row last-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Savings" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr1_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr1_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr1_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr1_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr1_SRPDisc"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row total-row last-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Savings_Perc" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr1_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr1_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr1_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr1_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr1_SRPDisc_Perc"></calc-outlet>
+                </td>
+            </tr>
+
+            <!-- 2nd Block of Table -->
+            <tr class="row sub-heading-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr2Header" useRawValue="true"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr2Yr1" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr2_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr2_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr2_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr2_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr2_CostYr1"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Yr2" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr2_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr2_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr2_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr2_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr2_CostYr2"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Yr3" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr2_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr2_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr2_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr2_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr2_CostYr3"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row total-row last-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Total" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr2_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr2_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr2_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr2_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr2_CostTotal"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row total-row last-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Savings" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr2_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr2_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr2_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr2_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr2_SRPDisc"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row total-row last-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr2Savings_Perc" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr2_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr2_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr2_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr2_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr2_SRPDisc_Perc"></calc-outlet>
+                </td>
+            </tr>
+
+            <!-- 3rd Block of Table -->
+            <tr class="row sub-heading-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr3Header" useRawValue="true"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr2Yr1" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr3_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr3_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr3_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr3_CostYr1"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr3_CostYr1"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Yr2" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr3_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr3_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr3_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr3_CostYr2"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr3_CostYr2"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Yr3" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr3_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr3_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr3_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr3_CostYr3"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr3_CostYr3"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row total-row last-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Total" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr3_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr3_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr3_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr3_CostTotal"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr3_CostTotal"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row total-row last-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr1Savings" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr3_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr3_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr3_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr3_SRPDisc"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr3_SRPDisc"></calc-outlet>
+                </td>
+            </tr>
+            <tr class="row data-row total-row last-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr3Savings_Perc" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr3_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr3_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr3_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr3_SRPDisc_Perc"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr3_SRPDisc_Perc"></calc-outlet>
+                </td>
+            </tr>
+
+            <!-- 4th Block of Table -->
+            <tr class="row sub-heading-row">
+                <td class="col data-label">
+                    <calc-outlet ref="tlOutput_Lbl_Yr4" useRawValue="true"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '1'">
+                    <calc-outlet ref="tlOutputPath1Yr4Cost"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '2'">
+                    <calc-outlet ref="tlOutputPath2Yr4Cost"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '3'">
+                    <calc-outlet ref="tlOutputPath3Yr4Cost"></calc-outlet>
+                </td>
+                <td class="col data-value" *ngIf="NoOfVisiblePaths.length >= '4'">
+                    <calc-outlet ref="tlOutputPath4Yr4Cost"></calc-outlet>
+                </td>
+                <td class="col data-value">
+                    <calc-outlet ref="tlOutputTotalYr4Cost"></calc-outlet>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

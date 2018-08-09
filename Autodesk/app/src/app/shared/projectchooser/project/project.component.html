@@ -1,0 +1,18 @@
+<div class="project row">
+    <div class="col-sm-9">
+        <div class="row">
+            <div class="project-name col-sm-12 dark-grey-heading-bold">{{project.getName()}}</div>
+        </div>
+        <div class="row">
+            <div class="project-modified-date col-sm-7">Last modified</div>
+            <div class="blue-heading col-sm-5">{{project.getLastModifiedDate()}}</div>
+        </div>
+        <div class="row">
+            <div class="project-modified-time col-sm-7">Time</div>
+            <div class="blue-heading col-sm-5">{{project.getLastModifiedTime()}}</div>
+        </div>
+    </div>
+    <div class="project-launch col-sm-3">
+        <div class="project-launch-btn" (click)="onSelect.emit();"></div>
+    </div>
+</div>

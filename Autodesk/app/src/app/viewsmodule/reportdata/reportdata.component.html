@@ -1,0 +1,213 @@
+<div class="row report-heading-container">
+    <div class="report-title-container">
+        <span class="report-title">
+            <calc-outlet *ngIf="!totalSlide && !productNameSelected" [ref]="'tlOutput_Lbl_Outputs_'+PathName"></calc-outlet>
+            <calc-outlet *ngIf="!totalSlide && productNameSelected" [ref]="'tlInput'+PathName+'_ProdMT'" useRawValue="true"></calc-outlet>
+            <calc-outlet *ngIf="totalSlide" ref="nmTotal"></calc-outlet>
+        </span>
+    </div>
+    <div class="toggle-button-container">
+        <ui-switch [(ngModel)]="isChartVisible" (change)="onViewChange($event)"></ui-switch>
+    </div>
+</div>
+<div class="report-data-wrapper row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 reports-content" [class.isHidden]="isChartVisible">
+        <div class="reports-content-wrapper">
+            <div class="switch-to" *ngIf="!totalSlide && switchNameSelected">
+                <div class="switch-to-heading row col-sm col">
+                    <i class="fa fa-star-o" aria-hidden="true">&nbsp;</i>
+                    <calc-outlet ref="tlOutput_Lbl_ProdSub"></calc-outlet>
+                </div>
+                <div class="switch-to-content">
+                    <calc-outlet [ref]="'tlInput'+PathName+'_ProdSub'" useRawValue="true"></calc-outlet>
+                </div>
+            </div>
+            <div class="info-section">
+                <div class="info-heading row col-sm col">
+                    <i class="fa fa-star-o" aria-hidden="true">&nbsp;</i>
+                    <calc-outlet ref="nmBenchmarks" class="uppercase"></calc-outlet>
+                </div>
+                <div class="info-content">
+                    <div class="row heading-row">
+                        <div class="col-sm col data-label">
+                            <calc-outlet ref="tlOutput_Lbl_MtExp"></calc-outlet>
+                        </div>
+                    </div>
+                    <accordion>
+                        <accordion-group #group>
+                            <div accordion-heading class="row">
+                                <span class="col-8 data-label">
+                                    <calc-outlet ref="nmMaintenancePeriod"></calc-outlet>
+                                </span>
+                                <span class="col accordion-icon">
+                                    <i class="fa" aria-hidden="true" [ngClass]="{'fa-minus': group?.isOpen, 'fa-plus': !group?.isOpen}"></i>
+                                </span>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="row">
+                                    <div class="col-sm col data-label">
+                                        <calc-outlet ref="tlOutput_Lbl_MtExp_Yr1" useRawValue="true"></calc-outlet>
+                                    </div>
+                                    <div class="col-sm col data-value">
+                                        <calc-outlet [ref]='"tlOutput"+PathName+"MTCost_Yr1"'></calc-outlet>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm col data-label">
+                                        <calc-outlet ref="tlOutput_Lbl_MtExp_Yr2" useRawValue="true"></calc-outlet>
+                                    </div>
+                                    <div class="col-sm col data-value">
+                                        <calc-outlet [ref]='"tlOutput"+PathName+"MTCost_Yr2"'></calc-outlet>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm col data-label">
+                                        <calc-outlet ref="tlOutput_Lbl_MtExp_Yr3" useRawValue="true"></calc-outlet>
+                                    </div>
+                                    <div class="col-sm col data-value">
+                                        <calc-outlet [ref]='"tlOutput"+PathName+"MTCost_Yr3"'></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </accordion-group>
+                    </accordion>
+                    <div class="row total-row">
+                        <div class="col-sm col data-label">
+                            <calc-outlet ref="tlOutput_Lbl_MtExp_Total"></calc-outlet>
+                        </div>
+                        <div class="col-sm col data-value">
+                            <calc-outlet [ref]='"tlOutput"+PathName+"MTCost_AllYears"'></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="row heading-row data-label">
+                        <calc-outlet ref="tlOutput_Lbl_NewSubSRP"></calc-outlet>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm col data-label">
+                            <calc-outlet ref="tlOutput_Lbl_NewSubSRPInv_1Yr" useRawValue="true"></calc-outlet>
+                        </div>
+                        <div class="col-sm col data-value">
+                            <calc-outlet [ref]='"tlOutput"+PathName+"SubSRP"'></calc-outlet>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm col data-label">
+                            <calc-outlet ref="tlOutput_Lbl_NewSubSRPInv" useRawValue="true"></calc-outlet>
+                        </div>
+                        <div class="col-sm col data-value">
+                            <calc-outlet [ref]='"tlOutput"+PathName+"SubSRP3Yr"'></calc-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-section">
+                <div class="info-heading row col-sm col data-label">
+                    <i class="fa fa-star-o" aria-hidden="true"> &nbsp;</i>
+                    <calc-outlet ref="nmInvOpt" class="uppercase"></calc-outlet>
+                </div>
+                <div class="info-content">
+                    <div class="row">
+                        <div class="col-sm col heading-row data-label">
+                            <calc-outlet ref="nmMigration"></calc-outlet>
+                        </div>
+                    </div>
+                    <accordion *ngFor="let year of years">
+                        <accordion-group #group>
+                            <div accordion-heading class="row">
+                                <span class="col-8 data-label">
+                                <calc-outlet [ref]='"tlOutput_Lbl_Yr"+year+"Header"' useRawValue="true"></calc-outlet>
+                                </span>
+                                <span class="col accordion-icon">
+                                <i class="fa" aria-hidden="true" [ngClass]="{'fa-minus': group?.isOpen, 'fa-plus': !group?.isOpen}"></i>
+                                </span>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="row">
+                                    <div class="col-sm col data-label">
+                                        <calc-outlet [ref]='"tlOutput_Lbl_Yr"+year+"Yr1"' useRawValue="true"></calc-outlet>
+                                    </div>
+                                    <div class="col-sm col data-value">
+                                        <calc-outlet [ref]='"tlOutput"+PathName+"Yr"+year+"_CostYr1"'></calc-outlet>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm col data-label">
+                                        <calc-outlet [ref]='"tlOutput_Lbl_Yr"+year+"Yr2"' useRawValue="true"></calc-outlet>
+                                    </div>
+                                    <div class="col-sm col data-value">
+                                        <calc-outlet [ref]='"tlOutput"+PathName+"Yr"+year+"_CostYr2"'></calc-outlet>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm col data-label">
+                                        <calc-outlet [ref]='"tlOutput_Lbl_Yr"+year+"Yr3"' useRawValue="true"></calc-outlet>
+                                    </div>
+                                    <div class="col-sm col data-value">
+                                        <calc-outlet [ref]='"tlOutput"+PathName+"Yr"+year+"_CostYr3"'></calc-outlet>
+                                    </div>
+                                </div>
+                                <div class="row highlighted-row">
+                                    <div class="col-sm col data-label">
+                                        <calc-outlet [ref]='"tlOutput_Lbl_Yr"+year+"Total"' useRawValue="true"></calc-outlet>
+                                    </div>
+                                    <div class="col-sm col data-value">
+                                        <calc-outlet [ref]='"tlOutput"+PathName+"Yr"+year+"_CostTotal"'></calc-outlet>
+                                    </div>
+                                </div>
+                                <div class="row highlighted-row">
+                                    <div class="col-sm col data-label">
+                                        <calc-outlet [ref]='"tlOutput_Lbl_Yr"+year+"Savings"' useRawValue="true"></calc-outlet>
+                                    </div>
+                                    <div class="col-sm col data-value">
+                                        <calc-outlet [ref]='"tlOutput"+PathName+"Yr"+year+"_SRPDisc"'></calc-outlet>
+                                    </div>
+                                </div>
+                                <div class="row highlighted-row">
+                                    <div class="col-sm col data-label">
+                                        <calc-outlet [ref]='"tlOutput_Lbl_Yr"+year+"Savings_Perc"' useRawValue="true"></calc-outlet>
+                                    </div>
+                                    <div class="col-sm col data-value">
+                                        <calc-outlet [ref]='"tlOutput"+PathName+"Yr"+year+"_SRPDisc_Perc"'></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </accordion-group>
+                    </accordion>
+                    <div class="row heading-row">
+                        <div class="col-sm col data-label">
+                            <calc-outlet ref="tlOutput_Lbl_Yr4" useRawValue="true"></calc-outlet>
+                        </div>
+                        <div class="col-sm col data-value">
+                            <calc-outlet [ref]='"tlOutput"+PathName+"Yr4Cost"'></calc-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 charts-content" [class.isHidden]="!isChartVisible">
+        <!-- <div class="chart-container line-chart large-screen"> -->
+        <div class="chart-container line-chart">
+            <basicline
+            [rangeref]="basicLineRangeRef"
+            [categorylabels]='"tlOutput_Cht_" +PathName + "_Y1Label, tlOutput_Cht_" +PathName + "_Y2Label,tlOutput_Cht_" +PathName + "_Y3Label"'
+            [serieslabels]="basiclineSeriesLabel"
+            [fromTitle]="'tlInput'+PathName+'_ProdMT'"
+            [toTitle]="'tlInput'+PathName+'_ProdSub'"
+            ></basicline>
+            <!-- height="300" width="400"></basicline> -->
+        </div>
+        <!-- <div class="chart-container bar-chart large-screen"> -->
+        <div class="chart-container bar-chart">
+            <stackedcolumn
+            [rangeref]="basicColRangeRef"
+
+            [categorylabels]='"tlOutput_ChtStck_" +PathName+ "_Y1Label,tlOutput_ChtStck_" +PathName+ "_Y2Label,tlOutput_ChtStck_" +PathName+ "_Y3Label,tlOutput_ChtStck_" +PathName+ "_MTLabel"'
+
+            [serieslabels]="basicColSeriesLabel"
+            [fromTitle]="'tlInput'+PathName+'_ProdMT'"
+            [toTitle]="'tlInput'+PathName+'_ProdSub'"
+            ></stackedcolumn>
+        </div>
+    </div>
+</div>

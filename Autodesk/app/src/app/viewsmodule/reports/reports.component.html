@@ -1,0 +1,22 @@
+<div class="reports-page-wrapper container">
+    <div class="data-metrics-container">
+      <div class="data-metrics pull-right">
+        <div class="language-metric">
+          <span class="data-metric-icon fa fa-globe"></span>
+          <calc-outlet ref="tlInputLanguage"></calc-outlet>
+        </div>
+        <div class="currency-metric">
+          <span class="data-metric-icon fa fa-dollar"></span>
+          <calc-outlet ref="tlInputCurrency"></calc-outlet>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+        <carousel interval="false" noWrap="true" #carousal>
+            <slide class="animated" *ngFor="let name of NoOfVisiblePaths;let 'activeIndex' = index; let 'isFirst' = first; let 'isLast' = last" (swipeleft)="swipeL()" (swiperight)="swipeR()" [class.firstSlide]="isFirst" [class.lastSlide]="isLast">
+                <report-data [PathName]=name></report-data>
+            </slide>
+        </carousel>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+<div class="input-data-wrapper">
+    <div class="row reset-button-container">
+        <div class="col-7 col-sm-9 col-md-10 path-heading">
+            <!-- <calc-outlet [ref]="'tlOutput_Lbl_Inputs_Path'+PathNo"></calc-outlet> -->
+            <calc-outlet [ref]="'nmPath'+PathNo"></calc-outlet>
+        </div>
+        <div class="col-5 col-sm-3 col-md-2 reset-button p-0" (click)="resetValues()">
+            <span class="reset-icon">
+                <img src="../../../../assets/images/icons/reset.svg">
+            </span>
+            <calc-outlet ref="nmReset"></calc-outlet>
+        </div>
+    </div>
+    <div class="row data-wrapper">
+        <div class="left-section col-sm-12 col-md-12 col-lg-6">
+            <div class="row data-row">
+                <div class="form-lable col-sm-12">
+                    <calc-outlet ref="tlOutput_Lbl_ProdMT"></calc-outlet>
+                </div>
+                <div class="form-data col-sm-12">
+                    <calc-dropdown [items]="ProductList" [ref]="'tlInputPath'+PathNo+'_ProdMT'"></calc-dropdown>
+                </div>
+            </div>
+
+            <div class="row data-row">
+                <div class="form-lable col-sm-12 application-mode">
+                        <div class="mode mode-1"><calc-outlet ref="nmSingle"></calc-outlet></div>
+                        <div class="mode-switch"><ui-switch [(ngModel)]="changeMode" (change)="onModeChange($event)"></ui-switch></div>
+                        <div class="mode mode-2"><calc-outlet ref="nmMulti"></calc-outlet></div>
+                </div>
+            </div>
+
+            <div class="row data-row">
+                <div class="form-lable col-sm-12">
+                    <calc-outlet ref="tlOutput_Lbl_PriceMT"></calc-outlet>
+                </div>
+                <div class="form-data col-sm-12">
+                    <calc-stepper [outRef]="'calcPath'+PathNo+'MTPrice'" [inRef]="'tlInputPath'+PathNo+'_PriceMT_Adj'" format="0,0.0" min="-1000" max="1000" step="1"></calc-stepper>
+                </div>
+            </div>
+
+            <div class="row data-row">
+                <div class="form-lable col-sm-12">
+                    <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" [key]="legendToolTipText" useAsInnerHtml="true"></my-tooltip>
+                    <calc-outlet ref="tlOutput_Lbl_ExpMT"></calc-outlet>
+                </div>
+                <div class="form-data col-sm-12">
+                    <calc-dropdown [items]="MEList" [ref]="'tlInputPath'+PathNo+'_ExpMT'"></calc-dropdown>
+                </div>
+            </div>
+
+            <div class="row data-row">
+                <div class="form-lable col-sm-12">
+                    <!-- <my-tooltip class="ftes-remaining-tooltip" tooltipPlacement="right" [key]="switchingToolTipText" useAsInnerHtml="true"></my-tooltip> -->
+                    <calc-outlet ref="tlOutput_Lbl_ProdSub"></calc-outlet>
+                </div>
+                <div class="form-data col-sm-12">
+                    <calc-dropdown [items]="SwitchingList" [ref]="'tlInputPath'+PathNo+'_ProdSub'" [recheck]="true"></calc-dropdown>
+                </div>
+            </div>
+
+            <div class="row data-row">
+                <div class="form-lable col-sm-12">
+                    <calc-outlet ref="tlOutput_Lbl_Qty"></calc-outlet>
+                </div>
+                <div class="form-data col-sm-12">
+                    <calc-input [ref]="'tlInputPath'+PathNo+'_Qty'" format="0" step="1" min="0" max="99999999"></calc-input>
+                </div>
+            </div>
+            <div class="row data-row note-row" *ngIf="languageIsEnglish">
+                <div class="form-lable col-sm-12 note-label">
+                * Note: The price to switch to subscription for this product may differ from the maintenance plan renewal price in certain regions/currencies, check your local price list for pricing. 
+                </div>
+            </div>
+        </div>
+
+        <div class="right-section col-md-4 col-lg-6">
+            <!-- <img class="cliped-image" [src]="'../../../../assets/images/card_'+PathNo+'.png'"> -->
+        </div>
+    </div>
+
+</div>

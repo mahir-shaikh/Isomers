@@ -1,0 +1,89 @@
+.reports-page-wrapper
+    height calc(100% - 200px)
+    background-color rgba(255,255,255,0.3)
+    @media screen and (max-width 992px)
+        height calc(100% - 150px)
+    @media screen and (max-width 768px)
+        height calc(100% - 120px)
+        margin-left 10px
+        margin-right 10px
+        padding 0
+    .data-metrics-container
+        height 30px
+        padding 0
+        .data-metrics
+            height 30px
+            line-height 30px
+            text-shadow 1px 1px 5px #000
+            // @media screen and (max-width 576px)
+            //     padding 10px 0
+            .language-metric
+                color #eceaea
+                display inline-block
+                padding-right 10px
+                // @media screen and (max-width 576px)
+                //     display block
+                calc-outlet
+                    color #fff
+            .currency-metric
+                color #eceaea
+                display inline-block
+                padding-right 15px
+                // @media screen and (max-width 576px)
+                //     display block
+                calc-outlet
+                    color #fff
+    .carousel-container
+        height calc(100% - 30px)
+    carousel
+        slide
+            &:after,&:before
+                content ''
+                position absolute
+                height 100%
+                width 30px
+                background-color rgba(255,255,255,0.8)
+                -webkit-animation-duration 1s
+                animation-duration 1s
+                -webkit-animation-delay 1s
+                animation-delay 1s
+                -webkit-animation-fill-mode both
+                animation-fill-mode both
+                @media screen and (max-width 576px)
+                    width 10px
+            &:after
+                right 0
+            &:before
+                left 0
+            .item
+                padding 0px
+                margin 0px
+        .slideInRight
+            &:after
+                animation-name slideInRight
+                -webkit-animation-name slideInRight
+            &:before
+                animation-name fadeIn
+                -webkit-animation-name fadeIn
+        .slideInLeft
+            &:after
+                animation-name fadeIn
+                -webkit-animation-name fadeIn
+            &:before
+                animation-name slideInLeft
+                -webkit-animation-name slideInLeft
+        .animating
+            display block !important
+            pointer-events none
+            &:after, &:before
+                width 0 !important
+                -webkit-animation-delay 0s
+                animation-delay 0s
+                -webkit-animation-duration 1s
+                animation-duration 1s
+        .firstSlide
+            &:before
+                display none
+        .lastSlide
+            &:after
+                display none

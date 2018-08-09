@@ -1,0 +1,27 @@
+<div class="inputs-page-wrapper">
+    <div class="new-path-container container">
+      <div class="new-path-button" [class.disabled]="isButtonDisabled" (click)="createNewPath()" >
+        <calc-outlet ref="nmCreateNewPath"></calc-outlet>
+        <span class="fa fa-plus"></span>
+      </div>
+
+      <div class="data-metrics pull-right">
+        <div class="language-metric">
+          <span class="data-metric-icon fa fa-globe"></span>
+          <calc-outlet ref="tlInputLanguage"></calc-outlet>
+        </div>
+        <div class="currency-metric">
+          <span class="data-metric-icon fa fa-dollar"></span>
+          <calc-outlet ref="tlInputCurrency"></calc-outlet>
+        </div>
+
+      </div>
+    </div>
+    <div class="input-data-container container p-0">
+        <carousel interval="false" noWrap="true" #carousal>
+          <slide class="animated" *ngFor="let row of NoOfVisiblePaths;let 'activeIndex' = index; let 'isFirst' = first; let 'isLast' = last" (swipeleft)="swipeL()" (swiperight)="swipeR()" [class.firstSlide]="isFirst" [class.lastSlide]="isLast">
+            <input-data [PathNo]="activeIndex + 1"></input-data>
+          </slide>
+        </carousel>
+    </div>
+</div>

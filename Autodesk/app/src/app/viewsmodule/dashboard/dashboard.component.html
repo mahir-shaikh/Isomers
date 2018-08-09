@@ -1,0 +1,163 @@
+<div class="dashboard-container">
+    <!-- dont remove this line -->
+    <!-- <div class="hidden" [routerLink]="['/intro']" [routerLinkActive]="['active']" ></div> -->
+
+    <!-- Dashboard will be visible only on the tool pages - not on the home page -->
+    <div class="dashboard row">
+        <div class="topbar row">
+            <div class="autodesk-logo-container col-6">
+                <img class="autodesk-logo" src="../../../../assets/images/autodesk_logo.png"/>
+            </div>
+            <div class="dashboard-metric-container col-6 p-0 row">
+                <div class="intro-video-container" (click)="showTutorial()">
+                    <span class="video-icon" [title]="tutorialTitle"><img src="../../../../assets/images/icons/video_1.svg"></span>
+                </div>
+                <div class="dashboard-data-container" (click)="showDashboardData()" *ngIf="showDashboardIcon">
+                    <span class="dashboard-icon" [title]="dashboardTitle"><img src="../../../../assets/images/icons/dashboard_1.svg"></span>
+                </div>
+                <div class="reset-data-container" (click)="showResetAlert()">
+                    <span class="reset-icon" [title]="resetTitle"><img src="../../../../assets/images/icons/reset-all.svg"></span>
+                </div>
+                <div class="print-container" (click)="printPage()" *ngIf="showPrintIcon">
+                    <!-- <span class="printer-icon" [title]="printTitle"><img src="../../../../assets/images/icons/print.svg"></span> -->
+                    <span class="printer-icon" title="Print"><img src="../../../../assets/images/icons/print.svg"></span>
+                </div>
+                <div class="logout-container" (click)="showLogoutAlert()">
+                    <span class="logout-icon" [title]="logoutTitle"><img src="../../../../assets/images/icons/logout.svg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-data-bar row">
+            <!-- dont remove this line -->
+            <div class="hidden" [routerLink]="['/dashboard']" [routerLinkActive]="['active']" ></div>
+            <!-- Dashboard metrics will be visible only on the tool pages - not on the intro page -->
+            <div class="dashboard-data-bar-container row">
+                <div class="data-row col">
+                    <calc-outlet ref="tlOutput_Lbl_NewSubSRPInv" useRawValue="true"></calc-outlet>
+                    :
+                </div>
+                <div class="data-row col">
+                    <span class="data-label"><calc-outlet ref="tlOutput_Lbl_MtExp"></calc-outlet></span>
+                    <span class="data-value"><calc-outlet ref="calcTotalMTCost_AllYears"></calc-outlet></span>
+                </div>
+                <div class="data-row col">
+                    <span class="data-label">
+                        <calc-outlet ref="tlOutput_Lbl_NewSubSRP"></calc-outlet>
+                    </span>
+                    <span class="data-value"><calc-outlet ref="calcTotalSubSRP3Yr"></calc-outlet></span>
+                </div>
+                <div class="data-row col">
+                    <span class="data-label"><calc-outlet ref="tlOutput_Lbl_Yr1Header" useRawValue="true"></calc-outlet></span>
+                    <span class="data-value"><calc-outlet ref="calcTotalYr1_CostTotal"></calc-outlet></span>
+                </div>
+                <div class="data-row col">
+                    <span class="data-label"><calc-outlet ref="tlOutput_Lbl_Yr2Header" useRawValue="true"></calc-outlet></span>
+                    <span class="data-value"><calc-outlet ref="calcTotalYr2_CostTotal"></calc-outlet></span>
+                </div>
+                <div class="data-row col">
+                    <span class="data-label"><calc-outlet ref="tlOutput_Lbl_Yr3Header" useRawValue="true"></calc-outlet></span>
+                    <span class="data-value"><calc-outlet ref="calcTotalYr3_CostTotal"></calc-outlet></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 navigation-bar">
+            <!-- dont remove this line -->
+            <div class="hidden" [routerLink]="['/dashboard']" [routerLinkActive]="['active']" ></div>
+            <!-- Navbar will be visible only on the tool pages - not on the intro page -->
+            <div class="navigation-bar-container container p-0">
+                <div class="navigation-bar-link" [routerLink]="['/inputs']" routerLinkActive="active">
+                    <span class="navigation-bar-link-icon inputs-icon"><img src="../../../../assets/images/icons/inputs_1.svg"></span>
+                    <span class="navigation-bar-link-text"><calc-outlet ref="nmInputs"></calc-outlet></span>
+                </div>
+                <div class="navigation-bar-link" [routerLink]="['/reports']" routerLinkActive="active">
+                    <span class="navigation-bar-link-icon reports-icon"><img src="../../../../assets/images/icons/reports_1.svg"></span>
+                    <span class="navigation-bar-link-text"><calc-outlet ref="nmReportsTitle"></calc-outlet></span>
+                </div>
+                <div class="navigation-bar-link charts-link" [routerLink]="['/charts']" routerLinkActive="active">
+                    <span class="navigation-bar-link-icon reports-icon"><img src="../../../../assets/images/icons/Consolidated_chart_1.svg"></span>
+                    <span class="navigation-bar-link-text"><calc-outlet ref="nmConsolidatedReports"></calc-outlet></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="copyright-container pull-left">
+            <span class="fa fa-copyright"></span>
+            <calc-outlet ref="nmCopyrightText"></calc-outlet>
+        </div>
+        <div class="bts-logo-container pull-right">
+            <div class="bts-icon"></div>
+        </div>
+    </div>
+</div>
+
+
+<div bsModal #dashboardDataModal="bs-modal" class="modal model-lg animated slideInDown" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg dashboard-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn-icon" (click)="hideDashboardData()"><img src="../../../../assets/images/icons/dashboard_1.svg"></span>
+            </div>
+            <div class="modal-body">
+                <dashboard-data></dashboard-data>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #videoModal="bs-modal" class="modal model-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-lg video-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title"><calc-outlet ref="nmTutorial"></calc-outlet></span>
+                <span class="close-btn-icon fa fa-close" (click)="hideTutorial()"></span>
+            </div>
+            <div class="modal-body">
+                <!-- <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="../../../../assets/videos/tutorial.mp4"
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div> -->
+                <video class="video" controls controlsList="nodownload" #videoRef>
+                    <source src="../../../../assets/videos/tutorial.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #logoutModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm logout-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><calc-outlet ref="nmLogout"></calc-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <calc-outlet ref="nmLogoutConfirmMsg"></calc-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-danger yes-button" (click)="hideLogoutAlert(true)"  [routerLink]="['/logout']"><calc-outlet ref="nmYes"></calc-outlet></button>
+            <button type="button" class="btn btn-primary no-button" (click)="hideLogoutAlert()"><calc-outlet ref="nmNo"></calc-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #resetModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-sm reset-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><calc-outlet ref="nmResetAll"></calc-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <calc-outlet ref="nmResetConfirmMsg"></calc-outlet>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-danger yes-button" (click)="resetModel()"><calc-outlet ref="nmYes"></calc-outlet></button>
+            <button type="button" class="btn btn-primary no-button" (click)="hideResetAlert()"><calc-outlet ref="nmNo"></calc-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>

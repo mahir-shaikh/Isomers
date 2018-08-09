@@ -1,0 +1,26 @@
+header =   #000000
+
+bg overlay =   #01ca94
+     opacity =   30
+
+active tab bg =   #01ca94
+          opacity  =  80
+unactive tab bg =  #000000
+          opacity  =  40
+       icon/ font =   #ffffff
+
+card =   #ecece9 
+card opacity =  80
+
+card main font color =   #000000
+
+radio btn =   #333333
+
+dropdown =   #ecece9
+open =   #ffffff
+
+create/product name btn =   #7eb945 
+
+toggle number bg =   #333333
+           chart bg =   #ff7a59 
+             icon =   # 

@@ -1,0 +1,190 @@
+<div class="charts-wrapper container" *ngIf="NoOfVisiblePaths.length >= '1'">
+    <!-- Path 1 -->
+    <div class="chart-row row" *ngFor="let path of NoOfVisiblePaths; let ind = index;">
+        <div class="col-12 chart-heading" *ngIf="productSelected[0]">
+            <calc-outlet ref="nmProjections"></calc-outlet>
+            -
+            <calc-outlet [ref]="'tlInputPath' + (ind + 1) + '_ProdMT'" useRawValue="true"></calc-outlet>
+            <span class="fa fa-long-arrow-right"></span>
+            <calc-outlet [ref]="'tlInputPath' + (ind + 1) + '_ProdSub'" useRawValue="true"></calc-outlet>
+        </div>
+        <div class="col-12 chart-heading" *ngIf="!productSelected[0]">
+            <calc-outlet ref="nmProjections"></calc-outlet>
+            -
+            <calc-outlet ref="'nmPath' + (ind + 1)" useRawValue="true"></calc-outlet>
+        </div>
+        <div class="chart-container row col-12">
+            <div class="col-6 col-sm-6 line-chart">
+                 <basicline
+                 [rangeref]="'[[tlOutput_Cht_Path' + (ind + 1) + '_Y1_M2SInv,tlOutput_Cht_Path' + (ind + 1) + '_Y2_M2SInv,tlOutput_Cht_Path' + (ind + 1) + '_Y3_M2SInv],[tlOutput_Cht_Path' + (ind + 1) + '_Y1_SRPDisc,tlOutput_Cht_Path' + (ind + 1) + '_Y2_SRPDisc,tlOutput_Cht_Path' + (ind + 1) + '_Y3_SRPDisc],[tlOutput_Cht_Path' + (ind + 1) + '_Y1_MTDisc,tlOutput_Cht_Path' + (ind + 1) + '_Y2_MTDisc,tlOutput_Cht_Path' + (ind + 1) + '_Y3_MTDisc]]'"
+
+                 [categorylabels]="'tlOutput_Cht_Path' + (ind + 1) + '_Y1Label,tlOutput_Cht_Path' + (ind + 1) + '_Y2Label,tlOutput_Cht_Path' + (ind + 1) + '_Y3Label'"
+
+                 [serieslabels]="'tlOutput_Cht_Path' + (ind + 1) + '_M2SLabel,tlOutput_Cht_Path' + (ind + 1) + '_SRPDiscLabel,tlOutput_Cht_Path' + (ind + 1) + '_MTDiscLabel'"
+
+                [fromTitle]="'tlInputPath' + (ind + 1) + '_ProdMT'"
+                [toTitle]="'tlInputPath' + (ind + 1) + '_ProdSub'"></basicline>
+            </div>
+            <div class="col-6 col-sm-6 column-chart">
+                <stackedcolumn
+                [rangeref]="'[[tlOutput_Cht_Path' + (ind + 1) + 'Yr1_CostYr1,tlOutput_Cht_Path' + (ind + 1) + 'Yr2_CostYr1,tlOutput_Cht_Path' + (ind + 1) + 'Yr3_CostYr1,tlOutput_Cht_Path' + (ind + 1) + 'MTCost_Yr1],[tlOutput_Cht_Path' + (ind + 1) + 'Yr1_CostYr2,tlOutput_Cht_Path' + (ind + 1) + 'Yr2_CostYr2,tlOutput_Cht_Path' + (ind + 1) + 'Yr3_CostYr2,tlOutput_Cht_Path' + (ind + 1) + 'MTCost_Yr2],[tlOutput_Cht_Path' + (ind + 1) + 'Yr1_CostYr3,tlOutput_Cht_Path' + (ind + 1) + 'Yr2_CostYr3,tlOutput_Cht_Path' + (ind + 1) + 'Yr3_CostYr3,tlOutput_Cht_Path' + (ind + 1) + 'MTCost_Yr3]]'"
+
+                [categorylabels]="'tlOutput_ChtStck_Path' + (ind + 1) + '_Y1Label,tlOutput_ChtStck_Path' + (ind + 1) + '_Y2Label,tlOutput_ChtStck_Path' + (ind + 1) + '_Y3Label,tlOutput_ChtStck_Path' + (ind + 1) + '_MTLabel'"
+
+                [serieslabels]="'tlOutput_Cht_Path' + (ind + 1) + '_HorizLbl1,tlOutput_Cht_Path' + (ind + 1) + '_HorizLbl2,tlOutput_Cht_Path' + (ind + 1) + '_HorizLbl3'"
+
+                [fromTitle]="'tlInputPath' + (ind + 1) + '_ProdMT'"
+                [toTitle]="'tlInputPath' + (ind + 1) + '_ProdSub'"
+                ></stackedcolumn>
+            </div>
+        </div>
+    </div>
+<!-- 
+    <div class="chart-row row" *ngIf="NoOfVisiblePaths.length >= '2'">
+        <div class="col-12 chart-heading" *ngIf="productSelected[1]">
+            <calc-outlet ref="nmProjections"></calc-outlet>
+            -
+            <calc-outlet [ref]="'tlInputPath2_ProdMT'" useRawValue="true"></calc-outlet>
+            <span class="fa fa-long-arrow-right"></span>
+            <calc-outlet [ref]="'tlInputPath2_ProdSub'" useRawValue="true"></calc-outlet>
+        </div>
+        <div class="col-12 chart-heading" *ngIf="!productSelected[1]">
+            <calc-outlet ref="nmProjections"></calc-outlet>
+            -
+            <calc-outlet ref="nmPath2" useRawValue="true"></calc-outlet>
+        </div>
+        <div class="chart-container row col-12">
+             <div class="col-6 line-chart">
+                 <basicline
+                 [rangeref]="'[[tlOutput_Cht_Path2_Y1_M2SInv,tlOutput_Cht_Path2_Y2_M2SInv,tlOutput_Cht_Path2_Y3_M2SInv],[tlOutput_Cht_Path2_Y1_SRPDisc,tlOutput_Cht_Path2_Y2_SRPDisc,tlOutput_Cht_Path2_Y3_SRPDisc],[tlOutput_Cht_Path2_Y1_MTDisc,tlOutput_Cht_Path2_Y2_MTDisc,tlOutput_Cht_Path2_Y3_MTDisc]]'"
+
+                 [categorylabels]="'tlOutput_Cht_Path2_Y1Label,tlOutput_Cht_Path2_Y2Label,tlOutput_Cht_Path2_Y3Label'"
+
+                 [serieslabels]="'tlOutput_Cht_Path2_M2SLabel,tlOutput_Cht_Path2_SRPDiscLabel,tlOutput_Cht_Path2_MTDiscLabel'"
+
+                [fromTitle]="'tlInputPath2_ProdMT'"
+                [toTitle]="'tlInputPath2_ProdSub'"></basicline>
+            </div>
+            <div class="col-6 col-sm-6 column-chart">
+                <stackedcolumn
+                 [rangeref]="'[[tlOutput_Cht_Path2Yr1_CostYr1,tlOutput_Cht_Path2Yr2_CostYr1,tlOutput_Cht_Path2Yr3_CostYr1,tlOutput_Cht_Path2MTCost_Yr1],[tlOutput_Cht_Path2Yr1_CostYr2,tlOutput_Cht_Path2Yr2_CostYr2,tlOutput_Cht_Path2Yr3_CostYr2,tlOutput_Cht_Path2MTCost_Yr2],[tlOutput_Cht_Path2Yr1_CostYr3,tlOutput_Cht_Path2Yr2_CostYr3,tlOutput_Cht_Path2Yr3_CostYr3,tlOutput_Cht_Path2MTCost_Yr3]]'"
+
+
+                [categorylabels]="'tlOutput_ChtStck_Path2_Y1Label,tlOutput_ChtStck_Path2_Y2Label,tlOutput_ChtStck_Path2_Y3Label,tlOutput_ChtStck_Path2_MTLabel'"
+
+                [serieslabels]="'tlOutput_Cht_Path2_HorizLbl1,tlOutput_Cht_Path2_HorizLbl2,tlOutput_Cht_Path2_HorizLbl3'"
+
+                [fromTitle]="'tlInputPath2_ProdMT'"
+                [toTitle]="'tlInputPath2_ProdSub'"
+                ></stackedcolumn>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-row row" *ngIf="NoOfVisiblePaths.length >= '3'">
+        <div class="col-12 chart-heading" *ngIf="productSelected[2]">
+            <calc-outlet ref="nmProjections"></calc-outlet>
+            -
+            <calc-outlet [ref]="'tlInputPath3_ProdMT'" useRawValue="true"></calc-outlet>
+            <span class="fa fa-long-arrow-right"></span>
+            <calc-outlet [ref]="'tlInputPath3_ProdSub'" useRawValue="true"></calc-outlet>
+        </div>
+        <div class="col-12 chart-heading" *ngIf="!productSelected[2]">
+            <calc-outlet ref="nmProjections"></calc-outlet>
+            -
+            <calc-outlet ref="nmPath3" useRawValue="true"></calc-outlet>
+        </div>
+        <div class="chart-container row col-12">
+            <div class="col-6 line-chart">
+                 <basicline
+                 [rangeref]="'[[tlOutput_Cht_Path3_Y1_M2SInv,tlOutput_Cht_Path3_Y2_M2SInv,tlOutput_Cht_Path3_Y3_M2SInv],[tlOutput_Cht_Path3_Y1_SRPDisc,tlOutput_Cht_Path3_Y2_SRPDisc,tlOutput_Cht_Path3_Y3_SRPDisc],[tlOutput_Cht_Path3_Y1_MTDisc,tlOutput_Cht_Path3_Y2_MTDisc,tlOutput_Cht_Path3_Y3_MTDisc]]'"
+
+                 [categorylabels]="'tlOutput_Cht_Path3_Y1Label,tlOutput_Cht_Path3_Y2Label,tlOutput_Cht_Path3_Y3Label'"
+
+                 [serieslabels]="'tlOutput_Cht_Path3_M2SLabel,tlOutput_Cht_Path3_SRPDiscLabel,tlOutput_Cht_Path3_MTDiscLabel'"
+
+                [fromTitle]="'tlInputPath3_ProdMT'"
+                [toTitle]="'tlInputPath3_ProdSub'"></basicline>
+            </div>
+            <div class="col-6 col-sm-6 column-chart">
+                <stackedcolumn
+                 [rangeref]="'[[tlOutput_Cht_Path3Yr1_CostYr1,tlOutput_Cht_Path3Yr2_CostYr1,tlOutput_Cht_Path3Yr3_CostYr1,tlOutput_Cht_Path3MTCost_Yr1],[tlOutput_Cht_Path3Yr1_CostYr2,tlOutput_Cht_Path3Yr2_CostYr2,tlOutput_Cht_Path3Yr3_CostYr2,tlOutput_Cht_Path3MTCost_Yr2],[tlOutput_Cht_Path3Yr1_CostYr3,tlOutput_Cht_Path3Yr2_CostYr3,tlOutput_Cht_Path3Yr3_CostYr3,tlOutput_Cht_Path3MTCost_Yr3]]'"
+
+                [categorylabels]="'tlOutput_ChtStck_Path3_Y1Label,tlOutput_ChtStck_Path3_Y2Label,tlOutput_ChtStck_Path3_Y3Label,tlOutput_ChtStck_Path3_MTLabel'"
+
+                [serieslabels]="'tlOutput_Cht_Path3_HorizLbl1,tlOutput_Cht_Path3_HorizLbl2,tlOutput_Cht_Path3_HorizLbl3'"
+
+                [fromTitle]="'tlInputPath3_ProdMT'"
+                [toTitle]="'tlInputPath3_ProdSub'"
+                ></stackedcolumn>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-row row" *ngIf="NoOfVisiblePaths.length >= '4'">
+        <div class="col-12 chart-heading" *ngIf="productSelected[3]">
+            <calc-outlet ref="nmProjections"></calc-outlet>
+            -
+            <calc-outlet [ref]="'tlInputPath4_ProdMT'" useRawValue="true"></calc-outlet>
+            <span class="fa fa-long-arrow-right"></span>
+            <calc-outlet [ref]="'tlInputPath4_ProdSub'" useRawValue="true"></calc-outlet>
+        </div>
+        <div class="col-12 chart-heading" *ngIf="!productSelected[3]">
+            <calc-outlet ref="nmProjections"></calc-outlet>
+            -
+            <calc-outlet ref="nmPath4" useRawValue="true"></calc-outlet>
+        </div>
+        <div class="chart-container row col-12">
+            <div class="col-6 line-chart">
+                 <basicline
+                 [rangeref]="'[[tlOutput_Cht_Path4_Y1_M2SInv,tlOutput_Cht_Path4_Y2_M2SInv,tlOutput_Cht_Path4_Y3_M2SInv],[tlOutput_Cht_Path4_Y1_SRPDisc,tlOutput_Cht_Path4_Y2_SRPDisc,tlOutput_Cht_Path4_Y3_SRPDisc],[tlOutput_Cht_Path4_Y1_MTDisc,tlOutput_Cht_Path4_Y2_MTDisc,tlOutput_Cht_Path4_Y3_MTDisc]]'"
+
+                 [categorylabels]="'tlOutput_Cht_Path4_Y1Label,tlOutput_Cht_Path4_Y2Label,tlOutput_Cht_Path4_Y3Label'"
+
+                 [serieslabels]="'tlOutput_Cht_Path4_M2SLabel,tlOutput_Cht_Path4_SRPDiscLabel,tlOutput_Cht_Path4_MTDiscLabel'"
+
+                [fromTitle]="'tlInputPath4_ProdMT'"
+                [toTitle]="'tlInputPath4_ProdSub'"></basicline>
+            </div>
+            <div class="col-6 col-sm-6 column-chart">
+                <stackedcolumn
+                 [rangeref]="'[[tlOutput_Cht_Path4Yr1_CostYr1,tlOutput_Cht_Path4Yr2_CostYr1,tlOutput_Cht_Path4Yr3_CostYr1,tlOutput_Cht_Path4MTCost_Yr1],[tlOutput_Cht_Path4Yr1_CostYr2,tlOutput_Cht_Path4Yr2_CostYr2,tlOutput_Cht_Path4Yr3_CostYr2,tlOutput_Cht_Path4MTCost_Yr2],[tlOutput_Cht_Path4Yr1_CostYr3,tlOutput_Cht_Path4Yr2_CostYr3,tlOutput_Cht_Path4Yr3_CostYr3,tlOutput_Cht_Path4MTCost_Yr3]]'"
+
+                [categorylabels]="'tlOutput_ChtStck_Path4_Y1Label,tlOutput_ChtStck_Path4_Y2Label,tlOutput_ChtStck_Path4_Y3Label,tlOutput_ChtStck_Path4_MTLabel'"
+
+                [serieslabels]="'tlOutput_Cht_Path4_HorizLbl1,tlOutput_Cht_Path4_HorizLbl2,tlOutput_Cht_Path4_HorizLbl3'"
+
+                [fromTitle]="'tlInputPath4_ProdMT'"
+                [toTitle]="'tlInputPath4_ProdSub'"
+                ></stackedcolumn>
+            </div>
+        </div>
+    </div> -->
+
+        <!-- Total -->
+    <div class="chart-row row">
+        <div class="col-12 chart-heading">
+            <calc-outlet ref="nmProjections"></calc-outlet>
+            -
+            <calc-outlet ref="nmTotal"></calc-outlet>
+        </div>
+        <div class="chart-container row col-12">
+            <div class="col-6 line-chart">
+                 <basicline
+                 [rangeref]="'[[tlOutput_Cht_Total_Y1_M2SInv,tlOutput_Cht_Total_Y2_M2SInv,tlOutput_Cht_Total_Y3_M2SInv],[tlOutput_Cht_Total_Y1_SRPDisc,tlOutput_Cht_Total_Y2_SRPDisc,tlOutput_Cht_Total_Y3_SRPDisc],[tlOutput_Cht_Total_Y1_MTDisc,tlOutput_Cht_Total_Y2_MTDisc,tlOutput_Cht_Total_Y3_MTDisc]]'"
+
+                 [categorylabels]="'tlOutput_Cht_Total_Y1Label,tlOutput_Cht_Total_Y2Label,tlOutput_Cht_Total_Y3Label'"
+
+                 [serieslabels]="'tlOutput_Cht_Total_M2SLabel,tlOutput_Cht_Total_SRPDiscLabel,tlOutput_Cht_Total_MTDiscLabel'"></basicline>
+            </div>
+            <div class="col-6 col-sm-6 column-chart">
+                <stackedcolumn
+                 [rangeref]="'[[tlOutput_Cht_TotalYr1_CostYr1,tlOutput_Cht_TotalYr2_CostYr1,tlOutput_Cht_TotalYr3_CostYr1,tlOutput_Cht_TotalMTCost_Yr1],[tlOutput_Cht_TotalYr1_CostYr2,tlOutput_Cht_TotalYr2_CostYr2,tlOutput_Cht_TotalYr3_CostYr2,tlOutput_Cht_TotalMTCost_Yr2],[tlOutput_Cht_TotalYr1_CostYr3,tlOutput_Cht_TotalYr2_CostYr3,tlOutput_Cht_TotalYr3_CostYr3,tlOutput_Cht_TotalMTCost_Yr3]]'"
+
+                [categorylabels]="'tlOutput_ChtStck_Total_Y1Label,tlOutput_ChtStck_Total_Y2Label,tlOutput_ChtStck_Total_Y3Label,tlOutput_ChtStck_Total_MTLabel'"
+
+                [serieslabels]="'tlOutput_Cht_Total_HorizLbl1,tlOutput_Cht_Total_HorizLbl2,tlOutput_Cht_Total_HorizLbl3'"></stackedcolumn>
+            </div>
+        </div>
+    </div>
+</div>

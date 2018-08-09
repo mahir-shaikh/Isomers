@@ -1,0 +1,55 @@
+.print-wrapper
+    table        
+        td,th
+            padding 0
+        th
+            font-weight 500
+            text-align center
+    .table-heading
+        padding 10px
+        calc-outlet
+            font-size 1rem
+            font-weight 500
+    .table-container
+        .heading-row
+            color #052800
+            font-weight 500
+            font-size 1rem   
+            .data-label
+                font-weight 500
+                padding 5px
+                text-outlet, calc-outlet
+                    font-size 0.875rem    
+        .sub-heading-row
+            .data-label
+                padding 5px
+                padding-left 15px
+                color #1EA345
+                font-weight 500
+            .data-value
+                font-weight 500
+                text-align center
+                background-color #F4F4F4
+                text-outlet, calc-outlet
+                    height 100%
+                    display inline-flex
+                    align-items center 
+        .data-row
+            .data-label
+                font-weight 500
+                padding-left 15px
+                text-outlet, calc-outlet
+                    height 100%
+                    display inline-flex
+                    align-items center
+                    padding-left 15px 
+            .data-value
+                text-align center
+                background-color #F4F4F4
+                padding 5px  
+        .total-row
+            .data-label
+                font-weight 600    
+            .data-value
+                background-color #E4E0DF
+                

@@ -1,0 +1,246 @@
+:host
+    display block
+    .hidden.active ~ .dashboard
+        display none
+    .dashboard
+        display block
+.dashboard
+    .row
+        margin 0
+    .navigation-bar
+        .hidden.active ~ .navigation-bar-container
+            display none
+        padding 0
+        @media screen and (max-width 666px)
+            padding 0 5px
+        &-container
+            justify-content center
+            align-items center
+            display -webkit-box
+            display -webkit-flex
+            display -ms-flexbox
+            display flex
+            padding-bottom 0
+            margin auto
+            @media screen and (max-width 576px)
+                width calc(100% - 20px)
+                margin-left 10px
+                margin-right 10px
+            > .navigation-bar-link
+                height 50px
+                padding 10px 50px
+                margin-top 5px
+                min-width 100px
+                text-align center
+                position relative
+                text-transform uppercase
+                cursor pointer
+                background-color rgba(0,0,0,0.5)
+                flex-grow 1
+                calc-outlet
+                    font-size 1rem
+                    color #fff
+                    text-shadow 2px 2px 3px #34383e
+                @media screen and (max-width 576px)
+                    padding 10px 25px
+                @media screen and (max-width 320px)
+                    calc-outlet
+                        font-size 0.74rem
+                &:hover
+                    background-color rgba(0,0,0,0.8)
+            .navigation-bar-link.active
+                background-color #01B494
+            .bar
+                display inline-block
+                padding 5px 0
+            .navigation-bar-link-icon
+                padding-right 5px
+            .navigation-bar-link-text
+                calc-outlet
+                    line-height 30px
+                    font-weight 500
+            .charts-link
+                @media screen and (max-width 768px)
+                    display none
+    .topbar
+        padding 0
+        align-items center
+        position relative
+        justify-content space-between
+        background-color #000
+        max-height 40px
+        color #fff
+        .autodesk-logo
+            width 100px
+            &-container
+                // width 100px
+                height 40px
+                display -webkit-box
+                display -webkit-flex
+                display -ms-flexbox
+                display flex-end
+                align-items center
+                padding-left 10px
+        .dashboard-metric-container
+            justify-content flex-end
+            .logout-container,.dashboard-data-container,.reset-data-container,.print-container,.intro-video-container
+                padding 10px 7px
+                cursor pointer
+                max-width 30px
+                &:hover
+                    background #242323
+                 @media screen and (max-width 768px)
+                    padding 10px 5px
+            .dashboard-data-container
+                display none
+                @media screen and (max-width 992px)
+                    display block
+                    background #7fb843
+                    padding-bottom 15px
+                    border-radius 0 0 15px 15px
+                    position absolute
+                    right 125px
+                &:hover
+                    background #669d2c
+    .dashboard-data-bar
+        .hidden.active ~ .dashboard-data-bar-container
+            display none
+        .dashboard-data-bar-container
+            background-color #313131
+            height 60px
+            align-items center
+            width 100%
+            calc-outlet,text-outlet
+                color #fff
+                font-size 0.8125rem
+                line-height 0.8125rem
+            @media screen and (max-width 992px)
+                display none
+        .data-row
+            padding-right 0
+            padding-left 5px
+            text-align center
+            .data-label
+                display block
+                &:after
+                    color #fff
+                    padding 0 5px
+            .data-value
+                calc-outlet
+                    font-size 0.937rem
+                    line-height 0.937rem
+                    font-weight 500
+                    color #d0df4d
+.footer
+    position fixed
+    bottom 0
+    left 0
+    right 0
+    padding 10px
+    z-index 2000
+    max-height 40px
+    background-color #231F20
+    calc-outlet
+        font-size 0.875rem
+    @media screen and (max-width 767px)
+        display none
+    .bts-icon
+        height 21px
+        width 60px
+        background url("../../../../assets/images/bts_logo.png") no-repeat
+        background-size 50px
+        vertical-align middle
+        display inline-block
+    .copyright-container
+        calc-outlet
+            color #b0b0b0
+        
+.dashboard-modal
+    position absolute
+    width 100%
+    max-width none
+    margin auto
+    .modal-content
+        .modal-header
+            background-color #7fb843
+            position absolute
+            bottom -45px
+            right 125px
+            border-radius 0 0 15px 15px
+            border none
+            padding 15px 6px
+            &:hover
+                background-color #669d2c
+                ~ .modal-body
+                    border-color #669d2c
+            .close-btn-icon
+                cursor pointer
+                font-size 1.25em
+                color #FFF
+                @media screen and (max-width 350)
+                    font-size 1.55em
+        .modal-body
+            overflow-y auto
+            background #000
+            border-bottom 5px solid #7fb843            
+.video-modal
+    width 100%
+    margin 0 auto
+    min-width 320px
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%,-50%) !important
+    -webkit-transform translate(-50%,-50%) !important
+    -o-transform translate(-50%,-50%) !important
+    @media screen and (max-height 320px)
+        height auto
+    .modal-content
+        background rgba(255,255,255,0.3)
+        border 0
+        display block
+        .modal-header
+            padding 0
+            justify-content space-between
+            background-color #34383E
+            border-bottom 0
+            .modal-title
+                padding-left 15px
+                calc-outlet
+                    color #FFF
+                    font-size 1.125rem
+                    font-weight 500
+            .close-btn-icon
+                cursor pointer
+                font-size 1.25em
+                padding 10px
+                background-color #000
+                color #FFF
+                @media screen and (max-width 350)
+                    font-size 1.55em
+        .modal-body
+            padding 10px
+            display -webkit-box
+            display -webkit-flex
+            display -ms-flexbox
+            display flex
+            justify-content center
+            .video
+                width 100%
+                height 100%
+                @media screen and (max-height 320px)
+                    width 85%
+.logout-modal,.reset-modal
+    .button-container
+        padding 0 15px 10px
+        text-align center
+        .btn
+            cursor pointer
+            calc-outlet
+                color #FFF
+        .yes-button
+            float left
+        .no-button
+            float right
+        &:after
+            clear both

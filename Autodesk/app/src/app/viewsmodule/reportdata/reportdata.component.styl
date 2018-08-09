@@ -1,0 +1,106 @@
+.report-data-wrapper
+    height calc(100% - 50px)
+    overflow auto
+    margin-top 8px !important
+    -webkit-overflow-scrolling touch
+    .reports-content,.charts-content
+        display block
+    .isHidden
+        display block
+        @media screen and (max-width 768px)
+            display none !important
+    .charts-content
+        @media screen and (max-width 320px)
+            padding 0 5px
+        .chart-container
+            margin 10px
+            @media screen and (max-width 320px)
+                margin 2px
+    .reports-content-wrapper
+        padding 15px 0
+        calc-outlet, text-outlet
+            color #000
+        .switch-to
+            margin-bottom 20px
+            .switch-to-heading
+                font-weight 500
+                flex-wrap nowrap
+                text-transform uppercase
+                padding 5px 0
+                calc-outlet
+                    font-weight 500
+            .switch-to-content
+                padding 7px 6px
+                border 1px solid #7f7676
+                calc-outlet
+                    font-weight 500
+                    font-size 0.9rem
+        .info-section
+            margin-bottom 20px
+            .info-heading
+                border-bottom 1px solid black
+                font-weight 500
+                flex-wrap nowrap
+            .row, div[class^="col-sm"]
+                padding 0px
+            .accordion-icon
+                justify-content: flex-end;
+                display: inline-flex;
+                align-items: center;
+        .data-label
+            margin 5px
+        .data-value
+            margin 5px
+            text-align center
+        .heading-row
+            calc-outlet
+                color #000
+                font-weight 500
+        .highlighted-row
+            .data-label,.data-value
+                font-weight 500
+    .uppercase
+        text-transform uppercase
+
+.report-heading-container
+    .toggle-button-container
+        position absolute
+        right 30px
+        top 8px
+        display none
+        @media screen and (max-width 768px)
+            display block
+            right 60px
+        @media screen and (max-width 576px)
+            right 30px
+    .report-title-container
+        display inline-block
+        background-color #7FB843
+        color #FFF
+        font-size 1.125rem
+        padding 10px
+        margin-top 5px
+        box-shadow 1px 1px 8px rgba(0, 0, 0, 0.54)
+        position relative
+        left -15px
+        @media screen and (max-width 576px)
+            max-width 175px
+        @media screen and (max-width 350px)
+            max-width 165px
+        calc-outlet, text-outlet
+            color #fff
+        &:after
+            content ''
+            width 0px
+            height 0px
+            border-left 10px solid #031313
+            position absolute
+            top 100%
+            left 4px
+            z-index 1
+            transform rotate(-45deg)
+            border-top 10px solid transparent
+            border-bottom 10px solid transparent
+            transform-origin 0 25%
+
+
