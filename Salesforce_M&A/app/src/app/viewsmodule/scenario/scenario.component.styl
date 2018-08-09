@@ -1,0 +1,31 @@
+:host
+    height calc(100% - 120px)
+    overflow auto
+    -webkit-overflow-scrolling touch
+    @media screen and (max-width 1024px)
+        height calc(100% - 160px)
+    @media screen and (max-width 768px)
+        height calc(100% - 180px)
+    
+.scenario-container
+    position relative
+    margin 10px auto
+    padding 0
+    .eventBody
+        width calc(100% - 100px)
+        background-color #E5E5E5
+        padding 10px
+        min-height 600px
+    .heading-container
+        margin 10px 0
+        .heading-text
+            calc-outlet,text-outlet
+                color #0077BB
+                font-size 1.5rem
+                line-height 1.5rem
+
+.dashboard-graph-container
+    position absolute
+    width 100px
+    right 0
+    top 0

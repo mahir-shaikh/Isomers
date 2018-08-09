@@ -1,0 +1,69 @@
+<div class="scenario-data-wrapper" *ngIf="!isDisabled">
+    <div class="row scenario-container">
+        <div class="col-sm-12 scenario-title" [class.run-complete]="isRunComplete" (click)="toggleTab()">
+            <calc-outlet [ref]="'tlInputScenario'+wobblerNumber"></calc-outlet>
+            <span class="btn-container" *ngIf="!isRunComplete">
+                <button class="pull-right btn" [class.disabled]="isDisabled" (click)="runScenario()"><text-outlet key="Open"></text-outlet></button>
+            </span>
+            <span class="pull-right fa" [class.fa-minus]="isOpen" [class.fa-plus]="!isOpen" *ngIf="isRunComplete"></span>
+        </div>
+        <div class="col-sm-12 scenario-data" [class.hidden]="!isOpen" *ngIf="isRunComplete">
+            <div class="line-break">
+                <hr>
+            </div>
+            <div class="scenario-description">
+                <calc-outlet [ref]="'tlOutputDescr'+wobblerNumber"></calc-outlet>
+            </div>
+            <div class="effect">
+                <div class="data-row" *ngIf="showDisruption">
+                    <span class="data-label">
+                        <text-outlet key="ScenarioOutputLabel1"></text-outlet>
+                    </span>
+                    <span class="data-value">
+                        <calc-outlet [ref]="'tlOutputDisruptionScen'+wobblerNumber"></calc-outlet>
+                    </span>
+                </div>
+                <div class="data-row" *ngIf="showEmployeeEngagement">
+                    <span class="data-label">
+                        <text-outlet key="ScenarioOutputLabel2"></text-outlet>
+                    </span>
+                    <span class="data-value">
+                        <calc-outlet [ref]="'tlOutputESATScen'+wobblerNumber"></calc-outlet>
+                    </span>
+                </div>
+                <div class="data-row" *ngIf="showTrust">
+                    <span class="data-label">
+                        <text-outlet key="ScenarioOutputLabel3"></text-outlet>
+                    </span>
+                    <span class="data-value">
+                        <calc-outlet [ref]="'tlOutputTrustScen'+wobblerNumber"></calc-outlet>
+                    </span>
+                </div>
+                <div class="data-row" *ngIf="showCSat">
+                    <span class="data-label">
+                        <text-outlet key="ScenarioOutputLabel4"></text-outlet>
+                    </span>
+                    <span class="data-value">
+                        <calc-outlet [ref]="'tlOutputCSATScen'+wobblerNumber"></calc-outlet>
+                    </span>
+                </div>
+                <div class="data-row" *ngIf="showACV">
+                    <span class="data-label">
+                        <text-outlet key="ScenarioOutputLabel5"></text-outlet>
+                    </span>
+                    <span class="data-value">
+                        <calc-outlet [ref]="'tlOutputACVScen'+wobblerNumber"></calc-outlet>
+                    </span>
+                </div>
+                <div class="data-row" *ngIf="showBudgetDelta">
+                    <span class="data-label">
+                        <text-outlet key="ScenarioOutputLabel6"></text-outlet>
+                    </span>
+                    <span class="data-value">
+                        <calc-outlet [ref]="'tlOutputBudgetScen'+wobblerNumber"></calc-outlet>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

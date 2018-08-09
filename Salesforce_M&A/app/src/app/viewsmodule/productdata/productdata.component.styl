@@ -1,0 +1,51 @@
+.product-wrapper
+    margin 10px !important
+    margin-bottom 0
+    background-color #fff
+    .data-container
+        padding 10px 15px
+    .sub-heading-text-container
+        .sub-heading-text
+            padding 10px 15px
+            color #EB9400
+            text-outlet,calc-outlet
+                font-size 1.125rem
+                line-height 1.125rem
+            @media screen and (min-width 1025px)
+                font-size 1.25rem
+                text-outlet,calc-outlet
+                    font-size 1.25rem
+    .heading-row
+        align-items center
+        text-align center
+        .data-label
+            font-weight 500
+            // display block
+    .data-row
+        align-items center
+        margin 10px 0
+        .data-label
+            font-weight 500
+            calc-outlet
+                font-size 1rem
+            @media screen and (min-width 1025px)
+                font-size 1.125rem
+                text-outlet,calc-outlet
+                    font-size 1.125rem
+        .data-value
+            text-align center
+            position relative
+    .data-column
+        > .data-label, > .data-value
+            margin 10px 0
+    .line-break
+        margin-top 8px
+        margin-bottom 8px
+    .pt-10
+        padding-top 10px
+    .pb-10
+        padding-bottom 10px
+    .transform-cell
+        position absolute       
+        transform translate(-25px,-25px)
+        -webkit-transform translate(-25px,-25px)

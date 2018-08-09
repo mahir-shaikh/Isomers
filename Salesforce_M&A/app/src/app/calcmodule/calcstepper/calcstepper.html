@@ -1,0 +1,7 @@
+<form class='stepper'>
+  <div class='fa fa-plus add stepper-button' [class.disabled]="formattedVal == max || value ==max" role='button'></div>
+  <!-- <input class='field' #inputValue type='text' [value]="value" [min]='min' [max]='max' OnlyNumber="true" [step]="step" (blur)="saveDataToModel(inputValue.value)"/> -->
+  <input class='field hidden' type='number' [value]='value' [min]='min' [max]='max' readonly="readonly" [step]="step" />
+  <span class="field-value" [class.negative]="showNegativeColor">{{formattedVal}}</span>
+  <div class='fa fa-minus subtract stepper-button' [class.disabled]="formattedVal == min || value == min" role='button'></div>
+</form>

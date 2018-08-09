@@ -1,0 +1,58 @@
+.scenario-data-wrapper
+    margin 10px 0
+    .scenario-container
+        width 100%
+        background-color #FFF
+        margin 10px 0
+        .scenario-title
+            padding 10px 15px
+            font-size 1.25rem
+            color #ed8b00
+            text-outlet,calc-outlet
+                font-size 1.25rem
+                line-height 1.25rem
+            @media screen and (min-width 1025px)
+                font-size 1.375rem
+                text-outlet,calc-outlet
+                    font-size 1.375rem
+            .btn
+                color #FFF
+                background-color #ed8b00
+                border-color #ed8b00
+                cursor pointer
+                font-size 1.125rem
+                &.disabled
+                    pointer-events none
+                    opacity 0.5
+            &.run-complete
+                cursor pointer
+        .scenario-data
+            padding 10px
+            padding-top 0
+            max-height 500px // anything above original height
+            overflow hidden
+            transition all 0.5s cubic-bezier(.5,0,.3,1)
+            .scenario-description
+                padding 15px 10px
+                font-size 1rem
+                calc-outlet,text-outlet
+                    font-size 1rem
+                @media screen and (min-width 1025px)
+                    font-size 1.125rem
+                    text-outlet,calc-outlet
+                        font-size 1.125rem
+            .effect
+                padding 15px 10px
+                .data-row
+                    display inline-block
+                    padding 10px
+                    background #EAEFF2
+                    color #01B2A8
+                    .data-label,.data-value
+                        font-weight 600
+            &.hidden
+                max-height 0
+    .line-break
+        margin 0
+        hr
+            margin 0

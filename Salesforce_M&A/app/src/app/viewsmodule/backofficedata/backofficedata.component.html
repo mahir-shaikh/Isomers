@@ -1,0 +1,189 @@
+<div class="backoffice-wrapper row animated slideInUp">
+    <div class="col-12 col-sm-12 backoffice-data">
+        <div class="sub-heading-text-container row">
+            <div class="sub-heading-text col-sm-12">
+                <calc-outlet ref="tlOutputITBackOfficeTitle"></calc-outlet>
+            </div>
+        </div>
+        <div class="data-row row">
+            <div class="col-12 col-sm-12 col-lg data-label tooltip-container">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipBackOffice1" useAsInnerHtml=""></my-tooltip>
+                <calc-outlet ref="tlOutputITBackOfficeTimelineTitle"></calc-outlet>
+            </div>
+            <div class="col col-sm data-value">
+                <calc-option [items]="backofficeDropdownList1" ref="tlInputITTimeline"></calc-option>
+            </div>
+        </div>
+        <div class="line-break-container row">
+            <div class="col-12 col-sm-12 line-break">
+                <hr>
+            </div>
+        </div>
+        <div class="data-row row align-start">
+            <div class="data-column col-5 col-sm-5 row p-0">
+                <div class="col-12 col-sm-12 data-label bold-text tooltip-container">
+                    <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipBackOffice2" useAsInnerHtml=""></my-tooltip>
+                    <calc-outlet ref="tlOutputITEmpIntTitle"></calc-outlet>
+                </div>
+                <div class="col-12 col-sm-12 data-value">
+                    <calc-slider ref="tlInputITIntegrationLevel" step="1" min="0" max="4" handleValueRef="tlInputITIntegrationLevel" prefix="Level" format="0"></calc-slider>
+                </div>
+                <div class="col-12 col-sm-12 data-label media-p0">
+                    <span class="full-cost-label"><text-outlet key="FullCosts"></text-outlet></span>
+                    <span class="full-cost-value"><calc-outlet ref="tlOutputFullITExp" format="$0,0"></calc-outlet></span>
+                </div>
+            </div>
+            <div class="data-column col-7 col-sm-7 row p-0">
+                <div class="col-12 col-sm-12 data-label bold-text">
+                    <calc-outlet ref="tlOutputITIntSpecificsTitle"></calc-outlet>
+                </div>
+                <div class="col-12 col-sm-12 data-label int-levels">
+                    <span class="int-level-lable" [class.active]="intLevel >= 1"><text-outlet key="BackOfficeIntLevel1"></text-outlet></span>
+                    <span class="add-icon fa fa-plus"></span>
+                    <span class="int-level-lable" [class.active]="intLevel >= 2"><text-outlet key="BackOfficeIntLevel2"></text-outlet></span>
+                    <span class="add-icon fa fa-plus"></span>
+                    <span class="int-level-lable" [class.active]="intLevel >= 3"><text-outlet key="BackOfficeIntLevel3"></text-outlet></span>
+                    <span class="add-icon fa fa-plus"></span>
+                    <span class="int-level-lable" [class.active]="intLevel >= 4"><text-outlet key="BackOfficeIntLevel4"></text-outlet></span>
+                </div>
+                <div class="col-12 col-sm-12 data-label">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-12 security-data">
+        <div class="sub-heading-text-container row">
+            <div class="sub-heading-text col-12 col-sm-12">
+                <calc-outlet ref="tlOuputSecurityTitle"></calc-outlet>
+            </div>
+        </div>
+        <div class="data-row row">
+            <div class="col-12 col-sm-12 col-lg data-label tooltip-container">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipSecurity1" useAsInnerHtml=""></my-tooltip>
+                <text-outlet key="SecurityTimelineTitle"></text-outlet>
+            </div>
+            <div class="col col-sm data-value">
+                <calc-option [items]="securityDropdownList1" ref="tlInputSecurityTimeline"></calc-option>
+            </div>
+        </div>
+        <div class="line-break-container row">
+            <div class="col-12 col-sm-12 line-break">
+                <hr>
+            </div>
+        </div>
+        <div class="data-row heading-row row">
+            <div class="col-7 col-sm-7 data-label tooltip-container">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipSecurity2" useAsInnerHtml=""></my-tooltip>
+                <text-outlet key="RiskMitigation"></text-outlet>
+            </div>
+            <div class="col-5 col-sm-5 data-label text-right-align">
+                <span class="full-cost-label"><text-outlet key="FullCosts"></text-outlet></span>
+                <span class="full-cost-value"><calc-outlet ref="tlOutputImmediateSecurityCost"></calc-outlet></span>
+            </div>
+        </div>
+        <div class="data-row heading-row row">
+            <div class="col col-sm data-label pl-30">
+                <calc-outlet ref="tlOuputSecurityP0Title"></calc-outlet>
+            </div>
+            <div class="col col-sm data-label pl-30">
+                <calc-outlet ref="tlOuputSecurityP1Title"></calc-outlet>
+            </div>
+            <div class="col col-sm data-label pl-30">
+                <calc-outlet ref="tlOuputSecurityP2Title"></calc-outlet>
+            </div>
+        </div>
+        <div class="data-row row">
+            <div class="col col-sm data-value">
+                <!-- <calc-slider ref="tlInputSecurityP0RiskMitigation" step="25" min="0" max="100" handleValueRef="tlInputSecurityP0RiskMitigation" format="0%" scaler="100"></calc-slider> -->
+                <calc-dropdown [items]="securityDropdownListRiskMitigation" ref="tlInputSecurityP0RiskMitigation" format="0%"></calc-dropdown>
+            </div>
+            <div class="col col-sm data-value">
+                <!-- <calc-slider ref="tlInputSecurityP1RiskMitigation" step="25" min="0" max="100" handleValueRef="tlInputSecurityP1RiskMitigation" format="0%" scaler="100"></calc-slider> -->
+                <calc-dropdown [items]="securityDropdownListRiskMitigation" ref="tlInputSecurityP1RiskMitigation" format="0%"></calc-dropdown>
+            </div>
+            <div class="col col-sm data-value">
+                <!-- <calc-slider ref="tlInputSecurityP2RiskMitigation" step="25" min="0" max="100" handleValueRef="tlInputSecurityP2RiskMitigation" format="0%" scaler="100"></calc-slider> -->
+                <calc-dropdown [items]="securityDropdownListRiskMitigation" ref="tlInputSecurityP2RiskMitigation" format="0%"></calc-dropdown>
+            </div>
+        </div>
+        <div class="line-break-container row">
+            <div class="col-12 col-sm-12 line-break">
+                <hr>
+            </div>
+        </div>
+        <div class="data-row heading-row row">
+            <div class="col-7 col-sm-7 data-label tooltip-container">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipSecurity4" useAsInnerHtml=""></my-tooltip>
+                <calc-outlet ref="tlOutputProductRestricitionTitle"></calc-outlet>
+            </div>
+            <div class="col-5 col-sm-5 data-label text-right-align">
+                <calc-option [items]="securityDropdownList3" ref="tlInputSecurityProductRestrictions" isTypeYesNo="true"></calc-option>
+            </div>
+        </div>
+        <div class="border-container">
+            <div class="data-row heading-row row">
+                <div class="col col-sm data-label tooltip-container">
+                    <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipBackOffice3" useAsInnerHtml=""></my-tooltip>
+                    <calc-outlet ref="tlOutputRealEstateTitle"></calc-outlet>
+                </div>
+                <div class="col col-sm col-xl-4 data-value">
+                    <calc-option [items]="backofficeDropdownList3" ref="tlInputITOfficePlan"></calc-option>
+                </div>
+                <div class="data-row col-sm-12 row">
+                    <div class="col-6 col-sm-6 data-label">
+                        <span class="full-cost-label"><text-outlet key="FullCosts"></text-outlet></span>
+                        <span class="full-cost-value"><calc-outlet ref="tlOutputRealEstateCost"></calc-outlet></span>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="line-break-container row">
+                <div class="down-arrow"><span class="fa fa-angle-down"></span></div>
+                <div class="col-sm-12 line-break">
+                    <hr>
+                </div>
+            </div> -->
+            <div class="data-row row">
+                <div class="col col-sm data-label tooltip-container">
+                    <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipSecurity3" useAsInnerHtml=""></my-tooltip>
+                    <calc-outlet ref="tlOutputSiteInfrastructureBuildOuttitle"></calc-outlet>
+                </div>
+                <div class="col col-sm col-xl-4 data-value">
+                    <calc-option [items]="securityDropdownList2" ref="tlInputSecurityBuildSiteInfrastructure" isTypeYesNo="true" [isDisabled]="disableBuildInfra"></calc-option>
+                </div>
+                <div class="data-row col-12 col-sm-12 row">
+                    <div class="col-6 col-sm-6 data-label">
+                        <span class="full-cost-label"><text-outlet key="FullCosts"></text-outlet></span>
+                        <span class="full-cost-value"><calc-outlet ref="tlOutputSiteInfrastructureBuildOutCost"></calc-outlet></span>
+                    </div>
+                </div>
+                <!-- <div class="data-column col-sm-6 row">
+                    <div class="col-sm-12 col-lg-6 data-label p-0 tooltip-container">
+                        <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipSecurity3" useAsInnerHtml=""></my-tooltip>
+                        <calc-outlet ref="tlOutputSiteInfrastructureBuildOuttitle"></calc-outlet>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 data-value p-0">
+                        <calc-option [items]="securityDropdownList2" ref="tlInputSecurityBuildSiteInfrastructure" isTypeYesNo="true" [isDisabled]="disableBuildInfra"></calc-option>
+                    </div>
+                    <div class="col-sm-12 data-label p-0">
+                        <span class="full-cost-label"><text-outlet key="FullCosts"></text-outlet></span>
+                        <span class="full-cost-value"><calc-outlet ref="tlOutputSiteInfrastructureBuildOutCost"></calc-outlet></span>
+                    </div>
+                </div>
+                <div class="data-column col-sm-6 row">
+                    <div class="col-sm-12 col-lg-6 data-label p-0 tooltip-container">
+                        <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipSecurity4" useAsInnerHtml=""></my-tooltip>
+                        <calc-outlet ref="tlOutputProductRestricitionTitle"></calc-outlet>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 data-value p-0">
+                        <calc-option [items]="securityDropdownList3" ref="tlInputSecurityProductRestrictions" isTypeYesNo="true"></calc-option>
+                    </div>
+                    <div class="col-sm-12 data-label p-0">
+                        <span class="">&nbsp;</span>
+                        <span class="">&nbsp;</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>

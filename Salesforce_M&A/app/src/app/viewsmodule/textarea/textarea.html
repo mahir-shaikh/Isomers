@@ -1,0 +1,4 @@
+<div class="textareabox">
+	<div class="textareabox-heading" *ngIf="heading != ''">{{heading}}</div>
+	<textarea rows="{{inputRow}}" [class.read-only]="isReadOnly" [(ngModel)]="content" value="content" (blur)="onBlur($event)" [readonly]="isReadOnly"></textarea>
+</div>

@@ -1,0 +1,185 @@
+<div class="hidden" [routerLink]="['/intro']" [routerLinkActive]="['active']"></div>
+<div class="dashboard-container">
+    <div class="header-container row">
+        <div class="col-3 col-sm-3 col-xl-5 logo-contianer">
+            <div class="logo">
+                <img class="image" src="../../../../assets/images/icons/client_logo.svg">
+            </div>
+            <div class="logo-text">
+                <!-- <span class="logo-heading-text">
+                    <text-outlet key="SubTitlePart1"></text-outlet>
+                </span> -->
+                <span class="logo-sub-heading-text">
+                    <text-outlet key="SubTitlePart2"></text-outlet>
+                </span>
+            </div>
+        </div>
+        <div class="col-8 col-sm-8 col-xl-6 metrics-contianer">
+            <dashboard-metrics *ngIf="showMetrics"></dashboard-metrics>
+            <div class="dashboard-btn-container" *ngIf="!showMetrics">
+                <button class="btn btn-primary next-button" (click)="showSubmitOrErrorModal()" *ngIf="currentYear == 1">
+                    <text-outlet key="Submit"></text-outlet>
+                    <span class="fa fa-angle-right"></span>
+                </button>
+                <button class="btn btn-primary next-button" (click)="moveToRoundTwo()" *ngIf="currentYear == 2 || currentYear == 3">
+                    <text-outlet key="Continue"></text-outlet>
+                    <span class="fa fa-angle-right"></span>
+                </button>
+            </div>
+        </div>
+        <div class="options">
+            <div class="hamburger-sign" (click)="openMenu($event)">
+                <span class="fa fa-ellipsis-v"></span>
+            </div>
+            <div class="menu" [class.show-menu]="showMenu" [clickOutActive]="showMenu" (clickOutside)="closeMenu()">
+                <span class="menu-link round-one-link" [routerLink]="['/intPlanStratergy']" *ngIf="showMetrics"><text-outlet key="RoundOneMenuLink"></text-outlet></span>
+                <span class="menu-link round-two-link" [routerLink]="['/intPlan']" *ngIf="currentRoute == '/execution'"><text-outlet key="RoundTwoMenuLink"></text-outlet></span>
+                <span class="menu-link round-three-link" [routerLink]="['/execution']" *ngIf="currentYear == 3 && currentRoute != '/execution'"><text-outlet key="RoundThreeMenuLink"></text-outlet></span>
+                <span (click)="showSubmitOrErrorModal()" class="menu-link submit-link" *ngIf="showMetrics"><text-outlet key="Submit"></text-outlet></span>
+                <span (click)="showResetModal()" class="menu-link reset-link" *ngIf="currentYear == 2"><text-outlet key="ResetRound"></text-outlet></span>
+                <span (click)="showPasswordModalRef(2)" class="menu-link export-link" *ngIf="currentYear > 1"><text-outlet key="Export"></text-outlet></span>
+                <span (click)="showPasswordModalRef(1)" class="menu-link reset-link"><text-outlet key="ResetAll"></text-outlet></span>
+                <span (click)="showLogoutAlert()" class="menu-link logout-link"><text-outlet key="Logout"></text-outlet></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #passwordModal="bs-modal" class="modal model-md animated password-modal fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"[config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="heading">
+                    <text-outlet key="ResetAll" *ngIf="passwordModalNumber == 1"></text-outlet>
+                    <text-outlet key="Export" *ngIf="passwordModalNumber == 2"></text-outlet>
+                    <text-outlet key="RoundOneSubmit" *ngIf="passwordModalNumber == 3"></text-outlet>
+                    <text-outlet key="RoundTwoSubmit" *ngIf="passwordModalNumber == 4"></text-outlet>
+                    <text-outlet key="RoundThreeSubmit" *ngIf="passwordModalNumber == 5"></text-outlet>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="info-text" *ngIf="passwordModalNumber == 3 || passwordModalNumber == 4 || passwordModalNumber == 5">
+                        <text-outlet key="RoundCompletionMsg"></text-outlet>
+                    </div>
+                    <div class="password-container">
+                        <div class="password-text"><text-outlet key="EnterPassword"></text-outlet></div>
+                        <input type="password" [(ngModel)]="password" #passwordText>
+                    </div>
+                    <div class="error-message" *ngIf="showPasswordErrorMessage"><text-outlet key="IncorrectPasswordMsg"></text-outlet></div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-primary" (click)="onPasswordSubmit()" [class.disabled]="password.value"><text-outlet key="Submit"></text-outlet></button>
+                <button class="btn btn-danger" (click)="hidePasswordModalRef()"><text-outlet key="Cancel"></text-outlet></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #logoutModal="bs-modal" class="modal logout-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Logout"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="LogoutConfirmationMsg"></text-outlet>
+        </div>
+        <div class="button-container row">
+            <button type="button" class="btn btn-primary yes-button" (click)="hideLogoutAlert(true)"  [routerLink]="['/logout']"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn btn-danger no-button" (click)="hideLogoutAlert()"><text-outlet key="No"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #resetModal="bs-modal" class="modal reset-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Reset"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="ResetConfirmationMsg"></text-outlet>
+        </div>
+        <div class="button-container row" *ngIf="!showLoader">
+            <button type="button" class="btn btn-primary yes-button" (click)="resetRound()"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn btn-danger no-button" (click)="hideResetModal()"><text-outlet key="No"></text-outlet></button>
+        </div>
+        <div class="loader-container" *ngIf="showLoader">
+            <span class="loader fa fa-spinner fa-pulse"></span>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #submitModal="bs-modal" class="modal submit-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Submit"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="SubmitConfirmationMsg"></text-outlet>
+        </div>
+        <div class="button-container row">
+            <button type="button" class="btn btn-primary yes-button" (click)="showPasswordModalRef('R' + currentYear)"><text-outlet key="Yes"></text-outlet></button>
+            <button type="button" class="btn btn-danger no-button" (click)="hideSubmitModal()"><text-outlet key="No"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #errorModal="bs-modal" class="modal error-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Error"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <text-outlet key="RoundOneErrorMsg" *ngIf="currentYear == 1"></text-outlet>
+            <text-outlet key="RoundTwoErrorMsg" *ngIf="currentYear == 2 || (currentYear == 3 && !showThirdErrorMsg)"></text-outlet>
+            <text-outlet key="RoundThreeErrorMsg" *ngIf="currentYear == 3 && showThirdErrorMsg"></text-outlet>
+        </div>
+        <div class="button-container row">
+            <button type="button" class="btn btn-danger no-button" (click)="hideErrorModal()"><text-outlet key="Ok"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #exportModal="bs-modal" class="modal export-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><text-outlet key="Export"></text-outlet></h4>
+        </div>
+        <div class="modal-body">
+            <div class="round-export-button">
+                <button class="btn" (click)="exportRoundOneDecisions()">
+                    <text-outlet key="ExportRoundOneDecisions"></text-outlet>
+                </button>
+            </div>
+            <div class="round-export-button" *ngIf="currentYear > 2">
+                <button class="btn" (click)="exportRoundTwoDecisions()">
+                    <text-outlet key="ExportRoundTwoDecisions"></text-outlet>
+                </button>
+            </div>
+            <div class="round-export-button" *ngIf="currentYear > 3">
+                <button class="btn" (click)="exportRoundThreeDecisions()">
+                    <text-outlet key="ExportRoundThreeDecisions"></text-outlet>
+                </button>
+            </div>
+            <div class="round-export-button" *ngIf="currentYear > 3">
+                <button class="btn" (click)="exportDecisions()">
+                    <text-outlet key="ExportAllDecisions"></text-outlet>
+                </button>
+            </div>
+        </div>
+        <div class="button-container row">
+            <button type="button" class="btn btn-danger no-button" (click)="hideExportModal()"><text-outlet key="Cancel"></text-outlet></button>
+        </div>
+        </div>
+    </div>
+</div>

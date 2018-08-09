@@ -1,0 +1,141 @@
+@import "mixins"
+@import "core"
+@import "nouislider"
+
+html, body
+    min-height 100%
+    overflow hidden
+body
+    background url("../images/_background_img2.jpg") no-repeat
+    // background #0077BB
+    overflow hidden
+    background-size cover
+    background-position center
+    font-size 16px
+    font-family "SalesforceSans"
+    line-height 20px
+    color #111
+    @media screen and (max-width 768px)
+        font-size 14px
+    @media screen and (min-width 1025px)
+        font-size 18px
+.im-app
+    height 100vh
+    padding 0
+    overflow hidden
+    .main
+        height 100%
+        .row
+            margin 0
+        .container
+            width calc(100% - 100px)
+            min-width 740px
+            max-width 2000px
+
+bs-tooltip-container
+    &.tooltip.tooltip-right
+        -webkit-animation-duration 0.35s
+        animation-duration 0.35s
+        -webkit-animation-fill-mode both
+        animation-fill-mode both
+        -webkit-animation-name customSlideRight
+        animation-name customSlideRight
+        -webkit-transform-origin 0 0
+        transform-origin 0 0
+        .tooltip-inner
+            text-align left
+            position relative
+            /*max-width 500px*/
+            &:before
+                content ""
+                position absolute
+                width 0
+                height 0
+                border-color transparent
+                border-style solid
+                border-width 5px 5px 5px 0
+                border-right-color #000
+                top 50%
+                left -5px
+                margin-top -5px
+        
+@keyframes customSlideRight {
+    0%   {
+        -webkit-transform scaleX(0)
+        transform scaleX(0)
+    }
+    100% {
+        -webkit-transform scaleX(1)
+        transform scaleX(1)
+    }
+}
+
+.int-plan-container
+    .nav-tabs
+        justify-content space-between
+        position absolute
+        width calc(100% - 100px)
+        z-index 2
+        border-bottom 10px solid #E5E5E5
+        top 0
+        .nav-item
+            text-align center
+            flex-grow 1
+            background-color #FFF
+            .nav-link
+                color #0583C1
+                border 1px solid rgba(0,0,0,0.1)
+                border-bottom 0
+                border-radius 0
+                .tab-heading-text
+                    font-weight 500
+                .tab-icon
+                    margin auto
+                .state-inactive
+                    display block
+                .state-active
+                    display none
+                &.active
+                    background-color #E5E5E5
+                    color #5D5C57
+                    .state-inactive
+                        display none
+                    .state-active
+                        display block
+    .tab-content
+        margin-top 95px
+                    
+.ip-table-data
+    .panel-group
+        width 100%
+
+.full-cost-value
+    text-align center
+    border 1px solid #d0d9de
+    padding 5px 20px
+    font-size 0.875rem
+    font-weight 500
+    @media screen and (max-width 1024px)
+        padding 5px 15px
+    @media screen and (max-width 768px)
+        padding 5px 10px
+.full-cost-label
+    padding 5px 20px
+    font-size 0.875rem
+    font-weight 500
+
+.align-start
+    align-items flex-start !important
+.align-end
+    align-items flex-end !important
+
+.media-p0
+    @media screen and (max-width 768px)
+        padding 0 !important
+
+.tooltip-container
+    display -ms-flexbox
+    display flex
+    align-items center
+    calc-outlet
+        text-align left

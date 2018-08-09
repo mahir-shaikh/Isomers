@@ -1,0 +1,29 @@
+:host
+    display inline-block
+    width 100%
+    padding 15px 10px
+
+.calc-slider-control
+    .calc-value
+        background-color #CCECF9
+        text-align center
+        padding 5px
+        border-radius 5px
+        max-width 100px
+        &:after
+            content ''
+            width 0px
+            height 0px
+            border-top 15px solid transparent
+            border-bottom 15px solid transparent
+            border-left 15px solid #CCECF9
+            position absolute
+            top 0
+            right -10px
+            z-index 1
+    .calc-slider-wrapper
+        display -ms-flexbox
+        display flex
+        flex-direction column
+        justify-content center
+        padding-left 25px

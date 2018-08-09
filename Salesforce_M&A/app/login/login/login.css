@@ -1,0 +1,504 @@
+input[type="submit"],
+input[type="button"],
+textarea {
+  -webkit-appearance: none !important;
+  -webkit-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+::-webkit-input-placeholder {
+  color: #e6e6e6;
+  font-weight: 100;
+}
+:-moz-placeholder {
+/* Firefox 18- */
+  color: #e6e6e6;
+  font-weight: 100;
+}
+::-moz-placeholder {
+/* Firefox 19+ */
+  color: #e6e6e6;
+  font-weight: 100;
+}
+:-ms-input-placeholder {
+  color: #e6e6e6;
+  font-weight: 100;
+}
+body {
+  background:#182033 url("background_img.jpg") 100% 100% fixed no-repeat;
+  color: #fff;
+  font-size: 11px;
+  font: 400 10px/1.5em 'Open Sans', Arial, sans-serif;
+  background-position: 100% 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+a {
+  color: #fff;
+}
+.cancelLink {
+  background-color: #ff4f35;
+  height: 20px;
+  text-decoration: none;
+  padding: 0 10px;
+  line-height: 22px;
+  float: left;
+  font-family: arial;
+  font-size: 13px;
+}
+.selfregister {
+  float: left;
+  text-decoration: underline;
+  cursor: pointer;
+}
+h2 {
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 0;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  padding-left: 20px;
+}
+#loginBox {
+  overflow: hidden;
+  float: none;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+#loginBox {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.login_header,
+.exp_header {
+  background: #000;
+  font-size: 14px;
+  padding: 15px;
+  color: #fff;
+}
+#loginBox p.notice {
+  padding: 0 0 5px 0;
+  font-size: 14px;
+  color: #28324b;
+}
+#loginBox #registration {
+  font-family: Verdana, Tahoma, Arial;
+}
+#registration #userloginDiv {
+  padding: 15px 0;
+  font-size: 14px;
+}
+#registration #userloginDiv p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#RegistrationDiv #password {
+  margin: 10px 0;
+}
+#RegistrationDiv span {
+  font-size: 14px;
+}
+#RegistrationDiv #save {
+  float: right;
+}
+.userNameIcon,
+.passwordIcon {
+  float: left;
+  padding: 0px;
+  height: 42px;
+  width: 42px;
+  background-color: #0ab9f0;
+}
+.appIcon,
+.eventIcon {
+  margin-bottom: 5px;
+}
+.appIconLabel,
+.eventIconLabel {
+  color: #28324b;
+}
+.userNameIcon svg,
+.passwordIcon svg {
+  fill: #fff;
+}
+.userNamePasswordWrapper {
+  float: left;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.userNameWrapper,
+.passwordWrapper {
+  display: inline-block;
+  padding-bottom: 10px;
+  width: 100%;
+  position: relative;
+}
+.userNameInputBox,
+.passwordInputBox {
+  float: left;
+  width: calc(100% - 42px);
+  position: relative;
+}
+.rememberWrap {
+  float: left;
+  margin: 15px 0;
+  padding: 0;
+  overflow: hidden;
+}
+.require {
+  color: #ff4f35;
+  font-size: 16px;
+  font-weight: 600;
+  position: absolute;
+  padding: 10px;
+  top: 5px;
+  right: 0;
+}
+.resetPasswordError {
+  font-size: 12px;
+  color: #ff4f35;
+  margin: 10px 0 0 0;
+}
+label.remember {
+  margin: 5px 0 0 0;
+  clear: none;
+  padding: 0 10px;
+  text-transform: none;
+  line-height: 20px;
+  font-size: 16px;
+  color: #28324b;
+}
+#remember {
+  margin: 0px 5px 0 0;
+  padding: 0;
+  clear: none;
+}
+.signInButtonWrapper {
+  margin: 10px 0 0 0;
+}
+.problemLoginLostPasswordWrapper {
+  margin-top: 120px;
+}
+.lostPasswordText,
+.problemLoginText {
+  float: right;
+  text-decoration: underline;
+}
+.lostPasswordWrapper {
+/*margin: 15px 0 2px 0;*/
+  float: right;
+/*font-size: 8px;
+    display: none;*/
+}
+.problemLoginWrapper {
+  float: right;
+  font-size: 8px;
+  display: block;
+  clear: both;
+  display: none;
+}
+.loginProblemWrap {
+  padding: 0;
+}
+.lostPasswordText,
+.selfregister {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 12px;
+  background: #0ab9f0;
+  width: 45%;
+}
+@media (min-width: 768px) {
+  .lostPasswordText,
+  .problemLoginText,
+  .selfregister {
+    font-size: 16px;
+  }
+}
+.lostPasswordCheckbox,
+.problemLoginCheckbox {
+  float: right;
+}
+.greenButton,
+.redButton,
+.grayButton {
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  height: 20px;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+.greenButton {
+  background-color: #0ab9f0;
+}
+.redButton {
+  background-color: #ff4f35;
+}
+.submitButton {
+  font-size: 16px;
+  padding: 10px;
+  height: auto;
+  float: right;
+  text-align: center;
+  width: 45%;
+}
+.grayButton {
+  background-color: #ccc;
+}
+#login:active {
+  background: #333;
+}
+.experienceBtns {
+  float: right;
+}
+#loginBox div.wrapper {
+  overflow: hidden;
+  background-color: #e1e1e1;
+  padding: 25px 40px 0px 40px;
+}
+#loginBox footer {
+  clear: both;
+  float: left;
+  padding: 30px;
+  background-color: #fff;
+}
+#logo {
+  background: url("../../../WizletResources/Shared/media/img/btsBrand.png") center;
+  background-size: 100%;
+  height: 22px;
+  width: 63px;
+  background-repeat: no-repeat;
+  float: right;
+}
+input[type="text"],
+input[type="password"] {
+  font-size: 16px;
+  line-height: 1.4em;
+  border: 0px;
+  width: calc(100% - 20px);
+  padding: 10px;
+  color: #28324b;
+}
+#passReset {
+  float: left;
+  margin-top: 17px;
+}
+.errorMessage {
+  color: #f00;
+}
+#reset input[type="text"] {
+  margin-bottom: 0px;
+}
+#appSelect input[type="button"] {
+  float: left;
+  clear: none;
+}
+#logout input {
+  margin-left: 70px;
+}
+#revisionInfo {
+  color: #808080;
+  padding: 0;
+}
+.loginEventsTable .contentTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+.loginEventsTable .contentTable select {
+  width: 100%;
+  padding: 5px 3px;
+  font-size: 16px;
+  font-weight: 400;
+}
+#appSelect .loginEventsTable input[type="button"]:active {
+  background: #333;
+}
+.resetPassBtn {
+  float: right;
+  font-size: 16px;
+  padding: 10px;
+  height: auto;
+  float: right;
+  text-align: center;
+}
+.resetPasswordText {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #808080;
+  margin-bottom: 30px;
+}
+.sel_exp_title {
+  font-family: OpenSans-Regular;
+}
+.roundedOne {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-radius: 4px;
+  border: 0;
+  background-color: #fff;
+}
+.roundedOne input[type=checkbox] {
+  visibility: hidden;
+}
+.roundedOne label:after {
+  content: '';
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #00adef;
+  opacity: 0;
+  border-radius: 3px;
+}
+.roundedOne label:hover::after {
+  opacity: 0.3;
+}
+.roundedOne input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+.greySelectbox select {
+  background-color: #4c4c4c;
+  color: #fff;
+  border: none;
+}
+.greySelectbox .arrow {
+  background: url("../../../WizletResources/Shared/media/img/selectboxArrow.png") top center no-repeat;
+}
+.rememberWrap .roundedOne {
+  float: left;
+}
+.remember {
+  padding: 5px 0;
+  display: inline-block;
+}
+/* login new classes */
+/* this is temporary*/
+.login__title {
+  text-align: left;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+  color: #808080;
+}
+.login__text {
+  text-align: left;
+  margin: 0 0 1em 0;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: #808080;
+}
+.login__text a {
+  color: #00adef;
+}
+.login__message {
+  font-size: 16px;
+  color: #ecba01;
+  padding: 10px 0;
+}
+.login__weak--hide {
+  display: none;
+}
+.col-no--left {
+  padding-left: 0 !important;
+}
+@media only screen and (max-width: 768px) {
+  .cancelButtonWrapper.col-no--left {
+    padding-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .resetButtonWrapper.col-no--right {
+    padding-left: 0 !important;
+  }
+}
+.col-no--right {
+  padding-right: 0 !important;
+}
+.col-no--padding {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.col-no--margin {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+@media screen and (max-width: 767px) {
+  #loginBox {
+    width: 90%;
+  }
+  .userNamePasswordWrapper {
+    width: 100%;
+  }
+}
+@media screen and (width: 767px) {
+  .userNameIcon,
+  .passwordIcon {
+    width: 64px;
+    height: 64px;
+  }
+  .userNameInputBox,
+  .passwordInputBox {
+    width: calc(100% - 64px);
+  }
+  input[type="text"],
+  input[type="password"] {
+    font-size: 24px;
+    padding: 15px;
+  }
+  #loginBox p.notice {
+    font-size: 24px;
+  }
+  .submitButton {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .userNameIcon,
+  .passwordIcon {
+    width: 37px;
+    height: 37px;
+  }
+  .userNameInputBox,
+  .passwordInputBox {
+    width: calc(100% - 37px);
+  }
+  input[type="text"],
+  input[type="password"] {
+    font-size: 12px;
+    padding: 10px;
+  }
+  #loginBox p.notice {
+    font-size: 14px;
+  }
+  .submitButton {
+    font-size: 14px;
+  }
+}
+.noteWrapper {
+  color: #000;
+  background-color: #ededed;
+  padding: 5px 20px;
+  font-size: 11px;
+}
+.noteWrapper a {
+  color: initial;
+}

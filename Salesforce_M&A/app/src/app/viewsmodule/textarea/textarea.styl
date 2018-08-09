@@ -1,0 +1,25 @@
+.textareabox
+    // height 100%
+    margin 15px 0
+    &-heading
+        padding 0 10px
+        display inline-block
+        position absolute
+        background #FFF
+        margin 10px
+        margin-top -10px
+        z-index 1
+    textarea
+        height 100%
+        width 100%
+        padding 10px
+        color #6d6e70
+        background #FFF
+        resize none
+        border-color #00ADEE
+        &:active,&:focus,&:hover
+            box-shadow 0 0 5px 0px #00ADEE inset
+
+:host-context(.value-container)
+    .textareabox
+        margin 5px 0

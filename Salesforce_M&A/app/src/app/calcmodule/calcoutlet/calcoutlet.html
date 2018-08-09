@@ -1,0 +1,6 @@
+<span *ngIf="showValueBoolean" [class.isNegative]="isNegative && highlightNegative">
+    {{prefix}} {{value | numFormat:format:scaler}} {{suffix}}
+</span>
+<div *ngIf="showBalloonValue" class="metric-balloon animated" [class.fade-in]="showMetricBalloon" [class.slideOutUp]="!showMetricBalloon" [class.increement]="changeInValue === 2" [class.decreement]="changeInValue === 1" [class.no-change-balloon-value]="changeInValue === 0">
+    {{differenceInValue | numFormat:differenceFormat:scaler}}
+</div>

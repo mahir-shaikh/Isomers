@@ -1,0 +1,137 @@
+<div class="metrics-wrapper row">
+    <div class="col-4 col-sm-4 dashboard-data-container">
+        <div class="data-heading">
+            <text-outlet key="DashboardHeading1"></text-outlet>
+        </div>
+        <div class="data-row">
+            <span class="data-label">
+                <text-outlet key="Dashboard1Title1"></text-outlet>
+            </span>
+            <span class="data-value">
+                <calc-outlet ref="tlOutputDashRev" format="millions" showBalloon="true" showValue="true" differenceFormat="$0,0" prefix="$" suffix="M"></calc-outlet>
+            </span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">
+                <text-outlet key="Dashboard1Title2"></text-outlet>
+            </span>
+            <span class="data-value">
+                <calc-outlet ref="tlOutputDashGrowth" format="0.0%" showBalloon="true" showValue="true" differenceFormat="0.0%"></calc-outlet>
+            </span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">
+                <text-outlet key="Dashboard1Title3"></text-outlet>
+            </span>
+            <span class="data-value">
+                <calc-outlet ref="tlOutputDashOpMargin" format="(0.0%)" useRawValue="true" showBalloon="true" showValue="true" differenceFormat="0.0%"></calc-outlet>
+            </span>
+        </div>
+    </div>
+    <div class="col-4 col-sm-4 dashboard-data-container">
+        <div class="data-heading">
+            <text-outlet key="DashboardHeading3"></text-outlet>
+        </div>
+        <div class="data-row">
+            <span class="data-label">
+                <text-outlet key="Dashboard2Title1"></text-outlet>
+            </span>
+            <span class="data-value">
+                <calc-outlet ref="tlOutputDashDisrupt" format="0.0%" showBalloon="true" showValue="true" differenceFormat="0.0%" isReversed="true"></calc-outlet>
+            </span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">
+                <text-outlet key="Dashboard2Title2"></text-outlet>
+            </span>
+            <span class="data-value">
+                <calc-outlet ref="tlOutputDashY1Budget" format="millions" showBalloon="true" showValue="true" differenceFormat="$0,0" prefix="$" suffix="M"></calc-outlet>
+            </span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">
+                <text-outlet key="Dashboard2Title3"></text-outlet>
+            </span>
+            <span class="data-value">
+                <calc-outlet ref="tlOutputDashY2Budget" format="millions" showBalloon="true" showValue="true" differenceFormat="$0,0" prefix="$" suffix="M"></calc-outlet>
+            </span>
+        </div>
+    </div>
+    <div class="col-4 col-sm-4 dashboard-data-container">
+        <div class="data-heading">
+            <text-outlet key="DashboardHeading2"></text-outlet>
+        </div>
+        <div class="data-row">
+            <span class="data-label">
+                <text-outlet key="Dashboard3Title1"></text-outlet>
+            </span>
+            <span class="data-value">
+                <calc-outlet ref="tlOutputDashCSAT" showBalloon="true" showValue="true"></calc-outlet>
+            </span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">
+                <text-outlet key="Dashboard3Title2"></text-outlet>
+            </span>
+            <span class="data-value">
+                <calc-outlet ref="tlOutputDashESAT" showBalloon="true" showValue="true"></calc-outlet>
+            </span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">
+                <text-outlet key="Dashboard3Title3"></text-outlet>
+            </span>
+            <span class="data-value">
+                <calc-outlet ref="tlOutputDashTrust" showBalloon="true" showValue="true"></calc-outlet>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="metrics-wrapper">
+    <div class="heading-row row">
+        <div class="col-sm-4 data-label"></div>
+        <div class="col-sm-4 data-label"></div>
+        <div class="col-sm-4 data-label"></div>
+    </div>
+    <div class="data-row row">
+        <div class="col-sm-4">
+            <span class="data-label"></span>
+            <span class="data-value"></span>
+        </div>
+        <div class="col-sm-4">
+            <span class="data-label"></span>
+            <span class="data-value"></span>
+        </div>
+        <div class="col-sm-4">
+            <span class="data-label"></span>
+            <span class="data-value"></span>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="col-sm-4">
+            <span class="data-label"></span>
+            <span class="data-value"></span>
+        </div>
+        <div class="col-sm-4">
+            <span class="data-label"></span>
+            <span class="data-value"></span>
+        </div>
+        <div class="col-sm-4">
+            <span class="data-label"></span>
+            <span class="data-value"></span>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+            <span class="data-label"></span>
+            <span class="data-value"></span>
+        </div>
+        <div class="col-sm-4">
+            <span class="data-label"></span>
+            <span class="data-value"></span>
+        </div>
+    </div>
+</div> -->

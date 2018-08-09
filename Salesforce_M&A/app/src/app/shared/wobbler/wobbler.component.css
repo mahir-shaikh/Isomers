@@ -1,0 +1,162 @@
+.wobbler-modal .button-container {
+  padding: 0;
+  text-align: center;
+}
+.wobbler-modal .wobbler-narrative {
+  margin-bottom: 40px;
+}
+.wobbler-modal .btn-primary {
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  background: $main-color;
+  padding: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  display: flex;
+  border: none;
+  box-shadow: 7px 7px 15px 0px rgba(0,0,0,0.1);
+  white-space: normal;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-out;
+}
+.wobbler-modal .btn-primary:hover {
+  box-shadow: 7px 7px 15px 0px rgba(0,0,0,0.25);
+}
+.wobbler-modal .btn-primary .choice-label {
+  padding-right: 20px;
+  font-weight: 500;
+  font-size: 1.7em;
+}
+.wobbler-modal .btn-primary .choice-txt {
+  flex: 1;
+}
+.wobbler-modal .btn-primary.highlighted {
+  background: $highlight-color1;
+  box-shadow: 7px 7px 15px 0px rgba(0,0,0,0.5);
+}
+.wobbler-modal .btn-primary.disabled {
+  box-shadow: none;
+  cursor: default;
+}
+.wobbler-modal .event-decide {
+  outline: none;
+  height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: $highlight-color2;
+  border: 2px solid $highlight-color2;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: all 0.25s ease;
+  float: right;
+  position: relative;
+  box-shadow: initial;
+  display: block;
+  padding: 0;
+}
+.wobbler-modal .wobbler-feedback {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+.wobbler-modal .wobbler-feedback .wobbler-fb-title {
+  margin-bottom: 1em;
+  font-weight: 300;
+  color: $gray4;
+}
+.wobbler-modal .wobbler-feedback .wobbler-feedback-txt {
+  color: $main-color;
+  text-align: left;
+  display: inherit;
+  margin-bottom: 20px;
+}
+.wobbler-modal .wobbler-feedback .btn-close {
+  margin: 0 auto;
+  display: inherit;
+  position: relative;
+  text-align: center;
+  background: none;
+  white-space: initial;
+  cursor: pointer;
+}
+.wobbler-modal .wobbler-feedback .btn-close svg .close-base {
+  stroke-dasharray: 10;
+  animation: closeAnima 5s ease-out infinite;
+}
+.wobbler-modal .wobbler-feedback .btn-close svg .close-ico {
+  transition: transform 0.3s ease-in;
+  transform-origin: 50% 50%;
+}
+.wobbler-modal .wobbler-feedback .btn-close .close-btn-txt {
+  color: $gray3;
+}
+.wobbler-modal .wobbler-feedback .btn-close:hover .close-ico {
+  transform: scale(1.2);
+}
+.highlighted {
+  background-color: #f00;
+}
+.disabled {
+  background-color: #999;
+  cursor: default;
+}
+.disabledText {
+  color: #ccc;
+}
+.modal-content {
+  padding: 40px;
+}
+.modal-content .modal-header {
+  text-align: center;
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: #01426a !important;
+}
+.modal-content .modal-header h4 {
+  color: $main-color;
+  margin-bottom: 40px;
+}
+.modal-content .modal-body {
+  margin: 0;
+  padding: 0;
+}
+.modal-content .yes-button {
+  background: #01426a !important;
+}
+.modal-content .yes-button:hover {
+  background: #0142ff !important;
+}
+.modal-content .wobbler-choice button {
+  background: #01426a !important;
+}
+.modal-content .wobbler-choice button.disabled {
+  background: #01426a !important;
+}
+.modal-content .wobbler-choice button.highlighted {
+  background: #0142ff !important;
+}
+.modal-content .event-decide {
+  background: #01426a !important;
+  border: #01426a !important;
+}
+.modal-content .event-decide:hover {
+  background: #0142ff !important;
+}
+.modal-content .event-decide.disabled {
+  background: #808080 !important;
+  border: #808080 !important;
+}
+.modal-content .wobbler-feedback-txt {
+  color: #01426a !important;
+}
+.modal-backdrop.fade.in.show {
+  opacity: 0.8 !important;
+}

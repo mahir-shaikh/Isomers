@@ -1,0 +1,117 @@
+<!-- <div class="product-wrapper row">
+     <div class="data-container col-sm-12">
+        <div class="data-row row">
+            <div class="col-sm data-label">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipProduct1" useAsInnerHtml=""></my-tooltip>
+                <calc-outlet ref="tlOutputProdIntTitle"></calc-outlet>
+            </div>
+            <div class="col-sm data-value">
+                <calc-option [items]="productDropdownList" ref="tlInputProductTimeline"></calc-option>
+            </div>
+        </div>
+        <div class="col-sm-12 line-break">
+            <hr>
+        </div>
+        <div class="data-row row">
+            <div class="col-sm data-label">
+                <calc-outlet ref="tlOutputProdFocusTitle"></calc-outlet>
+            </div>
+            <div class="col-sm data-label product-focus">
+                <span class="product-focus-value"><text-outlet key="100%"></text-outlet></span>
+                <span class="product-focus-value"><text-outlet key="50%/50%"></text-outlet></span>
+                <span class="product-focus-value"><text-outlet key="100%"></text-outlet></span>
+            </div>
+        </div>
+        <div class="data-row row">
+            <div class="col-sm data-label">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipProduct2" useAsInnerHtml=""></my-tooltip>
+                <calc-outlet ref="tlOutputStackInttitle"></calc-outlet>
+            </div>
+            <div class="col-sm data-value">
+                <calc-option [items]="productOptionList" ref="tlInputProductStackFocus" format="0%" scaler="1"></calc-option>
+                <!-- <calc-slider ref="tlInputProductStackFocus" step="25" min="0" max="100" handleValueRef="tlInputProductStackFocus" format="0%" scaler="100"></calc-slider> --
+            </div>
+        </div>
+        <div class="col-sm-12 line-break">
+            <hr>
+        </div>
+        <div class="data-row row">
+            <div class="col-sm data-label">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipProduct3" useAsInnerHtml=""></my-tooltip>
+                <calc-outlet ref="tlOutputFeatureEnhanceTitle"></calc-outlet>
+            </div>
+            <div class="col-sm data-value">
+                <calc-outlet ref="tlOutputFullStackExp" format="$0,0"></calc-outlet>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="product-wrapper row animated slideInUp">
+     <div class="data-container col-12 col-sm-12">
+        <div class="data-row row">
+            <div class="col-12 col-sm-12 col-lg data-label tooltip-container">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipProduct1" useAsInnerHtml=""></my-tooltip>
+                <calc-outlet ref="tlOutputProdIntTitle"></calc-outlet>
+            </div>
+            <div class="col-12 col-sm data-value">
+                <calc-option [items]="productDropdownList" ref="tlInputProductTimeline"></calc-option>
+            </div>
+        </div>
+        <div class="line-break-container row">
+            <div class="col-12 col-sm-12 line-break">
+                <hr>
+            </div>
+        </div>
+        <div class="sub-heading-text-container row">
+            <div class="sub-heading-text col-sm-12">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipProduct2" useAsInnerHtml=""></my-tooltip>
+                <calc-outlet ref="tlOutputProdFocusTitle"></calc-outlet>
+            </div>
+        </div>
+        <div class="data-row row align-end">
+            <div class="data-column col-12 col-sm-12 col-lg-7 row p-0">
+                <div class="col col-sm-12 col-md-3 col-xl-3 data-label tooltip-container">
+                    <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipProduct2" useAsInnerHtml=""></my-tooltip> -->
+                    <calc-outlet ref="tlOutputStackInttitle"></calc-outlet>
+                </div>
+                <div class="col col-sm-12 col-md-9 col-xl-9 data-value product-focus">
+                    <calc-option [items]="productOptionList" ref="tlInputProductStackFocus" format="0%" scaler="1"></calc-option>
+                </div>
+            </div>
+            <div class="data-column col-12 col-sm-12 col-lg-5 row p-0">
+                <!-- <div class="col-6 col-sm-6 data-value">
+                </div>
+                <div class="col-6 col-sm-6 data-value">
+                    <span class="full-cost-label"><text-outlet key="Cost"></text-outlet></span>
+                </div> -->
+                <div class="col col-sm-6 data-label tooltip-container">
+                    <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipProduct3" useAsInnerHtml=""></my-tooltip> -->
+                    <calc-outlet ref="tlOutputFeatureEnhanceTitle"></calc-outlet>
+                </div>
+                <div class="col col-sm-6 data-value">
+                    <span class="full-cost-label transform-cell"><text-outlet key="Cost"></text-outlet></span>
+                    <calc-outlet ref="tlOutputFullStackExp" format="$0,0"></calc-outlet>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="data-row row pt-10 pb-10">
+            <div class="col-12 col-sm-12 col-lg data-label tooltip-container">
+                <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipProduct2" useAsInnerHtml=""></my-tooltip> --
+                <calc-outlet ref="tlOutputStackInttitle"></calc-outlet>
+            </div>
+            <div class="col-12 col-sm data-value">
+                <calc-option [items]="productOptionList" ref="tlInputProductStackFocus" format="0%" scaler="1"></calc-option>
+            </div>
+        </div>
+        <div class="data-row row pt-10 pb-10">
+            <div class="col-sm data-label tooltip-container">
+                <!-- <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipProduct3" useAsInnerHtml=""></my-tooltip> --
+                <calc-outlet ref="tlOutputFeatureEnhanceTitle"></calc-outlet>
+            </div>
+            <div class="col-sm data-value">
+                <span class="full-cost-value"><calc-outlet ref="tlOutputFullStackExp" format="$0,0"></calc-outlet></span>
+            </div>
+        </div> -->
+    </div>
+</div>

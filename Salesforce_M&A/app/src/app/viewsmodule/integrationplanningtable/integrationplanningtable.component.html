@@ -1,0 +1,545 @@
+<div class="ip-table-wrapper">
+    <div class="ip-table-container mb-10">
+        <div class="ip-table-title" (click)="toggleYearlyTab()">
+            <span class="title-text" [class.hidden]="isYearlyTabOpen"><text-outlet key="YearlyTableTitle"></text-outlet></span>
+            <span class="pull-right fa" [class.fa-minus]="isYearlyTabOpen" [class.fa-plus]="!isYearlyTabOpen"></span>
+        </div>
+        <div class="ip-table-data" [class.hidden]="!isYearlyTabOpen">
+            <div class="scrolling outer">
+                <div class="inner">
+                    <table class="table table-striped table-condensed">       
+                            <thead>
+                            <tr>
+                                <th class="data-content heading-column">
+                                    <!-- <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleFinancials'"></calc-outlet> -->
+                                    <text-outlet key="YearlyTableTitle"></text-outlet>
+                                </th>
+                                <th class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0Title'"></calc-outlet>
+                                </th>
+                                <th class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1Title'"></calc-outlet>
+                                </th>
+                                <th class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2Title'"></calc-outlet>
+                                </th>
+                                <th class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5Title'"></calc-outlet>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- 1st Row -->
+                            <tr class="data-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleACV'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0ACV'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1ACV'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2ACV'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5ACV'" format="$0,0"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 2nd Row -->
+                            <tr class="data-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleRevenue'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0Revenue'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1Revenue'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2Revenue'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5Revenue'" format="$0,0"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 3rd Row -->
+                            <tr class="data-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleGrossProfit'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0GrossProfit'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1GrossProfit'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2GrossProfit'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5GrossProfit'" format="$0,0"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 4th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleGrossMargin'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0GrossMargin'" format="0%"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1GrossMargin'" format="0%"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2GrossMargin'" format="0%"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5GrossMargin'" format="0%"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 5th Row -->
+                            <tr class="data-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleOpEx'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0OpEx'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1OpEx'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2OpEx'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5OpEx'" format="$0,0"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 6th Row -->
+                            <tr class="data-row primary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleOpProfit'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0OpProfit'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1OpProfit'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2OpProfit'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5OpProfit'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 7th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleOpMargin'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0OpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1OpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2OpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5OpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 8th Row -->
+                            <tr class="data-row primary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleIntCostTitle'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet ref=""></calc-outlet>&nbsp;
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet ref=""></calc-outlet>&nbsp;
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet ref=""></calc-outlet>&nbsp;
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet ref=""></calc-outlet>&nbsp;
+                                </td>
+                            </tr>
+                            <!-- 9th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleHarm'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0Harm'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1Harm'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2Harm'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5Harm'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 10th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleIntCosts'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0IntCost'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1IntCost'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2IntCost'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5IntCost'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 11th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleTotalIntCosts'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0IntCosts'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1IntCosts'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2IntCosts'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5IntCosts'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 12th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleIntOpProfit'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0OpProfitCons'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1OpProfitCons'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2OpProfitCons'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5OpProfitCons'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 13th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleConsOpMargin'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y0ConsOpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y1ConsOpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y2ConsOpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Y5ConsOpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ip-table-container mb-10">
+        <div class="ip-table-title" (click)="toggleQuaterlyTab()">
+            <span class="title-text" [class.hidden]="isQuaterlyTabOpen"><text-outlet key="QuarterlyTableTitle"></text-outlet></span>
+            <span class="pull-right fa" [class.fa-minus]="isQuaterlyTabOpen" [class.fa-plus]="!isQuaterlyTabOpen"></span>
+        </div>
+        <div class="ip-table-data" [class.hidden]="!isQuaterlyTabOpen">
+            <div class="scrolling outer">
+                <div class="inner">
+                    <table class="table table-striped table-condensed">       
+                            <thead>
+                            <tr>
+                                <th class="data-content heading-column">
+                                    <!-- <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleFinancials'"></calc-outlet> -->
+                                    <text-outlet key="QuarterlyTableTitle"></text-outlet>
+                                </th>
+                                <th class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1Title'"></calc-outlet>
+                                </th>
+                                <th class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2Title'"></calc-outlet>
+                                </th>
+                                <th class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3Title'"></calc-outlet>
+                                </th>
+                                <th class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4Title'"></calc-outlet>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- 1st Row -->
+                            <tr class="data-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleACV'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1ACV'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2ACV'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3ACV'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4ACV'" format="$0,0"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 2nd Row -->
+                            <tr class="data-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleRevenue'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1Revenue'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2Revenue'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3Revenue'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4Revenue'" format="$0,0"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 3rd Row -->
+                            <tr class="data-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleGrossProfit'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1GrossProfit'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2GrossProfit'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3GrossProfit'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4GrossProfit'" format="$0,0"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 4th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleGrossMargin'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1GrossMargin'" format="0%"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2GrossMargin'" format="0%"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3GrossMargin'" format="0%"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4GrossMargin'" format="0%"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 5th Row -->
+                            <tr class="data-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleOpEx'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1OpEx'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2OpEx'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3OpEx'" format="$0,0"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4OpEx'" format="$0,0"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 6th Row -->
+                            <tr class="data-row primary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleOpProfit'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1OpProfit'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2OpProfit'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3OpProfit'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4OpProfit'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 7th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleOpMargin'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1OpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2OpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3OpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4OpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 8th Row -->
+                            <tr class="data-row primary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleIntCostTitle'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet ref=""></calc-outlet>&nbsp;
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet ref=""></calc-outlet>&nbsp;
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet ref=""></calc-outlet>&nbsp;
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet ref=""></calc-outlet>&nbsp;
+                                </td>
+                            </tr>
+                            <!-- 9th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleHarm'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1Harm'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2Harm'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3Harm'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4Harm'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 10th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleIntCosts'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1IntCost'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2IntCost'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3IntCost'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4IntCost'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 11th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleTotalIntCosts'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1IntCosts'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2IntCosts'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3IntCosts'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4IntCosts'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 12th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleIntOpProfit'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1OpProfitCons'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2OpProfitCons'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3OpProfitCons'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4OpProfitCons'" format="($0,0)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            <!-- 13th Row -->
+                            <tr class="data-row secondary-row">
+                                <th class="data-content heading-column">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'TitleConsOpMargin'"></calc-outlet>
+                                </th>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q1ConsOpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q2ConsOpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q3ConsOpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                                <td class="data-content">
+                                    <calc-outlet [ref]="'tlOutput'+arrRangeName[activeIndex]+'Q4ConsOpMargin'" format="(0.0%)" highlightNegative="true"></calc-outlet>
+                                </td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="end-padding" *ngIf="isYearlyTabOpen || isQuaterlyTabOpen"></div> -->
+</div>

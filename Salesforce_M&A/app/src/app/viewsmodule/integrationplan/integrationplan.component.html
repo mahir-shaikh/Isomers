@@ -1,0 +1,72 @@
+<div class="int-plan-wrapper">
+    <div class="int-plan-container container">
+        <div class="eventBody" #scrollContainer>
+            <tabset>
+                <tab [active]="activeIndex === 0" (select)="setActiveIndex(0)">
+                    <template class="tab-heading" tabHeading>
+                        <div class="tab-heading-icon">
+                            <img src="../../../../assets/images/icons/people.svg" class="tab-icon state-active">
+                            <img src="../../../../assets/images/icons/people_open.svg" class="tab-icon state-inactive">
+                        </div>
+                        <div class="tab-heading-text">
+                            {{tab1}}
+                        </div>
+                    </template>
+                    <app-peopledata *ngIf="activeIndex === 0"></app-peopledata>
+                </tab>
+                <tab [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                    <template class="tab-heading" tabHeading>
+                        <div class="tab-heading-icon">
+                            <img src="../../../../assets/images/icons/back_office.svg" class="tab-icon state-active">
+                            <img src="../../../../assets/images/icons/back_office_open.svg" class="tab-icon state-inactive">
+                        </div>
+                        <div class="tab-heading-text">
+                            {{tab2}}
+                        </div>
+                    </template>
+                    <app-backofficedata *ngIf="activeIndex === 1"></app-backofficedata>
+                </tab>
+                <tab [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                    <template class="tab-heading" tabHeading>
+                        <div class="tab-heading-icon">
+                            <img src="../../../../assets/images/icons/gtm.svg" class="tab-icon state-active">
+                            <img src="../../../../assets/images/icons/gtm_open.svg" class="tab-icon state-inactive">
+                        </div>
+                        <div class="tab-heading-text">
+                            {{tab3}}
+                        </div>
+                    </template>
+                    <app-gtmdata *ngIf="activeIndex === 2"></app-gtmdata>
+                </tab>
+                <tab [active]="activeIndex === 3" (select)="setActiveIndex(3)">
+                    <template class="tab-heading" tabHeading>
+                        <div class="tab-heading-icon">
+                            <img src="../../../../assets/images/icons/product.svg" class="tab-icon state-active">
+                            <img src="../../../../assets/images/icons/product_open.svg" class="tab-icon state-inactive">
+                        </div>
+                        <div class="tab-heading-text">
+                            {{tab4}}
+                        </div>
+                    </template>
+                    <app-productdata *ngIf="activeIndex === 3"></app-productdata>
+                </tab>
+                <tab [active]="activeIndex === 4" (select)="setActiveIndex(4)">
+                    <template class="tab-heading" tabHeading>
+                        <div class="tab-heading-icon">
+                            <img src="../../../../assets/images/icons/timeline_&_budget.svg" class="tab-icon state-active">
+                            <img src="../../../../assets/images/icons/timeline_&_budget_open.svg" class="tab-icon state-inactive">
+                        </div>
+                        <div class="tab-heading-text">
+                            {{tab5}}
+                        </div>
+                    </template>
+                    <app-timelinebudgetdata *ngIf="activeIndex === 4"></app-timelinebudgetdata>
+                </tab>
+            </tabset>
+            <app-integrationplanningtable [activeIndex]="activeIndex"></app-integrationplanningtable>
+            <div class="dashboard-graph-container">
+                <app-dashboardgraph></app-dashboardgraph>
+            </div>
+        </div>
+    </div>
+</div>

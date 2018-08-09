@@ -1,0 +1,6 @@
+<!--<a href="#" [tooltip]="'Foo'" #tooltip='bs-tooltip' >Check me out!</a>-->
+
+<div class="tooltip-icon fa fa-info" [tooltip]="tooltipText" tooltipAnimation="true" [placement]="tooltipPlacement" container="body" *ngIf="!useAsInnerHtml" #tt="bs-tooltip"></div>
+
+<template #templateRef><div [innerHtml]="tooltipText"></div></template>
+<div class="tooltip-icon  fa fa-info" [tooltip]="templateRef" tooltipAnimation="true" [placement]="tooltipPlacement" container="body" *ngIf="useAsInnerHtml"></div>

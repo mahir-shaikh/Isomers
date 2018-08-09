@@ -1,0 +1,136 @@
+<div class="ips-wrapper container">
+    <div class="row heading-container">
+        <div class="col-sm-12 heading-text">
+            <calc-outlet ref="tlOutputRound1Title"></calc-outlet>
+        </div>
+    </div>
+
+    <div class="row vision-container">
+        <div class="col-sm-12 vision-title">
+            <!-- <calc-outlet ref="tlOutputVisionTitle"></calc-outlet> -->
+            <text-outlet key="Vision"></text-outlet>
+        </div>
+        <div class="col-sm-12 vision-data">
+            <textareabox ref="TlInputV2MOMVision" heading="VisionHeadingText"></textareabox>
+        </div>
+    </div>
+
+    <div class="row value-container">
+        <div class="col-sm-12 p-0 value-wrapper">
+            <div class="data-heading-row row">
+                <div class="col-sm-4 data-label">
+                    <span class="value-label"><calc-outlet ref="tlOutputValueTitle"></calc-outlet></span>
+                    <span class="value-rank"><text-outlet key="ValueRankHeading"></text-outlet></span>
+                </div>
+                <div class="col-sm-2 data-label">
+                    <!-- <calc-outlet ref="tlOutputValueTitle"></calc-outlet> -->
+                    <text-outlet key="ValuePercHeading"></text-outlet>
+                </div>
+                <!-- <div class="col-sm-2 data-label">
+                    <text-outlet key="ValueRankHeading"></text-outlet>
+                </div> -->
+                <div class="col-sm-6 data-label">
+                    <text-outlet key="ValueDescHeading"></text-outlet>
+                </div>
+            </div>
+            <div class="data-row row">
+                <div class="col-sm-4 data-label">
+                    <span class="value-label"><calc-outlet ref="TLInputV2MOMValue2"></calc-outlet></span>
+                    <span class="value-rank"><calc-outlet ref="tlOutputValue2Rank"></calc-outlet></span>
+                </div>
+                <div class="col-sm-2 data-value">
+                    <calc-input ref="tlInputV2MOMValue2Rank" scaler="100" format="0%" min="10" max="40" step="1" [IsReadOnly]="currentRound != 1" *ngIf="currentRound != 1"></calc-input>
+
+                    <calc-stepper ref="tlInputV2MOMValue2Rank" format="0%" scaler="100" step="1" min="10" max="40" outputMin="10" outputMax="40" *ngIf="currentRound == 1"></calc-stepper>
+                </div>
+                <!-- <div class="col-sm-2 data-value">
+                    <calc-outlet ref="tlOutputValue2Rank"></calc-outlet>
+                </div> -->
+                <div class="col-sm-6 data-value">
+                    <textareabox ref="TLInputV2MOMValue2Desc" textareaRows="1" [isReadOnly]="currentRound != 1"></textareabox>
+                </div>
+            </div>
+            <div class="data-row row">
+                <div class="col-sm-4 data-label">
+                    <span class="value-label"><calc-outlet ref="TLInputV2MOMValue3"></calc-outlet></span>
+                    <span class="value-rank"><calc-outlet ref="tlOutputValue3Rank"></calc-outlet></span>
+                </div>
+                <div class="col-sm-2 data-value">
+                    <calc-input ref="tlInputV2MOMValue3Rank" scaler="100" format="0%" min="10" max="40" [IsReadOnly]="currentRound != 1" *ngIf="currentRound != 1"></calc-input>
+                    <calc-stepper ref="tlInputV2MOMValue3Rank" format="0%" scaler="100" step="1" min="10" max="40" outputMin="10" outputMax="40" *ngIf="currentRound == 1"></calc-stepper>
+                </div>
+                <!-- <div class="col-sm-2 data-value">
+                    <calc-outlet ref="tlOutputValue3Rank"></calc-outlet>
+                </div> -->
+                <div class="col-sm-6 data-value">
+                    <textareabox ref="TLInputV2MOMValue3Desc" textareaRows="1" [isReadOnly]="currentRound != 1"></textareabox>
+                </div>
+            </div>
+            <div class="data-row row">
+                <div class="col-sm-4 data-label">
+                    <span class="value-label"><calc-outlet ref="TLInputV2MOMValue1"></calc-outlet></span>
+                    <span class="value-rank"><calc-outlet ref="tlOutputValue1Rank"></calc-outlet></span>
+                </div>
+                <div class="col-sm-2 data-value">
+                    <calc-input ref="tlInputV2MOMValue1Rank" scaler="100" format="0%" min="10" max="40" [IsReadOnly]="currentRound != 1" *ngIf="currentRound != 1"></calc-input>
+                    <calc-stepper ref="tlInputV2MOMValue1Rank" format="0%" scaler="100" step="1" min="10" max="40" outputMin="10" outputMax="40" *ngIf="currentRound == 1"></calc-stepper>
+                </div>
+                <!-- <div class="col-sm-2 data-value">
+                    <calc-outlet ref="tlOutputValue1Rank"></calc-outlet>
+                </div> -->
+                <div class="col-sm-6 data-value">
+                    <textareabox ref="TLInputV2MOMValue1Desc" textareaRows="1" [isReadOnly]="currentRound != 1"></textareabox>
+                </div>
+            </div>
+            <div class="data-row row">
+                <div class="col-sm-4 data-label">
+                    <span class="value-label"><calc-outlet ref="TLInputV2MOMValue4"></calc-outlet></span>
+                    <span class="value-rank"><calc-outlet ref="tlOutputValue4Rank"></calc-outlet></span>
+                </div>
+                <div class="col-sm-2 data-value">
+                    <calc-input ref="tlInputV2MOMValue4Rank" scaler="100" format="0%" min="10" max="40" [IsReadOnly]="currentRound != 1" *ngIf="currentRound != 1"></calc-input>
+                    <calc-stepper ref="tlInputV2MOMValue4Rank" format="0%" scaler="100" step="1" min="10" max="40" outputMin="10" outputMax="40" *ngIf="currentRound == 1"></calc-stepper>
+                </div>
+                <!-- <div class="col-sm-2 data-value">
+                    <calc-outlet ref="tlOutputValue4Rank"></calc-outlet>
+                </div> -->
+                <div class="col-sm-6 data-value">
+                    <textareabox ref="TLInputV2MOMValue4Desc" textareaRows="1" [isReadOnly]="currentRound != 1"></textareabox>
+                </div>
+            </div>
+            <div class="data-row row">
+                <div class="col-sm-4 data-label">
+                    <span class="value-label"><calc-outlet ref="TLInputV2MOMValue5"></calc-outlet></span>
+                    <span class="value-rank"><calc-outlet ref="tlOutputValue5Rank"></calc-outlet></span>
+                </div>
+                <div class="col-sm-2 data-value">
+                    <calc-input ref="tlInputV2MOMValue5Rank" scaler="100" format="0%" min="10" max="40" IsReadOnly="true"></calc-input>
+                </div>
+                <!-- <div class="col-sm-2 data-value">
+                    <calc-outlet ref="tlOutputValue5Rank"></calc-outlet>
+                </div> -->
+                <div class="col-sm-6 data-value">
+                    <textareabox ref="TLInputV2MOMValue5Desc" textareaRows="1" [isReadOnly]="currentRound != 1"></textareabox>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row risk-container">
+        <div class="col-sm-12 risk-title">
+            <text-outlet key="RiskTitleQuestion"></text-outlet>
+        </div>
+        <div class="col-sm-12 row risk-data">
+            <div class="col-sm-4">
+                <textareabox ref="tlInputV2MOMRisk1" heading="RiskOneHeadingText"></textareabox>
+            </div>
+            <div class="col-sm-4">
+                <textareabox ref="tlInputV2MOMRisk2" heading="RiskTwoHeadingText"></textareabox>                
+            </div>
+            <div class="col-sm-4">
+                <textareabox ref="tlInputV2MOMRisk3" heading="RiskThreeHeadingText"></textareabox>                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+:host
+    position fixed
+    width 100px
+
+.graph-wrapper
+    background-color #333
+    .data-value-container
+        padding 10px
+        text-align center
+        @media screen and (max-width 1024px)
+            padding 5px
+        .data-value
+            display inline-block
+            height 50px
+            width 50px
+            line-height 50px
+            border-radius 50%
+            font-weight 500
+            calc-outlet
+                font-size 13px
+        .data-label
+            color #FFF
+            padding 5px 0
+            font-size 0.875rem
+        &:nth-child(1)
+            .data-value
+                background-color #55B053
+                color #FFF
+        &:nth-child(2)
+            .data-value
+                background-color #FFB60F
+                color #000
+        &:nth-child(3)
+            .data-value
+                background-color #02BD92
+                color #FFF
+        &:nth-child(4)
+            .data-value
+                background-color #933ABC
+                color #FFF
+        &:nth-child(5)
+            .data-value
+                background-color #4590ED
+                color #FFF
+        &:nth-child(6)
+            .data-value
+                background-color #001870
+                color #FFF

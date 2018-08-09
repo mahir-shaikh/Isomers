@@ -1,0 +1,107 @@
+:host
+    height calc(100% - 120px)
+    overflow auto
+    -webkit-overflow-scrolling touch
+    @media screen and (max-width 1024px)
+        height calc(100% - 160px)
+    @media screen and (max-width 768px)
+        height calc(100% - 180px)
+
+.ips-wrapper
+    background-color #E5E5E5
+    padding 10px
+    margin 10px auto
+    .heading-container
+        margin 10px 0
+        .heading-text
+            calc-outlet,text-outlet
+                color #0077BB
+                font-size 1.5rem
+                line-height 1.5rem
+            @media screen and (min-width 1025px)
+                font-size 1.675rem
+                text-outlet,calc-outlet
+                    font-size 1.675rem
+    .vision-container
+        margin 10px 0
+        background-color #fff
+        .vision-title
+            padding 10px 15px
+            color #EB9400
+            text-outlet,calc-outlet
+                font-size 1.125rem
+                line-height 1.125rem
+            @media screen and (min-width 1025px)
+                font-size 1.25rem
+                text-outlet,calc-outlet
+                    font-size 1.25rem
+        .vision-data
+            // display block
+    .risk-container
+        margin-top 10px
+        background-color #fff
+        .risk-title
+            padding 10px 15px
+            color #EB9400
+            text-outlet,calc-outlet
+                font-size 1.125rem
+                line-height 1.125rem
+            @media screen and (min-width 1025px)
+                font-size 1.25rem
+                text-outlet,calc-outlet
+                    font-size 1.25rem
+        .risk-data
+            padding 0
+    .value-container
+        margin 10px 0
+        background-color #fff
+        .data-heading-row
+            align-items center
+            /*text-align center*/
+            .data-label
+                padding 10px 15px
+                color #EB9400
+                text-outlet,calc-outlet
+                    font-size 1.125rem
+                    line-height 1.125rem 
+                @media screen and (min-width 1025px)
+                    font-size 1.25rem
+                    text-outlet,calc-outlet
+                        font-size 1.25rem
+                
+        .data-row
+            align-items center
+            .data-label,.data-value
+                font-size 0.875rem
+                @media screen and (min-width 1025px)
+                    font-size 1rem
+                    text-outlet,calc-outlet
+                        font-size 1rem
+                    
+        .value-rank
+            background #EAD7F3
+            padding 5px
+            position relative
+            margin 0px 20px
+            color #000
+            border-radius 5px
+            min-width 30px
+            display inline-block
+            text-align center
+            font-size 0.875rem
+            @media screen and (min-width 1025px)
+                font-size 1rem
+                text-outlet,calc-outlet
+                    font-size 1rem
+            :before
+                content ''
+                width 0px
+                height 0px
+                border-top 10px solid transparent
+                border-bottom 10px solid transparent
+                border-right 10px solid #EAD7F3
+                position absolute
+                top 5px
+                left -7px
+                z-index 1
+            

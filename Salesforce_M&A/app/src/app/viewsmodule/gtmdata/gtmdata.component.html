@@ -1,0 +1,90 @@
+<div class="gtm-wrapper animated slideInUp">
+    <div class="heading-row row">
+        <div class="col-12 col-sm-12 col-xl-4 data-label"></div>
+        <div class="col col-sm data-label">
+        </div>
+        <div class="col-2 col-sm-2 data-label">
+            <text-outlet key="FullCost"></text-outlet>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="col-12 col-sm-12 col-xl-4 data-label tooltip-container">
+            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipGTM1" useAsInnerHtml=""></my-tooltip>
+            <text-outlet key="GtmTableLabel1"></text-outlet>
+        </div>
+        <div class="col col-sm data-value">
+            <calc-option [items]="gtmDropdownList1" ref="tlInputGTMOrg62Timeline"></calc-option>
+        </div>
+        <div class="col-2 col-sm-2 data-value p-0">
+            <span class="full-cost-value"><calc-outlet ref="tlOutputFullOrg62Exp" format="$0,0"></calc-outlet></span>
+        </div>
+    </div>
+    <div class="line-break-container row">
+        <div class="col-12 col-sm-12 line-break">
+            <hr>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="col-12 col-sm-12 col-xl-4 data-label tooltip-container">
+            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipGTM2" useAsInnerHtml=""></my-tooltip>
+            <text-outlet key="GtmTableLabel2"></text-outlet>
+        </div>
+        <div class="col col-sm data-value">
+            <calc-option [items]="gtmDropdownList2" ref="tlInputGTMCSGPostSales"></calc-option>
+        </div>
+        <div class="col-2 col-sm-2 data-value p-0">
+            <span class="full-cost-value"><calc-outlet ref="tlOutputFullCSGExp" format="$0,0"></calc-outlet></span>
+        </div>
+    </div>
+    <div class="line-break-container row">
+        <div class="col-12 col-sm-12 line-break">
+            <hr>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="col-12 col-sm-12 col-xl-4 data-label tooltip-container">
+            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipGTM3" useAsInnerHtml=""></my-tooltip>
+            <text-outlet key="GtmTableLabel3"></text-outlet>
+        </div>
+        <div class="col col-sm col-md-10 col-lg data-value">
+            <calc-option [items]="gtmDropdownList3" ref="tlInputGTMBrandIntegration"></calc-option>
+        </div>
+        <div class="col-2 col-sm-2 data-value p-0">
+            <span class="full-cost-value"><calc-outlet ref="tlIOutputFullBrandIntExp" format="$0,0"></calc-outlet></span>
+        </div>
+    </div>
+    <div class="line-break-container row">
+        <div class="col-12 col-sm-12 line-break">
+            <hr>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="col-12 col-sm-12 col-xl-4 data-label tooltip-container">
+            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipGTM4" useAsInnerHtml=""></my-tooltip>
+            <text-outlet key="GtmTableLabel4"></text-outlet>
+        </div>
+        <div class="col col-sm data-value">
+            <calc-option [items]="gtmDropdownList4" ref="tlInputGTMExternalSales"></calc-option>
+        </div>
+        <div class="col-2 col-sm-2 data-value p-0">
+            <span class="full-cost-value"><calc-outlet ref="tlOutputFullExternalSalesExp"></calc-outlet></span>
+        </div>
+    </div>
+    <div class="line-break-container row">
+        <div class="col-12 col-sm-12 line-break">
+            <hr>
+        </div>
+    </div>
+    <div class="data-row row">
+        <div class="col-4 col-sm-4 data-label tooltip-container">
+            <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipGTM5" useAsInnerHtml=""></my-tooltip>
+            <text-outlet key="GtmTableLabel5"></text-outlet>
+        </div>
+        <div class="col col-sm data-value">
+            <calc-option [items]="gtmDropdownList5" ref="tlInputGTMLeadPass" isTypeYesNo="true" [isDisabled]="disableLeadPass"></calc-option>
+        </div>
+        <div class="col-2 col-sm-2 data-value p-0">
+            <span class="full-cost-value"><calc-outlet ref="tlOutputFullLeadPassExp" format="$0,0"></calc-outlet></span>
+        </div>
+    </div>
+</div>

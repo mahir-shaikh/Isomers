@@ -1,0 +1,89 @@
+.backoffice-wrapper
+    margin 10px !important
+    margin-bottom 0
+    .backoffice-data,.security-data
+        background-color #fff
+        padding 10px
+    .security-data
+        margin-top 10px
+    .sub-heading-text-container
+        .sub-heading-text
+            padding 10px 15px
+            color #EB9400
+            text-outlet,calc-outlet
+                font-size 1.125rem
+                line-height 1.125rem
+            @media screen and (min-width 1025px)
+                font-size 1.25rem
+                text-outlet,calc-outlet
+                    font-size 1.25rem
+    .heading-row
+        align-items center
+        .data-label
+            font-weight 500
+            // display block
+    .data-row
+        margin 10px 0
+        align-items center
+        .data-label
+            font-weight 500
+            color #333
+            calc-outlet
+                font-size 1rem
+            @media screen and (min-width 1025px)
+                font-size 1.125rem
+                text-outlet,calc-outlet
+                    font-size 1.125rem
+        .data-value
+            // display block
+    .data-column
+        > .data-label, > .data-value
+            margin 10px 0
+    .line-break
+        margin-top 8px
+        margin-bottom 8px
+    .border-container
+        margin 15px
+        border 1px solid rgba(0,0,0,0.1)
+        padding 15px
+        .line-break-container
+            position relative
+        .down-arrow
+            display inline-block
+            position absolute
+            left 50%
+            top 50%
+            transform translate(-50%,-50%)
+            background #FFF
+            padding 10px
+            z-index 1
+            font-size 32px
+            color rgba(0,0,0,0.5)
+        calc-option
+            text-align right
+            @media screen and (max-width 768px)
+                text-align center
+
+
+    .int-levels
+        display flex
+        align-items center
+        justify-content space-between
+        .int-level-lable
+            color #ccc
+            text-align center
+            -webkit-transition all 0.5s ease
+            transition all 0.5s ease
+            &.active
+                color #ed8b00
+        .add-icon
+            color #ed8b00
+            font-size 2rem
+            line-height 2rem
+            padding 10px
+.pl-30
+    padding-left 30px
+.bold-text
+    font-weight 500
+.text-right-align
+    text-align right

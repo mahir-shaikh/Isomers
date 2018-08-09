@@ -1,0 +1,12 @@
+<div class="radio-group" data-toggle="buttons" *ngIf="!isTypeYesNo">
+  <label class="btn custom-radio-button" [class.checked]="selectedItemNumber == i" *ngFor="let item of _items; let i = index">
+    <input type="radio" [name]="ref" [value]="item" [id]="ref + '_option' + i" (click)="selectionChanged(i)" [checked]="selectedItemNumber == i"> <span class="value">{{item | numFormat:format:scaler}}</span>
+  </label>
+</div>
+
+<div class="special-yes-no" [class.disabled]="isDisabled" [class.isYesSelected]="getSelectedItem() == 'Yes'" [class.isNoSelected]="getSelectedItem() == 'No'" *ngIf="isTypeYesNo">
+    <label class="btn custom-radio-button" [class.checked]="selectedItemNumber == i" *ngFor="let item of _items; let i = index">
+        <input type="radio" [name]="ref" [value]="item" [id]="ref + '_option' + i" (click)="selectionChanged(i)" [checked]="selectedItemNumber == i"> {{item}}
+    </label>
+    <span class="status fa" [class.fa-times]="getSelectedItem() == 'No' && !isDisabled" [class.fa-check]="getSelectedItem() == 'Yes' && !isDisabled" [class.fa-minus]="(getSelectedItem() != 'No' && getSelectedItem() != 'Yes') || isDisabled"></span>
+</div>

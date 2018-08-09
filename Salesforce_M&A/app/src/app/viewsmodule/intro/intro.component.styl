@@ -1,0 +1,96 @@
+.intro-page-wrapper
+    // background url("../../../../assets/images/ey_intro_screen.png") no-repeat
+    // background-color #0077BB
+    height 100vh
+    width 100vw
+    .intro-page-container
+        width 350px
+        position absolute
+        left 50%
+        top 50%
+        -webkit-transform translate(-50%,-50%)
+        transform translate(-50%,-50%)
+        .logo-container
+            margin-bottom 30px
+            text-align center
+            .logo
+                height 100px
+        .data-container
+            background #FFF
+            .text-intro-info
+                padding 15px
+                .program-title-container
+                    calc-outlet,text-outlet
+                        font-size 2rem
+                        line-height 2rem
+                        color #777
+                        font-weight 600
+                .program-sub-title-container
+                    calc-outlet,text-outlet
+                        font-size 1.5rem
+                        line-height 1.5rem
+                        color #777
+                        font-weight 400
+            .program-roundinfo-container
+                padding 15px
+                .teamno-container
+                    border-right 1px solid rgba(0,0,0,.1)
+                    padding-left 0
+                .data-label,.data-value
+                    padding 5px 0
+            .button
+                text-align center
+                padding 20px
+                background #EFEFEF
+                color #777
+                cursor pointer
+.password-modal
+    &.modal
+        .modal-dialog
+            margin auto
+            position absolute
+            left 50%
+            top 50%
+            -webkit-transform translate(-50%, -50%)
+            -moz-transform translate(-50%, -50%)
+            -ms-transform translate(-50%, -50%)
+            transform translate(-50%, -50%)
+    .modal-header
+        padding 15px
+        background-color #504848
+        color #FFF
+        font-size 1.25rem
+        font-weight 500
+        calc-outlet
+            color #FFF
+            font-size 1.25rem
+            font-weight 500
+    .modal-body
+        padding-top 0
+        .info-text
+            color #333
+            padding 10px 0
+        .error-message
+            padding 10px 0
+            color #F00
+            font-size 0.75rem
+        .title-text
+            padding-bottom 5px
+        .password-container
+            margin-top 10px
+            .password-text
+                padding-bottom 5px
+            input
+                width 100%
+                border 1px solid #000
+                &:active,&:focus
+                    border 1px solid #000
+    .button-container
+        padding 15px
+        padding-top 0
+        text-align center
+        .btn
+            cursor pointer
+            margin-left 15px
+            calc-outlet
+                color #fff

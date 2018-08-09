@@ -1,0 +1,23 @@
+<div class="scenario-wrapper animated slideInUp">
+    <div class="scenario-container container">
+        <div class="eventBody">
+            <div class="row heading-container">
+                <div class="col-sm-12 heading-text">
+                    <!-- <calc-outlet ref="tlOutputRound1Title"></calc-outlet> -->
+                    <text-outlet key="Inbox"></text-outlet>
+                </div>
+            </div>
+            <!-- <scenariodata scenarioRef="xxScenario1Run" wobblerRef="tlInputWobbler1"></scenariodata> -->
+            <scenariodata scenarioRef="xxScenario2Run" wobblerRef="tlInputWobbler2"></scenariodata>
+            <!-- <scenariodata scenarioRef="xxScenario3Run" wobblerRef="tlInputWobbler3"></scenariodata> -->
+            <scenariodata scenarioRef="xxScenario4Run" wobblerRef="tlInputWobbler4" triggerRef="xxScenario2Run"></scenariodata>
+            <scenariodata scenarioRef="xxScenario5Run" wobblerRef="tlInputWobbler5" triggerRef="xxScenario4Run"></scenariodata>
+            <scenariodata scenarioRef="xxScenario6Run" wobblerRef="tlInputWobbler6" triggerRef="xxScenario5Run"></scenariodata>
+            <!-- <scenariodata scenarioRef="xxScenario7Run" wobblerRef="tlInputWobbler7"></scenariodata> -->
+            <scenariodata scenarioRef="xxScenario8Run" wobblerRef="tlInputWobbler8" triggerRef="xxScenario6Run"></scenariodata>
+            <div class="dashboard-graph-container">
+                <app-dashboardgraph></app-dashboardgraph>
+            </div>
+        </div>
+    </div>
+</div>

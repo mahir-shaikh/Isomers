@@ -1,0 +1,101 @@
+<div class="row people-wrapper animated slideInUp">
+    <div class="chart-container col-4 col-sm-4 col-xl-2">
+        <div class="sub-heading-text-container row">
+            <div class="sub-heading-text col-12 col-sm-12">
+                <text-outlet key="PeopleChartTitle"></text-outlet>
+            </div>
+        </div>
+        <div class="people-chart-container">
+            <!--Chart-->
+            <basiccolumn
+                rangeRef="tlOutputStartingEngagement,tlOutputEngagement"
+                seriesLabels="PeopleChartSeries"
+                categoryLabels="PeopleChartCategory1,PeopleChartCategory2"
+                [chartOptions]="customChartOption"
+                numberFormat='0,0.0'
+                height="250">
+            </basiccolumn>
+        </div>
+    </div>
+
+    <div class="data-container col-8 col-sm-8 col-xl-10">
+        <div class="sub-heading-text-container row">
+            <div class="sub-heading-text col-sm-12">
+                <text-outlet key=""></text-outlet>&nbsp;
+            </div>
+        </div>
+        <div class="data-row row">
+            <div class="col col-sm-12 col-xl data-label tooltip-container p-0">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipPeople1"></my-tooltip>
+                <calc-outlet ref="tlOutputPeopleTimelineTitle"></calc-outlet>
+            </div>
+            <div class="col-12 col-sm-12 col-xl data-value">
+                <calc-option [items]="peopleDropdownList1" ref="tlInputPeopleTimeline"></calc-option>
+            </div>
+        </div>
+        <div class="line-break-container row">
+            <div class="col-12 col-sm-12 line-break">
+                <hr>
+            </div>
+        </div>
+        <div class="data-row heading-row row">
+            <div class="col col-sm data-label tooltip-container p-0">
+                <my-tooltip class="custom-tooltip" tooltipPlacement="right" key="TooltipPeople2"></my-tooltip>
+                <calc-outlet ref="tlOutputPeopleHarmonizationLevelTitle"></calc-outlet>
+            </div>
+        </div>
+        <div class="data-row row align-start">
+            <div class="data-column col-sm-12 col-lg-6 row p-0">
+                <div class="col-12 col-sm-12 data-label bold-text">
+                    <calc-outlet ref="tlOutputHarmLevelTitle"></calc-outlet>
+                </div>
+                <div class="col-12 col-sm-12 data-value">
+                    <calc-slider ref="tlInputPeopleHarmonizationLevel" step="0.05" min="-0.1" max="0.2" handleValueRef="tlInputPeopleHarmonizationLevel" format="0%" scaler="1"></calc-slider>
+                </div>
+                <div class="col-12 col-sm-12 data-label media-p0">
+                    <span class="full-cost-label"><text-outlet key="FullCosts"></text-outlet></span>
+                    <span class="full-cost-value"><calc-outlet ref="tlOutputKeyHarmExp" format="($0,0)"></calc-outlet></span>
+                </div>
+            </div>
+            <div class="data-column col-12 col-sm-12 col-lg-6 row p-0">
+                <div class="col-12 col-sm-12 data-label bold-text">
+                    <calc-outlet ref="tlOutputNonKeyHarmLevelTitle"></calc-outlet>
+                </div>
+                <div class="col-12 col-sm-12 data-value">
+                    <calc-slider ref="tlInputPeopleNonKeyHarmonizationLevel" step="0.05" min="-0.1" max="0.2" handleValueRef="tlInputPeopleNonKeyHarmonizationLevel" format="0%" scaler="1"></calc-slider>
+                </div>
+                <div class="col-12 col-sm-12 data-label media-p0">
+                    <span class="full-cost-label"><text-outlet key="FullCosts"></text-outlet></span>
+                    <span class="full-cost-value"><calc-outlet ref="tlOutputNonKeyHarmExp" format="($0,0)"></calc-outlet></span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="data-row row">
+            <div class="col-sm data-label">
+                <calc-outlet ref="tlOutputHarmLevelTitle"></calc-outlet>
+            </div>
+            <div class="col-sm data-label">
+                <calc-outlet ref="tlOutputNonKeyHarmLevelTitle"></calc-outlet>
+            </div>
+        </div> -->
+        <!-- <div class="data-row row">
+            <div class="col-sm data-value">
+                <calc-slider ref="tlInputPeopleHarmonizationLevel" step="0.05" min="-0.1" max="0.2" handleValueRef="tlInputPeopleHarmonizationLevel" format="0%" scaler="1"></calc-slider>
+            </div>
+            <div class="col-sm data-value">
+                <calc-slider ref="tlInputPeopleNonKeyHarmonizationLevel" step="0.05" min="-0.1" max="0.2" handleValueRef="tlInputPeopleNonKeyHarmonizationLevel" format="0%" scaler="1"></calc-slider>
+            </div>
+        </div> -->
+        <!-- <div class="data-row heading-row row">
+            <div class="col-sm data-label">
+                <span class="full-cost-label"><text-outlet key="FullCosts"></text-outlet></span>
+                <span class="full-cost-value"><calc-outlet ref="tlOutputKeyHarmExp" format="$0,0"></calc-outlet></span>
+            </div>
+            <div class="col-sm data-label">
+                <span class="full-cost-label"><text-outlet key="FullCosts"></text-outlet></span>
+                <span class="full-cost-value"><calc-outlet ref="tlOutputNonKeyHarmExp" format="$0,0"></calc-outlet></span>
+            </div>
+        </div> -->
+    </div>
+    
+</div>

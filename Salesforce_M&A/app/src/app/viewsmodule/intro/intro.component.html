@@ -1,0 +1,73 @@
+<div class="intro-page-wrapper">
+    <div class="intro-page-container">
+        <div class="logo-container">
+            <img class="logo" src="../../../../assets/images/icons/client_logo.svg">
+        </div>
+        <div class="data-container animated bounceIn">
+            <div class="text-intro-info">
+                <!-- <div class="program-title-container">
+                    <text-outlet key="SubTitlePart1"></text-outlet>
+                </div> -->
+                <div class="program-sub-title-container">
+                    <text-outlet key="SubTitlePart2"></text-outlet>
+                </div>
+            </div>
+            <div class = "program-roundinfo-container row">
+                <div class="col-sm teamno-container">
+                    <div class="data-label">
+                        <text-outlet key="TeamNumber"></text-outlet>
+                    </div>
+                    <div class="data-value">
+                        <calc-input ref="tlInputTeamNumber" [IsReadOnly]="currentYear != 1"></calc-input>
+                    </div>
+                </div>
+                <div class="col-sm round-container">
+                    <div class="data-label">
+                        <text-outlet key="Round"></text-outlet>
+                    </div>
+                    <div class="data-value">
+                        <calc-outlet ref="tlInputRound"></calc-outlet>
+                    </div>
+                </div>
+                <div class="col-sm-12 p-0">
+                    <hr>
+                </div>
+                <div class="col-sm-12 p-0">
+                    <textareabox ref="tlInputTeamName" textareaRows="1" heading="TeamName" [isReadOnly]="currentYear != 1"></textareabox>
+                </div>
+            </div>
+            <div class="button" (click)="beginRoundCLicked()">
+                <text-outlet key="BeginRound"></text-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #passwordModal="bs-modal" class="modal model-md animated password-modal fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"[config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="heading">
+                    <text-outlet key="RoundTwoStart" *ngIf="passwordModalNumber == 1"></text-outlet>
+                    <text-outlet key="RoundThreeStart" *ngIf="passwordModalNumber == 2"></text-outlet>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="info-text" *ngIf="passwordModalNumber == 1 || passwordModalNumber == 2">
+                        <text-outlet key="RoundBeginMsg"></text-outlet>
+                    </div>
+                    <div class="password-container">
+                        <div class="password-text"><text-outlet key="EnterPassword"></text-outlet></div>
+                        <input type="password" [(ngModel)]="password" #passwordText>
+                    </div>
+                    <div class="error-message" *ngIf="showPasswordErrorMessage"><text-outlet key="IncorrectPasswordMsg"></text-outlet></div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-primary" (click)="onPasswordSubmit()" [class.disabled]="password.value"><text-outlet key="Submit"></text-outlet></button>
+                <button class="btn btn-danger" (click)="hidePasswordModalRef()"><text-outlet key="Cancel"></text-outlet></button>
+            </div>
+        </div>
+    </div>
+</div>

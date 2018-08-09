@@ -1,0 +1,35 @@
+:host
+    font-size 0.875rem
+    text-align center
+    @media screen and (max-width 768px)
+        font-size 0.75rem
+.isNegative
+    color #F00
+
+.metric-balloon
+    position absolute
+    display inline-block
+    // top 0
+    // left 48%
+    margin 0 5px
+    padding 3px
+    color #fff
+    border-radius 5px
+    font-size 10px
+    opacity 0
+    z-index 1
+    transition opacity 0.35s ease
+    white-space nowrap
+    &.fade-in
+        opacity 1
+    &.increement
+        background-color green
+    &.decreement
+        background-color red
+    &.no-change-balloon-value
+        background-color transparent
+        color transparent
+    
+:host-context(.intro-page-wrapper){
+    color #000
+}

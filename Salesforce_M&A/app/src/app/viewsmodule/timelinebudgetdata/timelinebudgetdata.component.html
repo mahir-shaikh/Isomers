@@ -1,0 +1,52 @@
+<div class="tbd-wrapper row animated slideInUp">
+    <div class="chart-container col-12 col-sm-12 col-lg-6">
+        <div class="sub-heading-text-container row">
+            <div class="sub-heading-text col-12 col-sm-12">
+                <text-outlet key="TimelineBudgetChartTitle1"></text-outlet>
+            </div>
+        </div>
+        <div class="timeline-chart-container">
+            <!--Chart-->
+            <basicbar
+                rangeRef="tlOutputTimelineHarm,tlOutputTimelineIT,tlOutputTimelineTrust,tlOutputTimelineGTM,tlOutputTimelineProduct,tlOutputTimelineExternal,tlOutputTimelineCSG,tlOutputTimelineBrand"
+                categoryLabels="TimelineChartCategory1, TimelineChartCategory2, TimelineChartCategory3, TimelineChartCategory4,TimelineChartCategory5,TimelineChartCategory6, TimelineChartCategory7, TimelineChartCategory8"
+                seriesLabels="TimelineChartSeries"
+                numberFormat="0,0"
+                [chartOptions]="timelineChartOption"
+                height="510"
+            ></basicbar>
+        </div>
+    </div>
+
+    <div class="chart-container col-12 col-sm-12 col-lg-6">
+        <div class="sub-heading-text-container row">
+            <div class="sub-heading-text col-12 col-sm-12">
+                <text-outlet key="TimelineBudgetChartTitle2"></text-outlet>
+            </div>
+        </div>
+        <div class="budget-chart-container">
+            <!--Chart-->
+            <basiccolumn
+                rangeRef="tlOutputY1Product,tlOutputY1GTM,tlOutputY1People,tlOutputY1BO,tlOutputY1Trust,tlOutputY1Events,tlOutputY1Budget"
+                seriesLabels="Y1ChartSeries"
+                categoryLabels="BudgetChartCategory1,BudgetChartCategory2,BudgetChartCategory3,BudgetChartCategory4,BudgetChartCategory5,BudgetChartCategory6,BudgetChartCategory7"
+                height=250
+                [chartOptions]="customChartOption"
+                numberFormat='$0,0'
+                dataLabelFormat='millions'>
+            </basiccolumn>
+        </div>
+        <div class="budget-chart-container">
+            <basiccolumn
+                rangeRef="tlOutputY2Product,tlOutputY2GTM,tlOutputY2People,tlOutputY2BO,tlOutputY2Trust,tlOutputY2Events,tlOutputY2Budget"
+                seriesLabels="Y2ChartSeries"
+                categoryLabels="BudgetChartCategory1,BudgetChartCategory2,BudgetChartCategory3,BudgetChartCategory4,BudgetChartCategory5,BudgetChartCategory6,BudgetChartCategory7"
+                height=250
+                [chartOptions]="customChartOption"
+                numberFormat='$0,0'
+                dataLabelFormat='millions'>
+            </basiccolumn>
+        </div>
+    </div>
+    
+</div>

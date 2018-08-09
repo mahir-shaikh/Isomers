@@ -1,0 +1,8 @@
+<span class="calc-slider-control row">
+    <!-- <input class="calc-slider" type="range" [ngModel]="value" (ngModelChange)="onModelChange($event)" name="{{ref}}" (blur)="saveDataToModel($event)" value="{{value}}"step="{{step}}" min={{min}} max="{{max}}" /> -->
+    <div class="col-sm-3 calc-value">{{prefix}} {{handleValue| numFormat:format:scaler}} {{suffix}}</div>
+    <div class="col-sm-9 calc-slider-wrapper">
+        <div class="calc-slider"></div>
+        <div class="pip-steps"></div>
+    </div>
+</span>

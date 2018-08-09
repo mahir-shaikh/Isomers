@@ -1,0 +1,32 @@
+.gtm-wrapper
+    margin 10px !important
+    margin-bottom 0
+    background-color #fff
+    padding 10px
+    .heading-row
+        align-items center
+        text-align center
+        .data-label
+            font-weight 500
+            // display block
+    .data-row
+        align-items center
+        margin 10px 0
+        &:last-child
+            padding-bottom 10px
+        .data-label
+            font-weight 500
+            margin 10px 0
+            calc-outlet
+                font-size 1rem
+            @media screen and (min-width 1025px)
+                font-size 1.125rem
+                text-outlet,calc-outlet
+                    font-size 1.125rem
+        .data-value
+            margin 10px 0
+            text-align center
+    .line-break
+        margin-top 0
+        margin-bottom 0
+
