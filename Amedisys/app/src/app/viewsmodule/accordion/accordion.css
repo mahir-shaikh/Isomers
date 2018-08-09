@@ -1,0 +1,56 @@
+.decisionAccordion {
+  background-color: #6c3;
+  margin-top: 30px;
+  border-radius: 0px;
+  height: 400px;
+  overflow-y: scroll;
+}
+.decisionAccordion-style {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.panel {
+  background: #ffe788;
+}
+.panel-title {
+  font-size: larger;
+}
+.panel-title a {
+  text-decoration: none;
+  outline: none;
+}
+.panel-title a:hover {
+  text-decoration: none;
+  outline: none;
+}
+.panel-default {
+  margin-top: 30px;
+  color: #4f7345;
+}
+.panel-default> .panel-heading {
+  color: #4f7345;
+  height: 55px;
+  padding: 16px 15px;
+  border-radius: 0px;
+  background-color: inherit;
+  font-size: large;
+}
+.panel-default> .panel-heading+.panel-collapse> .panel-body {
+  background-color: transparent;
+  border: none;
+  overflow-y: auto;
+}
+.choice-label {
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 5px;
+}
+.choice-header {
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 5px;
+}
+.choice-desc {
+  font-weight: 400;
+  padding: 5px;
+}

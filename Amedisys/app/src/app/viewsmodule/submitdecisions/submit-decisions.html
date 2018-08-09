@@ -1,0 +1,33 @@
+<button type="button" class="btn btn-success btn-submit-decisions" (click)="showAlert()" [class.hidden]="!isVisible">
+    <div class="btn-submit-text icon-checkmark">
+      <text-outlet class="submit-title" key="SubmitDecisions"></text-outlet>
+    </div>
+</button>
+
+<div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" aria-label="Close" (click)="hideAlert()">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+        <h4 class="modal-title"><text-outlet key="SubmitDecisions"></text-outlet></h4>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="!simNotComplete">
+          <text-outlet key="SubmitDecisionsAlertText"></text-outlet>
+        </div>
+        <div *ngIf="simNotComplete" [innerHTML]="errorMessage">
+
+        </div>
+      </div>
+
+      <div class="button-container">
+
+        <button *ngIf="!simNotComplete" type="button" class="btn btn-primary" (click)="hideAlert(true)"><text-outlet key="ConfirmText"></text-outlet></button>
+        <button *ngIf="!simNotComplete" type="button" class="btn btn-danger" (click)="hideAlert()"><text-outlet key="CancelText"></text-outlet></button>
+        <button *ngIf="simNotComplete" type="button" class="btn btn-primary" (click)="hideAlert()"><text-outlet key="Close"></text-outlet></button>
+      </div>
+    </div>
+  </div>
+</div>

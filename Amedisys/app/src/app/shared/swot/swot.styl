@@ -1,0 +1,158 @@
+@import '../../../../assets/css/mixins.styl'
+@import '../../viewsmodule/intro/intro.button';
+
+:host
+    width 100vw
+    height 100vh
+    position fixed
+    top 0
+    left 0
+    z-index 15
+.swot
+    &-wrapper
+        width 100%
+        height 100%
+        color #333
+        background #fff
+        &.intro
+            background #f2f2f2
+            padding 20px
+            margin-top 4rem
+            height calc(100vh - 50px)
+            & ^[0]-container
+                height 100%
+    &-close
+        width 40px
+        height 40px
+        background-color #6b737c
+        border-radius 50%
+        right 10px
+        top 15px
+        cursor pointer
+        text-align center
+        font-size 1.5em
+        padding-top 0.285em
+        margin-top 5px
+        color #fff
+    &-container
+        width 100%
+        height calc(100% - 45px)
+        background #EBEBEB
+        padding 0px
+    &-title
+        color #7fa86c
+        font-size 2em
+        // font-weight 500
+        padding 5px 0px 20px 0px
+    &-description
+        font-size 16px
+        font-weight 300
+        line-height 25px
+        color #666
+    &-right-content, &-left-content
+        min-height 100%
+        height 100%
+    &-right-content
+        padding 0 0 0 20px
+    &-left-content
+        overflow auto
+        padding 20px 20px 20px 20px
+        background #fff
+    &-input-row
+        height calc(34% - 65px)
+        margin 20px 0 0 0
+        &>div
+            height 100%
+        .col-xs-6
+        .swot-right-padding
+            padding 0 20px 0 0
+    &-footer
+        padding 0
+        margin 10px 0
+        .next-action
+            padding 15px
+            text-align center
+        .btn-
+            &wrapper
+                border 0
+                text-align right
+            &primary
+                text-outlet
+                    background $primeColor
+                    color #fff
+                    text-transform uppercase
+                    padding .5em 2.5em
+                    &:hover
+                    &:focus
+                    &:active
+                        background darken($primeColor, 20)
+                        color #fff
+.tab
+    &-set
+        margin-top 20px
+    &-item
+        height 150px
+        background #89d762
+        color #fff
+        float left
+        margin 1px
+        cursor pointer
+        width calc(50% - 4px)
+        &-1
+            background-color rgba(109, 168, 108, 0.62)
+            &.active
+                background-color #fff
+                color rgba(109, 168, 108, 0.62)
+                border 2px solid rgba(109, 168, 108, 0.62)
+        &-2
+            background-color #4f524d
+            &.active
+                background-color #fff
+                color #4f524d
+                border 2px solid #4f524d
+        &-3
+            background-color #7fa86c
+            &.active
+                background-color #fff
+                color #7fa86c
+                border 2px solid #7fa86c
+        &-4
+            background-color #4f7343
+            &.active
+                background-color #fff
+                color #4f7343
+                border 2px solid #4f7343
+        &:nth-child(3), &:nth-child(4)
+            margin-bottom 0
+    &-icon
+        margin-top 50px
+        font-size 2.5em
+        text-align center
+        width 100%
+    &-item-title
+        font-size 1em
+        text-align center
+    &-content
+        overflow hidden
+        width calc(100% - 6px)
+        margin-left 1px
+    &-data
+        padding 15px
+        color #666
+        &-1
+            border 1px solid #0093D3
+            border-top none
+        &-2
+            border 1px solid #002960
+            border-top none
+        &-3
+            border 1px solid #333
+            border-top none
+        &-4
+            border 1px solid #FF8500
+            border-top none
+.swot-icon
+    text-align center
+    font-size 3.2rem
+    display block
+    margin 4rem auto 1rem auto

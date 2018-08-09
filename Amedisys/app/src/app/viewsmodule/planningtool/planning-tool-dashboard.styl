@@ -1,0 +1,48 @@
+.hidden
+    display none
+.planning-tool-cont
+    height calc(100% - 58px)
+    overflow-y auto
+    overflow-x hidden
+    margin-top 50px
+    .tab-headers
+        width 64%
+        display inline-block
+        padding 30px 15px
+        // background-color #4F7345
+        text-align center
+        .tab-heading
+            font-size 2rem
+            color #4F7345
+            font-weight 500
+            padding 0 20px
+            border-right 2px dotted white
+            cursor pointer
+            display inline-block
+            &:first-child
+                padding-left 0
+            &:last-child
+                padding-right 0
+                border-right 0
+            &.active
+                color #FFF
+    .content-row
+        padding-left 20px
+        padding-top 10px
+        .col-sm-6:nth-child(odd)
+            padding 0 5px 0 0
+        .col-sm-6:nth-child(even)
+            padding 0 0 0 5px
+
+@media(max-width 1024px)
+    .planning-tool-cont
+        height calc(100% - 44px)
+        .tab-headers
+            .tab-heading
+                font-size 1.6rem
+
+@media(max-width 768px)
+    .planning-tool-cont
+        .tab-headers
+            .tab-heading
+                border-right 2px dotted white

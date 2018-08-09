@@ -1,0 +1,155 @@
+<!-- <button type="button" class="btn btn-success btn-submit-decisions" (click)="showAlert()">
+    <div class="btn-submit-text icon-checkmark">
+      <text-outlet key="MarketReport"></text-outlet>
+    </div>
+</button>
+ -->
+<!-- <div bsModal #marketModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false, 'show': false}"> -->
+<div class="modal-backdrop modal-backdrop fade in" *ngIf="isVisible"></div>
+<div class="market-report-dialog modal fade in" *ngIf="isVisible">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content col-md-12">
+      <div class="modal-header">
+        <h4 class="modal-title"><text-outlet key="MarketReport"></text-outlet></h4>
+        <div class="modal-close icon-close" (click)="hideAlert()"></div>
+      </div>
+
+      <div class="modal-body">
+        <article class="content-div">
+            <div class="col-xs-12">
+                <div class="content-row">
+                    <div class="col-xs-12 form-lebel row-header"><text-outlet key="MarketReportIntro"></text-outlet></div>
+                </div>
+                <div>
+                    <basicline 
+                        rangeref="{{ rangeref }}" 
+                        categorylabels="{{ categorylabels }}"
+                        serieslabels="{{ serieslabels }}"
+                        year="" 
+                        [numberformat]="'0.0a'" 
+                        charttitle="MarketReportTitle" 
+                        width="800" 
+                        height="200"
+                        chartoptions='{ "chart": { "marginTop": 25 }, "legend": { "itemStyle": { "color": "#000" } }, "pane": { "center": ["50%", "85%"], "size": "85%", "startAngle": -125, "endAngle": 125, "background": [{ "innerRadius": "100%", "outerRadius": "100%", "backgroundColor": "#eee", "shape": "arc", "borderWidth": 5, "borderColor": "#eee"}] }, "plotOptions": { "solidgauge": { "innerRadius": "100%", "outerRadius": "100%", "borderWidth": 5, "borderColor": "{{borderColor}}", "linecap": "round", "dataLabels": { "y": -15 } } }, "xAxis": { "labels": { "style": { "color": "#000"}}}, "yAxis": { "tickInterval": 4, "alternateGridColor": "#DDDDDD", "min": 100, "max": 120, "labels": { "style": { "color": "#000"} }, "title": { "y": 55 }} }'>
+                    </basicline>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="content-row">
+                    <div class="col-xs-3 form-lebel row-header"><text-outlet key="EnterpriseHW"></text-outlet>:</div>
+                    <div class="col-xs-3 form-lebel row-header"><text-outlet key="EnterpriseSW"></text-outlet>:</div>
+                    <div class="col-xs-3 form-lebel row-header"><text-outlet key="Consumer"></text-outlet>:</div>
+                    <div class="col-xs-3 form-lebel row-header"><text-outlet key="Services"></text-outlet>:</div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-3 cell form-lebel row-header"><text-outlet key="BuyingCriteria"></text-outlet></div>
+                    <div class="col-xs-3 cell form-lebel row-header"><text-outlet key="BuyingCriteria"></text-outlet></div>
+                    <div class="col-xs-3 cell form-lebel row-header"><text-outlet key="BuyingCriteria"></text-outlet></div>
+                    <div class="col-xs-3 cell form-lebel row-header"><text-outlet key="BuyingCriteria"></text-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Price"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria1Prod1" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Price"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria1Prod2" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Price"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria1Prod3" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Price"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria1Prod5" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Functionality"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria2Prod1" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Functionality"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria2Prod2" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="BreadthLocalization"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria2Prod3" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Competency"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria2Prod5" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Reliability"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria3Prod1" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Reliability"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria3Prod2" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="DesignFeatures"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria3Prod3" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SolutionDiscount"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria3Prod5" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="TimeToMarket"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria4Prod1" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="TimeToMarket"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria4Prod2" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="ChannelEnablement"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria4Prod3" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="ServiceInsourcedPct"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria4Prod5" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="GlobalPresence"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria5Prod1" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="GlobalPresence"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria5Prod2" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="LastYearsCSAT"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria5Prod3" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="LastYearsCSAT"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria5Prod5" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SalesCoverage"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria6Prod1" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SalesCoverage"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria6Prod2" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SolutionIndex"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria6Prod3" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SolutionIndex"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria6Prod5" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="LastYearsCSAT"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria7Prod1" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="LastYearsCSAT"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria7Prod2" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SolutionDiscount"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria7Prod3" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Branding"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria7Prod5" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SolutionIndex"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria8Prod1" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SolutionIndex"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria8Prod2" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="ConsumablesPricing"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria8Prod3" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="PersonnelUtilization"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria8Prod5" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SolutionDiscount"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria9Prod1" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SolutionDiscount"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria9Prod2" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Branding"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria9Prod3" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="GlobalPresence"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria9Prod5" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Branding"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria10Prod1" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="Branding"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria10Prod2" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-xs-2 cell form-lebel row-header"></div>
+                    <div class="col-xs-1 cell"></div>
+                    <div class="col-xs-2 cell form-lebel row-header"><text-outlet key="SalesCoverage"></text-outlet></div>
+                    <div class="col-xs-1 cell"><calc-outlet ref="tlOutputBuyingCriteria10Prod5" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+            </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>

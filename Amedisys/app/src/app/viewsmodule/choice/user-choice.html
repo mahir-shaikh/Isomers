@@ -1,0 +1,12 @@
+<div class="choice animated" [class.slideOutRight]="isClosing" [class.slideInRight]="!isClosing">
+    <div [ngSwitch]="eventType" class="choice-cont">
+        <single-select [scene]="scene" [id]="id" #chooser *ngSwitchCase="'singleselect'"></single-select>
+        <!--<multi-select [scene]="scene" [id]="id" #chooser *ngSwitchCase="'multiselect'"></multi-select>-->
+        <span *ngSwitchDefault>
+            Nothing to show here
+        </span>
+    </div>
+    <div class="choice-submitComponent">
+    <button class="choice-submitBtn" (click)="onSubmit()" [disabled]="!isReadyToSubmit()" type="submit">Submit</button>
+    </div>   
+</div>

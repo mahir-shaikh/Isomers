@@ -1,0 +1,40 @@
+<!-- <div class="video-holder">
+    <video autoplay src="assets/videos/wib-bg.mp4" loop></video>
+</div> -->
+<div class="content-holder">
+    <router-outlet></router-outlet>
+</div>
+<div class="hidden" [routerLink]="['/intro/registration']" [routerLinkActive]="['active']"></div>
+<div class="intro-top-bar">
+    <div class="topbar-details col-xs-2">
+        <div class="logo">
+            <img  src="../../../../assets/images/Amedisys-logo.svg">
+        </div>
+        <!-- <div class="topbar-product-name">
+            <text-outlet key="Title"></text-outlet>
+        </div> -->
+    </div>
+
+    <div class="topbar-logout">
+        <div class="topbar-sync-stat">
+            <!--<sync-status></sync-status>-->
+        </div>
+        <a (click)="showAlert()"><text-outlet key="Log out" class='topbar-logout-button'></text-outlet></a>
+        <div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: false, 'keyboard': false}">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><text-outlet key="Log Out"></text-outlet></h4>
+                    </div>
+                    <div class="modal-body">
+                        <text-outlet key="Are you sure you want to logout?"></text-outlet>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="btn btn-danger" (click)="hideAlert(true)" [routerLink]="['/','logout']" routerLinkActive="active">Yes</button>
+                        <button type="button" class="btn btn-primary" (click)="hideAlert()">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

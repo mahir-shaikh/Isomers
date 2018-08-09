@@ -1,0 +1,127 @@
+// @import url("../../../assets/css/icons.css")
+
+$red = #ff2452
+$green = #64ff39
+$orange = #feab41
+
+:host
+    padding 0
+    &.planning-tool-metric
+        .metric-title 
+                font-size 0.925em
+                padding 5px 15px
+                height 3.5em
+                line-height 1em
+                &.withSeparator
+                    height auto
+            .metric-cont
+                position absolute
+                bottom 0
+                width 100%
+            .metric-separator .metric-values
+                float none
+
+.metric
+    &-cont
+        text-align center
+        position relative
+        line-height 2rem
+        calc-outlet
+            padding 0
+    &-icon
+        display inline
+        position relative
+        line-height 2rem
+    &-title
+        text-align center
+        margin-bottom 3px
+    &-values
+        color #fff
+    &-icon.icon-down-indicator, &-icon.icon-up-indicator, &-icon.icon-no-change
+        &:before
+            font-size 1.4rem
+            color $red
+    &-icon.icon-plus
+        color $green
+        font-size 1rem
+    &-icon.icon-minus
+        color $red
+        font-size 1rem
+
+    &-icon.icon-up-indicator:before
+        color $green
+    
+
+    &-icon.icon-information:before
+        color $red
+    &-values.marginLeft
+        display inline-block
+
+    &-noLastYearRef &-noSeparator p
+        font-size 16px
+        font-weight 500
+        @media screen and (max-width 768px)
+            font-size 12px
+    
+    &-noLastYearRef &-values 
+        margin 0
+
+    &-currValue
+        font-size 12px
+        font-weight 600
+        line-height 1.1em
+        padding 0
+        margin 0
+    &-oldValue
+        font-size 12px
+        font-weight 400
+        font-style italic
+        margin 0
+
+    &-separator &-text
+        font-size 13px
+        line-height 1.1em
+        padding 0
+        margin 0
+        @media screen and (max-width 1500px)
+            font-size 12px
+
+    &-separator &-values
+        @media screen and (max-width 1500px)
+            font-size 13px
+            
+    &-text
+        ^[0]-ly-text, ^[0]-cy-text,^[0]-ly-value, ^[0]-cy-value
+            width 47%
+            float left
+            padding 0 5px
+            text-align center
+        ^[0]-separator-line
+            width 6%
+            float left
+            text-align center
+        &:after
+            clear both
+            content ''
+            display table
+        ^[0]-ly-value
+            font-weight 400
+            @media screen and (max-width 1500px)
+                padding 0
+        ^[0]-cy-value
+            @media screen and (max-width 1500px)
+                padding 0
+
+@media screen and (max-width 768px)
+    .metric-name
+        font-size 1.2rem;
+        letter-spacing inherit
+
+@media screen and (max-width 1100px)
+    .metric-name
+        font-size 1.3rem;
+        
+:host-context(.planningTool)
+    .metric-values
+        color #000
+    

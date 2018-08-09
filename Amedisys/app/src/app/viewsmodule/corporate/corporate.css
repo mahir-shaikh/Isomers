@@ -1,0 +1,228 @@
+input,
+select,
+textarea {
+  color: #000;
+  width: 100%;
+}
+textarea:focus,
+input:focus {
+  color: #00f;
+}
+.buttonColor {
+  color: #000;
+}
+.hidden {
+  display: none;
+}
+.eventBody {
+  height: 100%;
+}
+.eventTitle {
+  margin-top: 0;
+  padding-top: 10px;
+}
+.modal-content {
+  font-size: 12px;
+}
+.handCursor {
+  cursor: pointer;
+}
+.content-div {
+  height: 100%;
+  overflow: auto;
+}
+.placeholder {
+  visibility: hidden;
+}
+.paddingleft {
+  padding-left: 2em;
+}
+.textBox {
+  padding-left: 2em;
+}
+.multiSelect {
+  padding: 10px 11px;
+  width: 2px;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: 1em;
+  width: 1%;
+  float: left;
+}
+.multiSelectChecked {
+  border: 2px solid #00b5eb;
+  background: #00b5eb;
+  color: #fff;
+}
+.multiSelectNotChecked {
+  border: 2px solid #00b5eb;
+  background: #fff;
+  color: #00b5eb;
+}
+.multiSelectSelected {
+  background-color: #fff;
+  color: #00b5eb;
+}
+.multiSelectNotSelected {
+  background-color: #f2f2f2;
+  color: #00b5eb;
+}
+.multiSelectDisabled {
+  border: 2px solid #333;
+  border-color: #797979 !important;
+  background-color: #797979 !important;
+  background: #999;
+  color: #333;
+}
+.multiSelectTextDisabled {
+  color: #999;
+}
+.corporate-header {
+  height: 55px;
+  line-height: 55px;
+  background: #6c3;
+  color: #fff;
+}
+.corporate-initiative {
+  height: 140px;
+  background-color: #f2f2f2;
+  overflow-y: hidden;
+  position: relative;
+}
+.corporate-initiative-desc {
+  padding: 10px 0;
+  font-size: 13px;
+  color: #333;
+}
+.corporate-initiative-desc-cont {
+  margin: 20px;
+}
+.corporate-initiative-impact {
+  padding: 10px 0;
+  font-size: 13px;
+  color: #333;
+}
+.corporate-initiative-impact-cont {
+  margin: 20px;
+}
+.corporate-initiative .content-col {
+  counter-reset: headings;
+  width: 3380px;
+}
+.corporate-initiative .content-col div {
+  width: 120px;
+  height: 140px;
+  border-top: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 0 5px 32px 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+.corporate-initiative .content-col div .multiSelect {
+  width: 32px;
+  height: 32px;
+  margin: 10px auto;
+  float: none;
+  border: 3px solid #00b5eb;
+  text-align: center;
+  line-height: 30px;
+  color: #00b5eb;
+  position: relative;
+  padding: 0;
+  background-color: transparent;
+}
+.corporate-initiative .content-col div .multiSelect:after {
+  counter-increment: headings;
+  content: counter(headings);
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  color: #bebebd;
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 27px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: -2px;
+}
+.corporate-initiative .content-col div .multiSelect.multiSelectChecked {
+  background-color: #00b5eb;
+}
+.corporate-initiative .content-col div .multiSelect.multiSelectChecked:after {
+  color: #fff;
+}
+.corporate-initiative .content-col div .multiSelectText {
+  font-size: 13px;
+  line-height: 1.2em;
+  font-weight: 400;
+  height: 86px;
+  overflow: hidden;
+  width: 100%;
+  border: none;
+}
+.corporate-initiative .content-col div .multiSelectText:after {
+  display: none;
+}
+.corporate-initiative-years {
+  margin: 0 10px;
+  padding: 20px;
+  border-bottom: 1px solid #fff;
+  overflow: hidden;
+}
+.corporate-initiative-year {
+  font-size: 14px;
+}
+.corporate-initiative-item div:not(.hidden) {
+  font-size: 13px;
+  padding: 7px 0;
+}
+.corporate-branding {
+  padding: 0 20px;
+  overflow: hidden;
+}
+.corporate-branding-title {
+  float: left;
+  padding: 3px 0;
+  font-size: 14px;
+}
+.corporate-branding-input {
+  margin: 0 10em;
+}
+.corporate-branding-input .calc-input-control .calc-input {
+  text-align: center;
+}
+.corporate-other-details {
+  padding: 20px;
+  font-size: 13px;
+}
+.initiativesChecked {
+  background: #006eb9;
+  font-weight: 300;
+  color: #fff;
+  padding: 0.5em 20px;
+  display: inline-block;
+}
+.initiativesChecked:after {
+  clear: both;
+}
+.initiativesChecked p {
+  margin: 0;
+}
+.right {
+  text-align: right;
+}
+li {
+  list-style: none;
+  counter-increment: foo;
+  display: table-row;
+}
+li::before {
+  content: counter(foo) ".";
+  display: table-cell;
+  text-align: right;
+  padding-right: 0.3em;
+}

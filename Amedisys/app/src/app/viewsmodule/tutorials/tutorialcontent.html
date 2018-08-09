@@ -1,0 +1,11 @@
+<div class="expanded-content {{contentClass}}">
+
+    <h3 *ngIf="titleKey"><text-outlet [key]="titleKey" [sceneId]="sceneId"></text-outlet></h3>
+    <div class="carousel-container">
+        <carousel  noWrap="true" interval="false">
+            <slide *ngFor="let imgSrc of images">
+                <img [src]="imgSrc" width="100%">
+            </slide>
+        </carousel>
+    </div>
+</div>

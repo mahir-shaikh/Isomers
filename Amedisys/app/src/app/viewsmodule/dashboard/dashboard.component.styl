@@ -1,0 +1,351 @@
+@import '../../../../assets/css/mixins.styl'
+
+.topbar
+    &-dash
+        background-color darken($brandBaseColor1, 25)
+        height 65px
+        padding 0
+        position relative
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        -webkit-flex-wrap wrap
+        -ms-flex-wrap wrap
+        flex-wrap wrap
+    &-details
+        position relative
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        -webkit-flex-wrap wrap
+        -ms-flex-wrap wrap
+        flex-wrap wrap
+        .logo
+            padding 10px 20px 10px 15px
+            max-width 160px
+            max-height 65px
+            img
+                height 100%
+                object-fit contain
+                position relative
+    &-info
+        display flex
+        flex-wrap wrap
+        flex 1
+        justify-content flex-end
+        align-items center
+        text-transform uppercase
+        font-size 14px
+        font-weight 500
+        text-outlet
+            padding 5px
+        @media screen and (max-width 1024px)
+            font-size 12px
+            .round,.user-info
+                display inline-block
+    &-nav-btn
+        a
+            background rgba(255,255,255,0)
+            border solid 3px #fff
+            border-radius .6em
+            padding .3em 1em
+            margin 0 1em
+            color #fff
+            font-weight 600
+            transition background .3s ease-out
+            &:hover
+                background rgba(255,255,255,1)
+                text-decoration none
+                color $primeColor
+
+    &-product-name
+        font-size 16px
+        position: relative;
+        text-outlet
+            top 50%
+            transform translateY(-50%)
+            position relative
+            display block
+    &-year
+        padding 0
+        text-outlet
+        calc-outlet
+            top 50%
+            transform translateY(-50%)
+            position relative
+            display block
+            float left
+        calc-outlet:after
+            content '|'
+            margin 0 1rem
+    &-team-name
+        padding 0
+        text-align left
+        calc-outlet
+            padding 0
+            top 50%
+            transform translateY(-50%)
+            position relative
+            display block
+    &-metrics
+        position relative
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        -webkit-flex-wrap wrap
+        -ms-flex-wrap wrap
+        flex-wrap wrap
+        .topbar-metric
+            padding-right 30px
+            line-height 1.5rem
+    &-revenues, &-opMargin, &-csat, &-esat
+        text-align center
+        text-transform uppercase
+        font-size 14px
+        padding 0 30px 0 30px
+        @media screen and (max-width 1300px)
+            padding 0 10px 0 10px
+    &-team-year 
+        position relative
+        padding 0 30px 0 0
+        text-align center
+        text-transform uppercase
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        -webkit-flex-wrap wrap
+        -ms-flex-wrap wrap
+        flex-wrap wrap
+        font-size 1.6rem
+        font-family 'Open-Condensed'
+        @media screen and (max-width 1300px)
+            padding 0 20px
+
+    &-logout
+        padding 6px
+        text-align center
+        &-button
+            color #fff
+            display block
+            font-size 13px
+            line-height 1.1em
+            font-weight 500
+            cursor pointer
+            background #434951
+            border-radius 3px
+            padding 10px
+        a
+            font-size 14px
+            color #FFF
+            cursor pointer
+            &:hover
+            &:focus
+                text-decoration none
+                outline none
+                color #88aa77
+        .modal
+            text-align left
+
+    &-rightside
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        -webkit-flex-wrap wrap
+        -ms-flex-wrap wrap
+        flex-wrap wrap
+        flex 1
+        justify-content flex-end
+        align-items center
+        color #fff
+
+.dashboard
+    position relative
+    .pane
+        position relative
+        height calc(100vh - 65px)
+        // background #FFF
+
+        &--planningToolDash
+            // background alpha(#7ba96b, 0.9)
+            padding 0
+        &--messagesDash
+            padding-right 0
+            padding-top 15px
+    .hide-actions
+        position absolute
+        top 50px
+        height calc(100vh - 117px)
+        background-color rgba(0,0,0,0.3)
+        z-index 1
+    .planning-tool
+        &-header
+            padding 10px
+            background-color rgb(216, 215, 215)
+            margin 0
+            padding-right 0
+            -webkit-box-shadow inset 0 10px 9px -10px rgba(0,0,0,0.8)
+            box-shadow inset 0 10px 9px -10px rgba(0,0,0,0.8)
+            .round-info
+                color #4f7345
+                font-weight 600
+        &-title
+            text-align center
+            font-size 24px
+            line-height 32px
+            font-weight 100 
+            margin 0
+            text-transform uppercase
+        &-holder
+            padding 0
+            background url('./assets/images/amedisys-bg.jpg') no-repeat
+            background-color #FFF
+            background-size cover
+            background-position top right
+    .dashboard-nav-cont
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        -webkit-flex-wrap wrap
+        -ms-flex-wrap wrap
+        flex-wrap wrap
+        flex-direction row
+        justify-content flex-end
+
+    .dashboard-nav
+        text-align center
+        background-color #7ba96b
+        color #fff
+        padding 8px 52px
+        line-height 13px
+        border-radius 20px
+        font-size 14px
+        margin 0 15px 0 0
+        text-transform uppercase
+        cursor pointer
+        transition background-color ease-out .3s
+        &:last-child
+            margin 0
+        &:hover
+            text-decoration none
+        &-help
+            padding 8px
+            .help-img
+                height 15px
+
+        &-cont
+            padding 0
+
+.dash-year
+        width inherit
+
+.dashboard-bottom
+    &-components
+        color #4f7345
+        display -webkit-box
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+        -webkit-flex-wrap wrap
+        -ms-flex-wrap wrap
+        flex-wrap wrap
+        position absolute
+        width 90.5%
+        bottom 0
+    &-leadership
+        display none
+    &-content
+        background-color #f1eded
+        border 4px solid transparent 
+        height 100%
+        padding 10px
+        cursor pointer
+        flex 1
+        margin-right 1px
+        transition border ease-out .6s
+        border-top-right-radius 58px
+        border-top-left-radius 19px
+        &:hover
+            border 4px solid 
+        
+        .dashboard-bottom-icon
+        .dashboard-bottom-text
+            display inline-block
+        .dashboard-bottom-btn-cont,
+        .eorfeedback-button
+            position relative
+            top 50%
+            transform translateY(-50%)
+        
+        .eorfeedback-button
+            display block
+            
+            &.open .results-button.dropdown-toggle
+                -webkit-box-shadow none
+                box-shadow none
+        .eorfeedback-menu-list 
+            top auto
+            bottom 130%
+            li
+                list-style none
+        .ftes-remaining
+            text-align center
+            &-label
+                color #fff
+                font-size 13px
+                line-height 1em
+                font-weight 400
+                text-align center
+            &-value
+                calc-outlet
+                    width auto
+                    font-size 1.1em
+                    line-height .9em
+                    color #fff
+                    font-weight 600
+                    text-align center
+                    position relative
+                    display block
+        @media screen and (max-width 1200px)
+            padding 3px
+
+
+    &-icon
+        text-align center
+        img
+            width 20px
+        &:before
+            font-size 1.8rem
+            color #006eb9
+
+    &-text
+        text-align center
+        margin 12px 0 0 0
+        color #7ba96b
+        font-size 13px
+        line-height .9em
+
+
+@media screen and (max-width 1100px)
+    .topbar-details
+        .logo
+            padding-left 5px
+    .topbar-rightside
+        .topbar-metrics
+            .topbar-metric
+                line-height 1.2rem;
+                padding-right 20px
+
+@media screen and (max-width 768px)
+    .topbar-details
+        .logo
+            padding-left 0
+    .topbar-rightside
+        .topbar-metrics
+            .topbar-metric
+                line-height 1.1rem;

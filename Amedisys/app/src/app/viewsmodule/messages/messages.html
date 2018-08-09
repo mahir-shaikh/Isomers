@@ -1,0 +1,10 @@
+<div 
+    id="meetingItem" 
+    class="messageItem" 
+    [class.hidden]="isHidden" 
+    [class.messageIsViewed]="isViewed" 
+    [class.messageIsNormal]="!isViewed" 
+    (click)="onSelect()">
+    <img class = "messageItem-icon" [src]="message.icon">
+   <p class = "messageItem-name"> {{ message.name }}</p>
+</div>

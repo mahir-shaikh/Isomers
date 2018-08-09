@@ -1,0 +1,418 @@
+<div class="planningTool" [@flyInOut]="animState">
+    <div class="eventBody">
+        <tabset>
+            <tab heading='Enterprise' [active]="activeIndex === 0" (select)="setActiveIndex(0)">
+                <article class="content-div" *ngIf="activeIndex === 0">
+                    <br />
+                    <div class="col-xs-12">
+                        <div class="col-xs-6 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-5 cell form-lebel row-title">
+                                    <my-tooltip class="row-tooltip placeholder" tooltipPlacement="right" key=""></my-tooltip> 
+                                    <text-outlet key="Hardware"></text-outlet>
+                                </div>
+                                <div class="col-xs-4 cell form-lebel row-header right">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="bottom" key="ToolTipProd1FtrFunctionality"></my-tooltip>
+                                    <text-outlet key="Functionality"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell form-lebel row-header right">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="bottom" key="ToolTipProd1FtrReliability"></my-tooltip>
+                                    <text-outlet key="Reliability"></text-outlet>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd1FtrStartingLevel"></my-tooltip>
+                                    <text-outlet key="StartingLevel"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr1Opening" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr2Opening" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd1FtrAddLevel"></my-tooltip>
+                                    <text-outlet key="AddLevel"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell">
+                                    <calc-dropdown [items]="['0', '1', '2', '3', '4', '5']" ref="tlInputProd1Func" yearRef="tlInputTeamYear" format=""></calc-dropdown>
+                                    <!--<calc-input ref="tlInputProd1Func" step="1" max="5" min="0"></calc-input>-->
+                                    <!-- <input [(ngModel)]="tlInputProd1Func" (keyup.enter)="onEnter($event, 'tlInputProd1Func',tlInputProd1Func);" (blur)="onEnter($event, 'tlInputProd1Func',tlInputProd1Func);"> -->
+                                </div>
+                                <div class="col-xs-3 cell"></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd1FtrEndingLevel"></my-tooltip>
+                                    <text-outlet key="EndingLevel"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr1Closing" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr2Closing" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd1FtrFTEsRequired"></my-tooltip>
+                                    <text-outlet key="FTEsRequired"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Emp1Req" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell">
+                                <calc-input ref="tlInputProd1Ftr2" yearRef="tlInputTeamYear"></calc-input>
+                                <!-- <input [(ngModel)]="tlInputProd1Ftr2" (keyup.enter)="onEnter($event, 'tlInputProd1Ftr2',tlInputProd1Ftr2);" (blur)="onEnter($event, 'tlInputProd1Ftr2',tlInputProd1Ftr2);"> -->
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd1FtrInvestmentRequired"></my-tooltip>
+                                    <text-outlet key="InvestmentRequired"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr1InvestReq" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr2InvestReq" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd1FtrTTMFTEs"></my-tooltip>
+                                    <text-outlet key="TTMFTEs"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell">
+                                <calc-input ref="tlInputProd1Ftr3"  yearRef="tlInputTeamYear" step="1" min="0"></calc-input>
+                                <!-- <input [(ngModel)]="tlInputProd1Ftr3" (keyup.enter)="onEnter($event, 'tlInputProd1Ftr3',tlInputProd1Ftr3);" (blur)="onEnter($event, 'tlInputProd1Ftr3',tlInputProd1Ftr3);"> -->
+                                </div>
+                                <div class="col-xs-3 cell"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-title">
+                                    <my-tooltip class="row-tooltip placeholder" tooltipPlacement="left" key=""></my-tooltip> 
+                                    <text-outlet key="Software"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell form-lebel row-header right">
+                                    <text-outlet key="Functionality"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell form-lebel row-header right">
+                                    <text-outlet key="Reliability"></text-outlet>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd2FtrStartingLevel"></my-tooltip>
+                                    <text-outlet key="StartingLevel"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd2Ftr1Opening" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd2Ftr2Opening" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd2FtrAddLevel"></my-tooltip>
+                                    <text-outlet key="AddLevel"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell">
+                                    <calc-dropdown [items]="['0', '1', '2', '3', '4', '5']" ref="tlInputProd2Ftr1" yearRef="tlInputTeamYear" format=""></calc-dropdown>
+                                    <!--<calc-input ref="tlInputProd2Ftr1" step="1" max="5" min="0"></calc-input>-->
+                                    <!-- <input [(ngModel)]="tlInputProd2Ftr1" (keyup.enter)="onEnter($event, 'tlInputProd2Ftr1',tlInputProd2Ftr1);" (blur)="onEnter($event, 'tlInputProd2Ftr1',tlInputProd2Ftr1);"> -->
+                                </div>
+                                <div class="col-xs-3 cell"></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd2FtrEndingLevel"></my-tooltip>
+                                    <text-outlet key="EndingLevel"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd2Ftr1Closing" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd2Ftr2Closing" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd2FtrFTEsRequired"></my-tooltip>
+                                    <text-outlet key="FTEsRequired"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd2Ftr1Emp1Req" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell">
+                                <calc-input ref="tlInputProd2Ftr2" yearRef="tlInputTeamYear"></calc-input>
+                                <!-- <input [(ngModel)]="tlInputProd2Ftr2" (keyup.enter)="onEnter($event, 'tlInputProd2Ftr2',tlInputProd2Ftr2);" (blur)="onEnter($event, 'tlInputProd2Ftr2',tlInputProd2Ftr2);"> -->
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd2FtrInvestmentRequired"></my-tooltip>
+                                    <text-outlet key="InvestmentRequired"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd2Ftr1InvReq" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd2Ftr2InvReq" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd2FtrTTMFTEs"></my-tooltip>
+                                    <text-outlet key="TTMFTEs"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell">
+                                <calc-input ref="tlInputProd2Ftr3"  yearRef="tlInputTeamYear" step="1" min="0"></calc-input>
+                                <!-- <input [(ngModel)]="tlInputProd2Ftr3" (keyup.enter)="onEnter($event, 'tlInputProd2Ftr3',tlInputProd2Ftr3);" (blur)="onEnter($event, 'tlInputProd2Ftr3',tlInputProd2Ftr3);"> -->
+                                </div>
+                                <div class="col-xs-3 cell"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 callOutBox">
+                        <div class="callOutBoxContent">
+                        <div class="col-xs-6 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-12 cell form-lebel row-title">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipFtr3ExpectedLaunchDate"></my-tooltip>
+                                    <text-outlet key="ExpectedLaunchDate"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="row basicbar-chart">
+                                <basicbar 
+                                    rangeRef="[tlOutputProd1Ftr3Closing, tlOutputProd2Ftr3Closing]" 
+                                    categoryLabels="ExpectedLaunchDate"
+                                    seriesLabels="Hardware, Software"
+                                    year="tlInputTeamYear" 
+                                    numberFormat="ExpectedLaunchDays" 
+                                    chartTitle="ExpectedLaunchDate"
+                                    chartOptions='{ "yAxis": { "plotLines": [{ "color": "#FFF", "value": "0", "width": "1", "zIndex": "10000", "label": { "text": "Year 1", "style": { "color": "#FFF" } } }, { "color": "#FFF", "value": "365", "width": "1", "zIndex": "10000", "label": { "text": "Year 2", "style": { "color": "#FFF" } } }, { "color": "#FFF", "value": "730", "width": "1", "zIndex": "10000", "label": { "text": "Year 3", "style": { "color": "#FFF" } } }, { "color": "#FFF", "value": "1095", "width": "1", "zIndex": "10000", "label": { "text": "Year 4", "style": { "color": "#FFF" } } }] } }'
+                                    height="200" min="0" max="365">
+                                </basicbar>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-title">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipFtrValueProposition"></my-tooltip>
+                                    <text-outlet key="ValueProposition"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell form-lebel row-header right"><text-outlet key="LastYear"></text-outlet></div>
+                                <div class="col-xs-3 cell form-lebel row-header right"><text-outlet key="ThisYear"></text-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-3 cell form-lebel row-header"><text-outlet key="Hardware"></text-outlet></div>
+                                <div class="col-xs-3 cell form-lebel row-header"><text-outlet key="Functionality"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr1LastYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr1ThisYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-3 cell form-lebel row-header"></div>
+                                <div class="col-xs-3 cell form-lebel row-header"><text-outlet key="Reliability"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr2LastYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr2ThisYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-3 cell form-lebel row-header"></div>
+                                <div class="col-xs-3 cell form-lebel row-header"><text-outlet key="TimeToMarket"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr3LastYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Ftr3ThisYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-12 cell form-lebel row-title">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipEmpResourcesRequiredForRandD"></my-tooltip>
+                                    <text-outlet key="ResourcesRequiredForRandD"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"></div>
+                                <div class="col-xs-3 cell form-lebel row-header right"><text-outlet key="Hardware"></text-outlet></div>
+                                <div class="col-xs-3 cell form-lebel row-header right"><text-outlet key="Software"></text-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"><text-outlet key="LastYear"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Emp1ReqLastYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd2Emp1ReqLastYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"><text-outlet key="ThisYear"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd1Emp1ReqThisYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd2Emp1ReqThisYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="row basicbar-chart">
+                                <basiccolumn 
+                                    rangeRef="[tlOutputProd1Emp1ReqLastYear, tlOutputProd2Emp1ReqLastYear], [tlOutputProd1Emp1ReqThisYear, tlOutputProd2Emp1ReqThisYear]" 
+                                    categoryLabels="Hardware, Software"
+                                    seriesLabels="LastYear, ThisYear"
+                                    year="tlInputTeamYear" 
+                                    [numberFormat]="'0.0a'" 
+                                    chartTitle="ResourcesRequiredForRandD"
+                                    height="300">
+                                </basiccolumn>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+            </tab>
+            <tab heading='Consumer' [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                <article class="content-div" *ngIf="activeIndex === 1">
+                    <br />
+                    <div class="col-xs-12">
+                        <div class="col-xs-6 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header"></div>
+                                <div class="col-xs-3 cell form-lebel row-header right">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="bottom" key="ToolTipFtr3Breadth"></my-tooltip>
+                                    <text-outlet key="Breadth"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd3Ftr1BreadthLevelLastYear"></my-tooltip>
+                                    <text-outlet key="BreadthLevelLastYear"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr1Opening" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd3Ftr1BreadthLevelThisYear"></my-tooltip>
+                                    <text-outlet key="BreadthLevelThisYear"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell">
+                                    <calc-dropdown [items]="['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']" ref="tlInputProd3Ftr1" yearRef="tlInputTeamYear" format=""></calc-dropdown>
+                                    <!--<calc-input ref="tlInputProd3Ftr1" step="1" max="10" min="1"></calc-input>-->
+                                    <!-- <input [(ngModel)]="tlInputProd3Ftr1" (keyup.enter)="onEnter($event, 'tlInputProd3Ftr1',tlInputProd3Ftr1);" (blur)="onEnter($event, 'tlInputProd3Ftr1',tlInputProd3Ftr1);"> -->
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd3Ftr1FTEsRequired"></my-tooltip>
+                                    <text-outlet key="FTEsRequired"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr1Emp1Req" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd3Ftr1InvestmentRequired"></my-tooltip>
+                                    <text-outlet key="InvestmentRequired"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr1InvestmentReq" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"></div>
+                                <div class="col-xs-6 cell form-lebel row-header right">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="bottom" key="ToolTipFtr3DesignAndFeatures"></my-tooltip>
+                                    <text-outlet key="DesignAndFeatures"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd3Ftr2StartingDesignLevel"></my-tooltip>
+                                    <text-outlet key="StartingDesignLevel"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr2Opening" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd3Ftr2AddDesignFeatures"></my-tooltip>
+                                    <text-outlet key="AddDesignFeatures"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell">
+                                    <calc-dropdown [items]="['0', '1', '2', '3', '4', '5']" ref="tlInputProd3Ftr2" yearRef="tlInputTeamYear" format=""></calc-dropdown>
+                                    <!--<calc-input ref="tlInputProd3Ftr2" step="1" max="5" min="0"></calc-input>-->
+                                    <!-- <input [(ngModel)]="tlInputProd3Ftr2" (keyup.enter)="onEnter($event, 'tlInputProd3Ftr2',tlInputProd3Ftr2);" (blur)="onEnter($event, 'tlInputProd3Ftr2',tlInputProd3Ftr2);"> -->
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd3Ftr2EndingDesignLevel"></my-tooltip>
+                                    <text-outlet key="EndingDesignLevel"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr2Closing" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd3Ftr2FTEsRequired"></my-tooltip>
+                                    <text-outlet key="FTEsRequired"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr2Emp1Req" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd3Ftr2InvestmentRequired"></my-tooltip>
+                                    <text-outlet key="InvestmentRequired"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr2InvestReq" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 callOutBox">
+                        <div class="callOutBoxContent">
+                        <div class="col-xs-6 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-12 cell form-lebel row-title">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd3ChannelEnablementIndex"></my-tooltip>
+                                    <text-outlet key="ChannelEnablementIndex"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="row basicbar-chart">
+                                <basicbar 
+                                    rangeRef="[tlOutputProd3ChnlEnableLastYear, tlOutputProd3ChnlEnableThisYear]" 
+                                    categoryLabels="ChannelEnablementIndex"
+                                    seriesLabels="LastYear, ThisYear"
+                                    year="tlInputTeamYear" 
+                                    numberFormat="'0.0a'" 
+                                    chartTitle="ChannelEnablementIndex"
+                                    height="200">
+                                </basicbar>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-12 cell form-lebel row-title">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="right" key="ToolTipProd3FtrConsumerValueProposition"></my-tooltip>
+                                    <text-outlet key="ConsumerValueProposition"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"></div>
+                                <div class="col-xs-3 cell form-lebel row-header right"><text-outlet key="LastYear"></text-outlet></div>
+                                <div class="col-xs-3 cell form-lebel row-header right"><text-outlet key="ThisYear"></text-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"><text-outlet key="Breadth"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr1LastYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr1ThisYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"><text-outlet key="DesignFeatures"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr2LastYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3Ftr2ThisYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"><text-outlet key="ChannelEnablement"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3ChnlEnableLastYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd3ChnlEnableThisYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-title">
+                                    <my-tooltip class="row-tooltip" tooltipPlacement="left" key="ToolTipProd5EmpResourcesRequiredForRandD"></my-tooltip>
+                                    <text-outlet key="ResourcesRequiredForRandD"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell form-lebel row-header right"><text-outlet key="Products"></text-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header"><text-outlet key="LastYearActual"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd5Emp1ReqLastYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header"><text-outlet key="ThisYearForecasted"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputProd5Emp1ReqThisYear" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="row basicbar-chart">
+                                <basiccolumn 
+                                    rangeRef="[tlOutputProd5Emp1ReqLastYear, tlOutputProd5Emp1ReqThisYear]" 
+                                    categoryLabels="LastYearActual, ThisYearForecasted"
+                                    seriesLabels="ResourcesRequired"
+                                    year="tlInputTeamYear" 
+                                    numberFormat="'0.0a'" 
+                                    chartTitle="ResourcesRequiredForRandD"
+                                    height="350">
+                                </basiccolumn>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+            </tab>
+        </tabset>
+    </div>
+</div>

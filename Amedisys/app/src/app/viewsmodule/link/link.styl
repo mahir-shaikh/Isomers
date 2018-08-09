@@ -1,0 +1,72 @@
+@import '../../../../assets/css/mixins.styl'
+
+.link
+    &-item
+        cursor pointer
+        margin 5px 0
+        position relative
+        border-bottom 1px solid alpha(#d3d3d3, 0.3)
+        padding 5px 0
+        border-radius 7px
+        transition color ease-out .6s
+        &:hover
+            color darken($primeColor, 20)
+            animation swing 1s ease
+            .link-icon
+                border 3px solid darken($primeColor, 20)
+        
+    &-title
+        float left
+        padding 17px 10px
+        font-size 16px
+    &-icon
+        float left
+        height 45px
+        width 45px
+        border-radius 50%
+        border 3px solid $primeColor
+        margin-top 5px
+        background $primeColor        
+        transition border ease-in .5s 
+
+    &IsNormal
+        cursor pointer
+        color #4f7345
+        animation fadein 0.5s ease-in
+        font-weight bold
+
+    &IsViewed
+        cursor pointer
+        color gray
+        & ^[0]-icon
+            background #6d747e
+            border 3px solid transparent
+
+@keyframes fadein {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes swing
+{
+    30%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}

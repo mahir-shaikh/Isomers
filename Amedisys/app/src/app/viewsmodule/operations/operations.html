@@ -1,0 +1,203 @@
+<div class="planningTool" [@flyInOut]="animState">
+    <div class="eventBody">
+        <tabset>
+            <tab heading='Operations' [active]="activeIndex === 0" (select)="setActiveIndex(0)">
+                <article class="content-div">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"></div>
+                                <div class="col-xs-6 cell right form-lebel row-title">
+                                    <my-tooltip class="row-tooltip" placement="bottom" key="ToolTipProductionPlantFacilities"></my-tooltip>
+                                    <text-outlet key="ProductionPlantFacilities"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="right" key="ToolTipStartingPlantUnits"></my-tooltip>
+                                    <text-outlet key="StartingPlantUnits"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputPlant1Opening" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="right" key="ToolTipAddPlantUnits"></my-tooltip>
+                                    <text-outlet key="AddPlantUnits"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell">
+                                <calc-input ref="tlInputPlant1UnitsChange" yearRef="tlInputTeamYear"></calc-input>
+                                <!-- <input [(ngModel)]="tlInputPlant1UnitsChange" (keyup.enter)="onEnter($event, 'tlInputPlant1UnitsChange',tlInputPlant1UnitsChange);" (blur)="onEnter($event, 'tlInputPlant1UnitsChange',tlInputPlant1UnitsChange);"> -->
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="right" key="ToolTipEndingPlantUnits"></my-tooltip>
+                                    <text-outlet key="EndingPlantUnits"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputPlant1Closing" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="right" key="ToolTipCapitalExpenditures"></my-tooltip>
+                                    <text-outlet key="CapitalExpenditures"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputPlant1Invest" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="right" key="ToolTipPlantOperatingCosts"></my-tooltip>
+                                    <text-outlet key="PlantOperatingCosts"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputPlant1Exp" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="right" key="ToolTipPlantUtilization"></my-tooltip>
+                                    <text-outlet key="PlantUtilization"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputPlant1Utiliz" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="right" key="ToolTipOutsourcedProduction"></my-tooltip>
+                                    <text-outlet key="OutsourcedProduction"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell">
+                                <calc-input ref="tlInputProductionOutsource" yearRef="tlInputTeamYear" step="1" format="0%" scaler="100" min="0"></calc-input>
+                                <!-- <input [(ngModel)]="tlInputProductionOutsource" (keyup.enter)="onEnter($event, 'tlInputProductionOutsource',tlInputProductionOutsource);" (blur)="onEnter($event, 'tlInputProductionOutsource',tlInputProductionOutsource);"> -->
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="right" key="ToolTipOutsourcedProductionCosts"></my-tooltip>
+                                    <text-outlet key="OutsourcedProductionCosts"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputOutsourceExp" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"></div>
+                                <div class="col-xs-6 cell right form-lebel row-title">
+                                    <my-tooltip class="row-tooltip" placement="bottom" key="ToolTipProductionLabor"></my-tooltip>
+                                    <text-outlet key="ProductionLabor"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="left" key="ToolTipOpeningLaborHeadcount"></my-tooltip>
+                                    <text-outlet key="OpeningLaborHeadcount"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputEmp2Opening" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="left" key="ToolTipAddDismissLabor"></my-tooltip>
+                                    <text-outlet key="AddDismissLabor"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell">
+                                <calc-input ref="tlInputEmp2Change" yearRef="tlInputTeamYear" step="1" format="0,0"></calc-input>
+                                <!-- <input [(ngModel)]="tlInputEmp2Change" (keyup.enter)="onEnter($event, 'tlInputEmp2Change',tlInputEmp2Change);" (blur)="onEnter($event, 'tlInputEmp2Change',tlInputEmp2Change);"> -->
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="left" key="ToolTipAttrition"></my-tooltip>
+                                    <text-outlet key="Attrition"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputEmp2Attrition" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="left" key="ToolTipEndingLaborHeadcount"></my-tooltip>
+                                    <text-outlet key="EndingLaborHeadcount"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputEmp2Closing" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="left" key="ToolTipLaborUtilization"></my-tooltip>
+                                    <text-outlet key="LaborUtilization"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputEmp2Utiliz" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="left" key="ToolTipLaborSalaryCosts"></my-tooltip>
+                                    <text-outlet key="LaborSalaryCosts"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputEmp2Exp" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="left" key="ToolTipLaborAdminCosts"></my-tooltip>
+                                    <text-outlet key="LaborAdminCosts"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputEmp2AdminExp" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-9 cell form-lebel row-header">
+                                    <my-tooltip class="row-tooltip" placement="left" key="ToolTipLaborRecruitDismissCosts"></my-tooltip>
+                                    <text-outlet key="LaborRecruitDismissCosts"></text-outlet>
+                                </div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputEmp2RecDismExp" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 callOutBox">
+                        <div class="callOutBoxContent">
+                        <div class="col-xs-5 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-12 cell form-lebel row-title">
+                                    <my-tooltip class="row-tooltip" placement="right" key="ToolTipPlantUtilizationChart"></my-tooltip>
+                                    <text-outlet key="PlantUtilization"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <piechart 
+                                    rangeRef="[tlOutputPlantUtiliz, tlOutputPlantUnUtiliz]" 
+                                    categoryLabels="PlantUtilization"
+                                    seriesLabels="Utilized, NonUtilized"
+                                    year="tlInputTeamYear" 
+                                    [numberFormat]="'0.0a'" 
+                                    chartTitle="PlantUtilization" 
+                                    height="350">
+                                </piechart>
+                            </div>
+                        </div>
+                        <div class="col-xs-7 content-col">
+                            <div class="content-row">
+                                <div class="col-xs-12 cell form-lebel row-title">
+                                    <my-tooltip class="row-tooltip" placement="bottom" key="ToolTipOpsCostDrivers"></my-tooltip>
+                                    <text-outlet key="CostDrivers"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"></div>
+                                <div class="col-xs-3 cell form-lebel row-header right"><text-outlet key="LastYear"></text-outlet></div>
+                                <div class="col-xs-3 cell form-lebel row-header right"><text-outlet key="ThisYear"></text-outlet></div>
+                            </div>
+                            <div class="content-row">
+                                <div class="col-xs-6 cell form-lebel row-header"><text-outlet key="InventoryHandlingCost"></text-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputObalInvHndlgExp" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                <div class="col-xs-3 cell right"><calc-outlet ref="tlOutputCbalInvHndlgExp" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                            </div>
+                            <div class="row">
+                                <stackedcolumn 
+                                    rangeref="[tlOutputCostDriverMatExpLastYear, tlOutputCostDriverMatExpThisYear], [tlOutputCostDriverEmp2ExpLastYear, tlOutputCostDriverEmp2ExpThisYear], [tlOutputCostDriverPlantExpLastYear, tlOutputCostDriverPlantExpThisYear], [tlOutputCostDriverOutsouceExpLastYear, tlOutputCostDriverOutsouceExpThisYear], [tlOutputCostDriverDepExpLastYear, tlOutputCostDriverDepExpThisYear]" 
+                                    categorylabels="LastYear, ThisYear"
+                                    serieslabels="Materials, Labor, Machinery, Outsource, Depreciation"
+                                    year="tlInputTeamYear" 
+                                    [numberformat]="'0.0a'" 
+                                    charttitle="CostDrivers" 
+                                    height="250">
+                                </stackedcolumn>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+            </tab>
+        </tabset>
+    </div>
+</div>

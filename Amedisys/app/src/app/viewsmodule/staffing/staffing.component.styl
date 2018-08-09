@@ -1,0 +1,264 @@
+@import '../../../../assets/css/mixins.styl'
+.planningTool
+    .eventBody
+        .content-div
+            .metrics
+                padding 10px 0
+                border-bottom 1px solid rgba(89,88,84,0.2)
+                color #000
+                .metric
+                    text-align center
+                    align-items center
+                    line-height 20px
+                    border-right 1px solid #6c3
+                    padding 7px 3px
+                    justify-content center
+                    &:last-child
+                        border-right 0
+                    &::before
+                        display initial
+                    text-outlet
+                        width 100%
+                    calc-outlet
+                        padding 0
+                        padding-top 5px
+                        text-align center
+            .clinincal-meeting-container
+                align-items flex-start
+                justify-content space-between
+                margin 0 30px
+                .clinincal-summary-table
+                    border 1px solid rgba(89,88,84,0.2)
+                    padding 0
+                    .heading-row
+                        text-align center
+                        font-size 1.4rem
+                        line-height 1.4rem
+                        position aboslute
+                        top 0
+                        width 100%
+                    .data-rows-container
+                        height calc(100% - 65px)
+                        overflow auto
+                    .data-row
+                        text-align center
+                        font-size 1.3rem
+                        line-height 1.6rem
+                        &:last-child 
+                            .data
+                                &-heading
+                                &-value
+                                    border-bottom 0
+                        .data
+                            &-heading
+                            &-value
+                                color #000
+                                padding 8px 7px
+                                align-items center
+                                justify-content center
+                                padding-bottom 8px
+                                border 1px solid rgba(89,88,84,0.2)
+                                border-left 0
+                                border-top 0
+                                staffmeeting.disabled
+                                    pointer-events none
+                                calc-input
+                                    height 100%
+                                    width 100%
+                                calc-outlet
+                                    width auto
+                                    padding 0
+                                    text-align center
+                                calc-dropdown
+                                    width 70%
+                                    height 25px
+                                &-container
+                                    padding 0
+                        .data-value:last-child
+                            border-right 0
+                .meeting-container
+                    display flex
+                    border 1px solid rgba(89,88,84,0.2)
+                    height 45px
+                    padding 0
+                    background-color rgb(253, 242, 225)
+                    justify-content flex-end
+                    font-weight 600
+                    font-size 15px
+                    &.all-meetings-attended
+                        background-color red
+                        color #fff
+                        text-outlet
+                            color #fff
+                        .meeting
+                            &-text
+                            &-value
+                                margin 0
+                                text-outlet
+                                calc-outlet
+                                    color #fff
+                            &-text
+                                text-align left
+                    .meeting
+                        &-text
+                        &-value
+                            justify-content center
+                            align-items center
+                            text-outlet
+                            calc-outlet
+                                width auto
+                                color $brandBaseColor2
+            .staffing-table
+                border 1px solid rgba(89,88,84,0.2)
+                margin 10px
+                overflow hidden
+                margin-bottom 10px
+                .heading-row
+                    text-align center
+                    font-size 1.4rem
+                    line-height 1.4rem
+                    position aboslute
+                    top 0
+                    width 100%
+                    .column-heading
+                        background-color #4f7345
+                        color #FFF
+                        padding 8px 7px
+                        align-items flex-end
+                        justify-content center
+                        padding-bottom 8px
+                        border 1px solid rgba(89,88,84,0.2)
+                        border-left 0
+                        border-top 0
+                        &:last-child
+                            border-right 0
+                .data-rows-container
+                    height calc(100% - 65px)
+                    overflow auto
+                .data-row
+                    text-align center
+                    font-size 1.3rem
+                    line-height 1.6rem
+                    &:nth-child(even)
+                        background #f2f2f2
+                    &:last-child 
+                        .data
+                            &-heading
+                            &-value
+                                border-bottom 0
+                    .data
+                        &-heading
+                        &-value
+                            color #000
+                            padding 8px 7px
+                            align-items center
+                            justify-content center
+                            padding-bottom 8px
+                            border 1px solid rgba(89,88,84,0.2)
+                            border-left 0
+                            border-top 0
+                            &.meeting-attended
+                                background-color #e2e2e2
+                            staffmeeting.disabled
+                                pointer-events none
+                            calc-input
+                                height 100%
+                                width 100%
+                            calc-outlet
+                                width auto
+                                padding 0
+                                text-align center
+                            calc-dropdown
+                                width 70%
+                                height 25px
+                    .data-value:last-child
+                        border-right 0
+            .chart-contianer
+                padding 20px
+                height auto
+                justify-content space-between
+                .rn-lpn-visit
+                .utilization-table
+                    border 1px solid rgba(89,88,84,0.2)
+                    padding 0
+                    .heading-row
+                        text-align center
+                        font-size 1.6rem
+                        line-height 1.6rem
+                        .column-heading
+                            background-color #4f7345
+                            color #FFF
+                            padding 8px 7px
+                            align-items flex-end
+                            justify-content center
+                            padding-bottom 8px
+                            border 1px solid rgba(89,88,84,0.2)
+                            border-left 0
+                            border-top 0
+                            &:last-child
+                                border-right 0
+            .submit-footer
+                text-align center
+                margin-bottom 30px
+                text-outlet
+                    background #4F7345
+        .submit-footer
+            text-align center
+            margin-bottom 30px
+            text-outlet
+                background #4F7345
+    .meetingBtn
+        width 20px
+        height 20px
+        line-height 20px
+        margin-right 5px
+        background $primeColor
+        border-radius 20px
+        color #fff
+        text-align center
+        box-shadow 0px 7px 15px 0px rgba(0, 0, 0, 0.2)
+        cursor pointer
+        transition background .3s ease-out
+        &:hover
+            background darken($primeColor, 20)
+    .disable-staff-btn
+        .meetingBtn
+            background rgba(0,0,0,0.3)
+            cursor default
+            
+@media(max-width 1024px)
+    .planningTool
+        .eventBody
+            .content-div
+                .staffing-table
+                    margin 10px
+                    .heading-row
+                        font-size 1.2rem
+                        line-height 1.4rem
+                        .column-heading
+                            padding 8px 7px
+                    .data-row
+                        font-size 1.2rem
+                        line-height 1.4rem
+                        .data
+                            &-heading
+                            &-value
+                                padding 8px 7px
+                        
+@media(max-width 768px)
+    .planningTool
+        .eventBody
+            .content-div
+                .staffing-table
+                    .heading-row
+                        font-size 1rem
+                        line-height 1rem
+                        .column-heading
+                            padding 8px 0
+                    .data-row
+                        font-size 1rem
+                        line-height 1rem
+                        .data
+                            &-heading
+                            &-value
+                                padding 8px 0

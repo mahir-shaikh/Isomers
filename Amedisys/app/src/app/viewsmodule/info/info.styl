@@ -1,0 +1,53 @@
+.info
+    background-color #4f7345
+    color #6d747e
+    padding 0.25em
+    -webkit-animation-duration 1s
+    -ms-animation-duration 1s
+    -moz-animation-duration 1s
+    animation-duration 1s
+    height 100%
+    
+    &-content
+        background-color #FFFFFF
+        height 100%
+        overflow auto
+        width calc(100% - 5px)
+        float right
+        border-bottom 2px solid #4f7345
+     &-closeTop
+        width 40px
+        height 40px
+        background-color #6b737c
+        border-radius 50%
+        right 20px
+        margin 15px 0 0 0
+        float right
+        cursor pointer
+        position fixed
+        color white
+        border solid 3px #fff
+        &:before
+            font-size 2rem
+            position absolute
+            width 100%
+            top 7px
+            text-align center
+
+    &-closeStyle
+        cursor pointer
+        outline none
+        text-align center
+        background-color gray
+        color white
+        bottom 69px
+        height 49px
+        line-height 49px
+        margin-top 15px
+
+    &-closeStyle:before
+        content '\e900'
+        font-family 'wib-icomoon'
+        margin-right 5px
+
+    

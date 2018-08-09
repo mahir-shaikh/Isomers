@@ -1,0 +1,13 @@
+.tooltip-icon {
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+  display: inline-block;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+.tooltip-icon:hover:before {
+  color: #000;
+}

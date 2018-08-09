@@ -1,0 +1,22 @@
+<div class="intro-text animated {{routeAnimation}} {{classNames}}">
+    <div class="intro-text-wrapper">
+        <tabset>
+            <tab [heading]="content.simulationtitle" (select)="setActiveIndex(0)" [active]="activeIndex == 0"><p class="intro-text-content-el" [innerHTML]="content.simulationbody"></p></tab>
+            <tab [heading]="content.companyoverviewtitle" (select)="setActiveIndex(1)" [active]="activeIndex == 1"><p class="intro-text-content-el" [innerHTML]="content.companyoverviewbody"></tab>
+            <tab [heading]="content.challengestitle" (select)="setActiveIndex(2)" [active]="activeIndex == 2"><p class="intro-text-content-el" [innerHTML]="content.challengesbody"></tab>
+            <tab [heading]="content.Competitivetitle" (select)="setActiveIndex(3)" [active]="activeIndex == 3"><p class="intro-text-content-el" [innerHTML]="content.Competitivebody"></tab>
+        </tabset>
+    </div>
+    <div class="row intro-text-footer">
+        <div class="next-action col-xs-12">
+            <div class="btn-wrapper">
+                <div class="btn btn-primary" *ngIf="activeIndex === 3" (click)="navigate()"><text-outlet key="UpdateSWOT"></text-outlet></div>
+                <!-- <div class="col-xs-6"><text-outlet key="NewMessageButtonTitle" class="btn-alert-txt"></text-outlet><text-outlet key="IntroOverviewButtonText" class="btn-details-txt"></text-outlet></div> -->
+                <!-- button *ngIf="activeIndex != 0" (click)="onBack()" class="backbutton"><span class="fa fa-angle-left"></span></button> -->
+                <div class="btn btn-primary" *ngIf="activeIndex != 3" (click)="onNext()"><text-outlet key="Next"></text-outlet></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="intro-text-image">
+</div>

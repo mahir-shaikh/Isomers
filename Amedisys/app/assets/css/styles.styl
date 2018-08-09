@@ -1,0 +1,929 @@
+@import "fonts"
+@import "./icons"
+@import "./mixins"
+@import "colors"
+
+/* customize scrollbar */
+::-webkit-scrollbar 
+    width 5px
+    height 5px
+ 
+/* Track */
+::-webkit-scrollbar-track 
+    -webkit-box-shadow inset 0 0 6px rgba(0,0,0,0.3)
+    -webkit-border-radius 10px
+    border-radius 0px
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb 
+    border-radius 5px
+    background #6d747e
+
+::-webkit-scrollbar-thumb:window-inactive 
+    background #6d747e
+
+animation-delay(delay)
+    -webkit-animation-delay delay
+    -moz-animation-delay delay
+    -ms-animation-delay delay
+    animation-delay delay
+
+
+html, body
+    min-height 100%
+body
+    // background url("../images/shapet.svg") no-repeat 
+    color #fff
+    overflow-x hidden
+    background-size 60% 100%
+    background-color rgba(251, 223, 180, 0.3)
+    font-size 16px
+    line-height 1.2em
+    font-family "OpenSans"
+    .row
+        margin 0
+    @media(max-width 768px)
+        background-position top
+h3
+    font-size 2.2rem
+    line-height 3rem
+h4
+    font-size 1.8rem
+    line-height 2rem
+    color #34446b
+.btn
+    border-radius 0
+
+.txt-right
+    text-align right
+
+.txt-center
+    text-align center
+
+ul
+ol
+    padding-left 0
+
+li
+    list-style-type disc
+    list-style-position outside
+    margin-left 1.5em
+    
+.row.add-flex
+    addFlexClass()
+
+.col-xs-1.add-flex
+    flexInnerCol(1)
+    
+.col-xs-2.add-flex
+    flexInnerCol(2)
+    
+.col-xs-3.add-flex
+    flexInnerCol(3)
+
+.col-xs-4.add-flex
+    flexInnerCol(4)
+
+.col-xs-5.add-flex
+    flexInnerCol(5)
+
+.col-xs-6.add-flex
+    flexInnerCol(6)
+
+.col-xs-7.add-flex
+    flexInnerCol(7)
+    
+.col-xs-8.add-flex
+    flexInnerCol(8)
+    
+.col-xs-9.add-flex
+    flexInnerCol(9)
+
+.col-xs-10.add-flex
+    flexInnerCol(10)
+
+.col-xs-11.add-flex
+    flexInnerCol(11)
+
+.col-xs-12.add-flex
+    flexInnerCol(12)
+
+.col-xs
+.col-sm
+.col-md
+.col-xl
+.col-lg
+    webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+
+.pane--planning,
+.pane--messages,
+.pane--generic
+    min-height initial
+
+.modal-lg
+    width 1004px
+    .textareabox
+        max-width 650px
+        margin 0 auto
+
+.meeting-txt
+    max-width 650px
+    margin 0 auto
+
+.modal
+    color #000
+
+.digitalICO
+    font-family 'wib-icomoon'
+
+.fa
+    font-family inherit
+    &:before
+        font-family FontAwesome
+
+.bottom-border
+    border-bottom 1px solid #b8b8b8 !important
+    overflow hidden
+
+.bottom-border--dark
+    border-bottom 1px solid #6d747e !important
+    overflow hidden
+
+.right-border
+    border-right 1px solid #b8b8b8 !important
+    overflow hidden
+
+.pane
+    &.active
+        position absolute
+        display block
+        top 65px
+        height calc(100vh - 65px)
+        margin 0
+        padding 0
+        right 0
+        &^[0]--messages
+            top 65px
+            // border-top 2px solid #4f7345
+            height calc(100vh - 65px)
+        feedback, info, user-choice
+            position absolute
+            display block
+            top 0
+            height calc(100vh - 65px)
+            padding 0
+            z-index 10
+            box-shadow 0px 0px 20px 0px rgba(0, 0, 0, 0.2)
+            .animated
+                padding 0
+                /* .info-closeTop
+                    &:before
+                        content "\F00D"*/
+                .feedback-close
+                    margin 10px 0 0 0
+                    border solid 2px #fff
+                    right 10px
+                    padding-top .5rem
+        planning-tool, tutorials, resources, endofroundfeedback
+            position absolute
+            display block
+            top 0px
+            left 0
+            width 100%
+            height calc(100vh - 65px)
+            padding 0
+            z-index 15
+
+        user-choice
+            overflow-y auto
+            width 100%
+            .animated
+                height initial 
+                border 0
+                border-left 2px solid #4f7345
+                border-bottom 2px solid #4f7345
+                border-top 2px solid #4f7345
+            accordion
+                &.panel-group
+                    .panel
+                        border none
+                        box-shadow none
+                        border-radius 0
+                        margin-bottom 2px
+                        .panel-heading
+                            background #797979
+                            border none
+                            color #fff
+                            border-radius 0
+                            a.accordion-toggle
+                                text-decoration none
+                                outline none
+                                font-size 0.925em
+                                &:hover
+                                    text-decoration none
+                                [accordion-heading]
+                                    padding 5px
+        // feedback
+        //     // border-left 2px solid #4f7345
+        //     // border-bottom 2px solid #4f7345
+
+.alert-modal
+    margin 0 auto
+    max-width 450px
+
+.rightPanel-txt-content
+    margin 20px
+    line-height 1.5em
+
+.column-heading
+    background-color #4f7345
+    color #FFF
+    padding 8px 7px
+    align-items flex-end
+    justify-content center
+    padding-bottom 8px
+    border 1px solid rgba(89,88,84,0.2)
+    border-left 0
+    border-top 0
+    &-container
+        padding 0
+    &:last-child
+        border-right 0
+
+.chart-contianer
+    margin 20px auto
+    .chart-holder
+        flex 1
+        margin 0 auto
+        max-width 450px
+
+endofroundfeedback
+    .eor-feedback-content
+        width 100%
+        position relative
+        tabset
+            ul.nav.nav-tabs
+                border none
+                overflow-x auto
+                overflow-y hidden
+                white-space nowrap
+                display flex
+                flex-wrap no-wrap
+                -webkit-overflow-scrolling touch
+                -ms-overflow-style -ms-autohiding-scrollbar
+                li
+                    flex 0 0 auto
+                    white-space normal
+                    vertical-align top
+                    // max-width 300px
+                    webkit-flex-basis 0
+                    -ms-flex-preferred-size 0
+                    flex-basis 0
+                    -webkit-box-flex 1
+                    -webkit-flex-grow 1
+                    -ms-flex-positive 1
+                    flex-grow 1
+                    max-width 100%
+                    margin 0
+                .nav-link
+                    color #6d747e
+                    max-width 230px
+                    font-size 14px
+                    padding 2rem
+                    border 1px solid #4f7345
+                    // border-top 5px solid #f2f2f2
+                    // border-right 5px solid #f2f2f2
+                    // border-left none
+                    // border-bottom none
+                    background #fff
+                    margin 0
+                    border-radius 0
+                    height 100%
+                    position relative
+                    overflow hidden
+                    span
+                        z-index 1
+                        position relative
+                    &:after
+                        content '\f111'
+                        font-family FontAwesome
+                        font-size 1px
+                        position absolute
+                        top 0
+                        left 0
+                        width 100%
+                        height 80px
+                        line-height 80px
+                        vertical-align middle
+                        text-align center
+                        color rgba(242,242,242,0)
+                        z-index 0
+                        transition color .3s ease-out, font-size .3s ease-out
+                    &.active 
+                        color #4f7345
+                        font-weight 500
+                        border-bottom none
+                        background-color #f2f2f2
+                        // &:after
+                        //     font-size 270px
+                        //     color rgba(242,242,242,1)
+
+
+                    
+
+                    
+
+
+        .tab-content
+            width 100%
+            height calc(100vh - 245px)
+            padding 5px 20px 40px 20px
+            overflow-y scroll
+            background #f2f2f2
+            border-top: 5px solid #f2f2f2
+            .tab-content
+                width 100%
+    .gauge-container
+        height 100%
+
+.feedback
+    &-text
+        margin-top 15px
+        padding-bottom 7rem
+        overflow hidden
+
+.tutorials-expansion
+    .carousel-indicators
+        display none
+
+.single-select
+    .carousel-indicators
+        display none
+
+.planning-tool-content
+    .carousel
+        height 100%
+        &-indicators
+            display none
+            
+        &-inner
+            height 100%
+            width: calc(100% - 30px);
+            margin 5px auto 15px auto
+        &-item
+            top 0
+            
+        &-control
+            background-image none
+            width 15px
+            cursor pointer
+            margin 30px 0 0 0
+            bottom inherit
+            span
+                font-family 'wib-icomoon'
+                &:before
+                    color #0ab9f0
+                    font-size 1.5rem
+        &-inner
+            .planning-tool-metric
+                .metric
+                    overflow hidden
+                    height 75px
+                    &-title
+                        height 3.5em
+                        overflow hidden
+                    &-cont
+                        margin-top 2px
+                        font-size 16px
+                        font-weight 500
+                        line-height 18px
+                        display flex
+                        justify-content center
+                    &-values
+                        .metric-noSeparator
+                            .metric-currValue
+                                font-size 15px
+                                font-weight 500
+                                
+        &-control.left
+            text-align left
+            span:before
+                content "\e91c"
+        &-control.right
+            text-align right
+            span:before
+                content "\e91b"
+.meeting-container
+    text-align center
+    color $brandBaseColor2
+    .meeting-text
+        font-weight 600
+        margin-bottom 3px
+.metric-name
+    font-size 15px
+    line-height 18px
+    font-weight normal
+    @media screen and (max-width 1500px)
+        font-size 13px
+        line-height 1.1em
+.meeting-value
+    font-size 16px
+    font-weight 500
+
+planning-tool
+    .left-pane-ftes my-tooltip
+        .tooltip-icon
+            position absolute !important
+            &:before, &:hover:before
+                color #333
+
+.businessTitle
+    width 100%
+    background $secondaryColor
+    text-align center
+    padding .5em
+    color #000
+    font-weight 600
+    text-transform uppercase
+    border-top-left-radius 10px
+    border-top-right-radius 10px
+
+.stageWrapper
+    border 3px solid $secondaryColor
+    height calc(100vh - 170px)
+    .metrics
+        background rgba($secondaryColor, .3)
+        margin-bottom 10px
+        padding-bottom 5px
+        display flex
+        .metric
+            flex 1
+
+.planningTool
+    background-color #ffffff
+    color #797979
+    .tabContentWrapper
+        margin 10px
+        height calc(100vh - 85px)
+        .tab-container
+            .tab-content
+                overflow hidden
+                padding 0
+                .content-div
+                    height calc(100% - 70px)
+                    overflow-y auto
+                    &.staffing
+                        overflow auto
+                    .cell
+                        // padding 5px;
+
+            .nav-tabs
+                border-bottom none
+                display flex
+                :first-child:nth-last-child(1)
+                    &:after
+                        font-size 1800px !important
+                .nav-item:first-child:nth-last-child(2),
+                .nav-item:first-child:nth-last-child(2) ~ .nav-item
+                     &:after
+                        font-size 1200px !important
+                .nav-item
+                    background $disabledColor
+                    background linear-gradient(to bottom, $disabledColor 63%,darken($disabledColor, 10 ) 100%)
+                    padding 0
+                    text-align center
+                    width 25%
+                    margin 0
+                    margin-right 1px
+                    flex 1
+                    flex-grow 1
+                    z-index 1
+                    overflow hidden
+                    transition background .3s ease-in-out, font-size .3s ease-in, left .3s ease-in
+                    &:last-child
+                        margin-right 0
+                    &:hover
+                        background linear-gradient(to bottom, $disabledColor 63%,darken($disabledColor, 20 ) 100%)
+                    .nav-link
+                        position relative
+                        top 50%
+                        transform translateY(-50%)
+                        border none
+                        color darken($disabledColor, 20)
+                        line-height 21px
+                        font-size 21px 
+                        font-weight 500
+                        padding 15px 0
+                        background-color transparent
+                        transition color .3s ease-out
+                        &:hover
+                            color darken($disabledColor, 50)
+                .nav-item.active
+                    background $secondaryColor
+                    background linear-gradient(to bottom, $secondaryColor 63%,darken($secondaryColor, 30 ) 100%)
+                    .nav-link
+                        color #4f7345
+
+.intro-text
+    .tab-container
+        .nav-tabs
+            height 45px
+            background #fff
+            border-bottom none
+            addFlexClass()
+            .nav-item
+                background $disabledColor
+                background linear-gradient(to bottom, $disabledColor 63%,darken($disabledColor, 10 ) 100%)
+                padding 0
+                text-align center
+                border-right 2px solid #fff
+                margin 0
+                overflow hidden
+                color #fff
+                webkit-flex-basis: 0;
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -webkit-box-flex: 1;
+                -webkit-flex-grow: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+                text-transform uppercase
+                .nav-link
+                    position relative
+                    top 50%
+                    transform translateY(-50%)
+                    border none
+                    color #FFF
+                    line-height 1.8rem
+                    font-size 12px 
+                    background-color transparent 
+                    @media(max-width 1024px)
+                        line-height 1.5rem
+                        font-size 10px
+                &.active
+                    color #000
+                    background $secondaryColor
+                    background linear-gradient(to bottom, $secondaryColor 63%,darken($secondaryColor, 30 ) 100%)
+                    .nav-link
+                        color #000
+        .tab-content
+            padding 20px 30px
+            font-size 14px
+            line-height 20px
+            // max-width 720px
+            // margin 0 auto
+            overflow-y auto
+            height calc(100% - 45px)
+            p
+                max-width 720px
+                margin 0 auto
+calc-outlet
+    padding 5px
+    text-align right
+    width 100%
+
+.tips
+    background #FFF
+    color #fff
+    height 100%
+    padding 50px
+    font-size 16px
+
+.row-tooltip
+    float left
+    height 25px
+
+.callOutBox
+    background-color transparent
+    color #ffffff
+    margin 2rem
+    width calc(100% - 4rem)
+    .callOutBoxContent
+        background-color #797979
+        padding 1rem 0
+        overflow hidden
+
+.content-row
+    clear both
+
+.center
+    text-align center
+    margin-left auto
+    margin-right auto
+
+.btn
+    &-primary
+        margin 0
+        padding 0
+        border none
+        background $primeColor
+        &:hover
+            border none
+            background darken($primeColor, 20)
+    &-primary text-outlet
+    &-primary button
+        background $primeColor
+        display block
+        // transition background cubic-bezier(0, 0, 0, 0.99) .7s
+        &:hover
+            background darken($primeColor, 20)
+    &-success
+        background $primeColor
+        &:hover
+            background darken($primeColor, 20)
+
+.button-container
+    padding 10px
+    text-align center
+    display flex
+    justify-content space-around
+
+button.btn
+    display block
+    border-radius 5px
+    padding 1em 2em
+    transition background cubic-bezier(0, 0, 0, 0.99) .7s
+
+button.btn-danger
+    background #fb054b
+    border-color #fb054b
+    &:hover
+        background #b60839
+
+.btn-alert-txt
+    font-weight 600
+    font-size 1.6rem
+    display block
+    text-align left
+    color #6d747e
+
+.btn-details-txt
+    font-weight 400
+    font-sizes 1.4rem
+    display block
+    text-align left
+    color #6d747e
+
+.impact-heading
+    color #f07300
+    font-weight 500
+    display block
+
+.button-container
+    &.submit-container
+        padding 0
+        display flex
+        margin-top 20px
+        button
+            flex 1 0 50%
+        .btn-success
+            border-radius 0
+            border-bottom-left-radius 6px
+        .btn-warning
+            border-radius 0
+            border-bottom-right-radius 6px
+
+.notification-message
+    display flex
+    .button-holder
+        margin-right 20px
+
+
+.delay-1
+    animation-delay 1s
+.delay-2
+    animation-delay 2s
+.delay-3
+    animation-delay 3s
+.delay-4
+    animation-delay 4s
+.delay-5
+    animation-delay 5s
+
+.tab-pane-value
+    h1
+        font-size 2.4rem
+        line-height 3rem
+        margin 20px 0
+        text-align center
+        color #6d747e
+
+
+.animated
+    &.flipReverse
+        -webkit-backface-visibility visible
+        backface-visibility visible
+        -webkit-animation-name flipReverse
+        animation-name flipReverse
+        -webkit-animation-duration: .25s;
+        animation-duration: .25s;
+    &.flipSimple
+        animation-name flipSimple !important
+        -webkit-animation-duration: .25s;
+        animation-duration: .25s;
+
+@keyframes flipReverse {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 180deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 180deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0
+  }
+  
+  10% {
+    opacity: 1
+  }
+  
+
+  to {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+  }
+}
+
+
+@keyframes flipSimple {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -180deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -180deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0
+  }
+  
+  10% {
+    opacity: 1
+  }
+  
+
+  to {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+  }
+}
+
+
+
+.animated.customFlipOutY
+    -webkit-backface-visibility visible!important
+    backface-visibility visible!important
+    -webkit-animation-name customFlipOutY
+    animation-name customFlipOutY
+    
+@keyframes customFlipOutY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+/* no ui slider */
+.noUi
+    &-target
+        box-shadow none
+        border none
+        background-color #bec0c1
+        &^[0]-horizontal
+            height 1px
+        &^[0]-vertical
+            width 1px
+    &-horizontal &-handle
+        border-radius 50%
+        border none
+        box-shadow none
+        background #f07300
+        width 28px
+        height 28px
+        left -14px
+        top -14px
+        text-align center
+        line-height 28px
+        color #fff
+        font-size 0.625em
+        &:before,&:after
+            display none
+    &-pips
+        height 30px
+        padding 0
+        
+    &-marker
+        &-horizontal, &-vertical
+            &^[1]-normal
+                display none
+            &^[1]-large
+                height 10px
+                top -5px
+            &^[1]-sub
+                height 6px
+                top -3px
+                width 1px
+                background #e1e2e3
+    &-value
+        &-horizontal, &-vertical
+            &^[1]-sub, &^[1]-large
+                padding-top 8px
+                font-size 10px
+                color #999
+                
+.registration-wrapper
+    calc-input input
+        width 100%
+        text-align left
+        max-width 280px
+        margin 0 auto
+        padding 2px 10px 2px 10px
+
+goal-setting 
+    .noUi-value
+        &-large, &-sub
+            display none
+    .noUi-pips
+        height 15px
+
+tooltip-container
+    position relative
+
+.tooltip
+    &-inner
+        background-color #232426
+        padding 10px 10px
+        max-width 490px
+        min-width 400px
+        font-size 14px
+        text-align left
+    .top&
+        .tooltip-arrow
+            border-top-color #505967
+    .left&
+        .tooltip-arrow
+            border-left-color #505967
+    .bottom&
+        .tooltip-arrow
+            border-bottom-color #505967
+    .right&
+        .tooltip-arrow
+            border-right-color #505967
+
+.col-xs-12
+    padding 0
+.cell
+    font-size 1.4rem
+    padding 3px 5px
+
+.row-title
+    font-size 1.6rem
+
+#feedback-charttopper
+    table
+        table-layout fixed
+
+@media (max-width: 1025px)
+    h3
+        font-size 2rem
+        line-height 1.2em
+    h4
+        font-size 1.6rem
+        line-height 1.2em
+    .cell
+        font-size 1.3rem
+
+.disable-staff-btn
+    .meetingICO
+        pointer-events none

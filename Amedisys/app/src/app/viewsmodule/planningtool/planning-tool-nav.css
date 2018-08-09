@@ -1,0 +1,67 @@
+.planning-tool-title {
+  height: 25%;
+}
+.planning-tool-design {
+  background: #fff;
+  width: 100%;
+  height: 44px;
+  display: table;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
+  transition: background ease-out 0.4s, box-shadow 0.4s ease-out;
+}
+.planning-tool-design:hover {
+  background: #ffffdf;
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.3);
+  color: #7ba96b;
+}
+.planning-tool-design.disabled {
+  cursor: not-allowed;
+  font-weight: 300;
+  opacity: 0.3;
+}
+.planning-tool-design.disabled .planning-tool-nav-icon {
+  color: rgba(255,255,255,0.33);
+}
+.planning-tool-design.disabled .planning-tool-nav-link {
+  pointer-events: none;
+}
+.planning-tool-nav:nth child(odd) {
+  padding: 0 5px 0 0;
+}
+.planning-tool-nav:nth child(odd) {
+  padding: 0 0 0 5px;
+}
+.planning-tool-nav-link {
+  margin: 0;
+  display: flex;
+  vertical-align: middle;
+  padding: 0 0 0 15px;
+  color: #7ba96b;
+}
+.planning-tool-nav-link:hover {
+  text-decoration: none;
+  color: #4f7345;
+  font-weight: bold;
+}
+.planning-tool-nav-link text-outlet {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.planning-tool-nav-icon {
+  right: 30px;
+  position: relative;
+}
+.planning-tool-nav-icon:before {
+  font-size: 16px;
+  line-height: 44px;
+}
+.planning-tool-content {
+  height: calc(100% - 44px);
+}
+:host-context(.readOnly) .planning-tool-title {
+  cursor: not-allowed;
+  pointer-events: none;
+}

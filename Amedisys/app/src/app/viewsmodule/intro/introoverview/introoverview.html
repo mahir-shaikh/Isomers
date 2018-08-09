@@ -1,0 +1,19 @@
+<div class="intro-overview animated {{routeAnimation}}">
+    <div class="intro-overview-wrapper">
+        <div class="row col-xs-12 intro-overview-header">
+            <div></div>
+            <div class="intro-overview-title"><img src="{{content.imagePath}}"><span class="intro-overview-title-el">{{content.title}}</span></div>
+        </div>
+        <div class="row col-xs-12 intro-overview-content">
+            <p class="intro-overview-content-el" [innerHTML]="content.body"></p>
+        </div>
+        <div class="row col-xs-12 intro-overview-footer">
+            <div class="next-action col-xs-8 col-xs-offset-2">
+                    <div class="btn-wrapper row">
+                    <div class="btn btn-primary col-xs-6" (click)="navigate()"><text-outlet key="UpdateSWOT"></text-outlet></div>
+                    <div class="col-xs-6"><text-outlet key="IntroOverviewButtonTitle" class="btn-alert-txt"></text-outlet><text-outlet key="IntroOverviewButtonText" class="btn-details-txt"></text-outlet></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

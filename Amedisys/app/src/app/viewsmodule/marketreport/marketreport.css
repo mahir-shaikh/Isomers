@@ -1,0 +1,18 @@
+.modal-content {
+  color: #000;
+}
+.market-report-dialog {
+  display: block;
+}
+.modal-title {
+  float: left;
+}
+.modal-close {
+  float: right;
+  cursor: pointer;
+}
+.modal-close:after {
+  display: table;
+  content: '';
+  clear: both;
+}

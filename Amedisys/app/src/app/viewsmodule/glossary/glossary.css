@@ -1,0 +1,74 @@
+.glossary-search {
+  width: calc(100% - 35px);
+  padding: 5px;
+  float: left;
+  border: 1px solid #ccc;
+}
+.glossary-search::-ms-clear {
+  display: none;
+}
+.glossary-search-cont {
+  float: right;
+  width: 300px;
+  padding: 0 20px;
+}
+.glossary-search-icon {
+  float: left;
+  width: 30px;
+  height: 32px;
+  border: 1px solid #ccc;
+  margin: 0 0 0 2px;
+}
+.glossary-search-icon:before {
+  color: #6d747e;
+  position: relative;
+  left: 7px;
+  top: 6px;
+  font-size: 1.6rem;
+}
+.glossary-cont {
+  clear: both;
+}
+.glossary-alphabets {
+  text-align: center;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+}
+.glossary-alphabets-cont {
+  margin: 20px 0 0 0;
+  width: 300px;
+  float: left;
+  padding: 0 20px;
+}
+.glossary-alphabets:nth-child(4n+1) {
+  border-left: 1px solid #ccc;
+}
+.glossary-alphabets:nth-last-child(-n+4) {
+  border-bottom: 1px solid #ccc;
+}
+.glossary-list {
+  width: calc(100% - 300px);
+  height: calc(100vh - 275px);
+  float: left;
+  overflow: auto;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+.glossary-list-content {
+  margin: 0 0 30px 0;
+  color: #6d747e;
+}
+.glossary-list-content:last-child {
+  margin: 0 0 50px 0;
+}
+.glossary-list-alphabet {
+  color: #80cc28;
+  margin: 0 0 40px 0;
+}
+.selected {
+  background-color: #80cc28;
+  color: #fff;
+}

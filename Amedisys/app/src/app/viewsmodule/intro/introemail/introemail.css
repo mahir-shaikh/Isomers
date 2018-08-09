@@ -1,0 +1,64 @@
+.btn-wrapper {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.intro-email {
+  height: 80vh;
+  width: 60%;
+  margin: 10vh auto;
+  background: #f2f2f2;
+  padding: 20px;
+  color: #6d747e;
+}
+.intro-email-wrapper {
+  background: #fff;
+  overflow: auto;
+  margin: 0;
+  padding: 20px;
+  height: 100%;
+}
+.intro-email-header {
+  padding: 10px 0 20px 0;
+}
+.intro-email-image {
+  display: block;
+  float: left;
+}
+.intro-email-image-el {
+  width: 75px;
+  height: 75px;
+  border: 5px solid #0ab9f0;
+  border-radius: 50%;
+}
+.intro-email-title {
+  float: left;
+}
+.intro-email-title span {
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 50px;
+  display: block;
+  margin: 10px 20px 20px 20px;
+}
+.intro-email-content {
+  min-height: 70%;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.intro-email-footer {
+  overflow: hidden;
+}
+.intro-email-footer .next-action {
+  text-align: center;
+}
+.intro-email-next-button {
+  cursor: pointer;
+}
+.intro-email-next-button img {
+  margin: 0 10px;
+}
+.intro-email-next-button span {
+  padding: 10px 15px;
+}

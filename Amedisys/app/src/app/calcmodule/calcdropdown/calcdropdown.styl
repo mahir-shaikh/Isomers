@@ -1,0 +1,127 @@
+// ul[dropdownMenu]
+//     li
+//         list-style-type none
+
+// #single-button
+//     padding-top 5px
+//     padding-bottom 5px
+//     width 100%
+//     text-align left
+//     .btn .caret
+//         position absolute
+//         right 10px
+//         top 50%
+//     &.sb-right
+//         text-align right
+//         &.btn .caret
+//             position absolute
+//             left 10px
+//             top 50%
+
+// .btn-group.open 
+//     #single-button
+//         border-top-left-radius 5px
+//         border-top-right-radius 5px
+//         border-bottom-right-radius 0
+//         border-bottom-left-radius 0
+//     .caret
+//         border-bottom 4px dashed
+//         border-bottom 4px solid\9
+//         border-top none
+
+// .btn-group.dropdown
+//     width 100%
+
+// .dropdown-menu
+//     border-radius 0
+//     margin 0
+//     border solid 1px #005495
+//     li
+//         margin 0
+//         &:nth-child(even)
+//             background #f2f2f2
+//         a
+//             transition background ease-out .3s, color ease-out .3s
+//         a:hover
+//             background #005495
+//             color #FFF
+
+// .dropdown-menu-right
+//     li
+//         text-align right
+
+
+@import "../../../../assets/css/mixins"
+.ds-input-field,
+.btn-group
+    height 100%
+    width 100%
+.dropdown
+    &.open
+        & ^[0]-menu
+            // display block
+            max-height 172px
+            overflow auto
+            min-width 100%
+            margin 0
+            li
+                list-style none
+                margin 0
+    &-toggle
+        background-color #FFF
+        border 1px solid #6D6C70
+        color #595854
+        height 100%
+        width 100%
+        padding 0
+        padding-left 10px
+        text-align left
+        border-radius 0
+        .dropdown-text
+            width 70%
+            text-overflow ellipsis
+            display inline-block
+            overflow hidden
+            position absolute
+            top 50%
+            transform translateY(-50%)
+        &.btn-primary
+            &:hover
+                -webkit-box-shadow none
+                box-shadow none
+                padding 10px
+                color #FFF
+            &:focus,
+            &:active
+                -webkit-box-shadow none
+                box-shadow none
+                border-color #4f7345
+                background-color #4f7345
+                color #FFF
+        .caret
+            position absolute
+            right 20px
+            display inline-block
+            top calc(50% - 8px)
+            font-size 1.6rem
+            font-weight 800
+            border 0
+        &:after
+            border 0
+        &-item
+            color #FFF
+
+.dropdown-toggle,
+.dropdown-menu    
+    font-size 1.6rem
+    
+:host-context(.alignment-and-planning)
+    .dropdown-toggle
+        font-size 1.6rem
+        height 35px
+    .dropdown-menu
+        font-size 1.6rem
+        
+:host-context(.scenario-decisions)
+    .dropdown-toggle
+        height 35px

@@ -1,0 +1,300 @@
+6<div class="planningTool" [@flyInOut]="animState">
+    <div class="eventBody">
+        <tabset>
+            <tab heading='Income Statement' [active]="activeIndex === 0" (select)="setActiveIndex(0)">
+                <article class="content-div" *ngIf="activeIndex === 0">
+
+                    <div class="col-xs-12 report-table">
+                        <div class="content-row top-head">
+
+                            <table>
+                                <tr>
+                                    <th></th>
+                                </tr>
+
+                            </table>
+
+                            <div class="col-xs-4">
+                                <div class="cell form-lebel row-header">
+                                    <!-- <text-outlet key="Revenue" class="reportSubTitle"></text-outlet> -->
+                                </div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4">
+                                    <div class="cell form-lebel heading row-header txt-right">
+                                        <text-outlet key="CareCenter1" class="reportSubTitle txt-right"></text-outlet>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="cell form-lebel heading row-header txt-right">
+                                        <text-outlet key="CareCenter2" class="reportSubTitle txt-right"></text-outlet>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="cell form-lebel heading row-header txt-right">
+                                        <text-outlet key="Total" class="reportSubTitle txt-right"></text-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row top-head">
+                            <div class="col-xs-4">
+                                <div class="cell form-lebel row-header">
+                                    <text-outlet key="Revenue" class="reportSubTitle"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex row-header">
+                                    <div class="data-label col-xs-6 add-flex">
+                                        <text-outlet key="ThisYear"></text-outlet>
+                                    </div>
+                                    <div class="data-label col-xs-6 add-flex">
+                                        <text-outlet key="LastYear"></text-outlet>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 row add-flex row-header">
+                                    <div class="data-label col-xs-6 add-flex">
+                                        <text-outlet key="ThisYear"></text-outlet>
+                                    </div>
+                                    <div class="data-label col-xs-6 add-flex">
+                                        <text-outlet key="LastYear"></text-outlet>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 row add-flex row-header">
+                                    <div class="data-label col-xs-6 add-flex">
+                                        <text-outlet key="ThisYear"></text-outlet>
+                                    </div>
+                                    <div class="data-label col-xs-6 add-flex">
+                                        <text-outlet key="LastYear"></text-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="content-row">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="Medicare" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex">
+                                        <calc-outlet [ref]="'tlOutputfinLOB1Seg1Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1Seg1Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2Seg1Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2Seg1Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinSeg1Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinSeg1Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="PPS" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1Seg2Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1Seg2Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2Seg2Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2Seg2Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinSeg2Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinSeg2Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row bottom-border">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="Other" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1Seg3Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1Seg3Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2Seg3Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2Seg3Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinSeg3Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinSeg3Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row bottom-border total">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="Total Revenues" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2Rev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2Rev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinRev_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinRev_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="OperatingExpenses" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1ServiceCost_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1ServiceCost_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2ServiceCost_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2ServiceCost_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinServiceCost_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinServiceCost_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="GrossMargin" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1GrossMargin_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1GrossMargin_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2GrossMargin_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2GrossMargin_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinGrossMargin_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinGrossMargin_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="GandA" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex">&nbsp;</div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex">&nbsp;</div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                   <div class="data-value col-xs-6 add-flex">&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row bottom-border">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="GAOther" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1EmpOverhead_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1EmpOverhead_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2EmpOverhead_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2EmpOverhead_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinEmpOverhead_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinEmpOverhead_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row bottom-border total">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="TotalGAExpense" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1TotalExp_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1TotalExp_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2TotalExp_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2TotalExp_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinTotalExp_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinTotalExp_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="NIFO" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1OpProfit_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1OpProfit_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2OpProfit_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2OpProfit_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinOpProfit_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinOpProfit_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-row">
+                            <div class="col-xs-4">
+                                <div class="cell row-header"><text-outlet key="NIFO %" class="reportSubTitle"></text-outlet></div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1OpMargin_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB1OpMargin_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2OpMargin_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinLOB2OpMargin_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                                <div class="col-xs-4 row add-flex">
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinOpMargin_R'+currentYear" format="" scaler="" class="reportSubTitle1"></calc-outlet></div>
+                                    <div class="data-value col-xs-6 add-flex"><calc-outlet [ref]="'tlOutputfinOpMargin_R'+lastYear" format="" scaler="" class="reportSubTitle2"></calc-outlet></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </tab>
+        </tabset>
+    </div>
+</div>

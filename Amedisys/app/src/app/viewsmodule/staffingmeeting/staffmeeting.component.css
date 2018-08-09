@@ -1,0 +1,56 @@
+.fa {
+  color: #4f7345;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.fa:hover {
+  color: #7ba96b;
+}
+.modal {
+  display: block;
+  top: -65px;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal.in .modal-dialog {
+  transform: translate(-50%, calc(-50%));
+  top: calc(50% - 65px);
+  position: absolute;
+  left: 50%;
+}
+.modal .modal-content {
+  overflow: hidden;
+}
+.modal .modal-content .modal-header {
+  text-align: left;
+}
+.modal .modal-content .modal-body {
+  text-align: left;
+  line-height: 2rem;
+}
+.modal .modal-content .modal-body .textareabox-container {
+  margin-top: 15px;
+}
+.meeting-modal .modal-header.fullWidthImg {
+  padding: 0;
+  border: none;
+}
+.meeting-modal .modal-header.fullWidthImg .modalHeader-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.meeting-modal .modal-header.fullWidthImg .modal-title {
+  width: 100%;
+  height: 265px;
+  background: rgba(0,0,0,0.3);
+  border: 7px solid #fff;
+  border-bottom: none;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

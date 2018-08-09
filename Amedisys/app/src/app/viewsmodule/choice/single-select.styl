@@ -1,0 +1,58 @@
+@import '../../../../assets/css/mixins.styl'
+
+.messageImage-holder
+    max-height 250px
+    overflow hidden
+.single-select
+    color #6d747e
+    height calc(100%-65px)
+
+    &Content
+        background-color #FFFFFF
+    &Decision
+        background-color #f1eded
+        padding 1.5em 1.5em 4em 1.5em
+
+.choice
+    margin-bottom 10px
+    label
+        padding 1em
+        cursor pointer
+        display table
+    &Background
+        background $secondaryColor
+        background -moz-linear-gradient(top, $secondaryColor 0%, lighten($secondaryColor,10) 100%)
+        background -webkit-linear-gradient(top, $secondaryColor 0%,lighten($secondaryColor,10) 100%)
+        background linear-gradient(to bottom, $secondaryColor 0%,lighten($secondaryColor,10) 100%)
+        color darken($primeColor, 35)
+        cursor pointer
+        border 3px solid transparent
+        border-radius 10px
+        &.choiceHighlight
+            background $secondaryColor
+            color darken($primeColor, 35)
+            border solid 3px darken($primeColor, 35)
+            .choice-label
+                background darken($primeColor, 35)
+                color $secondaryColor
+    &-label
+        width 36px
+        height 36px
+        line-height 30px
+        border solid 3px darken($primeColor, 35)
+        border-radius 50%
+        font-size 1.25em
+        font-weight 500
+        display block
+        text-align center
+        transition color .3s ease-out, background .3s ease-out  
+    &-header
+        font-size 1.25em
+        font-weight 500
+        padding 5px
+    &-desc
+        font-size 1em
+        font-weight 400
+        display table-cell
+        line-height 1.2em
+        padding 5px

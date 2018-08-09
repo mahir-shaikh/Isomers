@@ -1,0 +1,8 @@
+<div class="swot-input">
+<div class="swot-input-title">
+<text-outlet [key]="swottitle"></text-outlet>
+</div>
+<div class="swot-input-area">
+<textarea title="{{inputHelpText}}" [(ngModel)]="inputText" (focus)="onFocus($event)" (blur)="onBlur($event)"></textarea>
+</div>
+</div>

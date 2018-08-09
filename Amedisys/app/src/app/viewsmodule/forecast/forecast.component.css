@@ -1,0 +1,183 @@
+.forecast-table {
+  margin: 0 10px;
+}
+.forecast-table .row .data-label,
+.forecast-table .row .data-value {
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+}
+.forecast-table .row:nth-child(even) {
+  background: #f2f2f2;
+}
+.forecast-table .row calc-stepper {
+  margin-top: 5px;
+}
+.forecast-table .heading-row {
+  background-color: #4f7345 !important;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+}
+.forecast-table .heading-row .data-label {
+  line-height: 1.2em;
+}
+.forecast-table .tableSubHeader {
+  background: #6b7368 !important;
+  color: #f2f2f2;
+  padding: 5px 10px;
+}
+.forecast-table .tableSubHeader .data-label {
+  line-height: 1.2em;
+}
+.breakRight {
+  border-right: 5px solid #fff;
+}
+.planningTool .eventBody .content-div .content .metrics {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(89,88,84,0.2);
+  color: #000;
+}
+.planningTool .eventBody .content-div .content .metrics .metric {
+  text-align: center;
+  align-items: center;
+  line-height: 20px;
+  border-right: 1px solid #6c3;
+  padding: 7px 3px;
+  justify-content: center;
+}
+.planningTool .eventBody .content-div .content .metrics .metric:last-child {
+  border-right: 0;
+}
+.planningTool .eventBody .content-div .content .metrics .metric::before {
+  display: initial;
+}
+.planningTool .eventBody .content-div .content .metrics .metric text-outlet {
+  width: 100%;
+}
+.planningTool .eventBody .content-div .content .metrics .metric calc-outlet {
+  padding: 0;
+  padding-top: 5px;
+  text-align: center;
+}
+.planningTool .eventBody .content-div .content .forecast-table {
+  margin: 20px;
+  display: table;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+.planningTool .eventBody .content-div .content .forecast-table .row:nth-child(even) {
+  background: #f2f2f2;
+}
+.planningTool .eventBody .content-div .content .forecast-table .row.tableSubHeader {
+  background: #6b7368;
+}
+.planningTool .eventBody .content-div .content .forecast-table .row1,
+.planningTool .eventBody .content-div .content .forecast-table .row2,
+.planningTool .eventBody .content-div .content .forecast-table .row9 {
+  background: #4a5247;
+  color: #fff;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.planningTool .eventBody .content-div .content .forecast-table .row1 .data-label,
+.planningTool .eventBody .content-div .content .forecast-table .row2 .data-label,
+.planningTool .eventBody .content-div .content .forecast-table .row9 .data-label {
+  border-right: 1px solid rgba(255,255,255,0.2);
+  padding: 0;
+  font-size: 1.5rem;
+}
+.planningTool .eventBody .content-div .content .forecast-table .row1 .last,
+.planningTool .eventBody .content-div .content .forecast-table .row2 .last,
+.planningTool .eventBody .content-div .content .forecast-table .row9 .last {
+  border: 0;
+}
+.planningTool .eventBody .content-div .content .forecast-table .row1 .month-label,
+.planningTool .eventBody .content-div .content .forecast-table .row2 .month-label,
+.planningTool .eventBody .content-div .content .forecast-table .row9 .month-label,
+.planningTool .eventBody .content-div .content .forecast-table .row1 .data-container,
+.planningTool .eventBody .content-div .content .forecast-table .row2 .data-container,
+.planningTool .eventBody .content-div .content .forecast-table .row9 .data-container {
+  padding: 0;
+}
+.planningTool .eventBody .content-div .content .forecast-table .row1 .month-label .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row2 .month-label .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row9 .month-label .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row1 .data-container .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row2 .data-container .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row9 .data-container .data-value {
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+.planningTool .eventBody .content-div .content .forecast-table .row2 {
+  border: none;
+}
+.planningTool .eventBody .content-div .content .forecast-table .row3 .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row4 .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row5 .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row6 .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row7 .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row8 .data-value,
+.planningTool .eventBody .content-div .content .forecast-table .row3 .data-label,
+.planningTool .eventBody .content-div .content .forecast-table .row4 .data-label,
+.planningTool .eventBody .content-div .content .forecast-table .row5 .data-label,
+.planningTool .eventBody .content-div .content .forecast-table .row6 .data-label,
+.planningTool .eventBody .content-div .content .forecast-table .row7 .data-label,
+.planningTool .eventBody .content-div .content .forecast-table .row8 .data-label {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 0;
+}
+.planningTool .eventBody .content-div .content .forecast-table .row3 .month-label,
+.planningTool .eventBody .content-div .content .forecast-table .row4 .month-label,
+.planningTool .eventBody .content-div .content .forecast-table .row5 .month-label,
+.planningTool .eventBody .content-div .content .forecast-table .row6 .month-label,
+.planningTool .eventBody .content-div .content .forecast-table .row7 .month-label,
+.planningTool .eventBody .content-div .content .forecast-table .row8 .month-label,
+.planningTool .eventBody .content-div .content .forecast-table .row3 .data-container,
+.planningTool .eventBody .content-div .content .forecast-table .row4 .data-container,
+.planningTool .eventBody .content-div .content .forecast-table .row5 .data-container,
+.planningTool .eventBody .content-div .content .forecast-table .row6 .data-container,
+.planningTool .eventBody .content-div .content .forecast-table .row7 .data-container,
+.planningTool .eventBody .content-div .content .forecast-table .row8 .data-container {
+  padding: 0;
+}
+.planningTool .eventBody .content-div .content .chart-contianer {
+  padding: 20px;
+  height: auto;
+  justify-content: space-between;
+}
+.planningTool .eventBody .content-div .content .chart-contianer .monthly-admit-table,
+.planningTool .eventBody .content-div .content .chart-contianer .utilization-table {
+  border: 1px solid rgba(89,88,84,0.2);
+  padding: 0;
+}
+.planningTool .eventBody .content-div .content .chart-contianer .monthly-admit-table .heading-row,
+.planningTool .eventBody .content-div .content .chart-contianer .utilization-table .heading-row {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+.planningTool .eventBody .content-div .content .chart-contianer .monthly-admit-table .heading-row .column-heading,
+.planningTool .eventBody .content-div .content .chart-contianer .utilization-table .heading-row .column-heading {
+  background-color: #4f7345;
+  color: #fff;
+  padding: 8px 7px;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  border: 1px solid rgba(89,88,84,0.2);
+  border-left: 0;
+  border-top: 0;
+}
+.planningTool .eventBody .content-div .content .chart-contianer .monthly-admit-table .heading-row .column-heading:last-child,
+.planningTool .eventBody .content-div .content .chart-contianer .utilization-table .heading-row .column-heading:last-child {
+  border-right: 0;
+}
+.planningTool .eventBody .submit-footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.planningTool .eventBody .submit-footer text-outlet {
+  background: #4f7345;
+}

@@ -1,0 +1,150 @@
+:host {
+  padding: 0;
+}
+:host.planning-tool-metric .metric-title {
+  font-size: 0.925em;
+  padding: 5px 15px;
+  height: 3.5em;
+  line-height: 1em;
+}
+:host.planning-tool-metric .metric-title.withSeparator {
+  height: auto;
+}
+:host.planning-tool-metric .metric-cont {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+:host.planning-tool-metric .metric-separator .metric-values {
+  float: none;
+}
+.metric-cont {
+  text-align: center;
+  position: relative;
+  line-height: 2rem;
+}
+.metric-cont calc-outlet {
+  padding: 0;
+}
+.metric-icon {
+  display: inline;
+  position: relative;
+  line-height: 2rem;
+}
+.metric-title {
+  text-align: center;
+  margin-bottom: 3px;
+}
+.metric-values {
+  color: #fff;
+}
+.metric-icon.icon-down-indicator:before,
+.metric-icon.icon-up-indicator:before,
+.metric-icon.icon-no-change:before {
+  font-size: 1.4rem;
+  color: #ff2452;
+}
+.metric-icon.icon-plus {
+  color: #64ff39;
+  font-size: 1rem;
+}
+.metric-icon.icon-minus {
+  color: #ff2452;
+  font-size: 1rem;
+}
+.metric-icon.icon-up-indicator:before {
+  color: #64ff39;
+}
+.metric-icon.icon-information:before {
+  color: #ff2452;
+}
+.metric-values.marginLeft {
+  display: inline-block;
+}
+.metric-noLastYearRef .metric-noSeparator p {
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .metric-noLastYearRef .metric-noSeparator p {
+    font-size: 12px;
+  }
+}
+.metric-noLastYearRef .metric-values {
+  margin: 0;
+}
+.metric-currValue {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.1em;
+  padding: 0;
+  margin: 0;
+}
+.metric-oldValue {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+.metric-separator .metric-text {
+  font-size: 13px;
+  line-height: 1.1em;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 1500px) {
+  .metric-separator .metric-text {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .metric-separator .metric-values {
+    font-size: 13px;
+  }
+}
+.metric-ly-text,
+.metric-cy-text,
+.metric-ly-value,
+.metric-cy-value {
+  width: 47%;
+  float: left;
+  padding: 0 5px;
+  text-align: center;
+}
+.metric-separator-line {
+  width: 6%;
+  float: left;
+  text-align: center;
+}
+.metric-text:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.metric-ly-value {
+  font-weight: 400;
+}
+@media screen and (max-width: 1500px) {
+  .metric-ly-value {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .metric-cy-value {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .metric-name {
+    font-size: 1.2rem;
+    letter-spacing: inherit;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .metric-name {
+    font-size: 1.3rem;
+  }
+}
+:host-context(.planningTool) .metric-values {
+  color: #000;
+}

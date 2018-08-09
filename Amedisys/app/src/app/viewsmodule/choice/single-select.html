@@ -1,0 +1,41 @@
+<div class="single-select" data-content-wrapper>
+  <div class="single-selectContent">
+    <div class="messageImage-holder">
+      <img class="message-images" [src]="image">
+    </div>
+    <div class="rightPanel-txt-content">
+      <h3>{{ scene.name }}</h3>
+      <div [innerHTML]="scene.narrative"></div>
+    </div>
+
+    <div class="choice-tutorial" *ngIf="scene['tutorial']">
+      <accordion closeOthers="true" class="tutorialAccordion">
+        <accordion-group #group [isOpen]="false">
+            <div accordion-heading>
+              <span><text-outlet [key]="tutorialKey" [sceneId]="id"></text-outlet></span>
+              <i class="pull-right fa"
+              [ngClass]="{'fa-minus': group?.isOpen, 'fa-plus': !group?.isOpen}"></i>
+            </div>
+            <div>
+              <tutorial-content [images]="tutorialImages"></tutorial-content>
+            </div>
+        </accordion-group>
+      </accordion>
+    </div>
+    <div class="single-selectDecision input-group">
+      <div *ngFor="let choice of choices; let i=index" [class.choiceHighlight]="answer == (i+1)" class="choice choiceBackground">
+          <label [(ngModel)]="answer" btnRadio="{{i+1}}" (ngModelChange)="onSelect($event)">
+            <div class="row">
+                <div class="col-xs-1">
+                  <span class="choice-label">{{choice.value}}</span>
+                </div>
+              <div class="col-xs-11">
+                <span class="choice-header">{{choice.label}}</span>
+                <span class="choice-desc" [innerHTML]="choice.desc"></span>
+              </div>
+          </div>
+          </label>
+      </div>
+    </div>
+  <div>
+</div>

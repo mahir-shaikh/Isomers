@@ -1,0 +1,10 @@
+<div 
+    id="meetingItem" 
+    class="meetingItem"
+    [class.hidden]="isHidden" 
+    [class.meetingIsViewed]="isViewed" 
+    [class.meetingIsNormal]="!isViewed" 
+    (click)="onSelect()">
+  <img class = "meetingItem-icon" [src]="meeting.icon">
+    <p class = "meetingItem-name">{{ meeting.name }}</p>
+</div>

@@ -1,0 +1,116 @@
+.planningTool
+    .eventBody
+        .content-div
+            .metrics
+                padding 10px 0
+                border-bottom 1px solid rgba(89,88,84,0.2)
+                color #000
+                .metric
+                    text-align center
+                    align-items center
+                    line-height 20px
+                    border-right 1px solid #6c3
+                    padding 7px 3px
+                    justify-content center
+                    &:last-child
+                        border-right 0
+                    &::before
+                        display initial
+                    text-outlet
+                        width 100%
+                    calc-outlet
+                        padding 0
+                        padding-top 5px
+                        text-align center
+            .doofocus-content
+                // .readOnly
+                //     pointer-events none
+                .data-container
+                    .data-actions
+                        position relative
+                        background rgba(236, 236,234, 0.43)
+                        margin-top 3px
+                        border 1px solid rgb(236,236,234)
+                        .custom-checkbox
+                            padding 8px
+                            display inline-block
+                            color #4f7345
+                            &:before
+                                content " "
+                                font-family FontAwesome
+                                border 2px solid #666666
+                                padding 2px 10px
+                                top 50%
+                                transform translateY(-50%)
+                                cursor pointer
+                                background-color #ebebeb
+                            &.checked
+                                &:before
+                                    content "\F00C"
+                                    padding 2px
+                                & ~ .actions
+                                    font-weight 500
+                            &.disabled
+                                pointer-events none
+                                &:hover
+                                    content "option is disabled as previously selected or actions max check."
+                                &:after
+                                    content " "
+                                    position absolute
+                                    top 4px
+                                    bottom 0
+                                    left 8px
+                                    right 0
+                                    background-color rgba(255, 255, 255, 0.5)
+                                    width 24px
+                                    height 24px
+                    .actions
+                        display inline-block
+                        padding-left 12px
+                        padding-right 25px
+                        max-width calc(100% - 45px)
+                    .tooltip-data
+                        position absolute
+                        right 8px
+                        top 50%
+                        transform translateY(-50%)
+                        z-index 10
+                .left-pane
+                    .action-description
+                        color #000
+                        font-weight 500
+                        padding-bottom 5px
+                .right-pane
+                    .upper-data
+                        .data-value-container
+                            &:first-child
+                                color #000
+                                font-weight 500
+                                margin-bottom .5em
+                            &:nth-child(2)
+                                margin-bottom 1em
+                            &:last-child
+                                border-top 1px solid #000
+                            .data-value
+                                text-align center
+                            .total
+                                // background #ececea
+                        .submit-btn
+                            text-align center
+                            padding-top 20px
+                            text-outlet
+                                background-color #4f7345
+                                color #fff
+                                padding 5px 20px
+                    .graph-data
+                        .doo-allocation-header
+                            text-align center
+                            padding-top 25px
+                            color #000
+                            font-weight 500
+            .submit-footer
+                text-align center
+                margin-bottom 30px
+                text-outlet
+                    background #4F7345
+

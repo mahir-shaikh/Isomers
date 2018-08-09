@@ -1,0 +1,55 @@
+<div>
+
+    <article class="content-div">
+        <h1>{{ title }}</h1>
+        <br />
+        <div class="col-md-12">
+            <div class="col-md-12 content-col">
+                <div class="content-row">
+                    <div class="col-sm-4 cell form-lebel row-header"></div>
+                    <div class="col-sm-4 cell form-lebel row-header"><text-outlet key="Revenue"></text-outlet></div>
+                    <div class="col-sm-4 cell form-lebel row-header"><text-outlet key="Profitability"></text-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-sm-4 cell form-lebel row-header"></div>
+                    <div class="col-sm-2 cell form-lebel row-header"><text-outlet key="Target"></text-outlet></div>
+                    <div class="col-sm-2 cell form-lebel row-header"><text-outlet key="Actual"></text-outlet></div>
+                    <div class="col-sm-2 cell form-lebel row-header"><text-outlet key="Target"></text-outlet></div>
+                    <div class="col-sm-2 cell form-lebel row-header"><text-outlet key="Actual"></text-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-sm-4 cell form-lebel row-header"><text-outlet key="EnterpriseHW"></text-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlInputProd1RevTarget" yearRef="" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlOutputProd1CAGRGoal" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlInputProd1ProfitTarget" yearRef="" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlOutputProd1OpsMarginGoal" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-sm-4 cell form-lebel row-header"><text-outlet key="EnterpriseSW"></text-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlInputProd2RevTarget" yearRef="" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlOutputProd2CAGRGoal" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlInputProd2ProfitTarget" yearRef="" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlOutputProd2OpsMarginGoal" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-sm-4 cell form-lebel row-header"><text-outlet key="Consumer"></text-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlInputProd3RevTarget" yearRef="" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlOutputProd3CAGRGoal" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlInputProd3ProfitTarget" yearRef="" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlOutputProd3OpsMarginGoal" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+                <div class="content-row">
+                    <div class="col-sm-4 cell form-lebel row-header"><text-outlet key="Services"></text-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlInputProd5RevTarget" yearRef="" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlOutputProd5CAGRGoal" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlInputProd5ProfitTarget" yearRef="" format="" scaler=""></calc-outlet></div>
+                    <div class="col-sm-2 cell"><calc-outlet ref="tlOutputProd5OpsMarginGoal" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div [innerHTML]="narrative" class="feedback-text"></div>
+    </article>
+
+</div>

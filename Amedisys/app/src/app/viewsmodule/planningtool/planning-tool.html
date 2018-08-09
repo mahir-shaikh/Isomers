@@ -1,0 +1,78 @@
+<div class="planning-tool animated" [class.slideOutLeft]="isClosing" [class.slideInLeft]="isOpening">
+    <div class="left-pane col-xs-2">
+        <div class="left-pane-header">
+            <h3 class="planning-tool-title"><text-outlet key="PlanningTool"></text-outlet></h3>
+            <span class="planning-tool-back icon-return-arrow" (click)="onClose()"><text-outlet class="planning-tool-back-title" key="Return to Dashboard"></text-outlet></span>
+        </div>
+        <div class="left-pane-links">
+            <p><text-outlet key="CareCenter1"></text-outlet></p>
+            <div class="left-pane-link" [class.activeTab]="activeTab == 1" [routerLink]="['/dashboard', { outlets: { 'planning': 'planning/carecenter/1/1' } }]" routerLinkActive="active">
+                <span class="left-pane-link-text"><text-outlet key="DOOAction"></text-outlet></span>
+            </div>
+            <div class="left-pane-link" [class.activeTab]="activeTab == 2" [routerLink]="['/dashboard', { outlets: { 'planning': 'planning/carecenter/1/2' } }]" routerLinkActive="active">
+                <span class="left-pane-link-text"><text-outlet key="Forecast"></text-outlet></span>
+            </div>
+            <div class="left-pane-link" [class.activeTab]="activeTab == 3" [routerLink]="['/dashboard', { outlets: { 'planning': 'planning/carecenter/1/3' } }]" routerLinkActive="active">
+                <span class="left-pane-link-text"><text-outlet key="Staffing"></text-outlet></span>
+            </div>
+
+            <p><text-outlet key="CareCenter2"></text-outlet></p>
+            <div class="left-pane-link" [class.activeTab]="activeTab == 4" [routerLink]="['/dashboard', { outlets: { 'planning': 'planning/carecenter/2/1' } }]" routerLinkActive="active">
+                <span class="left-pane-link-text"><text-outlet key="DOOAction"></text-outlet></span>
+            </div>
+            <div class="left-pane-link" [class.activeTab]="activeTab == 5" [routerLink]="['/dashboard', { outlets: { 'planning': 'planning/carecenter/2/2' } }]" routerLinkActive="active">
+                <span class="left-pane-link-text"><text-outlet key="Forecast"></text-outlet></span>
+            </div>
+            <div class="left-pane-link" [class.activeTab]="activeTab == 6" [routerLink]="['/dashboard', { outlets: { 'planning': 'planning/carecenter/2/3' } }]" routerLinkActive="active">
+                <span class="left-pane-link-text"><text-outlet key="Staffing"></text-outlet></span>
+            </div>
+        </div>
+        
+        <div class="left-pane-bottom-links row">
+            <div class="row add-flex links reports-link" [routerLink]="['/dashboard', {outlets: {'planning':'planning/reports'}}]" routerLinkActive="active">
+                <img src="../../../../assets/images/reports-white.svg" class="report-img">
+                <text-outlet key="Reports"></text-outlet>
+            </div>
+            <div class="row add-flex links competitors-link" (click)="navigateToComp()">
+                <img src="../../../../assets/images/competitors-white.svg" class="competitor-img">
+                <text-outlet key="Competitors"></text-outlet>
+            </div>
+            <div class="row add-flex links instructions-link" [routerLink]="['/dashboard', {outlets: {'planning':'planning/tips'}}]" routerLinkActive="active">
+                <!-- <my-tooltip class="ftes-remaining-tooltip" placement="right" key=""></my-tooltip> -->
+                <img src="../../../../assets/images/instruction-white.svg" class="instruction-img">
+                <text-outlet key="Instructions"></text-outlet>
+            </div>
+        </div>
+    </div>
+    <div class="right-pane col-xs-10">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+    <div class="dashboard-notification">
+
+        <div class="modal-backdrop modal-backdrop fade in" *ngIf="notificationVisible"></div>
+        <div class="notification-dialog modal fade in" *ngIf="notificationVisible" [class.visible]="notificationVisible">
+          <div class="modal-dialog alert-modal">
+            <div class="modal-content">
+              <div class="modal-body row">
+
+                <div class="notification-message">
+                    <div type="button" class="notification-close  event-close fa fa-times" (click)="notificationVisible = false"></div>
+                    <div class="button-holder">
+                        <button type="button" class="btn btn-primary return-dash" (click)="onClose()">Return to Dash</button>
+                    </div>
+                    <div class="notification-message-content">
+                        <div class="notification-message-heading">
+                            <span  class="btn-alert-txt">{{notificationType}}</span>
+                        </div>
+                        <div class="notification-message-title">
+                            <span class="btn-details-txt">{{notificationTitle}}</span>
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+          </div>
+        </div>
+    </div>
+</div>

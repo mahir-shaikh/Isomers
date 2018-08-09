@@ -1,0 +1,193 @@
+<div class="goal-setting-wrapper animated {{routeAnimation}}">
+    <div class="row col-xs-12 goal-setting-content" *ngIf="isInput">
+        <div class="goal-setting-left-col col-xs-4">
+            <h3 class="goal-setting-title"><text-outlet key="GoalSettingTitle"></text-outlet></h3>
+            <div class="goal-setting-content-body"><text-outlet key="GoalSettingText" asInnerHtml="true"></text-outlet></div>
+        </div>
+        <div class="goal-setting-right-col col-xs-8">
+            <div class="goal-setting-row">
+                <div class="goal-setting-group-title col-xs-12"><text-outlet key="EnterpriseHardware"></text-outlet></div>
+                <div class="col-xs-12">
+                    <div class="col-xs-3 goal-setting-slider-label"><text-outlet key="Revenue"></text-outlet></div>
+                    <div class="col-xs-7 col-xs-offset-1 goal-setting-slider"><calc-slider ref="tlInputProd1RevTarget" min="0" max="4" step="1" handleValueRef="tlOutputProd1RevGoalSlider"></calc-slider></div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-3 goal-setting-slider-label"><text-outlet key="Profitability"></text-outlet></div>
+                    <div class="col-xs-7 col-xs-offset-1 goal-setting-slider"><calc-slider ref="tlInputProd1ProfitTarget" min="0" max="4" step="1" handleValueRef="tlOutputProd1PftGoalSlider"></calc-slider></div>
+                </div>
+                <div class="goal-setting-slider-ticks-container col-xs-12">
+                    <div class="col-xs-7 col-xs-offset-4 goal-setting-slider-ticks">
+                        <div class="goal-setting-tick goal-setting-tick__0"><text-outlet key="None"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__1"><text-outlet key="Conservative"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__2"><text-outlet key="Medium"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__3"><text-outlet key="High"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__4"><text-outlet key="Stretch"></text-outlet></div>
+                    </div>
+                </div>
+            </div>
+            <div class="goal-setting-row">
+                <div class="goal-setting-group-title col-xs-12"><text-outlet key="EnterpriseSoftware"></text-outlet></div>
+                <div class="col-xs-12">
+                    <div class="col-xs-3 goal-setting-slider-label"><text-outlet key="Revenue"></text-outlet></div>
+                    <div class="col-xs-7 col-xs-offset-1 goal-setting-slider"><calc-slider ref="tlInputProd2RevTarget" min="0" max="4" step="1" handleValueRef="tlOutputProd2RevGoalSlider"></calc-slider></div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-3 goal-setting-slider-label"><text-outlet key="Profitability"></text-outlet></div>
+                    <div class="col-xs-7 col-xs-offset-1 goal-setting-slider"><calc-slider ref="tlInputProd2ProfitTarget" min="0" max="4" step="1" handleValueRef="tlOutputProd2PftGoalSlider"></calc-slider></div>
+                </div>
+                <div class="goal-setting-slider-ticks-container col-xs-12">
+                    <div class="col-xs-7 col-xs-offset-4 goal-setting-slider-ticks">
+                        <div class="goal-setting-tick goal-setting-tick__0"><text-outlet key="None"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__1"><text-outlet key="Conservative"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__2"><text-outlet key="Medium"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__3"><text-outlet key="High"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__4"><text-outlet key="Stretch"></text-outlet></div>
+                    </div>
+                </div>
+            </div>
+            <div class="goal-setting-row">
+                <div class="goal-setting-group-title col-xs-12"><text-outlet key="Consumer"></text-outlet></div>
+                <div class="col-xs-12">
+                    <div class="col-xs-3 goal-setting-slider-label"><text-outlet key="Revenue"></text-outlet></div>
+                    <div class="col-xs-7 col-xs-offset-1 goal-setting-slider"><calc-slider ref="tlInputProd3RevTarget" min="0" max="4" step="1" handleValueRef="tlOutputProd3RevGoalSlider"></calc-slider></div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-3 goal-setting-slider-label"><text-outlet key="Profitability"></text-outlet></div>
+                    <div class="col-xs-7 col-xs-offset-1 goal-setting-slider"><calc-slider ref="tlInputProd3ProfitTarget" min="0" max="4" step="1" handleValueRef="tlOutputProd3PftGoalSlider"></calc-slider></div>
+                </div>
+                <div class="goal-setting-slider-ticks-container col-xs-12">
+                    <div class="col-xs-7 col-xs-offset-4 goal-setting-slider-ticks">
+                        <div class="goal-setting-tick goal-setting-tick__0"><text-outlet key="None"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__1"><text-outlet key="Conservative"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__2"><text-outlet key="Medium"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__3"><text-outlet key="High"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__4"><text-outlet key="Stretch"></text-outlet></div>
+                    </div>
+                </div>
+            </div>
+            <div class="goal-setting-row">
+                <div class="goal-setting-group-title col-xs-12"><text-outlet key="Services"></text-outlet></div>
+                <div class="col-xs-12">
+                    <div class="col-xs-3 goal-setting-slider-label"><text-outlet key="Revenue"></text-outlet></div>
+                    <div class="col-xs-7 col-xs-offset-1 goal-setting-slider"><calc-slider ref="tlInputProd5RevTarget" min="0" max="4" step="1" handleValueRef="tlOutputProd5RevGoalSlider"></calc-slider></div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-3 goal-setting-slider-label"><text-outlet key="Profitability"></text-outlet></div>
+                    <div class="col-xs-7 col-xs-offset-1 goal-setting-slider"><calc-slider ref="tlInputProd5ProfitTarget" min="0" max="4" step="1" handleValueRef="tlOutputProd5PftGoalSlider"></calc-slider></div>
+                </div>
+                <div class="goal-setting-slider-ticks-container col-xs-12">
+                    <div class="col-xs-7 col-xs-offset-4 goal-setting-slider-ticks">
+                        <div class="goal-setting-tick goal-setting-tick__0"><text-outlet key="None"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__1"><text-outlet key="Conservative"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__2"><text-outlet key="Medium"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__3"><text-outlet key="High"></text-outlet></div>
+                        <div class="goal-setting-tick goal-setting-tick__4"><text-outlet key="Stretch"></text-outlet></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="goal-setting-row">
+                <div class="col-xs-12">
+                    <div class="goal-setting-button-container col-xs-11">
+                        <div class="btn btn-primary goal-setting-submit pull-right" (click)="onSubmit()" *ngIf="isInput"><text-outlet key="Submit"></text-outlet></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <calc-slider ref="tlOutputGoalComplete" min="1" max="5" step="1"></calc-slider> -->
+    </div>
+    <div class="row col-xs-12 goal-setting-content-feedback" *ngIf="!isInput">
+        <div class="goal-setting-left-col col-xs-6">
+            <h3 class="goal-setting-title"><text-outlet key="GoalSettingTitle"></text-outlet></h3>
+            <div class="goal-setting-content-body">
+
+            <div class="goal-setting-content-validation">
+                <text-outlet key="FeedbackTooAmbitious" asInnerHtml="true" *ngIf="tlOutputGoalComplete === '1' && tlOutputGoalTooAmbitious === '1'"></text-outlet>
+                <text-outlet key="FeedbackNotAmbitiousEnough" asInnerHtml="true" *ngIf="tlOutputGoalComplete === '1' && tlOutputGoalAmbitious === '0'"></text-outlet>
+                <text-outlet key="FeedbackNotEnoughGoals" asInnerHtml="true" *ngIf="tlOutputGoalComplete === '0'"></text-outlet>
+                <text-outlet key="FeedbackJustRight" asInnerHtml="true" *ngIf="tlOutputGoalAcceptable === '1'"></text-outlet>
+            </div>
+
+            </div>
+        </div>
+        <div class="goal-setting-right-col col-xs-6">
+            <div class="goal-setting-row">
+                <div class="goal-setting-group-title col-xs-12"><text-outlet key="EnterpriseHardware"></text-outlet></div>
+                <div class="col-xs-12">
+                    <div class="goal-setting-metric-label"><text-outlet key="Revenue"></text-outlet></div>
+                    <div class="goal-setting-metric-value"><calc-outlet ref="tlOutputProd1RevGoalSlider" format="0.0%" scaler="100" useRawValue="true"></calc-outlet></div>
+                    <div class="goal-setting-metric-separator">|</div>
+                    <div class="goal-setting-metric-label"><text-outlet key="Profitability"></text-outlet></div>
+                    <div class="goal-setting-metric-value"><calc-outlet ref="tlOutputProd1PftGoalSlider" format="0.0%" scaler="100" useRawValue="true"></calc-outlet></div>
+                </div>
+            </div>
+            <div class="goal-setting-row">
+                <div class="goal-setting-group-title col-xs-12"><text-outlet key="EnterpriseSoftware"></text-outlet></div>
+                <div class="col-xs-12">
+                    <div class="goal-setting-metric-label"><text-outlet key="Revenue"></text-outlet></div>
+                    <div class="goal-setting-metric-value"><calc-outlet ref="tlOutputProd2RevGoalSlider" format="0.0%" scaler="100" useRawValue="true"></calc-outlet></div>
+                    <div class="goal-setting-metric-separator">|</div>
+                    <div class="goal-setting-metric-label"><text-outlet key="Profitability"></text-outlet></div>
+                    <div class="goal-setting-metric-value"><calc-outlet ref="tlOutputProd2PftGoalSlider" format="0.0%" scaler="100" useRawValue="true"></calc-outlet></div>
+                </div>
+            </div>
+            <div class="goal-setting-row">
+                <div class="goal-setting-group-title col-xs-12"><text-outlet key="Consumer"></text-outlet></div>
+                <div class="col-xs-12">
+                    <div class="goal-setting-metric-label"><text-outlet key="Revenue"></text-outlet></div>
+                    <div class="goal-setting-metric-value"><calc-outlet ref="tlOutputProd3RevGoalSlider" format="0.0%" scaler="100" useRawValue="true"></calc-outlet></div>
+                    <div class="goal-setting-metric-separator">|</div>
+                    <div class="goal-setting-metric-label"><text-outlet key="Profitability"></text-outlet></div>
+                    <div class="goal-setting-metric-value"><calc-outlet ref="tlOutputProd3PftGoalSlider" format="0.0%" scaler="100" useRawValue="true"></calc-outlet></div>
+                </div>
+            </div>
+            <div class="goal-setting-row">
+                <div class="goal-setting-group-title col-xs-12"><text-outlet key="Services"></text-outlet></div>
+                <div class="col-xs-12">
+                    <div class="goal-setting-metric-label"><text-outlet key="Revenue"></text-outlet></div>
+                    <div class="goal-setting-metric-value"><calc-outlet ref="tlOutputProd5RevGoalSlider" format="0.0%" scaler="100" useRawValue="true"></calc-outlet></div>
+                    <div class="goal-setting-metric-separator">|</div>
+                    <div class="goal-setting-metric-label"><text-outlet key="Profitability"></text-outlet></div>
+                    <div class="goal-setting-metric-value"><calc-outlet ref="tlOutputProd5PftGoalSlider" format="0.0%" scaler="100" useRawValue="true"></calc-outlet></div>
+                </div>
+            </div>
+            <div class="goal-setting-row">
+                <div class="col-xs-12">
+                    <div class="button-container col-xs-11">
+                        <div class="btn btn-primary goal-setting-submit pull-right" (click)="onSubmit()" *ngIf="!isInput && tlOutputGoalAcceptable === '0'"><text-outlet key="Edit"></text-outlet></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 goal-setting-footer" *ngIf="!isInput && tlOutputGoalAcceptable === '1'">
+            <div class="next-action col-xs-6 col-xs-offset-3">
+                <div class="btn-wrapper row">
+                    <div class="btn btn-primary col-xs-4" (click)="navigate()"><text-outlet key="Visit Dashboard"></text-outlet></div>
+                    <div class="col-xs-8">
+                        <text-outlet key="Alert"class="btn-alert-txt"></text-outlet>
+                        <text-outlet key="Visit Your Dashboard" class="btn-details-txt"></text-outlet>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!-- <div class="validations row">
+    <div class="col-xs-12">
+        <div class="col-xs-4"><text-outlet key="Complete"></text-outlet></div>
+        <div class="col-xs-4"><calc-outlet ref="tlOutputGoalComplete"></calc-outlet></div>
+    </div>
+    <div class="col-xs-12">
+        <div class="col-xs-4"><text-outlet key="TooAmbitious"></text-outlet></div>
+        <div class="col-xs-4"><calc-outlet ref="tlOutputGoalTooAmbitious"></calc-outlet></div>
+    </div>
+    <div class="col-xs-12">
+        <div class="col-xs-4"><text-outlet key="Ambitious"></text-outlet></div>
+        <div class="col-xs-4"><calc-outlet ref="tlOutputGoalAmbitious"></calc-outlet></div>
+    </div>
+    <div class="col-xs-12">
+        <div class="col-xs-4"><text-outlet key="Acceptable"></text-outlet></div>
+        <div class="col-xs-4"><calc-outlet ref="tlOutputGoalAcceptable"></calc-outlet></div>
+    </div>
+</div> -->

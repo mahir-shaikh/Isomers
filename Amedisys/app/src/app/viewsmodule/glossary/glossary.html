@@ -1,0 +1,20 @@
+<div class="glossary-search-cont">
+    <input class="glossary-search" type="text" placeholder="Search" (keyup)="searchGlossary($event)" />
+    <div class="glossary-search-icon fa fa-search"></div>
+</div>
+<div class="glossary-cont">
+    <div class="glossary-list">
+        <div *ngFor="let gc of glossaryContent | searchGlossary:searchAlphabet" id="{{gc.alphabet}}" class="glossary-list-cont">
+            <h2 class="glossary-list-alphabet">{{gc.alphabet}}</h2>
+            <div *ngFor="let content of gc.glossary | searchGlossary:searchAlphabet" class="glossary-list-content">
+                <h3 class="glossary-list-title">{{content.title}}</h3>
+                <span class="glossary-list-desc">{{content.description}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="glossary-alphabets-cont">
+        <div *ngFor="let alphabet of alphabets; let i=index" class="col-xs-3 glossary-alphabets" id="#{{alphabet}}" [class.selected]="activeIndex === i" (click)="scrollGlossaryList($event, i)">
+            <span class="glossary-alphabet">{{alphabet}}</span>
+        </div>
+    </div>
+</div>

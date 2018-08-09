@@ -1,0 +1,57 @@
+.hidden {
+  display: none;
+}
+.planning-tool-cont {
+  height: calc(100% - 58px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 50px;
+}
+.planning-tool-cont .tab-headers {
+  width: 64%;
+  display: inline-block;
+  padding: 30px 15px;
+  text-align: center;
+}
+.planning-tool-cont .tab-headers .tab-heading {
+  font-size: 2rem;
+  color: #4f7345;
+  font-weight: 500;
+  padding: 0 20px;
+  border-right: 2px dotted #fff;
+  cursor: pointer;
+  display: inline-block;
+}
+.planning-tool-cont .tab-headers .tab-heading:first-child {
+  padding-left: 0;
+}
+.planning-tool-cont .tab-headers .tab-heading:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+.planning-tool-cont .tab-headers .tab-heading.active {
+  color: #fff;
+}
+.planning-tool-cont .content-row {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.planning-tool-cont .content-row .col-sm-6:nth-child(odd) {
+  padding: 0 5px 0 0;
+}
+.planning-tool-cont .content-row .col-sm-6:nth-child(even) {
+  padding: 0 0 0 5px;
+}
+@media (max-width: 1024px) {
+  .planning-tool-cont {
+    height: calc(100% - 44px);
+  }
+  .planning-tool-cont .tab-headers .tab-heading {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .planning-tool-cont .tab-headers .tab-heading {
+    border-right: 2px dotted #fff;
+  }
+}

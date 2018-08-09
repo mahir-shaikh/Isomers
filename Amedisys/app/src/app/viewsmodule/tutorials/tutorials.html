@@ -1,0 +1,31 @@
+<div class="tutorials-modal" [class.modalShow]="modalShow"></div>
+<div class="tutorials animated" [class.slideOutRight]="isClosing" [class.slideInRight]="isOpening" [class.expanded]="expanded">
+<div class="tutorials-close-btn col-xs-12">
+    <div (click)="onClose()" class="tutorials-close event-close fa fa-times"></div>
+</div>
+<text-outlet key="Tutorials" class="tutorials-title"></text-outlet>
+    <div class="tutorials-content">
+        <div class="tutorials-links">
+            
+            <!-- <a (click)="openChild()">Sales and Marketing</a> -->
+            <a class="row tutorials-link" (click)="expanded=true; activeIndex=0"><text-outlet key="Guide"></text-outlet></a>
+            <a class="row tutorials-link" (click)="expanded=true; activeIndex=1"><text-outlet key="PNV"></text-outlet></a>
+            <a class="row tutorials-link" (click)="expanded=true; activeIndex=2"><text-outlet key="LVOC"></text-outlet></a>
+            <a class="row tutorials-link" (click)="expanded=true; activeIndex=3"><text-outlet key="ASWOT"></text-outlet></a>
+            <a class="row tutorials-link" (click)="expanded=true; activeIndex=4"><text-outlet key="FVC"></text-outlet></a>
+            <a class="row tutorials-link" (click)="expanded=true; activeIndex=5"><text-outlet key="CED"></text-outlet></a>
+            <a class="row tutorials-link" (click)="expanded=true; activeIndex=6"><text-outlet key="ReturnOnAssets"></text-outlet></a>
+            <a class="row tutorials-link" (click)="expanded=true; activeIndex=7"><text-outlet key="HIQROA"></text-outlet></a>
+        </div>
+        <div class="tutorials-expansion" *ngIf="expanded" [ngSwitch]="activeIndex">
+            <tutorial-content contentClass="guide" textKey="GUIDE" [images]="tutorialImages['guideImages']" *ngSwitchCase="0"></tutorial-content>
+            <tutorial-content contentClass="pnv" textKey="PNV" [images]="tutorialImages['pnvImages']" *ngSwitchCase="1"></tutorial-content>
+            <tutorial-content contentClass="lvoc" textKey="LVOC" [images]="tutorialImages['lvocImages']" *ngSwitchCase="2"></tutorial-content>
+            <tutorial-content contentClass="aswot" textKey="ASWOT" [images]="tutorialImages['aswotImages']" *ngSwitchCase="3"></tutorial-content>
+            <tutorial-content contentClass="fvc" textKey="FVC" [images]="tutorialImages['fvcImages']" *ngSwitchCase="4"></tutorial-content>
+            <tutorial-content contentClass="ced" textKey="CED" [images]="tutorialImages['cedImages']" *ngSwitchCase="5"></tutorial-content>
+            <tutorial-content contentClass="roa" textKey="ReturnOnAssets" [images]="tutorialImages['roaImages']" *ngSwitchCase="6"></tutorial-content>
+            <tutorial-content contentClass="hiqroa" textKey="HIQROA" [images]="tutorialImages['hiqroaImages']" *ngSwitchCase="7"></tutorial-content>
+        </div>
+    </div>
+</div>

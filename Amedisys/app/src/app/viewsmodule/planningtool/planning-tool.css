@@ -1,0 +1,211 @@
+:host {
+  display: block;
+}
+.planning-tool {
+  background: #fff;
+  height: 100%;
+}
+.planning-tool-title {
+  margin: 0;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.planning-tool-back {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.planning-tool-back-title {
+  font-family: "OpenSans";
+  font-size: 14px;
+  width: 80%;
+  display: inline-block;
+}
+.planning-tool-back:before {
+  position: relative;
+  top: 3px;
+  font-size: 1.7rem;
+  margin: 0 10px 0 0;
+}
+.planning-tool .left-pane {
+  height: 100%;
+  background: #4f7345;
+  padding: 0;
+  font-size: 18px;
+}
+.planning-tool .left-pane-header {
+  text-align: left;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 20px;
+  -webkit-box-shadow: inset 0 10px 9px -10px rgba(0,0,0,0.8);
+  box-shadow: inset 0 10px 9px -10px rgba(0,0,0,0.8);
+}
+.planning-tool .left-pane-links {
+  position: relative;
+  padding-top: 30px;
+  height: calc(100% - 275px);
+  overflow-x: auto;
+}
+.planning-tool .left-pane-links .readOnly {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.planning-tool .left-pane-links p {
+  margin: 20px 0 10px 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ffe788;
+}
+.planning-tool .left-pane-link {
+  padding: 0 0 0 20px;
+  margin: 0;
+  display: block;
+  position: relative;
+}
+.planning-tool .left-pane-link:hover {
+  background: rgba(255,255,255,0.2);
+  color: #7ba96b;
+}
+.planning-tool .left-pane-link text-outlet {
+  cursor: pointer;
+  line-height: 1.1;
+  color: #fff;
+  background: none;
+  display: block;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  transition: color ease-out 0.4s;
+}
+.planning-tool .left-pane-link.activeTab {
+  background: #fff;
+}
+.planning-tool .left-pane-link.activeTab text-outlet {
+  color: #4f7345;
+}
+.planning-tool .left-pane-link.disabled text-outlet {
+  cursor: not-allowed;
+  color: #a8adb4;
+}
+.planning-tool .left-pane-link.disabled text-outlet:hover {
+  background: initial;
+  color: #a8adb4;
+}
+.planning-tool .left-pane-bottom-links .links {
+  padding: 10px 15px;
+  background: rgba(255,255,255,0.2);
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: table;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: solid 3px #fff;
+  border-left: none;
+  transition: background 0.3s ease-out;
+}
+.planning-tool .left-pane-bottom-links .links.active {
+  background: #7ba96b;
+}
+.planning-tool .left-pane-bottom-links .links:hover {
+  background: rgba(255,255,255,0.4);
+}
+.planning-tool .left-pane-bottom-links .links .report-img,
+.planning-tool .left-pane-bottom-links .links .instruction-img,
+.planning-tool .left-pane-bottom-links .links .competitor-img {
+  height: 15px;
+  margin-right: 10px;
+}
+.planning-tool .right-pane {
+  height: 100%;
+  background: #fff;
+  padding: 0;
+}
+.planning-tool .right-pane-cont {
+  background: #fff;
+  height: 100%;
+}
+.planning-tool .right-pane .market-report-cont {
+  position: absolute;
+  right: 12px;
+  padding: 10px;
+  color: #09b8ef;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 5px;
+  top: 10px;
+}
+.planning-tool .right-pane .market-report-icon {
+  float: left;
+  margin: 0 10px 0 0;
+}
+.planning-tool .right-pane .market-report-icon:before {
+  font-size: 2.5rem;
+}
+.planning-tool .right-pane .market-report-text {
+  font-size: 14px;
+  float: left;
+  line-height: 1.5rem;
+  width: 0px;
+}
+.dashboard-notification .modal-content {
+  top: calc(45vh - 66px);
+}
+.dashboard-notification .notification-dialog.visible {
+  display: block;
+}
+.dashboard-notification .notification-close {
+  position: absolute;
+  cursor: pointer;
+  top: -15px;
+  right: 3px;
+  background: #555;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  line-height: 22px;
+  text-align: center;
+  border: 2px solid #fff;
+  font-size: 0.825em;
+  line-height: 21px;
+}
+@media (max-width: 1024px) {
+  .planning-tool .left-pane-header {
+    padding-left: 20px;
+  }
+  .planning-tool .left-pane-title {
+    font-size: 12px;
+  }
+  .planning-tool .left-pane-link text-outlet {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .planning-tool-back:before {
+    margin: 0 5px 0 0;
+  }
+  .planning-tool .left-pane-header {
+    padding-left: 15px;
+  }
+  .planning-tool .left-pane-title {
+    font-size: 12px;
+  }
+  .planning-tool .left-pane-link text-outlet {
+    padding-left: 15px;
+  }
+  .planning-tool .left-pane-links {
+    height: calc(100% - 300px);
+  }
+  .planning-tool .left-pane-bottom-links .links {
+    font-size: 14px;
+    padding: 10px 8px;
+  }
+  .planning-tool .left-pane-bottom-links .links .report-img,
+  .planning-tool .left-pane-bottom-links .links .instruction-img,
+  .planning-tool .left-pane-bottom-links .links .competitor-img {
+    height: 13px;
+  }
+}

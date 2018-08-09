@@ -1,0 +1,215 @@
+<div class="planningTool" [@flyInOut]="animState">
+    <div class="eventBody">
+		<div class="stageWrapper">
+
+                <div class="metrics row add-flex">
+                    <div class="nifo metric add-flex">
+                        <!-- <text-metric titleKey="NIFO" [ref]="'tlOutputDBLOB'+activeIndex+'NIFO'" currentYearRef="xxRound" format="0,0"></text-metric> -->
+                        <text-metric titleKey="NIFOPerc" [ref]="'tlOutputDBLOB'+activeIndex+'OpMargin'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                    </div>
+                    <div class="referral-satisfaction metric add-flex">
+                        <text-metric titleKey="ReferralSatisfaction" [ref]="'tlOutputDBLOB'+activeIndex+'CSAT'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                    </div>
+                    <div class="employee-engagement metric add-flex">
+                        <text-metric titleKey="EmployeeEngagement" [ref]="'tlOutputDBLOB'+activeIndex+'ESAT'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                    </div>
+                    <div class="stars metric add-flex">
+                        <text-metric titleKey="Stars" [ref]="'tlOutputDBLOB'+activeIndex+'Stars'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                    </div>
+                    <div class="revenueGrowth metric add-flex">
+                        <text-metric titleKey="RevenueGrowth" [ref]="'tlOutputDBLOB'+activeIndex+'RevGrowth'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                    </div>
+                    <div class="doo-utilization metric add-flex">
+                        <text-metric titleKey="DOOUtilization" [ref]="'tlOutputDBLOB'+activeIndex+'Emp1Util'" currentYearRef="xxRound" format="0.0%" color1Condition="<" color1Value="100" color2Condition="=" color2Value="100" color3Condition=">" color3Value="100"></text-metric>
+                    </div>
+                    <div class="meeting-container metric" [class.all-meetings-attended]="allMeetingsAttended">
+                        <div class="meeting-text metric-name"><text-outlet key="MeetingRemainingText"></text-outlet></div>
+                        <div class="meeting-value metric-currValue"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'MeetingCountRemaining'" yearRef="xxRound" color1Condition="=" color1Value="0" color2Condition=">" color2Value="0"></calc-outlet></div>
+                    </div>
+                </div>
+                <article class="content-div staffing">
+                    <div class="staffing-table">
+                        <div class="row add-flex heading-row">
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Discipline
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Employee Status
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Employee
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Pay Method
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Weekly Prod.
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Allocated Weekly Prod.
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Weekly Prod. Mod.
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Proj. Weekly Prod.
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Avg. Weekly Missed
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Avg. Weekly Mileage
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Avg. Weekly Admin.
+                            </div>
+                            <div class="col-xs-1 row column-heading add-flex">
+                                <text-outlet></text-outlet>Avg. Weekly Overtime
+                            </div>
+                        </div>
+
+                        <div class="data-rows-container">
+                            <div class="row add-flex data-row" *ngFor="let rows of staffingRows">
+                                <div class="col-xs-1 row data-value add-flex" *ngIf="rows <= 10" [class.meeting-attended]="meetingAttended[rows-1]" [class.disable-staff-btn]="!meetingAttended[rows-1] && allMeetingsAttended">
+                                    <staffmeeting class="meetingBtn" [scene]="localScene" [textRef]="'tlInputLOB'+activeIndex+'Cln'+(rows)+'Text'" [activeINdex]="activeIndex" [rowNo]="rows"></staffmeeting>
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'Dis'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" *ngIf="rows > 10" [class.meeting-attended]="meetingAttended[rows-1]" [class.disable-staff-btn]="!meetingAttended[rows-1] && allMeetingsAttended">
+                                    <staffmeeting class="" class="meetingBtn showIcon{{rows-10}}" [class.disabled]="showIcon[rows-11]" [scene]="localScene" checkForText="true" [textRef]="'tlInputLOB'+activeIndex+'Cln'+(rows)+'Text'" [activeINdex]="activeIndex" [rowNo]="rows"></staffmeeting>
+                                    <calc-dropdown [ref]="'tlInputLOB'+activeIndex+'Cln'+(rows)+'Dis'" [disabled]="disableDropdown[rows - 11]" yearRef="xxRound" [items]="newEmpDropDown[rows-11]"></calc-dropdown>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" *ngIf="rows <= 10" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'Status'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" *ngIf="rows > 10" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-dropdown [ref]="'tlInputLOB'+activeIndex+'Cln'+(rows)+'Status'" [disabled]="disableDropdown[rows - 11]" yearRef="xxRound" [items]="['Open','Full-Time', 'Part-Time']"></calc-dropdown>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'Name'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'PayMethod'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'WeekProd'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'AlloWeekProd'" yearRef="xxRound" format="0"></calc-outlet>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Cln'+(rows)+'WeekProdMod'" yearRef="xxRound" format="0" min="0" max="50"><!-- [IsReadOnly]="disabled" --></calc-stepper>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'WeekProdProj'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'WeekMiss'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'WeekMile'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'WeekAdmin'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="col-xs-1 row data-value add-flex" [class.meeting-attended]="meetingAttended[rows-1]">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Cln'+(rows)+'WeekOT'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clinincal-meeting-container row add-flex">
+                            <div class="clinincal-summary-table col-xs-8">
+                                <div class="row add-flex heading-row">
+                                    <div class="col-xs-4 row column-heading add-flex"></div>
+                                    <div class="col-xs-8 row column-heading-container add-flex">
+                                        <div class="col-xs-4 column-heading"><text-outlet key="Number of Clinicians"></text-outlet></div>
+                                        <div class="col-xs-4 column-heading"><text-outlet key="Average Allocated Meetings"></text-outlet></div>
+                                        <div class="col-xs-4 column-heading"><text-outlet key="Average Weekly Productivity"></text-outlet></div>
+                                    </div>
+                                </div>
+                                <div class="row add-flex data-row">
+                                    <div class="col-xs-4 row data-heading add-flex"><text-outlet key="SkilledNursing"></text-outlet></div>
+                                    <div class="col-xs-8 row data-value-container add-flex">
+                                        <div class="col-xs-4 data-value"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Emp1Total'" yearRef="xxRound"></calc-outlet></div>
+                                        <div class="col-xs-4 data-value"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Emp1AvgAlloMeet'" yearRef="xxRound"></calc-outlet></div>
+                                        <div class="col-xs-4 data-value"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Emp1AvgCapacity'" yearRef="xxRound"></calc-outlet></div>
+                                    </div>
+                                </div>
+                                <div class="row add-flex data-row">
+                                    <div class="col-xs-4 row data-heading add-flex"><text-outlet key="OccupationalTherapy"></text-outlet></div>
+                                    <div class="col-xs-8 row data-value-container add-flex">
+                                        <div class="col-xs-4 data-value"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Emp2Total'" yearRef="xxRound"></calc-outlet></div>
+                                        <div class="col-xs-4 data-value"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Emp2AvgAlloMeet'" yearRef="xxRound"></calc-outlet></div>
+                                        <div class="col-xs-4 data-value"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Emp2AvgCapacity'" yearRef="xxRound"></calc-outlet></div>
+                                    </div>
+                                </div>
+                                <div class="row add-flex data-row">
+                                    <div class="col-xs-4 row data-heading add-flex"><text-outlet key="PhysicalTherapy"></text-outlet></div>
+                                    <div class="col-xs-8 row data-value-container add-flex">
+                                        <div class="col-xs-4 data-value"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Emp3Total'" yearRef="xxRound"></calc-outlet></div>
+                                        <div class="col-xs-4 data-value"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Emp3AvgAlloMeet'" yearRef="xxRound"></calc-outlet></div>
+                                        <div class="col-xs-4 data-value"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Emp3AvgCapacity'" yearRef="xxRound"></calc-outlet></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="meeting-container rwo add-flex col-xs-2" [class.all-meetings-attended]="allMeetingsAttended">
+                                <div class="col-xs-9 row add-flex meeting-text"><text-outlet key="MeetingRemainingText"></text-outlet></div>
+                                <div class="col-xs-3 row add-flex meeting-value"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'MeetingCountRemaining'" yearRef="xxRound"></calc-outlet></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 row add-flex chart-contianer">
+
+                            <div class="utilization-table chart-holder">
+                                <div class="heading-row row add-flex">
+                                    <div class="col-xs-12 row column-heading add-flex">
+                                        <text-outlet key="UtilizationPerc"></text-outlet>
+                                    </div>
+                                </div>
+                                <div class="data-row row add-flex">
+                                    <basiccolumn
+                                    width="450"
+                                        [rangeRef]="'tlOutputLOB'+activeIndex+'Emp1Utilization, tlOutputLOB'+activeIndex+'Emp2Utilization, tlOutputLOB'+activeIndex+'Emp3Utilization'"
+                                        categoryLabels="SkilledNursing, OccupationalTherapy, PhysicalTherapy"
+                                        seriesLabels="utilization"
+                                        chartOptions='{"legend":{"enabled":false},"plotOptions":{"column":{"zones":[{"value":0,"color":"red"},{"color":"green"}]}}}'
+                                        numberFormat="0.0%"
+                                        year="xxRound"
+                                    ></basiccolumn>
+                                </div>
+                            </div>
+
+                            <div class="rn-lpn-visit chart-holder">
+                                <div class="heading-row row add-flex">
+                                    <div class="col-xs-12 row column-heading add-flex">
+                                        <text-outlet key="Projected Rn/LPN Visits"></text-outlet>
+                                    </div>
+                                </div>
+                                <div class="data-row row add-flex">
+                                    <piechart
+                                    width="450"
+                                        [rangeRef]="'tlOutputLOB'+activeIndex+'Disc1TotalVisitsPerc, tlOutputLOB'+activeIndex+'Disc2TotalVisitsPerc, tlOutputLOB'+activeIndex+'Disc2BelowLicsenceVisits'"
+                                        seriesLabels="RN, LPN, Below License"
+                                        year="xxRound"
+                                        numberFormat="0%" chartTitle="Projected Rn/LPN Visits"
+                                        chartOptions='{"colors": ["#006EB9", "#feab41", "#7BA96B", "#4f7345", "#6868b5", "#7BA96B", "#28324B", "#ee7423", "#FB054B", "#BEC0C1", "#28324b"]}'
+                                    ></piechart>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+        </div>
+                                <!-- <div class="row col-xs-12 submit-footer" [class.hidden]="disabled" >
+                                    <div class="next-action col-xs-12">
+                                        <div class="btn-wrapper row">
+                                            <div class="btn btn-primary" (click)="onSubmit()">
+                                                <text-outlet key="Submit"></text-outlet>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                </div> -->
+    </div>
+</div>

@@ -1,0 +1,104 @@
+<div class="planningTool" [@flyInOut]="animState">
+    <div class="eventBody">
+        <tabset>
+            <tab heading='Strategic Initiatives' [active]="activeIndex === 0" (select)="setActiveIndex(0)">
+                <article class="content-div">
+                    
+                    <p class="initiativesChecked">{{totalChecked}} / {{maxChecks}} Initiatives Selected</p>
+
+                    <div class="corporate-initiative">
+                        <div class="content-col">
+                            <div *ngFor="let initiative of initiativesArray; let i=index" [class.multiSelectSelected]="initiative.isSelected">
+                                <div class="handCursor multiSelect" 
+                                    [class.multiSelectChecked]="initiative.isChecked" 
+                                    [class.multiSelectNotChecked]="!initiative.isChecked" 
+                                    [class.multiSelectDisabled]="!initiative.isEnabled" 
+                                    (click)="onCheck($event, i, initiative.ID)">
+                                </div>
+                                <div class="handCursor multiSelectText" 
+                                    
+                                    [class.multiSelectNotSelected]="!initiative.isSelected" 
+                                    [class.multiSelectTextDisabled]="!initiative.isEnabled" 
+                                    (click)="onSelect($event, i, initiative.ID)">
+                                    {{ initiative.name }}
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+                        <h4>{{ header }}</h4>
+                        
+                    </div>
+                    <div class="corporate-initiative-desc-cont">
+                        <div class="content-row bottom-border">
+                            <div class="col-sm-8">
+                                <p [innerHTML]="description" class="corporate-initiative-desc"></p>
+                            </div>
+                            <div class="col-sm-4">
+                                <p [innerHTML]="impact" class="corporate-initiative-impact"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="corporate-branding">
+                        <div class="content-row">
+                            <div class="col-sm-3 cell form-lebel row-header">
+                                <div class="corporate-branding-title">
+                                    <my-tooltip class="row-tooltip" placement="right" key="ToolTipCorporateBranding"></my-tooltip>
+                                    <text-outlet key="CorporateBranding"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <calc-input class="corporate-branding-input" ref="tlInputBrand" yearRef="tlInputTeamYear" step="1000" type="string" format="0,"></calc-input>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callOutBox">
+                        <div class="callOutBoxContent">
+                            <div class="corporate-initiative-years">
+                                <div class="col-md-4 content-col">
+                                    <text-outlet class="corporate-initiative-year" key="InitiativesUsedYear"></text-outlet> 1
+                                    <div *ngFor="let initiative of initiativesArray; let i=index" class="corporate-initiative-item">
+                                        <div [class.hidden]="initiative.isChecked != 1">
+                                            {{ (i+1) }}: {{ initiative.name }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 content-col">
+                                    <text-outlet class="corporate-initiative-year" key="InitiativesUsedYear"></text-outlet> 2
+                                    <div *ngFor="let initiative of initiativesArray; let i=index" class="corporate-initiative-item">
+                                        <div [class.hidden]="initiative.isChecked != 2">
+                                            {{ (i+1) }}: {{ initiative.name }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 content-col">
+                                    <text-outlet class="corporate-initiative-year" key="InitiativesUsedYear"></text-outlet> 3
+                                    <div *ngFor="let initiative of initiativesArray; let i=index" class="corporate-initiative-item">
+                                        <div [class.hidden]="initiative.isChecked != 3">
+                                            {{ (i+1) }}: {{ initiative.name }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="corporate-other-details">
+                                <div class="content-col">
+                                    <div class="content-row">
+                                        <div class="col-sm-3 cell form-lebel row-header"><text-outlet key="TotalExpense"></text-outlet></div>
+                                        <div class="col-sm-3 cell right"><calc-outlet ref="tlOutputInvestReqInit" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                        <div class="col-sm-6 cell"></div>
+                                    </div>
+                                    <div class="content-row">
+                                        <div class="col-sm-3 cell form-lebel row-header"><text-outlet key="TotalFTEsRequired"></text-outlet></div>
+                                        <div class="col-sm-3 cell right"><calc-outlet ref="tlOutputEmp1ReqInit" yearRef="tlInputTeamYear" format="" scaler=""></calc-outlet></div>
+                                        <div class="col-sm-6 cell"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </tab>
+        </tabset>
+    </div>
+</div>

@@ -1,0 +1,199 @@
+[
+    {
+        "alphabet": "A",
+        "glossary":[
+            {
+                "title": "Active Participants",
+                "description": "The number of active participants you had last year in this customer segment"
+            },
+            {
+                "title": "Allocated FC Days",
+                "description": "The number of FC days you will allocate to this customer segment this year"
+            },
+            {
+                "title": "Average Contribution",
+                "description": "The average dollar amount that active participants contribute to their retirement plan on an annual basis in this customer segment"
+            },
+            {
+                "title": "Average Fees",
+                "description": "The average fees you are charging in this customer segment, relative to the market"
+            }
+        ]
+    },
+    {
+        "alphabet": "B",
+        "glossary":[{
+            "title": "Benefits",
+            "description": "Expense; benefit payments for retirement services insurance and annuities, and retirement services interest credited to policy"
+        }]
+    },
+    {
+        "alphabet": "C",
+        "glossary":[{
+            "title": "Client Operating Results",
+            "description": "Controllable revenue (fees) minus your direct expenses"
+        },{
+            "title": "Committed FC Days",
+            "description": "The number of contractual FC days you are commited to this year in this customer segment"
+        },{
+            "title": "Contribution Growth",
+            "description": "Forecast the percentage of participant contribution growth you are expecting this year in this customer segment; to create an accurate forecast, reference the average annual participant contribution in this customer segment"
+        },{
+            "title": "Corporate Initiatives",
+            "description": "Strategic initatives on the corporate level spanning across the organization that you support"
+        },{
+            "title": "Cross-Sell Capability",
+            "description": "Includes non-retirement institutional sales (E&F, Retiree Health and other parts of the Institutional offer) and referrals into retail business"
+        },{
+            "title": "Customer Satisfaction",
+            "description": "Plan Sponsor NPS survey results in operational and relationship satisfaction"
+        }]
+    },
+    {
+        "alphabet": "D",
+        "glossary":[{
+            "title": "D&I Representation Index",
+            "description": "Percentage of employees who are diverse; provides a target to maintain and strengthen workforce diversity"
+        },{
+            "title": "Direct Expenses",
+            "description": "Expenses; costs that can be directly attributed to customer and/or participant acquisition and services"
+        }]
+    },
+    {
+        "alphabet": "E",
+        "glossary":[{
+            "title": "Employee Efficiency ",
+            "description": "Measure of your employees productivity and collaboration; NPS of your employees"
+        },{
+            "title": "Estimated FC Days Required",
+            "description": "The estimated number of FC days required this year in this customer segment; this number is based on the total number of active participants and the estimated amount of time needed per participant"
+        }]
+    },
+    {
+        "alphabet": "F",
+        "glossary":[{
+            "title": "Fee Revenue",
+            "description": "Revenue; fees charged to customers and/or active participants for recordkeeping and proprietary fund management"
+        },{
+            "title": "Focus Area",
+            "description": "The important roles and responsibilities that RMs, CSMs, and FCs spend time doing, in addition to their typical every day administrative tasks"
+        },{
+            "title": "Forecasted Active Participants",
+            "description": "The number of active participants you are expecting this year in this customer segment; this number is based on the number of active participants you had last year and the percentage growth you are forecasting this year in this customer segment"
+        },{
+            "title": "Forecasted Contribution",
+            "description": "The average annual participant contribution you are expecting in this customer segment; this number is based on last year's average annual participant contribution and the percentage of participant contribution growth you are forecasting this year in this customer segment"
+        },{
+            "title": "Forecasted Revenue",
+            "description": "The forecasted total AUM you are expecting this year in this customer segment; this number is based on the number of active participants in this segment and the average fees they are charged"
+        },{
+            "title": "Forecasted Revenue Growth",
+            "description": "The forecasted revenue growth you are expecting this year in this customer segment; this percentage represents your forecasted total share of participants and the average fees they are charged"
+        }]
+    },
+    {
+        "alphabet": "I",
+        "glossary":[{
+            "title": "IR Business Planning/ Efficiency Index",
+            "description": "A composite score taking into account the accuracy of the inventory of all business risks and the data captured in Archer, and whether the appropriate controls, KRI’s and mitigation are in place"
+        }]
+    },
+    {
+        "alphabet": "M",
+        "glossary":[{
+            "title": "Mappable Sales",
+            "description": "AUM mapped to an organization from another organization, typically the result of winning sole record-keeper and participant's assets transferring over from a previous plan provider"
+        }]
+    },
+    {
+        "alphabet": "N",
+        "glossary":[{
+            "title": "Net Flows",
+            "description": "Total inflows minus total outflows"
+        },{
+            "title": "Net Margin",
+            "description": "Net profit divided by fee revenue"
+        },{
+            "title": "Net New Entrants",
+            "description": "Participant attrition + new participants - churned participants"
+        },{
+            "title": "Net Profit",
+            "description": "Fee revenue minus benefits and direct expenses"
+        },{
+            "title": "Non-Retirement Institutional Sales",
+            "description": "Developing pipelines and growing E&F, Retiree Health and other parts of the Institutional offer"
+        }]
+    },
+    {
+        "alphabet": "O",
+        "glossary":[{
+            "title": "Operational Expenses",
+            "description": "Operational KPIs specifically related to driving non-retirement institutional sales (i.e. Cross-Sell Index) and incentivizing retention (i.e. Net New Entrants)"
+        }]
+    },
+    {
+        "alphabet": "P",
+        "glossary":[{
+            "title": "Participant Growth",
+            "description": "Forecast the percentage of participant growth you are expecting this year in this customer segment; to create an accuate forecast, reference the number of active participants you had last year in this customer segment "
+        },{
+            "title": "Participant New Assets",
+            "description": "Field Consultant Sales Referrals"
+        },{
+            "title": "Participant Satisfaction",
+            "description": "Participant NPS survey results from individual participants"
+        },{
+            "title": "Potential Participants",
+            "description": "The number of potential participants you can provide service to this year in this customer segment; this number is based on the number of non-active participants and the participant churn"
+        }]
+    },
+    {
+        "alphabet": "R",
+        "glossary":[{
+            "title": "Risk Management Index",
+            "description": "Risk Management is a Pass/Fail Metric to drive awareness/engagement on topics of risk identified in the business"
+        }]
+    },
+    {
+        "alphabet": "S",
+        "glossary":[{
+            "title": "Share Of Participants",
+            "description": "The percentage of participants you are expecting to capture within the potential participant base this year in this customer segment"
+        },{
+            "title": "Simplicity Index",
+            "description": "Rating of ease to do business within IRB Lines of Business"
+        },{
+            "title": "Strategy",
+            "description": "Strategy helps a company to achieve its goals; a good strategy takes into account the company's current competitive situation and available resources and capabilities"
+        },{
+            "title": "Strategy Alignment",
+            "description": "When the Visions and goals are aligned at different levels of an organization, alignment of strategies is more likely to occur"
+        },{
+            "title": "Strategy Implementation",
+            "description": "Strategic implementation occurs when the vision, goals and strategy at various levels of the organization have been aligned"
+        },{
+            "title": "SWOT Analysis",
+            "description": "An analysis framework that examines a company's strengths and weaknesses internally, as well as external opportunities and threats"
+        }]
+    },
+    {
+        "alphabet": "T",
+        "glossary":[{
+            "title": "Total Budget Remaining",
+            "description": "The dollar amount left remaining in your annual expense budget"
+        },{
+            "title": "Total Inflows",
+            "description": "AUM; this shows all actual in-year increases to assets under management "
+        },{
+            "title": "Total Outflows",
+            "description": "AUM; this shows all actual in-year decreases to assets under management"
+        }]
+    },
+    {
+        "alphabet": "U",
+        "glossary":[{
+            "title": "Utilization ",
+            "description": "The utilization percentage, by role, this year across the territory (all customer groups); this percentage represents the time spent utilized, factoring in productivity and this percentage includes baseline time spent on administrative tasks, as well as the time spent on focus areas, events, etc. "
+        }]
+    }
+]

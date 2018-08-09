@@ -1,0 +1,12 @@
+<!-- <form class='stepper' [class.danger]="bIsLimitExceeded">
+  <div class='fa fa-plus add stepper-button' [class.isActive]="isFocused" role='button'></div>
+  <input class='field'  #inputValue type='tel' [value]="value" [min]='min' [max]='max' OnlyNumber="true" [step]="step" (change)="(inputValue.value)" (blur)="removeFocus(inputValue.value)" (keydown)="onKeyDown($event, inputValue.value)" (keyup)="onStepperKeyUp($event, inputValue.value)" (focus)="setFocus()"/>
+  <span class="field-value" (click)="setFocusOnInput()" *ngIf="!isFocused">{{value | numFormat:format:scaler}}</span>
+  <div class='fa fa-minus subtract stepper-button' [class.isActive]="isFocused" role='button'></div>
+</form> -->
+<form class='stepper' [class.danger]="bIsLimitExceeded" [class.extendWidth]="isFocused">
+  <div class='fa fa-plus add stepper-button' [class.isActive]="isFocused" role='button'></div>
+  <input class='field' #inputValue type='text' [value]="value" [min]='min' [max]='max' OnlyNumber="true" [step]="step" (change)="onChangeValue(inputValue.value)" (blur)="removeFocus(inputValue.value)" (focus)="setFocus()"/>
+  <span class="field-value" (click)="setFocusOnInput()" *ngIf="!isFocused">{{value | numFormat:format:scaler}}</span>
+  <div class='fa fa-minus subtract stepper-button' [class.isActive]="isFocused" role='button'></div>
+</form>

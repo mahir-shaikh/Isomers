@@ -1,0 +1,25 @@
+<div class="intro-email animated {{routeAnimation}}">
+    <div class="intro-email-wrapper">
+        <div class="col-xs-12 intro-email-header">
+            <div class="intro-email-image"><img class="intro-email-image-el" src="{{content.imagePath}}"></div>
+            <div class="intro-email-title"><span>{{content.title}}</span></div>
+        </div>
+        <div class="col-xs-12 intro-email-content">
+            <p class="intro-email-content-el" [innerHTML]="content.body"></p>
+        </div>
+        <div class="col-xs-12 intro-email-footer">
+                <div class="next-action col-sm-6 col-sm-offset-3">
+                    <div class="btn-wrapper row">
+                        <div class="intro-email-next-button" (click)="navigate()">
+                            <div class="col-xs-3">
+                                <img src="{{content.buttonImagePath}}">
+                            </div>
+                            <div class="col-xs-9">
+                                <span class="btn-alert-txt">{{content.buttonText}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

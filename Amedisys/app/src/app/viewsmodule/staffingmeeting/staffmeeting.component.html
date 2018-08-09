@@ -1,0 +1,62 @@
+<span class="digitalICO meetingICO" (click)="onSelect($event)"></span>
+<div class="modal fade in"  *ngIf="showModal">
+    <div class="modal-dialog modal-lg meeting-modal" *ngIf="showMeeting && !previouslyAttended">
+        <div class="modal-content">
+            <div class="modal-header fullWidthImg" *ngIf="!isThisMeetingAttended">
+                <div class="modalHeader-img">
+                    <!-- <img src="../../../../assets/images/meeting-header1-1.jpg" /> -->
+                    <img *ngIf="imageHeader != ''" [src]="imageHeader" width="100%">
+                </div>
+                <h4 class="modal-title">{{meeting.name}}</h4>
+            </div>
+            <div class="modal-body" *ngIf="!isThisMeetingAttended">
+                <div class="meeting-txt">
+                    {{meeting.narrative}}
+                </div>
+                <div class="textareabox-container">
+                	<textareabox class="" [ref]="textRef" yearRef="xxRound" [isReadOnly]="dsiableTextarea"> </textareabox>
+                </div>
+            </div>
+            <div class="modal-header" *ngIf="isThisMeetingAttended">
+                <h4 class="modal-title"><text-outlet key="NoMeeting"></text-outlet></h4>
+            </div>
+            <div class="modal-body" *ngIf="isThisMeetingAttended">
+                <text-outlet key="NoMoreMeeting" ></text-outlet>
+            </div>
+
+            <div class="button-container">
+                <button type="button" class="btn btn-primary" *ngIf="!dsiableTextarea" (click)="hideAlert(true)">Submit</button>
+                <button type="button" class="btn btn-primary" *ngIf="dsiableTextarea" (click)="hideAlert()">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-dialog modal-lg" *ngIf="!showMeeting && previouslyAttended">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><text-outlet key="MeetingAttn"></text-outlet></h4>
+            </div>
+            <div class="modal-body">
+                <text-outlet key="PrevMeetingAttn" ></text-outlet>
+            </div>
+
+            <div class="button-container">
+                <button type="button" class="btn btn-primary" (click)="hideAlert()">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-dialog modal-sm" *ngIf="!showMeeting && !previouslyAttended">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><text-outlet key="MeetingText"></text-outlet></h4>
+            </div>
+            <div class="modal-body">
+                <text-outlet key="AttendMeetingText" ></text-outlet>
+            </div>
+
+            <div class="button-container submit-container">
+                <button type="button" class="btn btn-success" (click)="showMeeting = true;"><text-outlet key="Yes"></text-outlet></button>
+                <button type="button" class="btn btn-warning" (click)="hideAlert()"><text-outlet key="No"></text-outlet></button>
+            </div>
+        </div>
+    </div>
+</div>

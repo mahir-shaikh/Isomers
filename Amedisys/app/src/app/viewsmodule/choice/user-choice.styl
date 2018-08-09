@@ -1,0 +1,25 @@
+@import '../../../../assets/css/mixins.styl'
+
+.choice
+    clear both
+    &-submitBtn
+        background $primeColor
+        color #fff
+        text-transform uppercase
+        height 40px
+        width 140px
+        text-align center
+        border-radius 5px
+        float right
+        position absolute
+        right 22px
+        border none
+        bottom 15px
+        transition background .3s ease-out
+        &:hover
+            background darken($primeColor, 20)
+    &-cont
+        height calc(100% - 40px)
+
+button[disabled].choice-submitBtn
+    background rgba($primeColor, .3)

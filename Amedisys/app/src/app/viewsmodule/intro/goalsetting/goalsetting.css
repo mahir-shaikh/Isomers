@@ -1,0 +1,188 @@
+.btn-wrapper {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+:host {
+  width: 100vw;
+  height: calc(100vh - 40px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 4rem;
+  padding: 20px;
+  background: #f2f2f2;
+}
+.goal-setting-wrapper {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  padding: 20px;
+  background: #fff;
+}
+.goal-setting-content {
+  height: 100%;
+}
+.goal-setting-content-feedback {
+  height: calc(100% - 92px);
+}
+.goal-setting-container {
+  width: 100%;
+  height: calc(100% - 45px);
+  background: #fff;
+  padding: 0;
+}
+.goal-setting-row {
+  margin-bottom: 15px;
+  clear: both;
+  overflow: hidden;
+}
+.goal-setting-row>.col-xs-12 {
+  padding: 0;
+}
+.goal-setting-title {
+  color: #89d762;
+  font-size: 2em;
+}
+.goal-setting-description {
+  font-size: 0.925em;
+  font-weight: 300;
+}
+.goal-setting-right-col,
+.goal-setting-left-col {
+  min-height: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.goal-setting-right-col {
+  padding: 0 0 0 10px;
+}
+.goal-setting-left-col {
+  overflow: auto;
+}
+.goal-setting-input-row {
+  height: calc(50% - 65px);
+  margin: 10px 15px;
+}
+.goal-setting-input-row>div {
+  height: 100%;
+}
+.goal-setting-group-title {
+  font-size: 1.25em;
+  font-weight: 600;
+  padding-left: 0;
+  margin-bottom: 15px;
+  color: #6d747e;
+}
+.goal-setting-slider-label {
+  color: #f07300;
+  font-size: 0.925em;
+  text-transform: uppercase;
+}
+.goal-setting-footer {
+  height: 90px;
+  padding: 4px 20px;
+  margin-left: 10px;
+}
+.goal-setting-footer .btn-primary {
+  border-radius: 5px;
+}
+.goal-setting-slider,
+.goal-setting-slider-ticks {
+  padding: 0;
+}
+.goal-setting-slider-ticks {
+  position: absolute;
+}
+.goal-setting-slider-ticks-container {
+  margin-bottom: 30px;
+}
+.goal-setting-metric-separator,
+.goal-setting-metric-label,
+.goal-setting-metric-value {
+  padding: 5px;
+  display: inline-block;
+  font-weight: 300;
+  color: #6d747e;
+  font-size: 0.925em;
+}
+.goal-setting-metric-separator {
+  text-align: center;
+}
+.goal-setting-metric-value {
+  color: #f07300;
+}
+.goal-setting-metric-label {
+  text-transform: uppercase;
+}
+.goal-setting-tick {
+  position: absolute;
+  font-size: 0.875em;
+  color: #bec0c1;
+  font-size: 0.825em;
+  transform: translate(-50%, 0);
+}
+.goal-setting-tick__0 {
+  left: 0px;
+}
+.goal-setting-tick__1 {
+  left: 25%;
+}
+.goal-setting-tick__2 {
+  left: 50%;
+}
+.goal-setting-tick__3 {
+  left: 75%;
+}
+.goal-setting-tick__4 {
+  right: 0px;
+  transform: translate(50%, 0);
+}
+.goal-setting-submit {
+  width: 150px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.goal-setting-button-container {
+  padding: 0;
+}
+.tab-set {
+  margin-top: 20px;
+}
+.tab-item {
+  height: 150px;
+  background: #89d762;
+  color: #fff;
+  float: left;
+  margin: 1px;
+  width: calc(50% - 4px);
+}
+.tab-item:nth-child(3),
+.tab-item:nth-child(4) {
+  margin-bottom: 0;
+}
+.tab-item.active {
+  background: #fff;
+  color: #89d762;
+  border: 2px solid #89d762;
+}
+.tab-icon {
+  margin-top: 50px;
+  font-size: 2.5em;
+  text-align: center;
+  width: 100%;
+}
+.tab-item-title {
+  font-size: 1em;
+  text-align: center;
+}
+.tab-content {
+  overflow: hidden;
+  width: calc(100% - 6px);
+  margin-left: 1px;
+}
+.tab-data {
+  border: 1px solid #89d762;
+  border-top: none;
+  padding: 15px;
+}

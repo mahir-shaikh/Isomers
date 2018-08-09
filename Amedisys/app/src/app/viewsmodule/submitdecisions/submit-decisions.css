@@ -1,0 +1,31 @@
+.btn-submit-decisions {
+  background-color: #4f7345;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  padding: 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0px 0px 20px 5px rgba(139,200,118,0.55);
+  transition: background 0.3s ease-in;
+}
+.btn-submit-decisions:hover {
+  background: #8bc876;
+}
+.btn-submit-text {
+  font-size: 18px;
+}
+.modal-content {
+  color: #000;
+  transform: translateY(40%);
+}
+.submit-title {
+  font-family: "OpenSans";
+}
+.button-container .btn-primary text-outlet {
+  background-color: none;
+  background: none;
+  padding: 0;
+}

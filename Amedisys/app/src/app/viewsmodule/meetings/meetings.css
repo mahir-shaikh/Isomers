@@ -1,0 +1,29 @@
+.meetingItem {
+  cursor: pointer;
+  border-bottom: 1px solid #d3d3d3;
+  height: 54px;
+  margin-top: 20px;
+}
+.meetingItem-name {
+  float: left;
+  padding: 9px 0px 0px 12px;
+  font-size: 12px;
+}
+.meetingItem-icon {
+  float: left;
+}
+.hidden {
+  display: none;
+}
+.meetingIsViewed {
+  cursor: pointer;
+  color: #808080;
+}
+.meetingIsNormal {
+  cursor: pointer;
+  color: #0ab9f0;
+}
+.meetingIsNormal .meetingItem-icon {
+  border-radius: 50%;
+  border: 3px solid #0ab9f0;
+}

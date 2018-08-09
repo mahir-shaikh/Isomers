@@ -1,0 +1,87 @@
+@import '../intro.button';
+
+.registration
+    padding 20px
+    color #6D747E
+    background url("./assets/images/background_img.jpg") no-repeat top left
+    height 100%
+    background-size cover
+    @media(max-width 1024px)
+        background url("./assets/images/background_img.jpg") no-repeat top 
+        background-size 100% 100%
+    @media screen and (max-width 1091px)
+        background-position top
+        background-size cover
+    &-wrapper
+        width 50%
+        height 100%
+        padding-left 40px
+        margin 0
+        top 0
+        bottom 0
+        right 0
+        left 0
+        background url(./assets/images/bg_shape.png) no-repeat
+        background-size 100% 100%
+        position absolute
+        @media(max-width 1024px)
+            width 60%
+    .row
+        margin 0
+    &-header-container
+        display inline-block
+        margin 60px 0 80px 0
+        img
+            height 80px
+    &-team-detail
+        .data-value
+            margin-top 20px
+            .btn-icon
+                background url("./assets/images/Next_Arrow.svg") no-repeat
+                background-size 100% 100%
+                height 40px
+                width 35px
+                cursor pointer
+        .data-label-heading,.data-label-subheading
+            text-outlet
+                color #fff
+        .data-label-heading
+            border-bottom 1px solid #e0e0e0
+            padding-bottom 5px
+            width 60%
+            text-outlet
+                font-size 2.5rem
+                line-height 2.5rem
+            @media screen and (max-width 1024px)
+                text-outlet
+                    font-size 2.1rem
+                    line-height 2.1rem
+            @media screen and (max-width 768px)
+                text-outlet
+                    font-size 1.5rem
+                    line-height 1.5rem
+        .data-label-subheading
+            font-style italic
+            margin-top 5px
+            text-outlet
+                font-size 1.8rem
+            @media screen and (max-width 1024px)
+                text-outlet
+                    font-size 1.7rem
+            @media screen and (max-width 768px)
+                text-outlet
+                    font-size 1.4rem
+
+    &-footer
+        position absolute
+        bottom 40px
+        .logo
+            max-width 80px
+            height 20px
+            padding 0 20px 0 0
+            position relative
+            top 50%
+            transform translateY(-50%)
+            img
+                width 180%
+                height auto

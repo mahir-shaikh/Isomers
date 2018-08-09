@@ -1,0 +1,35 @@
+<div class="metric">
+    <div class="metric-title" [class.withSeparator]="showMetricSeparator || showLastYearRef">
+        <text-outlet class="metric-name" key="{{titleKey}}"></text-outlet>
+    </div>
+    <div class="metric-cont" [class.metric-noLastYearRef]="showLastYearRef === false">
+        <div *ngIf="!showMetricSeparator && showLastYearRef === true" class="metric-icon" [class.icon-down-indicator]="valueChanged === 2" [class.icon-up-indicator]="valueChanged === 1" [class.icon-no-change]="valueChanged === 0"></div>
+        
+        <div *ngIf="!showMetricSeparator && showLastYearRef === false" class="metric-icon" [class.icon-down-indicator]="valueChanged === 2" [class.icon-up-indicator]="valueChanged === 1"></div>
+        
+        <div class="metric-values" [class.marginLeft]="valueChanged !== -1 && !showMetricSeparator">
+            <div *ngIf="!showMetricSeparator" class="metric-noSeparator">
+                <p class="metric-currValue"><calc-outlet ref="{{ref}}" format="{{format}}" scaler="{{scaler}}" yearRef="{{currentYearRef}}" color1Condition="{{color1Condition}}" color1Value="{{color1Value}}" color2Condition="{{color2Condition}}" color2Value="{{color2Value}}" color3Condition="{{color3Condition}}" color3Value="{{color3Value}}"></calc-outlet></p>
+            </div>
+            <div *ngIf="showMetricSeparator" class="metric-separator"> 
+                <p class="metric-text">
+                    <span class="metric-ly-text">Last Y</span>
+                    <span class="metric-separator-line">|</span>
+                    <span class="metric-cy-text">This Y</span>
+                </p>
+                <p class="metric-values">
+                    <span class="metric-ly-value">
+                    <calc-outlet ref="{{ref}}" format="{{format}}" scaler="{{scaler}}" *ngIf="currentYearRef" yearRef="{{lastYearRef}}"></calc-outlet>
+                    <calc-outlet ref="{{ref}}" format="{{format}}" scaler="{{scaler}}" *ngIf="!currentYearRef"></calc-outlet>
+                    </span>
+                    <span class="metric-separator-line"> </span>
+                    <span class="metric-cy-value">
+                    <calc-outlet ref="{{ref}}" format="{{format}}" scaler="{{scaler}}" *ngIf="currentYearRef" yearRef="{{currentYearRef}}"></calc-outlet>
+                    <calc-outlet ref="{{ref}}" format="{{format}}" scaler="{{scaler}}" *ngIf="!currentYearRef"></calc-outlet>
+                    </span>
+                </p>
+            </div>
+            <!-- <p class="metric-oldValue">{{lastYearValue}}</p> -->
+        </div>
+    </div>
+</div>

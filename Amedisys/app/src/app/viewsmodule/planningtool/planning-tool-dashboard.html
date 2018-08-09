@@ -1,0 +1,50 @@
+<div class="planning-tool-cont">
+    
+    <div class="content-row row">
+        <div class="col-sm-6">
+            <text-outlet key="CareCenter1"></text-outlet>
+        </div>
+    </div>
+
+    <div class="content-row row">
+        <div class="col-sm-6">
+            <planning-tool-nav [tabId]="'1/1'" childRoute="carecenter" textKey="DOOAction" [metrics]="[[]]"></planning-tool-nav>
+        </div>
+    </div>
+
+    <div class="content-row row">
+        <div class="col-sm-6"> <!-- [class.readOnly]="disableForecast" -->
+            <planning-tool-nav [tabId]="'1/2'" childRoute="carecenter" textKey="Forecast" [metrics]="[[]]"></planning-tool-nav>
+        </div>
+    </div>
+
+    <div class="content-row row">
+        <div class="col-sm-6"> <!-- [class.readOnly]="disableStaffing" -->
+            <planning-tool-nav [tabId]="'1/3'" childRoute="carecenter" textKey="Staffing" [metrics]="[[]]"></planning-tool-nav>
+        </div>
+    </div>
+
+    <div class="content-row row">
+        <div class="col-sm-6">
+            <text-outlet key="CareCenter2"></text-outlet>
+        </div>
+    </div>
+
+    <div class="content-row row">
+        <div class="col-sm-6">
+            <planning-tool-nav [tabId]="'2/1'" childRoute="carecenter" textKey="DOOAction" [metrics]="[[]]"></planning-tool-nav>
+        </div>
+    </div>
+
+    <div class="content-row row">
+        <div class="col-sm-6"> <!-- [class.readOnly]="disableForecast" -->
+            <planning-tool-nav [tabId]="'2/2'" childRoute="carecenter" textKey="Forecast" [metrics]="[[]]"></planning-tool-nav>
+        </div>
+    </div>
+
+    <div class="content-row row">
+        <div class="col-sm-6"> <!-- [class.readOnly]="disableStaffing" -->
+            <planning-tool-nav [tabId]="'2/3'" childRoute="carecenter" textKey="Staffing" [metrics]="[[]]"></planning-tool-nav>
+        </div>
+    </div>
+</div>

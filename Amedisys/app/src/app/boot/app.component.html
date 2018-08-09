@@ -1,0 +1,10 @@
+<div class="main">
+    <!-- <splash *ngIf="isAppReady === false"></splash> -->
+    <my-dashboard *ngIf="isAppReady"></my-dashboard>
+    <router-outlet></router-outlet>
+    <!-- <div class="router-outlet-group" [routerLink]="[{outlets: {secondary: 'planningtool'}}]" routerLinkActive="animated slideInLeft">
+        <div class="left-panel col-xs-12">
+            <router-outlet name="planning"></router-outlet>
+        </div>
+    </div> -->
+</div>

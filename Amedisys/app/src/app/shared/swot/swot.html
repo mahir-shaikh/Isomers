@@ -1,0 +1,70 @@
+<article class="swot-wrapper animated {{routeAnimation}}" [class.intro]="isIntro" [class.hidden]="!getDataPromise">
+    <div class="col-xs-1 pull-right" *ngIf="!isIntro">
+    <div class="swot-close fa fa-times pull-right" (click)="close()"></div>
+    </div>
+    <div class='swot-container col-xs-12'>
+        <div class="col-xs-4 swot-left-content">
+            <div class="col-xs-12 swot-title">
+                <text-outlet key="SWOTAnalysisTitle"></text-outlet>
+            </div>
+            <div class="col-xs-12 swot-description"><text-outlet key="SWOTAnalysisText" asInnerHtml="true"></text-outlet></div>
+            <div clas="col-xs-12 swot-play">
+                <div class="tab-set col-xs-12">
+                    <div class="tab-item tab-item-1" (click)="activeTabIndex = 0" [class.active]="activeTabIndex === 0">
+                        <span class="swot-icon icon-globe"> </span>
+                        <p class="tab-item-title"><text-outlet key="IntroCompanyOverviewTitle"></text-outlet></p>
+                    </div>
+                    <div class="tab-item tab-item-2" (click)="activeTabIndex = 1" [class.active]="activeTabIndex === 1">
+                        <span class="swot-icon icon-market-update"> </span>
+                        <p class="tab-item-title"><text-outlet key="IntroChallengesTitle"></text-outlet></p>
+                    </div>
+                    <div class="tab-item tab-item-3" (click)="activeTabIndex = 2" [class.active]="activeTabIndex === 2">
+                        <span class="swot-icon icon-compass"> </span>
+                        <p class="tab-item-title"><text-outlet key="IntroCompetitiveLandscapeTitle"></text-outlet></p>
+                    </div>
+                    <div class="tab-item tab-item-4" (click)="activeTabIndex = 3" [class.active]="activeTabIndex === 3">
+                        <span class="swot-icon icon-settings"> </span>
+                        <p class="tab-item-title"><text-outlet key="KeyMetrics"></text-outlet></p>
+                    </div>
+                </div>
+                <div class="tab-content col-xs-12" [ngSwitch]="activeTabIndex" [class.hidden]="activeTabIndex === undefined">
+                    <div class="tab-data animated fadeInDown" *ngSwitchCase="0"><text-outlet key="SWOTCompanyOverviewText" asInnerHtml="true"></text-outlet></div>
+                    <div class="tab-data animated fadeInDown" *ngSwitchCase="1"><text-outlet key="SWOTBusinessChallengesText" asInnerHtml="true"></text-outlet></div>
+                    <div class="tab-data animated fadeInDown" *ngSwitchCase="2"><text-outlet key="SWOTCompetitiveLandscapeText" asInnerHtml="true"></text-outlet></div>
+                    <div class="tab-data animated fadeInDown" *ngSwitchCase="3"><text-outlet key="SWOTKeyMetricsText" asInnerHtml="true"></text-outlet></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-8 swot-right-content">
+            <div class="swot-input-row">
+                <div class="col-xs-6">
+                    <swot-input swottitle="SWOTStrengthTitle" inputHelpText="SWOTStrengthTitle" modelRange="tlInputStrengths"></swot-input>
+                </div>
+                <div class="col-xs-6">
+                    <swot-input swottitle="SWOTWeaknessTitle" inputHelpText="SWOTWeaknessTitle" modelRange="tlInputWeaknesses"></swot-input>
+                </div>
+            </div>
+            <div class="swot-input-row">
+                <div class="col-xs-6">
+                    <swot-input swottitle="SWOTOpportunityTitle" inputHelpText="SWOTOpportunityTitle" modelRange="tlInputOpportunities"></swot-input>
+                </div>
+                <div class="col-xs-6">
+                    <swot-input swottitle="SWOTThreatTitle" inputHelpText="SWOTThreatTitle" modelRange="tlInputThreats"></swot-input>
+                </div>
+            </div>
+            <div class="swot-input-row">
+                <div class="col-xs-12 swot-right-padding">
+                    <swot-input swottitle="StrategyVisionTitle" inputHelpText="StrategyVisionTitle" modelRange="tlInputStrategyVision"></swot-input>
+                </div>
+            </div>
+            <div class="row col-xs-12 swot-footer" *ngIf="isIntro">
+                <div class="next-action col-xs-12">
+                    <div class="btn-wrapper row">
+                        <div class="btn btn-primary" (click)="navigate()"><text-outlet key="Proceed"></text-outlet></div>
+                        <!-- <div class="col-xs-6"><text-outlet key="GoalSettingTitle" class="btn-alert-txt"></text-outlet></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,322 @@
+.planningTool .eventBody .content-div .metrics {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(89,88,84,0.2);
+  color: #000;
+}
+.planningTool .eventBody .content-div .metrics .metric {
+  text-align: center;
+  align-items: center;
+  line-height: 20px;
+  border-right: 1px solid #6c3;
+  padding: 7px 3px;
+  justify-content: center;
+}
+.planningTool .eventBody .content-div .metrics .metric:last-child {
+  border-right: 0;
+}
+.planningTool .eventBody .content-div .metrics .metric::before {
+  display: initial;
+}
+.planningTool .eventBody .content-div .metrics .metric text-outlet {
+  width: 100%;
+}
+.planningTool .eventBody .content-div .metrics .metric calc-outlet {
+  padding: 0;
+  padding-top: 5px;
+  text-align: center;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container {
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table {
+  border: 1px solid rgba(89,88,84,0.2);
+  padding: 0;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .heading-row {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  position: aboslute;
+  top: 0;
+  width: 100%;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-rows-container {
+  height: calc(100% - 65px);
+  overflow: auto;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row:last-child .data-heading,
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row:last-child .data-value {
+  border-bottom: 0;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-heading,
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-value {
+  color: #000;
+  padding: 8px 7px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8px;
+  border: 1px solid rgba(89,88,84,0.2);
+  border-left: 0;
+  border-top: 0;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-heading staffmeeting.disabled,
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-value staffmeeting.disabled {
+  pointer-events: none;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-heading calc-input,
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-value calc-input {
+  height: 100%;
+  width: 100%;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-heading calc-outlet,
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-value calc-outlet {
+  width: auto;
+  padding: 0;
+  text-align: center;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-heading calc-dropdown,
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-value calc-dropdown {
+  width: 70%;
+  height: 25px;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-heading-container,
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-value-container {
+  padding: 0;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .clinincal-summary-table .data-row .data-value:last-child {
+  border-right: 0;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container {
+  display: flex;
+  border: 1px solid rgba(89,88,84,0.2);
+  height: 45px;
+  padding: 0;
+  background-color: #fdf2e1;
+  justify-content: flex-end;
+  font-weight: 600;
+  font-size: 15px;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container.all-meetings-attended {
+  background-color: #f00;
+  color: #fff;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container.all-meetings-attended text-outlet {
+  color: #fff;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container.all-meetings-attended .meeting-text,
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container.all-meetings-attended .meeting-value {
+  margin: 0;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container.all-meetings-attended .meeting-text text-outlet,
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container.all-meetings-attended .meeting-value text-outlet,
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container.all-meetings-attended .meeting-text calc-outlet,
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container.all-meetings-attended .meeting-value calc-outlet {
+  color: #fff;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container.all-meetings-attended .meeting-text {
+  text-align: left;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container .meeting-text,
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container .meeting-value {
+  justify-content: center;
+  align-items: center;
+}
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container .meeting-text text-outlet,
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container .meeting-value text-outlet,
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container .meeting-text calc-outlet,
+.planningTool .eventBody .content-div .clinincal-meeting-container .meeting-container .meeting-value calc-outlet {
+  width: auto;
+  color: #4f7345;
+}
+.planningTool .eventBody .content-div .staffing-table {
+  border: 1px solid rgba(89,88,84,0.2);
+  margin: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.planningTool .eventBody .content-div .staffing-table .heading-row {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  position: aboslute;
+  top: 0;
+  width: 100%;
+}
+.planningTool .eventBody .content-div .staffing-table .heading-row .column-heading {
+  background-color: #4f7345;
+  color: #fff;
+  padding: 8px 7px;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  border: 1px solid rgba(89,88,84,0.2);
+  border-left: 0;
+  border-top: 0;
+}
+.planningTool .eventBody .content-div .staffing-table .heading-row .column-heading:last-child {
+  border-right: 0;
+}
+.planningTool .eventBody .content-div .staffing-table .data-rows-container {
+  height: calc(100% - 65px);
+  overflow: auto;
+}
+.planningTool .eventBody .content-div .staffing-table .data-row {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+.planningTool .eventBody .content-div .staffing-table .data-row:nth-child(even) {
+  background: #f2f2f2;
+}
+.planningTool .eventBody .content-div .staffing-table .data-row:last-child .data-heading,
+.planningTool .eventBody .content-div .staffing-table .data-row:last-child .data-value {
+  border-bottom: 0;
+}
+.planningTool .eventBody .content-div .staffing-table .data-row .data-heading,
+.planningTool .eventBody .content-div .staffing-table .data-row .data-value {
+  color: #000;
+  padding: 8px 7px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8px;
+  border: 1px solid rgba(89,88,84,0.2);
+  border-left: 0;
+  border-top: 0;
+}
+.planningTool .eventBody .content-div .staffing-table .data-row .data-heading.meeting-attended,
+.planningTool .eventBody .content-div .staffing-table .data-row .data-value.meeting-attended {
+  background-color: #e2e2e2;
+}
+.planningTool .eventBody .content-div .staffing-table .data-row .data-heading staffmeeting.disabled,
+.planningTool .eventBody .content-div .staffing-table .data-row .data-value staffmeeting.disabled {
+  pointer-events: none;
+}
+.planningTool .eventBody .content-div .staffing-table .data-row .data-heading calc-input,
+.planningTool .eventBody .content-div .staffing-table .data-row .data-value calc-input {
+  height: 100%;
+  width: 100%;
+}
+.planningTool .eventBody .content-div .staffing-table .data-row .data-heading calc-outlet,
+.planningTool .eventBody .content-div .staffing-table .data-row .data-value calc-outlet {
+  width: auto;
+  padding: 0;
+  text-align: center;
+}
+.planningTool .eventBody .content-div .staffing-table .data-row .data-heading calc-dropdown,
+.planningTool .eventBody .content-div .staffing-table .data-row .data-value calc-dropdown {
+  width: 70%;
+  height: 25px;
+}
+.planningTool .eventBody .content-div .staffing-table .data-row .data-value:last-child {
+  border-right: 0;
+}
+.planningTool .eventBody .content-div .chart-contianer {
+  padding: 20px;
+  height: auto;
+  justify-content: space-between;
+}
+.planningTool .eventBody .content-div .chart-contianer .rn-lpn-visit,
+.planningTool .eventBody .content-div .chart-contianer .utilization-table {
+  border: 1px solid rgba(89,88,84,0.2);
+  padding: 0;
+}
+.planningTool .eventBody .content-div .chart-contianer .rn-lpn-visit .heading-row,
+.planningTool .eventBody .content-div .chart-contianer .utilization-table .heading-row {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+.planningTool .eventBody .content-div .chart-contianer .rn-lpn-visit .heading-row .column-heading,
+.planningTool .eventBody .content-div .chart-contianer .utilization-table .heading-row .column-heading {
+  background-color: #4f7345;
+  color: #fff;
+  padding: 8px 7px;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  border: 1px solid rgba(89,88,84,0.2);
+  border-left: 0;
+  border-top: 0;
+}
+.planningTool .eventBody .content-div .chart-contianer .rn-lpn-visit .heading-row .column-heading:last-child,
+.planningTool .eventBody .content-div .chart-contianer .utilization-table .heading-row .column-heading:last-child {
+  border-right: 0;
+}
+.planningTool .eventBody .content-div .submit-footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.planningTool .eventBody .content-div .submit-footer text-outlet {
+  background: #4f7345;
+}
+.planningTool .eventBody .submit-footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.planningTool .eventBody .submit-footer text-outlet {
+  background: #4f7345;
+}
+.planningTool .meetingBtn {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 5px;
+  background: #8bc876;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.3s ease-out;
+}
+.planningTool .meetingBtn:hover {
+  background: #559a3e;
+}
+.planningTool .disable-staff-btn .meetingBtn {
+  background: rgba(0,0,0,0.3);
+  cursor: default;
+}
+@media (max-width: 1024px) {
+  .planningTool .eventBody .content-div .staffing-table {
+    margin: 10px;
+  }
+  .planningTool .eventBody .content-div .staffing-table .heading-row {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  .planningTool .eventBody .content-div .staffing-table .heading-row .column-heading {
+    padding: 8px 7px;
+  }
+  .planningTool .eventBody .content-div .staffing-table .data-row {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  .planningTool .eventBody .content-div .staffing-table .data-row .data-heading,
+  .planningTool .eventBody .content-div .staffing-table .data-row .data-value {
+    padding: 8px 7px;
+  }
+}
+@media (max-width: 768px) {
+  .planningTool .eventBody .content-div .staffing-table .heading-row {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .planningTool .eventBody .content-div .staffing-table .heading-row .column-heading {
+    padding: 8px 0;
+  }
+  .planningTool .eventBody .content-div .staffing-table .data-row {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .planningTool .eventBody .content-div .staffing-table .data-row .data-heading,
+  .planningTool .eventBody .content-div .staffing-table .data-row .data-value {
+    padding: 8px 0;
+  }
+}

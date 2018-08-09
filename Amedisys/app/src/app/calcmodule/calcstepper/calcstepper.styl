@@ -1,0 +1,118 @@
+@import '../../../../assets/css/mixins.styl'
+
+:host
+    display inline-block
+    width 100%
+    max-width 150px
+    height 40px
+    background-color #FFF
+    color #111
+    // overflow hidden
+    position relative
+    border 1px solid #ccc
+    .danger
+        border 1px solid red
+    .stepper
+        height 100%
+        overflow hidden
+    input
+        margin-left 30px
+        height 100%
+        width calc(100% - 60px)
+        text-align center
+        color #5b5b5b
+        padding-right 5px
+        border none
+        font-size 16px
+        &:active,
+        &:focus
+            font-weight 600
+            border 2px solid $primeColor
+            // margin-left 22px
+            // width calc(100% - 22px)
+
+:host(.disabled)
+    background-color #6D6E70
+    .stepper-button
+        pointer-events none
+        color #369
+    
+.stepper
+    font-size 0.875rem
+    & > *
+      float left
+      display inline-block
+    &-button
+        cursor pointer
+        display inline-block
+        font-size 1.125rem
+        width 30px
+        height 38px
+        line-height 40px
+        position absolute
+        color #fff
+        background-color #FFF
+        text-align center
+        &:hover, &:active
+            // background-color #fff
+            // color #369
+        &.isActive
+            color #5b5b5b
+    .add
+        right 0
+        border-left 0px
+    .subtract
+        left 0
+        border-right 0px
+    .hidden
+        display none    
+    .field-value
+        position absolute
+        z-index 1
+        left 0
+        top 0
+        font-size 16px
+        // margin-left 30px
+        height 100%
+        width calc(100% - 0px)
+        text-align center
+        color #5b5b5b
+        padding-right 5px
+        border none
+        padding-top 10px
+        display block
+        background #fff
+        
+:host-context(.staffing-table)
+    .stepper
+        &.extendWidth
+            overflow visible
+            input
+                width calc(100% - 0px)
+                margin-left 0
+                min-width 50px
+            .stepper-button
+                height 38px
+                z-index 1
+                border 1px solid
+                &.add
+                    right -30px
+                &.subtract
+                    left -30px
+:host-context(.forecast-table)
+    .stepper
+        &.extendWidth
+            overflow visible
+            input
+                width calc(100% - 0px)
+                margin-left 0
+                min-width 50px
+            .stepper-button
+                height 38px
+                z-index 1
+                border 1px solid
+                &.add
+                    right -30px
+                &.subtract
+                    left -30px
+                    

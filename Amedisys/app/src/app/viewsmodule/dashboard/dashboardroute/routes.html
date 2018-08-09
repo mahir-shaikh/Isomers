@@ -1,0 +1,16 @@
+<div class="col-xs-12 pane pane--planning" [class.active]="isPlanningToolActive">
+    <router-outlet name="planning"></router-outlet>
+</div>
+<div class="col-xs-offset-6 col-xs-6 pane pane--messages" [class.active]="isMessagesActive">
+    <router-outlet name="messages"></router-outlet>
+</div>
+<div class="col-xs-12 pane pane--generic" [class.active]="isAnonPaneActive">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- <div class="col-xs-12 pane pane--tutorials" [class.active]="isTutorialsActive">
+    <router-outlet name="tutorials"></router-outlet>
+</div>
+<div class="col-xs-12 pane pane--resources" [class.active]="isResourcesActive">
+    <router-outlet name="resources"></router-outlet>
+</div> -->

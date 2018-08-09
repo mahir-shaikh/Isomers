@@ -1,0 +1,168 @@
+<div class="planningTool" [@flyInOut]="animState">
+    <div class="eventBody">
+        <div class="stageWrapper">
+            <div class="metrics row add-flex">
+                <div class="nifo metric add-flex">
+                    <!-- <text-metric titleKey="NIFO" [ref]="'tlOutputDBLOB'+activeIndex+'NIFO'" currentYearRef="xxRound" format="0,0"></text-metric> -->
+                    <text-metric titleKey="NIFOPerc" [ref]="'tlOutputDBLOB'+activeIndex+'OpMargin'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                </div>
+                <div class="referral-satisfaction metric add-flex">
+                    <text-metric titleKey="ReferralSatisfaction" [ref]="'tlOutputDBLOB'+activeIndex+'CSAT'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                </div>
+                <div class="employee-engagement metric add-flex">
+                    <text-metric titleKey="EmployeeEngagement" [ref]="'tlOutputDBLOB'+activeIndex+'ESAT'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                </div>
+                <div class="stars metric add-flex">
+                    <text-metric titleKey="Stars" [ref]="'tlOutputDBLOB'+activeIndex+'Stars'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                </div>
+                <div class="revenueGrowth metric add-flex">
+                    <text-metric titleKey="RevenueGrowth" [ref]="'tlOutputDBLOB'+activeIndex+'RevGrowth'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                </div>
+                <div class="doo-utilization metric add-flex">
+                    <text-metric titleKey="DOOUtilization" [ref]="'tlOutputDBLOB'+activeIndex+'Emp1Util'" currentYearRef="xxRound" format="0.0%" color1Condition="<" color1Value="100" color2Condition="=" color2Value="100" color3Condition=">" color3Value="100"></text-metric>
+                </div>
+                <div class="meeting-container metric" [class.all-meetings-attended]="allMeetingsAttended">
+                    <div class="meeting-text metric-name"><text-outlet key="MeetingRemainingText"></text-outlet></div>
+                    <div class="meeting-value metric-currValue"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'MeetingCountRemaining'" yearRef="xxRound" color1Condition="=" color1Value="0" color2Condition=">" color2Value="0"></calc-outlet></div>
+                </div>
+            </div>
+            <article class="content-div">
+                
+                <div class="doofocus-content">
+                    <div class="left-pane col-xs-6">
+                    <div class="action-description row">
+                            <text-outlet key="DOOName"></text-outlet>
+                    </div>
+                    <div class="data-container row">
+                            <!-- <div class="handCursor multiSelect col-xs-2 "
+                                [class.multiSelectChecked]="option.isChecked" 
+                                [class.multiSelectNotChecked]="!option.isChecked" 
+                                [class.multiSelectDisabled]="!option.isEnabled" 
+                                (click)="onCheck($event, i, option.ID)">
+                            </div> -->
+                            <div class="doofocus-action-content"><!--  [class.readOnly]="disabled" -->
+                                <div class="row data-actions" *ngFor="let row of initiativesArray; let i=index">
+                                    <div class="custom-checkbox" [class.checked]="initiativesArray[i].isChecked" [class.disabled]="!initiativesArray[i].isEnabled" (click)="onSelect($event, row.ID)"></div>
+                                    <!-- <input type= "checkbox" [(ngModel)]="initiativesArray[i].isChecked" [disabled]="!initiativesArray[i].isEnabled" (change)="onSelect($event, row.ID)"> -->
+                                    <div class="actions">{{row.name}}</div>
+                                    <span class="tooltip-data"><my-tooltip [tooltipText]="row.narrative" key="{{row.narrative}}">{{row.narrative}}</my-tooltip></span>
+                                </div>
+                            </div>
+                        <!--  <div *ngFor="let i of localScene">
+                                <input type="checkbox" (change)="onSelect(i.ID)">
+                                <div >{{i.name}}</div>
+                                <my-tooltip [tooltipText]="i.narrative" tooltipPlacement="right" key="Recruitment"></my-tooltip>
+                            </div> -->
+                    </div>
+                    </div>
+                    <div class="right-pane col-xs-6"><!-- [class.readOnly]="disabled"  -->
+                        <div class="upper-data">
+                            <div class="data-value-container row header">
+                                <div class="data-label col-xs-10 ">
+                                    <text-outlet key="AllocateDiscretionaryTime"></text-outlet>
+                                </div>
+                                <div class="data-value col-xs-2">
+                                    <text-outlet key="Base"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="data-value-container row">
+                                <div class="data-label col-xs-10">
+                                    <text-outlet key="NonDiscretionary"></text-outlet>
+                                </div>
+                                <div class="data-value col-xs-2">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'DOOPlanTime1'" yearRef="xxRound" scaler="" format="0%"></calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-value-container row">
+                                <div class="data-label col-xs-6">
+                                    <text-outlet key="Recruitment"></text-outlet>
+                                </div>
+                                <div class="data-value col-xs-4">
+                                    <calc-stepper [ref]="'tlInputLOB'+activeIndex+'DOOAdjTime2'" yearRef="xxRound" step="1" min="0" max="100" scaler="100" format="0%"></calc-stepper>
+                                </div>
+                                <div class="data-value col-xs-2">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'DOOPlanTime2'" yearRef="xxRound" scaler="" format="0%"></calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-value-container row">
+                                <div class="data-label col-xs-6">
+                                    <text-outlet key="PeopleDevelopment"></text-outlet>
+                                </div>
+                                <div class="data-value col-xs-4">
+                                    <calc-stepper [ref]="'tlInputLOB'+activeIndex+'DOOAdjTime3'" yearRef="xxRound" step="1" min="0" max="100" scaler="100" format="0%"></calc-stepper>
+                                </div>
+                                <div class="data-value col-xs-2">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'DOOPlanTime3'" yearRef="xxRound" scaler="" format="0%"></calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-value-container row">
+                                <div class="data-label col-xs-6">
+                                    <text-outlet key="Operations"></text-outlet>
+                                </div>
+                                <div class="data-value col-xs-4">
+                                    <calc-stepper [ref]="'tlInputLOB'+activeIndex+'DOOAdjTime4'" yearRef="xxRound" step="1" min="0" max="100" outputMin="0" outputMax="100" scaler="100" format="0%"></calc-stepper>
+                                </div>
+                                <div class="data-value col-xs-2">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'DOOPlanTime4'" yearRef="xxRound" scaler="" format="0%"></calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-value-container row">
+                                <div class="data-label col-xs-6">
+                                    <text-outlet key="Clinical"></text-outlet>
+                                </div>
+                                <div class="data-value col-xs-4">
+                                    <calc-stepper [ref]="'tlInputLOB'+activeIndex+'DOOAdjTime5'" yearRef="xxRound" step="1" min="0" max="100" outputMin="0" outputMax="100" scaler="100" format="0%"></calc-stepper>
+                                </div>
+                                <div class="data-value col-xs-2">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'DOOPlanTime5'" yearRef="xxRound" scaler="" format="0%"></calc-outlet>
+                                </div>
+                            </div> 
+                            <div class="data-value-container row">
+                                <div class="data-label col-xs-6">
+                                    <text-outlet key="Referrals"></text-outlet>
+                                </div>
+                                <div class="data-value col-xs-4">
+                                    <calc-stepper [ref]="'tlInputLOB'+activeIndex+'DOOAdjTime6'" yearRef="xxRound" step="1" min="0" max="100" outputMin="0" outputMax="100" scaler="100" format="0%"></calc-stepper>
+                                </div>
+                                <div class="data-value col-xs-2">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'DOOPlanTime6'" yearRef="xxRound" scaler="" format="0%"></calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-value-container row">
+                                <div class="data-label col-xs-10">
+                                    <text-outlet key="Total"></text-outlet>
+                                </div>
+                                <div class="data-value total col-xs-2">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'DOOTotalPlanTime'" yearRef="xxRound" color1Condition="<" color1Value="100" color2Condition="=" color2Value="100" color3Condition=">" color3Value="100"></calc-outlet>
+                                </div>
+                            </div>
+                            <!-- <div class="submit-btn" (click)="navigate()">
+                                <text-outlet key="Submit"></text-outlet>
+                            </div> -->
+                        </div>
+                        <div class="graph-data">
+                            <div class="doo-allocation-header">
+                                <text-outlet key="DOO Allocation"></text-outlet>
+                            </div>
+                            <div class="doo-allocation-data">
+                                <piechart 
+                                [rangeRef]="'tlOutputLOB'+activeIndex+'DOOPlanTime1, tlOutputLOB'+activeIndex+'DOOPlanTime2, tlOutputLOB'+activeIndex+'DOOPlanTime3, tlOutputLOB'+activeIndex+'DOOPlanTime4, tlOutputLOB'+activeIndex+'DOOPlanTime5, tlOutputLOB'+activeIndex+'DOOPlanTime6'" year="xxRound" seriesLabels="NonDiscretionary,Recruitment,PeopleDevelopment,Operations,Clinical,Referrals"
+                                categoryLabels="NonDiscretionary,Recruitment,PeopleDevelopment,Operations,Clinical,Referrals"
+                                numberFormat="0%" chartTitle="DOO Allocation"></piechart>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row col-xs-12 submit-footer" [class.hidden]="disabled" >
+                    <div class="next-action col-xs-12">
+                        <div class="btn-wrapper row">
+                            <div class="btn btn-primary" (click)="onSubmit()">
+                                <text-outlet key="Submit"></text-outlet>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </article>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="planning-tool-title">
+    <div class="planning-tool-design" [class.disabled]="disabled">
+    <a class="planning-tool-nav-link" (click)="onClick()"><text-outlet [key]="textKey"></text-outlet><span class="planning-tool-nav-icon icon-action-arrow"></span></a></div>
+    <div class="planning-tool-content">
+        <carousel [interval]="myInterval" [noWrap]="noWrapSlides">
+            <slide *ngFor="let metricItems of metrics" class="col-xs-12">
+                <text-metric *ngFor="let metric of metricItems" class="planning-tool-metric col-xs-6" [titleKey]="metric.title" [ref]="metric.ref" [lastYearRef]="metric.lastYearRef" [currentYearRef]="metric.currentYearRef" [showMetricSeparator]="metric.showSeparator"></text-metric>
+            </slide>
+        </carousel>
+    </div>
+</div>

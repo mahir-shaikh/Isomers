@@ -1,0 +1,44 @@
+<div class="info animated" [class.slideOutRight]="isClosing" [class.slideInRight]="!isClosing" data-info-wrapper>
+    <div class="info-content">
+        <div class="info-closeTop-btn">
+            <div (click)="onClose()" class="info-closeTop event-close icon-close"></div>
+        </div>
+        <img *ngIf="imageHeader != ''" [src]="imageHeader" width="100%">
+        <div class="rightPanel-txt-content">
+            <h3>{{ message.name }}</h3>
+
+            <div [innerHTML]="message.narrative"></div>
+            <br />
+
+            <div class="choice-tutorial" *ngIf="message['tutorial']">
+            <accordion closeOthers="true" class="tutorialAccordion">
+                <accordion-group #group [isOpen]="false">
+                    <div accordion-heading>
+                    <span><text-outlet [key]="tutorialKey" [sceneId]="id"></text-outlet></span>
+                    <i class="pull-right fa"
+                    [ngClass]="{'fa-minus': group?.isOpen, 'fa-plus': !group?.isOpen}"></i>
+                    </div>
+                    <div>
+                    <tutorial-content [images]="tutorialImages"></tutorial-content>
+                    </div>
+                </accordion-group>
+            </accordion>
+            </div>
+
+            <div *ngIf="chartType == 'basiccolumn'">
+                <basiccolumn 
+                    [rangeRef]="rangeref" 
+                    [categoryLabels]="categorylabels"
+                    [seriesLabels]="serieslabels"
+                    [year]="year" 
+                    [numberFormat]="'0.0a'" 
+                    [chartTitle]="charttitle" 
+                    [chartOptions]="chartoptions"
+                    [min]="min"
+                    [max]="max">
+                </basiccolumn>
+            </div>
+            <div class = "info-closeStyle" (click)="onClose()">Close</div>
+        </div>
+    </div>
+</div>

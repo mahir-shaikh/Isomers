@@ -1,0 +1,30 @@
+<div class="eor-feedback-modal" [class.modalShow]="modalShow"></div>
+<div class="eor-feedback animated" [class.slideOutRight]="isClosing" [class.slideInRight]="isOpening">
+    <div class="eor-feedback-close-btn col-xs-12">
+        <div *ngIf="showCloseButton && currentYear == 1" (click)="onClose()" class="eor-feedback-close event-close icon-close"></div>
+        <div *ngIf="showCloseButton && currentYear == 2" (click)="onClose()" class="eor-feedback-close event-close icon-close"></div>
+    </div>
+    <div class="eor-feedback-content">
+        <!-- <text-outlet key="eor-feedback" class="eor-feedback-title"></text-outlet> -->
+        <h3 class="eor-feedback-title"> End of round Feedback </h3>
+        <tabset vertical="true">
+            <tab *ngFor="let header of tabsHeaders; let i=index" heading='{{header}}' [active]="activeIndex === i" (select)="setActiveIndex(i)">
+                <div *ngIf="activeIndex === i" class="tab-pane-cont">
+                    <div *ngIf="typeArray[i]=='feedbacktextandimage'" class="tab-pane-value">
+                        <feedbacktextandimage [feedback]="feedbackArray[i]" [index]="i"></feedbacktextandimage>
+                    </div>
+                    <div *ngIf="typeArray[i]=='feedbacktextandchart'" class="tab-pane-value">
+                        <feedbacktextandchart [feedback]="feedbackArray[i]" [index]="i"></feedbacktextandchart>
+                    </div>
+                    <div *ngIf="typeArray[i]=='feedbacktextandtable'" class="tab-pane-value">
+                        <feedbacktextandtable [feedback]="feedbackArray[i]" [index]="i"></feedbacktextandtable>
+                    </div>
+                </div>
+            </tab>
+        </tabset>
+        <div class="nav-buttons-container">
+            <button (click)="onBack()" *ngIf="showBackButton" class="backbutton"></button>
+            <button (click)="onNext()" *ngIf="showForwardButton" class="nextbutton"></button>
+        </div> 
+    </div>
+</div>

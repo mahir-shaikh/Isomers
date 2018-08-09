@@ -1,0 +1,154 @@
+@import '../intro.button';
+:host
+    width 100vw
+    height calc(100vh - 40px)
+    position fixed
+    top 0
+    left 0
+    margin-top 4rem
+    padding 20px
+    background #f2f2f2
+.goal-setting
+    &-wrapper
+        width 100%
+        height 100%
+        color #333
+        padding 20px
+        background #fff
+    // &-close
+    //     width 40px
+    //     height 40px
+    //     background-color #6b737c
+    //     border-radius 50%
+    //     right 10px
+    //     top 15px
+    //     cursor pointer
+    //     text-align center
+    //     font-size 1.5em
+    //     padding-top 0.285em
+    //     margin-top 5px
+    //     color #fff
+    &-content
+        height 100%
+        &-feedback
+            height calc(100% - 92px)
+    &-container
+        width 100%
+        height calc(100% - 45px)
+        background #fff
+        padding 0
+    &-row
+        margin-bottom 15px
+        clear both
+        overflow hidden
+        &>.col-xs-12
+            padding 0
+    &-title
+        color #89D762
+        font-size 2em
+    &-description
+        font-size 0.925em
+        font-weight 300
+    &-right-col, &-left-col
+        min-height 100%
+        height 100%
+        overflow-y auto
+    &-right-col
+        padding 0 0 0 10px
+    &-left-col
+        overflow auto
+    &-input-row
+        height calc(50% - 65px)
+        margin 10px 15px
+        &>div
+            height 100%
+    &-group-title
+        font-size 1.25em
+        font-weight 600
+        padding-left 0
+        margin-bottom 15px
+        color #6D747E
+    &-slider-label
+        color #F07300
+        font-size 0.925em
+        text-transform uppercase
+    &-footer
+        height 90px
+        padding 4px 20px
+        margin-left 10px
+        .btn-primary
+            border-radius 5px
+    &-slider, &-slider-ticks
+        padding 0
+    &-slider-ticks
+        position absolute
+        &-container
+            margin-bottom 30px
+    &-metric
+        &-separator,&-label,&-value
+            padding 5px
+            display inline-block
+            font-weight 300
+            color #6D747E
+            font-size 0.925em
+        &-separator
+            text-align center
+        &-value
+            color #F07300
+        &-label
+            text-transform uppercase
+    &-tick
+        position absolute
+        font-size 0.875em
+        color #BEC0C1
+        font-size 0.825em
+        transform translate(-50%, 0)
+        &__0
+            left 0px
+        &__1
+            left 25%
+        &__2
+            left 50%
+        &__3
+            left 75%
+        &__4 
+            right 0px
+            transform translate(50%, 0)
+    &-submit
+        width 150px
+        margin-top 20px
+        border-radius 5px
+    &-button-container
+        padding 0
+.tab
+    &-set
+        margin-top 20px
+    &-item
+        height 150px
+        background #89d762
+        color #fff
+        float left
+        margin 1px
+        width calc(50% - 4px)
+        &:nth-child(3), &:nth-child(4)
+            margin-bottom 0
+        &.active
+            background #fff
+            color #89D762
+            border 2px solid #89d762
+    &-icon
+        margin-top 50px
+        font-size 2.5em
+        text-align center
+        width 100%
+    &-item-title
+        font-size 1em
+        text-align center
+    &-content
+        overflow hidden
+        width calc(100% - 6px)
+        margin-left 1px
+    &-data
+        border 1px solid #89d762
+        border-top none
+        padding 15px

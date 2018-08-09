@@ -1,0 +1,126 @@
+:host {
+  display: inline-block;
+  width: 100%;
+  max-width: 150px;
+  height: 40px;
+  background-color: #fff;
+  color: #111;
+  position: relative;
+  border: 1px solid #ccc;
+}
+:host .danger {
+  border: 1px solid #f00;
+}
+:host .stepper {
+  height: 100%;
+  overflow: hidden;
+}
+:host input {
+  margin-left: 30px;
+  height: 100%;
+  width: calc(100% - 60px);
+  text-align: center;
+  color: #5b5b5b;
+  padding-right: 5px;
+  border: none;
+  font-size: 16px;
+}
+:host input:active,
+:host input:focus {
+  font-weight: 600;
+  border: 2px solid #8bc876;
+}
+:host(.disabled) {
+  background-color: #6d6e70;
+}
+:host(.disabled) .stepper-button {
+  pointer-events: none;
+  color: #369;
+}
+.stepper {
+  font-size: 0.875rem;
+}
+.stepper > * {
+  float: left;
+  display: inline-block;
+}
+.stepper-button {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.125rem;
+  width: 30px;
+  height: 38px;
+  line-height: 40px;
+  position: absolute;
+  color: #fff;
+  background-color: #fff;
+  text-align: center;
+}
+.stepper-button.isActive {
+  color: #5b5b5b;
+}
+.stepper .add {
+  right: 0;
+  border-left: 0px;
+}
+.stepper .subtract {
+  left: 0;
+  border-right: 0px;
+}
+.stepper .hidden {
+  display: none;
+}
+.stepper .field-value {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  height: 100%;
+  width: calc(100% - 0px);
+  text-align: center;
+  color: #5b5b5b;
+  padding-right: 5px;
+  border: none;
+  padding-top: 10px;
+  display: block;
+  background: #fff;
+}
+:host-context(.staffing-table) .stepper.extendWidth {
+  overflow: visible;
+}
+:host-context(.staffing-table) .stepper.extendWidth input {
+  width: calc(100% - 0px);
+  margin-left: 0;
+  min-width: 50px;
+}
+:host-context(.staffing-table) .stepper.extendWidth .stepper-button {
+  height: 38px;
+  z-index: 1;
+  border: 1px solid;
+}
+:host-context(.staffing-table) .stepper.extendWidth .stepper-button.add {
+  right: -30px;
+}
+:host-context(.staffing-table) .stepper.extendWidth .stepper-button.subtract {
+  left: -30px;
+}
+:host-context(.forecast-table) .stepper.extendWidth {
+  overflow: visible;
+}
+:host-context(.forecast-table) .stepper.extendWidth input {
+  width: calc(100% - 0px);
+  margin-left: 0;
+  min-width: 50px;
+}
+:host-context(.forecast-table) .stepper.extendWidth .stepper-button {
+  height: 38px;
+  z-index: 1;
+  border: 1px solid;
+}
+:host-context(.forecast-table) .stepper.extendWidth .stepper-button.add {
+  right: -30px;
+}
+:host-context(.forecast-table) .stepper.extendWidth .stepper-button.subtract {
+  left: -30px;
+}

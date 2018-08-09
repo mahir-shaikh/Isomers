@@ -1,0 +1,150 @@
+@import '../../../../assets/css/mixins.styl'
+
+.forecast-table
+    margin 0 10px
+    .row
+        .data-label,
+        .data-value
+            margin 0
+            padding 0
+            line-height 50px
+        &:nth-child(even)
+            background $gray1
+        calc-stepper 
+            margin-top 5px
+    .heading-row
+        background-color #4f7345 !important
+        color #FFF
+        text-align center
+        padding 5px 0
+        .data-label
+            line-height 1.2em
+    .tableSubHeader
+        background $gray2 !important
+        color $gray1
+        padding 5px 10px
+        .data-label
+            line-height 1.2em
+
+.breakRight
+    border-right 5px solid #fff
+
+
+.planningTool
+    .eventBody
+        .content-div
+            .content
+                .metrics
+                    padding 10px 0
+                    border-bottom 1px solid rgba(89,88,84,0.2)
+                    color #000
+                    .metric
+                        text-align center
+                        align-items center
+                        line-height 20px
+                        border-right 1px solid #6c3
+                        padding 7px 3px
+                        justify-content center
+                        &:last-child
+                            border-right 0
+                        &::before
+                            display initial
+                        text-outlet
+                            width 100%
+                        calc-outlet
+                            padding 0
+                            padding-top 5px
+                            text-align center
+                .forecast-table
+                    margin 20px
+                    display table
+                    border-top 1px solid #ddd
+                    border-left 1px solid #ddd
+                    .row
+                        &:nth-child(even)
+                            background #f2f2f2
+                        &.tableSubHeader
+                            background $gray2
+                    .row1,.row2,.row9
+                        background $gray3
+                        color #fff
+                        text-align center
+                        border 1px solid rgba(255,255,255,.2)
+                        .data-label
+                            border-right 1px solid rgba(255,255,255,.2)
+                            padding 0
+                            font-size 1.5rem
+                        .last
+                            border 0
+                        .month-label,.data-container
+                            padding 0 
+                        .month-label,.data-container
+                            .data-value
+                                border-right 1px solid rgba(255,255,255,.2)
+                    .row2
+                        border none
+                    .row3,.row4,.row5,.row6,.row7,.row8
+                        .data-value,.data-label
+                            text-align center
+                            border-bottom 1px solid #ddd
+                            border-right 1px solid #ddd
+                            padding 0
+                        .month-label,.data-container
+                            padding 0
+                .chart-contianer
+                    padding 20px
+                    height auto
+                    justify-content space-between
+                    .monthly-admit-table
+                    .utilization-table
+                        border 1px solid rgba(89,88,84,0.2)
+                        padding 0
+                        .heading-row
+                            text-align center
+                            font-size 1.6rem
+                            line-height 1.6rem
+                            .column-heading
+                                background-color #4f7345
+                                color #FFF
+                                padding 8px 7px
+                                align-items flex-end
+                                justify-content center
+                                padding-bottom 8px
+                                border 1px solid rgba(89,88,84,0.2)
+                                border-left 0
+                                border-top 0
+                                &:last-child
+                                    border-right 0
+        .submit-footer
+                text-align center
+                margin-bottom 30px
+                text-outlet
+                    background #4F7345
+
+
+// @media(max-width 1024px)
+// .planningTool
+//         .eventBody
+//             .content-div
+//                 .forecast-table
+//                     margin 20px 30px
+//                     .row1, .row2, .row3
+//                         font-size 1.2rem
+//                         line-height 1.4rem
+
+
+
+// @media(max-width 1091px)
+// .planningTool
+//         .eventBody
+//             .content-div
+//                 .forecast-table
+//                     .row2
+//                         .data-label-container
+//                             .data-label
+//                                 text-outlet
+//                                     font-size 1.5rem
+//                 .row1, .row2, .row3
+//                     font-size 1rem
+//                     line-height 1rem
+

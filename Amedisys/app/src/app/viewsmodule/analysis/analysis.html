@@ -1,0 +1,68 @@
+<div class="analysis-modal" [class.modalShow]="modalShow"></div>
+<div class="analysis animated" [class.slideOutRight]="isClosing" [class.slideInRight]="isOpening" [class.expanded]="expanded">
+    <div class="analysis-close-btn col-xs-12">
+        <div (click)="onClose()" class="analysis-close fa fa-times"></div>
+    </div>
+    <text-outlet key="Competitors" class="analysis-title"></text-outlet>
+    <div class="analysis-content">
+        <div class="analysis-links">
+            <a class="row analysis-link" (click)="expanded=true; activeIndex=0"><div class="analysis-icon icon-glossary-fill"></div><text-outlet class="analysis-link-text" key="Competitors1"></text-outlet></a>
+            <a class="row analysis-link" (click)="expanded=true; activeIndex=1"><div class="analysis-icon icon-glossary-fill"></div><text-outlet class="analysis-link-text" key="Competitors2"></text-outlet></a>
+        </div>
+        <div class="analysis-expansion" *ngIf="expanded" [ngSwitch]="activeIndex">
+            
+            <div class="expanded-content glossary" *ngSwitchCase="0">
+                <article class="content-div">
+                    <div class="col-xs-12">
+                        <div class="col-xs-5 content-col">
+                            <h3><text-outlet key="Competitors1Title"></text-outlet></h3>
+                            <div class="analysis-body" [innerHTML]="Competitor1Background"></div>
+                        </div>
+                        <div class="col-xs-7 content-col">
+                            <div class="content-row">
+                                <div class="chart-title"><text-outlet key="CompetitorChartTitle"></text-outlet></div>
+                                <div class="row">
+                                    <basicline
+                                        rangeref="[tlOutputComp1LOB1MSR_2, tlOutputComp1LOB1MSR_1, tlOutputComp1LOB1MSR0, tlOutputComp1LOB2MSR_2, tlOutputComp1LOB2MSR_1, tlOutputComp1LOB2MSR0]" 
+                                        categorylabels="R-2, R-1, R0"
+                                        serieslabels="Riverside, Pleasantville"
+                                        [numberformat]="'0%'"
+                                        width="500"
+                                        chartoptions='{ "xAxis":{"labels":{"style":{"color":"#000"}}},"legend": { "itemStyle": { "color": "#000" } }, "yAxis": { "labels": { "style": { "color": "#000" } }, "alternateGridColor": "" } }'>
+                                    </basicline>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="expanded-content glossary" *ngSwitchCase="1">
+                <article class="content-div">
+                    <div class="col-xs-12">
+                        <div class="col-xs-5 content-col">
+                            <h3><text-outlet key="Competitors2Title"></text-outlet></h3>
+                            <div class="analysis-body" [innerHTML]="Competitor2Background">
+                            </div>
+                        </div>
+                        <div class="col-xs-7 content-col">
+                            <div class="content-row">
+                                <div class="chart-title"><text-outlet key="CompetitorChartTitle"></text-outlet></div>
+                                <div class="row">
+                                    <basicline
+                                        rangeref="[tlOutputComp2LOB1MSR_2, tlOutputComp2LOB1MSR_1, tlOutputComp2LOB1MSR0, tlOutputComp2LOB2MSR_2, tlOutputComp2LOB2MSR_1, tlOutputComp2LOB2MSR0]" 
+                                        categorylabels="R-2, R-1, R0"
+                                        serieslabels="Riverside, Pleasantville"
+                                        [numberformat]="'0%'"
+                                        width="500"
+                                        chartoptions='{ "xAxis":{"labels":{"style":{"color":"#000"}}},"legend": { "itemStyle": { "color": "#000" } }, "yAxis": { "labels": { "style": { "color": "#000" } }, "alternateGridColor": "" } }'></basicline>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</div>

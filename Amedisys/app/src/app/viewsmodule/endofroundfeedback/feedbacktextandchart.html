@@ -1,0 +1,57 @@
+<h1>{{ title }}</h1>
+<div *ngIf="charttopper != undefined" id='feedback-charttopper' [innerHTML]="charttopper"></div>
+<div *ngIf="chartType == 'stackedcolumn'" class="feedback-chart">
+    <stackedcolumn  
+        [rangeref]="rangeref" 
+        [categorylabels]="categorylabels"
+        [serieslabels]="serieslabels"
+        [year]="year" 
+        [numberformat]="numberformat" 
+        [charttitle]="charttitle"
+        [chartoptions]="chartoptions"
+        [min]="min"
+        [max]="max"
+        [dataLabels]="dataLabels">
+    </stackedcolumn>
+</div>
+<div *ngIf="chartType == 'basicline'" class="feedback-chart">
+    <basicline 
+        [rangeref]="rangeref" 
+        [categorylabels]="categorylabels"
+        [serieslabels]="serieslabels"
+        [year]="year" 
+        [numberformat]="numberformat" 
+        [charttitle]="charttitle"
+        [chartoptions]="chartoptions"
+        [min]="min"
+        [max]="max"
+        [linewidth]="linewidth">
+    </basicline>
+</div>
+<div *ngIf="chartType == 'basiccolumn'" class="feedback-chart">
+    <basiccolumn 
+        [rangeRef]="rangeref" 
+        [categoryLabels]="categorylabels"
+        [seriesLabels]="serieslabels"
+        [year]="year" 
+        [numberFormat]="'0.0a'" 
+        [chartTitle]="charttitle" 
+        [chartOptions]="chartoptions"
+        [min]="min"
+        [max]="max">
+    </basiccolumn>
+</div>
+<div *ngIf="chartType == 'heatmap'" class="feedback-chart">
+    <heatmap  
+        [rangeref]="rangeref" 
+        [categorylabels]="categorylabels"
+        [serieslabels]="serieslabels"
+        [year]="year" 
+        [numberformat]="numberformat" 
+        [charttitle]="charttitle"
+        [chartoptions]="chartoptions"
+        [min]="min"
+        [max]="max">
+    </heatmap>
+</div>
+<div [innerHTML]="narrative" class="feedback-text"></div>

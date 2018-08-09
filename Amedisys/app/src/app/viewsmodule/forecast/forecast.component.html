@@ -1,0 +1,416 @@
+<div class="planningTool" [@flyInOut]="animState">
+    <div class="eventBody">
+		<div class="stageWrapper">
+
+            <div class="metrics row add-flex">
+                <div class="nifo metric add-flex">
+                    <!-- <text-metric titleKey="NIFO" [ref]="'tlOutputDBLOB'+activeIndex+'NIFO'" currentYearRef="xxRound" format="0,0"></text-metric> -->
+                    <text-metric titleKey="NIFOPerc" [ref]="'tlOutputDBLOB'+activeIndex+'OpMargin'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                </div>
+                <div class="referral-satisfaction metric add-flex">
+                    <text-metric titleKey="ReferralSatisfaction" [ref]="'tlOutputDBLOB'+activeIndex+'CSAT'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                </div>
+                <div class="employee-engagement metric add-flex">
+                    <text-metric titleKey="EmployeeEngagement" [ref]="'tlOutputDBLOB'+activeIndex+'ESAT'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                </div>
+                <div class="stars metric add-flex">
+                    <text-metric titleKey="Stars" [ref]="'tlOutputDBLOB'+activeIndex+'Stars'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                </div>
+                <div class="revenueGrowth metric add-flex">
+                    <text-metric titleKey="RevenueGrowth" [ref]="'tlOutputDBLOB'+activeIndex+'RevGrowth'" currentYearRef="xxRound" format="0.0%"></text-metric>
+                </div>
+                <div class="doo-utilization metric add-flex">
+                    <text-metric titleKey="DOOUtilization" [ref]="'tlOutputDBLOB'+activeIndex+'Emp1Util'" currentYearRef="xxRound" format="0.0%" color1Condition="<" color1Value="100" color2Condition="=" color2Value="100" color3Condition=">" color3Value="100"></text-metric>
+                </div>
+                <div class="meeting-container metric" [class.all-meetings-attended]="allMeetingsAttended">
+                    <div class="meeting-text metric-name"><text-outlet key="MeetingRemainingText"></text-outlet></div>
+                    <div class="meeting-value metric-currValue"><calc-outlet [ref]="'tlOutputLOB'+activeIndex+'MeetingCountRemaining'" yearRef="xxRound" color1Condition="=" color1Value="0" color2Condition=">" color2Value="0"></calc-outlet></div>
+                </div>
+            </div>
+				<article class="content-div">
+                	<div class="forecast-table"> <!-- [class.readOnly]="disabled" -->
+                        <div class="row1 row col-xs-12">
+                            <div class="col-xs-6 heading-row breakRight">
+                                <div class="data-label col-xs-12">
+                                    <text-outlet key="Actuals"></text-outlet>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 heading-row breakRight">
+                                <div class="data-label col-xs-12">
+                                    <text-outlet key="Avg. Monthly Projections"></text-outlet>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row2 row col-xs-12">
+                            <div class="col-xs-6 tableSubHeader breakRight">
+                                <div class="data-label col-xs-4">
+                                    <text-outlet key="Admits & Recerts"></text-outlet>
+                                </div>
+                                <div class="month-label col-xs-8">
+                                    <div class="data-label center col-xs-4">
+                                        <text-outlet key="Feb"></text-outlet>
+                                    </div>
+                                    <div class="data-label center col-xs-4">
+                                        <text-outlet key="Mar"></text-outlet>
+                                    </div>
+                                    <div class="data-label col-xs-4">
+                                        <text-outlet key="Apr"></text-outlet>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 tableSubHeader breakRight">
+                                <div class="data-label col-xs-3">
+                                    <text-outlet key="Run Rate"></text-outlet>
+                                </div>
+                                <div class="data-label col-xs-3">
+                                    <text-outlet key="Modification"></text-outlet>
+                                </div>
+                                <div class="data-label col-xs-3">
+                                    <text-outlet key="Forecast"></text-outlet>
+                                </div>
+                                <div class="data-label last col-xs-3">
+                                    <text-outlet key="Budget"></text-outlet>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="row3 row col-xs-12">
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-label col-xs-4">
+                                    <text-outlet key="Medicare Admits"></text-outlet>
+                                </div>
+                                <div class="month-label col-xs-8">
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg1P1'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg1P2'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg1P3'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-value col-xs-3">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg1Base'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="col-xs-3">
+                                    <!-- <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod1Seg1Adj'" yearRef="xxRound" min="0" max="{{arrMaxValues[activeIndex - 1][currentRound - 1][0]}}" format="0"></calc-stepper> -->
+                                    <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod1Seg1Adj'" yearRef="xxRound" min="0" [max]="'tlOutputLOB'+activeIndex+'Prod1Seg1AdjMax'" format="0"></calc-stepper>
+                                </div>
+                                <div class="data-value col-xs-3">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg1Fcst'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                                <div class="data-value col-xs-3">
+                                    <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg1Budget'" yearRef="xxRound"></calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="row4 row col-xs-12">
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-label  col-xs-4">
+                                    <text-outlet key="PPS Admits"></text-outlet>
+                                </div>
+                                <div class="month-label col-xs-8">
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg2P1'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg2P2'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg2P3'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-container col-xs-12">
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg2Base'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <!-- <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod1Seg2Adj'" yearRef="xxRound" min="0" max="{{arrMaxValues[activeIndex - 1][currentRound - 1][1]}}" format="0"></calc-stepper> -->
+                                        <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod1Seg2Adj'" yearRef="xxRound" min="0" [max]="'tlOutputLOB'+activeIndex+'Prod1Seg2AdjMax'" format="0"></calc-stepper>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg2Fcst'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg2Budget'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="row5 row col-xs-12">
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-label  col-xs-4">
+                                    <text-outlet key="Other Admits"></text-outlet>
+                                </div>
+                                <div class="month-label nopadding col-xs-8">
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg3P1'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg3P2'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg3P3'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-container col-xs-12">
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg3Base'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <!-- <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod1Seg3Adj'" yearRef="xxRound" min="0" max="{{arrMaxValues[activeIndex - 1][currentRound - 1][2]}}" format="0"></calc-stepper> -->
+                                        <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod1Seg3Adj'" yearRef="xxRound" min="0" [max]="'tlOutputLOB'+activeIndex+'Prod1Seg3AdjMax'" format="0"></calc-stepper>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg3Fcst'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod1Seg3Budget'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="row6 row col-xs-12">
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-label col-xs-4">
+                                    <text-outlet key="Medicare Recerts"></text-outlet>
+                                </div>
+                                <div class="month-label nopadding col-xs-8">
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg1P1'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg1P2'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg1P3'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-container col-xs-12">
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg1Base'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <!-- <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod2Seg1Adj'" yearRef="xxRound" min="0" max="{{arrMaxValues[activeIndex - 1][currentRound - 1][3]}}" format="0"></calc-stepper> -->
+                                        <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod2Seg1Adj'" yearRef="xxRound" min="0" [max]="'tlOutputLOB'+activeIndex+'Prod2Seg1AdjMax'" format="0"></calc-stepper>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg1Fcst'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg1Budget'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="row7 row col-xs-12">
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-label col-xs-4">
+                                    <text-outlet key="PPS Recerts"></text-outlet>
+                                </div>
+                                <div class="month-label nopadding col-xs-8">
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg2P1'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg2P2'" yearRef="xxRound"></calc-outlet>
+                                    </div> 
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg2P3'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-container col-xs-12">
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg2Base'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <!-- <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod2Seg2Adj'" yearRef="xxRound" min="0" max="{{arrMaxValues[activeIndex - 1][currentRound - 1][4]}}" format="0"></calc-stepper> -->
+                                        <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod2Seg2Adj'" yearRef="xxRound" min="0" [max]="'tlOutputLOB'+activeIndex+'Prod2Seg2AdjMax'" format="0"></calc-stepper>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg2Fcst'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg2Budget'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="row8 row col-xs-12">
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-label  col-xs-4">
+                                    <text-outlet key="Other Recerts"></text-outlet>
+                                </div>
+                                <div class="month-label nopadding  col-xs-8">
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg3P1'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg3P2'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value  col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg3P3'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-container col-xs-12">
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg3Base'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <!-- <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod2Seg3Adj'" yearRef="xxRound" min="0" max="{{arrMaxValues[activeIndex - 1][currentRound - 1][5]}}" format="0"></calc-stepper> -->
+                                        <calc-stepper [ref]="'tlInputLOB'+activeIndex+'Prod2Seg3Adj'" yearRef="xxRound" min="0" [max]="'tlOutputLOB'+activeIndex+'Prod2Seg3AdjMax'" format="0"></calc-stepper>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg3Fcst'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'Prod2Seg3Budget'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="row9 row col-xs-12">
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-label col-xs-4">
+                                    <text-outlet key="Total"></text-outlet>
+                                </div>
+                                <div class="month-label col-xs-8">
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'ProjectionP1'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'ProjectionP2'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value  col-xs-4">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'ProjectionP3'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 breakRight">
+                                <div class="data-container col-xs-12">
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'ProjectionBase'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'ProjectionAdj'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'ProjectionFcst'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                    <div class="data-value col-xs-3">
+                                        <calc-outlet [ref]="'tlOutputLOB'+activeIndex+'ProjectionBudget'" yearRef="xxRound"></calc-outlet>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-xs-12 row add-flex chart-contianer">
+                        <div class="utilization-table chart-holder">
+                            <div class="heading-row row add-flex">
+                                <div class="col-xs-12 row column-heading add-flex">
+                                    <text-outlet key="UtilizationPerc"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row add-flex">
+                                <basiccolumn
+                                width="450"
+                                    [rangeRef]="'tlOutputLOB'+activeIndex+'Emp1Utilization, tlOutputLOB'+activeIndex+'Emp2Utilization, tlOutputLOB'+activeIndex+'Emp3Utilization'"
+                                    categoryLabels="SkilledNursing, OccupationalTherapy, PhysicalTherapy"
+                                    seriesLabels="utilization"
+                            chartOptions='{"legend":{"enabled":false},"plotOptions":{"column":{"zones":[{"value":0,"color":"red"},{"color":"green"}]}}}'
+                                    numberFormat="0.0%"
+                                    year="xxRound"
+                                ></basiccolumn>
+                            </div>
+                        </div>
+                        <div class="monthly-admit-table chart-holder">
+                            <div class="heading-row row add-flex">
+                                <div class="col-xs-12 row column-heading add-flex">
+                                    <text-outlet key="Monthly Admit"></text-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row add-flex">
+                                <stackedcolumn
+                                width="450"
+                                    [rangeref]="'tlOutputLOB'+activeIndex+'Prod1Seg1Budget, tlOutputLOB'+activeIndex+'Prod1Seg1Fcst, tlOutputLOB'+activeIndex+'Prod1Seg2Budget, tlOutputLOB'+activeIndex+'Prod1Seg2Fcst, tlOutputLOB'+activeIndex+'Prod1Seg3Budget, tlOutputLOB'+activeIndex+'Prod1Seg3Fcst, tlOutputLOB'+activeIndex+'Prod2Seg1Budget, tlOutputLOB'+activeIndex+'Prod2Seg1Fcst, tlOutputLOB'+activeIndex+'Prod2Seg2Budget, tlOutputLOB'+activeIndex+'Prod2Seg2Fcst, tlOutputLOB'+activeIndex+'Prod2Seg3Budget, tlOutputLOB'+activeIndex+'Prod2Seg3Fcst'"
+                                    categorylabels="Budget, Forecast"
+                                    serieslabels="Medicare Admits, PPS Admits, Other Admits, Medicare Recerts, PPS Receerts, Other Recerts"
+                                    year="xxRound"
+                                    chartoptions='{"colors":["#292252", "#4f7345", "#006EB9", "#feab41", "#6868b5"]}'
+                                ></stackedcolumn>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+						            <!-- <div class="row col-xs-12 submit-footer" [class.hidden]="disabled">
+						                <div class="next-action col-xs-12">
+						                    <div class="btn-wrapper row">
+						                        <div class="btn btn-primary" (click)="onSubmit()">
+						                            <text-outlet key="Submit"></text-outlet>
+						                        </div>
+						                    </div>
+						                </div>
+						            </div> -->
+            
+        </div>
+    </div>
+</div>

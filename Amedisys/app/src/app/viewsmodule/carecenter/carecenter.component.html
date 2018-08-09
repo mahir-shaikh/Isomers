@@ -1,0 +1,18 @@
+<div class="planningTool" [@flyInOut]="animState">
+    <div class="eventBody tabContentWrapper">
+        <div class="businessTitle">
+            <text-outlet key="CareCenter{{lineOfBusiness}}"></text-outlet>
+        </div>
+        <tabset>
+            <tab heading ="DOO Actions" [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                <doofocus activeIndex="{{ lineOfBusiness }}"></doofocus>
+            </tab>
+            <tab heading ="Forecast" [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                <forecast activeIndex="{{ lineOfBusiness }}"></forecast>
+            </tab>
+            <tab heading ="Staffing" [active]="activeIndex === 3" (select)="setActiveIndex(3)">
+                <staffing activeIndex="{{ lineOfBusiness }}"></staffing>
+            </tab>
+        </tabset>
+    </div>
+</div>

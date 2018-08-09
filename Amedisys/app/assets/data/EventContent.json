@@ -1,0 +1,804 @@
+{"scenes": [
+{
+    "ID": "DOOINIT101",
+    "name": "Thank Your Referrals ",
+    "narrative": "Let your referral sources know how much you appreciate their business by calling and writing letters to thank them; let them know you look forward to continue caring for their patients in the future. "
+}, {
+    "ID": "DOOINIT102",
+    "name": "Patient Updates ",
+    "narrative": "Provide an Episode Detail Report to the BDs and include a confidential, handwritten update note in a sealed envelope for the BDs to give to the doctors during their visits, when they thank them for the business. "
+}, {
+    "ID": "DOOINIT103",
+    "name": "Use Your Rehab Resources ",
+    "narrative": "In an effort to increase your therapy cases and help your team grasp a better understanding of referral source needs, access your area rehab resources to train your staff and assist BD staff. Sit in on those meetings to ensure you're up to speed, as well. "
+}, {
+    "ID": "DOOINIT104",
+    "name": "Use Your Clinical Resources ",
+    "narrative": "In an effort to help your team grasp a better understanding of selling using a quality source, access your Regional VPs of Clinical to train your staff and assist your BD staff. Sit in on those meetings to ensure you're up to speed, as well. "
+}, {
+    "ID": "DOOINIT105",
+    "name": "Participate in the BD Process ",
+    "narrative": "Show your referral sources and your BDs that you care, by participating in the BD process with the BD teams. "
+}, {
+    "ID": "DOOINIT106",
+    "name": "Build Top Referral Source Relationships ",
+    "narrative": "Get to know your top referral sources and develop stronger relationships with them. Ensure quality care will remain the same, should there be any case of BD staff turnover. "
+}, {
+    "ID": "DOOINIT107",
+    "name": "Build a Network of Experienced Clinicians ",
+    "narrative": "Use your network and build up a pipeline of clinicians. Actively look for clinicians experienced in home health care to maximize productivity, should they join MedAssist. "
+}, {
+    "ID": "DOOINIT108",
+    "name": "Performance Expectations ",
+    "narrative": "Schedule time with team members to set/reset performance expectations. Act as a servant leader and ask how you can help ensure they're set up to exceed expectations. "
+}, {
+    "ID": "DOOINIT109",
+    "name": "Feedback & Coaching ",
+    "narrative": "Schedule time with team members to provide feedback and coach. Be sure to highlight the good and provide constructive advice on the bad. Your feedback and coaching will be more effective if you also manage performance expectations. "
+}, {
+    "ID": "DOOINIT110",
+    "name": "Manage Productivity ",
+    "narrative": "Work with your staffing team to ensure your team is maximizing field productivity (specifically RN/LPN staffing). Use the Productivity Tool to ensure effective staffing and hold field staff accountable for client visits. Optimize clinical performance and visits per episode. "
+}, {
+    "ID": "DOOINIT111",
+    "name": "Manage PTO ",
+    "narrative": "Set up time with clinicians to discuss their vacation plans and manage PTO. Effectively plan ahead using a 30-day calendar to manage capacity and ensure adequate coverage. Be sure to show you care by asking them about their trip when they return! "
+}, {
+    "ID": "DOOINIT112",
+    "name": "Celebrate Special Occasions ",
+    "narrative": "Designate time during your monthly staff meetings to celebrate birthdays and anniversaries. Improve team morale by buying or baking cupcakes - make those clinicians feel special!"
+}, {
+    "ID": "DOOINIT113",
+    "name": "Clinician of the Month ",
+    "narrative": "Designate time during your PCC meetings to award clinicians for their exceptional work. At the end of each month crown a 'Clinician of the Month' and thank them for their hard work by treating them to lunch. "
+}, {
+    "ID": "DOOINIT114",
+    "name": "Read Patient Letters ",
+    "narrative": "Designate time during your monthly staff meetings to recognize clinicians and the impact they've had on patients by reading patient letters out loud. Thank the clinician for their impressive work. "
+}, {
+    "ID": "DOOINIT115",
+    "name": "Team Building Day",
+    "narrative": "Organize a bowling day, community outreach event, or weekend potluck and encourage clinicians to join. Invite families and friends to join in on the fun! "
+}, {
+    "ID": "DOOINIT116",
+    "name": "Preceptor Programs",
+    "narrative": "Formalize an improved mentor system where newer field clinicians can team up with high-functioning, more experienced field clinicians and learn from their experience. Encourage peer to peer recognition. "
+}, {
+    "ID": "DOOINIT117",
+    "name": "Ride Along Visits",
+    "narrative": "Show credibility by spending an afternoon going on ride along visits with your clinicians. Be sure to make these ride along visits productive by providing constructive feedback on the clinician's work after each visit. "
+}, {
+    "ID": "DOOINIT118",
+    "name": "Go on Clinical Visits ",
+    "narrative": "Ensure minimal missed visits and maximize productivity, by spending an afternoon going on clinical visits. Share any learnings with team members. "
+}, {
+    "ID": "DOOINIT119",
+    "name": "Support the CM for PCC Meeting ",
+    "narrative": "Spend time providing support to the CM, to ensure he/she is prepared to run a more effective  PCC meeting. "
+}, {
+    "ID": "DOOINIT120",
+    "name": "On-Boarding and Orientation for New Employees ",
+    "narrative": "Ensure new team members are set up for success by working with your Business Office Manager (BOM) to organize more effective on-boarding and orientation activities for new employees. "
+}, {
+    "ID": "FDBK101",
+    "name": "Welcome to Feedback for Year 1",
+    "narrative1": "Welcome to the annual meeting, where we analyze our results for the year end and consider how the decisions we made impacted our performance. We should use this opportunity to think about ways to improve for next year.<br><br>Since we are trying to grow faster than the market, this feedback will look at how successful we were at growing revenues and ultimately how well we translated that revenue growth to the bottom line in the form of Net Income From Operations (NIFO).<br><br>Please keep in mind that your results will differ from the forecast that we were tracking throughout the year. We now have our actual revenue numbers, based on our performance with customers in the marketplace.<br><br>One of our goals is to be a leader in the industry and grow revenue.  Let's see how revenue grew this past year.",
+    "PageType": "Feedback",
+    "round": "1",
+    "subpage": "FeedbackTextAndImage"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName ,CHL group, Kinder",
+    "chartnumberformat": "0,0a",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}'",
+    "chartranges": "[tlOutputFBSeg1Rev, tlOutputComp1FBSeg1Rev, tlOutputComp2FBSeg1Rev], [ tlOutputFBSeg2Rev, tlOutputComp1FBSeg2Rev, tlOutputComp2FBSeg2Rev], [tlOutputFBSeg3Rev, tlOutputComp1FBSeg3Rev,  tlOutputComp2FBSeg3Rev]",
+    "chartseries": "Medicare, PPS, Other",
+    "charttopper": "CAGR <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBRevGrowth_R1 }}</td><td>{{tlOutputComp1FBRevGrowth_R1}}</td><td>{{tlOutputComp2FBRevGrowth_R1}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK102",
+    "name": "Revenue by Payer",
+    "narrative1": "This chart shows the total annual revenue for our company and two major competitors, CHL Group and Kinder. The height of the bar represents our total revenue and each colored segment represents specific payer revenue. Our Compound Annual Growth Rate or CAGR is shown as the value across the top, which indicates revenue growth.<br><br>Were you able to grow revenue from Round 0?<br>What contributed to your revenue result?<br><br>Looking at the revenue mix for our competitors, it looks like Kinder has captured additional market share form CHL.<br><br>As you think back to the strategy that you created, how does your revenue mix in Round1 match or differ from what you expected?<br><br>One thing that can lead to increased revenues is the mix of new admins and recerts. Let's take a look at the impact of that decision.",
+    "PageType": "Feedback",
+    "round": "1",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName, CHL group, Kinder",
+    "chartnumberformat": "0,0a",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}'",
+    "chartranges": "tlOutputFBProd1Seg1Patients, tlOutputComp1FBProd1Seg1Patients, tlOutputComp2FBProd1Seg1Patients, tlOutputFBProd2Seg1Patients, tlOutputComp1FBProd2Seg1Patients, tlOutputComp2FBProd2Seg1Patients, tlOutputFBProd1Seg2Patients, tlOutputComp1FBProd1Seg2Patients, tlOutputComp2FBProd1Seg2Patients, tlOutputFBProd2Seg2Patients, tlOutputComp1FBProd2Seg2Patients, tlOutputComp2FBProd2Seg2Patients, tlOutputFBProd1Seg3Patients, tlOutputComp1FBProd1Seg3Patients, tlOutputComp2FBProd1Seg3Patients, tlOutputFBProd2Seg3Patients,  tlOutputComp1FBProd2Seg3Patients, tlOutputComp2FBProd2Seg3Patients",
+    "chartseries": "Medicare - Admits, Medicare Recerts, PPS - Admits, PPS Recerts, Other  - Admits, Other Recerts",
+    "charttopper": "% New <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBAdmintPerc_R1 }}</td><td>{{tlOutputComp1FBAdmintPerc_R1}}</td><td>{{tlOutputComp2FBAdmintPerc_R1}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK103",
+    "name": "New Admissions and Recert",
+    "narrative1": "This chart shows the total number of patients broken down by payer category and admit vs. recert. New Admits are driving the majority of patient volume, with Medicare as the largest payer group. Which patient group is more profitable, admits or recerts?",
+    "PageType": "Feedback",
+    "round": "1",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName,CHL Gropup,Kinder",
+    "chartnumberformat": "0.00%",
+    "chartranges": "tlOutputFBCSATImpact1, tlOutputComp1FBCSATImpact1, tlOutputComp2FBCSATImpact1, tlOutputFBCSATImpact2, tlOutputComp1FBCSATImpact2, tlOutputComp2FBCSATImpact2, tlOutputFBCSATImpact3, tlOutputComp1FBCSATImpact3, tlOutputComp2FBCSATImpact3, tlOutputFBCSATImpact4, tlOutputComp1FBCSATImpact4, tlOutputComp2FBCSATImpact4",
+    "chartseries": "DOO Actions, Missed Visits, Employee Engagement, Clinical Quality",
+    "charttopper": "Referral Satisfaction <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBCSAT_R1 }}</td><td>{{tlOutputComp1FBCSAT_R1}}</td><td>{{tlOutputComp2FBCSAT_R1}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK104",
+    "name": "Referral Source Satisfaction",
+    "narrative1": "Referrals are a critical part of driving new patient growth. Actions you take as a DOO has a big impact on the ability to drive referrals in your care centers. Missed visits, clinical quality and employee engagement also impact referral satisfaction. Lets take a look at clinical quality.",
+    "PageType": "Feedback",
+    "round": "1",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName,CHL Gropup,Kinder",
+    "chartnumberformat": "0.0%",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}'",
+    "chartranges": "tlOutputFBStarsImpact1, tlOutputComp1FBStarsImpact1, tlOutputComp2FBStarsImpact1, tlOutputFBStarsImpact2, tlOutputComp1FBStarsImpact2, tlOutputComp2FBStarsImpact2, tlOutputFBStarsImpact3, tlOutputComp1FBStarsImpact3, tlOutputComp2FBStarsImpact3, tlOutputFBStarsImpact4, tlOutputComp1FBStarsImpact4, tlOutputComp2FBStarsImpact4, tlOutputFBStarsImpact5, tlOutputComp1FBStarsImpact5, tlOutputComp2FBStarsImpact5",
+    "chartseries": "Doo Actions, DOO Utilization, Missed Visits, Clinician Overtime, Employee Engagement",
+    "charttopper": "Clinical Quality <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBStars_R1 }}</td><td>{{tlOutputComp1FBStars_R1}}</td><td>{{tlOutputComp2FBStars_R1}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK105",
+    "name": "Clinical Quality",
+    "narrative1": "This chart displays activities influencing clinical quality. High clinical quality will help you attract new patients. How you manage your time and clinicians also impacts quality of service.<br>You have seen the connection between your patient mix, referral satisfaction and clinical quality on your revenue streams. Now let's see how this impacted your gross margin this year.",
+    "PageType": "Feedback",
+    "round": "1",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName,CHL Group, Kinder",
+    "chartnumberformat": "0.0%",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}'",
+    "chartranges": "tlOutputFBESATImpact1, tlOutputComp1FBESATImpact1, tlOutputComp2FBESATImpact1, tlOutputFBESATImpact2, tlOutputComp1FBESATImpact2, tlOutputComp2FBESATImpact2, tlOutputFBESATImpact3, tlOutputComp1FBESATImpact3, tlOutputComp2FBESATImpact3, tlOutputFBESATImpact4, tlOutputComp1FBESATImpact4, tlOutputComp2FBESATImpact4",
+    "chartseries": "Doo Actions, People Development Time, DOO Utilization, DOO Staff Modification",
+    "charttopper": "Employee Engagement <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBESAT_R1 }}</td><td>{{tlOutputComp1FBESAT_R1}}</td><td>{{tlOutputComp2FBESAT_R1}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK106",
+    "name": "Employee Engagement",
+    "narrative1": "This chart displays activities influencing employee engagement.  Items above the middle line contributed positivity to engagement while items below the line had a negative impact.  Ending engagement level is located above the bar.  How you support your clinician staff has a big impact on engagement and productivity.  Engaged employees are more productive.  Next lets look at productivity.",
+    "PageType": "Feedback",
+    "round": "1",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName, CHL Group, Kinder",
+    "chartnumberformat": "0,0a",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}'",
+    "chartranges": "tlOutputFBEmp1Cost, tlOutputComp1FBEmp1Cost, tlOutputComp2FBEmp1Cost, tlOutputFBEmp2Cost, tlOutputComp1FBEmp2Cost, tlOutputComp2FBEmp2Cost, tlOutputFBEmp3Cost, tlOutputComp1FBEmp3Cost, tlOutputComp2FBEmp3Cost, tlOutputFBGrossProfit, tlOutputComp1FBGrossProfit, tlOutputComp2FBGrossProfit",
+    "chartseries": "Skilled Nursing, Occupational Therapy, Physical Therapy, Gross Profit",
+    "charttopper": "Gross Margin <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBGrossMargin_R1 }}</td><td>{{tlOutputComp1FBGrossMargin_R1}}</td><td>{{tlOutputComp2FBGrossMargin_R1}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK107",
+    "name": "Gross Margin",
+    "narrative1": "This chart displays your clinical costs and gross profit.  The height of the bar is your total annual revenue.  The colored bars indicate your clinical costs, and the top colored bar is your gross profit left over after adding up all of your costs.  Your gross margin as a percentage of revenue is above the bar.  Your competitors have similar gross margins with Kinder leading the market.  Lets see how employee engagement and productivity impacted operating results.",
+    "PageType": "Feedback",
+    "round": "1",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "basiccolumn",
+    "chartcategories": "tlInputTeamName, CHL Group, Kinder",
+    "chartnumberformat": "0,0a",
+    "chartoptions": "{'legend':{'floating':false, 'x': 0, 'y':0, 'verticalAlign':'bottom', 'align':'center', 'layout':'horizontal'}}",
+    "chartranges": "tlOutputFBEmp1Capacity, tlOutputComp1FBEmp1Capacity, tlOutputComp2FBEmp1Capacity, tlOutputFBEmp1Visits, tlOutputComp1FBEmp1Visits, tlOutputComp2FBEmp1Visits, tlOutputFBEmp2Capacity, tlOutputComp1FBEmp2Capacity, tlOutputComp2FBEmp2Capacity, tlOutputFBEmp2Visits, tlOutputComp1FBEmp2Visits, tlOutputComp2FBEmp2Visits, tlOutputFBEmp3Capacity, tlOutputComp1FBEmp3Capacity, tlOutputComp2FBEmp3Capacity, tlOutputFBEmp3Visits, tlOutputComp1FBEmp3Visits, tlOutputComp2FBEmp3Visits",
+    "chartseries": "Skilled Nursing, Skilled Nursing Demand, Occupational Therapy, Occupational Therapy Demand, Physical Therapy, Physical Therapy Demand",
+    "charttopper": "% Above Capacity <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBCapacityPerc_R1 }}</td><td>{{tlOutputComp1FBCapacityPerc_R1}}</td><td>{{tlOutputComp2FBCapacityPerc_R1}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK108",
+    "name": "Productivity",
+    "narrative1": "This chart compares your teams capacity vs. demand.  The percentage above the chart represents the amount your staff was utilized above or below its capacity.  What are the implications of under or over utilized staff?  Lets see how this impacted overall operating results.",
+    "PageType": "Feedback",
+    "round": "1",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName, CHL Group, Kinder",
+    "chartnumberformat": "0,0a",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}'",
+    "chartranges": "tlOutputFBServiceCost, tlOutputComp1FBServiceCost, tlOutputComp2FBServiceCost, tlOutputFBEmpOverhead, tlOutputComp1FBEmpOverhead, tlOutputComp2FBEmpOverhead, tlOutputFBOpProfit, tlOutputComp1FBOpProfit, tlOutputComp2FBOpProfit",
+    "chartseries": "Operating Expenses, G&A and Other, NIFO",
+    "charttopper": "NIFO % <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBOpMargin_R1 }}</td><td>{{tlOutputComp1FBOpMargin_R1}}</td><td>{{tlOutputComp2FBOpMargin_R1}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK109",
+    "name": "Net Income From Operations ",
+    "narrative1": "This chart displays your costs and profit. The height of the bar is your total annual revenue. The colored bars indicate your costs, and the top colored bar is your operating profit left over after adding up all of your costs.  Your operating margin as a percentage of revenue is above the bar.<br><br>Before adjourning this meeting, let's do one quick review of what we discussed today, which will give us some key items to focus on while running the business next year.",
+    "PageType": "Feedback",
+    "round": "1",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "ID": "FDBK110",
+    "name": "Conclusion",
+    "narrative1": "Conclusion:<ul><li>Engaged employees lead to better clinical results which leads to higher referrals</li><li>Productivity has a direct impact on NIFO</li><li>Payer and Patient mix drives operating results</li>",
+    "PageType": "Feedback",
+    "round": "1",
+    "subpage": "FeedbackTextAndImage"
+}, {
+    "ID": "FDBK201",
+    "name": "Welcome to Feedback for Year 2",
+    "narrative1": "Welcome to the annual meeting, where we analyze our results for the year end and consider how the decisions we made impacted our performance. We should use this opportunity to think about ways to improve for next year.<br><br>Since we are trying to grow faster than the market, this feedback will look at how successful we were at growing revenues and ultimately how well we translated that revenue growth to the bottom line in the form of Net Income From Operations (NIFO).<br><br>Please keep in mind that your results will differ from the forecast that we were tracking throughout the year. We now have our actual revenue numbers, based on our performance with customers in the marketplace.<br><br>One of our goals is to be a leader in the industry and grow revenue.  Let's see how revenue grew this past year.",
+    "PageType": "Feedback",
+    "round": "2",
+    "subpage": "FeedbackTextAndImage"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName,CHL Group, Kinder",
+    "chartnumberformat": "0,0a",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}",
+    "chartranges": "[tlOutputFBSeg1Rev, tlOutputComp1FBSeg1Rev, tlOutputComp2FBSeg1Rev], [ tlOutputFBSeg2Rev, tlOutputComp1FBSeg2Rev, tlOutputComp2FBSeg2Rev], [tlOutputFBSeg3Rev, tlOutputComp1FBSeg3Rev,  tlOutputComp2FBSeg3Rev]",
+    "chartseries": "Medicare, PPS, Other",
+    "charttopper": "CAGR <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBRevGrowth_R2 }}</td><td>{{tlOutputComp1FBRevGrowth_R2}}</td><td>{{tlOutputComp2FBRevGrowth_R2}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK202",
+    "name": "Revenue by Payer",
+    "narrative1": "This chart shows the total annual revenue for our company and two major competitors, CHL Group and Kinder. The height of the bar represents our total revenue and each colored segment represents specific payer revenue. Our Compound Annual Growth Rate or CAGR is shown as the value across the top, which indicates revenue growth.<br><br>Were you able to grow revenue from Round 1?<br>What contributed to your revenue result?<br><br>Looking at the revenue mix for our competitors, it looks like Kinder has captured additional market share form CHL.<br><br>As you think back to the strategy that you created, how does your revenue mix in Round1 match or differ from what you expected?<br><br>One thing that can lead to increased revenues is the mix of new admins and recerts. Let's take a look at the impact of that decision.",
+    "PageType": "Feedback",
+    "round": "2",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName,CHL Group, Kinder",
+    "chartnumberformat": "0,0a",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}",
+    "chartranges": "tlOutputFBProd1Seg1Patients, tlOutputComp1FBProd1Seg1Patients, tlOutputComp2FBProd1Seg1Patients, tlOutputFBProd2Seg1Patients, tlOutputComp1FBProd2Seg1Patients, tlOutputComp2FBProd2Seg1Patients, tlOutputFBProd1Seg2Patients, tlOutputComp1FBProd1Seg2Patients, tlOutputComp2FBProd1Seg2Patients, tlOutputFBProd2Seg2Patients, tlOutputComp1FBProd2Seg2Patients, tlOutputComp2FBProd2Seg2Patients, tlOutputFBProd1Seg3Patients, tlOutputComp1FBProd1Seg3Patients, tlOutputComp2FBProd1Seg3Patients, tlOutputFBProd2Seg3Patients,  tlOutputComp1FBProd2Seg3Patients, tlOutputComp2FBProd2Seg3Patients",
+    "chartseries": "Medicare - Admits, Medicare Recerts, PPS - Admits, PPS Recerts, Other  - Admits, Other Recerts",
+    "charttopper": "% New <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBAdmintPerc_R2 }}</td><td>{{tlOutputComp1FBAdmintPerc_R2}}</td><td>{{tlOutputComp2FBAdmintPerc_R2}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK203",
+    "name": "New Admissions and Recert",
+    "narrative1": "This chart shows the total number of patients broken down by payer category and admit vs. recert. New Admits are driving the majority of patient volume, with Medicare as the largest payer group. Which patient group is more profitable, admits or recerts?",
+    "PageType": "Feedback",
+    "round": "2",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName,CHL Group, Kinder",
+    "chartnumberformat": "0.00%",
+    "chartranges": "tlOutputFBCSATImpact1, tlOutputComp1FBCSATImpact1, tlOutputComp2FBCSATImpact1, tlOutputFBCSATImpact2, tlOutputComp1FBCSATImpact2, tlOutputComp2FBCSATImpact2, tlOutputFBCSATImpact3, tlOutputComp1FBCSATImpact3, tlOutputComp2FBCSATImpact3, tlOutputFBCSATImpact4, tlOutputComp1FBCSATImpact4, tlOutputComp2FBCSATImpact4",
+    "chartseries": "DOO Actions, Missed Visits, Employee Engagement, Clinical Quality",
+    "charttopper": "Referral Satisfaction <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBCSAT_R2 }}</td><td>{{tlOutputComp1FBCSAT_R2}}</td><td>{{tlOutputComp2FBCSAT_R2}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK204",
+    "name": "Referral Source Satisfaction",
+    "narrative1": "Referrals are a critical part of driving new patient growth. Actions you take as a DOO has a big impact on the ability to drive referrals in your care centers. Missed visits, clinical quality and employee engagement also impact referral satisfaction. Lets take a look at clinical quality.",
+    "PageType": "Feedback",
+    "round": "2",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName,CHL Group, Kinder",
+    "chartnumberformat": "0.0%",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}'",
+    "chartranges": "tlOutputFBStarsImpact1, tlOutputComp1FBStarsImpact1, tlOutputComp2FBStarsImpact1, tlOutputFBStarsImpact2, tlOutputComp1FBStarsImpact2, tlOutputComp2FBStarsImpact2, tlOutputFBStarsImpact3, tlOutputComp1FBStarsImpact3, tlOutputComp2FBStarsImpact3, tlOutputFBStarsImpact4, tlOutputComp1FBStarsImpact4, tlOutputComp2FBStarsImpact4, tlOutputFBStarsImpact5, tlOutputComp1FBStarsImpact5, tlOutputComp2FBStarsImpact5",
+    "chartseries": "Doo Actions, DOO Utilization, Missed Visits, Clinician Overtime, Employee Engagement",
+    "charttopper": "Clinical Quality <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBStars_R2 }}</td><td>{{tlOutputComp1FBStars_R2}}</td><td>{{tlOutputComp2FBStars_R2}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK205",
+    "name": "Clinical Quality",
+    "narrative1": "This chart displays activities influencing clinical quality. High clinical quality will help you attract new patients. How you manage your time and clinicians also impacts quality of service.<br>You have seen the connection between your patient mix, referral satisfaction and clinical quality on your revenue streams. Now let's see how this impacted your gross margin this year.",
+    "PageType": "Feedback",
+    "round": "2",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName,CHL Group, Kinder",
+    "chartnumberformat": "0.0%",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}'",
+    "chartranges": "tlOutputFBESATImpact1, tlOutputComp1FBESATImpact1, tlOutputComp2FBESATImpact1, tlOutputFBESATImpact2, tlOutputComp1FBESATImpact2, tlOutputComp2FBESATImpact2, tlOutputFBESATImpact3, tlOutputComp1FBESATImpact3, tlOutputComp2FBESATImpact3, tlOutputFBESATImpact4, tlOutputComp1FBESATImpact4, tlOutputComp2FBESATImpact4",
+    "chartseries": "Doo Actions, People Development Time, DOO Utilization, DOO Staff Modification",
+    "charttopper": "Employee Engagement <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBESAT_R2 }}</td><td>{{tlOutputComp1FBESAT_R2}}</td><td>{{tlOutputComp2FBESAT_R2}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK206",
+    "name": "Employee Engagement",
+    "narrative1": "This chart displays activities influencing employee engagement.  Items above the middle line contributed positivity to engagement while items below the line had a negative impact.  Ending engagement level is located above the bar.  How you support your clinician staff has a big impact on engagement and productivity.  Engaged employees are more productive.  Next lets look at productivity.",
+    "PageType": "Feedback",
+    "round": "2",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName,CHL Group, Kinder",
+    "chartnumberformat": "0,0a",
+    "chartoptions": "{'plotOptions':{'series':{'dataLabels':{'enabled':'true','y':300}}}'",
+    "chartranges": "tlOutputFBEmp1Cost, tlOutputComp1FBEmp1Cost, tlOutputComp2FBEmp1Cost, tlOutputFBEmp2Cost, tlOutputComp1FBEmp2Cost, tlOutputComp2FBEmp2Cost, tlOutputFBEmp3Cost, tlOutputComp1FBEmp3Cost, tlOutputComp2FBEmp3Cost, tlOutputFBGrossProfit, tlOutputComp1FBGrossProfit, tlOutputComp2FBGrossProfit",
+    "chartseries": "Skilled Nursing, Occupational Therapy, Physical Therapy, Gross Profit",
+    "charttopper": "Gross Margin <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBGrossMargin_R2 }}</td><td>{{tlOutputComp1FBGrossMargin_R2}}</td><td>{{tlOutputComp2FBGrossMargin_R2}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK207",
+    "name": "Gross Margin",
+    "narrative1": "This chart displays your clinical costs and gross profit.  The height of the bar is your total annual revenue.  The colored bars indicate your clinical costs, and the top colored bar is your gross profit left over after adding up all of your costs.  Your gross margin as a percentage of revenue is above the bar.  Your competitors have similar gross margins with Kinder leading the market.  Lets see how employee engagement and productivity impacted operating results.",
+    "PageType": "Feedback",
+    "round": "2",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "basiccolumn",
+    "chartcategories": "tlInputTeamName, CHL Group, Kinder",
+    "chartnumberformat": "0,0a",
+    "chartoptions": "{'legend':{'floating':false, 'x': 0, 'y':0, 'verticalAlign':'bottom', 'align':'center', 'layout':'horizontal'}}",
+    "chartranges": "tlOutputFBEmp1Capacity, tlOutputComp1FBEmp1Capacity, tlOutputComp2FBEmp1Capacity, tlOutputFBEmp1Visits, tlOutputComp1FBEmp1Visits, tlOutputComp2FBEmp1Visits, tlOutputFBEmp2Capacity, tlOutputComp1FBEmp2Capacity, tlOutputComp2FBEmp2Capacity, tlOutputFBEmp2Visits, tlOutputComp1FBEmp2Visits, tlOutputComp2FBEmp2Visits, tlOutputFBEmp3Capacity, tlOutputComp1FBEmp3Capacity, tlOutputComp2FBEmp3Capacity, tlOutputFBEmp3Visits, tlOutputComp1FBEmp3Visits, tlOutputComp2FBEmp3Visits",
+    "chartseries": "Skilled Nursing, Skilled Nursing Demand, Occupational Therapy, Occupational Therapy Demand, Physical Therapy, Physical Therapy Demand",
+    "charttopper": "% Above Capacity <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBCapacityPerc_R2 }}</td><td>{{tlOutputComp1FBCapacityPerc_R2}}</td><td>{{tlOutputComp2FBCapacityPerc_R2}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK208",
+    "name": "Productivity",
+    "narrative1": "This chart compares your teams capacity vs. demand.  The percentage above the chart represents the amount your staff was utilized above or below its capacity.  What are the implications of under or over utilized staff?  Lets see how this impacted overall operating results.",
+    "PageType": "Feedback",
+    "round": "2",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "chart": "stackedcolumn",
+    "chartcategories": "tlInputTeamName,CHL Group, Kinder",
+    "chartranges": "tlOutputFBServiceCost, tlOutputComp1FBServiceCost, tlOutputComp2FBServiceCost, tlOutputFBEmpOverhead, tlOutputComp1FBEmpOverhead, tlOutputComp2FBEmpOverhead, tlOutputFBOpProfit, tlOutputComp1FBOpProfit, tlOutputComp2FBOpProfit",
+    "chartseries": "Operating Expenses, G&A and Other, NIFO",
+    "charttopper": "NIFO % <table border=2 bordercolor='#000' width='100%'><tr><td>{{ tlOutputFBOpMargin_R2 }}</td><td>{{tlOutputComp1FBOpMargin_R2}}</td><td>{{tlOutputComp2FBOpMargin_R2}}</td></tr></table>",
+    "chartyear": "xxRound",
+    "ID": "FDBK209",
+    "name": "Net Income From Operations ",
+    "narrative1": "This chart displays your costs and profit. The height of the bar is your total annual revenue. The colored bars indicate your costs, and the top colored bar is your operating profit left over after adding up all of your costs.  Your operating margin as a percentage of revenue is above the bar.<br><br>Before adjourning this meeting, let's do one quick review of what we discussed today, which will give us some key items to focus on while running the business next year.",
+    "PageType": "Feedback",
+    "round": "2",
+    "subpage": "FeedbackTextAndChart"
+}, {
+    "ID": "FDBK210",
+    "name": "Conclusion",
+    "narrative1": "Conclusion:<ul><li>Engaged employees lead to better clinical results which leads to higher referrals</li><li>Productivity has a direct impact on NIFO</li><li>Payer and Patient mix drives operating results</li>",
+    "PageType": "Feedback",
+    "round": "2",
+    "subpage": "FeedbackTextAndImage"
+}, {
+    "Actuals": "Actuals",
+    "AdmitRecert": "Admits & Recerts",
+    "AllocateDiscretionaryTime": "Allocate your Discretionary Time:",
+    "AllRoundComplete": "You have completed all the Rounds.",
+    "Apr": "Month 3",
+    "AttendMeetingText": "Do you want to attend this meeting?",
+    "AvgMP": "Avg. Monthly Projections",
+    "Base": "Base",
+    "CancelText": "Cancel",
+    "CareCenter1": "Riverside",
+    "CareCenter2": "Pleasantville",
+    "Clinical": "Clinical",
+    "CompetitorChartTitle": "Market Share of Patients",
+    "Competitors": "Competitors",
+    "Competitors1": "CHL",
+    "Competitors1Background": "CHL Group competes against MedAssist in Riverside and Pleasantville, but poses a bigger threat to the former, as you can see in this graph. CHL's competitive edge relies heavily on their joint venture growth model and the strong referral source relationships that come along with it. This is how they've been able to grow their Riverside market share over the past two years and recapture market share in Pleasantville after a down year. Through joint ventures, CHL also acquires top talent; they retain that talent through fully paid health benefits and generous PTO packages. To retain your top talent, be sure to keep your employees productive and engaged.",
+    "Competitors1Title": "CHL Background",
+    "Competitors2": "Kinder",
+    "Competitors2Background": "Well-known for its strong brand in the industry, Kinder, also competes against both of MedAssist's home health centers, but unlike CHL Group, poses a bigger threat to Pleasantville. Kinder prides itself on its long history and years of experience in the industry, which has helped build a large referral network. Kinder also invests heavily in BD staff, driving new business rapidly with more boots on the ground. This is how they've been capturing more and more market share in Pleasantville. The key to maintaining your market share and growing the business, specifically in Pleasantville, is increasing referrals and shifting payer mix.",
+    "Competitors2Title": "Kinder Background",
+    "ConfirmText": "Confirm",
+    "DOOAction": "DOO Actions",
+    "DooActionErrorText": "Please Choose 4 DOO Actions in both Pleasantville and Riverside.",
+    "DOOName": "You need to choose 4 Actions:",
+    "DOOUtilization": "DOO Utilization",
+    "EmployeeEngagement": "Employee Engagement",
+    "EnterFeedbackHere": "Enter Feedback Here",
+    "EnterPassword": "Round 1 is Complete.",
+    "EnterTeamName": "Enter Team Name",
+    "Feb": "Month 1",
+    "Forecast": "Forecast",
+    "GandA": "G&A",
+    "GAOther": "G&A and Other",
+    "GrossMargin": "Gross Margin",
+    "ID": "GEN",
+    "Instructions": "Instructions",
+    "InstructionsText": "<b>Instructions</b><br><br>You have been introduced to your company, the competition and the market environment in which you are competing. Your goal is to generate as much profit as possible, while growing your revenue, keeping your quality high, engaging your employees, and satisfying your patients and referral sources. You will enter in and out of this Planning Tool throughout the round. You want to make sure that you are iterating and updating your decisions as you receive any new information in the dashboard.<br><br><b>Next Steps:<br>1.</b> Access your DOO Actions, Forecast, and Staffing Information using the navigation buttons on the left.<br><br><b>2.</b>  Refer back to your SWOT analysis, as you make decisions for your territory. Your dashboard and winning metrics will update in real time as you make decisions.<br><br><b>3.</b>  Remember to return to the dashboard to collect more information (you will also come across business challenges that you'll need to address). Use all new information to update your decisions in the Planning Tool, as necessary. <br><br><b>4.</b>  Repeat this process until you have received all of the new information, you are happy with your decisions and you are able to submit your decisions by clicking on the &quot;Submit&quot; button in the dashboard to finalize your decisions for the current round.",
+    "KeyMetrics": "Key Metrics",
+    "last_year": "Last Year",
+    "LastYear": "Last Year",
+    "LogoutSubmit": "Are you sure you want to logout?",
+    "Mar": "Month 2",
+    "MedicareAdmits": "Medicare Admits",
+    "MedicareRecerts": "Medicare Recerts",
+    "MeetingAttn": "Meeting Attended",
+    "MeetingRemainingText": "Meeting(s) Remaining",
+    "MeetingText": "Meeting",
+    "Modification": "Modification",
+    "NIFO": "NIFO",
+    "NIFOPerc": "NIFO %",
+    "No": "No",
+    "NoMeeting": "No Meetings",
+    "NoMoreMeeting": "There are no meetings left.",
+    "NonDiscretionary": "Non Discretionary",
+    "OccupationalTherapy": "Occupational Therapy",
+    "OperatingExpenses": "Operating Expenses",
+    "Operations": "Operations",
+    "OtherAdmits": "Other Admits",
+    "OtherRecerts": "Other Recerts",
+    "PasswordText": "Please enter password to Start Round 2",
+    "PeopleDevelopment": "People Development",
+    "PhysicalTherapy": "Physical Therapy",
+    "PlanningTool": "Planning Tool",
+    "PPSAdmits": "PPS Admits",
+    "PPSRecerts": "PPS Recerts",
+    "PrevMeetingAttn": "This meeting was previoulsy attended.",
+    "Recruitment": "Recruitment",
+    "Referrals": "Referrals",
+    "ReferralSatisfaction": "Referral Satisfaction",
+    "Reports": "Reports",
+    "RevenueGrowth": "Revenue Growth",
+    "RunRate": "Run Rate",
+    "SkilledNursing": "Skilled Nursing",
+    "Staffing": "Staffing",
+    "StaffMeetingErrorText": "Please make sure you complete the meetings with your staff before you submit.",
+    "Stars": "Clinical Quality",
+    "Submit": "Submit",
+    "SubmitDecisions": "Submit Decisions",
+    "SubmitDecisionsAlertText": "Are you sure you want to submit?",
+    "SWOT": "SWOT",
+    "ThankYou": "Thank You",
+    "ThisYear": "This Year",
+    "Total": "Total",
+    "TotalGAExpense": "Total G&A Expense",
+    "Utilization": "Utilization",
+    "UtilizationPerc": "Labor Surplus (Gap)%",
+    "Yes": "Yes"
+}, {
+    "alt1": "Option A",
+    "alt1_feedback": "Your team appreciates your enthusiasm. However, they're finding it hard to get behind this change. Afterall, this is the fourth major change initiative in the last year! Your team is now battling inertia and questioning your authenticity. <br><br><u>Impact: </u><ul><li>Decreased Employee Engagement</li></ul>",
+    "alt1_narrative": "Rally the troops to get behind the change. In your next team meeting, introduce the new technology and be enthusiastic. You're the team leader - your team will be looking to you for a reaction and guidance. ",
+    "alt2": "Option B",
+    "alt2_feedback": "Your team appreciates your explanation; they now understand why this new technology is critical and how it benefits them. After being nominated as the 'champion' of this new technology, Stuart now feels empowered and excited to take on this new role. He embraces the role and becomes the go-to guy when it comes to all questions about the new technology.<br><br><u>Impact: </u><ul><li>Increased Employee Engagement</li></ul>",
+    "alt2_narrative": "Nominate a champion for change. In your next team meeting introduce the new technology. Spend time explaining why it is critical and how it will benefit them. Encourage the team to nominate someone who can take the lead as a champion for the new technology. ",
+    "alt3": "Option C",
+    "alt3_feedback": "Unfortunately this meeting isn't as productive as you would have hoped, it quickly turns into an assembly of agitators. Your empathy sparks the response, &quot;even you aren't buying into this change!&quot; which only adds to the team's discontent. <br><br><u>Impact: </u><ul><li>Decreased Employee Engagement</li></ul>",
+    "alt3_narrative": "Be empathetic to the change; the team will appreciate your candor. Gather the team to introduce the new technology and spend time discussing their reactions to the change. Encourage them to speak up with concerns and offer to bring their concerns full circle to corporate.",
+    "icon": "anothertech.png",
+    "ID": "R1Event1",
+    "image": "anothertechno.png",
+    "name": "Another Technology Rollout ",
+    "narrative": "The corporate office recently began rolling out new technology. This is the fourth major change initiative introduced this year and you can tell the clinicians are feeling overwhelmed. At the same time, you can appreciate and understand why this change is necessary. How will you introduce the new technology to your team?",
+    "PageType": "SingleSelect"
+}, {
+    "alt1": "Option A",
+    "alt1_feedback": "By asking questions, you're able to get to the root cause of her underperformance. While setting the expectations can feel a bit strange because you're close friends, she expects that (you're her manager) and luckily she understands the why. She appreciates the extra motivation and is grateful for your friendship and leadership. <br><br><u>Impact: </u><ul><li>Increased Employee Engagement</li></ul>",
+    "alt1_narrative": "Ask questions to better understand her underperformance. Set the expectations on how performance is measured and why. Encourage her to put her best foot forward, and assure her that you know she's capable of so much more.",
+    "alt2": "Option B",
+    "alt2_feedback": "She appreciates the extra motivation, but without setting expectations, the message isn't very clear, nor direct. Her performance picks up for a few weeks, but after a month you're back to square one. You want to give her feedback, but it's unfair to do so without having set expectations. Option A was the optimal answer, and you'd want to do A as soon as possible; performance evaluations aren't for another six months and you can't afford to wait.  <br><br><u>Impact: </u><ul><li>Decreased Employee Engagement</li></ul>",
+    "alt2_narrative": "Find ways to motivate her. Given your close relationship, you can help her realize what she could be doing differently to overcome her challenge. If it's still an issue during performance evaluations, give her constructive feedback at that time. ",
+    "alt3": "Option C",
+    "alt3_feedback": "Before giving her direct feedback, it's important to ensure expectations are set, which is why Option A was the optimal answer here. When setting expectations and providing feedback, use questions to understand the team member's perspective and help the team member discover their own solutions and what could be done differently. While this process can feel a bit strange because you're close friends, she expects that (you're her manager) and you want to see her succeed.<br><br><u>Impact: </u><ul><li>Decreased Employee Engagement</li></ul>",
+    "alt3_narrative": "Give her direct feedback. Be honest - let her know her performance isn't where it needs to be and you fear if her performance doesn't improve, decisions will be out of your hands. She will appreciate your honesty and candor. ",
+    "icon": "Friendship.png",
+    "ID": "R1Event2",
+    "image": "Friendshipleader.png",
+    "name": "Friendship or Leadership?",
+    "narrative": "One of your close friends and team members has a performance issue that must be resolved. You're usually eager to provide feedback and help your employees grow, however this may be challenging given your close relationship. How will you address this performance issue?",
+    "PageType": "SingleSelect"
+}, {
+    "alt1": "Option A",
+    "alt1_feedback": "As a DOO, you're used to taking on a whirlwind of tasks. However, it is important to remember that clinician safety comes first, which is why Option B is the optimal answer. You want to delegate to team members and allow your staff to help, but you must prioritize, so before all else, address the safety issue at hand. <br><br><u>Impact: </u><ul><li>Decreased Clinical Quality</li></ul>",
+    "alt1_narrative": "You've mastered these whirlwinds, tackle all three issues head on. Quickly ask two of your therapists to step in for their sick peer and help out with his patients, send the new hire to your sister care center for on-boarding, then you can check in with the clinician who hurt her back on the job. ",
+    "alt2": "Option B",
+    "alt2_feedback": "Great job! While managing a whirlwind, you must remember to prioritize your tasks - and safety always comes first. For safety related issues, you must act quickly and settle the issue conclusively. For tasks related to on-boarding, allow your CM to help and hold them accountable. For tasks such as addressing a team member calling out, be sure to think strategically and create a plan so that if the issue arises again, you're already set up for success. <br><br><u>Impact: </u><ul><li>Increased Clinical Quality</li></ul>",
+    "alt2_narrative": "Manage each issue one at a time, starting with the clinician who hurt her back on the job. Call her and walk her through the injury process. When that's resolved, ask your CM to start the on-boarding process with your new hire, while you work with your therapist team to co-create a &quot;Plan B&quot; for these instances when therapists need to step in for one another if someone calls out. ",
+    "alt3": "Option C",
+    "alt3_feedback": "It's important to delegate and allow your staff to help, but there are some tasks that you, as DOO, are responsible for - and one of them is safety, which is why Option B was the optimal answer. You must prioritize so before all else, you, as the DOO, need to address the safety issue at hand. For tasks related to on-boarding, allow your CM to help and hold them accountable. For tasks such as addressing a team member calling out, be sure to think strategically and create a plan so that if the issue arises again, you're already set up for success.<br><br><u>Impact: </u><ul><li>Decreased Clinical Quality</li></ul>",
+    "alt3_narrative": "You feel that you've developed your team so that you can delegate these tasks. Advise your BOS to move the visits of your sick therapist to later in the week and ask your CM to take care of the safety issue after putting the new hire on a learn center in the backroom. ",
+    "icon": "Whirlwind.png",
+    "ID": "R1Event3",
+    "image": "Whirlwindwork.png",
+    "name": "A Whirlwind of Work",
+    "narrative": "Managing day-to-day operations makes for a busy day and unfortunately your &quot;to-do&quot; list continues to grow. In addition to managing payroll, dealing with internal care center conflict, and managing the roles of team members, you have a new clinician starting today, one of your therapist's called out sick, and one of your clinicians hurt their back while working with a patient. What do you do?",
+    "PageType": "SingleSelect"
+}, {
+    "icon": "marketUpdateIcon.png",
+    "ID": "R1Message1",
+    "image": "round1-introduction.jpg",
+    "name": "Introduction",
+    "narrative": "Hi there. As the President and CEO of MedAssist, I would personally like to welcome you to the firm. I am very excited to have you leading two of our great care centers, Riverside and Pleasantville.<br><br>Before you start with your day-to-day activities, I recommend that you do the following:<br><br><ul><li> Become familiar with the environment you will be working in. Go into your Business Planning Tool by clicking on <b>DOO Actions</b> and explore the types of decisions you will be making, in an effort to execute according to your strategy. </li><li> Be sure to come back to this main dashboard, as this is where you will receive your business updates. And, as you can imagine, there will be a number of business challenges (...3 this round, to be exact) that you will need to overcome as care center leader. </li><li> You will also want to check the latest Competitor Reports to learn what you can expect to see from the competition, Kinder and CHL Group. This information will be updated each year.</li></ul><br>Good luck to you!",
+    "PageType": "Read Update"
+}, {
+    "alt1": "Option A",
+    "alt1_feedback": "By asking questions, you're able to get to the root cause of her discontent - she's at capacity. By working together you're able to better forecast her capacity. She appreciates the motivation and the time you took to work with her on this. She's feeling much better about her workload. <br><br><u>Impact: </u><ul><li>Increased Productivity</li><br><li>Increased Employee Engagement</li></ul>",
+    "alt1_narrative": "Ask her questions to get to the root cause of her discontent. Then work with her to forecast her patient capacity and motivate her to operate at her highest capacity. Check in with her in a week to ensure she's able to keep up with the capacity you've set together. ",
+    "alt2": "Option B",
+    "alt2_feedback": "In this instance, it's tempting to &quot;rescue&quot; your clinician and provide instant gratification, by taking on her visits. However, this plan isn't sustainable - will you do this every week if she continues to be unhappy? A better option would be Option A - get to the root cause of her discontent and motivate her to work to her highest capacity.<br><br><u>Impact: </u><ul><li>Decreased Productivity</li></ul>",
+    "alt2_narrative": "Show her you care. Acknowledge her discontentment and offer to offload some of her visits to the CM this week. Next week, ensure she's staffed with some new patients in the territory to mix things up a bit. Check in with her in a week to ensure she's satisfied and engaged. ",
+    "alt3": "Option C",
+    "alt3_feedback": "In this instance, it's tempting to &quot;rescue&quot; your clinician and provide instant gratification, by letting her pick and choose which visits she wants to take. However, this plan isn't sustainable - will you allow all your clinicians to do this? A better option would be Option A - get to the root cause of her discontent and motivate her to work to her highest capacity. <br><br><u>Impact: </u><ul><li>Decreased Productivity</li><br><li>Decreased Employee Engagement</li></ul>",
+    "alt3_narrative": "Listen and empathize. Ask her to spend some time determining which patients she can keep and which patients she'd like to take off her plate. Once she put some thought into it, move staffing around to fit her needs.",
+    "icon": "Clinician.png",
+    "ID": "R2Event1",
+    "image": "UnhappyClinician.png",
+    "name": "An Unhappy Clinician",
+    "narrative": "One of your top clinicians approaches you with discontent regarding her territory. She explains she's overworked, on top of driving long hours between patients and is often visiting dangerous areas. You fear she may leave if you don't address her concern. What do you do? ",
+    "PageType": "SingleSelect"
+}, {
+    "alt1": "Option A",
+    "alt1_feedback": "Unfortunately, as expected, the meeting agenda falls behind schedule and you don't have time to get to the clinician success stories. The good news is, some clinicians learned from your experience and advice. The bad news is, going forward this clinician, and now others, continue to bring up these issues, which doesn't make for very effective staff meetings. <br><br><u>Impact: </u><ul><li>Decreased Productivity</li><br><li>Decreased Employee Engagement</li></ul>",
+    "alt1_narrative": "Listen and ask questions as the clinician explains the details. You don't want to be disrespectful to one of your top clinicians. Draw on your experience to provide advice. Many other clinicians may be facing similar issues, perhaps they can benefit from the discussion.",
+    "alt2": "Option B",
+    "alt2_feedback": "The clinician understands and appreciates the one-on-one time post-meeting. Going forward, the clinician continues to come to you with these issues, which winds up taking up a lot of your time. The good news is, you were able to keep your staff meeting on track and set the tone for future meetings. The bad news is, this takes up a lot of your time and others don't learn from this challenge. <br><br><u>Impact: </u><ul><li>Decreased Productivity</li></ul>",
+    "alt2_narrative": "Thank your clinician for sharing, but gently remind her of the packed agenda. Assure her that the two of you will address the issue directly after the staff meeting. You will be able to coach her one-on-one without derailing the meeting.",
+    "alt3": "Option C",
+    "alt3_feedback": "Nice job! You were able to keep your meeting on track and you've set the tone for future meetings. This issue should be resolved with the CM and presented at the next Patient Care Conference Meeting - and the good news is, your top clinician is excited to take on this challenge and discussion. <br><br><u>Impact: </u><ul><li>Increased Productivity</li><br><li>Increased Employee Engagement</li></ul>",
+    "alt3_narrative": "Before the clinician shares any more detail, ask her to connect with your CM and put together a point of view on the issue. Ask her to lead a discussion on the topic at the next Patient Care Conference Meeting so that everyone can learn from the challenge.",
+    "icon": "staffmeeting.png",
+    "ID": "R2Event2",
+    "image": "staffmeetingredirected.png",
+    "name": "Staff Meeting Redirected",
+    "narrative": "Your staff meeting agenda is packed this morning. As you kick things off, one of your top clinicians begins to share a recent patient issue. Although her situation could be relevant to other clinicians, you worry the meeting may veer off track, especially since this individual has a tendency to redirect staff meetings. If she continues, you may not have time to share clinician success stories. What do you do?",
+    "PageType": "SingleSelect"
+}, {
+    "alt1": "Option A",
+    "alt1_feedback": "The team enjoys the fun team-building activity and employee engagement is increased on a short-term basis. Unfortunately without getting to the root cause of the morale issue, you're unable to resolve the issue as you would have liked to. Morale continues to dip.",
+    "alt1_narrative": "Get to the bottom of this to drive engagement. Reach out to a few close staff members to get their perspective. Once you have a better grasp of the issue, organize a fun team-building activity. Use those close staff members as champions to drive up the morale and get people excited about work again. ",
+    "alt2": "Option B",
+    "alt2_feedback": "By setting up office hours and setting expectations, your team sees you as a DOO that truly cares. Team members feel comfortable coming to you with their thoughts, suggestions, and concerns -both professional and personal. By taking the time to listen to your team, you're able to get to the root cause of the morale issue. Together, you're able to create a plan that drives engagement for all, which boosts office morale. <br><br><u>Impact: </u><ul><li>Increased Productivity</li><br><li>Increased Employee Engagement</li></ul>",
+    "alt2_narrative": "Set up office hours and have people stop by with concerns or issues. Set the expectation that you are there to listen to the team's thoughts, suggestions, and concerns. Once you identify the root cause of the morale issue, work with your team to come up with a plan that addresses the issue head on.",
+    "alt3": "Option C",
+    "alt3_feedback": "The team appreciates the update and finds this meeting to be informative. Unfortunately without getting to the root cause of the morale issue, you're unable to resolve the issue as you would have liked to. Morale continues to dip.<br><br><u>Impact: </u><ul><li>Decreased Productivity</li><br><li>Decreased Employee Engagement</li></ul>",
+    "alt3_narrative": "Resolve the problem once and for all. Organize a team meeting to explain why the two team members left and underscore the importance of the change initiative. End the meeting by assuring the team that the empty roles will be filled as soon as possible and that you are always available for coaching through change. ",
+    "icon": "lowoffice.png",
+    "ID": "R2Event3",
+    "image": "lowofficemorale.png",
+    "name": "Low Office Morale",
+    "narrative": "Office morale is low. You recently lost two team members and the latest change initiative is bogging down the staff. Just yesterday, you overheard a few clinicians mention feeling overworked, unappreciated, and stressed. What do you do? ",
+    "PageType": "SingleSelect"
+}, {
+    "alt1": "Option A",
+    "alt1_feedback": "Catching up on work after an all-day conference each day is exhausting and unfortunately not as productive as you had hoped it would be. This would have been a good time to stretch your team and leverage their strengths - not only would it empower them, but it would also give you the opportunity to develop future leaders. <br><br><u>Impact: </u><ul><li>Decreased DOO Productivity</li><br><li>Decreased Employee Engagement</li></ul>",
+    "alt1_narrative": "Schedule time to catch up on your work after the conference ends each day. Make yourself available to team members throughout the day, to ensure your patients and team members are cared for. Schedule time at the end of each day to touch base with your CM.",
+    "alt2": "Option B",
+    "alt2_feedback": "Nice job! This is the perfect time to stretch your team and leverage their strengths - not only does it empower them, but it also gives you the opportunity to develop future leaders. Trusting them to step up to the plate, in this case, leaves you pleasantly surprised - the team feels challenged and engaged in your absence and beyond. <br><br><u>Impact: </u><ul><li>Increased DOO Productivity</li><br><li>Increased Employee Engagement</li></ul>",
+    "alt2_narrative": "Ask your team members to help out with certain tasks, based on their strengths. You'd hate to put even more work on their plate, but see this as an opportunity to stretch the team member's skills and help them develop new ones. Schedule time at the end of each day to touch base with your CM.",
+    "alt3": "Option C",
+    "alt3_feedback": "Ask your CM to manage key tasks in your absence. This is an opportunity to stretch your CM. Before heading to the conference, point out the major upcoming milestones. For each potential issue, explain how you would address the problem. Request that your delegate get in touch with you as they come across any major obstacles.<br><br><u>Impact: </u><ul><li>Decreased DOO Productivity</li></ul>",
+    "alt3_narrative": "Ask your CM to manage key tasks in your absence. This is an opportunity to stretch your CM. Before heading to the conference, point out the major upcoming milestones. For each potential issue, explain how you would address the problem. Request that your delegate get in touch with you as they come across any major obstacles.",
+    "icon": "dooconference.png",
+    "ID": "R2Event4",
+    "image": "conference.png",
+    "name": "DOO Conference",
+    "narrative": "You've been invited to attend a week-long DOO conference. Unfortunately it's during the last week of the quarter, which is one of the busiest times for you. How will you manage your heavy workload while you're out of the office for a week? ",
+    "PageType": "SingleSelect"
+}, {
+    "alt1": "Option A",
+    "alt1_feedback": "The hospital appreciates the business and continues to refer business to MedAssist. Luckily your sister care center had clinicians you could leverage and quality remained high. To keep employee engagement and quality up, going forward, it will be important to recruit.<br><br><u>Impact: </u><ul><li>Increased Referrals</li></ul>",
+    "alt1_narrative": "Accept the referral and find a way to make it work. Leverage your sister care centers to see if they have any extra staff. In order to offer the best quality care, review the staffing tool.",
+    "alt2": "Option B",
+    "alt2_feedback": "The hospital appreciates the business and continues to refer business to MedAssist. However, you're becoming increasingly concerned about quality. To keep employee engagement and quality up, going forward, it will be important to recruit.<br><br><u>Impact: </u><ul><li>Decreased DOO Productivity</li><br><li>Increased Referrals</li></ul>",
+    "alt2_narrative": "Accept the referral and take on the patient yourself. Your team is already overworked, but this opportunity is too important to turn down. ",
+    "alt3": "Option C",
+    "alt3_feedback": "The hospital appreciates your honesty and understands your concern. Going forward, they continue to refer patients to MedAssist. However, you suspect they may have referred more to you, had you taken this private referral from the beginning. <br><br><u>Impact: </u><ul><li>Decreased Referrals</li><br><li>Decreased Referral Satisfaction</li></ul>",
+    "alt3_narrative": "Clinical quality and employee engagement are important to you. Although you appreciate the business, turn down the referral. Be honest and explain that you are short staffed. Assure them that you hope to work together in the future.",
+    "icon": "referral.png",
+    "ID": "R2Event5",
+    "image": "newreferral.png",
+    "name": "New Referral",
+    "narrative": "You just received a private referral from a new hospital, which has a large volume of Medicare patients. Although you're excited about the prospect of a partnership, you're currently tight on staff and worry you might not offer high quality. At the same time, you fear turning down the business now will prevent the potential of future opportunities. What do you do?",
+    "PageType": "SingleSelect"
+}, {
+    "icon": "marketUpdateIcon.png",
+    "ID": "R2Message1",
+    "image": "round1-introduction.jpg",
+    "name": "Introduction",
+    "narrative": "Welcome to Round 2! Riverside and Pleasantville will need your leadership as the markets continue to evolve.<br><ul>Before you start with your day-to-day activities, I recommend that you do the following:<li>Review the updated volume budgets on your forecasting screens and determine actions needed to meet or exceed these budgets.</li><li>Be sure to come back to this main dashboard, as this is where you will receive your business updates.  There will be 5 business challenges that you will need to overcome this round.</li><li>You will also want to check the latest Competitor Reports to learn what you can expect to see from the competition, Kinder and CHL Group.</li></ul>",
+    "PageType": "Read Update"
+}, {
+    "ID": "STAFF101",
+    "image": "meeting-header1-1.jpg",
+    "name": "Tiana Teachout",
+    "narrative": "During your meeting with Tiana, you learn she's driving a lot and she seems to be struggling to balance her admin work, which is causing her to miss visits. How would you approach this with Tiana to reduce her missed visits?"
+}, {
+    "ID": "STAFF102",
+    "image": "meeting-header-1-2.jpg",
+    "name": "Vernon Vale",
+    "narrative": "During your meeting with Vernon, you notice that he seems a bit disengaged, which you believe is the reason why his productivity isn't quite where it needs to be. What can you do to increase Vernon's engagement?"
+}, {
+    "ID": "STAFF103",
+    "image": "meeting-header-1-3.jpg",
+    "name": "Shelby Schoenfeld",
+    "narrative": "During your meeting with Shelby, you learn why her admin time is so high; she mentioned that the doctors aren't available when she documents her visits at the end of the day. She leaves messages for them, but often has to wait a few days for them to return her call. How can you help Shelby reduce her admin time?"
+}, {
+    "ID": "STAFF104",
+    "image": "meeting-header-1-4.jpg",
+    "name": "Edmond Estepp",
+    "narrative": "During your meeting with Edmond, you learn that his average visit length is 25 minutes, which is likely to be impacting his quality of care. What can you do to ensure Edmond is productive, while maintaining his quality?"
+}, {
+    "ID": "STAFF105",
+    "image": "meeting-header-1-5.jpg",
+    "name": "Beatrice Ballew",
+    "narrative": "During your meeting, Beatrice informs you that she's unable to fit in all of her visits before she has to pick up her kids from school. How do you approach this with Beatrice?"
+}, {
+    "ID": "STAFF106",
+    "image": "meeting-header1-6.jpg",
+    "name": "Joy Jernigan",
+    "narrative": "During your meeting with Joy, she voices her frustration about all the miles she's traveling between each of her visits, which seems to be causing her to miss visits. How do you approach this with Joy to reduce her missed visits?"
+}, {
+    "ID": "STAFF107",
+    "image": "meeting-header1-7.jpg",
+    "name": "Ellie Elizalde",
+    "narrative": "During your meeting with Ellie, she informs you that her admin work is taking her longer than expected, due to all the documenting she's doing at the end of the day. How can you help Ellie reduce her admin time?"
+}, {
+    "ID": "STAFF108",
+    "image": "meeting-header1-8.jpg",
+    "name": "Jestine Jeffers",
+    "narrative": "During your meeting with Jestine, you notice that she seems a bit disengaged, which you believe is the reason why her productivity isn't quite where it needs to be, causing her to miss visits. What can you do to increase Jestine's engagement?"
+}, {
+    "ID": "STAFF109",
+    "image": "meeting-header1-9.jpg",
+    "name": "Elease Esters",
+    "narrative": "Elease is a rockstar. She's always willing to take on more work and you can always count on her to get the job done. During your meeting with Elease, you notice that she seems a bit disengaged, which causes you some concern. What can you do to keep Elease's engagement high?"
+}, {
+    "ID": "STAFF110",
+    "image": "meeting-header1-10.jpg",
+    "name": "Ginger Gault",
+    "narrative": "During your meeting with Ginger, she voices her frustration with all the recent meetings you've been holding (a stand up meeting, a stand down meeting, a PCC meeting, etc.). She mentions she'd be able to take on more visits, if you're able to reduce the amount of meetings she has to attend. How do you approach this with Ginger? "
+}, {
+    "ID": "STAFF111",
+    "image": "meeting-header1-11.jpg",
+    "name": "Wayne Winslow",
+    "narrative": "During your meeting with your new hire, you learn he's extremely excited to join the team. He has experience working in home health care so he's looking forward to jumping right in. What can you do to maximize his productivity and keep him engaged?"
+}, {
+    "ID": "STAFF112",
+    "image": "meeting-header1-11.jpg",
+    "name": "Wayne Winslow",
+    "narrative": "During your meeting with your new hire, you learn they're extremely excited to join the team. They don't have much experience working in home health care, so although they're eager to jump right in, you're not quite sure how quickly they can get up to speed. What can you do to maximize their productivity and keep them engaged?"
+}, {
+    "ID": "STAFF113",
+    "image": "meeting-header1-11.jpg",
+    "name": "Hulda Hoskins",
+    "narrative": "During your meeting with your new hire, you learn she's extremely excited to join the team. She has experience working in home health care so she's looking forward to jumping right in. What can you do to maximize her productivity and keep her engaged?"
+}, {
+    "ID": "STAFF114",
+    "image": "meeting-header1-11.jpg",
+    "name": "Hulda Hoskins",
+    "narrative": "During your meeting with your new hire, you learn they're extremely excited to join the team. They don't have much experience working in home health care, so although they're eager to jump right in, you're not quite sure how quickly they can get up to speed. What can you do to maximize their productivity and keep them engaged?"
+}, {
+    "ID": "STAFF115",
+    "image": "meeting-header1-11.jpg",
+    "name": "Melani Mascio",
+    "narrative": "During your meeting with your new hire, you learn she's extremely excited to join the team. She has experience working in home health care so she's looking forward to jumping right in. What can you do to maximize her productivity and keep her engaged?"
+}, {
+    "ID": "STAFF116",
+    "image": "meeting-header1-11.jpg",
+    "name": "Melani Mascio",
+    "narrative": "During your meeting with your new hire, you learn they're extremely excited to join the team. They don't have much experience working in home health care, so although they're eager to jump right in, you're not quite sure how quickly they can get up to speed. What can you do to maximize their productivity and keep them engaged?"
+}, {
+    "ID": "STAFF117",
+    "image": "meeting-header1-11.jpg",
+    "name": "Kallie Knaus",
+    "narrative": "During your meeting with your new hire, you learn they're extremely excited to join the team. They have experience working in home health care so they're looking forward to jumping right in. What can you do to maximize their productivity and keep them engaged?"
+}, {
+    "ID": "STAFF118",
+    "image": "meeting-header1-11.jpg",
+    "name": "Kallie Knaus",
+    "narrative": "During your meeting with your new hire, you learn they're extremely excited to join the team. They don't have much experience working in home health care, so although they're eager to jump right in, you're not quite sure how quickly they can get up to speed. What can you do to maximize their productivity and keep them engaged?"
+}, {
+    "ID": "STAFF119",
+    "image": "meeting-header1-11.jpg",
+    "name": "Harris Hanning",
+    "narrative": "During your meeting with your new hire, you learn he's extremely excited to join the team. He has some prior experience working in home health care so he's looking forward to jumping right in. What can you do to maximize his productivity and keep him engaged?"
+}, {
+    "ID": "STAFF120",
+    "image": "meeting-header1-11.jpg",
+    "name": "Nicole Nelson",
+    "narrative": "During your meeting with your new hire, you learn she's extremely excited to join the team. She has some prior experience working in home health care so she's looking forward to jumping right in. What can you do to maximize her productivity and keep her engaged?"
+}, {
+    "ID": "STAFF201",
+    "image": "meeting-header2-1.jpg",
+    "name": "Sherie Sea",
+    "narrative": "Sherie has a lot on her plate. On top of being very productive and driving a lot between visits, she's spending a lot of time doing admin work, which all things combined, is causing her to miss visits. How can you approach this with Sherie to ensure she's as productive as possible while keeping her quality high?"
+}, {
+    "ID": "STAFF202",
+    "image": "meeting-header2-2.jpg",
+    "name": "Jamison Jordon",
+    "narrative": "During your meeting with Jamison, he voices his frustration about all the miles he's traveling between each of his visits, which seems to be causing him to miss visits. How do you approach this with Jamison to reduce his missed visits?"
+}, {
+    "ID": "STAFF203",
+    "image": "meeting-header2-3.jpg",
+    "name": "Audry Amore",
+    "narrative": "During your meeting with Audry, she informs you that her admin work is taking her longer than expected, due to all the documenting she's doing at the end of the day. How can you help Audry reduce her admin time?"
+}, {
+    "ID": "STAFF204",
+    "image": "meeting-header2-4.jpg",
+    "name": "Marvis Martine",
+    "narrative": "Marvis is a great part-time employee. He's always willing to take on more work and you can always count on him to get the job done. During your meeting with Marvis, you notice that he seems a bit disengaged, which causes you some concern. What can you do to keep Marvis' engagement high?"
+}, {
+    "ID": "STAFF205",
+    "image": "meeting-header2-5.jpg",
+    "name": "Ming Mines",
+    "narrative": "During your meeting with Ming, she voices her frustration about all the miles she's traveling between each of her visits, which seems to be causing her to miss visits. How do you approach this with Ming to reduce her missed visits?"
+}, {
+    "ID": "STAFF206",
+    "image": "meeting-header2-6.jpg",
+    "name": "Esteban Ervin",
+    "narrative": "During your meeting with Esteban, he voices his frustration with all the recent meetings you've been holding (a stand up meeting, a stand down meeting, a PCC meeting, etc.). He mentions he'd be able to take on more visits by reducing his admin time if you're able to reduce the amount of meetings he has to attend. How do you approach this with Esteban?"
+}, {
+    "ID": "STAFF207",
+    "image": "meeting-header2-7.jpg",
+    "name": "Chester Cheesman",
+    "narrative": "During your meeting with Chester, you notice that he seems a bit disengaged, which you believe is the reason why his productivity isn't quite where it needs to be. What can you do to increase Chester's engagement?"
+}, {
+    "ID": "STAFF208",
+    "image": "meeting-header2-8.jpg",
+    "name": "Susie Sluder",
+    "narrative": "During your meeting with Susie, you learn why her admin time is so high; she mentioned that the doctors aren't available when she documents her visits at the end of the day. She leaves messages for them, but often has to wait a few days for them to return her call. How can you help Susie reduce her admin time and improve her productivity?"
+}, {
+    "ID": "STAFF209",
+    "image": "meeting-header2-9.jpg",
+    "name": "Jerome Jurek",
+    "narrative": "During your meeting with Jerome, you notice that he seems a bit disengaged, which you believe is the reason why his productivity isn't quite where it needs to be. What can you do to increase Jerome's engagement?"
+}, {
+    "ID": "STAFF210",
+    "image": "meeting-header2-10.jpg",
+    "name": "Roseanna Roder",
+    "narrative": "During your meeting with Roseanna, she informs you that her admin work is taking her longer than expected, due to all the documenting she's doing at the end of the day. How can you help Roseanna reduce her admin time and improve her productivity?"
+}, {
+    "ID": "STAFF211",
+    "image": "meeting-header2-11.jpg",
+    "name": "Cherise Caraveo ",
+    "narrative": "During your meeting with your new hire, you learn she's extremely excited to join the team. She has experience working in home health care so she's looking forward to jumping right in. What can you do to maximize her productivity and keep her engaged?"
+}, {
+    "ID": "STAFF212",
+    "image": "meeting-header2-11.jpg",
+    "name": "Cherise Caraveo ",
+    "narrative": "During your meeting with your new hire, you learn they're extremely excited to join the team. They don't have much experience working in home health care, so although they're eager to jump right in, you're not quite sure how quickly they can get up to speed. What can you do to maximize their productivity and keep them engaged?"
+}, {
+    "ID": "STAFF213",
+    "image": "meeting-header2-11.jpg",
+    "name": "Bennie Bitton",
+    "narrative": "During your meeting with your new hire, you learn they're extremely excited to join the team. They have experience working in home health care so they're looking forward to jumping right in. What can you do to maximize their productivity and keep them engaged?"
+}, {
+    "ID": "STAFF214",
+    "image": "meeting-header2-11.jpg",
+    "name": "Bennie Bitton",
+    "narrative": "During your meeting with your new hire, you learn she's extremely excited to join the team. She doesn't have much experience working in home health care, so although she's eager to jump right in, you're not quite sure how quickly she can get up to speed. What can you do to maximize her productivity and keep her engaged?"
+}, {
+    "ID": "STAFF215",
+    "image": "meeting-header2-11.jpg",
+    "name": "Sabra Schow",
+    "narrative": "During your meeting with your new hire, you learn they're extremely excited to join the team. They have experience working in home health care so they're looking forward to jumping right in. What can you do to maximize their productivity and keep them engaged?"
+}, {
+    "ID": "STAFF216",
+    "image": "meeting-header2-11.jpg",
+    "name": "Sabra Schow",
+    "narrative": "During your meeting with your new hire, you learn she's extremely excited to join the team. She doesn't have much experience working in home health care, so although she's eager to jump right in, you're not quite sure how quickly she can get up to speed. What can you do to maximize her productivity and keep her engaged?"
+}, {
+    "ID": "STAFF217",
+    "image": "meeting-header2-11.jpg",
+    "name": "Willis Welte",
+    "narrative": "During your meeting with your new hire, you learn they're extremely excited to join the team. They have experience working in home health care so they're looking forward to jumping right in. What can you do to maximize their productivity and keep them engaged?"
+}, {
+    "ID": "STAFF218",
+    "image": "meeting-header2-11.jpg",
+    "name": "Willis Welte",
+    "narrative": "During your meeting with your new hire, you learn she's extremely excited to join the team. She doesn't have much experience working in home health care, so although she's eager to jump right in, you're not quite sure how quickly she can get up to speed. What can you do to maximize her productivity and keep her engaged?"
+}, {
+    "ID": "STAFF219",
+    "image": "meeting-header2-11.jpg",
+    "name": " Marta Matarazzo",
+    "narrative": "During your meeting with your new hire, you learn she's extremely excited to join the team. She has some prior experience working in home health care so she's looking forward to jumping right in. What can you do to maximize her productivity and keep her engaged?"
+}, {
+    "ID": "STAFF220",
+    "image": "meeting-header2-11.jpg",
+    "name": "Karie Keough",
+    "narrative": "During your meeting with your new hire, you learn she's extremely excited to join the team. She has some prior experience working in home health care so she's looking forward to jumping right in. What can you do to maximize her productivity and keep her engaged?"
+}, {
+    "IntroChallengesText": "Creating a growth environment in a multi-million dollar business is no easy task. As leaders of MedAssist, understanding key trade-offs and potential impacts will be critical. With limited resources and lofty profitability goals, you must determine the most important focus areas for your strategy. Keep in mind; it will be equally important to decide what to not focus on. While managing your two care centers at MedAssist, you will face a number of internal and external challenges:<br><ul><li><b>Regulation:</b> MedAssist is a publicly traded company, competing in a highly regulated environment. Among many other stringent regulations, MedAssist must abide by the following new regulations: Plans of Care, Caregiver Involvement, Patient-Centered Care, Patient Rights, Discharge Protections, and many more.</li><br><li><b>Payer Mix:</b> Competitive pricing is critical to attract and retain price-sensitive customers; however, significant price cuts has a negative impact to MedAssist's ability to grow profitably. MedAssist must work with their payers to ensure that the patients are getting the care they need and MedAssist is providing that care as a sustainable, profitable business.</li><br><li><b>Clinical Performance:</b> The right clinical care from the right team is critical to the delivery of home health care. To provide top-notch clinical performance, MedAssist must deliver quality care and consistent outcomes, and do so in the most efficient way possible.</li><br><li><b>Talent:</b> Within the home health care industry, it has become increasingly difficult to attract and retain top employees. Your talent pool has many options - they can work in hospitals, universities, or various other home health care organizations, both large and small. The key to attracting and retaining top talent will be keeping engagement high.</li></ul>",
+    "IntroChallengesTitle": "Business Challenges",
+    "IntroCompanyOverviewText": "MedAssist is one of the largest home health and hospice care providers in Maturia, a developed state with a mature economy similar to the United States. The company offers a wide array of services, including skilled nursing (RNs & LPNs) and therapy (therapists & assistants). Patients are covered by Medicare, PPS, or private payers, and customers include episodic and non-episodic payers, often referred through MDs, residential and assisted living, rehab, skilled nursing facilities, and word of mouth.<br><br>The company has a strong market position. Last year, the two care centers that you'll be managing for MedAssist drove approximately $12.8 million in revenue and maintained a net income from operations (NIFO) of $1.9 million. In order to uphold MedAssist's competitive position in this pod, you and your team members must overcome a range of challenges and drive profitable growth for your two care centers.<br><br><b>Care Centers</b><br>The two care centers you'll be managing for MedAssist are the Riverside Center and the Pleasantville Center; both care centers are located in the same pod. Although you manage roughly 100 employees between both care centers, within each simulated care center, you will have the opportunity to interact with 10 clinicians (a proportional representation of your clinicians).<ul><li><b>Riverside</b> is larger in size and located in one of Maturia's larger cities. Over the last few years, Riverside has faced slowed growth due to regional competitors and a large national competitor entering the market. High operational costs and low employee productivity are often cited as the two key areas for improvement, as they are the main contributors negatively impacting the care center's already low NIFO. Despite various challenges, Riverside has been able to avoid field turnover, which is likely attributed to their high stars rating (4.4) and the favorable results of a recent employee engagement survey. Despite slowed growth, Riverside has been able to maintain a strong position in its market, likely due to their high referral source (RS) satisfaction. Their payer mix includes a relatively high percentage of non-episodic patients.</li><li><b>Pleasantville</b>, which is located in a more rural region, is smaller in size compared to Riverside, but has the potential to expand rapidly. This center competes against regional competitors and large, national competitors who are already established in the market. Despite operating in a fast-paced, high growth environment, Pleasantville struggles with a relatively low NIFO, due to their high turnover, which can be attributed to aggressive recruiting from competitors and low employee engagement. This challenge, coupled with high productivity, has resulted in a low stars rating (3.0). Low clinical quality has led to low referral source satisfaction. This care center also tends to be very selective when it comes to their patients (they have a very high percentage of Medicare patients), which is another reason why their referral source satisfaction isn't quite where it needs to be.</li></ul><br>Hopefully under your team's leadership, you will overcome these challenges and drive profitable growth in these two care centers.",
+    "IntroCompanyOverviewTitle": "Company Overview",
+    "IntroCompetitiveLandscapeText": "Over the course of the next two simulated years, you will be competing against two main national competitors, CHL Group and Kinder, who are actively looking to capture your market share, revenue, and profits. Each company is identical at the beginning of the simulation but will vary significantly as soon as your new leadership team makes decisions.<ul><br><li><b>CHL Group</b> competes against MedAssist in Riverside and Pleasantville, but poses a bigger threat to the former. CHL's competitive edge relies heavily on their joint venture growth model and the strong referral source relationships that come along with it. Through joint ventures, CHL also acquires top talent; they retain that talent through fully paid health benefits and generous PTO packages.</li><br><li>Well-known for its strong brand in the industry, <b>Kinder</b>, also competes against both of MedAssist's home health centers, but unlike CHL Group, poses a bigger threat to Pleasantville. Kinder prides itself on its long history and years of experience in the industry, which has helped build a large referral network. Kinder also invests heavily in BD staff, driving new business rapidly with more boots on the ground.</li></ul><br><b>Winning Metrics</b><br>Your team will be evaluated against a balanced scorecard, which will be benchmarked against your peer-led competition. We'll be measuring your ability to drive profitable growth, measured by your team's revenue growth and NIFO. In addition to our financial metrics, we'll also be tracking the quality of your care, measured by your centers' clinical quality, which includes stars rating, patient satisfaction, re-hospitalizations, etc.<br>In order to win, your team will need to have the highest balanced scorecard and you must also overcome two hurdles: when stacked against the competition in the room, by the end of the second round you must be within the top five teams for employee engagement and referral source  satisfaction.<br><br><b>Conclusion</b><br>In addition to making strategic business decisions, your team will also face a variety of leadership scenarios. Every decision you make, regardless of if there is business or cultural value at stake, will have inherent tradeoffs. Just like real life, decisions may have unintended consequences that may surprise or disappoint you. Your most important task is to be acutely aware of the choices you make and the reasons behind your decisions.<br>Running MedAssist's centers will be a challenge, but the board believes you are up for it. Good Luck!",
+    "IntroCompetitiveLandscapeTitle": "Competitive Landscape",
+    "IntroSimulationText": "Congratulations! You have been selected to join the leadership team at a simulated company, MedAssist. Together, as a team, you will manage two home health care centers for MedAssist and compete against your peers in a dynamic ecosystem over the course of two simulated years.<br><br>Your objective is to drive profitable growth and excellent quality of care for MedAssist and you must do so better than your main competitors, Kinder and CHL Group.Ultimately, your performance will be ranked against your peers who will be managing their own versions of MedAssist. Success will solely depend on the strategy you set and the quality of your decision-making as a team.<br><br>In order to effectively lead MedAssist's home health care centers and maximize your chances of finishing ahead of the competition, read the following case study. This document will provide a high-level overview of the ecosystem in which MedAssist operates and the challenges the company faces. While reviewing the case study, please keep the following questions in mind:<ul><li><b>HOW</b> does MedAssist make money? What key resources are available and how can you best utilize them at MedAssist?</li><li><b>WHO</b> are MedAssist's customers and what are their needs?</li><li><b>WHO</b> are MedAssist's key competitors and how do you differentiate your business?</li><li><b>WHAT</b> are MedAssist's strengths and weaknesses? What opportunities could drive profitability and growth? What threatens MedAssist's success?</li><li><b>WHAT</b> must be true in order for you to be able to successfully implement this strategy from a cultural, collaborative, or leadership perspective?</li></ul>",
+    "IntroSimulationTitle": "Simulation Introduction",
+    "NewMessageButtonTitle": "New Message",
+    "NewMessageButtonTitleText": "Update your SWOT Analysis",
+    "StrategyVisionTitle": "Strategy / Vision",
+    "SWOTAnalysisText": "To determine the new strategy for your pod, conduct a SWOT analysis of your current business. Start by identifying the internal strengths and weaknesses, as well as any external opportunities and threats that may impact the business, then fill in the chart to the right.  Leverage your completed SWOT to determine three key strategic focus areas for your pod and write them in the bottom box.<br><br>Click on the images below to refresh your memory on the company overview, key challenges, the competitive landscape and MedAssist's key metrics.",
+    "SWOTAnalysisTitle": "SWOT Analysis",
+    "SWOTBusinessChallengesText": "The company's main business challenges are:<br><ul><li><b>Regulation</b><br> MedAssist is a publicly traded company, competing in a highly regulated environment. Among many other stringent regulations, MedAssist must abide by the following new regulations: Plans of Care, Caregiver Involvement, Patient-Centered Care, Patient Rights, Discharge Protections, and many more. <li><b>Payer Mix</b><br>Competitive pricing is critical to attract and retain price-sensitive customers; however, significant price cuts has a negative impact to MedAssist's ability to grow profitably. MedAssist must work with their payers to ensure that the patients are getting the care they need and MedAssist is providing that care as a sustainable, profitable business.</li><li><b>Clinical Performance</b><br> The right clinical care from the right team is critical to the delivery of home health care. To provide top-notch clinical performance, MedAssist must deliver quality care and consistent outcomes, and do so in the most efficient way possible. <li><b>Talent</b><br> Within the home health care industry, it has become increasingly difficult to attract and retain top employees. Your talent pool has many options - they can work in hospitals, universities, or various other home health care organizations, both large and small. The key to attracting and retaining top talent will be keeping engagement high.</li></ul>",
+    "SWOTCompanyOverviewText": "MedAssist is one of the largest home health and hospice care providers in Maturia. The company offers a wide array of services, including skilled nursing (RNs & LPNs) and therapy (therapists & assistants). Patients are covered by Medicare, PPS, or private payers, and customers include episodic and non-episodic payers, often referred through MDs, residential and assisted living, rehab, skilled nursing facilities, and word of mouth. <br><br> The company has a strong market position. Last year, the two care centers that you'll be managing for MedAssist drove approximately $12.8 million in revenue and maintained a net income from operations (NIFO) of $1.9 million. In order to uphold MedAssist's competitive position in this pod, you and your team members must overcome a range of challenges and drive profitable growth for your two care centers. <br><br> The two care centers you'll be managing for MedAssist are the Riverside Center and the Pleasantville Center; both care centers are located in the same pod. Although you manage roughly 100 employees between both care centers, within each simulated care center, you will have the opportunity to interact with 10 clinicians (a proportional representation of your clinicians).<br><br><ul><li><b> Riverside</b> is larger in size and located in one of Maturia's larger cities. Over the last few years, Riverside has faced slowed growth due to regional competitors and a large national competitor entering the market. High operational costs and low employee productivity are often cited as the two key areas for improvement, as they are the main contributors negatively impacting the care center's already low NIFO. Despite various challenges, Riverside has been able to avoid field turnover, which is likely attributed to their high stars rating (4.4) and the favorable results of a recent employee engagement survey. Despite slowed growth, Riverside has been able to maintain a strong position in its market, likely due to their high referral source (RS) satisfaction. Their payer mix includes a relatively high percentage of non-episodic patients.</li><br><br><li><b>Pleasantville</b>, which is located in a more rural region, is smaller in size compared to Riverside, but has the potential to expand rapidly. This center competes against regional competitors and large, national competitors who are already established in the market. Despite operating in a fast-paced, high growth environment, Pleasantville struggles with a relatively low NIFO, due to their high turnover, which can be attributed to aggressive recruiting from competitors and low employee engagement. This challenge, coupled with high productivity, has resulted in a low stars rating (3.0). Low clinical quality has led to low referral source satisfaction. This care center also tends to be very selective when it comes to their patients (they have a very high percentage of Medicare patients), which is another reason why their referral source satisfaction isn't quite where it needs to be. </li></ul>",
+    "SWOTCompetitiveLandscapeText": "Over the course of the next two simulated years, you will be competing against two main national competitors:<br><br><ul><li><b>CHL Group</b> competes against MedAssist in Riverside and Pleasantville, but poses a bigger threat to the former. CHL's competitive edge relies heavily on their joint venture growth model and the strong referral source relationships that come along with it. Through joint ventures, CHL also acquires top talent; they retain that talent through fully paid health benefits and generous PTO packages.</li><br><br><li><b>Kinder</b> is well-known for its strong brand in the industry and also competes against both of MedAssist's home health centers, but unlike CHL Group, poses a bigger threat to Pleasantville. Kinder prides itself on its long history and years of experience in the industry, which has helped build a large referral network. Kinder also invests heavily in BD staff, driving new business rapidly with more boots on the ground.",
+    "SWOTKeyMetricsText": "Your results will be measured on five key metrics:<br><br><li>Revenue Growth</li><li>NIFO</li><li>Clinical Quality (Stars Ratings, Patient Satisfaction, Re-hospitalizations, etc.)</li><li>Employee Engagement</li><li>Referral Satisfaction</li><br>Each of these metrics will directly impact your ability to achieve success for MedAssist.<br><br>These metrics will be located at the top of the dashboard throughout the simulation and will update in real time as you makes decisions. <br><br> In order to win, your team will need to have the highest balanced scorecard and you must also overcome two hurdles: when stacked against the competition in the room, <b>by the end of the second round</b> you must be within the top five teams for employee engagement and referral source satisfaction.",
+    "SWOTOpportunityText": "Increase team productivity to improve NIFO.",
+    "SWOTOpportunityTitle": "Opportunities",
+    "SWOTStrengthText": "MedAssist has a strong,established and trusted brand.",
+    "SWOTStrengthTitle": "Strengths",
+    "SWOTThreatText": "Increased competition in the home health care space.",
+    "SWOTThreatTitle": "Threats",
+    "SWOTWeaknessText": "Struggling with relatively low NIFO in both care centers.",
+    "SWOTWeaknessTitle": "Weaknesses",
+    "UpdateSWOT": "Update SWOT"
+}
+]}

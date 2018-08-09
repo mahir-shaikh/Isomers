@@ -1,0 +1,10 @@
+<div 
+    class="link-item link-{{type}} row" 
+    id="link-item-{{data.name}}" 
+    *ngIf="!isHidden" 
+    [class.linkIsViewed]="isViewed" 
+    [class.linkIsNormal]="!isViewed" 
+    (click)="onSelect()">
+    <img class="link-icon" [src]="data.icon" />
+    <span class = "link-title"> {{ data.name }}</span>
+</div>

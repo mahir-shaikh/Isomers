@@ -1,0 +1,11 @@
+<div class="feedback animated" [class.slideOutRight]="isClosing" [class.slideInRight]="!isClosing">
+    <div (click)="onClose()" class="feedback-close fa fa-times"></div>
+    <img *ngIf="imageHeader != ''" [src]="imageHeader" width="100%">
+    
+    <div class="rightPanel-txt-content">
+        <h3><text-outlet key="Feedback"></text-outlet>: {{ title }}</h3>
+        <div class="feedback-body" [innerHTML]="feedback"></div>
+        <my-accordion closeOthers="true" [narrative]="narrative" [id]="id">
+        </my-accordion>
+    </div>
+</div>

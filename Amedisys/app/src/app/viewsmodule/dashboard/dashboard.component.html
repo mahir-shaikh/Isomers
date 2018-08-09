@@ -1,0 +1,112 @@
+<div class="topbar-dash row">
+    <div class="topbar-details">
+        <div class="logo">
+            <img src="../../../../assets/images/Amedisys-logo.svg" />
+            <!-- <div class="topbar-product-name">
+                <text-outlet key=""></text-outlet>
+            </div> -->
+        </div>
+        <div class="topbar-info">
+            <div class="round">
+                <text-outlet key="Round"></text-outlet><calc-outlet ref="xxRound"></calc-outlet>
+            </div>
+            <div class="user-info">
+                <calc-outlet ref="tlInputTeamName"></calc-outlet>
+                <text-outlet key="Team"></text-outlet><calc-outlet ref="tlInputTeamNumber"></calc-outlet>
+            </div>
+        </div>
+    </div>
+    <div class="topbar-rightside">
+       
+        <div class="topbar-metrics">
+            <div class="topbar-metric topbar-nifo">
+                <!-- <text-metric titleKey="NIFO" ref="tlOutputDBNIFO" format="0,0" currentYearRef="xxRound"></text-metric> -->
+                <text-metric titleKey="NIFOPerc" ref="tlOutputDBOpMargin" format="0.0%" currentYearRef="xxRound"></text-metric>
+            </div>
+            <div class="topbar-metric topbar-referralSatisfaction">
+                <text-metric titleKey="ReferralSatisfaction" ref="tlOutputDBCSAT" format="0.0%" scaler="" currentYearRef="xxRound"></text-metric>
+            </div>
+            <div class="topbar-metric topbar-employeeEngagement">
+                <text-metric titleKey="EmployeeEngagement" ref="tlOutputDBESAT" format="0.0%" scaler="" currentYearRef="xxRound"></text-metric>
+            </div>
+            <div class="topbar-metric topbar-stars">
+                <text-metric titleKey="Stars" ref="tlOutputDBStars" format="0.0%" currentYearRef="xxRound"></text-metric>
+            </div>
+            <div class="topbar-metric topbar-revenueGrowth">
+                <text-metric titleKey="RevenueGrowth" ref="tlOutputDBRevGrowth" format="0.0%" currentYearRef="xxRound"></text-metric>
+            </div>
+        </div>
+        <div class="topbar-utility">
+            <div class="topbar-nav-btn">
+                <a class="dashboard-nav-swot dashboard-nav" [routerLink]="['/dashboard', 'swot']" routerLinkActive="active">
+                    <text-outlet key="Swot"></text-outlet>
+                </a>
+            </div>
+        </div>
+        <!-- <div class="topbar-sync">
+            <sync-status></sync-status>
+        </div> -->
+        <div class="topbar-logout">
+            <a title="Logout" class="logoutICO digitalICO" (click)="showAlert()"><!-- <text-outlet key="Logout" class='topbar-logout-button'></text-outlet> --></a>
+            <div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><text-outlet key="Logout"></text-outlet></h4>
+                    </div>
+                    <div class="modal-body">
+                        <text-outlet key="LogoutSubmit"></text-outlet>
+                    </div>
+
+                    <div class="button-container">
+                        <button type="button" class="btn btn-danger" (click)="hideAlert(true)" [routerLink]="['logout']" routerLinkActive="active">Yes</button>
+                        <button type="button" class="btn btn-primary" (click)="hideAlert()">No</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topbar-sync-stat">
+                <!--<sync-status></sync-status>-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dashboard">
+    <!-- <div class="hide-actions col-xs-7" *ngIf="showActions"></div> -->
+    <div class="planning-tool-holder col-xs-12">
+        <div class="col-xs-7 pane pane--planningToolDash">
+            <planning-tool-dash ></planning-tool-dash>
+            <div class="row dashboard-bottom-components">
+                <div class="dashboard-bottom-content row instructions" [routerLink]="['/dashboard', {outlets: {'planning':'planning/tips'}}]">
+                    <div class="dashboard-bottom-icon col-xs-1 col-sm-1">
+                        <img src="../../../../assets/images/instruction-green.svg" />
+                    </div>
+                    <div class="dashboard-bottom-text col-xs-3 col-sm-3">
+                        <text-outlet key="Instructions"></text-outlet>
+                    </div>
+                </div>
+                <div class="dashboard-bottom-content row competitors"  [routerLink]="['/dashboard', 'analysis']">
+                    <div class="dashboard-bottom-icon col-xs-1 col-sm-1">
+                        <img src="../../../../assets/images/competitors-green.svg" />
+                    </div>
+                    <div class="dashboard-bottom-text col-xs-3 col-sm-3">
+                        <text-outlet key="Competitors"></text-outlet>
+                    </div>
+                </div>
+                <div class="dashboard-bottom-content row reports" [routerLink]="['/dashboard', {outlets: {'planning':'planning/reports'}}]">
+                    <div class="dashboard-bottom-icon col-xs-1 col-sm-1">
+                        <img src="../../../../assets/images/reports-green.svg" />
+                    </div>
+                    <div class="dashboard-bottom-text col-xs-3 col-sm-3">
+                        <text-outlet key="Reports"></text-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5 pane pane--messagesDash">
+            <messages-dashboard></messages-dashboard>
+            <submit-decisions trigger="tlOutputProcessTrigger" yearRef="xxRound"></submit-decisions>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,45 @@
+<div class="resources-modal" [class.modalShow]="modalShow"></div>
+<div class="resources animated" [class.slideOutRight]="isClosing" [class.slideInRight]="isOpening" [class.expanded]="expanded">
+    <div class="resources-close-btn col-xs-12">
+        <div (click)="onClose()" class="resources-close fa fa-times"></div>
+    </div>
+	<text-outlet key="Resources" class="resources-title"></text-outlet>
+    <div class="resources-content">
+        
+        <div class="resources-links">
+            <!-- <a (click)="openChild()">Sales and Marketing</a> -->
+            <a class="row resources-link" (click)="expanded=true; activeIndex=0"><div class="resources-icon icon-glossary-fill"></div><text-outlet class="resources-link-text" key="Glossary"></text-outlet></a>
+            <a class="row resources-link" (click)="expanded=true; activeIndex=1"><div class="resources-icon icon-glossary-fill"></div><text-outlet class="resources-link-text" key="Guide"></text-outlet></a>
+            <a class="row resources-link" (click)="expanded=true; activeIndex=2"><div class="resources-icon icon-glossary-fill"></div><text-outlet class="resources-link-text" key="PlanningSteps"></text-outlet></a>
+            
+        </div>
+        <div class="resources-expansion" *ngIf="expanded" [ngSwitch]="activeIndex">
+            
+            <div class="expanded-content glossary" *ngSwitchCase="0">
+                <h3><text-outlet key="Glossary"></text-outlet></h3>
+                <glossary></glossary>
+            </div>
+
+            <div class="expanded-content guide" *ngSwitchCase="1">
+                <h3><text-outlet key="Guide"></text-outlet></h3><br/>
+                <div class="resources-guide">
+                    <h4><text-outlet key="GuidePage1Title"></text-outlet></h4>
+                    <p [innerHTML]="guideTabText[0]"></p>
+                    <h4><text-outlet key="GuidePage2Title"></text-outlet></h4>
+                    <p><text-outlet key="GuidePage2Text"></text-outlet></p><br/>
+                    <h4><text-outlet key="GuidePage3Title"></text-outlet></h4>
+                    <p [innerHTML]="guideTabText[1]"></p><br/>
+                    <h4><text-outlet key="GuidePage4Title"></text-outlet></h4>
+                    <p [innerHTML]="guideTabText[2]"></p><br/>
+                    <h4><text-outlet key="GuidePage5Title"></text-outlet></h4>
+                    <p [innerHTML]="guideTabText[3]"></p>
+                </div>
+            </div>
+
+            <div class="expanded-content planning" *ngSwitchCase="2">
+                <h3><text-outlet key="PlanningSteps"></text-outlet></h3>
+                <div [innerHTML]="planningStepsText" class="resources-planning"></div>
+            </div>
+        </div>
+    </div>
+</div>

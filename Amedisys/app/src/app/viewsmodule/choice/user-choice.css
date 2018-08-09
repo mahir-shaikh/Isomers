@@ -1,0 +1,27 @@
+.choice {
+  clear: both;
+}
+.choice-submitBtn {
+  background: #8bc876;
+  color: #fff;
+  text-transform: uppercase;
+  height: 40px;
+  width: 140px;
+  text-align: center;
+  border-radius: 5px;
+  float: right;
+  position: absolute;
+  right: 22px;
+  border: none;
+  bottom: 15px;
+  transition: background 0.3s ease-out;
+}
+.choice-submitBtn:hover {
+  background: #559a3e;
+}
+.choice-cont {
+  height: calc(100% - 40px);
+}
+button[disabled].choice-submitBtn {
+  background: rgba(139,200,118,0.3);
+}

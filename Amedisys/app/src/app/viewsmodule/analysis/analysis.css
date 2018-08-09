@@ -1,0 +1,114 @@
+.analysis {
+  background: #fff;
+  height: 100%;
+  border-left: 6px solid #4f7345;
+  position: relative;
+  width: 25%;
+  float: right;
+  z-index: 16;
+  transition: width 0.8s ease;
+}
+.analysis-title {
+  font-weight: 600;
+  font-size: 32px;
+  color: #4f7345;
+  margin: 0 2rem;
+  text-transform: uppercase;
+}
+.analysis-body {
+  font-size: 16px;
+}
+.analysis-close {
+  width: 40px;
+  height: 40px;
+  background-color: #6b737c;
+  border-radius: 50%;
+  right: 10px;
+  top: 15px;
+  float: right;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 0.285em;
+}
+@media screen and (max-width: 1500px) {
+  .analysis-close {
+    right: 5px;
+    top: 5px;
+  }
+}
+.analysis-content {
+  position: relative;
+  padding: 20px 0;
+  margin: 0 2rem;
+}
+.analysis-link {
+  color: #333;
+  cursor: pointer;
+  font-size: 18px;
+  display: block;
+  padding: 10px 20px;
+}
+.analysis-link:hover {
+  text-decoration: none;
+}
+.analysis-link-text {
+  margin: 0 0 0 35px;
+}
+.analysis-modal {
+  background-color: rgba(109,116,126,0.8);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 16;
+  display: none;
+}
+.analysis-modal.modalShow {
+  display: block;
+}
+.analysis-icon {
+  position: relative;
+  float: left;
+  line-height: 1.5;
+}
+.analysis-icon:before {
+  color: #647d7e;
+  position: absolute;
+  top: 2px;
+}
+.analysis.expanded {
+  width: 100%;
+}
+.analysis.expanded .analysis-links {
+  width: 15%;
+  float: left;
+}
+.analysis.expanded .analysis-expansion {
+  width: 85%;
+  float: left;
+  color: #333;
+}
+.analysis.expanded .analysis-expansion:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+.content-div {
+  height: calc(100vh - 165px);
+  background: #f2f2f2;
+  padding: 0 0 0 0;
+  overflow-y: auto;
+}
+.content-div .content-row {
+  padding-top: 15px;
+}
+.content-div .content-row .chart-title {
+  text-align: center;
+  font-weight: 500;
+}
+.add-info {
+  color: #f07300;
+  text-transform: uppercase;
+  font-weight: 300;
+}

@@ -1,0 +1,11 @@
+<div class="messageDashboard">
+	<div class="messageDashboard-title-meeting"><span class="notification-count" [class.hidden]="showBusinessUpdates === 0">{{showBusinessUpdates}}</span><span class="title-text">Business Updates</span></div>
+    <div [class.hidden]="totalMeetings === 0">
+        <message-link [data]="meetingsArray[i]" [index]="i" type="meeting" *ngFor="let meeting of meetingsArray; let i=index"></message-link>
+    </div>
+    <div [class.hidden]="totalMessages === 0" class="message-set">
+    	<!-- <div class="messageDashboard-title-message"><span class="notification-count" [class.hidden]="newMessagesCount === 0">{{newMessagesCount}}</span><span class="title-text">MESSAGES</span></div> -->
+        <message-link [data]="messagesArray[i]" [index]="i" type="message" *ngFor="let message of messagesArray; let i=index"></message-link>
+    </div>
+</div>
+
