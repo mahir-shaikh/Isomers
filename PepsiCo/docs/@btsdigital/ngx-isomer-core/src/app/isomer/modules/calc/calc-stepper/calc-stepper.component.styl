@@ -1,0 +1,82 @@
+@import "../../../bts-core-styles/colors.styl";
+
+:host
+    display inline-block
+    width 100%
+    max-width 150px
+    height 40px
+    background-color $white
+    color $neutral4
+    overflow hidden
+    position relative
+    border 1px solid darken($neutral1, 15%)
+    .stepper
+        height 100%
+    input
+        margin-left 30px
+        height 100%
+        width calc(100% - 60px)
+        text-align center
+        color $neutral3
+        padding-right 5px
+        border none
+        font-size 16px
+        &:active,
+        &:focus
+            font-weight 600
+            border 2px solid $btsnavy
+
+:host(.disabled)
+    background-color $neutral3
+    .stepper-button
+        pointer-events none
+        color $btsnavy
+    
+.stepper
+    font-size 0.875rem
+    & > *
+      float left
+      display inline-block
+    &-button
+        cursor pointer
+        display inline-block
+        font-size 1.125rem
+        width 30px
+        height 40px
+        line-height 40px
+        position absolute
+        color $white
+        background-color $white
+        text-align center
+        &:hover, &:active
+            // background-color $white
+            // color #369
+        &.isActive
+            color $neutral3
+    .add
+        right 0
+        border-left 0px
+    .subtract
+        left 0
+        border-right 0px
+    .hidden
+        display none
+    .field
+        color $neutral4
+        font-weight bold    
+    .field-value
+        position absolute
+        z-index 1
+        left 0
+        top 0
+        font-size 16px
+        // margin-left 30px
+        height 100%
+        width calc(100% - 0px)
+        text-align center
+        color $neutral4
+        padding-right 5px
+        border none
+        padding-top 10px
+        display block
+        background $white

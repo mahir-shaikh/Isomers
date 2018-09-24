@@ -1,0 +1,17 @@
+<div class="trees-wrapper">
+    <div class="header-wrapper animated">
+        <span class="header-text">
+            <isma-text-output key="Trees"></isma-text-output>
+        </span>
+    </div>
+    <div class="trees-container animated fadeInUp">
+        <tabset>
+            <tab heading='{{tree1}}' [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                <roic-tree *ngIf="activeIndex === 1"></roic-tree>
+            </tab>
+            <tab heading='{{tree2}}' [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                <cashflow-tree *ngIf="activeIndex === 2"></cashflow-tree>
+            </tab>
+        </tabset>
+    </div>
+</div>

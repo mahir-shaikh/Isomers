@@ -1,0 +1,120 @@
+<div class="innovation-wrapper">
+    <!-- <div class="header-wrapper animated">
+        <span class="header-text">
+            <isma-text-output key="Innovations"></isma-text-output>
+        </span>
+    </div> -->
+    <div class="data-wrapper row" *ngIf="activeIndex == -1">
+        <div class="card-container imp-info col-sm-4 animated bounceIn" *ngFor="let innovation of innovationArray; let i=index" (click)="showData(i)">
+            <div class="card type-{{innovation.Category}}" >
+                <div class="card-header">{{innovation.name}}</div>
+                <div class="card-body">
+                    <!-- <h4 class="card-title">Primary card title</h4> -->
+                    <div class="card-text">
+                        <div class="data-row row">
+                            <span class="data-label col-sm">
+                                <isma-text-output key="Cost"></isma-text-output>
+                            </span>
+                            <span class="data-value col-sm">
+                                {{innovation.cost | numFormat:costFormat:costScalar}}
+                            </span>
+                        </div>
+                        <div class="data-row row">
+                            <span class="data-label col-sm">
+                                <isma-text-output key="MtusRequired"></isma-text-output>
+                            </span>
+                            <span class="data-value col-sm">
+                                {{innovation.mtu}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="complete-info-wrapper" *ngIf="activeIndex != -1">
+        <div class="card-container complete-info">
+            <div class="prev-btn navigation-btn animated " [class.slideInLeft]="isOpening" [class.slideOutLeft]="isClosing" [class.disabled]="activeIndex == 0" (click)="onPrev()">
+                <span class="fa fa-angle-left"></span>
+            </div>
+            <div class="card type-{{innovationArray[activeIndex].Category}} animated" [ngClass]="animationClass">
+                <div class="card-header">
+                    <h4 class="modal-title">{{innovationArray[activeIndex].name}}</h4>
+                    <span class="close-btn fa fa-times" (click)="hideData()"></span>
+                </div>
+                <div class="card-body row">
+                    <div class="description col-sm-12">
+                        <p class="discription-text">
+                            {{innovationArray[activeIndex].narrative}}
+                        </p>
+                    </div>
+                    <div class="data-row col-sm-12 row">
+                        <span class="data-label col-sm">
+                            <isma-text-output key="ProductSegment"></isma-text-output>
+                        </span>
+                        <span class="data-value col-sm">
+                            {{innovationArray[activeIndex].segment}}
+                        </span>
+                    </div>
+                    <div class="data-row col-sm-12 row">
+                        <span class="data-label col-sm">
+                            <isma-text-output key="Cost"></isma-text-output>
+                        </span>
+                        <span class="data-value col-sm">
+                            {{innovationArray[activeIndex].cost | numFormat:costFormat:costScalar}}
+                        </span>
+                    </div>
+                    <div class="data-row col-sm-12 row">
+                        <span class="data-label col-sm">
+                            <isma-text-output key="MtusRequired"></isma-text-output>
+                        </span>
+                        <span class="data-value col-sm">
+                            {{innovationArray[activeIndex].mtu}}
+                        </span>
+                    </div>
+                    <div class="gauge-container col-sm-4">
+                        <div class="data-label">
+                            <isma-text-output key="ManufacturingCost"></isma-text-output>
+                        </div>
+                        <div class="gauge">
+                            <meter min="0" low="40" high="90" max="100" [value]="currentManufacturingValue"></meter>
+                        </div>
+                        <div class="data-value">
+                            {{innovationArray[activeIndex].manufacturing}}
+                        </div>
+                    </div> 
+                    <div class="gauge-container col-sm-4">
+                        <div class="data-label">
+                            <isma-text-output key="RawMaterial"></isma-text-output>
+                        </div>
+                        <div class="gauge">
+                            <meter min="0" low="40" high="90" max="100" [value]="currentRawMaterialValue"></meter>
+                        </div>
+                        <div class="data-value">
+                            {{innovationArray[activeIndex].rawmaterial}}
+                        </div>
+                    </div> 
+                    <div class="gauge-container col-sm-4">
+                        <div class="data-label">
+                            <isma-text-output key="Distribution"></isma-text-output>
+                        </div>
+                        <div class="gauge">
+                            <meter min="0" low="40" high="90" max="100" [value]="currentDistributionValue"></meter>
+                        </div>
+                        <div class="data-value">
+                            {{innovationArray[activeIndex].distribution}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="next-btn navigation-btn animated " [class.slideInRight]="isOpening" [class.slideOutRight]="isClosing" [class.disabled]="activeIndex == (innovationArray.length -1)" (click)="onNext()">
+                <span class="fa fa-angle-right"></span>
+            </div>
+        </div>
+        <div class="select-btn navigation-btn" (click)="useThis()">
+            <span class="fa fa-check"></span>
+            <isma-text-output key="UseThis"></isma-text-output>
+        </div>        
+    </div>
+</div>

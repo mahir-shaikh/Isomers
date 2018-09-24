@@ -1,0 +1,93 @@
+// @import '../../../colors.styl'
+
+:host
+    height 100vh
+    overflow auto
+    display block
+    background #003A70
+.holdscreen-wrapper
+    color #FFF
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%,-50%)
+    -moz-transform translate(-50%,-50%)
+    -ms-transform translate(-50%,-50%)
+    -webkit-transform translate(-50%,-50%)
+    text-align center
+    .logo-container
+        margin-bottom 10px
+        text-align center
+        padding 10px
+        .logo
+            height 50px
+    .team-info
+        font-size 2rem
+        font-weight 500
+        text-transform uppercase
+    .lock-screen-icon-container
+        .lock-icon
+            font-size 32px
+            border 5px solid #FFF
+            display inline-block
+            padding 20px 30px
+            border-radius 50%
+            margin 25px 0px
+            background-color #00A9E0
+    .proceed-text-container
+        .password-container
+            padding 10px 0
+            .icon
+                margin 5px 10px
+            input
+                background transparent
+                color #FFF
+                border none
+                border-bottom 1px solid #FFF
+                outline none
+                min-width 250px
+                &::placeholder
+                    color #FFF
+                    font-size 12px
+        .error-message
+            font-size 12px
+            color $neutral2
+        .button-container
+            padding 10px 0
+            .submit-btn
+                background-color #005EB8
+                border 3px solid #0085CA
+                cursor pointer
+                text-transform uppercase
+                border-radius 20px
+                color #FFF
+                &:hover
+                    background-color #0085CA
+                &.disabled
+                    pointer-events none
+                    
+
+input
+    &:-webkit-input-placeholder
+        color #FFF
+        font-size 12px
+    &:-moz-placeholder
+        color #FFF
+        font-size 12px
+    &:-ms-input-placeholder
+        color #FFF
+        font-size 12px
+    &:-moz-placeholder
+        color #FFF
+        font-size 12px
+        
+.import-success-modal
+    top 20%
+    .button-container
+        margin auto
+        padding 10px
+        .btn
+            cursor pointer
+            border-radius 0
+            isma-calc-outlet
+                color #FFF

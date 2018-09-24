@@ -1,0 +1,43 @@
+.main
+    .row
+        height 100%
+        .dashboard-app
+            padding 0
+            width 250px
+            height 100%
+        .topbar-page
+            // padding 30px
+            width calc(100% - 250px)
+            height 100%
+            background-size cover
+            overflow hidden
+            display -webkit-box
+            display -webkit-flex
+            display -ms-flexbox
+            display flex
+            flex-direction column
+            background-color #f1f1f1
+.hidden
+    display none
+    &.active
+        & ~ .dashboard-app
+            display none
+        & ~ .topbar-page         
+            -webkit-box-flex 0
+            -webkit-flex 0 0 100%
+            -ms-flex 0 0 100%
+            flex 0 0 100%
+            max-width 100%
+            padding 0 !important
+            background none !important
+            background-color #FFF
+            height 100% !important
+            & isma-topbar
+                display none
+        &.show-topbar ~ .topbar-page
+            & topnavbar
+                display block
+    &.hide-topbar ~ .topbar-page
+            & isma-topbar
+                display none
+                

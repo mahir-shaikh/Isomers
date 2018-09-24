@@ -1,0 +1,50 @@
+@import '../app/isomer/bts-core-styles/colors.styl'
+
+/* no ui slider */
+.noUi
+    &-target
+        box-shadow none
+        border none
+        background-color $neutral2
+        &^[0]-horizontal
+            height 1px
+        &^[0]-vertical
+            width 1px
+    &-horizontal &-handle
+        border-radius 50%
+        border none
+        box-shadow none
+        background $btsnavy
+        width 28px
+        height 28px
+        left -14px
+        top -14px
+        text-align center
+        /*line-height 28px
+        color #fff
+        font-size 0.625em*/
+        &:before,&:after
+            display none
+    &-pips
+        height 30px
+        padding 0
+        color $neutral3
+    &-marker
+        &-horizontal, &-vertical
+            &^[1]-normal
+                display none
+            &^[1]-large
+                height 10px
+                top -5px
+                color $neutral3
+            &^[1]-sub
+                height 6px
+                top -3px
+                width 1px
+    &-value
+        &-horizontal, &-vertical
+            &^[1]-sub, &^[1]-large
+                padding-top 5px
+                font-size 14px
+                color $neutral3
+                

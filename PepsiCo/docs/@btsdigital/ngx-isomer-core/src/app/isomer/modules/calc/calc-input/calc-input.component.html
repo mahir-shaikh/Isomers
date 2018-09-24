@@ -1,0 +1,3 @@
+<span class="calc-input-control">
+<input class="calc-input calc-input--{{type}}" type="text" [ngModel]="value" (ngModelChange)="onModelChange($event)" name="{{ref}}" (blur)="saveDataToModel($event)" value="{{value}}" ismNumberformatter [format]="format" [scaler]="scaler" step="{{step}}" min={{min}} max="{{max}}" [readonly]="isReadOnly"/>
+</span>

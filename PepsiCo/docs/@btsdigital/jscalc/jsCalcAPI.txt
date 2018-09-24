@@ -1,0 +1,21 @@
+//range ids are strings which are either Excel form range specifiers (ie A5, E5:I5, B2:B4)
+//or named ranges within the workbook (ie 'tlInputProd1Price')
+
+//loads model json at modelURL, then calls loadCallback
+//Currently synchronous (and takes around 5s or so on a big model)
+jsCalcAPI(modelURL, loadCallback)
+
+//if rangeID is a single cell, value should be a single value
+//if rangeID is a multi-cell range, value can be an array (values will set row by row, so array should be ordered accordingly)
+//if a single value is passed for a multi-cell range, every cell will be set to that value
+jsCalcAPI.setValue(rangeID, value);
+
+//will return a single value for a single cell range
+//will return an array of values for a multi cell range
+jsCalcAPI.getValue(rangeID);
+
+//triggers on calculation complete
+jsCalcAPI.addCalculationCallback(func);
+
+//removes calculation complete callback
+jsCalcAPI.removeCalculationCallback(func);

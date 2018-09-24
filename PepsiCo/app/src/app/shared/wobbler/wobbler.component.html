@@ -1,0 +1,82 @@
+<div bsModal #wobblerModal="bs-modal" class="modal wobbler-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog  reset-modal modal-lg">
+        <div class="modal-content wobbler-alert" *ngIf="!showFeedback">
+            <div class="modal-header">
+                <h4 class="modal-title"><isma-text-output key="Urgent Message"></isma-text-output></h4>
+                <!-- <span class="close-btn-container" (click)="hideWobbler(true)" *ngIf="isViewed"><span class="fa fa-times"></span></span> -->
+            </div>
+            <div class="modal-body">
+                <isma-text-output key="You have received an urgent message. Please click OK to continue."></isma-text-output>
+            </div>
+            <div class="footer eventpage-footer">
+                <button type="button" class="btn yes-button event-decide" (click)="confirmWobbler()"><isma-text-output key="OK"></isma-text-output></button>
+            </div>
+            </div>
+        <div class="modal-content" *ngIf="showFeedback">
+            <div class="modal-header">
+                <h4 class="modal-title">{{ name }}</h4>
+                <!-- <span class="close-btn-container" (click)="hideWobbler(true)" *ngIf="isViewed"><span class="fa fa-times"></span></span> -->
+            </div>
+            <div class="modal-body">
+
+                    <div class="wobbler-narrative">
+                        <p [innerHTML]="narrative"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="button-container">
+                            <div class="flex-grid">
+                                <div class="flexrow wobbler-choice" *ngFor="let choice of choices; let i=index">
+                                    <button type="button" [class.highlighted]="answer === (i+1)" [class.disabled]="isViewed" class="btn btn-primary {{ choice.classLabel }}" (click)="onSelect(i)">
+                                        <span class="choice-label">{{ choice.value }}</span>
+                                        <span class="choice-txt"><p [innerHTML]="choice.label"></p></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="!isViewed" class="footer eventpage-footer">
+                        <button [class.disabled]="answer === -1" type="button" (click)="onSubmitWobbler(selfRef, 'W1R1')" class="btn btn-primary event-decide"><isma-text-output key="Decide"></isma-text-output></button>
+                    </div>
+
+                    <div *ngIf="isViewed && readOnly" class="footer eventpage-footer">
+                        <button type="button" class="btn yes-button event-decide" (click)="onSubmitWobbler()"><isma-text-output key="Close"></isma-text-output></button>
+                    </div>
+                    
+                    <div *ngIf="isViewed && !readOnly" class="wobbler-feedback">
+                        <div class="wobbler-fb-title"><isma-text-output key="Feedback" class=""></isma-text-output></div>
+                        <span class="wobbler-feedback-txt left"><p [innerHTML]="feedback" class=""></p></span>
+                        
+                        <button type="button" class="btn yes-button btn-close event-decide" (click)="hideWobbler(true)" *ngIf="isViewed"><isma-text-output key="Close"></isma-text-output></button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #wobblerOverrideModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog  reset-modal modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><isma-text-output key="Wobbler"></isma-text-output></h4>
+                <span class="close-btn-container" (click)="hideWobblerOverride(0)"><span class="fa fa-times"></span></span>
+            </div>
+            <div class="modal-body">
+                <isma-text-output key="Select Wobbler to activate in 5 seconds after clicking 'Activate'"></isma-text-output>
+                <br /><br />
+                <div *ngFor="let wobbler of wobblersOverrideList; let i=index">
+                    <div [class.disabledText]="wobbler.isViewed">
+                        <input type="radio" id="wobbler{{i}}" name="wobbler" [value]="i" (change)="override=i">
+                        {{ wobbler.name }}
+                    </div>
+                    <br />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="button-container">
+                    <!-- <button type="button" class="btn btn-primary no-button" (click)="hideWobblerOverride(0)"><isma-text-output key="Cancel"></isma-text-output></button> -->
+                    <button type="button" class="btn yes-button" (click)="hideWobblerOverride(1)"><isma-text-output key="Activate"></isma-text-output></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

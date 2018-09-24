@@ -1,0 +1,57 @@
+
+/* no ui slider */
+.noUi
+    &-target
+        box-shadow none
+        border 3px solid #BBB !important
+        background-color #bec0c1
+        border-radius 4px
+        &^[0]-horizontal
+            height 1px
+        &^[0]-vertical
+            width 1px
+    &-horizontal &-handle
+        border-radius 50%
+        border none
+        box-shadow 0 0 3px #333
+        background #00a9e0
+        width 28px !important
+        height 28px !important
+        left -14px !important
+        top -14px !important
+        text-align center
+        line-height 28px
+        color #fff
+        font-size 0.625em
+        cursor pointer
+        outline none
+        border 1px solid #fff
+        &:before,&:after
+            display none
+    &-pips
+        height 30px
+        padding 0
+        display none
+        
+    &-marker
+        &-horizontal, &-vertical
+            &^[1]-normal
+                display none
+            &^[1]-large
+                height 10px
+                top -5px
+            &^[1]-sub
+                height 6px
+                top -3px
+                width 1px
+                background #e1e2e3
+    &-value
+        &-horizontal, &-vertical
+            &^[1]-sub, &^[1]-large
+                padding-top 8px
+                font-size 10px
+                color #999
+    &-value
+        &-horizontal, &-vertical
+            &^[1]-sub
+                display none

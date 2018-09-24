@@ -1,0 +1,69 @@
+.innovation-wrapper
+    .card-container
+        padding 15px
+        .card
+            height 100%
+            &.type-1
+                background-color #00A9E0
+                color #FFF
+            &.type-2
+                background-color #78BE20
+                color #FFF
+            &.type-3
+                background-color #ED8B00
+                color #FFF
+            &-header
+                .close-btn
+                    position absolute
+                    right 10px
+                    top 10px
+                    cursor pointer
+            &-body
+                .discription-text
+                    text-align left
+        .data-row
+            padding 5px 0
+            align-items center
+            .data-label
+                text-align left
+            .data-value
+                text-align center
+                font-weight 600
+        .gauge-container
+            padding 5px 15px
+            text-align center
+            .data-value
+                font-weight 600
+        &.imp-info
+            .card
+                cursor pointer
+                &-header
+                    white-space nowrap
+                    overflow hidden
+                    text-overflow ellipsis
+                &-body
+                    padding 0
+        &.complete-info
+            display flex
+            align-items center
+            .card
+                min-width 500px
+    .navigation-btn
+        background-color #003A70
+        color #FFF
+        padding 10px 30px
+        display inline-block
+        font-size 2rem
+        cursor pointer
+        margin 0 5px
+        max-height 75px
+        &:hover
+            background-color #004C97
+        &.disabled
+            opacity 0.5
+            pointer-events none
+        &.select-btn
+            font-size 1rem
+    .complete-info-wrapper
+        text-align center
+        

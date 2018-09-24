@@ -1,0 +1,125 @@
+:host
+    height calc(100vh - 50px)
+    // overflow auto
+    padding 15px
+    
+.operations-wrapper
+    height 100%
+    .header-wrapper
+        .header-text
+            text-transform uppercase
+            font-weight 600
+            font-size 1.5rem
+            color #000
+    .metric-wrapper
+        background-color #00843D
+        color #fff
+        padding 0 30px
+        margin 10px 0
+        height 45px
+        align-items center
+        .metrics-data-row
+            .metrics-data
+                &-label
+                    display initial
+                &-value
+                    font-weight 600
+    .data-wrapper
+        background-color #FFF
+        .header-container
+            font-size 1.5rem
+            color #00a9e0
+            padding 15px
+        .data-container
+            padding 15px
+            .data-row
+                padding 5px 0
+                align-items center
+                .data-label
+                    color #A1A1A1
+                .data-value
+                    text-align center
+                    color #A1A1A1
+                &.header-row
+                    .data-label
+                        text-align center
+                        color #000
+                        font-weight 500
+                &.primary-row
+                    .data-label
+                        color #000
+                        font-weight 500
+                    .data-value
+                        color #000
+        .chart-container
+            padding 15px
+            .chart-title
+                text-align center
+                color #000
+                font-weight 500
+    .report-wrapper
+        .report-container
+            .data-row
+                padding 10px 0
+                border-bottom 1px solid #F1F1F1
+                align-items center
+                :last-child
+                    border-bottom none
+                .data-label
+                    color #A1A1A1
+                .data-value
+                    text-align center
+                    color #A1A1A1
+                &.sub-header-row
+                    margin-top 10px
+                    .data-label
+                        color #00a9e0
+                        font-size 1.5rem
+                        padding 0
+                &.primary-row
+                    .data-label
+                        color #000
+                    .data-value
+                        color #000
+                &.secondary-row
+                    .data-label
+                        color #A1A1A1
+                        padding-left 50px
+                    .data-value
+                        color #A1A1A1
+                &.header-row
+                    .data-label
+                        text-align center
+                        color #000
+                        font-weight 500
+    .tabset-wrapper
+        height 100%
+                
+                    
+    // .accordian-container
+    //     margin-top 15px
+    //     background-color #FFF
+    //     .accordian-title
+    //         padding 10px 15px
+    //         font-size 1.25rem
+    //         background-color #2D4773
+    //         cursor pointer
+    //         &-text
+    //             color #FFF
+    //             -webkit-transition all 0.5s ease
+    //             transition all 0.5s ease
+    //             opacity 1
+    //             display inline-block
+    //         .accordian-btn
+    //             display inline-block
+    //             color #FFF
+    //         &:hover
+    //             background-color #00A9E0
+    //     .accordian-data
+    //         background-color #fff
+    //         width 100%
+    //         max-height 3000px // anything above original height
+    //         overflow hidden
+    //         transition all 0.5s cubic-bezier(.5,0,.3,1)
+    //         &.hidden
+    //             max-height 0

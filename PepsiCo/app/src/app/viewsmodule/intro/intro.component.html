@@ -1,0 +1,75 @@
+<div class="intro-page-wrapper" *ngIf="isReady">
+    <div class="intro-page-container">
+        <div class="logo-container">
+            <img class="logo" src="../../../assets/images/pepsico_logo.png">
+        </div>
+        <div class="data-container animated bounceIn">
+            <div class="text-intro-info">
+                <div class="program-title-container">
+                    <isma-text-output key="SubTitle"></isma-text-output>
+                </div>
+            </div>
+            <div class="program-roundinfo-container">
+                <div class="row teamno-container">
+                    <div class="data-label col-sm-6">
+                        <isma-text-output key="Team Number"></isma-text-output>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <isma-calc-input ref="tlInputTeamNumber" [IsReadOnly]="currentYear != 1"></isma-calc-input>
+                    </div>
+                </div>
+                <div class="row teamname-container">
+                    <div class="data-label col-sm-6">
+                        <isma-text-output key="Team Name"></isma-text-output>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <isma-calc-input ref="tlInputTeamName" [IsReadOnly]="currentYear != 1"></isma-calc-input>
+                    </div>
+                </div>
+                <div class="row round-container">
+                    <div class="data-label col-sm-6">
+                        <isma-text-output key="Round"></isma-text-output>
+                    </div>
+                    <div class="data-value col-sm-6">
+                        <isma-calc-input ref="tlInputTeamYear" IsReadOnly="true"></isma-calc-input>
+                    </div>
+                </div>
+            </div>
+            <div class="button" (click)="navigateToNextPage()">
+                <isma-text-output key="Start"></isma-text-output>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="pepsico-logo-container">
+            <img class="pepsico-logo" src="../../../../assets/images/event-logo.png">
+        </div>
+        <div class="bts-info">
+            <div class="bts-logo-container">
+                <img class="bts-logo" src="../../../../assets/images/bts-logo.png">
+            </div>
+            <div class="footer-text">
+                <span class="copyright fa fa-copyright"></span>
+                <isma-text-output key="CopyrightText"></isma-text-output>
+            </div>            
+        </div>
+    </div>
+</div>
+
+
+<isma-importfile #importbalances (fileLoaded)="onFileLoaded($event)"></isma-importfile>
+<div bsModal #importsuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': true}">
+    <div class="modal-dialog modal-sm import-success-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><isma-text-output key="Success"></isma-text-output></h4>
+        </div>
+        <div class="modal-body">
+            <isma-text-output key="ImportSuccessConfirmMessage"></isma-text-output>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-danger no-button" (click)="hideSuccessAlert()"><isma-text-output key="Continue"></isma-text-output></button>
+        </div>
+        </div>
+    </div>
+</div>

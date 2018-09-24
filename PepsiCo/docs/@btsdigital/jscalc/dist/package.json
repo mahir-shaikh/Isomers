@@ -1,0 +1,13 @@
+{
+  "name": "@btsdigital/jscalc",
+  "version": "1.0.17",
+  "description": "Javascript library to work with parsed json models",
+  "main": "jsCalc.min.js",
+  "author": "BTS",
+  "license": "UNLICENSED",
+  "peer-dependencies": {
+    "moment": ">=2.5.0 && <=3.0.0",
+    "numeral": ">=1.5.2 || ^2.0.0"
+  },
+  "dependencies": {}
+}

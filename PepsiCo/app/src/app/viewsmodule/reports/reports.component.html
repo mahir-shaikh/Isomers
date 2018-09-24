@@ -1,0 +1,24 @@
+<div class="reports-wrapper">
+    <div class="header-wrapper animated">
+        <span class="header-text">
+            <!-- <isma-calc-outlet ref="tlOutput_toolOps_I3"></isma-calc-outlet> -->
+            <isma-text-output key="Reports"></isma-text-output>
+        </span>
+    </div>
+    <div class="reports-container animated fadeInUp">
+        <tabset>
+            <tab heading='{{report1}}' [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                <pnl-report *ngIf="activeIndex === 1"></pnl-report>
+            </tab>
+            <tab heading='{{report2}}' [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                <balancesheet-report *ngIf="activeIndex === 2"></balancesheet-report>
+            </tab>
+            <tab heading='{{report3}}' [active]="activeIndex === 3" (select)="setActiveIndex(3)">
+                <cashflow-report *ngIf="activeIndex === 3"></cashflow-report>
+            </tab>
+            <tab heading='{{report4}}' [active]="activeIndex === 4" (select)="setActiveIndex(4)">
+                <decisionsummary-report *ngIf="activeIndex === 4"></decisionsummary-report>
+            </tab>
+        </tabset>
+    </div>
+</div>

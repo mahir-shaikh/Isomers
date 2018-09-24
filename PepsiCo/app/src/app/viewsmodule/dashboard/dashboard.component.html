@@ -1,0 +1,243 @@
+<div class="hidden" [routerLink]="['/intro']" [routerLinkActive]="['active']"></div>
+<div class="dashboard-container">
+    <div class="header-container">        
+        <div class="options">
+            <div class="hamburger-sign" (click)="openMenu($event)">
+                <span class="fa fa-ellipsis-v"></span>
+            </div>
+            <div class="menu" [class.show-menu]="showMenu" ismaClickOutside (clickOutside)="closeMenu()" [clickOutActive]="showMenu">
+                <!-- <span (click)="showPasswordModalRef(2)" class="menu-link export-link"><isma-text-output key="Export"></isma-text-output></span> -->
+                <span (click)="showPasswordModalRef(1)" class="menu-link reset-link"><isma-text-output key="ResetSimulation"></isma-text-output></span>
+                <!-- <span (click)="showLogoutAlert()" class="menu-link logout-link"><isma-text-output key="Logout"></isma-text-output></span> -->
+                <span (click)="submitDecisions()" class="menu-link submit-link"><isma-text-output key="SubmitDecisions"></isma-text-output></span>
+                <!-- <span (click)="onClickInstructions()" class="menu-link tutorial-link"><isma-text-output key="Tutorial"></isma-text-output></span> -->
+            </div>
+        </div>
+
+        <div class="user-info">
+            <span class="year-info">
+                <!-- <isma-text-output key="Year"></isma-text-output> -->
+                <ism-calc-output ref="tlOutput_toolIntro_G8"></ism-calc-output>
+            </span>
+            <span class="team-info">
+                <isma-text-output key="#"></isma-text-output>
+                <ism-calc-output ref="tlInputTeamNumber"></ism-calc-output>
+                <ism-calc-output ref="tlInputTeamName"></ism-calc-output>
+            </span>
+        </div>
+        
+    </div>
+    <div class="logo-container">
+        <div class="logo">
+            <img class="logo-image" src="../../../assets/images/pepsico_logo.png">
+        </div>
+        <div class="tagline">
+            <!-- <img class="tagline-image" src="../../../assets/images/tagline.png"> -->
+            <span class="tagline-text">
+                <isma-text-output key="SubTitle"></isma-text-output>
+            </span>
+            <span class="tagline-text">
+                <isma-text-output key="BusinessSimulation"></isma-text-output>
+            </span>
+        </div>
+    </div>
+    <div class="navbar-link-container">
+        <div class="nav-link" [routerLink]="['/region','vetera']" [routerLinkActive]="['active']">
+            <span class="nav-link-icon vetera-icon">
+                <img class="nav-link-icon-image" src="../../../assets/images/icons/region.svg">
+            </span>
+            <span class="nav-link-text">
+                <isma-text-output key="NavbarLink1"></isma-text-output>
+            </span>
+            <span class="right-arrow fa fa-chevron-right"></span>
+        </div>
+        <div class="nav-link" [routerLink]="['/region','escendia']" [routerLinkActive]="['active']">
+            <span class="nav-link-icon escendia-icon">
+                <img class="nav-link-icon-image" src="../../../assets/images/icons/region.svg">
+            </span>
+            <span class="nav-link-text">
+                <isma-text-output key="NavbarLink2"></isma-text-output>
+            </span>
+            <span class="right-arrow fa fa-chevron-right"></span>
+        </div>
+        <div class="nav-link" [routerLink]="['/rnd']" [routerLinkActive]="['active']">
+            <span class="nav-link-icon rnd-icon">
+                <img class="nav-link-icon-image" src="../../../assets/images/icons/bulb.svg">
+            </span>
+            <span class="nav-link-text">
+                <isma-text-output key="NavbarLink3"></isma-text-output>
+            </span>
+            <span class="right-arrow fa fa-chevron-right"></span>
+        </div>
+        <div class="nav-link" [routerLink]="['/ops']" [routerLinkActive]="['active']">
+            <span class="nav-link-icon ops-icon">
+                <img class="nav-link-icon-image" src="../../../assets/images/icons/operation.svg">
+            </span>
+            <span class="nav-link-text">
+                <isma-text-output key="NavbarLink4"></isma-text-output>
+            </span>
+            <span class="right-arrow fa fa-chevron-right"></span>
+        </div>
+        <div class="nav-link" [routerLink]="['/gss']" [routerLinkActive]="['active']">
+            <span class="nav-link-icon gss-icon">
+                <img class="nav-link-icon-image" src="../../../assets/images/icons/globe.svg">
+            </span>
+            <span class="nav-link-text">
+                <isma-text-output key="NavbarLink5"></isma-text-output>
+            </span>
+            <span class="right-arrow fa fa-chevron-right"></span>
+        </div>
+        <div class="nav-link" [routerLink]="['/initiatives']" [routerLinkActive]="['active']">
+            <span class="nav-link-icon initiatives-icon">
+                <img class="nav-link-icon-image" src="../../../assets/images/icons/initiatives.svg">
+            </span>
+            <span class="nav-link-text">
+                <isma-text-output key="NavbarLink6"></isma-text-output>
+            </span>
+            <span class="right-arrow fa fa-chevron-right"></span>
+        </div>
+    </div>
+    <div class="hr-container">
+        <div class="line"></div>
+    </div>
+    <div class="navbar-icon-container row">
+        <div class="navbar-icon col-sm-4">
+            <div class="navbar-icon-image" [routerLink]="['/reports']" [routerLinkActive]="['active']">
+                <img class="image" src="../../../assets/images/icons/initiatives.svg">
+            </div>
+            <div class="navbar-icon__text">
+                <isma-text-output key="NavbarIconLink1"></isma-text-output>
+            </div>
+        </div>
+        <div class="navbar-icon col-sm-4">
+            <div class="navbar-icon-image" [routerLink]="['/trees']" [routerLinkActive]="['active']">
+                <img class="image" src="../../../assets/images/icons/tree.svg">
+            </div>
+            <div class="navbar-icon__text">
+                <isma-text-output key="NavbarIconLink2"></isma-text-output>
+            </div>
+        </div>
+        <div class="navbar-icon col-sm-4">
+            <div class="navbar-icon-image" [routerLink]="['/planningtool']" [routerLinkActive]="['active']">
+                <img class="image" src="../../../assets/images/icons/planning.svg">
+            </div>
+            <div class="navbar-icon__text">
+                <isma-text-output key="NavbarIconLink3"></isma-text-output>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer-text">
+            <span class="copyright fa fa-copyright"></span>
+            <isma-text-output key="CopyrightText"></isma-text-output>
+        </div>
+    </div>
+</div>
+
+
+
+<div bsModal #passwordModal="bs-modal" class="modal model-md animated password-modal fadeIn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"[config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <isma-text-output key="ResetSimulation" *ngIf="passwordModalNumber == 1"></isma-text-output>
+                    <isma-text-output key="Export" *ngIf="passwordModalNumber == 2"></isma-text-output>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="info-text" *ngIf="passwordModalNumber == 3 || passwordModalNumber == 4 || passwordModalNumber == 5">
+                        <isma-text-output key="RoundCompletionMsg"></isma-text-output>
+                    </div>
+                    <div class="password-container">
+                        <div class="password-text"><isma-text-output key="EnterPassword"></isma-text-output></div>
+                        <input type="password" [(ngModel)]="password" #passwordText>
+                    </div>
+                    <div class="error-message" *ngIf="showPasswordErrorMessage"><isma-text-output key="IncorrectPasswordMsg"></isma-text-output></div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-primary" (click)="hidePasswordModalRef()"><isma-text-output key="Cancel"></isma-text-output></button>
+                <button class="btn btn-danger" (click)="onPasswordSubmit()"><isma-text-output key="Submit"></isma-text-output></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #logoutModal="bs-modal" class="modal logout-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><isma-text-output key="Logout"></isma-text-output></h4>
+        </div>
+        <div class="modal-body">
+            <isma-text-output key="LogoutConfirmationMsg"></isma-text-output>
+        </div>
+        <div class="button-container row">
+            <button type="button" class="btn btn-primary no-button" (click)="hideLogoutAlert()"><isma-text-output key="No"></isma-text-output></button>
+            <button type="button" class="btn btn-danger yes-button" (click)="hideLogoutAlert(true)"  [routerLink]="['/logout']"><isma-text-output key="Yes"></isma-text-output></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #resetModal="bs-modal" class="modal reset-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><isma-text-output key="Reset"></isma-text-output></h4>
+        </div>
+        <div class="modal-body">
+            <isma-text-output key="ResetConfirmationMsg"></isma-text-output>
+        </div>
+        <div class="button-container row" *ngIf="!showLoader">
+            <button type="button" class="btn btn-primary yes-button" (click)="resetRound()"><isma-text-output key="Yes"></isma-text-output></button>
+            <button type="button" class="btn btn-danger no-button" (click)="hideResetModal()"><isma-text-output key="No"></isma-text-output></button>
+        </div>
+        <div class="loader-container" *ngIf="showLoader">
+            <span class="loader fa fa-spinner fa-pulse"></span>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #errorModal="bs-modal" class="modal error-modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><isma-text-output key="Error"></isma-text-output></h4>
+        </div>
+        <div class="modal-body">
+            <isma-text-output [key]="errorKey"></isma-text-output>
+        </div>
+        <div class="button-container row">
+            <button type="button" class="btn btn-danger no-button" (click)="hideErrorModal()"><isma-text-output key="Ok"></isma-text-output></button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #submitModal="bs-modal" class="modal submit-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+  <div class="modal-dialog modal-lg confirmation">
+    <div class="modal-content submit-popup-content">
+      <div class="modal-header main-header submit-popup">
+        <h4 class="modal-title eventTitle main-title"><span class="digital-ico fa fa-compass"></span><isma-text-output key="Confirm"></isma-text-output></h4>
+      </div>
+      <div class="modal-body eventBody">
+        <div class="confirmBody">
+          <isma-text-output key="SubmitDecisionAlertText"></isma-text-output>
+        </div>
+      </div>
+
+      <div class="button-container">
+       <button type="button" class="btn btn-primary" (click)="hideSubmitModal()"><isma-text-output key="Cancel"></isma-text-output><span class="digital-ico fa fa-chevron-left"></span></button>
+        <button type="button" class="btn btn-danger" (click)="nextRound()"><isma-text-output key="Confirm"></isma-text-output><span class="digital-ico fa fa-check"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<instructions #instructionsModal="instructionsPage"></instructions>
+
+<isma-wobbler #wobbler></isma-wobbler>

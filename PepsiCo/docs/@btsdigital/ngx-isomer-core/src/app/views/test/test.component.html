@@ -1,0 +1,19 @@
+<div>
+  <ism-text-output key="Title"></ism-text-output>
+
+  <div class="row col-sm">
+    <ism-calc-slider ref="xxIndexTeam" step="1" min="1" max="5"></ism-calc-slider>
+  </div>
+  <div class="row col-sm">
+    <ism-calc-dropdown ref="xxIndexTeam" [items]="[1,2,3,4,5]"></ism-calc-dropdown>
+  </div>
+  <div class="row col-sm">
+    <ism-calc-checkbox ref="tlInputBoolean1"></ism-calc-checkbox>
+  </div>
+  <div class="row col-sm">
+    <ism-calc-option ref="xxIndexTeam" [items]="['one','two','three']"></ism-calc-option>
+  </div>
+  <div class="row col-sm">
+    <ism-calc-stepper ref="tlInputProd1Price" format="$0,0" outputMin="0" outputMax="1000"></ism-calc-stepper>
+  </div>
+</div>

@@ -1,0 +1,802 @@
+<div class="marketdata-wrapper">
+    <div class="header-wrapper animated">
+        <span class="header-text">
+            <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I3'"></isma-calc-outlet>
+        </span>
+    </div>
+    <div class="metric-wrapper row animated">
+        <div class="metrics-data col-sm-4">
+            <span class="metrics-data-label">
+                <isma-text-output [key]="'DashboardReg'+marketNumber+'MetricLabel1'"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard6" format="$0,0am" *ngIf="marketNumber == 1"></isma-calc-outlet>
+                <isma-calc-outlet ref="tlOutput_Dashboard9" format="$0,0am" *ngIf="marketNumber == 2"></isma-calc-outlet>
+            </span>
+        </div>
+        <div class="metrics-data col-sm-4">
+            <span class="metrics-data-label">
+                <isma-text-output [key]="'DashboardReg'+marketNumber+'MetricLabel2'"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard7" format="$0,0am" *ngIf="marketNumber == 1"></isma-calc-outlet>
+                <isma-calc-outlet ref="tlOutput_Dashboard10" format="$0,0am" *ngIf="marketNumber == 2"></isma-calc-outlet>
+            </span>
+        </div>
+        <div class="metrics-data col-sm-4">
+            <span class="metrics-data-label">
+                <isma-text-output [key]="'DashboardReg'+marketNumber+'MetricLabel3'"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard8" format="0.0%" *ngIf="marketNumber == 1"></isma-calc-outlet>
+                <isma-calc-outlet ref="tlOutput_Dashboard11" format="0.0%" *ngIf="marketNumber == 2"></isma-calc-outlet>
+            </span>
+        </div>
+    </div>
+    <div class="tabset-wrapper animated fadeInUp">
+        <tabset>
+            <tab heading='{{tab1}}' [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                <div class="tab-wrapper" *ngIf="activeIndex === 1">
+                    <div class="data-wrapper row">
+                        <div class="header-container col-sm-12">
+                            <span class="header-text">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_C10'"></isma-calc-outlet>
+                            </span>
+                        </div>
+                        <div class="data-container col-sm-12 col-xl-8">
+                            <div class="data-row header-row row">
+                                <div class="data-label col-sm-4"></div>
+                                <div class="data-label col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G13'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-label col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I13'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-label col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K13'"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row" [class.highlight-stepper]="isWhatIfEnabled">
+                                <div class="data-label tooltip-container col-sm-4">
+                                    <isma-tooltip class="decision-tooltip" key="TooltipRegionDecision1" tooltipPlacement="right"></isma-tooltip>
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D15'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd1Reg1Grth" step="1" outputMin="-20" outputMax="20" format="0.0%" scaler="100" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd1Reg2Grth" step="1" outputMin="-30" outputMax="30" format="0.0%" scaler="100" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd3Reg1Grth" step="1" outputMin="-20" outputMax="20" format="0.0%" scaler="100" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd3Reg2Grth" step="1" outputMin="-30" outputMax="30" format="0.0%" scaler="100" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd4Reg1Grth" step="1" outputMin="-20" outputMax="20" format="0.0%" scaler="100" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd4Reg2Grth" step="1" outputMin="-30" outputMax="30" format="0.0%" scaler="100" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-4">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D16'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G16'" format="0,0ak"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I16'" format="0,0ak"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K16'" format="0,0ak"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-4">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D17'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G17'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I17'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K17'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label tooltip-container col-sm-4">
+                                    <isma-tooltip class="decision-tooltip" key="TooltipRegionDecision2" tooltipPlacement="right"></isma-tooltip>
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D19'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd1Reg1Price" step="0.1" outputMin="0" outputMax="20" format="$0.00" maxChange="10" [changeRef]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G20'" (errorDetected)="showErrorModal()" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd1Reg2Price" step="0.1" outputMin="0" outputMax="20" format="$0.00" [changeRef]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G20'" maxChange="10" (errorDetected)="showErrorModal()" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd3Reg1Price" step="0.1" outputMin="0" outputMax="20" format="$0.00" maxChange="10" [changeRef]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I20'" (errorDetected)="showErrorModal()" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd3Reg2Price" step="0.1" outputMin="0" outputMax="20" format="$0.00" maxChange="10" [changeRef]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I20'" (errorDetected)="showErrorModal()" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd4Reg1Price" step="0.1" outputMin="0" outputMax="20" format="$0.00" maxChange="10" [changeRef]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K20'" (errorDetected)="showErrorModal()" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd4Reg2Price" step="0.1" outputMin="0" outputMax="20" format="$0.00" maxChange="10" [changeRef]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K20'" (errorDetected)="showErrorModal()" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-4">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D20'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G20'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I20'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K20'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-4">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D22'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G22'" format="$0,0ak"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I22'" format="$0,0ak"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K22'" format="$0,0ak"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-4">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D23'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G23'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I23'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K23'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-container col-sm-12 col-xl-4">
+                            <div class="chart-title">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_O12'"></isma-calc-outlet>
+                            </div>
+                            <div class="chart-data">
+                                <ism-chart *ngIf="marketNumber == 1"
+
+                                [rangeRef]="[['tlOutput_toolGraphData_C5', 'tlOutput_toolGraphData_C6'],['tlOutput_toolGraphData_D5','tlOutput_toolGraphData_D6'],['tlOutput_toolGraphData_E5','tlOutput_toolGraphData_E6']]"
+
+                                [seriesOptions]="[{type: 'stackedcolumn', 'name': 'tlOutput_toolGraphData_C4'}, {type: 'stackedcolumn', 'name': 'tlOutput_toolGraphData_D4'}, {type: 'stackedcolumn', 'name': 'tlOutput_toolGraphData_E4'}]" 
+
+                                [xAxis]="{categories: ['tlOutput_toolGraphData_B5', 'tlOutput_toolGraphData_B6']}"
+
+                                [yAxis]="{ title: { text: '' }, labels: { format: '{value:0.0%}' }, stackLabels: { enabled : false}}"
+
+                                [chartOptions]="{ tooltip: { pointFormat: '{point.y:0.0%}'} }" >
+                                    
+                                </ism-chart>
+                                <!-- [yAxis]="{stackLabels: { enabled : false, format: '{total:$0,0.00}'}}" -->
+
+                                <ism-chart *ngIf="marketNumber == 2"
+
+                                [rangeRef]="[['tlOutput_toolGraphData_C8', 'tlOutput_toolGraphData_C9'],['tlOutput_toolGraphData_D8','tlOutput_toolGraphData_D9'],['tlOutput_toolGraphData_E8','tlOutput_toolGraphData_E9']]"
+
+                                [seriesOptions]="[{type: 'stackedcolumn', 'name': 'tlOutput_toolGraphData_C7'}, {type: 'stackedcolumn', 'name': 'tlOutput_toolGraphData_D7'}, {type: 'stackedcolumn', 'name': 'tlOutput_toolGraphData_E7'}]" 
+
+                                [xAxis]="{categories: ['tlOutput_toolGraphData_B8', 'tlOutput_toolGraphData_B9']}"
+
+                                [yAxis]="{ title: { text: '' }, labels: { format: '{value:0.0%}' }, stackLabels: { enabled : false}}"
+
+                                [chartOptions]="{ tooltip: { pointFormat: '{point.y:0.0%}'} }" >
+                                    
+                                </ism-chart>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-wrapper row">
+                        <div class="hr-container col-sm-12">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="data-wrapper row">
+                        <div class="header-container col-sm-12">
+                            <span class="header-text">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_C25'"></isma-calc-outlet>
+                            </span>
+                        </div>
+                        <div class="data-container col-sm-12 col-xl-8">
+                            <div class="data-row header-row row">
+                                <div class="data-label col-sm-4"></div>
+                                <div class="data-label col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G27'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-label col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I27'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-label col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K27'"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label tooltip-container col-sm-4">
+                                    <isma-tooltip class="decision-tooltip" key="TooltipRegionDecision3" tooltipPlacement="right"></isma-tooltip>
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D29'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd1Adv" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd1AdvR2" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd3Adv" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd3AdvR2" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd4Adv" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd4AdvR2" step="5" outputMin="0" outputMax="2000" format="0.0"  *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-4">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D30'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G30'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I30'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K30'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label tooltip-container col-sm-4">
+                                    <isma-tooltip class="decision-tooltip" key="TooltipRegionDecision4" tooltipPlacement="right"></isma-tooltip>
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D32'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd1Promo" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd1PromoR2" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd3Promo" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd3PromoR2" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper ref="tlInputProd4Promo" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 1"></isma-calc-stepper>
+                                    <isma-calc-stepper ref="tlInputProd4PromoR2" step="5" outputMin="0" outputMax="2000" format="0.0" *ngIf="marketNumber == 2"></isma-calc-stepper>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-4">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D33'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G33'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I33'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K33'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-4">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D34'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G34'" format="$0,0.00"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I34'" format="$0,0.00"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K34'" format="$0,0.00"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-4">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D36'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G36'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_I36'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K36'" format="0.0%"></isma-calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-container col-sm-12 col-xl-4">
+                            <div class="chart-title">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N27'"></isma-calc-outlet>
+                            </div>
+                            <div class="chart-data">
+                                <ism-chart *ngIf="marketNumber == 1" 
+                                    [rangeRef]="['tlOutput_toolGraphData_C14', 'tlOutput_toolGraphData_D14', 'tlOutput_toolGraphData_E14']"
+
+                                    [seriesOptions]="[{ 'name': 'tlOutput_toolGraphData_B14', 'type': 'pie', 'data': [{name: 'tlOutput_toolGraphData_C13'}, {name:'tlOutput_toolGraphData_D13' }, {name:'tlOutput_toolGraphData_E13' } ]}]"
+
+                                    [chartOptions]="">
+                                </ism-chart>
+
+                                <ism-chart *ngIf="marketNumber == 2" 
+                                    [rangeRef]="['tlOutput_toolGraphData_C16', 'tlOutput_toolGraphData_D16', 'tlOutput_toolGraphData_E16']"
+
+                                    [seriesOptions]="[{ 'name': 'tlOutput_toolGraphData_B16', 'type': 'pie', 'data': [{name: 'tlOutput_toolGraphData_C15'}, {name:'tlOutput_toolGraphData_D15' }, {name:'tlOutput_toolGraphData_E15' } ]}]"
+
+                                    [chartOptions]="">
+                                </ism-chart>
+                            </div>
+                        </div>
+                        <div class="data-container col-sm-12 col-xl-6">
+                            <div class="data-row primary-row row">
+                                <div class="data-label tooltip-container col-sm-6">
+                                    <isma-tooltip class="decision-tooltip" key="TooltipRegionDecision5" tooltipPlacement="right"></isma-tooltip>
+                                    <!-- <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D39'"></isma-calc-outlet> -->
+                                    <isma-text-output key="SalesForce"></isma-text-output>
+                                    <isma-text-output key="HireFire"></isma-text-output>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-stepper [ref]="'tlInputEmp'+marketNumber+'Change'" step="5" outputMin="-30000" outputMax="30000" format="0,0"></isma-calc-stepper>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-6">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D40'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G40'" format="$0,0"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-6">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D41'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G41'" format="0,0"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-6">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D42'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G42'" format="$0,0"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-6">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D43'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_G43'" format="$0,0"></isma-calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-container col-sm-12 col-xl-6">
+                            <div class="data-row primary-row row">
+                                <div class="data-label slider-output-container col-sm-6">
+                                    <span class="tooltip-container">
+                                        <isma-tooltip class="decision-tooltip" key="TooltipRegionDecision6" tooltipPlacement="right" *ngIf="marketNumber == 1"></isma-tooltip>
+                                        <isma-tooltip class="decision-tooltip" key="TooltipRegionDecision7" tooltipPlacement="right" *ngIf="marketNumber == 2"></isma-tooltip>
+                                        <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_J38'"></isma-calc-outlet>                                    
+                                    </span>
+                                    <span class="slider-output">
+                                        <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_O38'"></isma-calc-outlet>
+                                    </span>
+                                </div>
+                                <div class="data-value slider-label-container col-sm">
+                                    <span class="slider-label">
+                                        <isma-text-output key="1"></isma-text-output>
+                                    </span>
+                                    <isma-calc-slider [ref]="'tlInputReg'+marketNumber+'ChanLevel'" min="0" max="100" step="10" format="0,0" handleValueRef="tlOutput_toolVetera_O38"></isma-calc-slider>
+                                    <span class="slider-label">
+                                        <isma-text-output key="10"></isma-text-output>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm-6">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N40'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_O40'" format="$0,0" *ngIf="marketNumber == 1"></isma-calc-outlet>
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_O40'" format="$0,0.00" *ngIf="marketNumber == 2"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row" *ngIf="marketNumber != 1">
+                                <div class="data-label col-sm-6">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N41'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_O41'" format="$0.00a"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row" *ngIf="marketNumber != 1">
+                                <div class="data-label col-sm-6">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N42'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_O42'" format="0,0"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row" *ngIf="marketNumber == 1">
+                                <div class="data-label col-sm-6">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N43'"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                    <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_O43'" format="0,0"></isma-calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </tab>
+            <tab heading='{{tab2}}' [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                <div class="report-wrapper row" *ngIf="activeIndex === 2">
+                    <div class="report-container col-sm-12">
+                        <div class="data-row header-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                            </div>
+                            <div class="data-label col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H50'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K50'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N50'"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row sub-header-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_C51'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D53'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H53'" format="0.0am"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K53'" format="0.0am"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N53'" format="0.0am"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row secondary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D54'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H54'" format="0%"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K54'" format="0%"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N54'" format="0%"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D55'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H55'" format="$0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K55'" format="$0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N55'" format="$0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row total-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D57'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H57'" format="$0,0am"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K57'" format="$0,0am"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N57'" format="$0,0am"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D59'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H59'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K59'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N59'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                        </div>
+
+                        <div class="data-row sub-header-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_C61'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D63'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H63'" format="$0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K63'" format="$0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N63'" format="$0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D64'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H64'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K64'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N64'" format="0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D65'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H65'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K65'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N65'" format="0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row total-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D67'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H67'" format="$0,0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K67'" format="$0,0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N67'" format="$0,0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row secondary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D69'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H69'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K69'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N69'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D71'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H71'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K71'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N71'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                        </div>
+
+                        <div class="data-row sub-header-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_C73'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D75'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H75'" format="$0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K75'" format="$0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N75'" format="$0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D76'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H76'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K76'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N76'" format="0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D77'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H77'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K77'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N77'" format="0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D78'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H78'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K78'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N78'" format="0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D79'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H79'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K79'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N79'" format="0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D80'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H80'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K80'" format="0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N80'" format="0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row total-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D82'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H82'" format="$0,0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K82'" format="$0,0.00"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N82'" format="$0,0.00"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-2 col-md-4">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_D84'"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_H84'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_K84'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-2 col-md">
+                                <isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_N84'" format="0.0%"></isma-calc-outlet>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </tab>
+        </tabset>        
+    </div>
+
+    <!-- <div class="accordian-container row">
+        <button class="expand-collapse-btn col-sm-12 p-0" (click)="isCollapsed=!isCollapsed">
+            <div class="accordian-title">
+                <div class="accordian-title-text"><isma-calc-outlet [ref]="'tlOutput_tool'+arrRangeName[marketNumber]+'_B48'"></isma-calc-outlet></div>
+                <div class="fa accordian-btn" [class.fa-plus]="isCollapsed" [class.fa-minus]="!isCollapsed"></div>
+            </div>
+        </button>
+        <div [class.hidden]="isCollapsed" class="accordian-data col-sm-12">
+            
+        </div>
+    </div> -->
+</div>
+
+
+<div bsModal #errorModal="bs-modal" class="modal error-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <isma-text-output key="Error"></isma-text-output>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <isma-text-output key="StepperMaxChangeErrorText"></isma-text-output>
+            </div>
+            <div class="button-container row">
+                <button type="button" class="btn btn-danger no-button" (click)="hideErrorModal()">
+                    <ism-text-output key="Ok"></ism-text-output>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

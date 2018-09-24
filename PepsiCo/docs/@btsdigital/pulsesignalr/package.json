@@ -1,0 +1,91 @@
+{
+  "_from": "git+ssh://git@bitbucket.org/btsdigital/pulsesignalr.git#v1.2.13",
+  "_id": "@btsdigital/pulsesignalr@1.2.13",
+  "_inBundle": false,
+  "_location": "/@btsdigital/pulsesignalr",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "@btsdigital/pulsesignalr@git+ssh://git@bitbucket.org/btsdigital/pulsesignalr.git#v1.2.13",
+    "name": "@btsdigital/pulsesignalr",
+    "escapedName": "@btsdigital%2fpulsesignalr",
+    "scope": "@btsdigital",
+    "rawSpec": "git+ssh://git@bitbucket.org/btsdigital/pulsesignalr.git#v1.2.13",
+    "saveSpec": "git+ssh://git@bitbucket.org/btsdigital/pulsesignalr.git#v1.2.13",
+    "fetchSpec": "ssh://git@bitbucket.org/btsdigital/pulsesignalr.git",
+    "gitCommittish": "v1.2.13"
+  },
+  "_requiredBy": [
+    "/@btsdigital/ngx-isomer-core"
+  ],
+  "_resolved": "git+ssh://git@bitbucket.org/btsdigital/pulsesignalr.git#4f9db44d7758ae55ed6ac28713903d1d2ccd0112",
+  "_spec": "@btsdigital/pulsesignalr@git+ssh://git@bitbucket.org/btsdigital/pulsesignalr.git#v1.2.13",
+  "_where": "C:\\SVN\\Pepsico_BA1\\git\\node_modules\\@btsdigital\\ngx-isomer-core",
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Common SignalR library for pulse angular apps",
+  "devDependencies": {
+    "@angular/common": "^4.0.3",
+    "@angular/compiler": "^4.0.3",
+    "@angular/compiler-cli": "^4.0.3",
+    "@angular/core": "^4.0.3",
+    "@angular/forms": "^4.0.3",
+    "@angular/http": "^4.0.3",
+    "@angular/platform-browser": "^4.0.3",
+    "@angular/platform-browser-dynamic": "^4.0.3",
+    "@angular/router": "^4.0.3",
+    "@types/node": "^6.0.45",
+    "del": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-inline-ng2-template": "^4.0.0",
+    "gulp-install": "^0.6.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-rollup": "^2.15.0",
+    "gulp-sourcemaps": "^2.1.1",
+    "gulp-stylus": "^2.6.0",
+    "gulp-typescript": "^3.0.2",
+    "gulp-typings": "^2.0.4",
+    "gulp-uglify": "^2.0.0",
+    "rollup": "^0.49.3",
+    "rollup-plugin-amd": "^1.3.0",
+    "rollup-plugin-commonjs": "^8.2.1",
+    "rollup-plugin-includepaths": "^0.2.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "run-sequence": "^2.2.0",
+    "rxjs": "^5.1.0",
+    "signalr": "^2.2.2",
+    "stylus": "^0.54.5",
+    "ts-node": "~3.2.0",
+    "tslint": "~5.3.2",
+    "typescript": "2.3.4",
+    "typescript-collections": "^1.2.3",
+    "zone.js": "0.8.12"
+  },
+  "homepage": "https://bitbucket.org/btsdigital/pulsesignalr#readme",
+  "jsnext:main": "dist/pulsesignalr.js",
+  "license": "ISC",
+  "main": "dist/pulsesignalr.umd.js",
+  "maintainers": [
+    {
+      "name": "neha.seth",
+      "email": "neha.seth@bts.com"
+    }
+  ],
+  "module": "dist/pulsesignalr.js",
+  "name": "@btsdigital/pulsesignalr",
+  "peerDependencies": {
+    "jquery": "^1.6.4"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/btsdigital/pulsesignalr.git"
+  },
+  "scripts": {
+    "build": "gulp build"
+  },
+  "typings": "dist/pulsesignalr.d.ts",
+  "version": "1.2.13"
+}

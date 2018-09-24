@@ -1,0 +1,135 @@
+.intro-page-wrapper
+    height calc(100vh - 0px)
+    width 100vw
+    background-color #003A70
+    .intro-page-container
+        width 350px
+        position absolute
+        left 50%
+        top 50%
+        -webkit-transform translate(-50%,-50%)
+        transform translate(-50%,-50%)
+        .logo-container
+            margin-bottom 10px
+            text-align center
+            padding 10px
+            .logo
+                height 50px
+        .data-container
+            background #FFF
+            .text-intro-info
+                padding 15px
+                .program-title-container
+                    text-align center
+                    text-transform uppercase
+                    font-weight 600
+                    color #003A70
+                    calc-outlet,text-outlet
+                        font-size 1.5rem
+                        line-height 1.5rem
+            .program-roundinfo-container
+                padding 15px
+                .teamno-container,.round-container,.teamname-container
+                    align-items center
+	                .data-label,.data-value
+	                    padding 5px 0
+	                    display inline-block
+            .button
+                text-align center
+                padding 10px
+                background-color #ED8B00
+                color #FFF
+                cursor pointer
+                text-transform uppercase
+                &:hover
+                    background-color #E87722
+    .footer-container
+        // background-color #002E59
+        position absolute
+        bottom 25px
+        left 25px
+        overflow hidden
+        display flex
+        .pepsico-logo-container
+            display inline-block
+        .bts-info
+            display inline-flex
+            padding-left 10px
+            flex-direction column
+            justify-content space-between
+            .footer-text
+                display inline-block
+                padding 5px
+                color #A1A1A1
+                max-width 110px
+                font-size 12px
+            .bts-logo-container
+                // display inline-block
+                padding 5px
+                
+.import-success-modal
+    &.modal-dialog
+        margin auto
+        position absolute
+        left 50%
+        top 50%
+        -webkit-transform translate(-50%, -50%)
+        -moz-transform translate(-50%, -50%)
+        -ms-transform translate(-50%, -50%)
+        transform translate(-50%, -50%)
+        text-align center
+        width 555px
+        .modal-content
+            background #f2f2f2
+            height 250px
+            .modal-header
+                background none
+                justify-content center
+                .modal-title
+                    color #003A70
+                    text-transform uppercase
+            .modal-body
+                .confirmBody
+                    margin 0 20px
+                    color #A8ADB4
+            .password-container
+                margin-top 10px
+                .password-text
+                    padding-bottom 5px
+                input
+                    width 100%
+                    border 1px solid #000
+                    &:active,&:focus
+                        border 1px solid #000
+                        outline-color #D80365
+            .error-message
+                font-size 12px
+                color #F00
+            .button-container
+                display flex
+                width 100%
+                position absolute
+                bottom 0
+                padding 0
+                margin 0
+                text-align center
+                padding 10px
+                .btn 
+                    flex 1
+                    height 60px
+                    border none
+                    cursor pointer
+                    border-radius 0
+                    box-shadow none
+                    outline none
+                    border none
+                    transition none
+                .btn-danger                    
+                    background #003A70                    
+                    &:hover
+                        background #004C97
+                .btn-primary
+                    background #A8ADB4
+                    &:hover
+                        background #6D747E
+

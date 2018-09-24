@@ -1,0 +1,58 @@
+{
+  "_from": "git+ssh://git@bitbucket.org/btsdigital/highcharts-formatter-plugin.git#v0.0.4",
+  "_id": "@btsdigital/highcharts-formatter-plugin@0.0.4",
+  "_inBundle": false,
+  "_location": "/@btsdigital/highcharts-formatter-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "@btsdigital/highcharts-formatter-plugin@git+ssh://git@bitbucket.org/btsdigital/highcharts-formatter-plugin.git#v0.0.4",
+    "name": "@btsdigital/highcharts-formatter-plugin",
+    "escapedName": "@btsdigital%2fhighcharts-formatter-plugin",
+    "scope": "@btsdigital",
+    "rawSpec": "git+ssh://git@bitbucket.org/btsdigital/highcharts-formatter-plugin.git#v0.0.4",
+    "saveSpec": "git+ssh://git@bitbucket.org/btsdigital/highcharts-formatter-plugin.git#v0.0.4",
+    "fetchSpec": "ssh://git@bitbucket.org/btsdigital/highcharts-formatter-plugin.git",
+    "gitCommittish": "v0.0.4"
+  },
+  "_requiredBy": [
+    "/@btsdigital/ngx-isomer-core"
+  ],
+  "_resolved": "git+ssh://git@bitbucket.org/btsdigital/highcharts-formatter-plugin.git#b1ebfe4c70859025e33f431f19ceb2774cf33d04",
+  "_spec": "@btsdigital/highcharts-formatter-plugin@git+ssh://git@bitbucket.org/btsdigital/highcharts-formatter-plugin.git#v0.0.4",
+  "_where": "C:\\SVN\\Pepsico_BA1\\git\\node_modules\\@btsdigital\\ngx-isomer-core",
+  "author": {
+    "name": "devendra.shangari@bts.com"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Highcharts formatter plugin to use numberformatting.js / numeraljs to format instead of default highcharts formatter",
+  "devDependencies": {
+    "moment": "^2.18.1",
+    "numeral": "^2.0.6",
+    "rollup": "^0.50.0",
+    "rollup-plugin-amd": "^1.3.0",
+    "rollup-plugin-uglify": "^2.0.1"
+  },
+  "homepage": "https://bitbucket.org/btsdigital/highcharts-formatter-plugin#readme",
+  "keywords": [
+    "highcharts",
+    "numeraljs",
+    "numberformatting"
+  ],
+  "license": "UNLICENSED",
+  "main": "dist/highcharts-formatter-plugin.min.js",
+  "name": "@btsdigital/highcharts-formatter-plugin",
+  "peerDependencies": {
+    "moment": "^2.18.1",
+    "numeral": "^2.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git@bitbucket.org/btsdigital/highcharts-formatter-plugin.git"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "version": "0.0.4"
+}

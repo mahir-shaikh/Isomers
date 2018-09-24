@@ -1,0 +1,9 @@
+/* @import './assets/css/styles.styl';  */
+
+.show>.dropdown-menu {
+    display: block;
+}
+
+.noUi-horizontal .noUi-handle{
+    top: -14px !important;
+}

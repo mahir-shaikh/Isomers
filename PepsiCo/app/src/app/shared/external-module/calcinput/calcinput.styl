@@ -1,0 +1,49 @@
+@import '../../../../assets/css/colors.styl'
+
+.planningTool
+    input
+        width 100%
+        max-width 96px
+input
+    width 100% 
+    max-width 111px
+    border-radius 0
+    text-align left
+    font-size 0.875rem
+    text-align center
+    overflow hidden
+    color #63666a
+    height 25px
+    line-height 25px
+    cursor text
+    border 1px solid #63666a
+    background-color #f1f1f1
+    &.read-only
+        pointer-events none
+    &:active,&:focus, &:hover
+        outline none
+        background-color #FFF
+        color #003a70
+        box-shadow inset 1px 1px 5px rgba(0, 58, 112,0.5)
+        border 1px solid #003a70
+:host(.disabled)
+    input
+        background-color #6D6E70
+        color #fff
+        pointer-events none
+        
+:host-context(.intro-page-container)
+    input
+        height 30px
+        line-height 30px
+        border 1px solid #E5E5E5
+        max-width none
+        background-color #E5E5E5
+        color #000
+        &:active,&:focus, &:hover
+            background-color #FFF
+            box-shadow none
+        &.read-only
+            background-color #00A9E0
+            color #fff
+            box-shadow none

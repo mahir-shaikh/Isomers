@@ -1,0 +1,489 @@
+<div class="gss-wrapper">
+    <div class="header-wrapper animated">
+        <span class="header-text">
+            <isma-calc-outlet ref="tlOutput_toolGSS_F3"></isma-calc-outlet>
+        </span>
+    </div>
+    <div class="metric-wrapper row animated">
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardGssMetricLabel1"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard19" format="$0,0am"></isma-calc-outlet>
+            </span>
+        </div>
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardGssMetricLabel2"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard20" format="0.0"></isma-calc-outlet>
+            </span>
+        </div>
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardGssMetricLabel3"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard21" format="$0,0am"></isma-calc-outlet>
+            </span>
+        </div>
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardGssMetricLabel4"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard22" format="$0,0am"></isma-calc-outlet>
+            </span>
+        </div>
+    </div>
+    <div class="tabset-wrapper animated fadeInUp">
+        <tabset>
+            <tab heading='{{tab1}}' [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                <div class="data-wrapper row" *ngIf="activeIndex === 1">
+                    <div class="header-container col-sm-12">
+                        <span class="header-text">
+                            <isma-calc-outlet ref="tlOutput_toolGSS_C10"></isma-calc-outlet>
+                        </span>
+                    </div>
+                    <div class="data-container col-sm-12">
+                        <div class="data-row header-row row">
+                            <div class="data-label col-sm-4"></div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_H12"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_J12"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_L12"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-4 tooltip-container">
+                                <isma-tooltip class="decision-tooltip" key="TooltipGssDecision1" tooltipPlacement="right"></isma-tooltip>
+                                <isma-calc-outlet ref="tlOutput_toolOps_D14"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-dropdown ref="tlInputProd1Ftr4LevelDec" [items]="productRangeArray"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-dropdown ref="tlInputProd3Ftr4LevelDec" [items]="productRangeArray"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-dropdown ref="tlInputProd4Ftr4LevelDec" [items]="productRangeArray"></isma-calc-dropdown>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-container col-sm-12">
+                        <span class="header-text">
+                            <isma-calc-outlet ref="tlOutput_toolGSS_C18"></isma-calc-outlet>
+                        </span>
+                    </div>
+                    <div class="data-container col-sm-12">
+                        <div class="data-row header-row row">
+                            <div class="data-label col-sm-4"></div>
+                            <div class="data-label col-sm">
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_J20"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_L20"></isma-calc-outlet>
+                            </div>                
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_N20"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-4 tooltip-container">
+                                <isma-tooltip class="decision-tooltip" key="TooltipGssDecision2" tooltipPlacement="right"></isma-tooltip>
+                                <isma-calc-outlet ref="tlOutput_toolGSS_D22"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-dropdown ref="tlInputRecruitLevel" [items]="hrLevelArray"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_J22" format="$0,0"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_L22" format="$0,0"></isma-calc-outlet>
+                            </div>                
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_N22" format="0,0"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-4 tooltip-container">
+                                <isma-tooltip class="decision-tooltip" key="TooltipGssDecision3" tooltipPlacement="right"></isma-tooltip>
+                                <isma-calc-outlet ref="tlOutput_toolGSS_D24"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-dropdown ref="tlInputEmpDevLevel" [items]="hrLevelArray"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_J24" format="$0,0"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_L24" format="$0,0"></isma-calc-outlet>
+                            </div>                
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_N24" format="0,0"></isma-calc-outlet>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-container col-sm-12">
+                        <span class="header-text">
+                            <isma-calc-outlet ref="tlOutput_toolGSS_C26"></isma-calc-outlet>
+                        </span>
+                    </div>
+                    <div class="data-container col-sm-12">
+                        <div class="data-row header-row row">
+                            <div class="data-label col-sm-4"></div>
+                            <div class="data-label col-sm">
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_J28"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_L28"></isma-calc-outlet>
+                            </div>                
+                            <div class="data-label col-sm">
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm-4 tooltip-container">
+                                <isma-tooltip class="decision-tooltip" key="TooltipGssDecision4" tooltipPlacement="right"></isma-tooltip>
+                                <isma-calc-outlet ref="tlOutput_toolGSS_D30"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-dropdown ref="tlInputITcapAdd" [items]="techImpArray"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_J30" format="$0,0"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_L30" format="0,0"></isma-calc-outlet>
+                            </div>                
+                            <div class="data-value col-sm">
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="data-label col-sm-4">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_D31"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_H31" format="0,0"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                            </div>
+                            <div class="data-value col-sm">
+                            </div>                
+                            <div class="data-value col-sm">
+                            </div>
+                        </div>
+                        <div class="data-row row">
+                            <div class="data-label col-sm-4">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_D32"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_H32" format="0,0"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                            </div>
+                            <div class="data-value col-sm">
+                            </div>                
+                            <div class="data-value col-sm">
+                            </div>
+                        </div>            
+                    </div>
+
+                    <div class="header-container col-sm-12">
+                        <span class="header-text">
+                            <isma-calc-outlet ref="tlOutput_toolGSS_C37"></isma-calc-outlet>
+                        </span>
+                    </div>
+                    <div class="data-container col-sm-12">
+                        <div class="data-row header-row row">
+                            <div class="data-label col-sm-4 tooltip-container">
+                                <isma-tooltip class="decision-tooltip" key="TooltipGssDecision5" tooltipPlacement="right"></isma-tooltip>
+                                <isma-calc-outlet ref="tlOutput_toolGSS_D39"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label highlight-text col-sm tooltip-container">
+                                <!-- <isma-tooltip class="decision-tooltip" key="TooltipGssDecision6" tooltipPlacement="right"></isma-tooltip>
+                                <isma-text-output key="WhatIfStatement"></isma-text-output>
+                                <span class="toggle-container">
+                                    <ui-switch color="#00A9E0" [(ngModel)]="whatIfMode" (change)="onModeChange($event)"></ui-switch>
+                                </span> -->
+                            </div>
+                        </div>
+                        <!-- <div class="data-row header-row row">
+                            <div class="data-label col-sm-4">
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_H41"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_J41"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolGSS_L41"></isma-calc-outlet>
+                            </div>
+                        </div> -->
+                        <div class="data-row primary-row row">
+                            <div class="data-value col-sm-4">
+                                <isma-calc-stepper ref="tlInputLTDebtChange" outputMin="-1000" outputMax="1000" step="1" format="$0,0"></isma-calc-stepper>
+                            </div>
+                            <div class="data-value col-sm" [class.highlight-stepper]="whatIfMode">
+                                <!-- <isma-calc-stepper ref="tlInputProd1WhatIfUnits" outputMin="0" outputMax="100" step="1" format="0%" scaler="100"></isma-calc-stepper> -->
+                            </div>
+                            <div class="data-value col-sm" [class.highlight-stepper]="whatIfMode">
+                                <!-- <isma-calc-stepper ref="tlInputProd3WhatIfUnits" outputMin="0" outputMax="100" step="1" format="0%" scaler="100"></isma-calc-stepper> -->
+                            </div>
+                            <div class="data-value col-sm" [class.highlight-stepper]="whatIfMode">
+                                <!-- <isma-calc-stepper ref="tlInputProd4WhatIfUnits" outputMin="0" outputMax="100" step="1" format="0%" scaler="100"></isma-calc-stepper> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>                      
+            </tab>
+            <tab heading='{{tab2}}' [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                <div class="tab-wrapper" *ngIf="activeIndex === 2">
+                    <div class="report-wrapper row" >
+                        <div class="report-container tree-container col-sm-12 col-lg-6">
+                            <div class="data-row sub-header-row row">
+                                <div class="data-label col-sm-12">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_B49"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-value boxed arrow-right col-sm">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_D51" format="0.0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value arrow positive col-sm">
+                                </div>
+                                <div class="data-value col-sm">
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label vertical col-sm">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_D52"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                </div>
+                                <div class="data-value col-sm">
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-value boxed arrow-right col-sm">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_D54" format="0.0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value arrow zero col-sm">
+                                    <!-- <span class="icon fa fa-chevron-right"></span> -->
+                                </div>
+                                <div class="data-value boxed col-sm">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_F54" format="0.0"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label vertical col-sm">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_D55"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                </div>
+                                <div class="data-label col-sm">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_F55"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-value boxed arrow-right col-sm">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_D57" format="0.0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value arrow negative col-sm">
+                                </div>
+                                <div class="data-value col-sm">
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-label col-sm">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_D58"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm">
+                                </div>
+                                <div class="data-value col-sm">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart-container report-container col-sm-12 col-lg-6">
+                            <div class="data-row sub-header-row chart-title row">
+                                <div class="data-label col-sm-12">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_H49"></isma-calc-outlet>
+                                </div>
+                                <div class="chart-data">
+                                    <ism-chart
+                                        [rangeRef]="['tlOutput_toolGraphData_L14', 'tlOutput_toolGraphData_L15', 'tlOutput_toolGraphData_L16', 'tlOutput_toolGraphData_L17', 'tlOutput_toolGraphData_L18', 'tlOutput_toolGraphData_L19', 'tlOutput_toolGraphData_L20']"
+
+                                        [seriesOptions]="[{ 'name': 'tlOutput_toolGraphData_K13', 'type': 'pie', 'data': [{name: 'tlOutput_toolGraphData_K14'}, {name:'tlOutput_toolGraphData_K15' }, {name:'tlOutput_toolGraphData_K16' }, {name:'tlOutput_toolGraphData_K17' }, {name: 'tlOutput_toolGraphData_K18'}, {name:'tlOutput_toolGraphData_K19' }, {name:'tlOutput_toolGraphData_K20' } ]}]"
+
+                                        [chartOptions]="">
+                                    </ism-chart>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-wrapper row">
+                        <div class="report-container col-sm-12">
+                            <div class="data-row sub-header-row row">
+                                <div class="data-label col-sm-12">
+                                	<isma-calc-outlet ref="tlOutput_toolGSS_B60"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_C62"></isma-calc-outlet>
+                                </div>
+                                <div class="data-label light col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_F62"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_N62" format="0.0"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_C63"></isma-calc-outlet>
+                                </div>
+                                <div class="data-label light col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_F63"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_N63" format="0.0%"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_C64"></isma-calc-outlet>
+                                </div>
+                                <div class="data-label light col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_F64"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_N64" format="0.0%"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_C65"></isma-calc-outlet>
+                                </div>
+                                <div class="data-label light col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_F65"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_N65" format="0.00"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_C66"></isma-calc-outlet>
+                                </div>
+                                <div class="data-label light col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_F66"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_N66" format="0.0%"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                </div>
+                                <div class="data-label light col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_F67"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                </div>
+                            </div>
+
+
+                            <div class="data-row sub-header-row row">
+                                <div class="data-label col-sm-12">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_B69"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_E71"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_K71" format="0,0" highlightNegative=true></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_E72"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_K72" format="0,0" highlightNegative=true></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_E73"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_K73" format="0,0" highlightNegative=true></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_E74"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_K74" format="0,0" highlightNegative=true></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_E75"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_K75" format="0,0" highlightNegative=true></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_E76"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_K76" format="0,0" highlightNegative=true></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_E77"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolGSS_K77" format="0,0" highlightNegative=true></isma-calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </tab>
+        </tabset>        
+    </div>
+
+    <!-- <div class="accordian-container row">
+        <button class="expand-collapse-btn col-sm-12" (click)="isCollapsed=!isCollapsed">
+            <div class="accordian-title">
+                <div class="accordian-title-text"><isma-calc-outlet ref="tlOutput_toolGSS_B47"></isma-calc-outlet></div>
+                <div class="fa accordian-btn" [class.fa-plus]="isCollapsed" [class.fa-minus]="!isCollapsed"></div>
+            </div>
+        </button>
+        <div [class.hidden]="isCollapsed" class="accordian-data col-sm-12">
+        </div>
+    </div> -->
+</div>

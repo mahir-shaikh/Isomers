@@ -1,0 +1,44 @@
+Preprocess/Server Side:
+	Parser:
+		Parse formulas into json
+		Also output workbook structure json (much easier)
+		Initial version: use existing xml exporter for simulation, create javascript parser to convert into json: ~1 week
+		
+		Second version: server based parser, take .xls file as input, generate json.  (C#/spreadsheetgear?): At least one week, revisit estimate once project is done
+		
+		*One piece of potential additional preprocess functionality is calculating node depth for each cell within the calculation hierarchy.  This is an optimization step that I'm deferring until a clear need is shown.  (The as3 solution does this currently, but I believe it may not be necessary)
+	
+Runtime side:
+	Workbook Structure:
+	Three primary structures:
+			Workbook
+			Sheet
+			Cell
+		Relatively straightforward data structure for organizing cell calculation functions.  Primary functionality is providing appropriate lookup functionality for cell references within functions.
+		Secondary functionality is managing the calculation queue -
+		Overall time - 2-3 days
+		
+	Calculations
+	ExpressionBuilder - builds calculation function from JSON expression tokens. 1.5 weeks (~.5 already done)
+	
+	Functions - Implementations of Excel worksheet functions.  This portion is open-ended, as there are a large number of worksheet functions in Excel of varying degrees of obscurity.  Initial implementation will be all of the functions currently supported in the as3 version of the calculator.  The more complex functions (ie, NORMDIST) will be ported over from as3 while the more straightforward ones will just be implemented fresh.  ~1 week to implement the full set of existing functions
+	
+	VBA Macro equivalents:
+		Need: 1) Hooks in the runtime for manipulating data in the manner that the VBA macros require (primarily need copy paste value function) ~ 1 day
+			  2) Functions external to the runtime to emulate needed VBA - ~1 day, will probably need tweaking on a project to project basis (VBA functions aren't 100% standardized)
+			  
+		
+Development Tools:
+	Benchmarking - Need to have tools to create and benchmark a reasonably complex model (complexity/size driven by parameter) for a variety of browser/hardware combinations. - 1-2 days
+	
+	
+	
+Summary:
+	Parser: ~1 week for project target
+	ExpressionBuilder: 1 week remaining (of 1.5)
+	Workbook Structure: 0.6 weeks
+	Worksheet Function Support: 1 week
+	VBA Functionality Equivalents: 2 days
+	Benchmark Tools: 2 days
+	
+	This totals just over 4 weeks - which puts things somewhat tight for the target testing dates.  (Without BMS, we'd have been pretty safe)

@@ -1,0 +1,268 @@
+<div class="goal-setting-wrapper">
+    <div class="data-wrapper row">
+        <div class="data-container col-sm-12">
+            <div class="header-row row">
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-2 data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_D5"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G5"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 row slider-label">
+                        <div class="tick tick__1"><isma-text-output key="Conservative"></isma-text-output></div>
+                        <div class="tick tick__2"><isma-text-output key="Medium"></isma-text-output></div>
+                        <div class="tick tick__3"><isma-text-output key="High"></isma-text-output></div>
+                    </div>
+                </div>
+            </div>
+            <div class="data-row row">
+                <div class="group-title col-sm-12 row">
+                    <span class="group-title-text col-sm-3"><isma-calc-outlet ref="tlOutput_toolGoals_B8"></isma-calc-outlet></span>
+                    <span class="group-title-input col-sm-2">
+                        <isma-calc-input ref="tlInputCEO" type="text" useRawValue="true" [IsReadOnly]="isReadOnly"></isma-calc-input>
+                    </span>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F8"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G8" format="0%"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H8" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I8" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J8" format="0%"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals1" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O8" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F10"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G10"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H10"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I10"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J10"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals3" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O10" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-row row">
+                <div class="group-title col-sm-12 row">
+                    <span class="group-title-text col-sm-3"><isma-calc-outlet ref="tlOutput_toolGoals_B14"></isma-calc-outlet></span>
+                    <span class="group-title-input col-sm-2">
+                        <isma-calc-input ref="tlInputGMvet" type="text" useRawValue="true" [IsReadOnly]="isReadOnly"></isma-calc-input>
+                    </span>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F14"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G14" format="0%"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H14" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I14" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J14" format="0%"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals4" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O14" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F16"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G16" format="0%"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H16" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I16" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J16" format="0%"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals5" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O16" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-row row">
+                <div class="group-title col-sm-12 row">
+                    <span class="group-title-text col-sm-3"><isma-calc-outlet ref="tlOutput_toolGoals_B20"></isma-calc-outlet></span>
+                    <span class="group-title-input col-sm-2">
+                        <isma-calc-input ref="tlInputGMesc" type="text" useRawValue="true" [IsReadOnly]="isReadOnly"></isma-calc-input>
+                    </span>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F20"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G20" format="0%"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H20" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I20" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J20" format="0%"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals6" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O20" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F22"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G22" format="0%"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H22" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I22" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J22" format="0%"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals7" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O22" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-row row">
+                <div class="group-title col-sm-12 row">
+                    <span class="group-title-text col-sm-3"><isma-calc-outlet ref="tlOutput_toolGoals_B26"></isma-calc-outlet><isma-calc-outlet ref="tlOutput_toolGoals_B27"></isma-calc-outlet></span>
+                    <span class="group-title-input col-sm-2">
+                        <isma-calc-input ref="tlInputSVPops" type="text" useRawValue="true" [IsReadOnly]="isReadOnly"></isma-calc-input>
+                    </span>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F26"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G26" format="0%"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H26" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I26" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J26" format="0%"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals8" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O26" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F28"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G28" format="0%"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H28" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I28" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J28" format="0%"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals9" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O28" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-row row">
+                <div class="group-title col-sm-12 row">
+                    <span class="group-title-text col-sm-3"><isma-calc-outlet ref="tlOutput_toolGoals_B32"></isma-calc-outlet><isma-calc-outlet ref="tlOutput_toolGoals_B33"></isma-calc-outlet></span>
+                    <span class="group-title-input col-sm-2">
+                        <isma-calc-input ref="tlInputSVPrnd" type="text" useRawValue="true" [IsReadOnly]="isReadOnly"></isma-calc-input>
+                    </span>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F32"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G32" format="0%"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H32" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I32" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J32" format="0%"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals10" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O32" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F34"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G34" format="0%"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H34" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I34" format="0%"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J34" format="0%"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals11" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O34" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-row row">
+                <div class="group-title col-sm-12 row">
+                    <span class="group-title-text col-sm-3"><isma-calc-outlet ref="tlOutput_toolGoals_B38"></isma-calc-outlet><isma-calc-outlet ref="tlOutput_toolGoals_B39"></isma-calc-outlet></span>
+                    <span class="group-title-input col-sm-2">
+                        <isma-calc-input ref="tlInputSVPshared" type="text" useRawValue="true" [IsReadOnly]="isReadOnly"></isma-calc-input>
+                    </span>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F38"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G38"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H38"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I38"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J38"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals12" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O38" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+                <div class="col-sm-12 row goal-setting-row">
+                    <div class="col-sm-5 goal-setting-slider-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_F40"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-2 goal-setting-data-label">
+                        <isma-calc-outlet ref="tlOutput_toolGoals_G40"></isma-calc-outlet>
+                    </div>
+                    <div class="col-sm-5 goal-setting-slider">
+                        <div class="goal-setting-slider-values row">
+                            <div class="tick tick__1"><isma-calc-outlet ref="tlOutput_toolGoals_H40"></isma-calc-outlet></div>
+                            <div class="tick tick__2"><isma-calc-outlet ref="tlOutput_toolGoals_I40"></isma-calc-outlet></div>
+                            <div class="tick tick__3"><isma-calc-outlet ref="tlOutput_toolGoals_J40"></isma-calc-outlet></div>
+                        </div>
+                        <isma-calc-slider ref="tlInputGoals11" min="1" max="3" step="1" format="0,0" handleValueRef="tlOutput_toolGoals_O40" [isDisabled]="isReadOnly"></isma-calc-slider>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

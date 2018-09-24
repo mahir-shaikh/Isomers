@@ -1,0 +1,100 @@
+@import "../../../../assets/css/mixins"
+
+.ds-input-field,
+.btn-group
+    height 100%
+    width 100%
+    &.disabled
+        pointer-events none
+        .caret
+            display none
+.dropdown-item.active, .dropdown-item:active
+    background-color #003a70
+    color #FFF
+    box-shadow none
+.btn-primary.active, .btn-primary:active, .show > .btn-primary.dropdown-toggle
+    background-color #003a70
+    color #FFF
+    box-shadow none
+    
+.dropdown
+    &-toggle
+        cursor pointer
+        background-color #F1F1F1
+        border 1px solid #63666A
+        color #000
+        height 100%
+        width 100%
+        padding 15px
+        text-align left
+        border-radius 0
+        height 40px
+        color #63666A
+        &:not(.colored):hover, &:not(.colored):active
+            background-color #FFF
+            color #003a70
+        .dropdown-text
+            width 70%
+            text-overflow ellipsis
+            display inline-block
+            overflow hidden
+            position absolute
+            top 50%
+            font-weight 500
+            font-size 16px
+            tranlateTop()
+        &.btn-primary
+            &:focus,
+            &:active
+                -webkit-box-shadow none
+                box-shadow none
+                border-color #ECECEA
+                background-color #ECECEA
+                color #000
+                .caret
+                    color #000
+        .caret
+            position absolute
+            right 15px
+            display inline-block
+            top 50%
+            font-size 1.5em
+            font-weight 800
+            tranlateTop()
+        &:after
+            border 0
+
+.dropdown-menu    
+    max-height 200px
+    overflow auto
+    min-width 100%
+    z-index 2  
+    .dropdown-item
+        padding 5px 1.5rem
+        white-space normal
+
+.red
+    background-color #DA291C
+.orange
+    background-color #ED8B00
+.green
+    background-color #78BE20
+.cyan
+    background #00A9E0
+
+.colored
+    span, a
+        color white
+    &:hover
+        opacity 0.65 
+    .dropdown-item
+        background unset
+        
+
+:host-context(.center-aligned)
+    .ds-input-field
+        max-width 150px
+        margin auto
+    .dropdown-text
+        width calc(100% - 30px)
+        text-align center

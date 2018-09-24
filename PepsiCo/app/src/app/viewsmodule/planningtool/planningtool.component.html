@@ -1,0 +1,50 @@
+<div class="planningtool-wrapper animated " [class.slideInRight]="isOpening" [class.slideOutRight]="isClosing">
+    <div class="header-wrapper animated">
+        <span class="header-text">
+            <!-- <isma-calc-outlet ref="tlOutput_toolOps_I3"></isma-calc-outlet> -->
+            <isma-text-output key="PlanningTool"></isma-text-output>
+        </span>
+        <span class="submit-btn-container" *ngIf="!planningCompleted" (click)="showSubmitModal()" [class.disabled]="!planningToolValidate">
+            <div class="submit-btn">
+                <isma-text-output key="Submit"></isma-text-output>
+            </div>
+        </span>
+        <span class="close-btn-container" *ngIf="planningCompleted" (click)="onClose()">
+            <div class="close-btn fa fa-times"></div>
+        </span>
+    </div>
+    <div class="planningtool-container">
+        <tabset>
+            <tab heading='{{tab1}}' [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                <swot *ngIf="activeIndex === 1" [isReadOnly]="planningCompleted"></swot>
+            </tab>
+            <tab heading='{{tab2}}' [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                <goal-setting *ngIf="activeIndex === 2" [isReadOnly]="planningCompleted"></goal-setting>
+            </tab>
+            <tab heading='{{tab3}}' [active]="activeIndex === 3" (select)="setActiveIndex(3)">
+                <strategy-setting *ngIf="activeIndex === 3" [isReadOnly]="planningCompleted" (ranksArranged)="validateTool($event)"></strategy-setting>
+            </tab>
+        </tabset>
+    </div>
+</div>
+
+
+<div bsModal #submitModal="bs-modal" class="modal submit-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+  <div class="modal-dialog modal-lg confirmation">
+    <div class="modal-content submit-popup-content">
+      <div class="modal-header main-header submit-popup">
+        <h4 class="modal-title eventTitle main-title"><isma-text-output key="Confirm"></isma-text-output></h4>
+      </div>
+      <div class="modal-body eventBody">
+        <div class="confirmBody">
+          <isma-text-output key="SubmitPlanningAlertText"></isma-text-output>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button type="button" class="btn btn-danger" (click)="onSubmit()"><isma-text-output key="Confirm"></isma-text-output></button>
+        <button type="button" class="btn btn-primary" (click)="hideSubmitModal()"><isma-text-output key="Cancel"></isma-text-output></button>
+      </div>
+    </div>
+  </div>
+</div>

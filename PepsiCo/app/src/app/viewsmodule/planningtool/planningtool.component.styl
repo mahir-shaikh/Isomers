@@ -1,0 +1,105 @@
+:host
+    height 100vh
+    // overflow auto
+    padding 15px
+    background-color #F1F1F1
+    
+.planningtool-wrapper
+    height 100%
+    .header-wrapper
+        height 40px
+        position relative
+        .header-text
+            text-transform uppercase
+            font-weight 600
+            font-size 1.5rem
+            color #000
+        .submit-btn-container
+            position absolute
+            right 15px
+            .submit-btn
+                padding 10px
+                background-color #003A70
+                color #FFF
+                cursor pointer
+                &:hover
+                    background-color #004C97
+        .close-btn-container
+            position absolute
+            right 15px
+            .close-btn
+                font-size 1.5rem
+                color #000
+                cursor pointer
+    .planningtool-container
+        height calc(100% - 40px)
+                    
+
+.submit-modal
+    .modal-dialog
+        margin auto
+        position absolute
+        left 50%
+        top 50%
+        -webkit-transform translate(-50%, -50%)
+        -moz-transform translate(-50%, -50%)
+        -ms-transform translate(-50%, -50%)
+        transform translate(-50%, -50%)
+        text-align center
+        width 555px
+        .modal-content
+            background #f2f2f2
+            height 250px
+            .modal-header
+                background none
+                justify-content center
+                .modal-title
+                    color #003A70
+                    text-transform uppercase
+            .modal-body
+                .confirmBody
+                    margin 0 20px
+                    color #A8ADB4
+            .password-container
+                margin-top 10px
+                .password-text
+                    padding-bottom 5px
+                input
+                    width 100%
+                    border 1px solid #000
+                    &:active,&:focus
+                        border 1px solid #000
+                        outline-color #D80365
+            .error-message
+                font-size 12px
+                color #F00
+            .button-container
+                display flex
+                width 100%
+                position absolute
+                bottom 0
+                padding 0
+                margin 0
+                .btn 
+                    flex 1
+                    height 60px
+                    border none
+                    cursor pointer
+                    border-radius 0
+                    box-shadow none
+                    outline none
+                    border none
+                    transition none
+                .btn-danger                    
+                    background #003A70                    
+                    &:hover
+                        background #004C97
+                .btn-primary
+                    background #A8ADB4
+                    &:hover
+                        background #6D747E
+
+.disabled
+    opacity 0.65
+    pointer-events none
+

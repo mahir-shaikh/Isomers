@@ -1,0 +1,17 @@
+{
+    "name": "Pepsico",
+    "version": "1.0.0",
+    "license": "UNLICENSED",
+    "window": {
+        "title": "Pepsico",
+        "icon": "btsLogo.png",
+        "toolbar": true,
+        "frame": true,
+        "fullscreen": false,
+        "resizable": true,
+        "kiosk": false,
+        "min_width": 1024,
+        "min_height": 768
+    },
+    "main": "index.html"
+}

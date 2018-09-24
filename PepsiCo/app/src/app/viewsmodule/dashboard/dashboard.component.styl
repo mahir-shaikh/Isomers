@@ -1,0 +1,246 @@
+.hidden
+    &.active ~ .dashboard-container
+        display none
+.dashboard-container
+    .next-round-container
+        display none
+    .hide-dashboard
+        display initial
+
+.dashboard-container
+    height 100%
+    overflow hidden
+    background-color #003A70
+    color #fff
+    position relative
+    .header-container
+        height 30px
+        background-color #003566
+        .user-info
+            display inline-block
+            // float right
+            height 100%
+            line-height 30px
+            color #97ACC0
+            font-weight 600
+            .year-info,.team-info
+                padding 0 10px
+            .team-info
+                opacity 0.5
+        .options
+            text-align center
+            position relative
+            display inline-block
+            float right
+            background-color #194975
+            height 100%
+            .hamburger-sign
+                color #fff
+                font-size 1.25rem
+                display inline-block
+                padding 3px 15px 0
+                cursor pointer
+                max-height 30px
+            .menu
+                position absolute
+                background-color #FFF
+                font-size 0.875rem
+                z-index 3
+                right 0
+                text-align left
+                border 1px solid #3e3e3e
+                -webkit-transform scaleY(0)
+                transform scaleY(0)
+                -webkit-transform-origin 0 0
+                transform-origin 100% 0
+                transition all 0.5s cubic-bezier(.5,0,.3,1)
+                &.show-menu
+                    -webkit-transform scaleY(1)
+                    transform scaleY(1)
+                & > .menu-link
+                    display block
+                    padding 5px 10px
+                    cursor pointer
+                    color #6D747E
+                    line-height 20px
+                    &:nth-child(even)
+                        background-color #ECF0F1
+                    &:hover
+                        background-color #7B8C9D
+                        color #FFF
+    .logo-container
+        .logo,.tagline
+            padding 20px 0
+            &-image
+                display block
+                margin auto
+        .tagline
+            background-color #003464
+            text-align center
+            text-transform uppercase
+            color
+            &-text
+                letter-spacing 3px
+                color #97acc0
+                opacity 0.5
+    .navbar-link-container
+        .nav-link
+            position relative
+            cursor pointer
+            outline none
+            &-icon
+                padding-right 10px
+                &-image
+                    height 15px
+            &-text
+                display initial
+            .right-arrow
+                float right
+                padding 5px 0
+            &:hover,&.active
+                background-color #E87722
+            
+    .hr-container
+        margin 20px
+        .line
+            border-top 1px solid rgba(255,255,255,0.2)
+    .navbar-icon-container
+        padding 0 15px
+        .navbar-icon
+            text-align center
+            padding 0
+            &-image
+                border-radius 50%
+                background #33618D
+                padding 15px
+                cursor pointer
+                height 50px
+                width 50px
+                margin auto
+                outline none
+                &:hover,&.active
+                    background-color #E87722
+                .image
+                    height 20px
+                    width 20px
+            &__text
+                font-family 'MyriadPro'
+                text-transform uppercase
+                font-size 12px
+                padding 10px 0
+                font-weight 600
+    .footer-container
+        position absolute
+        bottom 0
+        width 100%
+        .footer-text
+            padding 10px
+            color #A1A1A1
+            font-size 14px
+
+.error-modal,.export-modal,.reset-modal
+    &.modal
+        .modal-dialog
+            margin auto
+            position absolute
+            left 50%
+            top 50%
+            -webkit-transform translate(-50%, -50%)
+            -moz-transform translate(-50%, -50%)
+            -ms-transform translate(-50%, -50%)
+            transform translate(-50%, -50%)
+        &.show .modal-dialog
+            position absolute
+            left 50%
+            top 50%
+            -webkit-transform translate(-50%, -50%)
+            -moz-transform translate(-50%, -50%)
+            -ms-transform translate(-50%, -50%)
+            transform translate(-50%, -50%)
+    .modal-content
+        border 0
+        margin-left 15px
+        margin-right 15px
+    .modal-header
+        padding 7px 15px
+        background-color #504848
+        color #FFF
+        font-size 1.25rem
+        font-weight 500
+        calc-outlet
+            color #FFF
+            font-size 1.25rem
+            font-weight 500
+    .button-container
+        padding 0 15px 10px
+        justify-content center
+        .btn
+            cursor pointer
+            margin-left 15px
+            calc-outlet
+                color #fff
+
+.submit-modal,.password-modal,.logout-modal
+    .modal-dialog
+        margin auto
+        position absolute
+        left 50%
+        top 50%
+        -webkit-transform translate(-50%, -50%)
+        -moz-transform translate(-50%, -50%)
+        -ms-transform translate(-50%, -50%)
+        transform translate(-50%, -50%)
+        text-align center
+        width 555px
+        .modal-content
+            background #f2f2f2
+            height 250px
+            .modal-header
+                background none
+                justify-content center
+                .modal-title
+                    color #003A70
+                    text-transform uppercase
+            .modal-body
+                .confirmBody
+                    margin 0 20px
+                    color #A8ADB4
+            .password-container
+                margin-top 10px
+                .password-text
+                    padding-bottom 5px
+                input
+                    width 100%
+                    border 1px solid #000
+                    &:active,&:focus
+                        border 1px solid #000
+                        outline-color #00A9E0
+            .error-message
+                font-size 12px
+                color #F00
+            .button-container
+                display flex
+                width 100%
+                position absolute
+                bottom 0
+                padding 0
+                margin 0
+                .btn 
+                    flex 1
+                    height 60px
+                    border none
+                    cursor pointer
+                    border-radius 0
+                    box-shadow none
+                    outline none
+                    border none
+                    transition none
+                .btn-danger                    
+                    background #003A70                    
+                    &:hover
+                        background #004C97
+                .btn-primary
+                    background #A8ADB4
+                    &:hover
+                        background #6D747E
+

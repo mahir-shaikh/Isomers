@@ -1,0 +1,16 @@
+<div class="row accordian-container" [class.upside-down]="isReversed">
+    <div class="col-sm-12 accordian-title" (click)="toggleState()">
+        <div class="title-text">
+            <!-- <isma-calc-outlet [ref]="headingLabelRef"></isma-calc-outlet> -->
+            {{headingLabel}}
+        </div>
+        <div class="title-value">
+            <!-- <isma-calc-outlet [ref]="headingValueRef"></isma-calc-outlet> -->
+            {{headingValue}}
+        </div>
+        <span class="toggle-button fa " [class.fa-chevron-down]="!isOpen" [class.fa-chevron-up]="isOpen"></span>
+    </div>
+    <div class="col-sm-12 accordian-data" [class.hidden]="!isOpen">
+        <div #dataContainer></div>
+    </div>
+</div>

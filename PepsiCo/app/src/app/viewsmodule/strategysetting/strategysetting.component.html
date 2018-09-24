@@ -1,0 +1,375 @@
+<div class="strategy-wrapper">
+    <div class="data-wrapper row">
+        <div class="header-container col-sm-12">
+            <span class="header-text">
+                <!-- <isma-calc-outlet ref="tlOutput_toolStrategy_B5"></isma-calc-outlet> -->
+                <isma-text-output key="StrategyQuestionA" asInnerHtml="true"></isma-text-output>
+            </span>
+            <div class="header-info">
+                <!-- <isma-calc-outlet ref="tlOutput_toolStrategy_B7"></isma-calc-outlet> -->
+                <isma-text-output key="StrategyDescA"></isma-text-output>
+            </div>
+        </div>
+        <div class="data-container col-sm-12">
+            <div class="data-row header-row row">
+                <div class="data-label col-sm-4">                           
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_C9"></isma-calc-outlet>
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_D9"></isma-calc-outlet>
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_E9"></isma-calc-outlet>
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_F9"></isma-calc-outlet>
+                </div>                    
+            </div>
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm-4">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_B10"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratVetCSD" [colorList]="colorListWhere" [items]="whereDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratVetNCB" [colorList]="colorListWhere" [items]="whereDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratVetFnS" [colorList]="colorListWhere" [items]="whereDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_F10" format="0,0"></isma-calc-outlet>
+                </div>
+            </div>
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm-4">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_B11"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratEdaCSD" [colorList]="colorListWhere" [items]="whereDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratEdaNCB" [colorList]="colorListWhere" [items]="whereDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratEdaFnS" [colorList]="colorListWhere" [items]="whereDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_F11" format="0,0"></isma-calc-outlet>
+                </div>
+            </div>
+            <div class="data-row primary-row total-row row">
+                <div class="data-label col-sm-4">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_B12"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_C12" format="0,0"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_D12" format="0,0"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_E12" format="0,0"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="data-wrapper row">
+        <div class="header-container col-sm-12">
+            <span class="header-text">
+                <!-- <isma-calc-outlet ref="tlOutput_toolStrategy_B13"></isma-calc-outlet> -->
+                <isma-text-output key="StrategyQuestionB" asInnerHtml="true"></isma-text-output>
+            </span>
+            <div class="header-info">
+                <!-- <isma-calc-outlet ref="tlOutput_toolStrategy_B15"></isma-calc-outlet> -->
+                <isma-text-output key="StrategyDescB"></isma-text-output>
+            </div>
+        </div>
+        <div class="data-container col-sm-12">
+            <div class="data-row header-row row">
+                <div class="data-label col-sm"></div>
+                <div class="data-label col-sm error-text">
+                    <isma-text-output key="Sorry" *ngIf="!veteraOrder"></isma-text-output>                    
+                </div>
+                <div class="data-label col-sm error-text">
+                    <isma-text-output key="Sorry" *ngIf="!escendiaOrder"></isma-text-output>
+                </div>
+                <div class="data-label col-sm">
+                </div>
+                <div class="data-label col-sm">
+                </div>                    
+            </div>
+            <div class="data-row header-row row">
+                <div class="data-label col-sm">                           
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_H12"></isma-calc-outlet>
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_I12"></isma-calc-outlet>
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_J12"></isma-calc-outlet>
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_K12"></isma-calc-outlet>
+                </div>                    
+            </div>
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_G13"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratVetCons" [colorList]="colorListWhat" [items]="whatDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratEdaCons" [colorList]="colorListWhat" [items]="whatDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_J13" format="0,0"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm colored" [ngClass] = "rankColor[0]">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_K13" format="0,0"></isma-calc-outlet>
+                </div>
+            </div>
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_G14"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratVetInnov" [colorList]="colorListWhat" [items]="whatDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratEdaInnov" [colorList]="colorListWhat" [items]="whatDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_J14" format="0,0"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm colored" [ngClass] = "rankColor[1]">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_K14" format="0,0"></isma-calc-outlet>
+                </div>
+            </div>
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_G15"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratVetCust"[colorList]="colorListWhat" [items]="whatDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratEdaCust"[colorList]="colorListWhat" [items]="whatDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_J15" format="0,0"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm colored" [ngClass] = "rankColor[2]">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_K15" format="0,0"></isma-calc-outlet>
+                </div>
+            </div>
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_G16"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratVetComp"[colorList]="colorListWhat" [items]="whatDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputStratEdaComp"[colorList]="colorListWhat" [items]="whatDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_J16" format="0,0"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm colored" [ngClass] = "rankColor[3]">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_K16" format="0,0"></isma-calc-outlet>
+                </div>
+            </div>
+            <div class="data-row primary-row total-row row">
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_G17"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_H17" format="0,0"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_I17" format="0,0"></isma-calc-outlet>
+                </div>
+                <div class="data-value col-sm">
+                </div>
+                <div class="data-value col-sm">
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="data-wrapper row">
+        <div class="header-container col-sm-12">
+            <span class="header-text">
+                <!-- <isma-calc-outlet ref="tlOutput_toolStrategy_B19"></isma-calc-outlet> -->
+                <isma-text-output key="StrategyQuestionC" asInnerHtml="true"></isma-text-output>
+            </span>
+            <div class="header-info">
+                <!-- <isma-calc-outlet ref="tlOutput_toolStrategy_B21"></isma-calc-outlet> -->
+                <isma-text-output key="StrategyDescC"></isma-text-output>
+            </div>
+        </div>
+        <div class="data-container col-sm-12">
+            <div class="data-row header-row row">
+                <div class="data-label col-sm">                           
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_C23"></isma-calc-outlet>
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_D23"></isma-calc-outlet>
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_F23"></isma-calc-outlet>
+                </div>
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_H23"></isma-calc-outlet>
+                </div> 
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_J23"></isma-calc-outlet>
+                </div>                    
+            </div>
+            <div class="data-row sub-header-row row">
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_B24"></isma-calc-outlet>           
+                </div>
+                <div class="data-label col-sm">
+                </div>
+                <div class="data-label col-sm">
+                </div>
+                <div class="data-label col-sm">
+                </div>
+                <div class="data-label col-sm">
+                </div> 
+                <div class="data-label col-sm">
+                </div>                    
+            </div>
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm">
+                </div> 
+                <div class="data-value col-sm">
+                    <div>
+                        <isma-calc-outlet ref="tlOutput_toolStrategy_C24"></isma-calc-outlet>
+                    </div>
+                    <div>
+                        <isma-calc-outlet ref="tlOutput_toolStrategy_C25"></isma-calc-outlet>
+                    </div>
+                </div>
+                <div class="data-value col-sm">
+                    <div>
+                        <isma-calc-outlet ref="tlOutput_toolStrategy_D24"></isma-calc-outlet>
+                    </div>
+                    <div>
+                        <isma-calc-outlet ref="tlOutput_toolStrategy_D25"></isma-calc-outlet>
+                    </div>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputVetDiffr1" [items]="howDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputVetDiffr2" [items]="howDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputVetDiffr3" [items]="howDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+            </div>
+            <div class="data-row sub-header-row row">
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_B26"></isma-calc-outlet>           
+                </div>
+                <div class="data-label col-sm">
+                </div>
+                <div class="data-label col-sm">
+                </div>
+                <div class="data-label col-sm">
+                </div>
+                <div class="data-label col-sm">
+                </div> 
+                <div class="data-label col-sm">
+                </div>                    
+            </div>
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm">
+                </div> 
+                <div class="data-value col-sm">
+                    <div>
+                        <isma-calc-outlet ref="tlOutput_toolStrategy_C26"></isma-calc-outlet>
+                    </div>
+                    <div>
+                        <isma-calc-outlet ref="tlOutput_toolStrategy_C27"></isma-calc-outlet>
+                    </div>
+                </div>
+                <div class="data-value col-sm">
+                    <div>
+                        <isma-calc-outlet ref="tlOutput_toolStrategy_D26"></isma-calc-outlet>
+                    </div>
+                    <div>
+                        <isma-calc-outlet ref="tlOutput_toolStrategy_D27"></isma-calc-outlet>
+                    </div>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputEdaDiffr1" [items]="howDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputEdaDiffr2" [items]="howDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputEdaDiffr3" [items]="howDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+            </div>
+            <div class="data-row sub-header-row row">
+                <div class="data-label col-sm">
+                    <isma-calc-outlet ref="tlOutput_toolStrategy_B28"></isma-calc-outlet>           
+                </div>
+                <div class="data-label col-sm">
+                </div>
+                <div class="data-label col-sm">
+                </div>
+                <div class="data-label col-sm">
+                </div>
+                <div class="data-label col-sm">
+                </div> 
+                <div class="data-label col-sm">
+                </div>                    
+            </div>
+            <div class="data-row primary-row row">
+                <div class="data-label col-sm">
+                </div> 
+                <div class="data-value col-sm">
+                    <div>
+                        <isma-calc-outlet ref="tlOutput_toolStrategy_C24"></isma-calc-outlet>
+                    </div>
+                    <div>
+                        <isma-calc-outlet ref="tlOutput_toolStrategy_C25"></isma-calc-outlet>
+                    </div>
+                </div>
+                <div class="data-value col-sm">
+                    <div>
+                        <isma-calc-outlet ref="tlInputCorpStrat1"></isma-calc-outlet>
+                    </div>
+                    <div>
+                        <isma-calc-outlet ref="tlInputCorpStrat2"></isma-calc-outlet>
+                    </div>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputCorpDiffr1" [items]="howDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputCorpDiffr2" [items]="howDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+                <div class="data-value col-sm">
+                    <isma-calc-dropdown ref="tlInputCorpDiffr3" [items]="howDropdownList" [disabled]="isReadOnly"></isma-calc-dropdown>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>

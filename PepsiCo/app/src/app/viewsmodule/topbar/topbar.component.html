@@ -1,0 +1,334 @@
+<div class="topbar-container">
+	<!-- <div class="header-container">
+        <div class="breadcrumb-contianer">
+            {{pageTitle}}
+        </div>
+        
+        <div class="options">
+            <div class="hamburger-sign" (click)="openMenu($event)">
+                <span class="fa fa-ellipsis-v"></span>
+            </div>
+            <div class="menu" [class.show-menu]="showMenu" ismaClickOutside (clickOutside)="closeMenu()" [clickOutActive]="showMenu">
+                <span (click)="showPasswordModalRef(2)" class="menu-link export-link"><isma-text-output key="Export"></isma-text-output></span>
+                <span (click)="showPasswordModalRef(1)" class="menu-link reset-link"><isma-text-output key="ResetSimulation"></isma-text-output></span>
+                <span (click)="showLogoutAlert()" class="menu-link logout-link"><isma-text-output key="Logout"></isma-text-output></span>
+                <span (click)="showSubmitModal()" class="menu-link submit-link"><isma-text-output key="SubmitDecisions"></isma-text-output></span>
+            </div>
+        </div>
+
+        <div class="user-info">
+            <span class="year-info">
+                <isma-text-output key="Year"></isma-text-output>
+                <isma-calc-outlet ref="tlInputTeamYear"></isma-calc-outlet>
+            </span>
+            <span class="team-info">
+                <isma-text-output key="#"></isma-text-output>
+                <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                <isma-calc-outlet ref="tlInputTeamName"></isma-calc-outlet>
+            </span>
+        </div>
+        
+    </div> -->
+
+    <!-- <div class="hidden" [routerLink]="['/reports']" [routerLinkActive]="['active']"></div>
+    <div class="hidden" [routerLink]="['/trees']" [routerLinkActive]="['active']"></div>
+    <div class="metric-container row">
+        <div class="dashboard-metrics-1 dashboard-metrics col-sm-6">
+            <div class="metrics-header">
+                <div class="metrics-header-text">
+                    <isma-text-output key="DashboardMetricHeading"></isma-text-output>
+                </div>
+            </div>
+            <div class="metrics-data-row row">
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardMetricLabel1"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardMetricLabel2"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardMetricLabel3"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardMetricLabel4"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardMetricLabel5"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" [routerLink]="['/region','vetera']" [routerLinkActive]="['active']"></div>
+        <div class="dashboard-metrics-2 dashboard-metrics col-sm-6">
+            <div class="metrics-header">
+                <div class="metrics-header-text">
+                    <isma-text-output key="DashboardReg1MetricHeading"></isma-text-output>
+                </div>
+            </div>
+            <div class="metrics-data-row row">
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardReg1MetricLabel1"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardReg1MetricLabel2"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardReg1MetricLabel3"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" [routerLink]="['/region','escendia']" [routerLinkActive]="['active']"></div>
+        <div class="dashboard-metrics-3 dashboard-metrics col-sm-6">
+            <div class="metrics-header">
+                <div class="metrics-header-text">
+                    <isma-text-output key="DashboardReg2MetricHeading"></isma-text-output>
+                </div>
+            </div>
+            <div class="metrics-data-row row">
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardReg2MetricLabel1"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardReg2MetricLabel2"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardReg2MetricLabel3"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" [routerLink]="['/rnd']" [routerLinkActive]="['active']"></div>
+        <div class="dashboard-metrics-4 dashboard-metrics col-sm-6">
+            <div class="metrics-header">
+                <div class="metrics-header-text">
+                    <isma-text-output key="DashboardRnDMetricHeading"></isma-text-output>
+                </div>
+            </div>
+            <div class="metrics-data-row row">
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardRnDMetricLabel1"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardRnDMetricLabel2"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardRnDMetricLabel3"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" [routerLink]="['/ops']" [routerLinkActive]="['active']"></div>
+        <div class="dashboard-metrics-5 dashboard-metrics col-sm-6">
+            <div class="metrics-header">
+                <div class="metrics-header-text">
+                    <isma-text-output key="DashboardOpsMetricHeading"></isma-text-output>
+                </div>
+            </div>
+            <div class="metrics-data-row row">
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardOpsMetricLabel1"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardOpsMetricLabel2"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardOpsMetricLabel3"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardOpsMetricLabel3"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" [routerLink]="['/gss']" [routerLinkActive]="['active']"></div>
+        <div class="dashboard-metrics-5 dashboard-metrics col-sm-6">
+            <div class="metrics-header">
+                <div class="metrics-header-text">
+                    <isma-text-output key="DashboardGssMetricHeading"></isma-text-output>
+                </div>
+            </div>
+            <div class="metrics-data-row row">
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardGssMetricLabel1"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardGssMetricLabel2"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" [routerLink]="['/initiatives']" [routerLinkActive]="['active']"></div>
+        <div class="dashboard-metrics-5 dashboard-metrics col-sm-6">
+            <div class="metrics-header">
+                <div class="metrics-header-text">
+                    <isma-text-output key="DashboardGssMetricHeading"></isma-text-output>
+                </div>
+            </div>
+            <div class="metrics-data-row row">
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardGssMetricLabel1"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+                <div class="metrics-data col-sm-4">
+                    <span class="metrics-data-label">
+                        <isma-text-output key="DashboardGssMetricLabel2"></isma-text-output>
+                    </span>
+                    <span class="metrics-data-value">
+                        <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+    <div class="hidden" [routerLink]="['/reports']" [routerLinkActive]="['active']"></div>
+    <div class="hidden" [routerLink]="['/trees']" [routerLinkActive]="['active']"></div>
+    <div class="hidden" [routerLink]="['/planningtool']" [routerLinkActive]="['active']"></div>
+    <div class="metric-container row">
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardMetricLabel1"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard1" format="0.0%"></isma-calc-outlet>
+            </span>
+        </div>
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardMetricLabel2"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard2" format="0.0%"></isma-calc-outlet>
+            </span>
+        </div>
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardMetricLabel3"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard3" format="0.0%"></isma-calc-outlet>
+            </span>
+        </div>
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardMetricLabel4"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard4" format="0.0"></isma-calc-outlet>
+            </span>
+        </div>
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardMetricLabel5"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlOutput_Dashboard5" format="0,0"></isma-calc-outlet>
+            </span>
+        </div>
+    </div>
+</div>

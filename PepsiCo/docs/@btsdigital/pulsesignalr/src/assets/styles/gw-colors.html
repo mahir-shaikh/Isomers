@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Customisable Colors Preview</title>
+	<link href="mixin.css" rel="stylesheet">
+	<link href="colors.css" rel="stylesheet">
+	<link href="fonts.css" rel="stylesheet">
+	<style>
+	body{
+		font-family: 'Open Sans';
+		font-weight: normal;
+		padding: 0;
+		margin: 0;
+	}
+	section{
+		width: 600px;
+		float: left;
+		margin:  0px 20px;
+	}
+	.title{
+		color: #202020;
+		padding: 10px 0;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+	}
+	table, td, th {
+	    border: 1px solid #333333;
+	    padding: 5px 15px;
+	}
+
+	table {
+	    border-collapse: collapse;
+	    width: 95%;
+	}
+
+	th {
+	    text-align: left;
+	    background-color: #202020;
+	    color: #fff;
+	    border: 1px solid #fff;
+	}
+	.rect{
+		height: 30px;
+		width: 30px;
+	}
+
+	</style>
+</head>
+<body>
+<section>
+	<div class="title">Gateway Authoring</div>
+	<table>
+	  <tr>
+	    <th>Color</th>
+	    <th>Class Name</th>
+	  </tr>
+	  <tr>
+	    <td class="rect gw-brandBg-primary">#87c530</td>
+	    <td>gw-brandBg-primary, gw-brandTxt-primary</td>
+	  </tr>
+	  <tr>
+	    <td class="rect gw-brandBg-secondary">#ef7300</td>
+	    <td>gw-brandBg-secondary, gw-brandTxt-secondary</td>
+	  </tr>
+	  </table>
+
+	  <table style="margin-top: 10px;">
+	  <tr>
+	    <th>Color</th>
+	    <th>Code Name</th>
+	    <th>Color</th>
+	    <th>Code Name</th>
+	  </tr>
+	  <tr>
+	    <td class="rect" bgcolor="#d03535">#d03535</td>
+	    <td>$alertError</td>
+	    <td class="rect" bgcolor="#5cb85c">#5cb85c</td>
+	    <td>$alertSucess</td>
+	  </tr>
+	  <tr>
+	    <td class="rect" bgcolor="#ffffff">#ffffff</td>
+	    <td>$gw-bg-lightest</td>
+	    <td class="rect" bgcolor="#ffffff">#ffffff</td>
+	    <td>$gw-btn-lightest</td>
+	  </tr>
+	  <tr>
+	    <td class="rect" bgcolor="#ffffff">#ffffff</td>
+	    <td>$gw-icon</td>
+	    <td class="rect" bgcolor="#ffffff">#ffffff</td>
+	    <td>$gw-input-bg</td>
+	  </tr>
+	  <tr>
+	    <td class="rect" bgcolor="#ffffff">#ffffff</td>
+	    <td>$gw-text-lightest</td>
+	    <td class="rect" bgcolor=""></td>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <td class="rect" bgcolor="#f5f5f5">#f5f5f5</td>
+	    <td>$gw-bg-light</td>
+	    <td class="rect" bgcolor="#e4e4e4">#e4e4e4</td>
+	    <td>$gw-bg-dark</td>
+	  </tr>
+	  <tr>
+	    <td class="rect" bgcolor="#cccccc">#cccccc</td>
+	    <td>$gw-input-border</td>
+	    <td class="rect" bgcolor="#cccccc">#cccccc</td>
+	    <td>$gw-input-elements</td>
+	  </tr>	  
+	  <tr>
+	    <td class="rect" bgcolor="#a8adb4">#a8adb4</td>
+	    <td>$gw-btn-light</td>
+	    <td class="rect" bgcolor="#6d747e">#6d747e</td>
+	    <td>$gw-btn-dark</td>
+	  </tr>
+	  <tr>
+	    <td class="rect" bgcolor="#6d747e">#6d747e</td>
+	    <td>$gw-text-light</td>
+	    <td class="rect" bgcolor="#333333">#333333</td>
+	    <td>$gw-text-dark</td>
+	  </tr>
+	</table>
+</section>
+</body>
+</html>

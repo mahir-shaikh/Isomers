@@ -1,0 +1,20 @@
+Export process:
+Prerequisites
+1. Install the SimExporter add on
+2. Install Node.js (and make sure it is accessible in your path)
+3. Install the xmldom package for Node (npm install -g xmldom I *think* is the right command line)
+
+1. Open Sim File
+2. Run the 'Reset to Year 0' macro
+3. Run the 'New Year' macro
+4. The sim should now be in Year 1
+5. Set the range xxSim0Tool1 to 1
+6. Go to the param page and select the L:N columns from the start of the page down to the red line (currently row 162, but that could change)
+7. Run the 'fixStaticSumIf' macro
+8. From the Sim Exporter menu, choose Export Sim As and choose to export it as WiBTRSimYr0.xml in the same folder that contains nodeParseXMLModel.js (this will take 30 seconds or so).  At the end it will prompt you to save changes - choose No (We don't want the results of fixStaticSumIf to be retained)
+9. From the command line in that same directory, run:
+	node .\nodeParseXMLModel.js fileName=WiBTRSimYr0.xml
+
+10. This will generate two json files in that directory - WiBTRSimYr0.js and WiBTRSimYr0-require.js  (These are both model files, the one with the require suffix is just set up for offline use)
+
+	

@@ -1,0 +1,81 @@
+.pnl-page-container
+    .report-wrapper
+        .header-container
+            .header-text
+                font-size 1.5rem
+                color #00a9e0
+                padding 15px 0 5px
+                border-bottom 1px solid #F1F1F1
+            .header-info
+                font-size 0.875rem
+                color #A1A1A1
+                padding-left 5px
+                font-style italic
+        .report-container
+            min-width 900px
+            .data-row
+                padding 10px 0
+                border-bottom 1px solid #F1F1F1
+                align-items center
+                :last-child
+                    border-bottom none
+                .data-label
+                    color #A1A1A1
+                .data-value
+                    text-align center
+                    color #A1A1A1
+                &.sub-header-row
+                    margin-top 10px
+                    .data-label
+                        color #00a9e0
+                        font-size 1.5rem
+                        padding 0
+                &.primary-row
+                    .data-label
+                        color #000
+                    .data-value
+                        color #000
+                &.secondary-row
+                    .data-label
+                        color #A1A1A1
+                        padding-left 50px
+                    .data-value
+                        color #A1A1A1
+                &.header-row
+                    .data-label
+                        text-align center
+                        color #000
+                        font-weight 500
+    .accordian-container
+        margin-top 15px
+        background-color #FFF
+        min-width 900px
+        .accordian-title
+            padding 10px 15px
+            font-size 1.25rem
+            background-color #2D4773
+            cursor pointer
+            text-align left
+            &-text
+                color #FFF
+                -webkit-transition all 0.5s ease
+                transition all 0.5s ease
+                opacity 1
+                display inline-block
+            .accordian-btn
+                display inline-block
+                color #FFF
+                position absolute
+                right 15px
+                top 15px
+            &:hover
+                background-color #00A9E0
+        .accordian-data
+            background-color #fff
+            width 100%
+            max-height 3000px // anything above original height
+            overflow hidden
+            transition all 0.5s cubic-bezier(.5,0,.3,1)
+            &.hidden
+                max-height 0
+                

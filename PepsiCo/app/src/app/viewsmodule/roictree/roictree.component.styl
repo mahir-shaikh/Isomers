@@ -1,0 +1,98 @@
+.roictree
+    &-wrapper
+        min-height calc(100vh - 130px)
+        position relative
+    &-container
+        align-items center
+        position absolute
+        width 100%
+        top 50%
+        left 0
+        transform translate(0,-50%)
+        .right-section
+            &-top
+                padding 10px 0
+                border-bottom 4px solid #000
+                align-items flex-end
+                &-left
+                    text-align center
+                    &:after
+                        content '_'
+                        font-weight 600
+                        font-size 2rem
+                        position absolute
+                        right -5px
+                        bottom 20px
+                &-right
+                    text-align center
+            &-bottom
+                padding 10px 0
+                text-align center
+                .data-table
+                    align-items center
+                    padding 10px 0
+                    .data-col
+                        &:after
+                            content '+'
+                            font-weight 600
+                            font-size 2rem
+                            position absolute
+                            right -5px
+                            top 0
+                        &:nth-child(2)
+                            &:after
+                                content ''
+                        &:nth-child(3)
+                            &:before
+                                content '+'
+                                font-weight 600
+                                font-size 2rem
+                                position absolute
+                                left -5px
+                                top 0
+                        &:nth-child(4)
+                            &:after
+                                content '_'
+                        &:nth-child(5)
+                            &:after
+                                content ''
+        .left-section
+            text-align center
+            &:after
+                content '='
+                font-weight 600
+                font-size 3rem
+                position absolute
+                top 0
+                padding-left 50px
+                @media screen and (max-width 768px)
+                    content '||'
+            .data-label
+                font-size 24px
+                font-weight 600
+            .data-value
+                display inline-block
+                padding 10px
+                border 1px solid #ccc
+        custom-accordian
+            margin auto
+                                
+.data-table
+    .data-row
+        .data-label
+            text-align left
+            font-size 14px
+        .data-value
+            text-align right
+            font-size 14px
+            font-weight 600
+    .data-col
+        .data-label
+            text-align center
+            font-size 14px
+        .data-value
+            text-align center
+            font-size 14px
+            font-weight 600
+        
+    

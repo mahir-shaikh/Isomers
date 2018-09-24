@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: C:/Users/dba/Documents/Clients/PlatformTeam/SVN/Bongo/jsCalc/scripts/jsCalc.js</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Source: C:/Users/dba/Documents/Clients/PlatformTeam/SVN/Bongo/jsCalc/scripts/jsCalc.js</h1>
+    
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source"><code>/**
+* @namespace
+*/
+define(['workbook', 'parseUtils'], function (calcWorkbook, parseUtils) {
+	var jsCalcVersion = 0.014;
+	//IE8 lacks Array.isArray
+	if(!window.isArray) {
+		window.isArray = function(obj) {
+			return Object.prototype.toString.call(obj) === '[object Array]';
+		}
+	}
+	/**
+	* jsCalc constructor
+	* @constructor
+	* @name jsCalc
+	* @param params Constructor parameter object
+	* @param params.model Model JSON object.  Mutually exclusive with modelURL
+	* @param params.modelURL URL to model JSON.  Mutually exclusive with model
+	* @param params.loadCallback Callback to call once model is done loading
+	* @param params.buildProgressCallback Callback to call during build, passes progress information
+	* @param params.buildAsync Build model asynchronously (defaults to true)
+	* @param params.customActions Custom actions defined for this course
+	*/
+	jsCalc = function(params) {
+		this.versionNumber = jsCalcVersion;
+		this.loadCallback = params.loadCallback;
+		this.buildProgressCallback = params.buildProgressCallback?params.buildProgressCallback:null;
+		this.modelURL = params.modelURL?params.modelURL:null;
+		this.model = params.model?params.model:null;
+		this.buildAsync = params.hasOwnProperty("buildAsync")?params.buildAsync:true;
+		this.workbook = null;
+		this.ready = false;
+		this.calculationCallbacks = [];
+		this.singletonCalculationCallbacks = [];
+		this.courseActions = params.customActions?params.customActions:null;
+		this.stateVariables = {};
+		
+		var self = this;
+		if(this.modelURL &amp;&amp; this.loadCallback) {
+			$.ajax({
+				url: this.modelURL,
+				dataType: 'json',
+				complete: function(response) {
+					self.model = response.responseJSON;
+					self.buildFromJSON();
+				},
+				error: function(e) {
+					alert("Error: " + e.toString());
+				}
+			});
+			//this.workbook = new calcWorkbook(this.modelURL);
+			this.initialized = true;
+		} else if (this.model &amp;&amp; this.loadCallback) {
+			this.buildFromJSON();
+			this.initialized = true;
+		}
+	};
+	
+	
+	/**
+	* Sets a callback that will fire after the next recalculate and then will be removed.
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param nextRecalcFunc Function to call.
+	*/
+	jsCalc.prototype.onNextRecalculate = function(nextRecalcFunc) {
+		this.singletonCalculationCallbacks.push(nextRecalcFunc);
+	};
+	
+	jsCalc.prototype.buildFromJSON = function(json) {
+		var self = this;
+		this.workbook = new calcWorkbook({	
+											modelJSON: this.model,
+											buildProgressCallback:function(e) {
+												self.onBuildProgress(e);
+											},
+											buildAsync: this.buildAsync
+										});
+		var self = this;
+		this.workbook.onCalculationDone(function() {
+			self.workbook.onCalculationDone([self, jsCalc.onCalculationDone]);
+			self.loadCallback();
+		});
+		this.ready = true;
+	}
+	
+	/**
+	* Resets the model by rebuilding it
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param params Constructor parameter object
+	* @param params.loadCallback Callback to call once model is done loading
+	* @param params.buildProgressCallback Callback to call during build, passes progress information
+	*/
+	jsCalc.prototype.reset = function(params) {
+		var self = this;
+		params = params?params:{};
+		this.loadCallback = params.loadCallback;
+		this.buildProgressCallback = params.buildProgressCallback?params.buildProgressCallback:null;
+		
+		this.workbook.init({	buildProgressCallback:function(e) {
+									self.onBuildProgress(e);
+								},
+								buildAsync: this.buildAsync
+							});
+		var self = this;
+		this.workbook.onCalculationDone(function() {
+			self.workbook.onCalculationDone([self, jsCalc.onCalculationDone]);
+			self.loadCallback();
+		});
+	}
+	
+	
+	
+	/**
+	* Sets the value of cells specified by rangeID
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param rangeID Excel compatible range specifier (valid rangename or address)
+	* @param value Value to set range to (if rangeID is a single cell) or a 2-dimensional array of values (of form [[r0c0, r0c1, ..., r0cn], [r1c0, r1c1, ..., r1cn], ..., [rnc0, rnc1, ..., rncn]]).  Array should only be used if the rangeID describes a multi-cell range
+	*/
+	jsCalc.prototype.setValue = function(rangeID, value) {
+		var targRange = this.getRangeRef(rangeID);
+		
+
+		
+		if(window.isArray(value)) {
+			//multiple cell set
+			var endRow = targRange.h > value.length? value.length: targRange.h;
+			for(var r = 0; r &lt; endRow; r++) {
+				if(window.isArray(value[r])) {
+					var endCol = targRange.w > value[r].length? value[r].length: targRange.w;
+					for(var c = 0; c &lt; endCol; c++) {
+						//var curRef = targRange.fullIndex(r, c);
+						var targetRow = targRange.startRow + r;
+						var targetCol = targRange.startCol + c;
+						
+						var address = targRange.targetSheetOb.name + "!R" + targetRow + "C" + targetCol;
+						this.setValue(address, value[r][c]);
+					}
+				}
+			}
+		
+		} else { 
+			//force state storage via individual cells to avoid aliasing issues
+			var targRangeAddressString = targRange.targetSheetOb.name + "!R" + targRange.startRow +"C" + targRange.startCol;
+			if(value == null) value = '';
+			this.stateVariables[targRangeAddressString] = value;
+			//if(!targRange.get(0).isEmpty) {
+				targRange.get(0).setValue(value);
+			//}
+		}
+	}
+
+	/**
+	* Gets the value of cell[s] specified by rangeID.   Returns either a single value or an array depending on whether rangeID describes a single cell or a multi-cell range
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param rangeID Excel compatible range specifier (valid rangename or address)
+	*/
+	jsCalc.prototype.getValue= function(rangeID) {
+		/*var targRange = null;
+		if(this.workbook.isNamedRange(rangeID)) {
+			targRange = this.workbook.getRange(rangeID);
+		} else if (parseUtils.range1Regex.test(rangeID) || parseUtils.rangeRCRegex.test(rangeID)) {
+			var rangeSpecifierOb = parseUtils.getRangeOb(rangeID);
+			targRange = this.workbook.getRangeReferenceByAddress(rangeSpecifierOb);
+		}
+		if(!targRange) return -1;
+		return targRange.v();*/
+		var sourceRangeRef = this.getRangeRef(rangeID);
+		var out = sourceRangeRef.valueArray();
+		if(out.length == 1  &amp;&amp; out[0].length == 1) return out[0][0];
+		return out;
+	}
+	/**
+	* Adds a callback to fire when calculation is complete.  Will fire after the completion of every calculation.  Multiple callbacks can be added.
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param cbFunc Function to call
+	*/
+	jsCalc.prototype.addCalculationCallback = function(cbFunc) {
+		var found = false;
+		for(var i = 0; i &lt; this.calculationCallbacks.length; i++) {
+			if(jsCalc.cbCompare(this.calculationCallbacks[i], cbFunc)) found = true;	
+		}
+		if(!found) {
+			this.calculationCallbacks.push(cbFunc);
+		}
+	}
+	
+	/**
+	* Removes a previously set recurring calculation callback
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param cbFunc Callback function to remove
+	*/
+	jsCalc.prototype.removeCalculationCallback = function(cbFunc) {
+		for(var i = 0; i &lt; this.calculationCallbacks.length; i++) {
+			if(jsCalc.cbCompare(this.calculationCallbacks[i], cbFunc)) {
+				this.calculationCallbacks.splice(i, 1);
+				i--;
+			}
+		}
+	}
+	
+	/**
+	* Runs the named course action (which was defined in a custom action passed to the constructor)
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param cbFunc Callback function to remove
+	*/
+	jsCalc.prototype.runCourseAction = function(actionName) {
+		if(this.courseActions[actionName]) {
+			this.courseActions[actionName].call(this);
+			return 0;
+		}
+		return -1;
+	}
+	
+	
+	/**
+	* Gets an object describing all cells that have been changed from the base state of the simulation
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	*/
+	jsCalc.prototype.getState = function() {
+		var outOb = {};
+		for(var trackedCell in this.stateVariables) {
+			var trackedVal = this.getValue(trackedCell)
+			outOb[trackedCell] = trackedVal.toString();
+		}
+		return outOb;
+	}
+	
+	/**
+	* Gets a JSON string representing an object describing all cells that have been changed from the base state of the simulation
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	*/	
+	jsCalc.prototype.getJSONState = function() {
+		return JSON.stringify(this.getState());
+	}
+	
+	/**
+	* Sets the simulation state to the state described by stateObject.  This will reset and rebuild the model as part of the process.
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param stateObject An object describing all cells that have been changed from the base state of the simulation
+	* @param callback Function to call once rebuild is complete and state has been set
+	*/
+	jsCalc.prototype.setState = function(stateObject, callback) {
+		var setStateOb = stateObject;
+		var setCallback = callback;
+		this.reset({
+				loadCallback: function() {
+					for(cellAddress in stateObject) {
+						var targRange = this.getRangeRef(cellAddress);
+						targRange.get(0).setValue(stateObject[cellAddress]);
+					}
+					this.stateVariables = stateObject;
+					if(setCallback) setCallback();
+				}
+			});
+	}
+	
+	/**
+	* Sets the simulation state to the state described by stateObject.  This will reset and rebuild the model as part of the process.
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param stateJSON A JSON string representing an object describing all cells that have been changed from the base state of the simulation
+	* @param callback Function to call once rebuild is complete and state has been set
+	*/
+	jsCalc.prototype.setJSONState = function(stateJSON, callback) {
+		var stateOb = JSON.parse(stateJSON);
+		this.setState(stateOb, callback);
+	}
+	
+	
+	
+	/**
+	* Copies the values from sourceDataRange into the equivalent cells offset from the top-left of destination range.  Currently will not paste over formulas.  This function is intended to enable implementing custom course actions - If you are using it in a different context then you should consider implementing what you are doing as a course action instead.  While this can be called with exactly the same source and destination, avoid calling it for overlapping but nonidentical ranges as behavior may be unpredictable.
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param sourceDataRange Excel compatible range specifier (valid rangename or address) specifying which cells to copy data from
+	* @param destinationRange Excel compatible range specifier (valid rangename or address) specifying where to paste the values from the source range.  Only the top left cell of this range is relevant, as the cells will paste according to the size and shape of sourceDataRange
+	*/
+	jsCalc.prototype.copyAndPasteByValue = function(sourceDataRange, destinationRange) {
+		var sourceRangeRef = this.getRangeRef(sourceDataRange);
+		var destinationRangeRef = this.getRangeRef(destinationRange);
+		if(!sourceRangeRef || !destinationRangeRef) return -1;
+		if(sourceRangeRef.count == 1) {
+			//copy same value to every cell in destination
+			var sourceValue = sourceRangeRef.getSingleCellReference().v();
+			for(var i = 0; i &lt; destinationRangeRef.count; i++) {
+				this.setValue(destinationRangeRef.get(i).getSingleCellReference().address(), sourceValue);
+			}
+		} else {
+			//get top left cell of destination range
+			var destTopLeft = destinationRangeRef.getSingleCellReference();
+			for(var r = 0; r &lt; sourceRangeRef.h; r++) {
+				for(var c = 0; c &lt; sourceRangeRef.w; c++) {
+					var targetRow = destTopLeft.row + r;
+					var targetCol = destTopLeft.col + c;
+					var targetAddress = destTopLeft.worksheet.name + "!R" + targetRow + "C" + targetCol;
+					
+					var sourceValue = sourceRangeRef.getCellByIndex(r, c).v();
+					this.setValue(targetAddress, sourceValue);
+				}
+			}
+			
+		} 
+		
+	}
+	
+	/**
+	* If name is a defined named range for the current model returns true, otherwise returns false
+	* @public
+    * @function
+	* @instance
+	* @memberOf jsCalc
+	* @param name The name to test
+	*/
+	jsCalc.prototype.isNamedRange = function(name) {
+		return this.workbook.isNamedRange(name);
+	}
+	
+	
+	jsCalc.onCalculationDone = function() {
+		for(var i = 0; i &lt; this.singletonCalculationCallbacks.length; i++) {
+			var cbOb = this.singletonCalculationCallbacks[i];
+			if(cbOb.length >= 2 &amp;&amp; typeof(cbOb[1]) == 'function') {
+				cbOb[1].call(cbOb[0]);
+			} else {
+				cbOb();
+			}
+		}
+		this.singletonCalculationCallbacks = [];
+		for(var i = 0; i &lt; this.calculationCallbacks.length; i++) {
+			var cbOb = this.calculationCallbacks[i];
+			if(cbOb.length >= 2 &amp;&amp; typeof(cbOb[1]) == 'function') {
+				cbOb[1].call(cbOb[0]);
+			} else {
+				cbOb();
+			}
+		}
+	}
+	
+	jsCalc.prototype.getRangeRef= function(rangeID) {
+		var targRange = null;
+		if(this.workbook.isNamedRange(rangeID)) {
+			targRange = this.workbook.getRange(rangeID);
+		} else if (parseUtils.range1Regex.test(rangeID) || parseUtils.rangeRCRegex.test(rangeID)) {
+			var rangeSpecifierOb = parseUtils.getRangeOb(rangeID);
+			targRange = this.workbook.getRangeReferenceByAddress(rangeSpecifierOb);
+		}
+		return targRange;
+	}
+	
+
+	jsCalc.prototype.setBuildProgressCallback = function(cbFunc) {
+		this.buildProgressCallback = cbFunc;
+	}
+	
+	jsCalc.prototype.onBuildProgress = function(progOb) {
+		if(this.buildProgressCallback) {
+			this.buildProgressCallback(progOb);
+		}
+	}
+	jsCalc.cbCompare = function(a, b) {
+		if(typeof(a) == 'function' &amp;&amp; typeof(b) == 'function') {
+			return a == b;
+		} else if (window.isArray(a) &amp;&amp; window.isArray(b) &amp;&amp; a.length >= 2 &amp;&amp; b.length >= 2) {
+			return a[0] == b[0] &amp;&amp; a[1] == b[1];
+		}
+		else return false;
+	}
+	
+
+	
+	//end primary API - remainder is advanced functionality (more internals access, primarily for model debugging tools)
+	
+	jsCalc.prototype.getBook = function() {
+		return this.workbook;
+	}
+	
+	jsCalc.prototype.isNamedRange = function(name) {
+		return this.workbook.isNamedRange(name);
+	}
+	
+
+	jsCalc.prototype.addCourseActionBlock = function(actionObject) {
+		for (actionName in actionObject) {
+			this.addCourseAction(actionName, actionObject[actionName]);
+		}
+	};
+	
+	jsCalc.prototype.addCourseAction = function(name, actionFunction) {
+		this.courseActions[actionName] = actionFunction;
+	};
+	
+	
+	return jsCalc;
+
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="jsCalc.html">jsCalc</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha2</a> on Thu Dec 12 2013 11:52:26 GMT-0500 (Eastern Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

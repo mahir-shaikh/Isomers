@@ -1,0 +1,103 @@
+// :host
+//     min-height 50px
+.hidden
+    &.active ~ .metric-container
+        display none
+    ~ .dashboard-metrics
+        &-2,&-3,&-4,&-5,&-6
+            display none
+    &.active + .dashboard-metrics
+        &-2,&-3,&-4,&-5,&-6
+            display block
+
+.topbar-container
+    .metric-container
+        background-color #FC4C02
+        color #fff
+        padding 0 30px
+        height 45px
+        box-shadow 0px 5px 10px 0px rgba(0, 0, 0, 0.3)
+        margin-bottom 5px
+        align-items center
+        .metrics-data-row
+            padding-bottom 1rem
+            .metrics-data
+                &-label
+                    display initial
+                &-value
+                    font-weight 600
+    // .header-container
+    //     height 40px
+    //     background-color #FFF
+    //     .breadcrumb-contianer
+    //         display inline-block
+    //         text-transform uppercase
+    //         font-size 18px
+    //         font-weight 600
+    //         height 100%
+    //         line-height 40px
+    //         padding-left 20px
+    //     .user-info
+    //         display inline-block
+    //         float right
+    //         height 100%
+    //         line-height 40px
+    //         .year-info,.team-info
+    //             padding 0 10px
+    //     .options
+    //         text-align center
+    //         position relative
+    //         display inline-block
+    //         float right
+    //         background-color #E87722
+    //         height 100%
+    //         .hamburger-sign
+    //             color #fff
+    //             font-size 1.5rem
+    //             display inline-block
+    //             padding 0 20px
+    //             cursor pointer
+    //         .menu
+    //             position absolute
+    //             background-color #FFF
+    //             font-size 0.875rem
+    //             z-index 3
+    //             right 0
+    //             text-align left
+    //             border 1px solid #3e3e3e
+    //             -webkit-transform scaleY(0)
+    //             transform scaleY(0)
+    //             -webkit-transform-origin 0 0
+    //             transform-origin 100% 0
+    //             transition all 0.5s cubic-bezier(.5,0,.3,1)
+    //             &.show-menu
+    //                 -webkit-transform scaleY(1)
+    //                 transform scaleY(1)
+    //             & > .menu-link
+    //                 display block
+    //                 padding 5px 10px
+    //                 cursor pointer
+    //                 color #6D747E
+    //                 line-height 20px
+    //                 &:nth-child(even)
+    //                     background-color #ECF0F1
+    //                 &:hover
+    //                     background-color #7B8C9D
+    //                     color #FFF
+    // .metric-container
+    //     .dashboard-metrics
+    //         background-color #00A9E0
+    //         color #fff
+    //         &-2,&-3,&-4,&-5,&-6
+    //             background-color #0085CA
+    //         .metrics-header
+    //             font-size 22px
+    //             padding 15px
+    //             font-weight 600
+    //         .metrics-data-row
+    //             padding-bottom 1rem
+    //             .metrics-data
+    //                 &-label
+    //                     display initial
+    //                 &-value
+    //                     font-weight 600

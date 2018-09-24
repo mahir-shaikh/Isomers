@@ -1,0 +1,126 @@
+<div class="{{clsName1}}" *ngFor="let items of hdata?.contentObjects | coFilter:filter; let i = index" [class.show]="items.visible" [class.hide]="!items.visible && !showControls" [class.coLevel2ExpandContBG]="lvlNo==2 && items?.expanded"
+  [class.lastLevelCO]="lvlNo==2 && items?.contentObjects.length == 0">
+
+  <!-- Menu Icons -->
+  <div *ngIf="(lvlNo==1 || lvlNo>1 && hdata?.expanded) && showControls" class="hi-list__menubar">
+    <div class="hi-mIcon" (click)="editMe(lvlNo, items, i)" data-toggle="tooltip" data-placement="top" title="Edit">
+      <i class="icon edit-01"></i></div>
+
+    <div class="hi-mIcon--disabled" *ngIf="i==0"><i class="icon move-up-01"></i></div>
+    <div *ngIf="i > 0" class="hi-mIcon" (click)="moveUp($event, items, i)" data-toggle="tooltip" data-placement="top" title="Move Up">
+      <i class="icon move-up-01"></i></div>
+
+    <div class="hi-mIcon--disabled" *ngIf="i >= hdata.contentObjects.length-1">
+      <i class="icon move-down-01"></i></div>
+    <div class="hi-mIcon" (click)="moveDown($event, items, i)" data-toggle="tooltip" data-placement="top" title="Move Down" *ngIf="hdata.contentObjects.length >0 && i < hdata.contentObjects.length-1">
+      <i class="icon move-down-01"></i></div>
+  </div>
+
+  <header class="hi-list{{lvlNo}}_header" [ngClass]="items?.expanded ? clsName2 : null" (click)="toggleExpand(items)" [class.level2Expand]="lvlNo==2 && items?.expanded && items?.contentObjects.length > 0">
+
+    <!-- Level 1 Heading Content -->
+    <div *ngIf="lvlNo==1">
+      <span>{{items?.metadata.title}}</span>
+      <div class="hi-list1_rightContent">
+        <span *ngIf="items?.schedulable && !items?.enrollable && !showControls && !items?.scheduled" class="hi-list1_schedule" (click)="schedule($event, items)">
+          {{rootMetadata?.scheduletext ? rootMetadata?.scheduletext : "Schedule Now"}}
+          <i class="icon schedule"></i>
+        </span>
+        <span *ngIf="items?.scheduled && !showControls && showReschedule(items)" class="hi-list1_reschedule" (click)="schedule($event, items)">
+          {{rootMetadata?.rescheduletext ? rootMetadata?.rescheduletext : "ReSchedule"}}
+          <i class="icon schedule"></i>
+        </span>
+
+        <span *ngIf="items?.enrollable && !items?.schedulable && !showControls && !items?.enrolled" [class.disabled]="items?.disabled" class="hi-list1_enroll" (click)="enrollModule($event, items)">
+          {{rootMetadata?.enrolltext ? rootMetadata?.enrolltext : "Enroll"}}
+          <i class="icon enroll"></i>
+        </span>
+        <span *ngIf="items?.schedulable && items?.enrollable && !showControls && !items?.scheduled" [class.disabled]="items?.disabled" class="hi-list1_schedule" (click)="schedule($event, items)">
+          {{rootMetadata?.enrolltext ? rootMetadata?.enrolltext : "Enroll"}}
+          <i class="icon enroll"></i>
+        </span>
+        <div class="hi-list1_expCol icon expand-arrow"></div>
+      </div>
+    </div>
+
+    <!-- Level 2 Heading Content -->
+    <div *ngIf="lvlNo==2 && items?.section?.length <=0" class="hi-list2_header_nonmobile">
+      <div class="hi-co_img">
+        <img [ngClass]="(lvlNo==2 && items.metadata.icon=='') ? 'hi-list2_iconX':'hi-list2_icon'" src="{{iconsPath}}{{items?.metadata?.icon}}" alt="Topic Icon" />
+      </div>
+      <div class="hi-list2_title col-xs-4">
+        <h3>{{items?.metadata.title}}</h3>
+        <span class="hi-list2_duration_icon icon duration-clock"></span>
+        <span class="hi-list2_duration">{{items?.metadata.duration}} {{this.rootMetadata?.minutestext ? this.rootMetadata?.minutestext : 'min'}}.</span>
+      </div>
+      <div class="hi-list2_expCol icon expand-arrow"></div>
+
+      <p class="hi-list2_description col-xs-5">{{items?.metadata.description}}</p>
+      <div *ngIf="items?.completed == 0 || items?.completed !== items?.contentObjects.length" class="hi-list2_completionStatus notComplete">{{items?.completed}}/{{items?.contentObjects.length}}</div>
+      <div *ngIf="items?.completed != 0 && items?.completed === items?.contentObjects.length" class="hi-list2_completionStatus complete icon checkmark"></div>
+    </div>
+
+    <!-- Level 3 Heading Content -->
+    <div *ngIf="lvlNo==3 || (lvlNo==2 && items?.section?.length >0)" class="hi-list3_cont">
+      <div *ngIf="items?.metadata.isnew == 'TRUE'" class="hi-list3_new">
+          <div class="hi-list3-icon_new">{{this.rootMetadata?.newtext ? this.rootMetadata?.newtext : 'New'}}</div>
+      </div>
+      <div class="hi-co_img">
+        <img [ngClass]="((lvlNo==2 || lvlNo==3) && items.metadata.icon=='') ? 'hi-list3_iconX':'hi-list3_icon'" src="{{iconsPath}}{{items?.metadata?.icon}}" alt="Section Icon" />
+      </div>
+      <div class="hi-list3_title">
+        <ico-fav class="hi-fav_icon gw-brandTxt-primary" [isFav]="items?.fav" (chnge)="onFavChange($event, items)"></ico-fav>
+        <div class="hi-list3_locked icon lock-02" *ngIf="items?.locked && !showControls"></div>
+        <h4>{{items?.metadata.title}}</h4>
+        <div class="hi-list3_details">
+          <span class="hi-list3_duration_icon icon duration-clock"></span>
+          <span class="hi-list3_duration">{{items?.metadata.duration}} {{this.rootMetadata?.minutestext ? this.rootMetadata?.minutestext : 'min'}}.</span>
+          <span class="hi-list3_level_icon icon" [class.beginner]="items?.metadata.levelimage == 'Basic' || items?.metadata.level == 'Basic'" 
+            [class.intermediate]="(items?.metadata.levelimage == 'Intermediate') || (items?.metadata.level == 'Intermediate' || items?.metadata.level == 'Basic,Intermediate')"
+            [class.advanced]="items?.metadata.levelimage == 'Advanced' || items?.metadata.level == 'Advanced'">
+                </span>
+          <span *ngIf="items?.metadata.level" class="hi-list3_level">{{items?.metadata.level.join('/')}}</span>
+        </div>
+        <span *ngIf="items?.message" class="hi-list3_lockMessage" [class.removed]="items?.lockCondition == 'removed'" [class.gw-brandTxt-primary]="items?.lockCondition == 'available' || items?.lockCondition == 'completed'">{{items?.message}}</span>
+      </div>
+      <div class="hi-list3_right hi-list3_status gw-brandBg-primary" [class.locked]="items?.locked && !showControls" (click)="jumpToCO(items, i)">
+        <span class="icon" [class.not-started]="items?.status === 0" [class.in-progress]="items?.status === 1" [class.completed]="items?.status === 2"
+          [class.checkmark]="items?.status === 2" [class.action-arrow]="items?.status < 2 || items?.status == null">
+            </span>
+      </div>
+    </div>
+
+  </header>
+
+  <content class="hi-list{{lvlNo}}_body" [class.show]="items?.expanded">
+    <co-hierarchy [rootMetadata]="rootMetadata" (contentChange)="onCoChange($event)" *ngIf="items?.section?.length >0" [hdata]="items" [filter]="filter" [level]="3" [controls]="showControls"></co-hierarchy>
+    <co-hierarchy [rootMetadata]="rootMetadata" (contentChange)="onCoChange($event)" *ngIf="items?.section == null" [hdata]="items" [filter]="filter" [level]="lvlNo" [controls]="showControls"></co-hierarchy>
+
+    <div *ngIf="items?.section?.length <=0 && showControls">
+      <!-- Buttons inside the Modules to add Topic / Section -->
+      <div class="hi-btnLongBlack2--container" *ngIf="lvlNo==1 && items?.contentObjects.length==0">
+        <button type="button" class="btn btn-default btn-xs hi-btnLongBlack" (click)="addTopic(items, i)">Add Topic</button>
+        <button type="button" class="btn btn-default btn-xs hi-btnLongBlack" (click)="addSection(items)">Add Section</button>
+      </div>
+
+      <div class="hi-btnLongBlack1--container" *ngIf="lvlNo==1 && items?.contentObjects.length!=0">
+        <!-- Button inside the Module to add Topic -->
+        <button type="button" class="btn btn-default btn-xs hi-btnLongBlack" *ngIf="items?.contentObjects[0]?.section==null" (click)="addTopic(items, i)">
+            Add Topic
+          </button>
+        <!-- Button inside the Module to add Section -->
+        <button type="button" class="btn btn-default btn-xs hi-btnLongBlack" *ngIf="items?.contentObjects[0]?.section!=null" (click)="addSection(items)">
+            Add Section
+          </button>
+      </div>
+
+      <!-- Button inside the Topics to add Section -->
+      <div class="hi-btnLongBlack1--container" *ngIf="lvlNo==2">
+        <button type="button" class="btn btn-default btn-xs hi-btnLongBlack" (click)="addSection(items, i, true)">
+            Add Section
+          </button>
+      </div>
+    </div>
+
+  </content>
+</div>

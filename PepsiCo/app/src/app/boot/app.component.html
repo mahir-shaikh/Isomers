@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="row">
+        <div class="hidden" [routerLink]="['/intro']" [routerLinkActive]="['active']"></div>
+        <div class="hidden" [routerLink]="['/planningtool']" [routerLinkActive]="['active']"></div>
+        <div class="hidden" [routerLink]="['/holdScreen']" [routerLinkActive]="['active']"></div>
+        <!-- <div class="hidden" [routerLink]="['/splash']" [routerLinkActive]="['hide-topbar']"></div> -->
+        <!-- <div class="hidden" [routerLink]="['/pnl']" [routerLinkActive]="['hide-topbar']"></div> -->
+        <div class="hidden" [routerLink]="['/splash']" [routerLinkActive]="['active']"></div>
+        <div class="dashboard-app">
+            <isma-dashboard *ngIf="isAppReady"></isma-dashboard>
+        </div>
+        <div class="topbar-page">
+            <isma-topbar *ngIf="isAppReady"></isma-topbar>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

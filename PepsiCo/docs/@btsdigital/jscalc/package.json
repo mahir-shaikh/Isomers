@@ -1,0 +1,62 @@
+{
+  "_from": "git+ssh://git@bitbucket.org/btsdigital/jscalc.git#v1.0.17",
+  "_id": "@btsdigital/jscalc@1.0.17",
+  "_inBundle": false,
+  "_location": "/@btsdigital/jscalc",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "@btsdigital/jscalc@git+ssh://git@bitbucket.org/btsdigital/jscalc.git#v1.0.17",
+    "name": "@btsdigital/jscalc",
+    "escapedName": "@btsdigital%2fjscalc",
+    "scope": "@btsdigital",
+    "rawSpec": "git+ssh://git@bitbucket.org/btsdigital/jscalc.git#v1.0.17",
+    "saveSpec": "git+ssh://git@bitbucket.org/btsdigital/jscalc.git#v1.0.17",
+    "fetchSpec": "ssh://git@bitbucket.org/btsdigital/jscalc.git",
+    "gitCommittish": "v1.0.17"
+  },
+  "_requiredBy": [
+    "/",
+    "/@btsdigital/ngx-isomer-core"
+  ],
+  "_resolved": "git+ssh://git@bitbucket.org/btsdigital/jscalc.git#fe0002e8c11af300bb0351ac05821810412ba46c",
+  "_spec": "@btsdigital/jscalc@git+ssh://git@bitbucket.org/btsdigital/jscalc.git#v1.0.17",
+  "_where": "C:\\SVN\\Pepsico_BA1\\git",
+  "author": {
+    "name": "BTS"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "jquery": "^1.11.2",
+    "jquery-ui": "^1.10.5",
+    "moment": "^2.5.0",
+    "numeral": "^1.5.2",
+    "requirejs": "^2.3.3"
+  },
+  "deprecated": false,
+  "description": "Javascript library to work with parsed json models",
+  "devDependencies": {
+    "ncp": "^2.0.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-amd": "^1.3.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "xmldom": "^0.1.27"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "license": "UNLICENSED",
+  "main": "dist/jsCalc.min.js",
+  "name": "@btsdigital/jscalc",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "copy:files": "ncp scripts/jsCalc/js-calc.d.ts dist/jsCalc.min.d.ts && ncp scripts/jsCalc/js-calc.d.ts dist/jsCalc.src.d.ts",
+    "copy:packagejson": "ncp scripts/package.json dist/package.json",
+    "copy:readme": "ncp README.md dist/README.md",
+    "publish": "npm run build && npm run copy:files && npm run copy:packagejson && npm run copy:readme",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.17"
+}

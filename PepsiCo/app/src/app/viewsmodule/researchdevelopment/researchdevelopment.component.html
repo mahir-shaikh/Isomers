@@ -1,0 +1,612 @@
+<div class="rnd-wrapper">
+    <div class="header-wrapper animated">
+        <span class="header-text">
+            <isma-calc-outlet ref="tlOutput_toolRnD_K3"></isma-calc-outlet>
+        </span>
+    </div>
+    <div class="metric-wrapper row animated">
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardRnDMetricLabel1"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <ism-calc-output ref="tlOutput_Dashboard12" format="0.0%"></ism-calc-output>
+            </span>
+        </div>
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardRnDMetricLabel2"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <ism-calc-output ref="tlOutput_Dashboard13" format="0.0%"></ism-calc-output>
+            </span>
+        </div>
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardRnDMetricLabel3"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <ism-calc-output ref="tlOutput_Dashboard14" format="0.0%"></ism-calc-output>
+            </span>
+        </div>
+    </div>
+    <div class="tabset-wrapper animated fadeInUp">
+        <tabset>
+            <tab heading='{{tab1}}' [active]="activeIndex === 1" (select)="setActiveIndex(1)">
+                <div class="data-wrapper row" *ngIf="activeIndex === 1">
+                    <div class="header-container col-sm-12">
+                        <span class="header-text tooltip-container">
+                            <isma-tooltip class="decision-tooltip" key="TooltipRndDecision1" tooltipPlacement="right"></isma-tooltip>
+                            <isma-calc-outlet ref="tlOutput_toolRnD_C10"></isma-calc-outlet>
+                        </span>
+                    </div>
+                    <div class="data-container col-sm-12">
+                        <div class="data-row header-row row">
+                            <div class="data-label col-sm"></div>
+                            <div class="data-label col-sm-4">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_G12"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_M12"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_O12"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_Q12"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm">
+                                <span class="fa fa-question-circle help-btn" (click)="showChildModal(1)"></span>
+                                <isma-calc-outlet ref="tlOutput_toolRnD_D14"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-4">
+                                <isma-calc-dropdown ref="tlInputInnov1" [items]="innovationList"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_M14"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="Innov1MTUs"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_Q14" [useRawValue]="true"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm">
+                                <span class="fa fa-question-circle help-btn" (click)="showChildModal(2)"></span>
+                                <isma-calc-outlet ref="tlOutput_toolRnD_D16"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-4">
+                                <isma-calc-dropdown ref="tlInputInnov2" [items]="innovationList"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_M16"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="Innov2MTUs"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_Q16" [useRawValue]="true"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row" *ngIf="isRnD3Visible">
+                            <div class="data-label col-sm">
+                                <span class="fa fa-question-circle help-btn" (click)="showChildModal(3)"></span>
+                                <isma-calc-outlet ref="tlOutput_toolRnD_D18"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-4">
+                                <isma-calc-dropdown ref="tlInputInnov3" [items]="innovationList"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_M18"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="Innov3MTUs"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_Q18" [useRawValue]="true"></isma-calc-outlet>
+                            </div>
+                        </div>
+                        <!-- <div class="data-row primary-row row" *ngIf="isRnD4Visible">
+                            <div class="data-label col-sm">
+                                <span class="fa fa-question-circle help-btn" (click)="showChildModal(4)"></span>
+                                <isma-calc-outlet ref="tlOutput_toolRnD_D20"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-4">
+                                <isma-calc-dropdown ref="tlInputInnov4" [items]="innovationList"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_M20"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="Innov4MTUs"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_Q20" [useRawValue]="true"></isma-calc-outlet>
+                            </div>
+                        </div> -->
+                        <div class="data-row primary-row row">
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_K22"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm-4">
+                                <!-- <isma-calc-dropdown ref="tlInputInnov4" [items]="innovationList"></isma-calc-dropdown> -->
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_M22"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_O22"></isma-calc-outlet>
+                            </div>
+                            <div class="data-value col-sm">
+                                <!-- <isma-calc-outlet ref="tlOutput_toolRnD_Q20" [useRawValue]="true"></isma-calc-outlet> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-container col-sm-12" *ngIf="isBreakthrough1Visible || isBreakthrough2Visible">
+                        <span class="header-text">
+                            <isma-calc-outlet ref="tlOutput_toolRnD_C24"></isma-calc-outlet>
+                        </span>
+                    </div>
+                    <div class="data-container col-sm-12" *ngIf="isBreakthrough1Visible || isBreakthrough2Visible">
+                        <div class="data-row header-row row">
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_D26"></isma-calc-outlet>                            
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_I26"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_K26"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_M26"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_O26"></isma-calc-outlet>
+                            </div>
+                            <div class="data-label col-sm">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_Q26"></isma-calc-outlet>
+                            </div>                        
+                        </div>
+                        <div class="data-row primary-row row" *ngIf="isBreakthrough1Visible">
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlInputDisrupt1"></isma-calc-outlet>
+                                <!-- <isma-calc-stepper ref="tlInputDisrupt1"></isma-calc-stepper> -->
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-dropdown ref="tlInputProd21Ftr4LevelDec" [items]="productRangeArray" [disabled]="!isBreakthrough1Selected"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-stepper ref="tlInputProd2Reg1Price" outputMin="0" outputMax="100" step="1" format="$0,0" [isDisabled]="!isBreakthrough1Selected"></isma-calc-stepper>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-stepper ref="tlInputProd2Adv" outputMin="-1000" outputMax="150000" step="1" format="$0,0" [isDisabled]="!isBreakthrough1Selected"></isma-calc-stepper>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-stepper ref="tlInputProd2Promo1" outputMin="-1000" outputMax="150000" step="1" format="$0,0" [isDisabled]="!isBreakthrough1Selected"></isma-calc-stepper>
+                            </div>
+                            <div class="data-value col-sm" [class.highlight-stepper]="isWhatIfEnabled">
+                                <isma-calc-stepper ref="tlInputProd2Reg1Units" outputMin="-10000" outputMax="85000" step="1" format="0,0" [isDisabled]="!isBreakthrough1Selected"></isma-calc-stepper>
+                            </div>
+                        </div>
+                        <div class="data-row primary-row row" *ngIf="isBreakthrough2Visible">
+                            <div class="data-value col-sm">
+                                <isma-calc-outlet ref="tlInputDisrupt2"></isma-calc-outlet>
+                                <!-- <isma-calc-stepper ref="tlInputDisrupt2"></isma-calc-stepper> -->
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-dropdown ref="tlInputProd22Ftr4LevelDec" [items]="productRangeArray" [disabled]="!isBreakthrough2Selected"></isma-calc-dropdown>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-stepper ref="tlInputProd2Reg2Price" outputMin="0" outputMax="100" step="1" format="$0,0" [isDisabled]="!isBreakthrough2Selected"></isma-calc-stepper>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-stepper ref="tlInputProd2Adv2" outputMin="-1000" outputMax="150000" step="1" format="$0,0" [isDisabled]="!isBreakthrough2Selected"></isma-calc-stepper>
+                            </div>
+                            <div class="data-value col-sm">
+                                <isma-calc-stepper ref="tlInputProd2Promo2" outputMin="-1000" outputMax="150000" step="1" format="$0,0" [isDisabled]="!isBreakthrough2Selected"></isma-calc-stepper>
+                            </div>
+                            <div class="data-value col-sm" [class.highlight-stepper]="isWhatIfEnabled">
+                                <isma-calc-stepper ref="tlInputProd2Reg2Units" outputMin="-10000" outputMax="85000" step="1" format="0,0" [isDisabled]="!isBreakthrough2Selected"></isma-calc-stepper>
+                            </div>
+                        </div>
+                    </div>
+                </div>                      
+            </tab>
+            <tab heading='{{tab2}}' [active]="activeIndex === 2" (select)="setActiveIndex(2)">
+                <div class="tab-wrapper" *ngIf="activeIndex === 2">
+                    <div class="report-wrapper row">
+                        <div class="header-container col-sm-12">
+                            <span class="header-text">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_B36"></isma-calc-outlet>
+                            </span>
+                        </div>
+                        <div class="chart-container col-sm-12">
+                            <div class="data-row chart-title row">
+                                <div class="data-label col-sm-12">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_G38"></isma-calc-outlet>
+                                </div>
+                                <div class="chart-data">
+                                    <ism-chart
+                                        [rangeRef]="['tlOutput_toolGraphData_D60', 'tlOutput_toolGraphData_D61', 'tlOutput_toolGraphData_D62', 'tlOutput_toolGraphData_D63']"
+
+                                        [seriesOptions]="[{ 'name': 'R&D Spent', 'type': 'pie', 'data': [{name: 'tlOutput_toolGraphData_C60'}, {name:'tlOutput_toolGraphData_C61' }, {name:'tlOutput_toolGraphData_C62' }, {name:'tlOutput_toolGraphData_C63' } ]}]"
+
+                                        [chartOptions]="">
+                                    </ism-chart>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-wrapper row">
+                        <div class="header-container col-sm-12">
+                            <span class="header-text">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_B89"></isma-calc-outlet>
+                            </span>
+                        </div>
+                        <div class="report-container col-sm-12">
+                            <div class="data-row header-row row">
+                                <div class="data-label col-sm-2 col-md-2">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D91"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_F91"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_K91"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_O91"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-2">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D93"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_F93"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_K93"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_O93"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-2">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D95"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_F95"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_K95"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_O95"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-2">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D97"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_F97"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_K97"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_O97"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-2">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D99"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_F99"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_K99"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_O99"></isma-calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="report-wrapper row" *ngIf="isBreakthrough1Visible || isBreakthrough2Visible">
+                        <div class="header-container col-sm-12">
+                            <span class="header-text">
+                                <isma-calc-outlet ref="tlOutput_toolRnD_B49"></isma-calc-outlet>
+                            </span>
+                        </div>
+                        <div class="report-container col-sm-12">
+                            <div class="data-row header-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                </div>
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J51"></isma-calc-outlet>
+                                </div>
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N51" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row sub-header-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_C52"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D54"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J54" format="$0,0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N54" format="$0,0" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D55"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                </div>
+                            </div>
+                            <div class="data-row secondary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D56"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J56" format="$0,0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N56" format="$0,0" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row secondary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D57"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J57" format="$0,0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N57" format="$0,0" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row total-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D59"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J59" format="$0,0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N59" format="$0,0" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row secondary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D60"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J60" format="$0,0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N60" format="$0,0" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row total-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D62"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J62" format="$0,0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N62" format="$0,0" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row secondary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D64"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J64" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N64" format="0.0%" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+
+                            <div class="data-row sub-header-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_C66"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D68"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J68" format="$0,0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N68" format="$0,0" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D69"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J69" format="$0,0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N69" format="$0,0" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row total-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D71"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J71" format="$0,0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N71" format="$0,0" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row secondary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D73"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="" format="0.0%" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row secondary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D75"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="" format="0.0%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N75" format="0.0%" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+
+                            <div class="data-row sub-header-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_C77"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D79"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J79" format="$0,0"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N79" format="$0,0" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D80"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                </div>
+                            </div>
+                            <div class="data-row secondary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D81"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J81" format="0.00"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N81" format="0.00" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row secondary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D82"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J82" format="0.00"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N82" format="0.00" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D83"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J83" format="0.00"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N83" format="0.00" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row primary-row total-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D85"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_J85" format="$0.00"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_N85" format="$0.00" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                            <div class="data-row secondary-row row">
+                                <div class="data-label col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="tlOutput_toolRnD_D87"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="" format="0.00%"></isma-calc-outlet>
+                                </div>
+                                <div class="data-value col-sm-2 col-md-4">
+                                    <isma-calc-outlet ref="" format="0.00%" *ngIf="isBreakthrough2Visible"></isma-calc-outlet>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                   
+                </div>
+            </tab>
+        </tabset>        
+    </div>
+</div>
+
+
+<div bsModal #innovationModal="bs-modal" class="modal innovation-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': false}">
+    <div class="modal-dialog modal-lg col-xs-11 animated fadeIn">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title eventTitle main-title" (click)="hideChildModal()">
+                    <!-- <img src="../../../../assets/images/instructions.svg" /> -->
+                    <isma-text-output key="Innovations" class="instructions-title"></isma-text-output>
+                </h4>
+                <span class="close-btn fa fa-times" (click)="hideChildModal()"></span>
+            </div>                
+            <div class="modal-body eventBody" *ngIf="isInnovationVisible">
+                <innovation (useInnovation)="updateDropdown($event)"></innovation>
+            </div>            
+        </div>
+    </div>    
+</div>

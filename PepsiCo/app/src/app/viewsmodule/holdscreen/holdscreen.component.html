@@ -1,0 +1,54 @@
+<div class="holdscreen-wrapper">
+    <div class="logo-container">
+        <img class="logo" src="../../../assets/images/pepsico_logo.png">
+    </div>
+    <div class="team-info">
+        <span class="team-number">
+            <ism-text-output key="#"></ism-text-output>
+            <ism-calc-output ref="tlInputTeamNumber"></ism-calc-output>
+        </span>
+        <span class="team-name">
+            <ism-calc-output ref="tlInputTeamName"></ism-calc-output>
+        </span>
+    </div>
+    <div class="lock-screen-icon-container">
+        <div class="lock-icon">
+            <span class="fa fa-lock" *ngIf="!showLoader"></span>
+            <span class="fa fa-spinner fa-pulse" *ngIf="showLoader"></span>
+        </div>
+    </div>
+    <div class="hold-text-container" *ngIf="mode === 0 && !showLoader">
+        <ism-text-output key="HoldScreenWaitText"></ism-text-output>
+    </div>
+    <div class="proceed-text-container" *ngIf="mode === 1 && !showLoader">
+        <ism-text-output key="HoldScreenProceedText"></ism-text-output>
+        <div class="password-container">
+            <span class="icon fa fa-key"></span>
+            <input type="password" [(ngModel)]="password" placeholder="Enter Password from Facilitator" #passwordText>
+        </div>
+        <div class="error-message" *ngIf="showPasswordErrorMessage"><ism-text-output key="IncorrectPasswordMsg"></ism-text-output></div>
+        <div class="button-container">
+            <button class="btn submit-btn" (click)="onPasswordSubmit()" [class.disabled]="passwordText.value != actualPassword"><ism-text-output key="Import"></ism-text-output></button>
+        </div>
+        <div class="button-container">
+            <button class="btn submit-btn" (click)="exportData()"><ism-text-output key="Export"></ism-text-output></button>
+        </div>
+    </div>
+</div>
+
+<isma-importfile #importbalances (fileLoaded)="onFileLoaded($event)"></isma-importfile>
+<div bsModal #importsuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', 'keyboard': true}">
+    <div class="modal-dialog modal-sm import-success-modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><ism-text-output key="Success"></ism-text-output></h4>
+        </div>
+        <div class="modal-body">
+            <ism-text-output key="ImportSuccessConfirmMessage"></ism-text-output>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-primary no-button" (click)="hideSuccessAlert()"><ism-text-output key="Continue"></ism-text-output></button>
+        </div>
+        </div>
+    </div>
+</div>

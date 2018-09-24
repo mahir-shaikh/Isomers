@@ -1,0 +1,191 @@
+@import "mixins"
+@import "core"
+@import "nouislider"
+@import "colors"
+
+html, body
+    min-height 100%
+body
+    // background url("../images/AutodeskBg.jpg") no-repeat
+    overflow auto
+    background-size cover
+    font-size 16px
+    font-family "MyriadPro"
+    line-height 20px
+    color #000
+    -webkit-perspective 1000px
+    @media screen and (max-width 768px)
+        font-size 14px
+    @media screen and (max-width 576px)
+        font-size 12px
+.im-app
+    height 100vh
+    padding 0
+    overflow hidden
+    font-family "MyriadPro"
+    .main
+        height 100%
+        .row
+            margin 0
+        .container
+            width calc(100% - 30px)
+            max-width 1200px
+            margin-left 15px
+            margin-right 15px
+            @media screen and (min-width 992px)
+                margin auto
+                padding 0
+    .highcharts-color
+        &-0
+            fill #00A9E0
+            stroke #00A9E0
+        &-1
+            fill #00843D
+            stroke #00843D
+        &-2
+            fill #E87722
+            stroke #E87722
+        &-3
+            fill #BBBCBC
+            stroke #BBBCBC
+        &-4
+            fill #004C97
+            stroke #004C97
+        &-5
+            fill #DA291C
+            stroke #DA291C
+        &-6
+            fill #27251F
+            stroke #27251F
+
+bs-tooltip-container
+    &.tooltip.tooltip-right
+        -webkit-animation-duration 0.35s
+        animation-duration 0.35s
+        -webkit-animation-fill-mode both
+        animation-fill-mode both
+        -webkit-animation-name customSlideRight
+        animation-name customSlideRight
+        -webkit-transform-origin 0 0
+        transform-origin 0 0
+        .tooltip-inner
+            text-align left
+            max-width 250px
+
+.digitalICO
+    font-family 'wib-icomoon'
+
+@keyframes customSlideRight {
+    0%   {
+        -webkit-transform scaleX(0)
+        transform scaleX(0)
+    }
+    100% {
+        -webkit-transform scaleX(1)
+        transform scaleX(1)
+    }
+}
+
+.tab-container
+    display flex
+    flex-direction column
+    height 100%
+    .nav-tabs
+        border-bottom none
+        height 40px
+        .nav-item
+            text-transform uppercase
+            margin 0 3px
+            background-color #D7D7D7
+            border-top 3px solid #D7D7D7
+            padding-bottom 10px
+            &:first-child
+                margin-left 0
+            .nav-link
+                color #000
+                border none
+                border-radius 0
+                padding 10px 30px
+            &.active
+                border-top 3px solid #00A9E0
+    .tab-content
+        background-color #FFF
+        overflow auto
+        height calc(100% - 40px)
+        
+.planningtool-container,.reports-wrapper,.trees-wrapper
+    .tab-container
+        height 100%
+            
+.rnd-wrapper,.gss-wrapper,.operations-wrapper,.marketdata-wrapper
+    .tab-container
+        height calc(100% - 80px)
+@media screen and (max-width 1024px)
+    .gss-wrapper,.operations-wrapper
+        .tab-container
+            height calc(100% - 100px)
+        
+                
+.instructions
+    carousel
+        height 100%
+        overflow hidden
+        .carousel.slide
+            height 100%
+            .carousel-inner
+                height calc(100% - 70px)
+                slide
+                    height 100%
+                    .item
+                        height 100%
+.instructions                                
+    .carousel
+        &-container
+            padding 15px
+        &-indicators
+            display none
+            li
+                border 1px solid #ccc
+                &.active
+                    background-color #ccc
+        &-control
+            background-repeat no-repeat
+            background-size contain
+            // height 30px
+            bottom -40px
+            top auto
+            opacity 1
+            cursor pointer
+            z-index 16
+            &.left
+            &.right
+                background none
+                background-color #004C97
+                padding 9px 25px
+                opacity 1
+                height 50px
+                bottom 0
+                &:hover
+                    background-color #003A70
+                    opacity 1
+                &.disabled
+                    opacity 0.5
+                    pointer-events none
+
+
+.colored
+    span, a
+        color white
+        
+
+.fileInputEl
+    display none
+ 
+@media screen and (max-width 1024px)
+    .data-row
+        .data-label,.data-value
+            font-size 14px
+@media screen and (max-width 768px)
+    .data-row
+        .data-label,.data-value
+            font-size 13px

@@ -1,0 +1,44 @@
+<div bsModal #lgModal="bs-modal" class="modal fadeInUp delay-5 instructions" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: 'static', keyboard: false}">
+  <div class="modal-dialog modal-lg col-xs-11">
+    <div class="modal-content">
+      <div class="modal-header main-header knockout-heading">
+        <button type="button" class="close" aria-label="Close" (click)="hideChildModal()">
+            <span class="fa fa-times"></span>
+          <!-- <span aria-hidden="true">&times;</span> -->
+        </button>
+        <h4 class="modal-title eventTitle main-title">
+            <!-- <img src="../../../../assets/images/instructions.svg" /> -->
+            <isma-text-output key="InstructionsTitle" class="instructions-title"></isma-text-output>
+        </h4>
+      </div>
+            
+      <div class="modal-body eventBody">
+      <div class="carousel-container" >
+        <carousel noWrap="true" interval="0">
+            
+            <slide *ngFor="let i of num" #slide [class]="['slider' + i]">
+                <div class="instructions-container" *ngIf="slide.active">
+                    <div *ngIf="isVideo(i)" class="instructions-videos col-sm-12">
+                        <video class="video instruction-media" controls>
+                            <source [src]="videoPath + '.ogv'">
+                            <source [src]="videoPath + '.mp4'" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div *ngIf="isImage(i)" class="instructions-images col-sm-12">
+                        <img class="image instruction-media" [src]="imagePath">
+                    </div>
+
+                    <div class="instructions-content-container col-sm-12">
+                        <h3 class="knockout-heading"><isma-text-output [key]="'InstructionsHeader' + i"></isma-text-output></h3>
+                        <div class="content">
+                            <isma-text-output [key]="'InstructionsText' + i" asInnerHtml="true"></isma-text-output>
+                        </div>
+                    </div>
+                </div>
+            </slide>
+      </carousel>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,224 @@
+.wobbler-modal {
+  overflow: auto;
+}
+.wobbler-modal .button-container {
+  padding: 0;
+  text-align: center;
+}
+.wobbler-modal .wobbler-narrative {
+  margin-bottom: 40px;
+}
+.wobbler-modal .btn-primary {
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  background: $main-color;
+  padding: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  display: flex;
+  border: none;
+  box-shadow: 7px 7px 15px 0px rgba(0,0,0,0.1);
+  white-space: normal;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-out;
+}
+.wobbler-modal .btn-primary:hover {
+  box-shadow: 7px 7px 15px 0px rgba(0,0,0,0.25);
+}
+.wobbler-modal .btn-primary .choice-label {
+  padding-right: 20px;
+  font-weight: 500;
+  font-size: 1.7em;
+}
+.wobbler-modal .btn-primary .choice-txt {
+  flex: 1;
+}
+.wobbler-modal .btn-primary.highlighted {
+  background: $highlight-color1;
+  box-shadow: 7px 7px 15px 0px rgba(0,0,0,0.5);
+}
+.wobbler-modal .btn-primary.disabled {
+  box-shadow: none;
+  cursor: default;
+}
+.wobbler-modal .event-decide {
+  outline: none;
+  height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: $highlight-color2;
+  border: 2px solid $highlight-color2;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: all 0.25s ease;
+  float: right;
+  position: relative;
+  box-shadow: initial;
+  display: block;
+  padding: 0;
+}
+.wobbler-modal .wobbler-feedback {
+  background: #fff;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+.wobbler-modal .wobbler-feedback .wobbler-fb-title {
+  margin-bottom: 1em;
+  font-weight: 500;
+  color: $gray4;
+}
+.wobbler-modal .wobbler-feedback .wobbler-feedback-txt {
+  color: $main-color;
+  text-align: left;
+  display: inherit;
+  margin-bottom: 20px;
+}
+.wobbler-modal .wobbler-feedback .btn-close {
+  margin: 0 auto;
+  display: inherit;
+  position: relative;
+  text-align: center;
+  background: none;
+  white-space: initial;
+  cursor: pointer;
+}
+.wobbler-modal .wobbler-feedback .btn-close svg .close-base {
+  stroke-dasharray: 10;
+  animation: closeAnima 5s ease-out infinite;
+}
+.wobbler-modal .wobbler-feedback .btn-close svg .close-ico {
+  transition: transform 0.3s ease-in;
+  transform-origin: 50% 50%;
+}
+.wobbler-modal .wobbler-feedback .btn-close .close-btn-txt {
+  color: $gray3;
+}
+.wobbler-modal .wobbler-feedback .btn-close:hover .close-ico {
+  transform: scale(1.2);
+}
+.highlighted {
+  background-color: #f00;
+}
+.disabled {
+  background-color: #999;
+  cursor: default;
+}
+.disabledText {
+  color: #0055b0;
+}
+.modal-content {
+  border: none;
+  border-radius: 0;
+}
+.modal-content .modal-header {
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 5px 20px;
+  background: #bfbfbf !important;
+}
+.modal-content .modal-header .close-btn-container {
+  padding: 5px 9px;
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  background: #b8b8b8;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-content .modal-header h4 {
+  color: #0055b0;
+}
+.modal-content .modal-body {
+  margin: 0;
+  padding: 25px 30px 50px 30px;
+}
+.modal-content .modal-body .modal-footer {
+  margin: 0;
+}
+.modal-content .modal-footer {
+  margin: 0 25px;
+  padding: 20px 0;
+}
+.modal-content .modal-footer .yes-button {
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  background: #01426a !important;
+}
+.modal-content .modal-footer .yes-button:hover {
+  background: #3271b4 !important;
+}
+.modal-content .wobbler-choice button {
+  border-radius: 0;
+  background: #01426a !important;
+}
+.modal-content .wobbler-choice button.disabled {
+  background: #01426a !important;
+}
+.modal-content .wobbler-choice button.highlighted {
+  background: #3271b4 !important;
+}
+.modal-content .event-decide {
+  background: #01426a !important;
+  border: #01426a !important;
+  border-radius: 0;
+}
+.modal-content .event-decide:hover {
+  background: #3271b4 !important;
+}
+.modal-content .event-decide.disabled {
+  background: #808080 !important;
+  border: #808080 !important;
+}
+.modal-content .wobbler-feedback-txt {
+  color: #01426a !important;
+}
+.modal-backdrop.fade.in.show {
+  opacity: 0.8 !important;
+}
+[data-toggle=buttons]>.btn input[type=radio] {
+  position: relative;
+}
+input[type='radio'] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #a9a9a9;
+  border-radius: 50%;
+  outline: none;
+  top: 3px;
+  left: -5px;
+}
+input[type='radio']:hover {
+  box-shadow: 0 0 5px 0px #88cdfe inset;
+}
+input[type='radio']:before {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin: 20% auto;
+  border-radius: 50%;
+}
+input[type='radio']:checked:before {
+  background: #0055b0;
+}
+.wobbler-alert {
+  height: 152px;
+  top: 265px;
+  padding: 0 0 200px 0;
+}
+.wobbler-alert text-outlet {
+  text-align: center;
+}
+.wobbler-alert .event-decide {
+  right: 310px;
+}

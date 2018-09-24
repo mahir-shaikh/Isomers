@@ -1,0 +1,46 @@
+:host
+    // font-size 0.875rem
+    text-align center
+    @media screen and (max-width 768px)
+        // font-size 0.75rem
+    
+.metric-balloon
+    display inline-block
+    // top 0
+    // left 48%
+    padding 3px 0 0 3px
+    color #fff
+    border-radius 5px
+    font-size 14px
+    opacity 0
+    z-index 1
+    transition opacity 0.35s ease
+    cursor pointer
+    &.fade-in
+        opacity 1
+    &.increement
+        color green
+    &.decreement
+        color red
+    &.no-change-balloon-value
+        background-color transparent
+        color transparent
+    
+.highlighted
+    color #F00
+        
+:host-context(.intro-page-wrapper){
+    color #000
+}
+:host-context(.switch-to-heading){
+    font-weight 500
+    @media screen and (max-width 768px){
+        font-size 0.875rem
+    }
+    @media screen and (max-width 576px){
+        font-size 0.75rem
+    }
+}
+
+
+

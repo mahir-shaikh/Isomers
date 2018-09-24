@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">  
+		<link rel="stylesheet" type="text/css" href="css/workbookProbe.css">  
+		<script  src="lib/require.js"></script>
+		<script  src="scripts/require.config.js"></script>
+
+
+		<script>
+			/*requirejs.config({
+				baseUrl: 'scripts',
+				paths: {
+					jsCalcLib: 'jsCalc/',
+					numeral: '../lib/numeral.min',
+					jquery: '../lib/jquery',
+					jqueryui: '../lib/jquery-ui',
+				}
+			});*/
+			//require(['jquery', 'workbookProbe', '../models/WiBTRSimYr0-require', 'jsCalcAPI'], function ($, workbookProbe, modelJSON, jsCalcAPI) {
+			//require(['../lib/jquery', 'workbookProbe', '../models/WiBTRSimYr0-require'], function ($, workbookProbe, modelJSON) {
+//			require(['jquery', 'workbookProbe', 'TRCourseActions', '../models/WiBTRSimYr0-require'], function ($, workbookProbe, actions, modelJSON) {	
+			require(['jquery', 'workbookProbe', 'TRCourseActions', '../models/PepsiCoT1Y1-require'], function ($, workbookProbe, actions, modelJSON) {	
+				var probe = new workbookProbe({
+						targetDiv: "#workbookProbe", 
+						//url: "models/simpleWorkbook.js",
+						customActions: actions,
+						//url: "models/simpleWorkbook.js",
+						modelJSON: modelJSON,
+						});
+			});
+		</script>
+	
+	</head>
+	<body>
+		<div id="workbookProbe"></div>
+	</body>
+</html>

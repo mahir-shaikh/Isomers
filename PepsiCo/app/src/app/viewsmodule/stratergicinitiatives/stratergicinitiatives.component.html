@@ -1,0 +1,121 @@
+<div class="strategicinvestment-wrapper">
+    <!-- <div class="header-wrapper">
+        <span class="header-text">
+            <isma-calc-outlet ref="tlOutput_toolPrograms_C10"></isma-calc-outlet>
+        </span>
+    </div> -->
+    <!-- <div class="metric-wrapper row">
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardGssMetricLabel1"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+            </span>
+        </div>
+        <div class="metrics-data col-sm">
+            <span class="metrics-data-label">
+                <isma-text-output key="DashboardGssMetricLabel2"></isma-text-output>
+            </span>
+            <span class="metrics-data-value">
+                <isma-calc-outlet ref="tlInputTeamNumber"></isma-calc-outlet>
+            </span>
+        </div>
+    </div> -->
+    <div class="SI-dialog">
+    <div class="SI-content">
+      <div class="SI-header main-header">
+        <h4 class="SI-title eventTitle main-title animated">
+            <!-- <span class="header-icon fa fa-compass"></span> -->
+            <span class="header-text">
+                <isma-calc-outlet ref="tlOutput_toolPrograms_C10"></isma-calc-outlet>
+            </span>
+            <!-- <span class="header-sub-text">
+                <isma-text-output key="-"></isma-text-output>
+                <isma-text-output key="NavigationMainLink2SubLink3"></isma-text-output>
+            </span> -->
+        </h4>
+        <span class="investmentsChecked">{{ totalChecked }} / {{ maxChecks }} <isma-text-output key="InitiativesSelected"></isma-text-output></span>
+        <!-- <p class="SI-instructions"><isma-text-output key="InitiativesInstructions"></isma-text-output></p> -->
+        <div class="filter-tabs" *ngIf="hasCategories">
+            <div class="category filters {{getFilters()}}">
+                <div class="filter filter-{{ci+1}}" *ngFor="let categoryFilter of categories; let ci=index" (click)="toggleFilter(ci+1)">{{categoryFilter}}</div>
+            </div>
+        </div>
+        
+            
+      </div>
+      <div class="SI-body eventBody animated fadeInUp">
+        <div class="investmentspage-initiative" [class.filtered]="isFiltered">
+            <div class="scroll-left" (click)="scroll(0)" [class.disabled]="scrollLeftDisabled">  </div>
+            <div class="content-col initiatives {{getFilters()}}">
+                <div class="screen">
+                    <div class="initiative cat-{{investment?.Category}}" *ngFor="let investment of investmentsArray; let i=index" [class.showTriangle]="hasCategories"
+                        [class.multiSelectSelected]="investment.isSelected" (click)="onSelect($event, i, investment.ID)">
+                        <div class="handCursor multiSelect" 
+                            [class.multiSelectChecked]="investment.isChecked" 
+                            [class.fa]="investment.isChecked" 
+                            [class.fa-check]="investment.isChecked" 
+                            [class.multiSelectNotChecked]="!investment.isChecked" 
+                            [class.multiSelectDisabled]="!investment.isEnabled" 
+                            (click)="onCheck($event, i, investment.ID)">
+                        </div>
+                        <div class="handCursor multiSelectText" 
+                            [class.multiSelectNotSelected]="!investment.isSelected" 
+                            [class.multiSelectTextDisabled]="!investment.isEnabled" >
+                            <span class="initiative-label" [innerHTML]="investment.name">
+                            <!-- {{ investment.name }} -->
+                            </span>
+                        </div>
+                        <span class="initiative-category" *ngIf="hasCategories">
+                            <isma-text-output key="InitiativesCatPrefix{{investment.Category}}"></isma-text-output>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-right" (click)="scroll(1)" [class.disabled]="scrollRightDisabled">  </div>
+        </div>
+        <div class="investmentspage-initiative-desc-cont">
+            <h2 [innerHTML]="header"></h2>
+            <div class="investmentspage-initiative-desc-container row">
+                <div class="col-sm-6 description-data">
+                    <p [innerHTML]="description" class="investmentspage-initiative-desc"></p>
+                </div>
+                <div class="col-sm-6 initiative-info-container">
+                    <div class="data-container">
+                        <div class="data-header">
+                            <isma-text-output key="Investment"></isma-text-output>
+                        </div>
+                        <div class="data-text">
+                            <p [innerHTML]="investment" class="investmentspage-initiative-desc"></p>
+                        </div>
+                    </div>
+                    <div class="data-container">
+                        <div class="data-header">
+                            <isma-text-output key="Impact"></isma-text-output>
+                        </div>
+                        <div class="data-text">
+                            <p [innerHTML]="impact" class="investmentspage-initiative-desc"></p>
+                        </div>
+                    </div>
+                    <div class="data-container">
+                        <div class="data-header">
+                            <isma-text-output key="MtusRequired"></isma-text-output>
+                        </div>
+                        <div class="data-text">
+                            <p [innerHTML]="mtus" class="investmentspage-initiative-desc"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- <div class="footer rdinvestment-footer" (click)="showAlert()" [class.disabled]="initsRemaining === '0'">
+            <button type="button" class="submit btn btn-primary" aria-label="Close">
+              <span aria-hidden="true">Submit</span>
+            </button>
+        </div> -->
+      </div>
+    </div>
+    </div>
+</div>
